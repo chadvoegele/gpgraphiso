@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 
-namespace cgrirgl {
+namespace gpgraphlib {
   template<typename T>
   class opt {
     public:

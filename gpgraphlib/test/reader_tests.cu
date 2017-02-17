@@ -2,7 +2,7 @@
 
 #include "graphml.h"
 
-using namespace cgrirgl;
+using namespace gpgraphlib;
 
 TEST(graphmlreader, parse_key_test1) {
   const char *document = "<key id=\"k0\" for=\"node\" attr.name=\"name\" attr.type=\"string\"></key>";

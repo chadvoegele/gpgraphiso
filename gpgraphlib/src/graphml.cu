@@ -1,7 +1,7 @@
 #include "graphml.h"
 #include <stdio.h>
 
-namespace cgrirgl{
+namespace gpgraphlib{
   GraphMLReader::GraphMLReader(std::string filename)
     : filename(filename) {
       parse();
