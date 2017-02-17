@@ -1,0 +1,1 @@
+export MAKEJOBS=6
