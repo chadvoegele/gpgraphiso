@@ -1,5 +1,6 @@
 NVCC=nvcc
 ARCH=sm_35
+CXXFLAGS=--std=c++11
 EXTRAFLAGS=-g -O3 -DCSRG_TEX
 
 INCLUDES=-I../src `pkg-config --cflags libxml-2.0 gtest`
