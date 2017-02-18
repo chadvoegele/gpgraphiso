@@ -7,6 +7,9 @@ namespace gpgraphlib {
   EdgeListGraph::EdgeListGraph() {
   }
 
+  EdgeListGraph::EdgeListGraph(std::list<std::pair<unsigned, unsigned>> edges) : edges(edges) {
+  }
+
   void EdgeListGraph::addEdge(unsigned src, unsigned dst) {
     edges.push_back(std::make_pair(src, dst));
   }
