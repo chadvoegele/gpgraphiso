@@ -43,42 +43,45 @@ def default_compiler_options():
     return options
 
 def run_irgl(ast, use_dir=None):
-    if use_dir is None:
-        working_dir = get_temp_dir()
-    else:
-        working_dir = use_dir
-    restore_cd = os.getcwd()
-    os.chdir(working_dir)  # Ideally wouldn't do this but can't turn off the *.dot files
+    try:
+      if use_dir is None:
+          working_dir = get_temp_dir()
+      else:
+          working_dir = use_dir
+      restore_cd = os.getcwd()
+      os.chdir(working_dir)  # Ideally wouldn't do this but can't turn off the *.dot files
 
-    kernel_cu_path = os.path.join(working_dir, 'kernel.cu')
+      kernel_cu_path = os.path.join(working_dir, 'kernel.cu')
 
-    shutil.copy(get_local_path('Makefile'), working_dir)
+      shutil.copy(get_local_path('Makefile'), working_dir)
 
-    comp = gg.compiler.Compiler()
-    if not comp.compile(ast, kernel_cu_path, default_compiler_options()):
-        return Exception('IrGL compilation failed')
+      comp = gg.compiler.Compiler()
+      if not comp.compile(ast, kernel_cu_path, default_compiler_options()):
+          return Exception('IrGL compilation failed')
 
-    make_cmd = ['make', '-C', working_dir]
-    make_out = subprocess.run(make_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+      make_cmd = ['make', '-C', working_dir]
+      make_out = subprocess.run(make_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-    if not os.path.exists(os.path.join(working_dir, 'test')):
-        os.chdir(restore_cd)
-        raise Exception('make failed with %s' % (make_out.stderr))
+      if not os.path.exists(os.path.join(working_dir, 'test')):
+          os.chdir(restore_cd)
+          raise Exception('make failed with %s' % (make_out.stderr))
 
-    test_cmd = [os.path.join(working_dir, 'test')]
-    test_out = subprocess.run(test_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+      test_cmd = [os.path.join(working_dir, 'test')]
+      test_out = subprocess.run(test_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-    parsed_result = parse_irgl_output(test_out.stdout)
+      parsed_result = parse_irgl_output(test_out.stdout)
 
-    if parsed_result is None:
-        raise Exception('failed to parse stdout=%s, stderr=%s' % (test_out.stdout, test_out.stderr))
+      if parsed_result is None:
+          raise Exception('failed to parse stdout=%s, stderr=%s' % (test_out.stdout, test_out.stderr))
 
-    os.chdir(restore_cd)
+      return parsed_result
 
-    if use_dir is None:
-        shutil.rmtree(working_dir)
+    finally:
+      if os.getcwd() == working_dir:
+          os.chdir(restore_cd)
 
-    return parsed_result
+      if use_dir is None:
+          shutil.rmtree(working_dir)
 
 def parse_irgl_output(out):
     out_lines = out.decode().split('\n')
