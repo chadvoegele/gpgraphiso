@@ -16,6 +16,9 @@ def get_local_path(f):
 def get_temp_dir():
     return tempfile.mkdtemp(prefix='pyirgltest_')
 
+def get_standard_temp_dir(f):
+    return os.path.join(tempfile.gettempdir(), f)
+
 def splice_asts(ast, test_ast):
     concat_stmts = ast.stmts.stmts + test_ast.stmts.stmts
     kernel_names = [c.name for c in concat_stmts if type(c) == gg.ast.Kernel]
@@ -52,6 +55,15 @@ def run_irgl(ast, use_dir=None):
       os.chdir(working_dir)  # Ideally wouldn't do this but can't turn off the *.dot files
 
       kernel_cu_path = os.path.join(working_dir, 'kernel.cu')
+
+      # TODO: Super hacky way to speed up tests.
+      static_objects = [ 'mgpuutil.o', 'mgpucontext.o', 'graphml.o', 'edgelist_graph.o' ]
+      for so in static_objects:
+          so_path = get_standard_temp_dir(so)
+          if os.path.exists(so_path):
+              shutil.copy(so_path, working_dir)
+          else:
+              print('Consider adding %s to speed up tests.' % so_path)
 
       shutil.copy(get_local_path('Makefile'), working_dir)
 
