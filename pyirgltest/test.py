@@ -59,7 +59,8 @@ def run_irgl(ast, use_dir=None):
       if not comp.compile(ast, kernel_cu_path, default_compiler_options()):
           return Exception('IrGL compilation failed')
 
-      make_cmd = ['make', '-C', working_dir]
+      makeflags = os.getenv('MAKEFLAGS')
+      make_cmd = ['make', '-C', working_dir] + ([makeflags] if makeflags else [])
       make_out = subprocess.run(make_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
       if not os.path.exists(os.path.join(working_dir, 'test')):
