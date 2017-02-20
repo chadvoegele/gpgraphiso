@@ -10,6 +10,8 @@ import itertools
 import gg.compiler
 from gg.ast import *
 
+import pyirgltest.irgl_ast_repr
+
 def get_local_path(f):
     return os.path.join(os.path.dirname(__file__), f)
 
@@ -69,7 +71,7 @@ def run_irgl(ast, use_dir=None):
 
       comp = gg.compiler.Compiler()
       if not comp.compile(ast, kernel_cu_path, default_compiler_options()):
-          return Exception('IrGL compilation failed')
+          raise Exception('IrGL compilation failed')
 
       makeflags = os.getenv('MAKEFLAGS')
       make_cmd = ['make', '-C', working_dir] + ([makeflags] if makeflags else [])
@@ -88,6 +90,10 @@ def run_irgl(ast, use_dir=None):
           raise Exception('failed to parse stdout=%s, stderr=%s' % (test_out.stdout, test_out.stderr))
 
       return parsed_result
+
+    except Exception as e:
+      print('Caught exception')
+      return { 'passed': False, 'message': 'Exception %s' % pyirgltest.irgl_ast_repr.dump(e.args[0]) }
 
     finally:
       if os.getcwd() == working_dir:
