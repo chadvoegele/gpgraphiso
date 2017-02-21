@@ -36,6 +36,8 @@ def get_standard_temp_dir(f):
     return os.path.join(tempfile.gettempdir(), f)
 
 def splice_asts(ast, test_ast):
+    # Something in below causes ast to be modified...
+    ast = ast.clone()
     concat_stmts = ast.stmts.stmts + test_ast.stmts.stmts
     kernel_names = [c.name for c in concat_stmts if type(c) == gg.ast.Kernel]
     kernel_counts = dict([(name, len([x for x in g])) for (name, g) in itertools.groupby(kernel_names)])
