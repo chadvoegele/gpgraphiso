@@ -96,7 +96,7 @@ def run_irgl(ast, use_dir=None):
 
       if not os.path.exists(os.path.join(working_dir, 'test')):
           os.chdir(restore_cd)
-          raise Exception('make failed with %s' % (make_out.stderr))
+          raise Exception('make failed with %s' % (make_out.stderr.decode()))
 
       test_cmd = [os.path.join(working_dir, 'test')]
       test_out = subprocess.run(test_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -110,7 +110,9 @@ def run_irgl(ast, use_dir=None):
 
     except Exception as e:
       print('Caught exception')
-      return { 'passed': False, 'message': 'Exception %s' % pyirgltest.irgl_ast_repr.dump(e.args[0]) }
+      earg = e.args[0]
+      message = earg if type(earg) == str else pyirgltest.irgl_ast_repr.dump(earg)
+      return { 'passed': False, 'message': 'Exception %s' % message }
 
     finally:
       if os.getcwd() == working_dir:
