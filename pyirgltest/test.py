@@ -112,7 +112,7 @@ def run_irgl(ast, use_dir=None):
       print('Caught exception')
       earg = e.args[0]
       message = earg if type(earg) == str else pyirgltest.irgl_ast_repr.dump(earg)
-      return { 'passed': False, 'message': 'Exception %s' % message }
+      return { 'passed': False, 'message': 'Exception %s\nIrGL stdout %s\nIrGL stderr %s' % (message, comp_stdout.getvalue(), comp_stderr.getvalue()) }
 
     finally:
       if os.getcwd() == working_dir:
