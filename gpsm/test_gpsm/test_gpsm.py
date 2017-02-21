@@ -36,5 +36,11 @@ class PredicateTests(pyirgltest.test.IrGLTest):
 
         self.run_test(ast, test_ast)
 
+    def test_compile(self):
+        test_ast = Module([test_gpsm.testcore.kernel_sizing()])
+        ast = gpsm.gpsm.ast
+
+        self.run_test(ast, test_ast)
+
 if __name__ == '__main__':
     unittest.main()
