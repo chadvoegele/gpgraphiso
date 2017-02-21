@@ -1,4 +1,5 @@
 import os
+import io
 import sys
 import shutil
 import subprocess
@@ -11,6 +12,19 @@ import gg.compiler
 from gg.ast import *
 
 import pyirgltest.irgl_ast_repr
+
+class capture_stdout_stderr:
+    def __init__(self, stdout, stderr):
+        self.stdout = stdout
+        self.stderr = stderr
+
+    def __enter__(self):
+        sys.stdout = self.stdout
+        sys.stderr = self.stderr
+
+    def __exit__(self, *_):
+        sys.stdout = sys.__stdout__
+        sys.stderr = sys.__stderr__
 
 def get_local_path(f):
     return os.path.join(os.path.dirname(__file__), f)
@@ -69,9 +83,12 @@ def run_irgl(ast, use_dir=None):
 
       shutil.copy(get_local_path('Makefile'), working_dir)
 
-      comp = gg.compiler.Compiler()
-      if not comp.compile(ast, kernel_cu_path, default_compiler_options()):
-          raise Exception('IrGL compilation failed')
+      comp_stdout = io.StringIO()
+      comp_stderr = io.StringIO()
+      with capture_stdout_stderr(comp_stdout, comp_stderr):
+          comp = gg.compiler.Compiler()
+          if not comp.compile(ast, kernel_cu_path, default_compiler_options()):
+              raise Exception('IrGL compilation failed')
 
       makeflags = os.getenv('MAKEFLAGS')
       make_cmd = ['make', '-C', working_dir] + ([makeflags] if makeflags else [])
