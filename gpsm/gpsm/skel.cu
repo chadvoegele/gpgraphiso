@@ -104,7 +104,7 @@ void parse_args(int argc, char *argv[]) {
   }
 }
 
-CSRGraphTy load_graph(cgrirgl::GraphMLReader& reader) {
+CSRGraphTy load_graph(gpgraphlib::GraphMLReader& reader) {
   CSRGraphTy g;
   g.nnodes = reader.nnodes();
   g.nedges = reader.nedges();
@@ -116,8 +116,8 @@ CSRGraphTy load_graph(cgrirgl::GraphMLReader& reader) {
 }
 
 int load_graph_and_run_kernel(char *query_file, char *graph_file) {
-  cgrirgl::GraphMLReader dreader(graph_file);
-  cgrirgl::GraphMLReader qreader(query_file);
+  gpgraphlib::GraphMLReader dreader(graph_file);
+  gpgraphlib::GraphMLReader qreader(query_file);
 
   CSRGraphTy gg, g = load_graph(dreader);
   CSRGraphTy qgg, qg = load_graph(qreader);
