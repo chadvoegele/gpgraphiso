@@ -36,6 +36,34 @@ class PredicateTests(pyirgltest.test.IrGLTest):
 
         self.run_test(ast, test_ast)
 
+    def test_selectivity2(self):
+        dgraph = gg.lib.graph.Graph("dgraph")
+        qgraph = gg.lib.graph.Graph("qgraph")
+
+        test_ast = Module([
+            CBlock([cgen.Include('edgelist_graph.h')]),
+            CBlock([cgen.Include('gtest/gtest.h')]),
+            Kernel("gg_main", [params.GraphParam('hg', True), params.GraphParam('gg', True), params.GraphParam('qhg', True), params.GraphParam('qgg', True), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop')], [
+                CDecl(('Shared<float>', 'selectivity', '= qhg.nnodes')),
+                Invoke('calc_selectivity', ('gg', 'qgg', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'selectivity.gpu_wr_ptr()')),
+                CDecl(('std::vector<float>', 'selectivity_vec', '')),
+                CDecl(('float*', 'selectivity_ptr', '= selectivity.cpu_rd_ptr()')),
+                CBlock(['selectivity_vec.assign(selectivity_ptr, selectivity_ptr + qhg.nnodes)']),
+                CDecl(('std::vector<float>', 'expected_selectivity_vec','= { 1.0/3, 1, 1, 3.0/4, 2, 1.0/2 }')),
+                CBlock(['EXPECT_EQ(expected_selectivity_vec, selectivity_vec)']),
+            ]),
+            test_gpsm.testcore.kernel_sizing(),
+            test_gpsm.testcore.main(
+                '{ { 0,1 }, { 1,0 }, { 1,2 }, { 2,1 }, { 1,6 }, { 6,1 }, { 1,5 }, { 5,1 }, { 2,5 }, { 5,2 }, { 2,6 }, { 6,2 }, { 5,6 }, { 6,5 }, { 6,7 }, { 7,6 }, { 6,3 }, { 3,6 }, { 3,7 }, { 7,3 }, { 3,4 }, { 4,3 }, { 7,4 }, { 4,7 }, { 4,8 }, { 8,4 } }',
+                '{ 1, 0, 1, 1, 0, 0, 2, 2, 0 }',
+                '{ { 0,1 }, { 1,0 }, { 1,2 }, { 2,1 }, { 1,4 }, { 4,1 }, { 1,3 }, { 3,1 }, { 2,4 }, { 4,2 }, { 2,3 }, { 3,2 }, { 3,4 }, { 4,3 }, { 4,5 }, { 5,4 } }',
+                '{ 1, 0, 1, 0, 2, 2 }'),
+            ])
+
+        ast = gpsm.gpsm.ast
+
+        self.run_test(ast, test_ast)
+
     def test_compile(self):
         test_ast = Module([test_gpsm.testcore.kernel_sizing()])
         ast = gpsm.gpsm.ast
