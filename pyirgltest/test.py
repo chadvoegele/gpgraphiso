@@ -103,6 +103,9 @@ def run_irgl(ast, use_dir=None):
       test_cmd = [os.path.join(working_dir, 'test')]
       test_out = subprocess.run(test_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
+      if not test_out.returncode == 0:
+          raise Exception('test failed with return code: %d. stdout: %s\nstderr: %s' % (test_out.returncode, test_out.stdout.decode(), test_out.stderr.decode()))
+
       parsed_result = parse_irgl_output(test_out.stdout)
 
       if parsed_result is None:
