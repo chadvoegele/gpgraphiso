@@ -34,7 +34,7 @@ ast = Module([
         CBlock(['std::fill(add_to_tree.begin(), add_to_tree.end(), 1)'], parse=False),
         CFor(CDecl(('index_type', 'n', '= 0')), 'n != qgraph.nnodes', 'n++', [
             CFor(CDecl(('index_type', 'e', '= qgraph.row_start[n]')), 'e != qgraph.row_start[n+1]', 'e++', [
-                CBlock(['worklist.push_back(std::make_tuple(n,qgraph.edge_dst[e],selectivity[n]+selectivity[e]))'], parse=False),
+                CBlock(['worklist.push_back(std::make_tuple(n,qgraph.edge_dst[e],selectivity[n]+selectivity[qgraph.edge_dst[e]]))'], parse=False),
             ]),
         ]),
         While('!worklist.empty()', [
@@ -50,13 +50,13 @@ ast = Module([
             CBlock(['tree_order.push_back(next_node)']),
             CBlock(['add_to_tree[next_node] = 0']),
             CFor(CDecl(('index_type', 'e', '= qgraph.row_start[next_node]')), 'e != qgraph.row_start[next_node+1]', 'e++', [
-                If('add_to_tree[e]', [
-                    CBlock(['tree.addEdge(next_node, e)']),
-                    CBlock(['tree.addEdge(e, next_node)']),
-                    CBlock(['add_to_tree[e] = 0']),
-                    CFor(CDecl(('index_type', 'e2', '= qgraph.row_start[e]')), 'e2 != qgraph.row_start[e+1]', 'e2++', [
-                        If('add_to_tree[e2]', [
-                            CBlock(['worklist.push_back(std::make_tuple(e,e2,selectivity[e]+selectivity[e2]))'], parse=False),
+                If('add_to_tree[qgraph.edge_dst[e]]', [
+                    CBlock(['tree.addEdge(next_node, qgraph.edge_dst[e])']),
+                    CBlock(['tree.addEdge(qgraph.edge_dst[e], next_node)']),
+                    CBlock(['add_to_tree[qgraph.edge_dst[e]] = 0']),
+                    CFor(CDecl(('index_type', 'e2', '= qgraph.row_start[qgraph.edge_dst[e]]')), 'e2 != qgraph.row_start[qgraph.edge_dst[e]+1]', 'e2++', [
+                        If('add_to_tree[qgraph.edge_dst[e2]]', [
+                            CBlock(['worklist.push_back(std::make_tuple(qgraph.edge_dst[e],qgraph.edge_dst[e2],selectivity[qgraph.edge_dst[e]]+selectivity[qgraph.edge_dst[e2]]))'], parse=False),
                         ]),
                     ]),
                 ]),
@@ -68,6 +68,6 @@ ast = Module([
         Invoke('calc_selectivity', ('gg', 'qgg', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'selectivity.gpu_wr_ptr()')),
         CDecl(('gpgraphlib::EdgeListGraph', 'tree', '')),
         CDecl(('std::vector<index_type>', 'tree_order', '')),
-        CBlock(['build_tree(qg, selectivity.gpu_rd_ptr(), tree, tree_order)']),
+        CBlock(['build_tree(qg, selectivity.cpu_rd_ptr(), tree, tree_order)']),
         ])
     ])
