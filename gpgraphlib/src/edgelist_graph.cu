@@ -33,7 +33,7 @@ namespace gpgraphlib {
     unsigned ei = 0;
 
     edges.sort([](std::pair<unsigned, unsigned>& me, std::pair<unsigned, unsigned>& other)
-      { return me.first < other.first; });
+      { return me.first < other.first || (me.first == other.first && me.second < other.second ); });
 
     std::list<std::pair<unsigned, unsigned>>::iterator edgeIterator = edges.begin();
 

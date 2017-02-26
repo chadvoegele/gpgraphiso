@@ -24,8 +24,8 @@ TEST(edgelist_graph, nedges_nnodes2) {
 TEST(edgelist_graph, csr_test) {
   EdgeListGraph elg;
   elg.addEdge(0, 1);
-  elg.addEdge(1, 2);
   elg.addEdge(1, 3);
+  elg.addEdge(1, 2);
   elg.addEdge(2, 0);
   elg.addEdge(5, 0);
   EXPECT_EQ(5, elg.nedges());
