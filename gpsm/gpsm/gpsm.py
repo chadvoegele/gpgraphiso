@@ -39,14 +39,14 @@ ast = Module([
         ]),
         While('!worklist.empty()', [
             CBlock(['std::sort(worklist.begin(), worklist.end(), [](std::tuple<index_type, index_type, float>& me, std::tuple<index_type, index_type, float>& other) { return std::get<2>(me) < std::get<2>(other);})'], parse=False),
-            CDecl(('index_type', 'next_src', '= std::get<0>(worklist.back())')),
-            CDecl(('index_type', 'next_node', '= std::get<1>(worklist.back())')),
+            CDecl(('index_type', 'next_node', '= std::get<0>(worklist.back())')),
+            CDecl(('index_type', 'next_dst', '= std::get<1>(worklist.back())')),
             CBlock(['worklist.pop_back()']),
             If('tree.nnodes() == 0', [
-                CBlock('next_node = selectivity[next_src] > selectivity[next_node] ? next_src : next_node'),
+                CBlock('next_node = selectivity[next_node] > selectivity[next_dst] ? next_node : next_dst'),
                 CBlock(['worklist.clear()']),
             ]),
-            If('!add_to_tree[next_node]', [CBlock('continue')]),
+            If('!add_to_tree[next_dst]', [CBlock('continue')]),
             CBlock(['tree_order.push_back(next_node)']),
             CBlock(['add_to_tree[next_node] = 0']),
             CFor(CDecl(('index_type', 'e', '= qgraph.row_start[next_node]')), 'e != qgraph.row_start[next_node+1]', 'e++', [
