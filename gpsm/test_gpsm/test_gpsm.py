@@ -111,5 +111,38 @@ class PredicateTests(pyirgltest.test.IrGLTest):
 
         self.run_test(ast, test_ast)
 
+    @unittest.skipIf(skip_tests, 'candidate vertices test')
+    def test_candidate_vertices(self):
+        dgraph = gg.lib.graph.Graph("dgraph")
+        qgraph = gg.lib.graph.Graph("qgraph")
+
+        test_ast = Module([
+            CBlock([cgen.Include('edgelist_graph.h')]),
+            CBlock([cgen.Include('gtest/gtest.h')]),
+            Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), params.GraphParam('qg', True), params.GraphParam('qgg', True), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop')], [
+                CDecl(('Shared<float>', 'selectivity', '= qg.nnodes')),
+                Invoke('calc_selectivity', ('gg', 'qgg', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'selectivity.gpu_wr_ptr()')),
+                CDecl(('gpgraphlib::EdgeListGraph', 'tree', '')),
+                CDecl(('std::vector<index_type>', 'tree_order', '')),
+                CBlock(['build_tree(qg, selectivity.cpu_rd_ptr(), tree, tree_order)']),
+                CDecl(('Shared<unsigned>', 'c_set', '= tree.nnodes()*g.nnodes')),
+                CDecl(('CSRGraphTex', 'tg', '')),
+                CDecl(('CSRGraphTex', 'tgg', '')),
+                CBlock(['tg.nnodes = tree.nnodes()', 'tg.nedges = tree.nedges()', 'tg.allocOnHost()', 'tree.setCSR(tg.row_start, tg.edge_dst)', 'tg.copy_to_gpu(tgg);']),
+                CBlock(['init_candidate_verticies(gg, tgg, dprop, qprop, tree_order, c_set)']),
+                CBlock(['EXPECT_EQ(1, 1)']),
+                ]),
+            test_gpsm.testcore.kernel_sizing(),
+            test_gpsm.testcore.main(
+                '{ { 0,1 }, { 1,0 }, { 1,2 }, { 2,1 }, { 1,6 }, { 6,1 }, { 1,5 }, { 5,1 }, { 2,5 }, { 5,2 }, { 2,6 }, { 6,2 }, { 5,6 }, { 6,5 }, { 6,7 }, { 7,6 }, { 6,3 }, { 3,6 }, { 3,7 }, { 7,3 }, { 3,4 }, { 4,3 }, { 7,4 }, { 4,7 }, { 4,8 }, { 8,4 } }',
+                '{ 1, 0, 1, 1, 0, 0, 2, 2, 0 }',
+                '{ { 0,1 }, { 1,0 }, { 1,2 }, { 2,1 }, { 1,4 }, { 4,1 }, { 1,3 }, { 3,1 }, { 2,4 }, { 4,2 }, { 2,3 }, { 3,2 }, { 3,4 }, { 4,3 }, { 4,5 }, { 5,4 } }',
+                '{ 1, 0, 1, 0, 2, 2 }'),
+            ])
+
+        ast = gpsm.gpsm.ast
+
+        self.run_test(ast, test_ast)
+
 if __name__ == '__main__':
     unittest.main()

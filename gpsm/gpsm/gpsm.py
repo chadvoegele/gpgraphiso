@@ -4,6 +4,7 @@ from gg.ast import *
 WL = gg.lib.wl.Worklist()
 dgraph = gg.lib.graph.Graph("dgraph")
 qgraph = gg.lib.graph.Graph("qgraph")
+tgraph = gg.lib.graph.Graph("tgraph")
 
 ast = Module([
     CBlock([cgen.Include('edgelist_graph.h')]),
@@ -63,11 +64,90 @@ ast = Module([
             ]),
         ]),
     ], host=True),
+    Kernel('index2d', [('unsigned*', 'arr'), ('unsigned', 'nd'), ('index_type', 'x'), ('index_type', 'y')], [
+        CBlock(['return arr + x*nd + y']),
+    ], ret_type='unsigned*', host=True),
+    # TODO: remove this when move non-IrGL to separate file
+    Kernel('index2d_dev', [('unsigned*', 'arr'), ('unsigned', 'nd'), ('index_type', 'x'), ('index_type', 'y')], [
+        CBlock(['return arr + x*nd + y']),
+    ], ret_type='unsigned*', device=True),
+    Kernel('is_candidate', [dgraph.param(), qgraph.param(), ('int*', 'dprop_ptr'), ('int*', 'qprop_ptr'), ('index_type', 'dv'), ('index_type', 'qv')], [
+        CBlock(['return dprop_ptr[dv] == qprop_ptr[qv] && %s <= %s' % (qgraph.edges('qv').size(), dgraph.edges('dv').size())]),
+    ], ret_type='bool', device=True),
+    Kernel('kernel_check', [dgraph.param(), qgraph.param(), ('int*', 'dprop_ptr'), ('int*', 'qprop_ptr'), ('unsigned*', 'c_set'), ('index_type', 'qv')], [
+        ForAll("n", qgraph.nodes(), [
+            CBlock(['c_set[n] = is_candidate(dgraph, qgraph, dprop_ptr, qprop_ptr, n, qv)']),
+        ]),
+    ]),
+    Kernel('kernel_collect', [dgraph.param(), ('unsigned*', 'c_set')], [
+        ForAll("node", dgraph.nodes(), [
+            If('c_set[node]', [
+                WL.push("node"),
+            ]),
+        ])
+    ]),
+    Kernel('kernel_explore', [dgraph.param(), tgraph.param(), ('int*', 'dprop_ptr'), ('int*', 'qprop_ptr'), ('unsigned*', 'c_set'), ('index_type', 'qv')], [
+        CDecl([('int', 'node', '')]),
+        CDecl([('bool', 'pop', '')]),
+        ForAll("wlnode", WL.items(), [
+            WL.pop('pop', 'wlnode', 'node'),
+            ForAll('qe', tgraph.edges('qv'), [
+                CDecl(('index_type', 'v', '= tgraph.getAbsDestination(qe)')),
+                CDecl(('bool', 'some_match', '= false')),
+                ForAll('de', dgraph.edges('node'), [
+                    CDecl(('index_type', 'vp', '= dgraph.getAbsDestination(de)')),
+                    If('is_candidate(dgraph, tgraph, dprop_ptr, qprop_ptr, vp, v)', [
+                        CBlock(['some_match = true']),
+                    ]),
+                ]),
+                If('!some_match', [
+                    CDecl(('unsigned*', 'c_set_idx', '= index2d_dev(c_set, %s, qv, node)' % dgraph.nodes().size())),
+                    CBlock(['*c_set_idx = 0']),
+                    CBlock(['break']),
+                ]),
+            ]),
+            ForAll('qe2', tgraph.edges('qv'), [
+                CDecl(('index_type', 'v', '= tgraph.getAbsDestination(qe2)')),
+                ForAll('de', dgraph.edges('node'), [
+                    CDecl(('index_type', 'vp', '= dgraph.getAbsDestination(de)')),
+                    If('is_candidate(dgraph, tgraph, dprop_ptr, qprop_ptr, vp, v)', [
+                        CDecl(('unsigned*', 'c_set_idx', '= index2d_dev(c_set, %s, v, vp)' % dgraph.nodes().size())),
+                        CBlock(['*c_set_idx = 1']),
+                    ]),
+                ]),
+            ]),
+        ]),
+    ]),
+    Kernel('init_candidate_verticies', [dgraph.param(), tgraph.param(), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop'), ('std::vector<index_type>&', 'tree_order'), ('Shared<unsigned>&', 'c_set')], [
+        CDecl(('dim3', 'blocks', '')),
+        CDecl(('dim3', 'threads', '')),
+        CBlock(['kernel_sizing(dgraph, blocks, threads)']),
+        CDecl(('std::vector<unsigned>', 'initialized', '(%s)' % tgraph.nodes().size())),
+        CDecl(('unsigned*', 'c_set_gptr', '= c_set.gpu_wr_ptr()')),
+        CFor(CDecl(('std::vector<index_type>::iterator', 'u', '= tree_order.begin()')), 'u != tree_order.end()', 'u++', [
+            If('!initialized[*u]', [
+                Invoke('kernel_check', ('dgraph', 'tgraph', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'index2d(c_set_gptr, %s, *u, 0)' % dgraph.nodes().size(), '*u')),
+                CBlock(['initialized[*u]=1']),
+            ]),
+            ClosureHint(Pipe([
+                Invoke('kernel_collect', ('dgraph', 'index2d(c_set_gptr, %s, *u, 0)' % dgraph.nodes().size())),
+                Invoke('kernel_explore', ('dgraph', 'tgraph', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'c_set_gptr', '*u')),
+            ], wlinit=WLInit("65535", []), once=True)),
+            CFor(CDecl(('index_type', 'e', '= tgraph.row_start[*u]')), 'e != tgraph.row_start[*u]', 'e++', [
+                CBlock(['initialized[tgraph.edge_dst[e]]=1']),
+            ]),
+        ]),
+    ], host=True),
     Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), params.GraphParam('qg', True), params.GraphParam('qgg', True), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop')], [
         CDecl(('Shared<float>', 'selectivity', '= qg.nnodes')),
         Invoke('calc_selectivity', ('gg', 'qgg', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'selectivity.gpu_wr_ptr()')),
         CDecl(('gpgraphlib::EdgeListGraph', 'tree', '')),
         CDecl(('std::vector<index_type>', 'tree_order', '')),
         CBlock(['build_tree(qg, selectivity.cpu_rd_ptr(), tree, tree_order)']),
+        CDecl(('Shared<unsigned>', 'c_set', '= tree.nnodes()*g.nnodes')),
+        CDecl(('CSRGraphTex', 'tg', '')),
+        CDecl(('CSRGraphTex', 'tgg', '')),
+        CBlock(['tg.nnodes = tree.nnodes()', 'tg.nedges = tree.nedges()', 'tg.allocOnHost()', 'tree.setCSR(tg.row_start, tg.edge_dst)', 'tg.copy_to_gpu(tgg);']),
+        CBlock(['init_candidate_verticies(gg, tgg, dprop, qprop, tree_order, c_set)']),
         ])
     ])
