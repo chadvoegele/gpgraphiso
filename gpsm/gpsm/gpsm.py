@@ -75,7 +75,7 @@ ast = Module([
         CBlock(['return dprop_ptr[dv] == qprop_ptr[qv] && %s <= %s' % (qgraph.edges('qv').size(), dgraph.edges('dv').size())]),
     ], ret_type='bool', device=True),
     Kernel('kernel_check', [dgraph.param(), qgraph.param(), ('int*', 'dprop_ptr'), ('int*', 'qprop_ptr'), ('unsigned*', 'c_set'), ('index_type', 'qv')], [
-        ForAll("n", qgraph.nodes(), [
+        ForAll("n", dgraph.nodes(), [
             CBlock(['c_set[n] = is_candidate(dgraph, qgraph, dprop_ptr, qprop_ptr, n, qv)']),
         ]),
     ]),
@@ -118,23 +118,28 @@ ast = Module([
             ]),
         ]),
     ]),
-    Kernel('init_candidate_verticies', [dgraph.param(), tgraph.param(), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop'), ('std::vector<index_type>&', 'tree_order'), ('Shared<unsigned>&', 'c_set')], [
+    Kernel('init_candidate_verticies', [dgraph.param(), ('CSRGraphTy', 'tg'), tgraph.param(), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop'), ('std::vector<index_type>&', 'tree_order'), ('Shared<unsigned>&', 'c_set')], [
         CDecl(('dim3', 'blocks', '')),
         CDecl(('dim3', 'threads', '')),
         CBlock(['kernel_sizing(dgraph, blocks, threads)']),
         CDecl(('std::vector<unsigned>', 'initialized', '(%s)' % tgraph.nodes().size())),
+        CDecl(('unsigned*', 'c_set_cptr', '= c_set.cpu_wr_ptr()')),
+        CFor(CDecl(('unsigned', 'i', '= 0')), 'i < tgraph.nnodes*dgraph.nnodes', 'i++', [
+            CBlock(['c_set_cptr[i] = 0']),
+        ]),
         CDecl(('unsigned*', 'c_set_gptr', '= c_set.gpu_wr_ptr()')),
         CFor(CDecl(('std::vector<index_type>::iterator', 'u', '= tree_order.begin()')), 'u != tree_order.end()', 'u++', [
-            If('!initialized[*u]', [
-                Invoke('kernel_check', ('dgraph', 'tgraph', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'index2d(c_set_gptr, %s, *u, 0)' % dgraph.nodes().size(), '*u')),
-                CBlock(['initialized[*u]=1']),
+            CDecl(('unsigned', 'qv', '= *u')),
+            If('!initialized[qv]', [
+                Invoke('kernel_check', ('dgraph', 'tgraph', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'index2d(c_set_gptr, %s, qv, 0)' % dgraph.nodes().size(), 'qv')),
+                CBlock(['initialized[qv]=1']),
             ]),
             ClosureHint(Pipe([
-                Invoke('kernel_collect', ('dgraph', 'index2d(c_set_gptr, %s, *u, 0)' % dgraph.nodes().size())),
-                Invoke('kernel_explore', ('dgraph', 'tgraph', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'c_set_gptr', '*u')),
+                Invoke('kernel_collect', ('dgraph', 'index2d(c_set_gptr, %s, qv, 0)' % dgraph.nodes().size())),
+                Invoke('kernel_explore', ('dgraph', 'tgraph', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'c_set_gptr', 'qv')),
             ], wlinit=WLInit("65535", []), once=True)),
-            CFor(CDecl(('index_type', 'e', '= tgraph.row_start[*u]')), 'e != tgraph.row_start[*u]', 'e++', [
-                CBlock(['initialized[tgraph.edge_dst[e]]=1']),
+            CFor(CDecl(('index_type', 'e', '= tg.row_start[qv]')), 'e != tg.row_start[qv+1]', 'e++', [
+                CBlock(['initialized[tg.edge_dst[e]]=1']),
             ]),
         ]),
     ], host=True),
@@ -148,6 +153,6 @@ ast = Module([
         CDecl(('CSRGraphTex', 'tg', '')),
         CDecl(('CSRGraphTex', 'tgg', '')),
         CBlock(['tg.nnodes = tree.nnodes()', 'tg.nedges = tree.nedges()', 'tg.allocOnHost()', 'tree.setCSR(tg.row_start, tg.edge_dst)', 'tg.copy_to_gpu(tgg);']),
-        CBlock(['init_candidate_verticies(gg, tgg, dprop, qprop, tree_order, c_set)']),
+        CBlock(['init_candidate_verticies(gg, tg, tgg, dprop, qprop, tree_order, c_set)']),
         ])
     ])

@@ -9,7 +9,7 @@ import test_gpsm
 
 skip_tests = False
 
-class PredicateTests(pyirgltest.test.IrGLTest):
+class GPSMTests(pyirgltest.test.IrGLTest):
     @unittest.skipIf(skip_tests, 'selectivity1')
     def test_selectivity1(self):
         dgraph = gg.lib.graph.Graph("dgraph")
@@ -129,8 +129,18 @@ class PredicateTests(pyirgltest.test.IrGLTest):
                 CDecl(('CSRGraphTex', 'tg', '')),
                 CDecl(('CSRGraphTex', 'tgg', '')),
                 CBlock(['tg.nnodes = tree.nnodes()', 'tg.nedges = tree.nedges()', 'tg.allocOnHost()', 'tree.setCSR(tg.row_start, tg.edge_dst)', 'tg.copy_to_gpu(tgg);']),
-                CBlock(['init_candidate_verticies(gg, tgg, dprop, qprop, tree_order, c_set)']),
-                CBlock(['EXPECT_EQ(1, 1)']),
+                CBlock(['init_candidate_verticies(gg, tg, tgg, dprop, qprop, tree_order, c_set)']),
+                CDecl(('std::vector<unsigned>', 'c_set_vec', '')),
+                CDecl(('unsigned*', 'c_set_ptr', '= c_set.cpu_rd_ptr()')),
+                CBlock(['c_set_vec.assign(c_set_ptr, c_set_ptr + tree.nnodes()*g.nnodes)']),
+                CDecl(('std::vector<unsigned>', 'expected_c_set_vec','= {' +
+                  ' /*u1*/ 1, 0, 1, 0, 0, 0, 0, 0, 0,' +
+                  ' /*u2*/ 0, 1, 0, 0, 0, 1, 0, 0, 0,' +
+                  ' /*u3*/ 0, 0, 1, 1, 0, 0, 0, 0, 0,' +
+                  ' /*u4*/ 0, 1, 0, 0, 0, 1, 0, 0, 0,' +
+                  ' /*u5*/ 0, 0, 0, 0, 0, 0, 1, 0, 0,' +
+                  ' /*u6*/ 0, 0, 0, 0, 0, 0, 0, 1, 0 }')),
+                CBlock(['EXPECT_EQ(c_set_vec, expected_c_set_vec)']),
                 ]),
             test_gpsm.testcore.kernel_sizing(),
             test_gpsm.testcore.main(
