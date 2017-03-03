@@ -8,13 +8,7 @@ tgraph = gg.lib.graph.Graph("tgraph")
 
 ast = Module([
     CBlock([cgen.Include('edgelist_graph.h')]),
-    CDeclGlobal(("const char*", "prog_opts", '= ""')),
-    CDeclGlobal(("const char*", "prog_usage", '= ""')),
-    CDeclGlobal(("const char*", "prog_args_usage", '= ""')),
-    CDeclGlobal(("void", "process_prog_opt(char c, char *optarg)", "{ }")),
-    CDeclGlobal(("int", "process_prog_arg(int argc, char *argv[], int arg_start)", "{ return 1; }")),
-    CDeclGlobal(("extern int", "SKELAPP_RETVAL", "")),
-    CDeclGlobal(("extern const char*", "OUTPUT", "")),
+    CBlock([cgen.Include('gpsm.cu')]),
     Kernel("calc_selectivity", [dgraph.param(), qgraph.param(), ('int*', 'dprop_ptr'), ('int*', 'qprop_ptr'), ('float*', 'selectivity_ptr')], [
         ForAll("node", qgraph.nodes(), [
             CDecl(("int", "degree", "= %s" % qgraph.edges("node").size())),
@@ -29,51 +23,6 @@ ast = Module([
             CBlock(['selectivity_ptr[node] = selectivity']),
             ])
     ]),
-    Kernel('build_tree', (qgraph.param(), ('float*', 'selectivity'), ('gpgraphlib::EdgeListGraph&', 'tree'), ('std::vector<index_type>&', 'tree_order')), [
-        CDecl(('std::vector<std::tuple<index_type, index_type, float>>', 'worklist', '')),
-        CDecl(('std::vector<unsigned>', 'add_to_tree', '(qgraph.nnodes)')),
-        CBlock(['std::fill(add_to_tree.begin(), add_to_tree.end(), 1)'], parse=False),
-        CFor(CDecl(('index_type', 'n', '= 0')), 'n != qgraph.nnodes', 'n++', [
-            CFor(CDecl(('index_type', 'e', '= qgraph.row_start[n]')), 'e != qgraph.row_start[n+1]', 'e++', [
-                CBlock(['worklist.push_back(std::make_tuple(n,qgraph.edge_dst[e],selectivity[n]+selectivity[qgraph.edge_dst[e]]))'], parse=False),
-            ]),
-        ]),
-        While('!worklist.empty()', [
-            CBlock(['std::sort(worklist.begin(), worklist.end(), [](std::tuple<index_type, index_type, float>& me, std::tuple<index_type, index_type, float>& other) { return std::get<2>(me) < std::get<2>(other);})'], parse=False),
-            CDecl(('index_type', 'next_node', '= std::get<0>(worklist.back())')),
-            CDecl(('index_type', 'next_dst', '= std::get<1>(worklist.back())')),
-            CBlock(['worklist.pop_back()']),
-            If('tree.nnodes() == 0', [
-                CBlock('next_node = selectivity[next_node] > selectivity[next_dst] ? next_node : next_dst'),
-                CBlock(['worklist.clear()']),
-            ]),
-            If('!add_to_tree[next_dst]', [CBlock('continue')]),
-            CBlock(['tree_order.push_back(next_node)']),
-            CBlock(['add_to_tree[next_node] = 0']),
-            CFor(CDecl(('index_type', 'e', '= qgraph.row_start[next_node]')), 'e != qgraph.row_start[next_node+1]', 'e++', [
-                If('add_to_tree[qgraph.edge_dst[e]]', [
-                    CBlock(['tree.addEdge(next_node, qgraph.edge_dst[e])']),
-                    CBlock(['tree.addEdge(qgraph.edge_dst[e], next_node)']),
-                    CBlock(['add_to_tree[qgraph.edge_dst[e]] = 0']),
-                    CFor(CDecl(('index_type', 'e2', '= qgraph.row_start[qgraph.edge_dst[e]]')), 'e2 != qgraph.row_start[qgraph.edge_dst[e]+1]', 'e2++', [
-                        If('add_to_tree[qgraph.edge_dst[e2]]', [
-                            CBlock(['worklist.push_back(std::make_tuple(qgraph.edge_dst[e],qgraph.edge_dst[e2],selectivity[qgraph.edge_dst[e]]+selectivity[qgraph.edge_dst[e2]]))'], parse=False),
-                        ]),
-                    ]),
-                ]),
-            ]),
-        ]),
-    ], host=True),
-    Kernel('index2d', [('unsigned*', 'arr'), ('unsigned', 'nd'), ('index_type', 'x'), ('index_type', 'y')], [
-        CBlock(['return arr + x*nd + y']),
-    ], ret_type='unsigned*', host=True),
-    # TODO: remove this when move non-IrGL to separate file
-    Kernel('index2d_dev', [('unsigned*', 'arr'), ('unsigned', 'nd'), ('index_type', 'x'), ('index_type', 'y')], [
-        CBlock(['return arr + x*nd + y']),
-    ], ret_type='unsigned*', device=True),
-    Kernel('is_candidate', [dgraph.param(), qgraph.param(), ('int*', 'dprop_ptr'), ('int*', 'qprop_ptr'), ('index_type', 'dv'), ('index_type', 'qv')], [
-        CBlock(['return dprop_ptr[dv] == qprop_ptr[qv] && %s <= %s' % (qgraph.edges('qv').size(), dgraph.edges('dv').size())]),
-    ], ret_type='bool', device=True),
     Kernel('kernel_check', [dgraph.param(), qgraph.param(), ('int*', 'dprop_ptr'), ('int*', 'qprop_ptr'), ('unsigned*', 'c_set'), ('index_type', 'qv')], [
         ForAll("n", dgraph.nodes(), [
             CBlock(['c_set[n] = is_candidate(dgraph, qgraph, dprop_ptr, qprop_ptr, n, qv)']),
@@ -101,7 +50,7 @@ ast = Module([
                     ]),
                 ]),
                 If('!some_match', [
-                    CDecl(('unsigned*', 'c_set_idx', '= index2d_dev(c_set, %s, qv, node)' % dgraph.nodes().size())),
+                    CDecl(('unsigned*', 'c_set_idx', '= index2d(c_set, %s, qv, node)' % dgraph.nodes().size())),
                     CBlock(['*c_set_idx = 0']),
                     CBlock(['break']),
                 ]),
@@ -111,7 +60,7 @@ ast = Module([
                 ForAll('de', dgraph.edges('node'), [
                     CDecl(('index_type', 'vp', '= dgraph.getAbsDestination(de)')),
                     If('is_candidate(dgraph, tgraph, dprop_ptr, qprop_ptr, vp, v)', [
-                        CDecl(('unsigned*', 'c_set_idx', '= index2d_dev(c_set, %s, v, vp)' % dgraph.nodes().size())),
+                        CDecl(('unsigned*', 'c_set_idx', '= index2d(c_set, %s, v, vp)' % dgraph.nodes().size())),
                         CBlock(['*c_set_idx = 1']),
                     ]),
                 ]),

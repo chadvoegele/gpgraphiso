@@ -1,11 +1,12 @@
 GGC_ROOT?=../ggc
 GPGRAPHLIB_ROOT?=../gpgraphlib
+GPGRAPHISO_ROOT?=..
 
 GGC:=$(GGC_ROOT)/src/ggc
 CXXFLAGS=--std=c++11
 GGCFLAGS:=
 
-INCLUDES=-I$(GGC_ROOT)/rt/include -I$(GGC_ROOT)/rt/include/mgpu/include -I$(GPGRAPHLIB_ROOT)/src `pkg-config --cflags libxml-2.0 gtest`
+INCLUDES=-I$(GGC_ROOT)/rt/include -I$(GGC_ROOT)/rt/include/mgpu/include -I$(GPGRAPHLIB_ROOT)/src -I$(GPGRAPHISO_ROOT)/gpsm/gpsm `pkg-config --cflags libxml-2.0 gtest`
 LIBDIR=$(GGC_ROOT)/rt/lib
 LIBS=-lggrt -lcurand `pkg-config --libs libxml-2.0 gtest`
 ARCH=sm_35
