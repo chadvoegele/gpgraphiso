@@ -67,16 +67,11 @@ ast = Module([
             ]),
         ]),
     ]),
-    Kernel('init_candidate_verticies', [dgraph.param(), ('CSRGraphTy', 'tg'), tgraph.param(), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop'), ('std::vector<index_type>&', 'tree_order'), ('Shared<unsigned>&', 'c_set')], [
+    Kernel('init_candidate_verticies', [dgraph.param(), ('CSRGraphTy', 'tg'), tgraph.param(), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop'), ('std::vector<index_type>&', 'tree_order'), ('unsigned*', 'c_set_gptr')], [
         CDecl(('dim3', 'blocks', '')),
         CDecl(('dim3', 'threads', '')),
         CBlock(['kernel_sizing(dgraph, blocks, threads)']),
         CDecl(('std::vector<unsigned>', 'initialized', '(%s)' % tgraph.nodes().size())),
-        CDecl(('unsigned*', 'c_set_cptr', '= c_set.cpu_wr_ptr()')),
-        CFor(CDecl(('unsigned', 'i', '= 0')), 'i < tgraph.nnodes*dgraph.nnodes', 'i++', [
-            CBlock(['c_set_cptr[i] = 0']),
-        ]),
-        CDecl(('unsigned*', 'c_set_gptr', '= c_set.gpu_wr_ptr()')),
         CFor(CDecl(('std::vector<index_type>::iterator', 'u', '= tree_order.begin()')), 'u != tree_order.end()', 'u++', [
             CDecl(('unsigned', 'qv', '= *u')),
             If('!initialized[qv]', [
@@ -99,9 +94,13 @@ ast = Module([
         CDecl(('std::vector<index_type>', 'tree_order', '')),
         CBlock(['build_tree(qg, selectivity.cpu_rd_ptr(), tree, tree_order)']),
         CDecl(('Shared<unsigned>', 'c_set', '= tree.nnodes()*g.nnodes')),
+        CBlock(['memset(c_set.cpu_wr_ptr(), 0, sizeof(unsigned)*tree.nnodes()*g.nnodes)']),
         CDecl(('CSRGraphTex', 'tg', '')),
         CDecl(('CSRGraphTex', 'tgg', '')),
         CBlock(['tg.nnodes = tree.nnodes()', 'tg.nedges = tree.nedges()', 'tg.allocOnHost()', 'tree.setCSR(tg.row_start, tg.edge_dst)', 'tg.copy_to_gpu(tgg);']),
-        CBlock(['init_candidate_verticies(gg, tg, tgg, dprop, qprop, tree_order, c_set)']),
+        CBlock(['init_candidate_verticies(gg, tg, tgg, dprop, qprop, tree_order, c_set.gpu_wr_ptr())']),
+        CDecl(('std::vector<gpgraphlib::EdgeListGraph>', 'candidate_edges', '(qg.nedges)')),
+        CBlock(['build_candidate_edges(g, qg, c_set.cpu_rd_ptr(), candidate_edges)']),
+        CBlock(['join_edges(g, qg, candidate_edges);']),
         ])
     ])

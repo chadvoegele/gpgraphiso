@@ -12,6 +12,8 @@ namespace gpgraphlib {
       unsigned nedges();
       unsigned nnodes();
       void setCSR(unsigned* row_start, unsigned* edge_dst);
+      std::list<std::pair<unsigned, unsigned>>::iterator begin() { return edges.begin(); }
+      std::list<std::pair<unsigned, unsigned>>::iterator end() { return edges.end(); }
 
     private:
       // Don't assume that these maintain order
