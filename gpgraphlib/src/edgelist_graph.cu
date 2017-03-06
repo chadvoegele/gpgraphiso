@@ -10,6 +10,26 @@ namespace gpgraphlib {
   EdgeListGraph::EdgeListGraph(std::list<std::pair<unsigned, unsigned>> edges) : edges(edges) {
   }
 
+  EdgeListGraph::EdgeListGraph(std::initializer_list<std::initializer_list<unsigned>> l) {
+    for (auto e : l) {
+      if (e.size() != 2) {
+        throw std::runtime_error("EdgeListGraph initializer must be list of pairs.");
+      }
+
+      unsigned i=0, src, dst;
+      for (auto v : e) {
+        if (i == 0) {
+          src = v;
+        } else if (i == 1) {
+          dst = v;
+        }
+        i++;
+      }
+
+      addEdge(src, dst);
+    }
+  }
+
   void EdgeListGraph::addEdge(unsigned src, unsigned dst) {
     edges.push_back(std::make_pair(src, dst));
   }

@@ -3,12 +3,14 @@
 #include <list>
 #include <utility>
 #include <iostream>
+#include <initializer_list>
 
 namespace gpgraphlib {
   class EdgeListGraph {
     public:
       EdgeListGraph();
       EdgeListGraph(std::list<std::pair<unsigned, unsigned>> edges);
+      EdgeListGraph(std::initializer_list<std::initializer_list<unsigned>> l);
       void addEdge(unsigned src, unsigned dst);
       unsigned nedges();
       unsigned nnodes();

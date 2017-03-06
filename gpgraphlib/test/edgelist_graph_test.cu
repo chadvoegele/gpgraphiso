@@ -71,3 +71,13 @@ TEST(edgelist_graph, eq_test) {
 
   EXPECT_EQ(elg, elg2);
 }
+
+TEST(edgelist_graph, initializer_test) {
+  EdgeListGraph elg;
+  elg.addEdge(0, 1);
+  elg.addEdge(1, 3);
+  elg.addEdge(1, 2);
+
+  EdgeListGraph elg2 = { {0, 1}, {1, 3}, {1, 2} };
+  EXPECT_EQ(elg, elg2);
+}
