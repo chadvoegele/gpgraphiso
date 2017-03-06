@@ -46,4 +46,22 @@ namespace gpgraphlib {
       row_start[1+n] = ei;
     }
   }
+
+  bool EdgeListGraph::operator==(const EdgeListGraph& other) const {
+    return edges == other.edges;
+  }
+
+  ::std::ostream& operator<<(::std::ostream& os, const EdgeListGraph& g) {
+    os << "{";
+    bool first_iter = true;
+    for (auto& e : g) {
+      if (!first_iter) {
+        os << ", ";
+      }
+      os << "(" << std::get<0>(e) << "->" << std::get<1>(e) << ")";
+      first_iter = false;
+    }
+    os << "}";
+    return os;
+  }
 }

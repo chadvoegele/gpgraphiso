@@ -2,6 +2,7 @@
 
 #include <list>
 #include <utility>
+#include <iostream>
 
 namespace gpgraphlib {
   class EdgeListGraph {
@@ -12,11 +13,14 @@ namespace gpgraphlib {
       unsigned nedges();
       unsigned nnodes();
       void setCSR(unsigned* row_start, unsigned* edge_dst);
-      std::list<std::pair<unsigned, unsigned>>::iterator begin() { return edges.begin(); }
-      std::list<std::pair<unsigned, unsigned>>::iterator end() { return edges.end(); }
+      std::list<std::pair<unsigned, unsigned>>::const_iterator begin() const { return edges.cbegin(); }
+      std::list<std::pair<unsigned, unsigned>>::const_iterator end() const { return edges.cend(); }
+      bool operator==(const EdgeListGraph& other) const;
 
     private:
       // Don't assume that these maintain order
       std::list<std::pair<unsigned, unsigned>> edges;
   };
+
+  ::std::ostream& operator<<(::std::ostream& os, const EdgeListGraph& g);
 }
