@@ -101,6 +101,7 @@ ast = Module([
         CBlock(['init_candidate_verticies(gg, tg, tgg, dprop, qprop, tree_order, c_set.gpu_wr_ptr())']),
         CDecl(('std::vector<gpgraphlib::EdgeListGraph>', 'candidate_edges', '(qg.nedges)')),
         CBlock(['build_candidate_edges(g, qg, c_set.cpu_rd_ptr(), candidate_edges)']),
-        CBlock(['join_edges(g, qg, candidate_edges);']),
+        CDecl(('std::vector<Solution>', 'solutions', '')),
+        CBlock(['join_edges(g, qg, candidate_edges, solutions)']),
         ])
     ])

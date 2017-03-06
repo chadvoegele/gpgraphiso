@@ -216,6 +216,48 @@ class GPSMTests(pyirgltest.test.IrGLTest):
 
         self.run_test(ast, test_ast)
 
+    @unittest.skipIf(skip_tests, 'join edges test')
+    def test_candidate_edges(self):
+        dgraph = gg.lib.graph.Graph("dgraph")
+        qgraph = gg.lib.graph.Graph("qgraph")
+
+        test_ast = Module([
+            CBlock([cgen.Include('edgelist_graph.h')]),
+            CBlock([cgen.Include('gtest/gtest.h')]),
+            Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), params.GraphParam('qg', True), params.GraphParam('qgg', True), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop')], [
+                CDecl(('Shared<float>', 'selectivity', '= qg.nnodes')),
+                Invoke('calc_selectivity', ('gg', 'qgg', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'selectivity.gpu_wr_ptr()')),
+                CDecl(('gpgraphlib::EdgeListGraph', 'tree', '')),
+                CDecl(('std::vector<index_type>', 'tree_order', '')),
+                CBlock(['build_tree(qg, selectivity.cpu_rd_ptr(), tree, tree_order)']),
+                CDecl(('Shared<unsigned>', 'c_set', '= tree.nnodes()*g.nnodes')),
+                CBlock(['memset(c_set.cpu_wr_ptr(), 0, sizeof(unsigned)*tree.nnodes()*g.nnodes)']),
+                CDecl(('CSRGraphTex', 'tg', '')),
+                CDecl(('CSRGraphTex', 'tgg', '')),
+                CBlock(['tg.nnodes = tree.nnodes()', 'tg.nedges = tree.nedges()', 'tg.allocOnHost()', 'tree.setCSR(tg.row_start, tg.edge_dst)', 'tg.copy_to_gpu(tgg);']),
+                CBlock(['init_candidate_verticies(gg, tg, tgg, dprop, qprop, tree_order, c_set.gpu_wr_ptr())']),
+                CDecl(('std::vector<gpgraphlib::EdgeListGraph>', 'candidate_edges', '(qg.nedges)')),
+                CDecl(('unsigned*', 'c_set_cpu_ptr', '= c_set.cpu_rd_ptr()')),
+                CBlock(['build_candidate_edges(g, qg, c_set_cpu_ptr, candidate_edges)']),
+                CDecl(('std::vector<Solution>', 'solutions', '')),
+                CBlock(['join_edges(g, qg, candidate_edges, solutions)']),
+                CBlock(['EXPECT_EQ(1, solutions.size())']),
+                CDecl(('std::vector<unsigned>', 'expected', ' = { 0, 1, 2, 5, 6, 7 }')),
+                CDecl(('std::vector<unsigned>', 'actual', '(solutions.at(0).vertex_map, solutions.at(0).vertex_map+solutions.at(0).n_vertices)')),
+                CBlock(['EXPECT_EQ(expected, actual)']),
+                ]),
+            test_gpsm.testcore.kernel_sizing(),
+            test_gpsm.testcore.main(
+                '{ { 0,1 }, { 1,0 }, { 1,2 }, { 2,1 }, { 1,6 }, { 6,1 }, { 1,5 }, { 5,1 }, { 2,5 }, { 5,2 }, { 2,6 }, { 6,2 }, { 5,6 }, { 6,5 }, { 6,7 }, { 7,6 }, { 6,3 }, { 3,6 }, { 3,7 }, { 7,3 }, { 3,4 }, { 4,3 }, { 7,4 }, { 4,7 }, { 4,8 }, { 8,4 } }',
+                '{ 1, 0, 1, 1, 0, 0, 2, 2, 0 }',
+                '{ { 0,1 }, { 1,0 }, { 1,2 }, { 2,1 }, { 1,4 }, { 4,1 }, { 1,3 }, { 3,1 }, { 2,4 }, { 4,2 }, { 2,3 }, { 3,2 }, { 3,4 }, { 4,3 }, { 4,5 }, { 5,4 } }',
+                '{ 1, 0, 1, 0, 2, 2 }'),
+            ])
+
+        ast = gpsm.gpsm.ast
+
+        self.run_test(ast, test_ast)
+
     @unittest.skipIf(skip_tests, 'compile')
     def test_compile(self):
         test_ast = Module([test_gpsm.testcore.kernel_sizing()])

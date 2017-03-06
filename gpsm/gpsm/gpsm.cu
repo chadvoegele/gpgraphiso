@@ -10,29 +10,21 @@ int process_prog_arg(int argc, char *argv[], int arg_start) {
 extern int SKELAPP_RETVAL;
 extern const char* OUTPUT;
 
-struct PartialSolution {
+struct Solution {
   unsigned* vertex_map;
-  gpgraphlib::EdgeListGraph edges;
   unsigned n_vertices;
 
-  PartialSolution(unsigned n_vertices) : n_vertices(n_vertices) {
+  Solution(unsigned n_vertices) : n_vertices(n_vertices) {
     vertex_map = (unsigned*)malloc(sizeof(unsigned)*n_vertices);
   }
 
-  ~PartialSolution() {
-    if (vertex_map) {
-      free(vertex_map);
-    };
+  ~Solution() {
+    free(vertex_map);
   }
 
-  PartialSolution(const PartialSolution& other) : n_vertices(other.n_vertices) {
+  Solution(const Solution& other) : n_vertices(other.n_vertices) {
     vertex_map = (unsigned*)malloc(sizeof(unsigned)*n_vertices);
     memcpy(vertex_map, other.vertex_map, sizeof(unsigned)*n_vertices);
-    // TODO: Deal with this const nonsense better
-    gpgraphlib::EdgeListGraph oedges = other.edges;
-    for (auto ce : oedges) {
-      edges.addEdge(std::get<0>(ce), std::get<1>(ce));
-    }
   }
 };
 
@@ -109,14 +101,12 @@ void build_candidate_edges(CSRGraphTy& dgraph, CSRGraphTy& qgraph, unsigned* c_s
   }
 }
 
-void join_edges(CSRGraphTy dgraph, CSRGraphTy qgraph, std::vector<gpgraphlib::EdgeListGraph>& candidate_edges) {
+void join_edges(CSRGraphTy dgraph, CSRGraphTy qgraph, std::vector<gpgraphlib::EdgeListGraph>& candidate_edges, std::vector<Solution>& solutions) {
   unsigned* vertex_visited = (unsigned*)malloc(sizeof(unsigned)*qgraph.nnodes);
   memset(vertex_visited, 0, sizeof(unsigned)*qgraph.nnodes);
   unsigned* edge_visited = (unsigned*)malloc(sizeof(unsigned)*qgraph.nedges);
   memset(edge_visited, 0, sizeof(unsigned)*qgraph.nedges);
   unsigned* edge_score = (unsigned*)malloc(sizeof(unsigned)*qgraph.nedges);
-
-  std::vector<PartialSolution> solutions;
 
   while (std::accumulate(edge_visited, edge_visited + qgraph.nedges, 0) != qgraph.nedges) {
     // TODO: Split this query edge selection into own function
@@ -157,48 +147,43 @@ void join_edges(CSRGraphTy dgraph, CSRGraphTy qgraph, std::vector<gpgraphlib::Ed
       for (auto ce : candidate_edges[selected_qe]) {
         index_type csrc = std::get<0>(ce);
         index_type cdst = std::get<1>(ce);
-        PartialSolution soln(qgraph.nnodes);
+        Solution soln(qgraph.nnodes);
         soln.vertex_map[selected_qsrc] = csrc;
         soln.vertex_map[selected_qdst] = cdst;
-        soln.edges.addEdge(csrc, cdst);
         solutions.push_back(soln);
       }
     } else {
-      std::vector<PartialSolution> new_solutions;
-      for (PartialSolution& ps : solutions) {
+      std::vector<Solution> new_solutions;
+      for (Solution& ps : solutions) {
         for (auto ce : candidate_edges[selected_qe]) {
           index_type csrc = std::get<0>(ce);
           index_type cdst = std::get<1>(ce);
-          bool already_mapped = false;
-          for (auto pse : ps.edges) {
-            index_type psrc = std::get<0>(pse);
-            index_type pdst = std::get<1>(pse);
-            if (csrc == psrc && cdst == pdst) {
-              already_mapped = true;
-              break;
+          // Could speed this up with array of size data_graph.nnodes OR with hashing
+          bool csrc_mapped = false;
+          bool cdst_mapped = false;
+          for (size_t i = 0; i < ps.n_vertices; i++) {
+            if (ps.vertex_map[i] == csrc) {
+              csrc_mapped = true;
+            }
+            if (ps.vertex_map[i] == cdst) {
+              cdst_mapped = true;
             }
           }
-          if (!already_mapped &&
-            (!vertex_visited[selected_qsrc] || ps.vertex_map[selected_qsrc] == csrc) &&
-            (!vertex_visited[selected_qdst] || ps.vertex_map[selected_qdst] == cdst)) {
-            PartialSolution psn(ps);
+          if ((!vertex_visited[selected_qsrc] && !csrc_mapped || ps.vertex_map[selected_qsrc] == csrc) &&
+            (!vertex_visited[selected_qdst] && !cdst_mapped || ps.vertex_map[selected_qdst] == cdst)) {
+            Solution psn(ps);
             if (!vertex_visited[selected_qsrc]) {
               psn.vertex_map[selected_qsrc] = csrc;
             }
             if (!vertex_visited[selected_qdst]) {
               psn.vertex_map[selected_qdst] = cdst;
             }
-            psn.edges.addEdge(csrc, cdst);
             new_solutions.push_back(psn);
           }
         }
       }
 
-      // Don't use solutions = new_solutions here!
-      solutions.clear();
-      for (auto s : new_solutions) {
-        solutions.push_back(s);
-      }
+      solutions = std::move(new_solutions);
     }
 
     vertex_visited[selected_qsrc] = 1;
@@ -208,4 +193,5 @@ void join_edges(CSRGraphTy dgraph, CSRGraphTy qgraph, std::vector<gpgraphlib::Ed
 
   free(edge_visited);
   free(vertex_visited);
+  free(edge_score);
 }
