@@ -100,7 +100,7 @@ void build_candidate_edges(CSRGraphTy& dgraph, CSRGraphTy& qgraph, unsigned* c_s
             index_type ddst = dgraph.edge_dst[de];
             c_set_idx = index2d(c_set, dgraph.nnodes, qdst, ddst);
             if (*c_set_idx) {
-              candidate_edges.at(qe).addEdge(qsrc, qdst);
+              candidate_edges.at(qe).addEdge(dsrc, ddst);
             }
           }
         }
