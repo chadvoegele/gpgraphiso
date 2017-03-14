@@ -87,6 +87,27 @@ ast = Module([
             ]),
         ]),
     ], host=True),
+    Kernel('build_candidate_edges_gp', [dgraph.param(), qgraph.param(), ('unsigned*', 'c_set'), ('AppendOnlyList*', 'csrc_ptr'), ('AppendOnlyList*', 'cdst_ptr')], [
+      CDecl(('unsigned*', 'c_set_idx', '')),
+      ForAll('qsrc', qgraph.nodes(), [
+        ForAll('qedge', qgraph.edges('qsrc'), [
+          CDecl(('index_type', 'qdst', '= qgraph.getAbsDestination(qedge)')),
+          ForAll('dsrc', dgraph.nodes(), [
+            CBlock(['c_set_idx = index2d(c_set, dgraph.nnodes, qsrc, dsrc)']),
+            If('*c_set_idx', [
+              ForAll('dedge', dgraph.edges('dsrc'), [
+                CDecl(('index_type', 'ddst', '= dgraph.getAbsDestination(dedge)')),
+                CBlock(['c_set_idx = index2d(c_set, dgraph.nnodes, qdst, ddst)']),
+                If('*c_set_idx', [
+                  CBlock(['csrc_ptr[qedge].push(dsrc)']),
+                  CBlock(['cdst_ptr[qedge].push(ddst)']),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ]),
     Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), params.GraphParam('qg', True), params.GraphParam('qgg', True), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop')], [
         CDecl(('Shared<float>', 'selectivity', '= qg.nnodes')),
         Invoke('calc_selectivity', ('gg', 'qgg', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'selectivity.gpu_wr_ptr()')),
@@ -99,8 +120,21 @@ ast = Module([
         CDecl(('CSRGraphTex', 'tgg', '')),
         CBlock(['tg.nnodes = tree.nnodes()', 'tg.nedges = tree.nedges()', 'tg.allocOnHost()', 'tree.setCSR(tg.row_start, tg.edge_dst)', 'tg.copy_to_gpu(tgg);']),
         CBlock(['init_candidate_verticies(gg, tg, tgg, dprop, qprop, tree_order, c_set.gpu_wr_ptr())']),
+
+        CDecl(('Shared<AppendOnlyList>', 'candidate_src', '= qg.nedges')),
+        CDecl(('AppendOnlyList*', 'candidate_src_cp', '= candidate_src.cpu_wr_ptr()')),
+        CDecl(('Shared<AppendOnlyList>', 'candidate_dst', '= qg.nedges')),
+        CDecl(('AppendOnlyList*', 'candidate_dst_cp', '= candidate_dst.cpu_wr_ptr()')),
+        CFor(CDecl(('size_t', 'i', '= 0')), 'i < qg.nedges', 'i++', [
+          CBlock(['candidate_src_cp[i] =  AppendOnlyList(g.nedges)'], parse=False),
+          CBlock(['candidate_dst_cp[i] = AppendOnlyList(g.nedges)'], parse=False),
+        ]),
+        Invoke('build_candidate_edges_gp', ('gg', 'qgg', 'c_set.gpu_rd_ptr()', 'candidate_src.gpu_wr_ptr()', 'candidate_dst.gpu_wr_ptr()')),
+
+        # TODO: To be removed after gpu implementation of join_edges
         CDecl(('std::vector<gpgraphlib::EdgeListGraph>', 'candidate_edges', '(qg.nedges)')),
         CBlock(['build_candidate_edges(g, qg, c_set.cpu_rd_ptr(), candidate_edges)']),
+
         CDecl(('std::vector<Solution>', 'solutions', '')),
         CBlock(['join_edges(g, qg, candidate_edges, solutions)']),
         ])

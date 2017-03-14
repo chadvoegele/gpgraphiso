@@ -168,9 +168,28 @@ class GPSMTests(pyirgltest.test.IrGLTest):
                 CDecl(('CSRGraphTex', 'tgg', '')),
                 CBlock(['tg.nnodes = tree.nnodes()', 'tg.nedges = tree.nedges()', 'tg.allocOnHost()', 'tree.setCSR(tg.row_start, tg.edge_dst)', 'tg.copy_to_gpu(tgg);']),
                 CBlock(['init_candidate_verticies(gg, tg, tgg, dprop, qprop, tree_order, c_set.gpu_wr_ptr())']),
+
+                CDecl(('Shared<AppendOnlyList>', 'candidate_src', '= qg.nedges')),
+                CDecl(('AppendOnlyList*', 'candidate_src_cp', '= candidate_src.cpu_wr_ptr()')),
+                CDecl(('Shared<AppendOnlyList>', 'candidate_dst', '= qg.nedges')),
+                CDecl(('AppendOnlyList*', 'candidate_dst_cp', '= candidate_dst.cpu_wr_ptr()')),
+                CFor(CDecl(('size_t', 'i', '= 0')), 'i < qg.nedges', 'i++', [
+                  CBlock(['candidate_src_cp[i] =  AppendOnlyList(g.nedges)'], parse=False),
+                  CBlock(['candidate_dst_cp[i] = AppendOnlyList(g.nedges)'], parse=False),
+                ]),
+                Invoke('build_candidate_edges_gp', ('gg', 'qgg', 'c_set.gpu_rd_ptr()', 'candidate_src.gpu_wr_ptr()', 'candidate_dst.gpu_wr_ptr()')),
+
                 CDecl(('std::vector<gpgraphlib::EdgeListGraph>', 'candidate_edges', '(qg.nedges)')),
-                CDecl(('unsigned*', 'c_set_cpu_ptr', '= c_set.cpu_rd_ptr()')),
-                CBlock(['build_candidate_edges(g, qg, c_set_cpu_ptr, candidate_edges)']),
+                CBlock(['candidate_src_cp = candidate_src.cpu_rd_ptr()']),
+                CBlock(['candidate_dst_cp = candidate_dst.cpu_rd_ptr()']),
+                CFor(CDecl(('size_t', 'i', '= 0')), 'i < qg.nedges', 'i++', [
+                  CDecl(('int*', 'csrc_ptr', '= candidate_src_cp[i].list.cpu_rd_ptr()')),
+                  CDecl(('int*', 'cdst_ptr', '= candidate_dst_cp[i].list.cpu_rd_ptr()')),
+                  CFor(CDecl(('size_t', 'j', '= 0')), 'j < candidate_src_cp[i].nitems()', 'j++', [
+                    CBlock(['candidate_edges.at(i).addEdge(csrc_ptr[j], cdst_ptr[j])']),
+                  ]),
+                ]),
+
                 CDecl(('gpgraphlib::EdgeListGraph', 'e12', '= { {0, 1}, {2, 1}, {2, 5} }')),
                 CBlock(['EXPECT_EQ(e12, candidate_edges.at(0))']),
                 CDecl(('gpgraphlib::EdgeListGraph', 'e21', '= { {1, 0}, {1, 2}, {5, 2} }')),
@@ -217,7 +236,7 @@ class GPSMTests(pyirgltest.test.IrGLTest):
         self.run_test(ast, test_ast)
 
     @unittest.skipIf(skip_tests, 'join edges test')
-    def test_candidate_edges(self):
+    def test_join_edges(self):
         dgraph = gg.lib.graph.Graph("dgraph")
         qgraph = gg.lib.graph.Graph("qgraph")
 
@@ -260,7 +279,14 @@ class GPSMTests(pyirgltest.test.IrGLTest):
 
     @unittest.skipIf(skip_tests, 'compile')
     def test_compile(self):
-        test_ast = Module([test_gpsm.testcore.kernel_sizing()])
+        test_ast = Module([
+          test_gpsm.testcore.kernel_sizing(),
+          test_gpsm.testcore.main(
+              '{ { 0,1 }, { 1,0 }, { 1,2 }, { 2,1 }, { 1,6 }, { 6,1 }, { 1,5 }, { 5,1 }, { 2,5 }, { 5,2 }, { 2,6 }, { 6,2 }, { 5,6 }, { 6,5 }, { 6,7 }, { 7,6 }, { 6,3 }, { 3,6 }, { 3,7 }, { 7,3 }, { 3,4 }, { 4,3 }, { 7,4 }, { 4,7 }, { 4,8 }, { 8,4 } }',
+              '{ 1, 0, 1, 1, 0, 0, 2, 2, 0 }',
+              '{ { 0,1 }, { 1,0 }, { 1,2 }, { 2,1 }, { 1,4 }, { 4,1 }, { 1,3 }, { 3,1 }, { 2,4 }, { 4,2 }, { 2,3 }, { 3,2 }, { 3,4 }, { 4,3 }, { 4,5 }, { 5,4 } }',
+              '{ 1, 0, 1, 0, 2, 2 }'),
+          ])
         ast = gpsm.gpsm.ast
 
         self.run_test(ast, test_ast)

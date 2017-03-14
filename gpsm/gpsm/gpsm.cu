@@ -81,6 +81,7 @@ __device__ bool is_candidate(CSRGraphTy dgraph, CSRGraphTy qgraph, int* dprop_pt
   return dprop_ptr[dv] == qprop_ptr[qv] && (qgraph).getOutDegree(qv) <= (dgraph).getOutDegree(dv);
 }
 
+// TODO: No longer used by GPU impl. Move to CPU impl.
 void build_candidate_edges(CSRGraphTy& dgraph, CSRGraphTy& qgraph, unsigned* c_set, std::vector<gpgraphlib::EdgeListGraph>& candidate_edges) {
   for (index_type qsrc = 0; qsrc != qgraph.nnodes; qsrc++) {
     for (index_type qe = qgraph.row_start[qsrc]; qe != qgraph.row_start[qsrc+1]; qe++) {
