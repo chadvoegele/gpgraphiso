@@ -67,7 +67,7 @@ ast = Module([
             ]),
         ]),
     ]),
-    Kernel('init_candidate_verticies', [dgraph.param(), ('CSRGraphTy', 'tg'), tgraph.param(), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop'), ('std::vector<index_type>&', 'tree_order'), ('unsigned*', 'c_set_gptr')], [
+    Kernel('init_candidate_vertices', [dgraph.param(), ('CSRGraphTy', 'tg'), tgraph.param(), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop'), ('std::vector<index_type>&', 'tree_order'), ('unsigned*', 'c_set_gptr')], [
         CDecl(('dim3', 'blocks', '')),
         CDecl(('dim3', 'threads', '')),
         CBlock(['kernel_sizing(dgraph, blocks, threads)']),
@@ -119,7 +119,7 @@ ast = Module([
         CDecl(('CSRGraphTex', 'tg', '')),
         CDecl(('CSRGraphTex', 'tgg', '')),
         CBlock(['tg.nnodes = tree.nnodes()', 'tg.nedges = tree.nedges()', 'tg.allocOnHost()', 'tree.setCSR(tg.row_start, tg.edge_dst)', 'tg.copy_to_gpu(tgg);']),
-        CBlock(['init_candidate_verticies(gg, tg, tgg, dprop, qprop, tree_order, c_set.gpu_wr_ptr())']),
+        CBlock(['init_candidate_vertices(gg, tg, tgg, dprop, qprop, tree_order, c_set.gpu_wr_ptr())']),
 
         CDecl(('Shared<AppendOnlyList>', 'candidate_src', '= qg.nedges')),
         CDecl(('AppendOnlyList*', 'candidate_src_cp', '= candidate_src.cpu_wr_ptr()')),
