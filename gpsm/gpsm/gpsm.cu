@@ -81,6 +81,21 @@ __device__ bool is_candidate(CSRGraphTy dgraph, CSRGraphTy qgraph, int* dprop_pt
   return dprop_ptr[dv] == qprop_ptr[qv] && (qgraph).getOutDegree(qv) <= (dgraph).getOutDegree(dv);
 }
 
+template<typename T, typename D>
+struct min_index : public std::binary_function<T, T, T> {
+  D* score;
+  min_index(D* score) : score(score) { }
+  MGPU_HOST_DEVICE T operator()(T a, T b) {
+    if (a == UINT_MAX) {
+      return b;
+    }
+    if (b == UINT_MAX) {
+      return a;
+    }
+    return score[a] < score[b] ? a : b;
+  }
+};
+
 // TODO: No longer used by GPU impl. Move to CPU impl.
 void build_candidate_edges(CSRGraphTy& dgraph, CSRGraphTy& qgraph, unsigned* c_set, std::vector<gpgraphlib::EdgeListGraph>& candidate_edges) {
   for (index_type qsrc = 0; qsrc != qgraph.nnodes; qsrc++) {
@@ -102,6 +117,7 @@ void build_candidate_edges(CSRGraphTy& dgraph, CSRGraphTy& qgraph, unsigned* c_s
   }
 }
 
+// TODO: No longer used by GPU impl. Move to CPU impl.
 void join_edges(CSRGraphTy dgraph, CSRGraphTy qgraph, std::vector<gpgraphlib::EdgeListGraph>& candidate_edges, std::vector<Solution>& solutions) {
   unsigned* vertex_visited = (unsigned*)malloc(sizeof(unsigned)*qgraph.nnodes);
   memset(vertex_visited, 0, sizeof(unsigned)*qgraph.nnodes);
