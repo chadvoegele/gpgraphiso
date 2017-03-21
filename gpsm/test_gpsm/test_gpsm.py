@@ -244,6 +244,7 @@ class GPSMTests(pyirgltest.test.IrGLTest):
             CBlock([cgen.Include('edgelist_graph.h')]),
             CBlock([cgen.Include('gtest/gtest.h')]),
             Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), params.GraphParam('qg', True), params.GraphParam('qgg', True), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop')], [
+                CBlock(['mgc = mgpu::CreateCudaDevice(CUDA_DEVICE)'], parse=False),
                 CDecl(('Shared<float>', 'selectivity', '= qg.nnodes')),
                 Invoke('calc_selectivity', ('gg', 'qgg', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'selectivity.gpu_wr_ptr()')),
                 CDecl(('gpgraphlib::EdgeListGraph', 'tree', '')),
@@ -255,15 +256,23 @@ class GPSMTests(pyirgltest.test.IrGLTest):
                 CDecl(('CSRGraphTex', 'tgg', '')),
                 CBlock(['tg.nnodes = tree.nnodes()', 'tg.nedges = tree.nedges()', 'tg.allocOnHost()', 'tree.setCSR(tg.row_start, tg.edge_dst)', 'tg.copy_to_gpu(tgg);']),
                 CBlock(['init_candidate_vertices(gg, tg, tgg, dprop, qprop, tree_order, c_set.gpu_wr_ptr())']),
-                CDecl(('std::vector<gpgraphlib::EdgeListGraph>', 'candidate_edges', '(qg.nedges)')),
-                CDecl(('unsigned*', 'c_set_cpu_ptr', '= c_set.cpu_rd_ptr()')),
-                CBlock(['build_candidate_edges(g, qg, c_set_cpu_ptr, candidate_edges)']),
-                CDecl(('std::vector<Solution>', 'solutions', '')),
-                CBlock(['join_edges(g, qg, candidate_edges, solutions)']),
+
+                CDecl(('Shared<AppendOnlyList>', 'candidate_src', '= qg.nedges')),
+                CDecl(('AppendOnlyList*', 'candidate_src_cp', '= candidate_src.cpu_wr_ptr()')),
+                CDecl(('Shared<AppendOnlyList>', 'candidate_dst', '= qg.nedges')),
+                CDecl(('AppendOnlyList*', 'candidate_dst_cp', '= candidate_dst.cpu_wr_ptr()')),
+                CFor(CDecl(('size_t', 'i', '= 0')), 'i < qg.nedges', 'i++', [
+                  CBlock(['candidate_src_cp[i] = AppendOnlyList(g.nedges)'], parse=False),
+                  CBlock(['candidate_dst_cp[i] = AppendOnlyList(g.nedges)'], parse=False),
+                ]),
+                Invoke('build_candidate_edges_gp', ('gg', 'qgg', 'c_set.gpu_rd_ptr()', 'candidate_src.gpu_wr_ptr()', 'candidate_dst.gpu_wr_ptr()')),
+
+                CDecl(('std::vector<std::vector<unsigned>>', 'solutions', '')),
+                CBlock(['join_edges_gp(gg, qgg, qg, candidate_src, candidate_dst, solutions)']),
+
                 CBlock(['EXPECT_EQ(1, solutions.size())']),
                 CDecl(('std::vector<unsigned>', 'expected', ' = { 0, 1, 2, 5, 6, 7 }')),
-                CDecl(('std::vector<unsigned>', 'actual', '(solutions.at(0).vertex_map, solutions.at(0).vertex_map+solutions.at(0).n_vertices)')),
-                CBlock(['EXPECT_EQ(expected, actual)']),
+                CBlock(['EXPECT_EQ(expected, solutions.at(0))']),
                 ]),
             test_gpsm.testcore.kernel_sizing(),
             test_gpsm.testcore.main(

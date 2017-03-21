@@ -185,7 +185,7 @@ ast = Module([
         ]),
       ]),
     ]),
-    Kernel('join_edges_gp', [dgraph.param(), qgraph.param(), ('CSRGraphTy', 'qg'), ('Shared<AppendOnlyList>', 'candidate_src'), ('Shared<AppendOnlyList>', 'candidate_dst')], [
+    Kernel('join_edges_gp', [dgraph.param(), qgraph.param(), ('CSRGraphTy', 'qg'), ('Shared<AppendOnlyList>', 'candidate_src'), ('Shared<AppendOnlyList>', 'candidate_dst'), ('std::vector<std::vector<unsigned>>&', 'solutions')], [
         CDecl(('dim3', 'blocks', '')),
         CDecl(('dim3', 'threads', '')),
         CBlock(['kernel_sizing(dgraph, blocks, threads)']),
@@ -230,6 +230,15 @@ ast = Module([
             CDecl(('unsigned*', 'edge_visited_cp', '= edge_visited.cpu_wr_ptr()')),
             CBlock(['edge_visited_cp[selected_qe] = 1']),
           ]),
+          CBlock(['pipe.in_wl().update_cpu()']),
+          CDecl(('unsigned', 'wl_nitems', '= pipe.in_wl().nitems()')),
+          CFor(CDecl(('unsigned', 's', '= 0')), 's < wl_nitems', 's = s + qgraph.nnodes', [
+            CDecl(('std::vector<unsigned>', 'solution', '')),
+            CFor(CDecl(('unsigned', 'n', '= 0')), 'n < qgraph.nnodes', 'n++', [
+              CBlock(['solution.push_back(pipe.in_wl().wl[s + n])']),
+            ]),
+            CBlock(['solutions.push_back(solution)']),
+          ]),
         ], wlinit=WLInit("65535", []), once=True),
     ], host=True),
     Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), params.GraphParam('qg', True), params.GraphParam('qgg', True), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop')], [
@@ -255,6 +264,8 @@ ast = Module([
           CBlock(['candidate_dst_cp[i] = AppendOnlyList(g.nedges)'], parse=False),
         ]),
         Invoke('build_candidate_edges_gp', ('gg', 'qgg', 'c_set.gpu_rd_ptr()', 'candidate_src.gpu_wr_ptr()', 'candidate_dst.gpu_wr_ptr()')),
-        CBlock(['join_edges_gp(gg, qgg, qg, candidate_src, candidate_dst)']),
+
+        CDecl(('std::vector<std::vector<unsigned>>', 'solutions', '')),
+        CBlock(['join_edges_gp(gg, qgg, qg, candidate_src, candidate_dst, solutions)']),
         ])
     ])
