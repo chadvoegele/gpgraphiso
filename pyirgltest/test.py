@@ -6,7 +6,6 @@ import subprocess
 import tempfile
 import itertools
 import unittest
-import itertools
 
 import gg.compiler
 from gg.ast import *
