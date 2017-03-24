@@ -1,1 +1,1 @@
-from pyirgltest import test
+from . import test
