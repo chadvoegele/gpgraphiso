@@ -24,4 +24,4 @@ test_main: $(TEST_OBJS) $(OBJS)
 
 clean:
 	@[ -f ./test_main ] && rm test_main || true
-	@[ -f $(TEST_OBJS) ] && rm $(TEST_OBJS) || true
+	@for OBJ in $(TEST_OBJS); do [ -f $${OBJ} ] && rm $${OBJ} || true; done
