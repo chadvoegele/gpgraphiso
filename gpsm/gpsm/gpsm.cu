@@ -22,7 +22,7 @@ void build_tree(CSRGraphTy qgraph, float* selectivity, gpgraphlib::EdgeListGraph
   }
 
   while (!worklist.empty()) {
-    std::sort(worklist.begin(), worklist.end(), [](std::tuple<index_type, index_type, float>& me, std::tuple<index_type, index_type, float>& other) {
+    std::sort(worklist.begin(), worklist.end(), [](const std::tuple<index_type, index_type, float>& me, const std::tuple<index_type, index_type, float>& other) {
       return std::get<2>(me) < std::get<2>(other);
     });
     index_type next_node = std::get<0>(worklist.back());
