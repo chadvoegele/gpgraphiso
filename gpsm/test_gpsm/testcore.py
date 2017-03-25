@@ -15,8 +15,7 @@ def kernel_sizing():
 
 def main(dlist, dprop, qlist, qprop):
         k = Kernel("main", [], [
-            CDecl(('std::list<std::pair<unsigned, unsigned>>', 'dlist','= %s' % dlist)),
-            CDecl(('gpgraphlib::EdgeListGraph', 'delg', '= dlist')),
+            CDecl(('gpgraphlib::EdgeListGraph', 'delg', '= %s' % dlist)),
             CDecl(('CSRGraphTy', 'dg', '')),
             CBlock(['dg.nnodes = delg.nnodes()']),
             CBlock(['dg.nedges = delg.nedges()']),
@@ -24,9 +23,11 @@ def main(dlist, dprop, qlist, qprop):
             CBlock(['delg.setCSR(dg.row_start, dg.edge_dst)']),
             CDecl(('CSRGraphTy', 'dgg', '')),
             CBlock(('dg.copy_to_gpu(dgg)')),
+
             CDecl(('int', 'dprop_data[]', '= %s' % dprop)),
             CDecl(('Shared<int>', 'dprop', '= dg.nnodes')),
             CBlock(['memcpy(dprop.cpu_wr_ptr(), dprop_data, sizeof(dprop_data))']),
+
             CDecl(('std::list<std::pair<unsigned, unsigned>>', 'qlist','= %s' % qlist)),
             CDecl(('gpgraphlib::EdgeListGraph', 'qelg', '= qlist')),
             CDecl(('CSRGraphTy', 'qg', '')),
@@ -37,8 +38,10 @@ def main(dlist, dprop, qlist, qprop):
             CBlock(('qg.copy_to_gpu(qgg)')),
             CDecl(('CSRGraphTy', 'qgg', '')),
             CDecl(('int', 'qprop_data[]', '= %s' % qprop)),
+
             CDecl(('Shared<int>', 'qprop', '= qg.nnodes')),
             CBlock(['memcpy(qprop.cpu_wr_ptr(), qprop_data, sizeof(qprop_data))']),
+
             CBlock(['gg_main(dg, dgg, qg, qgg, dprop, qprop)']),
             ],
             host=True,

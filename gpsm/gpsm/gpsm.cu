@@ -1,3 +1,5 @@
+#include "gpsm.h"
+
 #include <numeric>
 
 const char* prog_opts = "";
@@ -7,26 +9,6 @@ void process_prog_opt(char c, char *optarg) { }
 int process_prog_arg(int argc, char *argv[], int arg_start) {
   return 1;
 }
-extern int SKELAPP_RETVAL;
-extern const char* OUTPUT;
-
-struct Solution {
-  unsigned* vertex_map;
-  unsigned n_vertices;
-
-  Solution(unsigned n_vertices) : n_vertices(n_vertices) {
-    vertex_map = (unsigned*)malloc(sizeof(unsigned)*n_vertices);
-  }
-
-  ~Solution() {
-    free(vertex_map);
-  }
-
-  Solution(const Solution& other) : n_vertices(other.n_vertices) {
-    vertex_map = (unsigned*)malloc(sizeof(unsigned)*n_vertices);
-    memcpy(vertex_map, other.vertex_map, sizeof(unsigned)*n_vertices);
-  }
-};
 
 void build_tree(CSRGraphTy qgraph, float* selectivity, gpgraphlib::EdgeListGraph& tree, std::vector<index_type>& tree_order) {
   std::vector<std::tuple<index_type, index_type, float>> worklist;
@@ -81,21 +63,6 @@ __device__ bool is_candidate(CSRGraphTy dgraph, CSRGraphTy qgraph, int* dprop_pt
   return dprop_ptr[dv] == qprop_ptr[qv] && (qgraph).getOutDegree(qv) <= (dgraph).getOutDegree(dv);
 }
 
-template<typename T, typename D>
-struct min_index : public std::binary_function<T, T, T> {
-  D* score;
-  min_index(D* score) : score(score) { }
-  MGPU_HOST_DEVICE T operator()(T a, T b) {
-    if (a == UINT_MAX) {
-      return b;
-    }
-    if (b == UINT_MAX) {
-      return a;
-    }
-    return score[a] < score[b] ? a : b;
-  }
-};
-
 // TODO: No longer used by GPU impl. Move to CPU impl.
 void build_candidate_edges(CSRGraphTy& dgraph, CSRGraphTy& qgraph, unsigned* c_set, std::vector<gpgraphlib::EdgeListGraph>& candidate_edges) {
   for (index_type qsrc = 0; qsrc != qgraph.nnodes; qsrc++) {
@@ -116,6 +83,25 @@ void build_candidate_edges(CSRGraphTy& dgraph, CSRGraphTy& qgraph, unsigned* c_s
     }
   }
 }
+
+// TODO: No longer used by GPU impl. Move to CPU impl.
+struct Solution {
+  unsigned* vertex_map;
+  unsigned n_vertices;
+
+  Solution(unsigned n_vertices) : n_vertices(n_vertices) {
+    vertex_map = (unsigned*)malloc(sizeof(unsigned)*n_vertices);
+  }
+
+  ~Solution() {
+    free(vertex_map);
+  }
+
+  Solution(const Solution& other) : n_vertices(other.n_vertices) {
+    vertex_map = (unsigned*)malloc(sizeof(unsigned)*n_vertices);
+    memcpy(vertex_map, other.vertex_map, sizeof(unsigned)*n_vertices);
+  }
+};
 
 // TODO: No longer used by GPU impl. Move to CPU impl.
 void join_edges(CSRGraphTy dgraph, CSRGraphTy qgraph, std::vector<gpgraphlib::EdgeListGraph>& candidate_edges, std::vector<Solution>& solutions) {

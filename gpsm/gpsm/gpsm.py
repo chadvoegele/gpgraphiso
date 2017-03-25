@@ -13,13 +13,14 @@ candidate_dst = gg.lib.aol.AppendOnlyList('candidate_dst')
 ast = Module([
     CDecl(('extern WorklistT', 'in_wl', '')),  # only because below If fails to parse
     CDecl(('extern WorklistT', 'out_wl', '')),  # only because below If fails to parse
-    CBlock([cgen.Include('algorithm')]),
     CBlock([cgen.Include('edgelist_graph.h')]),
-    CBlock([cgen.Include('gpsm.cu')]),
     CBlock([cgen.Include('kernels/reduce.cuh')]),
+    CBlock([cgen.Include('gpsm.cu')]),  # TODO: using header here + gpsm.o link results in worklist errors from init_candidate_vertices
     CDecl(('int', 'CUDA_DEVICE', '= 0')),
     CDecl(('mgpu::ContextPtr', 'mgc', '')),
-    Kernel("calc_selectivity", [dgraph.param(), qgraph.param(), ('int*', 'dprop_ptr'), ('int*', 'qprop_ptr'), ('float*', 'selectivity_ptr')], [
+
+    Kernel("calc_selectivity", [dgraph.param(), qgraph.param(), ('int*', 'dprop_ptr'),
+                                ('int*', 'qprop_ptr'), ('float*', 'selectivity_ptr')], [
         ForAll("node", qgraph.nodes(), [
             CDecl(("int", "degree", "= %s" % qgraph.edges("node").size())),
             CDecl(("int", "freq", "= 0")),
@@ -33,11 +34,14 @@ ast = Module([
             CBlock(['selectivity_ptr[node] = selectivity']),
             ])
     ]),
-    Kernel('kernel_check', [dgraph.param(), qgraph.param(), ('int*', 'dprop_ptr'), ('int*', 'qprop_ptr'), ('unsigned*', 'c_set'), ('index_type', 'qv')], [
+
+    Kernel('kernel_check', [dgraph.param(), qgraph.param(), ('int*', 'dprop_ptr'), ('int*', 'qprop_ptr'),
+                            ('unsigned*', 'c_set'), ('index_type', 'qv')], [
         ForAll("n", dgraph.nodes(), [
             CBlock(['c_set[n] = is_candidate(dgraph, qgraph, dprop_ptr, qprop_ptr, n, qv)']),
         ]),
     ]),
+
     Kernel('kernel_collect', [dgraph.param(), ('unsigned*', 'c_set')], [
         ForAll("node", dgraph.nodes(), [
             If('c_set[node]', [
@@ -45,7 +49,9 @@ ast = Module([
             ]),
         ])
     ]),
-    Kernel('kernel_explore', [dgraph.param(), tgraph.param(), ('int*', 'dprop_ptr'), ('int*', 'qprop_ptr'), ('unsigned*', 'c_set'), ('index_type', 'qv')], [
+
+    Kernel('kernel_explore', [dgraph.param(), tgraph.param(), ('int*', 'dprop_ptr'), ('int*', 'qprop_ptr'),
+                              ('unsigned*', 'c_set'), ('index_type', 'qv')], [
         CDecl([('int', 'node', '')]),
         CDecl([('bool', 'pop', '')]),
         ForAll("wlnode", WL.items(), [
@@ -77,7 +83,11 @@ ast = Module([
             ]),
         ]),
     ]),
-    Kernel('init_candidate_vertices', [dgraph.param(), ('CSRGraphTy', 'tg'), tgraph.param(), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop'), ('std::vector<index_type>&', 'tree_order'), ('unsigned*', 'c_set_gptr')], [
+
+    Kernel('init_candidate_vertices', [dgraph.param(), ('CSRGraphTy', 'tg'), tgraph.param(),
+                                       ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop'),
+                                       ('std::vector<index_type>&', 'tree_order'),
+                                       ('unsigned*', 'c_set_gptr')], [
         CDecl(('dim3', 'blocks', '')),
         CDecl(('dim3', 'threads', '')),
         CBlock(['kernel_sizing(dgraph, blocks, threads)']),
@@ -85,19 +95,23 @@ ast = Module([
         CFor(CDecl(('std::vector<index_type>::iterator', 'u', '= tree_order.begin()')), 'u != tree_order.end()', 'u++', [
             CDecl(('unsigned', 'qv', '= *u')),
             If('!initialized[qv]', [
-                Invoke('kernel_check', ('dgraph', 'tgraph', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'index2d(c_set_gptr, %s, qv, 0)' % dgraph.nodes().size(), 'qv')),
+                Invoke('kernel_check', ('dgraph', 'tgraph', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()',
+                                        'index2d(c_set_gptr, %s, qv, 0)' % dgraph.nodes().size(), 'qv')),
                 CBlock(['initialized[qv]=1']),
             ]),
             ClosureHint(Pipe([
                 Invoke('kernel_collect', ('dgraph', 'index2d(c_set_gptr, %s, qv, 0)' % dgraph.nodes().size())),
-                Invoke('kernel_explore', ('dgraph', 'tgraph', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'c_set_gptr', 'qv')),
+                Invoke('kernel_explore', ('dgraph', 'tgraph', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()',
+                                          'c_set_gptr', 'qv')),
             ], wlinit=WLInit("65535", []), once=True)),
             CFor(CDecl(('index_type', 'e', '= tg.row_start[qv]')), 'e != tg.row_start[qv+1]', 'e++', [
                 CBlock(['initialized[tg.edge_dst[e]]=1']),
             ]),
         ]),
     ], host=True),
-    Kernel('build_candidate_edges_gp', [dgraph.param(), qgraph.param(), ('unsigned*', 'c_set'), ('AppendOnlyList*', 'csrc_ptr'), ('AppendOnlyList*', 'cdst_ptr')], [
+
+    Kernel('build_candidate_edges_gp', [dgraph.param(), qgraph.param(), ('unsigned*', 'c_set'),
+                                        ('AppendOnlyList*', 'csrc_ptr'), ('AppendOnlyList*', 'cdst_ptr')], [
       CDecl(('unsigned*', 'c_set_idx', '')),
       ForAll('qsrc', qgraph.nodes(), [
         ForAll('qedge', qgraph.edges('qsrc'), [
@@ -118,7 +132,10 @@ ast = Module([
         ]),
       ]),
     ]),
-    Kernel('calc_edge_score', [dgraph.param(), qgraph.param(), ('AppendOnlyList*', 'csrc_ptr'), ('unsigned*', 'vertex_visited'), ('unsigned*', 'edge_visited'), ('unsigned*', 'edge_score')], [
+
+    Kernel('calc_edge_score', [dgraph.param(), qgraph.param(), ('AppendOnlyList*', 'csrc_ptr'),
+                               ('unsigned*', 'vertex_visited'), ('unsigned*', 'edge_visited'),
+                               ('unsigned*', 'edge_score')], [
       ForAll('qsrc', qgraph.nodes(), [
         ForAll('qedge', qgraph.edges('qsrc'), [
           CDecl(('index_type', 'qdst', '= qgraph.getAbsDestination(qedge)')),
@@ -140,6 +157,7 @@ ast = Module([
         ]),
       ]),
     ]),
+
     Kernel('init_solutions', [qgraph.param(), candidate_src.param(), candidate_dst.param(), ('unsigned' , 'qsrc'), ('unsigned', 'qdst')], [
       ForAll('cidx', candidate_src.items(), [
         CDecl(('unsigned', 'csrc', '= candidate_src.dl[cidx]')),
@@ -149,7 +167,10 @@ ast = Module([
         CBlock(['out_wl.dwl[wlindex+qdst] = cdst'], parse=False),
       ]),
     ]),
-    Kernel('extend_solutions', [qgraph.param(), candidate_src.param(), candidate_dst.param(), ('unsigned' , 'qsrc'), ('unsigned', 'qdst'), ('unsigned*', 'vertex_visited')], [
+
+    Kernel('extend_solutions', [qgraph.param(), candidate_src.param(), candidate_dst.param(),
+                                ('unsigned' , 'qsrc'), ('unsigned', 'qdst'),
+                                ('unsigned*', 'vertex_visited')], [
       CDecl(('extern index_type', 'wlidx_one_end', '')),  # only because If below fails to parse otherwise
       ForAll('cidx', candidate_src.items(), [
         CDecl(('unsigned', 'csrc', '= candidate_src.dl[cidx]')),
@@ -185,7 +206,11 @@ ast = Module([
         ]),
       ]),
     ]),
-    Kernel('join_edges_gp', [dgraph.param(), qgraph.param(), ('CSRGraphTy', 'qg'), ('Shared<AppendOnlyList>', 'candidate_src'), ('Shared<AppendOnlyList>', 'candidate_dst'), ('std::vector<std::vector<unsigned>>&', 'solutions')], [
+
+    Kernel('join_edges_gp', [dgraph.param(), qgraph.param(), ('CSRGraphTy', 'qg'),
+                             ('Shared<AppendOnlyList>', 'candidate_src'),
+                             ('Shared<AppendOnlyList>', 'candidate_dst'),
+                             ('std::vector<std::vector<unsigned>>&', 'solutions')], [
         CDecl(('dim3', 'blocks', '')),
         CDecl(('dim3', 'threads', '')),
         CBlock(['kernel_sizing(dgraph, blocks, threads)']),
@@ -203,7 +228,9 @@ ast = Module([
 
         Pipe([
           CFor(CDecl(('unsigned', 'count_edges_visited', '= 0')), 'count_edges_visited != qgraph.nedges', 'count_edges_visited++', [
-            Invoke('calc_edge_score', ['dgraph', 'qgraph', 'candidate_src.gpu_rd_ptr()', 'vertex_visited.gpu_rd_ptr()', 'edge_visited.gpu_rd_ptr()', 'edge_score.gpu_wr_ptr()']),
+            Invoke('calc_edge_score', ['dgraph', 'qgraph', 'candidate_src.gpu_rd_ptr()',
+                                       'vertex_visited.gpu_rd_ptr()', 'edge_visited.gpu_rd_ptr()',
+                                       'edge_score.gpu_wr_ptr()']),
             CDecl(('index_type', 'selected_qsrc', '')),
             CDecl(('index_type', 'selected_qdst', '')),
             CDecl(('index_type', 'selected_qe', '')),
@@ -211,15 +238,19 @@ ast = Module([
             CFor(CDecl(('unsigned', 'i', '= 0')), 'i < qgraph.nedges', 'i++', [
               CBlock(['edge_score_idx_cp[i] = i']),
             ]),
-            # UINT_MAX passed as identity BUT requires that comparator "min_index" treats this not as an index!
-            CBlock(['mgpu::Reduce(edge_score_idx.gpu_rd_ptr(), (int)qgraph.nedges, UINT_MAX, min_index<unsigned, unsigned>(edge_score.gpu_rd_ptr()), (unsigned*)0, &selected_qe, *mgc)'], parse=False),
+            CBlock(['mgpu::Reduce(edge_score_idx.gpu_rd_ptr(), (int)qgraph.nedges, 0U, ' +
+                                  'min_index<unsigned, unsigned>(edge_score.gpu_rd_ptr()), ' +
+                                  '(unsigned*)0, &selected_qe, *mgc)'], parse=False),
             CBlock(['selected_qdst = qg.edge_dst[selected_qe]']),
-            CBlock(['selected_qsrc = std::upper_bound(qg.row_start, qg.row_start+qg.nnodes, selected_qe) - qg.row_start - 1'], parse=False),
+            CBlock(['selected_qsrc = std::upper_bound(qg.row_start, qg.row_start+qg.nnodes, selected_qe) ' +
+                                    '- qg.row_start - 1'], parse=False),
 
             If('count_edges_visited == 0', [
-              Invoke('init_solutions', ['qgraph', 'candidate_src_cp[selected_qe]', 'candidate_dst_cp[selected_qe]', 'selected_qsrc', 'selected_qdst']),
+              Invoke('init_solutions', ['qgraph', 'candidate_src_cp[selected_qe]', 'candidate_dst_cp[selected_qe]',
+                                        'selected_qsrc', 'selected_qdst']),
             ], [
-              Invoke('extend_solutions', ['qgraph', 'candidate_src_cp[selected_qe]', 'candidate_dst_cp[selected_qe]', 'selected_qsrc', 'selected_qdst', 'vertex_visited.gpu_rd_ptr()']),
+              Invoke('extend_solutions', ['qgraph', 'candidate_src_cp[selected_qe]', 'candidate_dst_cp[selected_qe]',
+                                        'selected_qsrc', 'selected_qdst', 'vertex_visited.gpu_rd_ptr()']),
             ]),
             CBlock(['pipe.in_wl().swap_slots()'], parse=False),
             CBlock(['pipe.advance2()'], parse=False),
@@ -230,6 +261,7 @@ ast = Module([
             CDecl(('unsigned*', 'edge_visited_cp', '= edge_visited.cpu_wr_ptr()')),
             CBlock(['edge_visited_cp[selected_qe] = 1']),
           ]),
+
           CBlock(['pipe.in_wl().update_cpu()']),
           CDecl(('unsigned', 'wl_nitems', '= pipe.in_wl().nitems()')),
           CFor(CDecl(('unsigned', 's', '= 0')), 's < wl_nitems', 's = s + qgraph.nnodes', [
@@ -241,15 +273,19 @@ ast = Module([
           ]),
         ], wlinit=WLInit("65535", []), once=True),
     ], host=True),
+
     Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), params.GraphParam('qg', True), params.GraphParam('qgg', True), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop')], [
         CBlock(['mgc = mgpu::CreateCudaDevice(CUDA_DEVICE)'], parse=False),
+
         CDecl(('Shared<float>', 'selectivity', '= qg.nnodes')),
         Invoke('calc_selectivity', ('gg', 'qgg', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'selectivity.gpu_wr_ptr()')),
+
         CDecl(('gpgraphlib::EdgeListGraph', 'tree', '')),
         CDecl(('std::vector<index_type>', 'tree_order', '')),
         CBlock(['build_tree(qg, selectivity.cpu_rd_ptr(), tree, tree_order)']),
+
         CDecl(('Shared<unsigned>', 'c_set', '= tree.nnodes()*g.nnodes')),
-        CBlock(['memset(c_set.cpu_wr_ptr(), 0, sizeof(unsigned)*tree.nnodes()*g.nnodes)']),
+        CBlock(['c_set.zero_gpu()']),
         CDecl(('CSRGraphTex', 'tg', '')),
         CDecl(('CSRGraphTex', 'tgg', '')),
         CBlock(['tg.nnodes = tree.nnodes()', 'tg.nedges = tree.nedges()', 'tg.allocOnHost()', 'tree.setCSR(tg.row_start, tg.edge_dst)', 'tg.copy_to_gpu(tgg);']),

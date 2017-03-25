@@ -21,6 +21,7 @@ class GPSMTests(pyirgltest.test.IrGLTest):
             Kernel("gg_main", [params.GraphParam('hg', True), params.GraphParam('gg', True), params.GraphParam('qhg', True), params.GraphParam('qgg', True), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop')], [
                 CDecl(('Shared<float>', 'selectivity', '= qhg.nnodes')),
                 Invoke('calc_selectivity', ('gg', 'qgg', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'selectivity.gpu_wr_ptr()')),
+
                 CDecl(('std::vector<float>', 'selectivity_vec', '')),
                 CDecl(('float*', 'selectivity_ptr', '= selectivity.cpu_rd_ptr()')),
                 CBlock(['selectivity_vec.assign(selectivity_ptr, selectivity_ptr + qhg.nnodes)']),
@@ -50,6 +51,7 @@ class GPSMTests(pyirgltest.test.IrGLTest):
             Kernel("gg_main", [params.GraphParam('hg', True), params.GraphParam('gg', True), params.GraphParam('qhg', True), params.GraphParam('qgg', True), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop')], [
                 CDecl(('Shared<float>', 'selectivity', '= qhg.nnodes')),
                 Invoke('calc_selectivity', ('gg', 'qgg', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'selectivity.gpu_wr_ptr()')),
+
                 CDecl(('std::vector<float>', 'selectivity_vec', '')),
                 CDecl(('float*', 'selectivity_ptr', '= selectivity.cpu_rd_ptr()')),
                 CBlock(['selectivity_vec.assign(selectivity_ptr, selectivity_ptr + qhg.nnodes)']),
@@ -79,9 +81,11 @@ class GPSMTests(pyirgltest.test.IrGLTest):
             Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), params.GraphParam('qg', True), params.GraphParam('qgg', True), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop')], [
                 CDecl(('Shared<float>', 'selectivity', '= qg.nnodes')),
                 Invoke('calc_selectivity', ('gg', 'qgg', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'selectivity.gpu_wr_ptr()')),
+
                 CDecl(('gpgraphlib::EdgeListGraph', 'tree', '')),
                 CDecl(('std::vector<index_type>', 'tree_order', '')),
                 CBlock(['build_tree(qg, selectivity.cpu_rd_ptr(), tree, tree_order)']),
+
                 CDecl(('std::vector<unsigned>', 'expected_tree_order','= { 4, 1 }')),
                 CBlock(['EXPECT_EQ(expected_tree_order, tree_order)']),
                 CDecl(('std::vector<unsigned>', 'row_start','(tree.nnodes()+1)')),
@@ -115,15 +119,18 @@ class GPSMTests(pyirgltest.test.IrGLTest):
             Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), params.GraphParam('qg', True), params.GraphParam('qgg', True), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop')], [
                 CDecl(('Shared<float>', 'selectivity', '= qg.nnodes')),
                 Invoke('calc_selectivity', ('gg', 'qgg', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'selectivity.gpu_wr_ptr()')),
+
                 CDecl(('gpgraphlib::EdgeListGraph', 'tree', '')),
                 CDecl(('std::vector<index_type>', 'tree_order', '')),
                 CBlock(['build_tree(qg, selectivity.cpu_rd_ptr(), tree, tree_order)']),
+
                 CDecl(('Shared<unsigned>', 'c_set', '= tree.nnodes()*g.nnodes')),
-                CBlock(['memset(c_set.cpu_wr_ptr(), 0, sizeof(unsigned)*tree.nnodes()*g.nnodes)']),
+                CBlock(['c_set.zero_gpu()']),
                 CDecl(('CSRGraphTex', 'tg', '')),
                 CDecl(('CSRGraphTex', 'tgg', '')),
                 CBlock(['tg.nnodes = tree.nnodes()', 'tg.nedges = tree.nedges()', 'tg.allocOnHost()', 'tree.setCSR(tg.row_start, tg.edge_dst)', 'tg.copy_to_gpu(tgg);']),
                 CBlock(['init_candidate_vertices(gg, tg, tgg, dprop, qprop, tree_order, c_set.gpu_wr_ptr())']),
+
                 CDecl(('std::vector<unsigned>', 'c_set_vec', '')),
                 CDecl(('unsigned*', 'c_set_ptr', '= c_set.cpu_rd_ptr()')),
                 CBlock(['c_set_vec.assign(c_set_ptr, c_set_ptr + tree.nnodes()*g.nnodes)']),
@@ -159,11 +166,13 @@ class GPSMTests(pyirgltest.test.IrGLTest):
             Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), params.GraphParam('qg', True), params.GraphParam('qgg', True), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop')], [
                 CDecl(('Shared<float>', 'selectivity', '= qg.nnodes')),
                 Invoke('calc_selectivity', ('gg', 'qgg', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'selectivity.gpu_wr_ptr()')),
+
                 CDecl(('gpgraphlib::EdgeListGraph', 'tree', '')),
                 CDecl(('std::vector<index_type>', 'tree_order', '')),
                 CBlock(['build_tree(qg, selectivity.cpu_rd_ptr(), tree, tree_order)']),
+
                 CDecl(('Shared<unsigned>', 'c_set', '= tree.nnodes()*g.nnodes')),
-                CBlock(['memset(c_set.cpu_wr_ptr(), 0, sizeof(unsigned)*tree.nnodes()*g.nnodes)']),
+                CBlock(['c_set.zero_gpu()']),
                 CDecl(('CSRGraphTex', 'tg', '')),
                 CDecl(('CSRGraphTex', 'tgg', '')),
                 CBlock(['tg.nnodes = tree.nnodes()', 'tg.nedges = tree.nedges()', 'tg.allocOnHost()', 'tree.setCSR(tg.row_start, tg.edge_dst)', 'tg.copy_to_gpu(tgg);']),
@@ -245,13 +254,16 @@ class GPSMTests(pyirgltest.test.IrGLTest):
             CBlock([cgen.Include('gtest/gtest.h')]),
             Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), params.GraphParam('qg', True), params.GraphParam('qgg', True), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop')], [
                 CBlock(['mgc = mgpu::CreateCudaDevice(CUDA_DEVICE)'], parse=False),
+
                 CDecl(('Shared<float>', 'selectivity', '= qg.nnodes')),
                 Invoke('calc_selectivity', ('gg', 'qgg', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'selectivity.gpu_wr_ptr()')),
+
                 CDecl(('gpgraphlib::EdgeListGraph', 'tree', '')),
                 CDecl(('std::vector<index_type>', 'tree_order', '')),
                 CBlock(['build_tree(qg, selectivity.cpu_rd_ptr(), tree, tree_order)']),
+
                 CDecl(('Shared<unsigned>', 'c_set', '= tree.nnodes()*g.nnodes')),
-                CBlock(['memset(c_set.cpu_wr_ptr(), 0, sizeof(unsigned)*tree.nnodes()*g.nnodes)']),
+                CBlock(['c_set.zero_gpu()']),
                 CDecl(('CSRGraphTex', 'tg', '')),
                 CDecl(('CSRGraphTex', 'tgg', '')),
                 CBlock(['tg.nnodes = tree.nnodes()', 'tg.nedges = tree.nedges()', 'tg.allocOnHost()', 'tree.setCSR(tg.row_start, tg.edge_dst)', 'tg.copy_to_gpu(tgg);']),

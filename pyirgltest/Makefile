@@ -28,6 +28,9 @@ graphml.o: $(GPGRAPHLIB_ROOT)/src/graphml.cu
 edgelist_graph.o: $(GPGRAPHLIB_ROOT)/src/edgelist_graph.cu
 	nvcc -dc -arch $(ARCH) $(CXXFLAGS) $(EXTRAFLAGS) $(NVCCFLAGS) $(INCLUDES) $< -o $@
 
+gpsm.o: $(GPGRAPHISO_ROOT)/gpsm/gpsm/gpsm.cu
+	nvcc -dc -arch $(ARCH) $(CXXFLAGS) $(EXTRAFLAGS) $(NVCCFLAGS) $(INCLUDES) $< -o $@
+
 %.o: %.cu
 	nvcc -dc -arch $(ARCH) $(CXXFLAGS) $(EXTRAFLAGS) $(NVCCFLAGS) $(INCLUDES) $< -o $@
 
