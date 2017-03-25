@@ -19,9 +19,7 @@ extern unsigned long DISCOUNT_TIME_NS;
 unsigned long DISCOUNT_TIME_NS = 0;
 int SKELAPP_RETVAL = 0;
 
-int CUDA_DEVICE = 0;
-
-mgpu::ContextPtr mgc;
+extern int CUDA_DEVICE;
 
 extern const char *prog_opts;
 extern const char *prog_usage;
