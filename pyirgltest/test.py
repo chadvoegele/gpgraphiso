@@ -31,8 +31,8 @@ def get_local_path(f):
 def get_temp_dir():
     return tempfile.mkdtemp(prefix='pyirgltest_')
 
-def get_standard_temp_dir(f):
-    return os.path.join(tempfile.gettempdir(), f)
+def get_object_cache_dir(f):
+    return os.path.join(tempfile.gettempdir(), 'pyirgltestcache', f)
 
 def splice_asts(ast, test_ast):
     # Something in below causes ast to be modified...
@@ -73,10 +73,9 @@ def run_irgl(ast, use_dir=None):
 
       kernel_cu_path = os.path.join(working_dir, 'kernel.cu')
 
-      # TODO: Super hacky way to speed up tests.
       static_objects = [ 'mgpuutil.o', 'mgpucontext.o', 'graphml.o', 'edgelist_graph.o' ]
       for so in static_objects:
-          so_path = get_standard_temp_dir(so)
+          so_path = get_object_cache_dir(so)
           if os.path.exists(so_path):
               shutil.copy(so_path, working_dir)
           else:
@@ -104,6 +103,17 @@ def run_irgl(ast, use_dir=None):
 
       if not test_out.returncode == 0:
           raise Exception('test failed with return code: %d. stdout: %s\nstderr: %s' % (test_out.returncode, test_out.stdout.decode(), test_out.stderr.decode()))
+
+      cache_dir = get_object_cache_dir('')
+      if not os.path.exists(cache_dir):
+          os.mkdir(cache_dir)
+
+      for so in static_objects:
+          so_path_cache = get_object_cache_dir(so)
+          so_path_build = os.path.join(working_dir, so)
+          if os.path.exists(so_path_build) and not os.path.exists(so_path_cache):
+              shutil.copy(so_path_build, so_path_cache)
+              print('Copied %s to %s to speed up tests.' % (so_path_build, so_path_cache))
 
       parsed_result = parse_irgl_output(test_out.stdout)
 
