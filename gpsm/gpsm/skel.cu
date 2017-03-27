@@ -10,6 +10,7 @@
 #include "Timer.h"
 
 #include "label.h"
+#include "edgelist_graph.h"
 
 int QUIET = 0;
 char *DATA_GRAPH, *DATA_LABEL, *QUERY_GRAPH, *QUERY_LABEL, *OUTPUT;
@@ -75,9 +76,36 @@ void parse_args(int argc, char *argv[]) {
   }
 }
 
+CSRGraphTy load_graph(char* graph) {
+  CSRGraphTy g;
+
+  char* ext = strrchr(graph, '.');
+  if (!ext || ext == graph) {
+    fprintf(stderr, "Unable to get graph file extension.\n");
+    exit(EXIT_FAILURE);
+  }
+
+  if (!strcmp(".gr", ext)) {
+    g.read(graph);
+
+  } else if (!strcmp(".mtx", ext)) {
+    gpgraphlib::EdgeListGraph elg = gpgraphlib::EdgeListGraph::fromMTXFile(graph);
+    g.nnodes = elg.nnodes();
+    g.nedges = elg.nedges();
+    g.allocOnHost();
+    elg.setCSR(g.row_start, g.edge_dst);
+
+  } else {
+    fprintf(stderr, "Unknown extension: %s\n. Supported: .gr, .mtx", ext);
+    exit(EXIT_FAILURE);
+  }
+
+  return g;
+}
+
 int load_graph_and_run_kernel(char* data_graph, char* data_label, char* query_graph, char *query_label) {
-  CSRGraphTy dg, dgg;
-  dg.read(data_graph);
+  CSRGraphTy dg = load_graph(data_graph);
+  CSRGraphTy dgg;
   dg.copy_to_gpu(dgg);
   gpgraphlib::LabelReader dlr = gpgraphlib::LabelReader::fromFilename(std::string(data_label));
   Shared<int> dprop = dg.nnodes;
@@ -85,8 +113,8 @@ int load_graph_and_run_kernel(char* data_graph, char* data_label, char* query_gr
   int* dprop_cp = dprop.cpu_wr_ptr();
   dlr.setNodeProperties(dprop_cp);
 
-  CSRGraphTy qg, qgg;
-  qg.read(query_graph);
+  CSRGraphTy qg = load_graph(query_graph);
+  CSRGraphTy qgg;
   qg.copy_to_gpu(qgg);
   gpgraphlib::LabelReader qlr = gpgraphlib::LabelReader::fromFilename(std::string(query_label));
   Shared<int> qprop = qg.nnodes;
