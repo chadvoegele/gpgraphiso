@@ -304,5 +304,7 @@ ast = Module([
 
         CDecl(('std::vector<std::vector<unsigned>>', 'solutions', '')),
         CBlock(['join_edges_gp(gg, qgg, qg, candidate_src, candidate_dst, solutions)']),
+
+        CBlock(['printf("Number of matches: %d\\n", solutions.size())']),
         ])
     ])
