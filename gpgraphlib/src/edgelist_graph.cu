@@ -1,5 +1,7 @@
 #include "edgelist_graph.h"
 
+#include <fstream>
+#include <sstream>
 #include <vector>
 #include <tuple>
 
@@ -28,6 +30,21 @@ namespace gpgraphlib {
 
       addEdge(src, dst);
     }
+  }
+
+  EdgeListGraph EdgeListGraph::fromMTXFile(std::string filename) {
+    std::ifstream fs(filename);
+    if (!fs.is_open()) {
+      throw std::runtime_error("failed to open " + filename);
+    }
+    EdgeListGraph elg(parseMTX(fs));
+    return elg;
+  }
+
+  EdgeListGraph EdgeListGraph::fromMTXFileContents(std::string filecontents) {
+    std::istringstream ss(filecontents);
+    EdgeListGraph elg(parseMTX(ss));
+    return elg;
   }
 
   void EdgeListGraph::addEdge(unsigned src, unsigned dst) {
@@ -83,5 +100,41 @@ namespace gpgraphlib {
     }
     os << "}";
     return os;
+  }
+
+  std::list<std::pair<unsigned, unsigned>> EdgeListGraph::parseMTX(std::istream& stream) {
+    std::list<std::pair<unsigned, unsigned>> el;
+    int nnodes, nedges;
+    if (!(stream >> nnodes && stream >> nnodes && stream >> nedges)) {
+      throw std::runtime_error("Failed to read label header.");
+    }
+
+    unsigned min_node = UINT_MAX, max_node = 0;
+    unsigned src, dst;
+    while (stream >> src && stream >> dst) {
+      el.push_back(std::make_pair(src, dst));
+      min_node = src < min_node ? src : min_node;
+      min_node = dst < min_node ? dst : min_node;
+      max_node = src > max_node ? src : max_node;
+      max_node = dst > max_node ? dst : max_node;
+    }
+
+    if (max_node - min_node + 1 != nnodes) {
+      throw std::runtime_error("Mismatch between header # nodes and actual # of nodes.");
+    }
+
+    if (el.size() != nedges) {
+      throw std::runtime_error("Mismatch between header # edges and actual # of edges.");
+    }
+
+    // Always index graph starting from 0.
+    std::list<std::pair<unsigned, unsigned>> el0;
+
+    for (auto& e : el) {
+      std::tie(src, dst) = e;
+      el0.push_back(std::make_pair(src - min_node, dst - min_node));
+    }
+
+    return el0;
   }
 }

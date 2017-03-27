@@ -11,6 +11,8 @@ namespace gpgraphlib {
       EdgeListGraph();
       EdgeListGraph(std::list<std::pair<unsigned, unsigned>> edges);
       EdgeListGraph(std::initializer_list<std::initializer_list<unsigned>> l);
+      static EdgeListGraph fromMTXFile(std::string filename);
+      static EdgeListGraph fromMTXFileContents(std::string filecontents);
       void addEdge(unsigned src, unsigned dst);
       unsigned nedges();
       unsigned nnodes();
@@ -20,6 +22,7 @@ namespace gpgraphlib {
       bool operator==(const EdgeListGraph& other) const;
 
     private:
+      static std::list<std::pair<unsigned, unsigned>> parseMTX(std::istream& stream);
       // Don't assume that these maintain order
       std::list<std::pair<unsigned, unsigned>> edges;
   };

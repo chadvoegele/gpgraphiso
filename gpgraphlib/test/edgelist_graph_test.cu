@@ -81,3 +81,10 @@ TEST(edgelist_graph, initializer_test) {
   EdgeListGraph elg2 = { {0, 1}, {1, 3}, {1, 2} };
   EXPECT_EQ(elg, elg2);
 }
+
+TEST(edgelist_graph, mtx_test) {
+  std::string c = "4 4 5\n1 2\n2 1\n3 1\n4 1\n4 2\n";
+  EdgeListGraph elg = EdgeListGraph::fromMTXFileContents(c);
+  EdgeListGraph expected_elg = { {0, 1}, {1, 0}, {2, 0}, {3, 0}, {3, 1} };
+  EXPECT_EQ(expected_elg, elg);
+}
