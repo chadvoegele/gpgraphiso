@@ -33,7 +33,7 @@ void kernel_sizing(CSRGraphTy & g, dim3 &blocks, dim3 &threads) {
 }
 
 void usage(int argc, char *argv[]) {
-  fprintf(stderr, "usage: %s [-q] [-g gpunum] [-o output-file] data-graph.gr data-label.label query-graph.gr query-label.label\n", argv[0]);
+  fprintf(stderr, "usage: %s [-q] [-g gpunum] [-o output-file] query-graph.gr query-label.label data-graph.gr data-label.label\n", argv[0]);
 }
 
 void parse_args(int argc, char *argv[]) {
@@ -66,10 +66,10 @@ void parse_args(int argc, char *argv[]) {
   }
 
   if (argc - optind == 4) {
-    DATA_GRAPH = argv[optind];
-    DATA_LABEL = argv[optind+1];
-    QUERY_GRAPH = argv[optind+2];
-    QUERY_LABEL = argv[optind+3];
+    QUERY_GRAPH = argv[optind];
+    QUERY_LABEL = argv[optind+1];
+    DATA_GRAPH = argv[optind+2];
+    DATA_LABEL = argv[optind+3];
   } else {
     usage(argc, argv);
     exit(EXIT_FAILURE);
