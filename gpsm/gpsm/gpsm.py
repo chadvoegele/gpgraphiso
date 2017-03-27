@@ -276,6 +276,7 @@ ast = Module([
 
     Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), params.GraphParam('qg', True), params.GraphParam('qgg', True), ('Shared<int>&', 'dprop'), ('Shared<int>&', 'qprop')], [
         CBlock(['mgc = mgpu::CreateCudaDevice(CUDA_DEVICE)'], parse=False),
+        CBlock(['printf("Using GPU: %s\\n", mgc->DeviceString().c_str())'], parse=False),
 
         CDecl(('Shared<float>', 'selectivity', '= qg.nnodes')),
         Invoke('calc_selectivity', ('gg', 'qgg', 'dprop.gpu_rd_ptr()', 'qprop.gpu_rd_ptr()', 'selectivity.gpu_wr_ptr()')),

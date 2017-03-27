@@ -2,14 +2,6 @@
 
 #include <numeric>
 
-const char* prog_opts = "";
-const char* prog_usage = "";
-const char* prog_args_usage = "";
-void process_prog_opt(char c, char *optarg) { }
-int process_prog_arg(int argc, char *argv[], int arg_start) {
-  return 1;
-}
-
 void build_tree(CSRGraphTy qgraph, float* selectivity, gpgraphlib::EdgeListGraph& tree, std::vector<index_type>& tree_order) {
   std::vector<std::tuple<index_type, index_type, float>> worklist;
   std::vector<unsigned> add_to_tree(qgraph.nnodes);

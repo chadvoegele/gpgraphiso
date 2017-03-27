@@ -1,6 +1,6 @@
-GGC_ROOT?=../ggc
-GPGRAPHLIB_ROOT?=../gpgraphlib
-GPGRAPHISO_ROOT?=..
+GGC_ROOT?=../../ggc
+GPGRAPHLIB_ROOT?=../../gpgraphlib
+GPGRAPHISO_ROOT?=../..
 
 GGC:=$(GGC_ROOT)/src/ggc
 CXXFLAGS=--std=c++11
@@ -22,7 +22,7 @@ mgpucontext.o: $(GGC_ROOT)/rt/include/mgpu/src/mgpucontext.cu
 mgpuutil.o: $(GGC_ROOT)/rt/include/mgpu/src/mgpuutil.cpp
 	nvcc -dc -arch $(ARCH) $(CXXFLAGS) $(EXTRAFLAGS) $(NVCCFLAGS) $(INCLUDES) $< -o $@
 
-graphml.o: $(GPGRAPHLIB_ROOT)/src/graphml.cu
+label.o: $(GPGRAPHLIB_ROOT)/src/label.cu
 	nvcc -dc -arch $(ARCH) $(CXXFLAGS) $(EXTRAFLAGS) $(NVCCFLAGS) $(INCLUDES) $< -o $@
 
 edgelist_graph.o: $(GPGRAPHLIB_ROOT)/src/edgelist_graph.cu
@@ -34,7 +34,7 @@ kernel.cu: gpsm.py
 %.o: %.cu
 	nvcc -dc -arch $(ARCH) $(CXXFLAGS) $(EXTRAFLAGS) $(NVCCFLAGS) $(INCLUDES) $< -o $@
 
-test: skel.o kernel.o mgpucontext.o mgpuutil.o graphml.o edgelist_graph.o
+test: skel.o kernel.o mgpucontext.o mgpuutil.o label.o edgelist_graph.o
 	nvcc -g $(EXTRAFLAGS) -arch $(ARCH) $(CXXFLAGS) $(NVCCFLAGS) $(INCLUDES) -L$(LIBDIR)  -o $@ $^ $(LIBS) -lcudadevrt $(COMPRESS_LIBS)
 
 clean:
