@@ -147,7 +147,7 @@ class GPSMTests(pyirgltest.test.IrGLTest):
                 CDecl(('std::vector<unsigned>', 'c_set_vec', '')),
                 CDecl(('unsigned*', 'c_set_ptr', '= c_set.cpu_rd_ptr()')),
                 CBlock(['c_set_vec.assign(c_set_ptr, c_set_ptr + tree.nnodes()*g.nnodes)']),
-                CDecl(('std::vector<unsigned>', 'expected_c_set_vec','= {' + expected_c_set_vec)),
+                CDecl(('std::vector<unsigned>', 'expected_c_set_vec','= ' + expected_c_set_vec)),
                 CBlock(['EXPECT_EQ(c_set_vec, expected_c_set_vec)']),
                 ]),
             test_gpsm.testcore.kernel_sizing(),
@@ -160,14 +160,14 @@ class GPSMTests(pyirgltest.test.IrGLTest):
 
     @unittest.skipIf(skip_tests, 'candidate vertices test')
     def test_candidate_vertices(self):
-        expected_c_set_vec = [
+        expected_c_set_vec = [ '{',
             ' /*u1*/ 1, 0, 1, 0, 0, 0, 0, 0, 0,',
             ' /*u2*/ 0, 1, 0, 0, 0, 1, 0, 0, 0,',
             ' /*u3*/ 0, 0, 1, 1, 0, 0, 0, 0, 0,',
             ' /*u4*/ 0, 1, 0, 0, 0, 1, 0, 0, 0,',
             ' /*u5*/ 0, 0, 0, 0, 0, 0, 1, 0, 0,',
-            ' /*u6*/ 0, 0, 0, 0, 0, 0, 0, 1, 0 }',
-            ]
+            ' /*u6*/ 0, 0, 0, 0, 0, 0, 0, 1, 0,',
+            '}', ]
         self.candidate_vertices_base(GPSMTests.gpsm_pub_graphs(), ''.join(expected_c_set_vec))
 
     def candidate_edges_base(self, graphs, expected_candidate_edges):
