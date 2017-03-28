@@ -61,7 +61,7 @@ class GPSMTests(pyirgltest.test.IrGLTest):
         expected_selectivity = '{ 1.0/3, 1, 1, 3.0/4, 2, 1.0/2 }'
         self.selectivity_base(GPSMTests.gpsm_pub_graphs(), expected_selectivity)
 
-    def spanning_base(self, graphs, expected_row_start, expected_edge_dst):
+    def spanning_base(self, graphs, expected_tree_order, expected_row_start, expected_edge_dst):
         dgraph = gg.lib.graph.Graph("dgraph")
         qgraph = gg.lib.graph.Graph("qgraph")
 
@@ -76,7 +76,7 @@ class GPSMTests(pyirgltest.test.IrGLTest):
                 CDecl(('std::vector<index_type>', 'tree_order', '')),
                 CBlock(['build_tree(qg, selectivity.cpu_rd_ptr(), tree, tree_order)']),
 
-                CDecl(('std::vector<unsigned>', 'expected_tree_order','= { 4, 1 }')),
+                CDecl(('std::vector<unsigned>', 'expected_tree_order','= ' + expected_tree_order)),
                 CBlock(['EXPECT_EQ(expected_tree_order, tree_order)']),
                 CDecl(('std::vector<unsigned>', 'row_start','(tree.nnodes()+1)')),
                 CDecl(('std::vector<unsigned>', 'edge_dst','(tree.nedges())')),
@@ -96,9 +96,10 @@ class GPSMTests(pyirgltest.test.IrGLTest):
 
     @unittest.skipIf(skip_tests, 'spanning_test')
     def test_spanning_test(self):
+        expected_tree_order = '{ 4, 1 }'
         expected_row_start = '{ 0, 1, 3, 4, 5, 9, 10 }'
         expected_edge_dst = '{ 1, 0, 4, 4, 4, 1, 2, 3, 5, 4 }'
-        self.spanning_base(GPSMTests.gpsm_pub_graphs(), expected_row_start, expected_edge_dst)
+        self.spanning_base(GPSMTests.gpsm_pub_graphs(), expected_tree_order, expected_row_start, expected_edge_dst)
 
     def candidate_vertices_base(self, graphs, expected_c_set_vec):
         dgraph = gg.lib.graph.Graph("dgraph")
