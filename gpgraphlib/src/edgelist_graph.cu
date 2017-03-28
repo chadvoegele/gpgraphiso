@@ -137,4 +137,20 @@ namespace gpgraphlib {
 
     return el0;
   }
+
+  EdgeListGraph EdgeListGraph::makeSymmetric() {
+    std::list<std::pair<unsigned, unsigned>> symel;
+
+    unsigned src, dst;
+    for (auto& e : edges) {
+      std::tie(src, dst) = e;
+      symel.push_back(std::make_pair(src, dst));
+      symel.push_back(std::make_pair(dst, src));
+    }
+    symel.sort();
+    symel.unique();
+
+    EdgeListGraph symelg(symel);
+    return symelg;
+  }
 }

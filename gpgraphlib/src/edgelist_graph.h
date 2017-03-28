@@ -17,6 +17,7 @@ namespace gpgraphlib {
       unsigned nedges();
       unsigned nnodes();
       void setCSR(unsigned* row_start, unsigned* edge_dst);
+      EdgeListGraph makeSymmetric();
       std::list<std::pair<unsigned, unsigned>>::const_iterator begin() const { return edges.cbegin(); }
       std::list<std::pair<unsigned, unsigned>>::const_iterator end() const { return edges.cend(); }
       bool operator==(const EdgeListGraph& other) const;

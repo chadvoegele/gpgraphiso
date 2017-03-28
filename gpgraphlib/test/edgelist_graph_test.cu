@@ -88,3 +88,10 @@ TEST(edgelist_graph, mtx_test) {
   EdgeListGraph expected_elg = { {0, 1}, {1, 0}, {2, 0}, {3, 0}, {3, 1} };
   EXPECT_EQ(expected_elg, elg);
 }
+
+TEST(edgelist_graph, symmetric_test) {
+  EdgeListGraph elg = { {0, 1}, {1, 0}, {2, 0}, {3, 0}, {3, 1} };
+  EdgeListGraph expected_sym_elg = { {0, 1}, {0, 2}, {0, 3}, {1, 0}, {1, 3}, {2, 0}, {3, 0}, {3, 1} };
+  EdgeListGraph sym_elg = elg.makeSymmetric();
+  EXPECT_EQ(expected_sym_elg, sym_elg);
+}
