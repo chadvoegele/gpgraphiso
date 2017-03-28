@@ -20,6 +20,15 @@ class GPSMTests(pyirgltest.test.IrGLTest):
             ]
         return g
 
+    def triangle_identity_graphs():
+        g = [
+            '{ { 0,1 }, { 1,0 }, { 1,2 }, { 2,1 }, { 0,2 }, { 2,0 } }',
+            '{ 1, 1, 1 }',
+            '{ { 0,1 }, { 1,0 }, { 1,2 }, { 2,1 }, { 0,2 }, { 2,0 } }',
+            '{ 1, 1, 1 }',
+            ]
+        return g
+
     def selectivity_base(self, graphs, expected_selectivity):
         dgraph = gg.lib.graph.Graph("dgraph")
         qgraph = gg.lib.graph.Graph("qgraph")
@@ -61,6 +70,11 @@ class GPSMTests(pyirgltest.test.IrGLTest):
         expected_selectivity = '{ 1.0/3, 1, 1, 3.0/4, 2, 1.0/2 }'
         self.selectivity_base(GPSMTests.gpsm_pub_graphs(), expected_selectivity)
 
+    @unittest.skipIf(skip_tests, 'selectivity_idtri')
+    def test_selectivity3(self):
+        expected_selectivity = '{ 2.0/3, 2.0/3, 2.0/3 }'
+        self.selectivity_base(GPSMTests.triangle_identity_graphs(), expected_selectivity)
+
     def spanning_base(self, graphs, expected_tree_order, expected_row_start, expected_edge_dst):
         dgraph = gg.lib.graph.Graph("dgraph")
         qgraph = gg.lib.graph.Graph("qgraph")
@@ -100,6 +114,13 @@ class GPSMTests(pyirgltest.test.IrGLTest):
         expected_row_start = '{ 0, 1, 3, 4, 5, 9, 10 }'
         expected_edge_dst = '{ 1, 0, 4, 4, 4, 1, 2, 3, 5, 4 }'
         self.spanning_base(GPSMTests.gpsm_pub_graphs(), expected_tree_order, expected_row_start, expected_edge_dst)
+
+    @unittest.skipIf(skip_tests, 'spanning_test_idtri')
+    def test_spanning_test(self):
+        expected_tree_order = '{ 0 }'
+        expected_row_start = '{ 0, 2, 3, 4 }'
+        expected_edge_dst = '{ 1, 2, 0, 0 }'
+        self.spanning_base(GPSMTests.triangle_identity_graphs(), expected_tree_order, expected_row_start, expected_edge_dst)
 
     def candidate_vertices_base(self, graphs, expected_c_set_vec):
         dgraph = gg.lib.graph.Graph("dgraph")

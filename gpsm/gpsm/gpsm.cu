@@ -14,15 +14,17 @@ void build_tree(CSRGraphTy qgraph, float* selectivity, gpgraphlib::EdgeListGraph
   }
 
   while (!worklist.empty()) {
+    // Sort by selectivity increasing, then src_node decreasing.
+    // src_node decreasing is only for consistency of output when selectivity is the same.
     std::sort(worklist.begin(), worklist.end(), [](const std::tuple<index_type, index_type, float>& me, const std::tuple<index_type, index_type, float>& other) {
-      return std::get<2>(me) < std::get<2>(other);
+      return std::get<2>(me) < std::get<2>(other) || (std::get<2>(me) == std::get<2>(other) && std::get<0>(me) > std::get<0>(other));
     });
     index_type next_node = std::get<0>(worklist.back());
     index_type next_dst = std::get<1>(worklist.back());
     worklist.pop_back();
 
     if (tree.nnodes() == 0) {
-      next_node = selectivity[next_node] > selectivity[next_dst] ? next_node : next_dst;
+      next_node = selectivity[next_node] >= selectivity[next_dst] ? next_node : next_dst;
       worklist.clear();
     }
 
