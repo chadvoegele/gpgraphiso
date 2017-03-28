@@ -170,6 +170,15 @@ class GPSMTests(pyirgltest.test.IrGLTest):
             '}', ]
         self.candidate_vertices_base(GPSMTests.gpsm_pub_graphs(), ''.join(expected_c_set_vec))
 
+    @unittest.skipIf(skip_tests, 'candidate vertices idtri test')
+    def test_candidate_vertices_tri_idtri(self):
+        expected_c_set_vec = [ '{',
+            ' /*u0*/ 1, 1, 1,',
+            ' /*u1*/ 1, 1, 1,',
+            ' /*u2*/ 1, 1, 1,',
+            '}',]
+        self.candidate_vertices_base(GPSMTests.triangle_identity_graphs(), ''.join(expected_c_set_vec))
+
     def candidate_edges_base(self, graphs, expected_candidate_edges):
         dgraph = gg.lib.graph.Graph("dgraph")
         qgraph = gg.lib.graph.Graph("qgraph")
