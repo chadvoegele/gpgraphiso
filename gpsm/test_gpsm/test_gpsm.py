@@ -261,6 +261,20 @@ class GPSMTests(pyirgltest.test.IrGLTest):
             ]
         self.candidate_edges_base(graphs, expected_candidate_edges)
 
+    @unittest.skipIf(skip_tests, 'candidate edges test idtri')
+    def test_candidate_edges_idtri(self):
+        graphs = GPSMTests.triangle_identity_graphs()
+
+        expected_candidate_edges = [
+            '{ { 0,1 }, { 0,2 }, { 1,0 }, { 1,2 }, { 2,0 }, { 2,1 }, }',
+            '{ { 0,1 }, { 0,2 }, { 1,0 }, { 1,2 }, { 2,0 }, { 2,1 }, }',
+            '{ { 0,1 }, { 0,2 }, { 1,0 }, { 1,2 }, { 2,0 }, { 2,1 }, }',
+            '{ { 0,1 }, { 0,2 }, { 1,0 }, { 1,2 }, { 2,0 }, { 2,1 }, }',
+            '{ { 0,1 }, { 0,2 }, { 1,0 }, { 1,2 }, { 2,0 }, { 2,1 }, }',
+            '{ { 0,1 }, { 0,2 }, { 1,0 }, { 1,2 }, { 2,0 }, { 2,1 }, }',
+            ]
+        self.candidate_edges_base(graphs, expected_candidate_edges)
+
     def join_edges_base(self, graphs, expected_solutions):
         dgraph = gg.lib.graph.Graph("dgraph")
         qgraph = gg.lib.graph.Graph("qgraph")
@@ -320,6 +334,19 @@ class GPSMTests(pyirgltest.test.IrGLTest):
         graphs = GPSMTests.gpsm_pub_graphs()
         expected_solutions = [
             '{ 0, 1, 2, 5, 6, 7 }'
+        ]
+        self.join_edges_base(graphs, expected_solutions)
+
+    @unittest.skipIf(skip_tests, 'join edges test triangle identity')
+    def test_join_edges_idtri(self):
+        graphs = GPSMTests.triangle_identity_graphs()
+        expected_solutions = [
+            '{ 0, 1, 2 }',
+            '{ 0, 2, 1 }',
+            '{ 1, 0, 2 }',
+            '{ 1, 2, 0 }',
+            '{ 2, 0, 1 }',
+            '{ 2, 1, 0 }',
         ]
         self.join_edges_base(graphs, expected_solutions)
 
