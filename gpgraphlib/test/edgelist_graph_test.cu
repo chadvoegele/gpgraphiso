@@ -82,11 +82,18 @@ TEST(edgelist_graph, initializer_test) {
   EXPECT_EQ(elg, elg2);
 }
 
-TEST(edgelist_graph, mtx_test) {
+TEST(edgelist_graph, from_mtx_test) {
   std::string c = "4 4 5\n1 2\n2 1\n3 1\n4 1\n4 2\n";
   EdgeListGraph elg = EdgeListGraph::fromMTXFileContents(c);
   EdgeListGraph expected_elg = { {0, 1}, {1, 0}, {2, 0}, {3, 0}, {3, 1} };
   EXPECT_EQ(expected_elg, elg);
+}
+
+TEST(edgelist_graph, to_mtx_test) {
+  EdgeListGraph elg = { {0, 1}, {1, 0}, {2, 0}, {3, 0}, {3, 1} };
+  std::string contents = elg.toMTXFileContents();
+  std::string expected_contents = "4 4 5\n1 2\n2 1\n3 1\n4 1\n4 2\n";
+  EXPECT_EQ(expected_contents, contents);
 }
 
 TEST(edgelist_graph, symmetric_test) {

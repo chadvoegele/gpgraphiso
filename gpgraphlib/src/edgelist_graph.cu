@@ -138,6 +138,29 @@ namespace gpgraphlib {
     return el0;
   }
 
+  void EdgeListGraph::toMTXFile(std::string filename) {
+    std::ofstream fs(filename);
+    if (!fs.is_open()) {
+      throw std::runtime_error("failed to open " + filename);
+    }
+    toMTX(fs);
+  }
+
+  std::string EdgeListGraph::toMTXFileContents() {
+    std::ostringstream ss;
+    toMTX(ss);
+    return ss.str();
+  }
+
+  void EdgeListGraph::toMTX(std::ostream& stream) {
+    stream << nnodes() << " " << nnodes() << " " << nedges() << std::endl;
+    unsigned src, dst;
+    for (auto& e : edges) {
+      std::tie(src, dst) = e;
+      stream << 1+src << " " << 1+dst << std::endl;
+    }
+  }
+
   EdgeListGraph EdgeListGraph::makeSymmetric() {
     std::list<std::pair<unsigned, unsigned>> symel;
 
