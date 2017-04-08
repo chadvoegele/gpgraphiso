@@ -7,7 +7,7 @@ import pyirgltest
 import ktruss.ktruss
 import test_ktruss
 
-skip_tests = True
+skip_tests = False
 
 def kernel_sizing():
     k = Kernel('kernel_sizing', [params.GraphParam('g', True), ('dim3&', 'blocks'), ('dim3&', 'threads')], [
@@ -38,7 +38,7 @@ def main(glist):
         return k
 
 class KTrussTests(pyirgltest.test.IrGLTest):
-    #@unittest.skipIf(skip_tests, 'count_triangle_edges1')
+    @unittest.skipIf(skip_tests, 'count_triangle_edges1')
     def test_count_triangle_edges1(self):
         graph = gg.lib.graph.Graph("graph")
 
@@ -54,6 +54,27 @@ class KTrussTests(pyirgltest.test.IrGLTest):
                 CBlock(['triangle_count_vec.assign(count_ptr, count_ptr + g.nedges)']),
                 CDecl(('std::vector<int>', 'expected_triangle_count', '= { 1,2,1,1,1,2,1,0,0,1,0,0,1,1 } ')),
                 CBlock(['EXPECT_EQ(expected_triangle_count, triangle_count_vec)']),
+                ]),
+            kernel_sizing(),
+            main('{ { 0,1 }, { 0,2 }, { 0,5 }, { 1,0 }, { 1,2 }, { 2,0 }, { 2,1 }, { 2,3 }, { 2,4 }, { 2,5 }, { 3,2 }, { 4,2 }, { 5,0 }, { 5,2 } }'),
+            ])
+        ast = ktruss.ktruss.ast
+        self.run_test(ast, test_ast)
+
+    @unittest.skipIf(skip_tests, 'max_ktruss_size1')
+    def test_max_ktruss_size1(self):
+        graph = gg.lib.graph.Graph("graph")
+
+        test_ast = Module([
+            CBlock([cgen.Include('edgelist_graph.h')]),
+            CBlock([cgen.Include('gtest/gtest.h')]),
+            Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True)], [
+                CBlock(['mgc = mgpu::CreateCudaDevice(CUDA_DEVICE)'], parse=False),
+                CDecl(('Shared<int>', 'count', '(g.nedges)')),
+                CBlock(['count_triangle_edges(g, gg, count)']),
+                CDecl(('int', 'max_ktruss_size', '')),
+                CBlock(['maximal_ktruss(g, gg, count, max_ktruss_size)']),
+                CBlock(['EXPECT_EQ(4, max_ktruss_size)']),
                 ]),
             kernel_sizing(),
             main('{ { 0,1 }, { 0,2 }, { 0,5 }, { 1,0 }, { 1,2 }, { 2,0 }, { 2,1 }, { 2,3 }, { 2,4 }, { 2,5 }, { 3,2 }, { 4,2 }, { 5,0 }, { 5,2 } }'),
