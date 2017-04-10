@@ -4,6 +4,7 @@ import gg.lib.aol
 from gg.types import RangeIterator
 
 WL = gg.lib.wl.Worklist()
+max_ktruss_nodes = gg.lib.aol.AppendOnlyList('max_ktruss_nodes')
 graph = gg.lib.graph.Graph('graph')
 
 def EL(node):
@@ -15,6 +16,7 @@ def NL(node):
 ast = Module([
     CBlock([cgen.Include("kernels/segmentedsort.cuh")]),
     CBlock([cgen.Include("kernels/reducebykey.cuh")]),
+    CBlock([cgen.Include("ktruss.h")]),
     CDecl(('int', 'CUDA_DEVICE', '= 0')),
     CDecl(('mgpu::ContextPtr', 'mgc', '')),
     Kernel("preprocess", [graph.param(), ('unsigned int *', 'valid_edges')], [
@@ -202,7 +204,24 @@ ast = Module([
             ])
         ]),
     ]),
-    Kernel('maximal_ktruss', [('CSRGraphTy&', 'g'), ('CSRGraphTy&', 'gg'), ('Shared<int>&', 'edge_tri_count'), ('int&', 'max_ktruss_size')], [
+    Kernel('set_gpu_ones', [('unsigned*', 'data'), ('unsigned', 'size')], [
+        ForAll('i', RangeIterator('size', ty='unsigned'), [
+            CBlock('data[i] = 1'),
+        ]),
+    ]),
+    Kernel('set_gpu_ascending', [('unsigned*', 'data'), ('unsigned', 'size')], [
+        ForAll('i', RangeIterator('size', ty='unsigned'), [
+            CBlock('data[i] = i'),
+        ]),
+    ]),
+    Kernel('set_ktruss_nodes', [graph.param(), max_ktruss_nodes.param(), ('unsigned*', 'indices'), ('int*', 'components'), ('unsigned*', 'max_component_head_index')], [
+        ForAll("node", graph.nodes(), [
+            If('graph.node_data[node] == components[*max_component_head_index]', [
+                max_ktruss_nodes.push('indices[node]'),
+            ])
+        ]),
+    ]),
+    Kernel('maximal_ktruss', [('CSRGraphTy&', 'g'), ('CSRGraphTy&', 'gg'), ('Shared<int>&', 'edge_tri_count'), ('int&', 'max_ktruss_size'), max_ktruss_nodes.param()], [
         CDecl(('dim3', 'blocks', '')),
         CDecl(('dim3', 'threads', '')),
         CBlock(['kernel_sizing(g, blocks, threads)']),
@@ -240,16 +259,21 @@ ast = Module([
         CDecl(('Shared<int>', 'ncomponents', '(1)')),
         CBlock("*(ncomponents.cpu_wr_ptr()) = 0"),
         Invoke("count_components", ['gg', 'ncomponents.gpu_wr_ptr()']),
-        CDecl(('Shared<int>', 'ones', '(g.nnodes)')),
-        CBlock('memset(ones.cpu_wr_ptr(), 1, g.nnodes)'),
-        CFor(CDecl(('unsigned', 'i', '=0')), 'i < g.nnodes', 'i++', [
-          CBlock('ones.cpu_rd_ptr()[i] = 1'),
-        ]),
+        CDecl(('Shared<unsigned>', 'ones', '(g.nnodes)')),
+        Invoke('set_gpu_ones', ['ones.gpu_wr_ptr()', 'g.nnodes']),
+        CDecl(('Shared<unsigned>', 'indices', '(g.nnodes)')),
+        Invoke('set_gpu_ascending', ['indices.gpu_wr_ptr()', 'g.nnodes']),
         CDecl(('Shared<int>', 'components', '(*(ncomponents.cpu_rd_ptr()))')),
-        CDecl(('Shared<int>', 'component_size', '(*(ncomponents.cpu_rd_ptr()))')),
-        # TODO: ReduceByKey requires node_data to be sorted. However this sort creates problems if try to extract which nodes are in ktruss.
-        CBlock('mgpu::MergesortKeys(gg.node_data, g.nnodes, mgpu::less<int>(), *mgc);', parse=False),
-        CBlock('mgpu::ReduceByKey(gg.node_data, ones.gpu_wr_ptr(), g.nnodes, 0, mgpu::plus<int>(), mgpu::equal_to<int>(), components.gpu_wr_ptr(), component_size.gpu_wr_ptr(), 0, 0, *mgc);', parse=False),
+        CDecl(('Shared<unsigned>', 'component_size', '(*(ncomponents.cpu_rd_ptr()))')),
+        CBlock('mgpu::MergesortPairs(gg.node_data, indices.gpu_wr_ptr(), g.nnodes, mgpu::less<int>(), *mgc);', parse=False),
+        CBlock('mgpu::ReduceByKey(gg.node_data, ones.gpu_wr_ptr(), g.nnodes, 0U, mgpu::plus<unsigned>(), mgpu::equal_to<int>(), components.gpu_wr_ptr(), component_size.gpu_wr_ptr(), 0, 0, *mgc);', parse=False),
         CBlock('mgpu::Reduce(component_size.gpu_wr_ptr(), *(ncomponents.cpu_rd_ptr()), INT_MIN, mgpu::maximum<int>(), (int*)0, &max_ktruss_size, *mgc);', parse=False),
+        CDecl(('Shared<unsigned>', 'max_component_head_index', '(1)')),
+        CDecl(('Shared<unsigned>', 'max_component_indices', '(*(ncomponents.cpu_rd_ptr()))')),
+        Invoke('set_gpu_ascending', ['max_component_indices.gpu_wr_ptr()', '(*(ncomponents.cpu_rd_ptr()))']),
+        CBlock('mgpu::Reduce(max_component_indices.gpu_wr_ptr(), *(ncomponents.cpu_rd_ptr()), 0U, ' +
+                             'max_index<unsigned, unsigned>(component_size.gpu_rd_ptr()), ' +
+                             'max_component_head_index.gpu_wr_ptr(), (unsigned*)0, *mgc)', parse=False),
+        Invoke('set_ktruss_nodes', ['gg', 'max_ktruss_nodes', 'indices.gpu_rd_ptr()', 'components.gpu_rd_ptr()', 'max_component_head_index.gpu_rd_ptr()']),
     ], host=True),
 ])
