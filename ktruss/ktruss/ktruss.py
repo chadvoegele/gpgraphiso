@@ -73,6 +73,17 @@ ast = Module([
             ])),
         ]),
     ]),
+    Kernel('count_triangle_edges', [('CSRGraphTy&', 'g'), ('CSRGraphTy&', 'gg'), ('Shared<int>&', 'count')], [
+        CDecl(('dim3', 'blocks', '')),
+        CDecl(('dim3', 'threads', '')),
+        CBlock(['kernel_sizing(g, blocks, threads)']),
+        CBlock("count.zero_gpu()"),
+        CDecl(('Shared<unsigned int>', 'valid_edges', '(g.nnodes)')),
+        CBlock("valid_edges.zero_gpu()"),
+        Invoke("preprocess", ['gg', 'valid_edges.gpu_wr_ptr()']),
+        CBlock("mgpu::SegSortPairsFromIndices(gg.edge_data, gg.edge_dst, gg.nedges, (const int *) gg.row_start + 1, gg.nnodes - 1, *mgc);", parse=False),
+        Invoke("count_triangles", ['gg', 'valid_edges.gpu_rd_ptr()', 'count.gpu_wr_ptr()']),
+    ], host=True),
     Kernel("init", [graph.param()], [
         ForAll("node", graph.nodes(), [CBlock("graph.node_data[node] = node")])
     ]),
@@ -240,16 +251,5 @@ ast = Module([
         CBlock('mgpu::MergesortKeys(gg.node_data, g.nnodes, mgpu::less<int>(), *mgc);', parse=False),
         CBlock('mgpu::ReduceByKey(gg.node_data, ones.gpu_wr_ptr(), g.nnodes, 0, mgpu::plus<int>(), mgpu::equal_to<int>(), components.gpu_wr_ptr(), component_size.gpu_wr_ptr(), 0, 0, *mgc);', parse=False),
         CBlock('mgpu::Reduce(component_size.gpu_wr_ptr(), *(ncomponents.cpu_rd_ptr()), INT_MIN, mgpu::maximum<int>(), (int*)0, &max_ktruss_size, *mgc);', parse=False),
-    ], host=True),
-    Kernel('count_triangle_edges', [('CSRGraphTy&', 'g'), ('CSRGraphTy&', 'gg'), ('Shared<int>&', 'count')], [
-        CDecl(('dim3', 'blocks', '')),
-        CDecl(('dim3', 'threads', '')),
-        CBlock(['kernel_sizing(g, blocks, threads)']),
-        CBlock("count.zero_gpu()"),
-        CDecl(('Shared<unsigned int>', 'valid_edges', '(g.nnodes)')),
-        CBlock("valid_edges.zero_gpu()"),
-        Invoke("preprocess", ['gg', 'valid_edges.gpu_wr_ptr()']),
-        CBlock("mgpu::SegSortPairsFromIndices(gg.edge_data, gg.edge_dst, gg.nedges, (const int *) gg.row_start + 1, gg.nnodes - 1, *mgc);", parse=False),
-        Invoke("count_triangles", ['gg', 'valid_edges.gpu_rd_ptr()', 'count.gpu_wr_ptr()']),
     ], host=True),
 ])
