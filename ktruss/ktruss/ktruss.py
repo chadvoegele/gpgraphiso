@@ -255,7 +255,7 @@ ast = Module([
             ClosureHint(Iterate("while", "any", "p_jump_roots", ["gg"])),
             NL(Invoke("p_jump_leaves", ["gg"])),
         ])], wlinit=WLInit("gg.nnodes", []), once=True),
-        CBlock('printf("iterations: %d\\n", it_hk)'),
+        #CBlock('printf("iterations: %d\\n", it_hk)'),
         CDecl(('Shared<int>', 'ncomponents', '(1)')),
         CBlock("*(ncomponents.cpu_wr_ptr()) = 0"),
         Invoke("count_components", ['gg', 'ncomponents.gpu_wr_ptr()']),
@@ -276,4 +276,17 @@ ast = Module([
                              'max_component_head_index.gpu_wr_ptr(), (unsigned*)0, *mgc)', parse=False),
         Invoke('set_ktruss_nodes', ['gg', 'max_ktruss_nodes', 'indices.gpu_rd_ptr()', 'components.gpu_rd_ptr()', 'max_component_head_index.gpu_rd_ptr()']),
     ], host=True),
+    Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True)], [
+        CDecl(('Shared<int>', 'count', '(g.nedges)')),
+        CBlock(['count_triangle_edges(g, gg, count)']),
+        CDecl(('int', 'max_ktruss_size', '')),
+        CDecl(('AppendOnlyList', 'max_ktruss_nodes', '(g.nnodes)')),
+        CBlock(['maximal_ktruss(g, gg, count, max_ktruss_size, max_ktruss_nodes)']),
+        CDecl(('std::vector<int>', 'ktruss_nodes_vec', '(max_ktruss_nodes.nitems())')),
+        CBlock(['ktruss_nodes_vec.assign(max_ktruss_nodes.list.cpu_rd_ptr(), max_ktruss_nodes.list.cpu_rd_ptr()+max_ktruss_nodes.nitems())']),
+        CBlock('printf("max ktruss # nodes: %d\\n", max_ktruss_size)'),
+        CFor(CDecl(('unsigned', 'i', ' = 0')), 'i < ktruss_nodes_vec.size()', 'i++', [
+          CBlock('printf("ktruss node[%u]=%d\\n", i, ktruss_nodes_vec[i])'),
+        ]),
+    ]),
 ])
