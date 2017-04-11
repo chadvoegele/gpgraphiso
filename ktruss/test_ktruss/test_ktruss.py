@@ -38,8 +38,7 @@ def main(glist):
         return k
 
 class KTrussTests(pyirgltest.test.IrGLTest):
-    @unittest.skipIf(skip_tests, 'count_triangle_edges1')
-    def test_count_triangle_edges1(self):
+    def count_triangle_edges_runner(self, graph_input, expected_triangle_count):
         graph = gg.lib.graph.Graph("graph")
 
         test_ast = Module([
@@ -52,17 +51,22 @@ class KTrussTests(pyirgltest.test.IrGLTest):
                 CDecl(('std::vector<int>', 'triangle_count_vec', '')),
                 CDecl(('int*', 'count_ptr', '= count.cpu_rd_ptr()')),
                 CBlock(['triangle_count_vec.assign(count_ptr, count_ptr + g.nedges)']),
-                CDecl(('std::vector<int>', 'expected_triangle_count', '= { 1,2,1,1,1,2,1,0,0,1,0,0,1,1 } ')),
+                CDecl(('std::vector<int>', 'expected_triangle_count', '= %s' % expected_triangle_count)),
                 CBlock(['EXPECT_EQ(expected_triangle_count, triangle_count_vec)']),
                 ]),
             kernel_sizing(),
-            main('{ { 0,1 }, { 0,2 }, { 0,5 }, { 1,0 }, { 1,2 }, { 2,0 }, { 2,1 }, { 2,3 }, { 2,4 }, { 2,5 }, { 3,2 }, { 4,2 }, { 5,0 }, { 5,2 } }'),
+            main(graph_input),
             ])
         ast = ktruss.ktruss.ast
         self.run_test(ast, test_ast)
 
-    @unittest.skipIf(skip_tests, 'max_ktruss')
-    def test_max_ktruss(self):
+    @unittest.skipIf(skip_tests, 'count_triangle_edges1')
+    def test_count_triangle_edges1(self):
+        graph_input = '{ { 0,1 }, { 0,2 }, { 0,5 }, { 1,0 }, { 1,2 }, { 2,0 }, { 2,1 }, { 2,3 }, { 2,4 }, { 2,5 }, { 3,2 }, { 4,2 }, { 5,0 }, { 5,2 } }'
+        expected_triangle_count = '{ 1,2,1,1,1,2,1,0,0,1,0,0,1,1 }'
+        self.count_triangle_edges_runner(graph_input, expected_triangle_count)
+
+    def max_ktruss_test_runner(self, graph_input, expected_max_ktruss_size, expected_max_ktruss_nodes):
         graph = gg.lib.graph.Graph("graph")
 
         test_ast = Module([
@@ -75,17 +79,24 @@ class KTrussTests(pyirgltest.test.IrGLTest):
                 CDecl(('int', 'max_ktruss_size', '')),
                 CDecl(('AppendOnlyList', 'max_ktruss_nodes', '(g.nnodes)')),
                 CBlock(['maximal_ktruss(g, gg, count, max_ktruss_size, max_ktruss_nodes)']),
-                CBlock(['EXPECT_EQ(4, max_ktruss_size)']),
+                CBlock(['EXPECT_EQ(%s, max_ktruss_size)' % expected_max_ktruss_size]),
                 CDecl(('std::vector<int>', 'ktruss_nodes_vec', '(max_ktruss_nodes.nitems())')),
                 CBlock(['ktruss_nodes_vec.assign(max_ktruss_nodes.list.cpu_rd_ptr(), max_ktruss_nodes.list.cpu_rd_ptr()+max_ktruss_nodes.nitems())']),
-                CDecl(('std::vector<int>', 'expected_ktruss_nodes', '= { 0,1,2,5 } ')),
+                CDecl(('std::vector<int>', 'expected_ktruss_nodes', '= %s' % expected_max_ktruss_nodes)),
                 CBlock(['EXPECT_EQ(expected_ktruss_nodes, ktruss_nodes_vec)']),
                 ]),
             kernel_sizing(),
-            main('{ { 0,1 }, { 0,2 }, { 0,5 }, { 1,0 }, { 1,2 }, { 2,0 }, { 2,1 }, { 2,3 }, { 2,4 }, { 2,5 }, { 3,2 }, { 4,2 }, { 5,0 }, { 5,2 } }'),
+            main(graph_input),
             ])
         ast = ktruss.ktruss.ast
         self.run_test(ast, test_ast)
+
+    @unittest.skipIf(skip_tests, 'max_ktruss')
+    def test_max_ktruss(self):
+        graph = '{ { 0,1 }, { 0,2 }, { 0,5 }, { 1,0 }, { 1,2 }, { 2,0 }, { 2,1 }, { 2,3 }, { 2,4 }, { 2,5 }, { 3,2 }, { 4,2 }, { 5,0 }, { 5,2 } }'
+        expected_max_ktruss_size = '4'
+        expected_max_ktruss_nodes = '{ 0,1,2,5 }'
+        self.max_ktruss_test_runner(graph, expected_max_ktruss_size, expected_max_ktruss_nodes)
 
 if __name__ == '__main__':
     unittest.main()
