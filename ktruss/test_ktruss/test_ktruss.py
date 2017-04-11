@@ -24,6 +24,7 @@ def kernel_sizing():
 def main(glist):
         k = Kernel("main", [], [
             CDecl(('gpgraphlib::EdgeListGraph', 'elg', '= %s' % glist)),
+            CBlock('elg = elg.makeSymmetric()'),
             CDecl(('CSRGraphTy', 'g', '')),
             CBlock(['g.nnodes = elg.nnodes()']),
             CBlock(['g.nedges = elg.nedges()']),
@@ -66,6 +67,12 @@ class KTrussTests(pyirgltest.test.IrGLTest):
         expected_triangle_count = '{ 1,2,1,1,1,2,1,0,0,1,0,0,1,1 }'
         self.count_triangle_edges_runner(graph_input, expected_triangle_count)
 
+    @unittest.skipIf(skip_tests, 'count_triangle_edges2')
+    def test_count_triangle_edges2(self):
+        graph_input = '{{ 0,1 }, { 0,2 }, { 1,2 }, { 2,3 }, { 3,4 }, { 5,6 }, { 2,5 }, { 2,7 }, { 5,7 }, { 7,8 }, { 7,9 }, { 8,9 }, { 9,10 }, { 10,11 }, { 10,12 }, { 10,13 }, { 11,12 }, { 11,13 }, { 12,13 }, { 13,14 }, { 14,15 },}'
+        expected_triangle_count = '{1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0 }'
+        self.count_triangle_edges_runner(graph_input, expected_triangle_count)
+
     def max_ktruss_test_runner(self, graph_input, expected_max_ktruss_size, expected_max_ktruss_nodes):
         graph = gg.lib.graph.Graph("graph")
 
@@ -91,11 +98,18 @@ class KTrussTests(pyirgltest.test.IrGLTest):
         ast = ktruss.ktruss.ast
         self.run_test(ast, test_ast)
 
-    @unittest.skipIf(skip_tests, 'max_ktruss')
-    def test_max_ktruss(self):
+    @unittest.skipIf(skip_tests, 'max_ktruss1')
+    def test_max_ktruss1(self):
         graph = '{ { 0,1 }, { 0,2 }, { 0,5 }, { 1,0 }, { 1,2 }, { 2,0 }, { 2,1 }, { 2,3 }, { 2,4 }, { 2,5 }, { 3,2 }, { 4,2 }, { 5,0 }, { 5,2 } }'
         expected_max_ktruss_size = '4'
         expected_max_ktruss_nodes = '{ 0,1,2,5 }'
+        self.max_ktruss_test_runner(graph, expected_max_ktruss_size, expected_max_ktruss_nodes)
+
+    @unittest.skipIf(skip_tests, 'max_ktruss2')
+    def test_max_ktruss2(self):
+        graph = '{{ 0,1 }, { 0,2 }, { 1,2 }, { 2,3 }, { 3,4 }, { 5,6 }, { 2,5 }, { 2,7 }, { 5,7 }, { 7,8 }, { 7,9 }, { 8,9 }, { 9,10 }, { 10,11 }, { 10,12 }, { 10,13 }, { 11,12 }, { 11,13 }, { 12,13 }, { 13,14 }, { 14,15 },}'
+        expected_max_ktruss_size = '7'
+        expected_max_ktruss_nodes = '{ 0,1,2,5,7,8,9 }'
         self.max_ktruss_test_runner(graph, expected_max_ktruss_size, expected_max_ktruss_nodes)
 
 if __name__ == '__main__':
