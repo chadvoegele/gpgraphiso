@@ -106,7 +106,7 @@ namespace gpgraphlib {
     std::list<std::pair<unsigned, unsigned>> el;
     int nnodes, nedges;
     if (!(stream >> nnodes && stream >> nnodes && stream >> nedges)) {
-      throw std::runtime_error("Failed to read label header.");
+      throw std::runtime_error("Failed to read MTX header.");
     }
 
     unsigned min_node = UINT_MAX, max_node = 0;
