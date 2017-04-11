@@ -112,5 +112,12 @@ class KTrussTests(pyirgltest.test.IrGLTest):
         expected_max_ktruss_nodes = '{ 0,1,2,5,7,8,9 }'
         self.max_ktruss_test_runner(graph, expected_max_ktruss_size, expected_max_ktruss_nodes)
 
+    @unittest.skipIf(skip_tests, 'max_ktruss3')
+    def test_max_ktruss3(self):
+        graph = '{ { 0,1 }, { 0,2 }, { 0,3 }, { 0,4 }, { 1,0 }, { 1,2 }, { 1,3 }, { 1,4 }, { 2,0 }, { 2,1 }, { 2,3 }, { 2,4 }, { 3,0 }, { 3,1 }, { 3,2 }, { 3,4 }, { 4,0 }, { 4,1 }, { 4,2 }, { 4,3 }, }'
+        expected_max_ktruss_size = '5'
+        expected_max_ktruss_nodes = '{ 0,1,2,3,4 }'
+        self.max_ktruss_test_runner(graph, expected_max_ktruss_size, expected_max_ktruss_nodes)
+
 if __name__ == '__main__':
     unittest.main()
