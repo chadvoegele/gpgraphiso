@@ -8,6 +8,7 @@
 
 #include "gg.h"
 #include "Timer.h"
+#include "edgelist_graph.h"
 
 extern void gg_main(CSRGraphTy &, CSRGraphTy &);
 extern void output(CSRGraphTy &, const char *output_file);
@@ -30,13 +31,39 @@ void kernel_sizing(CSRGraphTy & g, dim3 &blocks, dim3 &threads) {
   blocks.y = blocks.z = 1;
 }
 
-int load_graph_and_run_kernel(char *graph_file) {
-  CSRGraphTy g, gg;
+CSRGraphTy load_graph(char* graph) {
+  CSRGraphTy g;
 
+  char* ext = strrchr(graph, '.');
+  if (!ext || ext == graph) {
+    fprintf(stderr, "Unable to get graph file extension.\n");
+    exit(EXIT_FAILURE);
+  }
+
+  if (!strcmp(".gr", ext)) {
+    g.read(graph);
+
+  } else if (!strcmp(".mtx", ext)) {
+    gpgraphlib::EdgeListGraph elg = gpgraphlib::EdgeListGraph::fromMTXFile(graph);
+    g.nnodes = elg.nnodes();
+    g.nedges = elg.nedges();
+    g.allocOnHost();
+    elg.setCSR(g.row_start, g.edge_dst);
+
+  } else {
+    fprintf(stderr, "Unknown extension: %s\n. Supported: .gr, .mtx", ext);
+    exit(EXIT_FAILURE);
+  }
+
+  return g;
+}
+
+int load_graph_and_run_kernel(char *graph_file) {
   ggc::Timer k("gg_main");
   fprintf(stderr, "OPTIONS: %s\n", GGC_OPTIONS);
-  g.read(graph_file);
 
+  CSRGraphTy g = load_graph(graph_file);
+  CSRGraphTy gg;
   g.copy_to_gpu(gg);
 
   int *d;
