@@ -31,22 +31,20 @@ ast = Module([
             ClosureHint(ForAll("edge", graph.edges("node"), [
                 CDecl(('index_type', 'dst', '= graph.getAbsDestination(edge)')),
                 CDecl(('int', 'dst_degree', '= graph.getOutDegree(dst)')),
-                #Remove symmetry breaking to count all edges for ktruss building.
-                #If('(dst_degree > degree) || (dst_degree == degree && dst > node)', [
+                If('(dst_degree > degree) || (dst_degree == degree && dst > node)', [
                     CBlock(["graph.edge_data[edge] = dst"]),
                     CBlock(["atomicAdd(valid_edges + node, 1)"]),
-                #], [
-                    #CBlock(["graph.edge_data[edge] = graph.nnodes" ]),
-                #]),
+                ], [
+                    CBlock(["graph.edge_data[edge] = graph.nnodes" ]),
+                ]),
             ])),
         ])
     ]),
-    Kernel("intersect", [graph.param(), ('index_type', 'u'), ('index_type', 'v'), ('unsigned int *', 'valid_edges')], [
+    Kernel("intersect", [graph.param(), ('index_type', 'u'), ('index_type', 'v'), ('unsigned int *', 'valid_edges'), ('int *', 'count'), ('index_type', 'edge')], [
         CDecl(('index_type', 'u_start', '= graph.getFirstEdge(u)')),
         CDecl(('index_type', 'u_end', '= u_start + valid_edges[u]')),
         CDecl(('index_type', 'v_start', '= graph.getFirstEdge(v)')),
         CDecl(('index_type', 'v_end', '= v_start + valid_edges[v]')),
-        CDecl(('int', 'count', '= 0')),
         CDecl(('index_type', 'u_it', '= u_start')),
         CDecl(('index_type', 'v_it', '= v_start')),
         CDecl(('index_type', 'a', '')),
@@ -55,23 +53,24 @@ ast = Module([
             CBlock('a = graph.getAbsDestination(u_it)'),
             CBlock('b = graph.getAbsDestination(v_it)'),
             CDecl(('int', 'd', '= a - b')),
+            If('d == 0', [
+                CBlock('atomicAdd(count + u_it, 1)'),
+                CBlock('atomicAdd(count + v_it, 1)'),
+                CBlock('atomicAdd(count + edge, 1)'),
+            ]),
             If('d <= 0', [CBlock('u_it++')]),
             If('d >= 0', [CBlock('v_it++')]),
-            If('d == 0', [CBlock('count++')]),
         ]),
-        CBlock('return count'),
-    ], device=True, ret_type = 'unsigned int'),
+    ], device=True),
     Kernel("count_triangles", [graph.param(), ('unsigned int *', 'valid_edges'), ('int *', 'count')], [
         CDecl(('int', 'lcount', '=0')),
         ForAll("v", graph.nodes(), [
             CDecl(('bool', 'pop', '')),
-            CDecl(('int', 'd_v', '')),
             Assign('pop', graph.valid_node("v")),
             ClosureHint(ForAll("edge", graph.edges("v", limit='valid_edges[v]'), [
                 CDecl(('index_type', 'u', '= graph.getAbsDestination(edge)')),
                 CDecl(('index_type', 'd_u', '= graph.getOutDegree(u)')),
-                CDecl(('int', 'xcount', '= 0')),
-                CBlock('count[edge] = intersect(graph, u, v, valid_edges)'),
+                CBlock('intersect(graph, u, v, valid_edges, count, edge)'),
             ])),
         ]),
     ]),
