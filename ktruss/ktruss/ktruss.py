@@ -35,7 +35,8 @@ ast = Module([
                     CBlock(["graph.edge_data[edge] = dst"]),
                     CBlock(["atomicAdd(valid_edges + node, 1)"]),
                 ], [
-                    CBlock(["graph.edge_data[edge] = graph.nnodes" ]),
+                    # + dst, makes resulting edge_dst = [ sorted valid, sorted invalid ]
+                    CBlock(["graph.edge_data[edge] = graph.nnodes + dst" ]),
                 ]),
             ])),
         ])
@@ -74,6 +75,15 @@ ast = Module([
             ])),
         ]),
     ]),
+    Kernel("count_triangle_back_edge", [graph.param(), ('unsigned int *', 'valid_edges'), ('int *', 'count')], [
+        ForAll('src', graph.nodes(), [
+            ClosureHint(ForAll("edge", graph.edges('src', limit='valid_edges[src]'), [
+                CDecl(('index_type', 'dst', '= graph.getAbsDestination(edge)')),
+                CDecl(('index_type', 'back_idx', '= findBackEdge(graph, src, dst, valid_edges)')),
+                CBlock('count[back_idx] = count[edge]'),
+            ])),
+        ]),
+    ]),
     Kernel('count_triangle_edges', [('CSRGraphTy&', 'g'), ('CSRGraphTy&', 'gg'), ('Shared<int>&', 'count')], [
         CDecl(('dim3', 'blocks', '')),
         CDecl(('dim3', 'threads', '')),
@@ -84,6 +94,7 @@ ast = Module([
         Invoke("preprocess", ['gg', 'valid_edges.gpu_wr_ptr()']),
         CBlock("mgpu::SegSortPairsFromIndices(gg.edge_data, gg.edge_dst, gg.nedges, (const int *) gg.row_start + 1, gg.nnodes - 1, *mgc);", parse=False),
         Invoke("count_triangles", ['gg', 'valid_edges.gpu_rd_ptr()', 'count.gpu_wr_ptr()']),
+        Invoke('count_triangle_back_edge', ['gg', 'valid_edges.gpu_rd_ptr()', 'count.gpu_wr_ptr()']),
     ], host=True),
     Kernel("init", [graph.param()], [
         ForAll("node", graph.nodes(), [CBlock("graph.node_data[node] = node")])

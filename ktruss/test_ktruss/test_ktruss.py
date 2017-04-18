@@ -66,7 +66,7 @@ class KTrussTests(pyirgltest.test.IrGLTest):
         graph_input = '{{ 0, 1 }, { 0, 2 }, { 1, 2 }}'
         #                       src: 0 0 1 1 2 2
         #                       dst: 1 2 2 0 0 1
-        expected_triangle_count = '{ 1,1,1,0,0,0 }'
+        expected_triangle_count = '{ 1,1,1,1,1,1 }'
         self.count_triangle_edges_runner(graph_input, expected_triangle_count)
 
     @unittest.skipIf(skip_tests, 'count_triangle_edges1')
@@ -75,7 +75,7 @@ class KTrussTests(pyirgltest.test.IrGLTest):
         #                       src: 0 0 0 1 1 2 2 2 2 2 3 4 5 5
         #                       dst: 2 1 5 0 2 0 1 3 4 5 2 2 0 2
         #                    valid?: x     x x           x x x x
-        expected_triangle_count = '{ 2,0,0,1,1,0,0,0,0,0,0,0,1,1 }'
+        expected_triangle_count = '{ 2,1,1,1,1,2,1,0,0,1,0,0,1,1 }'
         self.count_triangle_edges_runner(graph_input, expected_triangle_count)
 
     @unittest.skipIf(skip_tests, 'count_triangle_edges2')
@@ -84,7 +84,7 @@ class KTrussTests(pyirgltest.test.IrGLTest):
         #                      src: 0 0 1 1 2 2 2 2 2 3 3 4 5 5 5 6 7 7 7 7 8 8 9 9 9 A A A A B B B C C C D D D D E E F
         #                      dst: 1 2 2 0 0 1 3 5 7 2 4 3 2 7 6 5 2 5 8 9 7 9 7 A 8 D 9 B C A C D A D B A B C E C F E
         #                   valid?: x x x             x   x x x   x x       x x x x   x       x x x x x           x   x
-        expected_triangle_count = '{1,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,1,1,1,0,0,2,0,0,0,2,2,2,2,2,0,0,0,0,0,0,0,0 }'
+        expected_triangle_count = '{1,1,1,1,1,1,0,1,1,0,0,0,1,1,0,0,1,1,1,1,1,1,1,0,1,2,0,2,2,2,2,2,2,2,2,2,2,2,0,0,0,0 }'
         self.count_triangle_edges_runner(graph_input, expected_triangle_count)
 
     def max_ktruss_test_runner(self, graph_input, expected_max_ktruss_size, expected_max_ktruss_nodes):
