@@ -1,0 +1,71 @@
+%% Template from: http://www.ieee.org/conferences_events/conferences/publishing/templates.html
+
+\documentclass[conference]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{array}
+\usepackage{url}
+
+\begin{document}
+\title{Using IrGL to Build Efficient Graph Programs}
+\author{\IEEEauthorblockN{Chad Voegele}
+\IEEEauthorblockA{University of Texas-Austin\\
+chad@cs.utexas.edu}
+\and
+\IEEEauthorblockN{Sreepathi Pai}
+\IEEEauthorblockA{University of Texas-Austin\\
+sreepai@ices.utexas.edu}
+\and
+\IEEEauthorblockN{Yi-Shan Lu}
+\IEEEauthorblockA{University of Texas-Austin\\
+yishanlu@utexas.edu}}
+\maketitle
+
+% Descriptions from http://graphchallenge.mit.edu/submit
+% A short summary of the work and results.
+\begin{abstract}
+The abstract goes here.
+\end{abstract}
+
+% Describe the practical graph analysis problems your contribution addresses and include a discussion and citations to how others in the field are addressing similar problems.
+\section{Introduction}
+intro
+% static graph analysis
+% irgl intermediate code easier to understand than sequences of matrix ops
+% linear alegbra kernels as building blocks
+% general subgraph isomorphism - gpsm, stwig,
+
+% Describe in technical detail your specific contribution/innovation to graph analysis software, hardware, algorithm, and/or systems.
+\section{Approach}
+approach
+% irgl based approach for high performance without barebones cuda coding
+% triangle counting via edge intersection
+% upper bound largest ktruss decomposition via largest k such that #edges with k is >= (k choose 3)
+% run connected components to find largest component
+
+% Describe those elements of the IEEE HPEC Graph Challenge that you selected to best highlight your contributions/innovations. Explain why you selected these elements and how you measured them for your implementation.
+\section{Experiments}
+expts
+
+% Present tables and/or graphs presenting your measurements on your implementation and how they compare to the baseline implementation available at GraphChallenge.org.
+\section{Results}
+data
+% correctness checks
+% for both triangle and ktruss:
+% runtimes of reference code vs irgl runtime
+
+% A short summary of the work and potential next steps.
+\section{Conclusion}
+The conclusion goes here.
+
+% use section* for acknowledgment
+\section*{Acknowledgment}
+
+The authors would like to thank...
+
+\nocite{*}
+\bibliographystyle{IEEEtran}
+\bibliography{paper}
+
+\end{document}
