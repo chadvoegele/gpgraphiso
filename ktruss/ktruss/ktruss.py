@@ -17,6 +17,7 @@ ast = Module([
     CBlock([cgen.Include("kernels/segmentedsort.cuh")]),
     CBlock([cgen.Include("kernels/reducebykey.cuh")]),
     CBlock([cgen.Include("ktruss.h")]),
+    CDecl(('unsigned', 'KTRUSS_K', '= 4')),
     CDecl(('int', 'CUDA_DEVICE', '= 0')),
     CDecl(('mgpu::ContextPtr', 'mgc', '')),
     Kernel("preprocess", [graph.param(), ('unsigned int *', 'valid_edges')], [
@@ -110,9 +111,9 @@ ast = Module([
         ])
     ]),
     # _Select_winner_init
-    Kernel("hook_init", [graph.param(), ('index_type *', 'edge_src'), ('int*', 'edge_tri_count')], [
+    Kernel("hook_init", [graph.param(), ('index_type *', 'edge_src'), ('int*', 'edge_tri_count'), ('unsigned', 'KTRUSS_K')], [
         ForAll("edge", RangeIterator("graph.nedges"), [
-            If('edge_tri_count[edge] > 0', [
+            If('edge_tri_count[edge] >= KTRUSS_K-2', [
                 CDecl(('index_type', 'x', '= edge_src[edge]')),
                 CDecl(('index_type', 'y', '= graph.getAbsDestination(edge)')),
                 CDecl(('index_type', 'mx', '= x > y ? x : y')),
@@ -122,9 +123,9 @@ ast = Module([
         ]),
     ]),
     # select_winner2
-    Kernel("hook_high_to_low", [graph.param(), ('const __restrict__ index_type *', 'edge_src'), ('char *', 'marks'), ('int*', 'edge_tri_count')], [
+    Kernel("hook_high_to_low", [graph.param(), ('const __restrict__ index_type *', 'edge_src'), ('char *', 'marks'), ('int*', 'edge_tri_count'), ('unsigned', 'KTRUSS_K')], [
         ForAll("edge", RangeIterator("graph.nedges"), [
-            If('edge_tri_count[edge] > 0', [
+            If('edge_tri_count[edge] >= KTRUSS_K-2', [
                 If("!marks[edge]", [
                     CDecl(('index_type', 'u', '= edge_src[edge]')),
                     CDecl(('index_type', 'v', '= graph.getAbsDestination(edge)')),
@@ -143,9 +144,9 @@ ast = Module([
         ])
     ]),
     # select_winner
-    Kernel("hook_low_to_high", [graph.param(), ('index_type *', 'edge_src'), ('char *', 'marks'), ('int*', 'edge_tri_count')], [
+    Kernel("hook_low_to_high", [graph.param(), ('index_type *', 'edge_src'), ('char *', 'marks'), ('int*', 'edge_tri_count'), ('unsigned', 'KTRUSS_K')], [
         ForAll("edge", RangeIterator("graph.nedges"), [
-            If('edge_tri_count[edge] > 0', [
+            If('edge_tri_count[edge] >= KTRUSS_K-2', [
                 If("!marks[edge]", [
                     CDecl(('index_type', 'u', '= edge_src[edge]')),
                     CDecl(('index_type', 'v', '= graph.getAbsDestination(edge)')),
@@ -254,17 +255,17 @@ ast = Module([
         CBlock('edge_marks.zero_gpu()'),
         NL(Invoke("prep_edge_src", ["gg", "edge_src.gpu_wr_ptr()"])),
         NL(Invoke("init", ["gg"])),
-        EL(Invoke("hook_init", ["gg", "edge_src.gpu_rd_ptr()", 'edge_tri_count.gpu_rd_ptr()'])),
+        EL(Invoke("hook_init", ["gg", "edge_src.gpu_rd_ptr()", 'edge_tri_count.gpu_rd_ptr()', 'KTRUSS_K'])),
         NL(ClosureHint(Iterate("while", "any", "p_jump", ["gg"]))),
         Pipe([DoWhile("flag", [
             Invoke("identify_roots", ["gg"]),
             If("it_hk != 0", [
-                EL(Invoke("hook_low_to_high", ["gg", "edge_src.gpu_rd_ptr()", "edge_marks.gpu_wr_ptr()", 'edge_tri_count.gpu_rd_ptr()'])),
+                EL(Invoke("hook_low_to_high", ["gg", "edge_src.gpu_rd_ptr()", "edge_marks.gpu_wr_ptr()", 'edge_tri_count.gpu_rd_ptr()', 'KTRUSS_K'])),
                 CBlock("flag = *(retval.cpu_rd_ptr())", parse=False, _scope="cpu"),
                 CBlock("flag = _rv.local", parse=False, _scope="gpu"),
                 CBlock("it_hk = (it_hk + 1) % 4")
             ], [
-                EL(Invoke("hook_high_to_low", ["gg", "edge_src.gpu_rd_ptr()", "edge_marks.gpu_wr_ptr()", 'edge_tri_count.gpu_rd_ptr()'])),
+                EL(Invoke("hook_high_to_low", ["gg", "edge_src.gpu_rd_ptr()", "edge_marks.gpu_wr_ptr()", 'edge_tri_count.gpu_rd_ptr()', 'KTRUSS_K'])),
                 CBlock("flag = *(retval.cpu_rd_ptr())", parse=False, _scope="cpu"),
                 CBlock("flag = _rv.local", parse=False, _scope="gpu"),
             ]),
@@ -284,7 +285,7 @@ ast = Module([
         CDecl(('Shared<unsigned>', 'component_size', '(*(ncomponents.cpu_rd_ptr()))')),
         CBlock('mgpu::MergesortPairs(gg.node_data, indices.gpu_wr_ptr(), g.nnodes, mgpu::less<int>(), *mgc);', parse=False),
         CBlock('mgpu::ReduceByKey(gg.node_data, ones.gpu_wr_ptr(), g.nnodes, 0U, mgpu::plus<unsigned>(), mgpu::equal_to<int>(), components.gpu_wr_ptr(), component_size.gpu_wr_ptr(), 0, 0, *mgc);', parse=False),
-        Invoke('zero_if_less_than', ('component_size.gpu_rd_ptr()', '(*(ncomponents.cpu_rd_ptr()))', '3')),
+        Invoke('zero_if_less_than', ('component_size.gpu_rd_ptr()', '(*(ncomponents.cpu_rd_ptr()))', 'KTRUSS_K')),
         CBlock('mgpu::Reduce(component_size.gpu_wr_ptr(), *(ncomponents.cpu_rd_ptr()), INT_MIN, mgpu::maximum<int>(), (int*)0, &max_ktruss_size, *mgc);', parse=False),
         CDecl(('int', 'total_ktruss_nodes', '=0')),
         CBlock('mgpu::Reduce(component_size.gpu_wr_ptr(), *(ncomponents.cpu_rd_ptr()), 0, mgpu::plus<int>(), (int*)0, &total_ktruss_nodes, *mgc);', parse=False),
