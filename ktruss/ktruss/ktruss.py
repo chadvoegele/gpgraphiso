@@ -231,6 +231,13 @@ ast = Module([
             ])
         ]),
     ]),
+    Kernel('zero_if_less_than', [('unsigned*', 'data'), ('unsigned', 'size'), ('unsigned', 'k')], [
+        ForAll('i', RangeIterator('size', ty='unsigned'), [
+            If('data[i] < k', [
+                CBlock(['data[i] = 0']),
+            ]),
+        ]),
+    ]),
     Kernel('maximal_ktruss', [('CSRGraphTy&', 'g'), ('CSRGraphTy&', 'gg'), ('Shared<int>&', 'edge_tri_count'), ('int&', 'max_ktruss_size'), max_ktruss_nodes.param()], [
         CDecl(('dim3', 'blocks', '')),
         CDecl(('dim3', 'threads', '')),
@@ -277,7 +284,11 @@ ast = Module([
         CDecl(('Shared<unsigned>', 'component_size', '(*(ncomponents.cpu_rd_ptr()))')),
         CBlock('mgpu::MergesortPairs(gg.node_data, indices.gpu_wr_ptr(), g.nnodes, mgpu::less<int>(), *mgc);', parse=False),
         CBlock('mgpu::ReduceByKey(gg.node_data, ones.gpu_wr_ptr(), g.nnodes, 0U, mgpu::plus<unsigned>(), mgpu::equal_to<int>(), components.gpu_wr_ptr(), component_size.gpu_wr_ptr(), 0, 0, *mgc);', parse=False),
+        Invoke('zero_if_less_than', ('component_size.gpu_rd_ptr()', '(*(ncomponents.cpu_rd_ptr()))', '3')),
         CBlock('mgpu::Reduce(component_size.gpu_wr_ptr(), *(ncomponents.cpu_rd_ptr()), INT_MIN, mgpu::maximum<int>(), (int*)0, &max_ktruss_size, *mgc);', parse=False),
+        CDecl(('int', 'total_ktruss_nodes', '=0')),
+        CBlock('mgpu::Reduce(component_size.gpu_wr_ptr(), *(ncomponents.cpu_rd_ptr()), 0, mgpu::plus<int>(), (int*)0, &total_ktruss_nodes, *mgc);', parse=False),
+        CBlock('printf("total_ktruss_nodes=%d\\n", total_ktruss_nodes)'),
         CDecl(('Shared<unsigned>', 'max_component_head_index', '(1)')),
         CDecl(('Shared<unsigned>', 'max_component_indices', '(*(ncomponents.cpu_rd_ptr()))')),
         Invoke('set_gpu_ascending', ['max_component_indices.gpu_wr_ptr()', '(*(ncomponents.cpu_rd_ptr()))']),
