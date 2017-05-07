@@ -10,12 +10,13 @@
 #include "Timer.h"
 #include "edgelist_graph.h"
 
-extern void gg_main(CSRGraphTy &, CSRGraphTy &);
+extern void gg_main(CSRGraphTy &, CSRGraphTy &, unsigned);
 extern void output(CSRGraphTy &, const char *output_file);
 extern const char *GGC_OPTIONS;
 
 int QUIET = 0;
 char *INPUT, *OUTPUT;
+unsigned ktruss_k = 3;
 extern unsigned long DISCOUNT_TIME_NS;
 
 unsigned long DISCOUNT_TIME_NS = 0;
@@ -70,7 +71,7 @@ int load_graph_and_run_kernel(char *graph_file) {
   check_cuda(cudaMalloc(&d, sizeof(int) * 1));
 
   k.start();
-  gg_main(g, gg);
+  gg_main(g, gg, ktruss_k);
   check_cuda(cudaDeviceSynchronize());
   k.stop();
   k.print();
@@ -88,13 +89,13 @@ int load_graph_and_run_kernel(char *graph_file) {
 
 void usage(int argc, char *argv[])
 {
-  fprintf(stderr, "usage: %s [-q] [-g gpunum] [-o output-file] input_graph.gr\n", argv[0]);
+  fprintf(stderr, "usage: %s [-q] [-g gpunum] [-o output-file] [-k #] input_graph.gr\n", argv[0]);
 }
 
 void parse_args(int argc, char *argv[])
 {
   int c;
-  const char *opts = "g:qo:";
+  const char *opts = "g:qo:k:";
 
   while((c = getopt(argc, argv, opts)) != -1) {
     switch(c)
@@ -104,6 +105,9 @@ void parse_args(int argc, char *argv[])
 	break;
       case 'o':
 	OUTPUT = optarg; //TODO: copy?
+	break;
+      case 'k':
+	ktruss_k = atoi(optarg); //TODO: copy?
 	break;
       case 'g':
 	char *end;
