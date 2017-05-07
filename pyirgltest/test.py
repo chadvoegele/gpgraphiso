@@ -140,7 +140,7 @@ def parse_irgl_output(out):
     failure = [o for o in out_lines if o.find('Failure') > 0]
     result = {}
     result['passed'] = len(failure) == 0
-    result['message'] = '\n'.join([o for o in out_lines if o.find('Host memory') < 0])
+    result['message'] = '\n' + '\n'.join([o for o in out_lines if o.find('Host memory') < 0])
     return result
 
 class IrGLTest(unittest.TestCase):
