@@ -3,12 +3,12 @@
 \documentclass[conference]{IEEEtran}
 \usepackage{graphicx}
 \usepackage{amsmath}
-\usepackage{algorithmic}
 \usepackage{array}
 \usepackage{url}
+\usepackage{minted}
 
 \begin{document}
-\title{Using IrGL to Build Efficient Graph Programs}
+\title{Triangle and $k$-Truss Finding using IrGL}
 \author{\IEEEauthorblockN{Chad Voegele}
 \IEEEauthorblockA{University of Texas-Austin\\
 chad@cs.utexas.edu}
@@ -31,29 +31,166 @@ The abstract goes here.
 % Describe the practical graph analysis problems your contribution addresses and include a discussion and citations to how others in the field are addressing similar problems.
 \section{Introduction}
 intro
-% static graph analysis
-% irgl intermediate code easier to understand than sequences of matrix ops
+% subgraphiso for social network analysis, topic analysis, ...
+% static graph analysis part of graph challenge
 % linear alegbra kernels as building blocks
-% general subgraph isomorphism - gpsm, stwig,
 
 % Describe in technical detail your specific contribution/innovation to graph analysis software, hardware, algorithm, and/or systems.
 \section{Approach}
-approach
-% irgl based approach for high performance without barebones cuda coding
-% triangle counting via edge intersection
-% upper bound largest ktruss decomposition via largest k such that #edges with k is >= (k choose 3)
-% run connected components to find largest component
+% Definitions
+A graph consists of vertices, $v \in V$ and edges connecting vertices, $e=(u \rightarrow v) \in E$ for $u, v \in V$, and is denoted as $G=(V,E)$. We represent symmetric graphs as directed graphs with back-edges, i.e. if $(u-v) \in E_{sym}$, then $(u \rightarrow v) \in E_{dir} and (v \rightarrow u) \in E_{dir}$.
+A triangle is any cycle of length 3. For example, a triangle with vertices $u$, $v$, and $w$ may be formed from edges $(u \rightarrow v)$, $(v \rightarrow w)$, and $(w \rightarrow v)$. The back edges $(v \rightarrow w)$, $(w \rightarrow v)$, and $(v \rightarrow u)$ for a triangle using the same vertices.
+A $k$-truss is a one-component graph such that each edge participates in at least $k-2$ triangles $\cite{Cohen_trusses}$. A $k$-truss is considered maximal if it is not a proper subgraph of another $k$-truss. Note that a $k$-truss must have at least $k$ vertices.
+
+% Motivation
+We are interested in building high-performance triangle and $k$-truss finding programs using GPUs through IrGL $\cite{Pai:2016:CTO:2983990.2984015}$ for several reasons. First, several classical graph analyses already implemented in IrGL, including triangle counting, have been demonstrated to have state-of-the-art performance. By implementing $k$-truss finding, we further demonstrate IrGL's applicability to generating high-performance graph analysis programs and show that IrGL can be used to develop programs for specific applications.
+
+Further, we argue that the IrGL source code is more readable and expressive than code expressed directly in terms of linear algebra, yet still obtains better performance.
+
+We focus on triangle and $k$-truss finding rather than general subgraph isomorpishms since triangles and $k$-trusses can be found in polynomial time $\cite{Shao:2014:ECS:2588555.2593665}$. A subgraph isomorphism is a mapping, $f$, from $G'=(V',E')$ to $G=(V,E)$ such that $\forall v' \in V'$, if $(u', v') \in E'$, then $(f(u'), f(v')) \in E$. Although several advancements $\cite{Sun:2012:ESM:2311906.2311907}$ $\cite{Bi:2016:ESM:2882903.2915236}$ $\cite{Han:2013:TIT:2463676.2465300}$ $\cite{Sun:2012:ESM:2311906.2311907}$ have been made in finding subgraph isomorphisms, each ultimately involves a Cartesian product over the vertices or edges of $G$ leading to exponential runtimes.
+
+Lastly, we consider triangle and $k$-truss IrGL programs to be a step towards building high-performance graph database applications. We obtain query times that are comparable to typical relational database systems. Although we demonstrate a specific query, the structure of graph data often limits the expressiveness of general purpose querying systems. For instance, $k$-truss finding in Apache Tinkerpop $\cite{DBLP:journals/corr/Rodriguez15}$ is non-trivial and approaches would likely result in query times that are unacceptable to the user. In addition, we demonstrate that it is possible to relax that constraint that the graph fits in GPU memory by using unified virtual addressing available in CUDA 6 \footnote{\url{https://devblogs.nvidia.com/parallelforall/unified-memory-in-cuda-6/}}.
+
+% Implementation
+For triangle finding, we use Polack's $\cite{DBLP:journals/corr/Polak15}$ approach that was implemented in IrGL by Pai $\cite{Pai:2016:CTO:2983990.2984015}$. The crux is to merge adjacency lists of the end points of an edge to find their intersection, $\forall (u,v) \in E, Adj(u) \cap Adj(v)$. Each element in the intersection represents a triangle. These intersections are independent for each edge and can be done in parallel on a GPU.
+
+\begin{listing}
+\begin{minted}{python}
+Device('intersect', graph, u, v) {
+  *u = Adj(u)
+  *v = Adj(v)
+  while (*u < uEnd and *v < vEnd) {
+    d = u - v
+    if (d == 0) count++
+    if (d <= 0) u++
+    if (d >= 0) v++
+  }
+  return count
+}
+
+Kernel('triangles', graph) {
+  ForAll(v in V) {
+    ForAll(u in Adj(v)) {
+      count += intersect(graph, u, v)
+    }
+  }
+}
+\end{minted}
+\caption{Triangle Counting}
+\label{l:tri_irgl}
+\end{listing}
+
+Our approach for finding $k$-trusses follows Cohen's $\cite{Cohen_trusses}$ but adapts it for GPU computation. Cohen observes that every vertex in a $k$-truss must have degree at least $k-1$. Clearly, if the degree were less, then it could not participate in the required $k-2$ triangles. This observation is used to filter vertices by degree. First, we count degrees, and then iteratively remove vertices with degree less than $k-1$ updating neighboring the degrees of neighboring vertices that are affected by the removal.
+
+Graphs in IrGL are stored as the adjacency matrix in compressed sparse row (CSR) format. This format effectively uses one array for concatenated adjacency lists and another to indicate where each adjacency lists begins and ends. Calculating vertex degrees is easily done in this format subtracting the adjacency list start from the end. Removing vertices can be done easily on the GPU at the cost of extra storage by using a mask array indicating which vertices have been removed. Iteratively removing and updating vertex degrees can be done in a work-efficient manner if only those vertices that are active are processed in each iteration. Algorithms of this form are data-driven algorithms $\cite{DBLP:conf/pldi/PingaliNKBHKLLMMPS11}$ and are implemented natively using IrGL's Worklist and Pipe constructs. Further, since degree updates are independent, the Worklist approach provides a mechanism for parallelization.
+
+
+\begin{listing}
+\begin{minted}{python}
+Device('degree_init', graph, degrees, removed) {
+  ForAll(v \in V) {
+    degrees[v] = Adj(v).end() - Adj(v).begin()
+    If (degrees[v] < k-1) {
+      Worklist.push(v)
+      removed[v] = 1
+    }
+  }
+}
+
+Device('degree_update', graph, degrees, removed) {
+  ForAll(v in Worklist) {
+    ForAll(u in Adj(v)) {
+      atomicSub(degrees[u], 1)
+      If (degrees[u] < k-1) {
+        Worklist.push(u)
+        removed[u] = 1
+      }
+    }
+  }
+}
+
+Kernel('degree_filter', graph) {
+  Invoke('degree_init', graph, degrees, removed)
+  Pipe {
+    Invoke('degree_update', graph, degrees, removed)
+  }
+}
+\end{minted}
+\caption{Degree Filtering}
+\label{l:degree_filter}
+\end{listing}
+
+After vertices of inadequate degree have been removed, we proceed as Cohen does to iteratively remove edges that participate in fewer than $k-2$ triangles. First, we associate with each edge a count of the number of triangles that it participates in. At each iteration, when an edge is removed, the triangle that it formed is removed and consequently, the counts of all edges in the triangle need to be decreased. The Worklist again provides a mechanism to achieve work efficiency and we leverage the aforementioned approach to find triangles from Polak.
+
+We concede that we were unable to leverage a key optimization of Polak: ignoring edges which point from high degree to low degree vertices. This optimization results in only one of the three triangle edges being able to identify the triangle. During iteration, it is possible that the removed edge pushed to the Worklist is not that the edge the identifies the triangle and consequently, there is no way to update the counts of the other edges in the triangle.
+
+\begin{listing}
+\begin{minted}{python}
+Device('triangle_init', graph, tri_count) {
+  ForAll(v in V, not removed) {
+    ForAll(u in Adj(v), not removed) {
+      tri_count[(v, u)] = intersect(graph, u, v)
+      If (tri_count[(v, u)] < k-2) {
+        Worklist.push((v, u))
+        removed[(v, u)] = 1
+      }
+    }
+  }
+}
+
+Device('intersect_update', graph, u, v) {
+  *u = Adj(u)
+  *v = Adj(v)
+  while (*u < uEnd and *v < vEnd) {
+    d = u - v
+    if (d == 0 and u not removed) {
+      if (*u not removed) {
+        atomicSub(tri_count[*u], 1)
+        If (tri_count[*u] < k-2) {
+          Worklist.push(*u)
+          removed[*u] = 1
+        }
+      }
+      # same for *v
+    }
+    if (d <= 0) u++
+    if (d >= 0) v++
+  }
+  return count
+}
+
+Device('triangle_update', graph, tri_count) {
+  ForAll((v, u) in Worklist) {
+    Invoke('intersect_update', graph, u, v, tri_count)
+  }
+}
+
+Kernel('triangle_filter', graph) {
+  Invoke('triangle_init', graph, tri_count)
+  Pipe {
+    Invoke('triangle_update', graph, tri_count)
+  }
+}
+\end{minted}
+\caption{Triangle Filtering}
+\label{l:tri_filter}
+\end{listing}
 
 % Describe those elements of the IEEE HPEC Graph Challenge that you selected to best highlight your contributions/innovations. Explain why you selected these elements and how you measured them for your implementation.
 \section{Experiments}
 expts
+% run on gtx 1080
+% use cuda 8
+% compare to graph challenge reference code (reference to graphblas), cublas impl of reference code, cpu version
+% use road/rmat/grid datasets
+% show large data graph support by running on snap dataset
 
 % Present tables and/or graphs presenting your measurements on your implementation and how they compare to the baseline implementation available at GraphChallenge.org.
 \section{Results}
 data
 % correctness checks
 % for both triangle and ktruss:
-% runtimes of reference code vs irgl runtime
+%   runtimes of reference code vs irgl runtime
 
 % A short summary of the work and potential next steps.
 \section{Conclusion}
