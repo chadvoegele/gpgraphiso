@@ -48,8 +48,8 @@ class KTrussTests(pyirgltest.test.IrGLTest):
             Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True)], [
                 CBlock(['mgc = mgpu::CreateCudaDevice(CUDA_DEVICE)'], parse=False),
                 CDecl(('Shared<unsigned>', 'degrees', '')),
-                CDecl(('Shared<unsigned>', 'dremoved', '')),
-                CBlock('degree_filter(g, gg, %d, degrees, dremoved)' % k),
+                CDecl(('Shared<unsigned>', 'vremoved', '')),
+                CBlock('degree_filter(g, gg, %d, degrees, vremoved)' % k),
                 CDecl(('std::vector<int>', 'degrees_vec', '')),
                 CDecl(('unsigned*', 'degrees_ptr', '= degrees.cpu_rd_ptr()')),
                 CBlock(['degrees_vec.assign(degrees_ptr, degrees_ptr + g.nnodes)']),
@@ -78,8 +78,8 @@ class KTrussTests(pyirgltest.test.IrGLTest):
             Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True)], [
                 CBlock(['mgc = mgpu::CreateCudaDevice(CUDA_DEVICE)'], parse=False),
                 CDecl(('Shared<unsigned>', 'degrees', '')),
-                CDecl(('Shared<unsigned>', 'dremoved', '')),
-                CBlock('degree_filter(g, gg, %d, degrees, dremoved)' % k),
+                CDecl(('Shared<unsigned>', 'vremoved', '')),
+                CBlock('degree_filter(g, gg, %d, degrees, vremoved)' % k),
                 CDecl(('Shared<unsigned>', 'triangles', '')),
                 CDecl(('Shared<unsigned>', 'removed', '')),
                 CDecl(('unsigned', 'n_ktruss_nodes', '')),

@@ -294,7 +294,8 @@ ast = Module([
     Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), ('unsigned', 'k')], [
       CBlock(['mgc = mgpu::CreateCudaDevice(CUDA_DEVICE)'], parse=False),
       CDecl(('Shared<unsigned>', 'degrees', '')),
-      CBlock('degree_filter(g, gg, k, degrees)'),
+      CDecl(('Shared<unsigned>', 'vremoved', '')),
+      CBlock('degree_filter(g, gg, k, degrees, vremoved)'),
       CDecl(('Shared<unsigned>', 'triangles', '')),
       CDecl(('Shared<unsigned>', 'eremoved', '')),
       CDecl(('unsigned', 'n_ktruss_nodes', '')),
