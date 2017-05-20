@@ -18,48 +18,53 @@ ast = Module([
     CDecl(('extern WorklistT', 'out_wl', '')),  # for IrGL parsing
     # Instead of graph.nnodes, use 2*graph.nnodes. atomicDec can be called at most graph.nnodes
     # times on a particular vertex. After iterations, degree will still be higher than graph.nnodes.
-    Kernel('init_degree', [graph.param(), ('unsigned*', 'degrees'), ('unsigned', 'k')], [
+    Kernel('init_degree', [graph.param(), ('unsigned*', 'degrees'), ('unsigned*', 'vremoved'), ('unsigned', 'k')], [
       ForAll("node", graph.nodes(), [
         CDecl(('int', 'degree', '= graph.getOutDegree(node)')),
         CBlock('degrees[node] = degree'),
         If('degrees[node] < k - 1', [
           WL.push("node"),
-          CBlock('atomicExch(&degrees[node], 2*graph.nnodes)'),
+          CBlock('vremoved[node] = 1'),
         ]),
       ]),
     ]),
-    Kernel('degree_filter_iter', [graph.param(), ('unsigned*', 'degrees'), ('unsigned', 'k')], [
+    Kernel('degree_filter_iter', [graph.param(), ('unsigned*', 'degrees'), ('unsigned*', 'vremoved'), ('unsigned', 'k')], [
       ForAll('wli', WL.items(), [
         CDecl(('int', 'src', '')),
         CDecl(('bool', 'pop', '')),
         WL.pop('pop', 'wli', 'src'),
         For('edge', graph.edges('src'), [
           CDecl(('int', 'dst', '= graph.getAbsDestination(edge)')),
-          CBlock('atomicDec(&degrees[dst], 2*graph.nnodes)'),
-          If('degrees[dst] < k - 1', [
-            WL.push('dst'),
-            CBlock('atomicExch(&degrees[dst], 2*graph.nnodes)'),
+          If('!vremoved[dst]', [
+            CBlock('atomicSub(&degrees[dst], 1U)'),
+            If('degrees[dst] < k - 1', [
+              WL.push('dst'),
+              CBlock('vremoved[dst] = 1'),
+            ]),
           ]),
         ]),
       ]),
     ]),
-    Kernel('degree_filter_finalize', [graph.param(), ('unsigned*', 'degrees')], [
+    Kernel('degree_filter_finalize', [graph.param(), ('unsigned*', 'degrees'), ('unsigned*', 'vremoved')], [
       ForAll('n', RangeIterator('graph.nnodes'), [
-        CBlock('degrees[n] = degrees[n] > graph.nnodes ? 0 : degrees[n]'),
+        CBlock('degrees[n] = vremoved[n] ? 0 : degrees[n]'),
       ]),
     ]),
-    Kernel('degree_filter', [params.GraphParam('g', True), params.GraphParam('gg', True), ('unsigned', 'k'), ('Shared<unsigned>&', 'degrees')], [
+    Kernel('degree_filter', [params.GraphParam('g', True), params.GraphParam('gg', True), ('unsigned', 'k'), ('Shared<unsigned>&', 'degrees'), ('Shared<unsigned>&', 'vremoved')], [
       CDecl(('dim3', 'blocks', '')),
       CDecl(('dim3', 'threads', '')),
       CBlock('kernel_sizing(g, blocks, threads)'),
       CBlock('degrees.alloc(g.nnodes)'),
+      CBlock('degrees.zero_gpu()'),
+      CBlock('vremoved.alloc(g.nnodes)'),
+      CBlock('vremoved.zero_gpu()'),
       Pipe([
-        Invoke('init_degree', ['gg', 'degrees.gpu_wr_ptr()', 'k']),
+        Invoke('init_degree', ['gg', 'degrees.gpu_wr_ptr()', 'vremoved.gpu_wr_ptr()', 'k']),
         Pipe([
-          Invoke('degree_filter_iter', ['gg', 'degrees.gpu_wr_ptr()', 'k']),
+          Invoke('degree_filter_iter', ['gg', 'degrees.gpu_wr_ptr()', 'vremoved.gpu_wr_ptr()', 'k']),
         ]),
       ], wlinit=WLInit('g.nnodes'), once=True),
-      Invoke('degree_filter_finalize', ['gg', 'degrees.gpu_wr_ptr()']),
+      Invoke('degree_filter_finalize', ['gg', 'degrees.gpu_wr_ptr()', 'vremoved.gpu_wr_ptr()']),
 
       CBlock('#ifdef DEBUG'),
         CBlock('printf("ver: ")'),
@@ -105,7 +110,7 @@ ast = Module([
         ]),
         CBlock('return count'),
     ], device=True, ret_type = 'unsigned int'),
-    Kernel('init_triangles', [graph.param(), ('unsigned*', 'triangles'), ('unsigned*', 'removed'), ('unsigned*', 'degrees'), ('unsigned', 'k')], [
+    Kernel('init_triangles', [graph.param(), ('unsigned*', 'triangles'), ('unsigned*', 'eremoved'), ('unsigned*', 'degrees'), ('unsigned', 'k')], [
       If('0', [
         WL.push(0), # needed to get the worklist here
       ]),
@@ -119,14 +124,14 @@ ast = Module([
                 CDecl(('int', 'lindex', '= atomicAdd((int *)out_wl.dindex, 2)')),
                 CBlock('out_wl.dwl[lindex] = edge'),
                 CBlock('out_wl.dwl[lindex+1] = v'),
-                CBlock('removed[edge] = 1'),
+                CBlock('eremoved[edge] = 1'),
               ]),
             ]),
           ])),
         ]),
       ]),
     ]),
-    Kernel("intersect_dec", [graph.param(), ('index_type', 'u'), ('index_type', 'v'), ('unsigned*', 'degrees'), ('unsigned *', 'triangles'), ('unsigned*', 'removed'), ('unsigned', 'k')], [
+    Kernel("intersect_dec", [graph.param(), ('index_type', 'u'), ('index_type', 'v'), ('unsigned*', 'degrees'), ('unsigned *', 'triangles'), ('unsigned*', 'eremoved'), ('unsigned', 'k')], [
         If('0', [ WL.push(0) ]), # needed to get the worklist here
         CDecl(('index_type', 'u_start', '= graph.getFirstEdge(u)')),
         CDecl(('index_type', 'u_end', '= graph.getFirstEdge(u+1)')),
@@ -141,22 +146,22 @@ ast = Module([
             CBlock('b = graph.getAbsDestination(v_it)'),
             CDecl(('int', 'd', '= a - b')),
             If('d == 0 && degrees[a] > 0', [
-              If('!removed[u_it]', [
+              If('!eremoved[u_it]', [
                 CBlock('atomicSub(&triangles[u_it], 1U)'),
                 If('triangles[u_it] < k-2', [
                   CDecl(('int', 'lindex', '= atomicAdd((int *)out_wl.dindex, 2)')),
                   CBlock('out_wl.dwl[lindex] = u_it'),
                   CBlock('out_wl.dwl[lindex+1] = u'),
-                  CBlock('removed[u_it] = 1'),
+                  CBlock('eremoved[u_it] = 1'),
                 ]),
               ]),
-              If('!removed[v_it]', [
+              If('!eremoved[v_it]', [
                 CBlock('atomicSub(&triangles[v_it], 1U)'),
                 If('triangles[v_it] < k-2', [
                   CDecl(('int', 'lindex', '= atomicAdd((int *)out_wl.dindex, 2)')),
                   CBlock('out_wl.dwl[lindex] = v_it'),
                   CBlock('out_wl.dwl[lindex+1] = v'),
-                  CBlock('removed[v_it] = 1'),
+                  CBlock('eremoved[v_it] = 1'),
                 ]),
               ]),
             ]),
@@ -164,7 +169,7 @@ ast = Module([
             If('d >= 0', [CBlock('v_it++')]),
         ]),
     ], device=True),
-    Kernel('triangle_iter', [graph.param(), ('unsigned*', 'triangles'), ('unsigned*', 'removed'), ('unsigned*', 'degrees'), ('unsigned', 'k')], [
+    Kernel('triangle_iter', [graph.param(), ('unsigned*', 'triangles'), ('unsigned*', 'eremoved'), ('unsigned*', 'degrees'), ('unsigned', 'k')], [
       If('0', [
         WL.push(0),
       ]),
@@ -178,15 +183,15 @@ ast = Module([
         CDecl(('bool', 'pop', '')),
         WL.pop('pop', 'wli', 'edge'),
         WL.pop('pop', 'wli+1', 'src'),
-        CBlock('intersect_dec(graph, src, graph.getAbsDestination(edge), degrees, triangles, removed, k, in_wl, out_wl)', parse=False),
+        CBlock('intersect_dec(graph, src, graph.getAbsDestination(edge), degrees, triangles, eremoved, k, in_wl, out_wl)', parse=False),
       ]),
     ]),
-    Kernel('edge_removal', [graph.param(), ('unsigned*', 'degrees'), ('unsigned*', 'removed')], [
+    Kernel('edge_removal', [graph.param(), ('unsigned*', 'degrees'), ('unsigned*', 'eremoved')], [
       ForAll("v", graph.nodes(), [
         If('degrees[v] > 0', [
           ClosureHint(ForAll("edge", graph.edges("v"), [
             CDecl(('index_type', 'u', '= graph.getAbsDestination(edge)')),
-            If('degrees[v] > 0 && removed[edge]', [
+            If('degrees[v] > 0 && eremoved[edge]', [
               CBlock('atomicSub(&degrees[v], 1)'),
             ]),
           ])),
@@ -200,14 +205,14 @@ ast = Module([
         ]),
       ]),
     ]),
-    Kernel('triangle_filter', [params.GraphParam('g', True), params.GraphParam('gg', True), ('unsigned', 'k'), ('Shared<unsigned>&', 'degrees'), ('Shared<unsigned>&', 'triangles'), ('Shared<unsigned>&', 'removed'), ('unsigned*', 'n_ktruss_nodes')], [
+    Kernel('triangle_filter', [params.GraphParam('g', True), params.GraphParam('gg', True), ('unsigned', 'k'), ('Shared<unsigned>&', 'degrees'), ('Shared<unsigned>&', 'triangles'), ('Shared<unsigned>&', 'eremoved'), ('unsigned*', 'n_ktruss_nodes')], [
       CDecl(('dim3', 'blocks', '')),
       CDecl(('dim3', 'threads', '')),
       CBlock('kernel_sizing(g, blocks, threads)'),
       CBlock('triangles.alloc(g.nedges)'),
       CBlock('triangles.zero_gpu()'),
-      CBlock('removed.alloc(g.nedges)'),
-      CBlock('removed.zero_gpu()'),
+      CBlock('eremoved.alloc(g.nedges)'),
+      CBlock('eremoved.zero_gpu()'),
       CDecl(('Shared<unsigned int>', 'valid_edges', '(g.nnodes)')),
       CBlock("valid_edges.zero_gpu()"),
       Invoke("preprocess", ['gg']),
@@ -232,7 +237,7 @@ ast = Module([
       CBlock('#endif'),
 
       Pipe([
-        Invoke('init_triangles', ['gg', 'triangles.gpu_wr_ptr()', 'removed.gpu_wr_ptr()', 'degrees.gpu_rd_ptr()', 'k']),
+        Invoke('init_triangles', ['gg', 'triangles.gpu_wr_ptr()', 'eremoved.gpu_wr_ptr()', 'degrees.gpu_rd_ptr()', 'k']),
 
         CBlock('#ifdef DEBUG'),
           WL.display_items(0),
@@ -243,13 +248,13 @@ ast = Module([
           CBlock('printf("\\n")'),
           CBlock('printf("rem: ")'),
           CFor(CDecl(('unsigned', 'i', '= 0')), 'i < g.nedges', 'i++', [
-            CBlock('printf("%u ", removed.cpu_rd_ptr()[i])'),
+            CBlock('printf("%u ", eremoved.cpu_rd_ptr()[i])'),
           ]),
           CBlock('printf("\\n")'),
         CBlock('#endif'),
 
         Pipe([
-          Invoke('triangle_iter', ['gg', 'triangles.gpu_wr_ptr()', 'removed.gpu_wr_ptr()', 'degrees.gpu_rd_ptr()', 'k']),
+          Invoke('triangle_iter', ['gg', 'triangles.gpu_wr_ptr()', 'eremoved.gpu_wr_ptr()', 'degrees.gpu_rd_ptr()', 'k']),
 
           CBlock('#ifdef DEBUG'),
             WL.display_items(0),
@@ -260,13 +265,13 @@ ast = Module([
             CBlock('printf("\\n")'),
             CBlock('printf("rem: ")'),
             CFor(CDecl(('unsigned', 'i', '= 0')), 'i < g.nedges', 'i++', [
-              CBlock('printf("%u ", removed.cpu_rd_ptr()[i])'),
+              CBlock('printf("%u ", eremoved.cpu_rd_ptr()[i])'),
             ]),
             CBlock('printf("\\n")'),
           CBlock('#endif'),
         ]),
       ], wlinit=WLInit('g.nedges'), once=True),
-      Invoke('edge_removal', ['gg', 'degrees.gpu_wr_ptr()', 'removed.gpu_rd_ptr()']),
+      Invoke('edge_removal', ['gg', 'degrees.gpu_wr_ptr()', 'eremoved.gpu_rd_ptr()']),
 
       CBlock('#ifdef DEBUG'),
         CBlock('printf("ver: ")'),
@@ -291,9 +296,9 @@ ast = Module([
       CDecl(('Shared<unsigned>', 'degrees', '')),
       CBlock('degree_filter(g, gg, k, degrees)'),
       CDecl(('Shared<unsigned>', 'triangles', '')),
-      CDecl(('Shared<unsigned>', 'removed', '')),
+      CDecl(('Shared<unsigned>', 'eremoved', '')),
       CDecl(('unsigned', 'n_ktruss_nodes', '')),
-      CBlock('triangle_filter(g, gg, k, degrees, triangles, removed, &n_ktruss_nodes)'),
+      CBlock('triangle_filter(g, gg, k, degrees, triangles, eremoved, &n_ktruss_nodes)'),
       CBlock('printf("# ktruss nodes: %u\\n", n_ktruss_nodes)'),
     ]),
 ])

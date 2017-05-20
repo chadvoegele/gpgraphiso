@@ -48,7 +48,8 @@ class KTrussTests(pyirgltest.test.IrGLTest):
             Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True)], [
                 CBlock(['mgc = mgpu::CreateCudaDevice(CUDA_DEVICE)'], parse=False),
                 CDecl(('Shared<unsigned>', 'degrees', '')),
-                CBlock('degree_filter(g, gg, %d, degrees)' % k),
+                CDecl(('Shared<unsigned>', 'dremoved', '')),
+                CBlock('degree_filter(g, gg, %d, degrees, dremoved)' % k),
                 CDecl(('std::vector<int>', 'degrees_vec', '')),
                 CDecl(('unsigned*', 'degrees_ptr', '= degrees.cpu_rd_ptr()')),
                 CBlock(['degrees_vec.assign(degrees_ptr, degrees_ptr + g.nnodes)']),
@@ -77,7 +78,8 @@ class KTrussTests(pyirgltest.test.IrGLTest):
             Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True)], [
                 CBlock(['mgc = mgpu::CreateCudaDevice(CUDA_DEVICE)'], parse=False),
                 CDecl(('Shared<unsigned>', 'degrees', '')),
-                CBlock('degree_filter(g, gg, %d, degrees)' % k),
+                CDecl(('Shared<unsigned>', 'dremoved', '')),
+                CBlock('degree_filter(g, gg, %d, degrees, dremoved)' % k),
                 CDecl(('Shared<unsigned>', 'triangles', '')),
                 CDecl(('Shared<unsigned>', 'removed', '')),
                 CDecl(('unsigned', 'n_ktruss_nodes', '')),
@@ -104,13 +106,14 @@ class KTrussTests(pyirgltest.test.IrGLTest):
     @unittest.skipIf(skip_tests, 'triangle_filtering_test0')
     def test_triangle_edges0(self):
         graph_input = '{ {0, 1}, {0, 3}, {0, 4}, {1, 2}, {1, 3}, {1, 5}, {2, 3}, {2, 4}, {3, 5}, {4, 5}, {4, 6}, {4, 7}, {5, 6}, {5, 7}, {6, 7}, {6, 8}, {7, 8}, {8, 9} }'
-        #             idx: 0  1  2 3  4  5 6 7  8  9 10 11121314151617181920212223242526272829303132333435
-        #             src: 0  0  0 1  1  1 1 2  2  2 3  3 3 3 4 4 4 4 4 5 5 5 5 5 6 6 6 6 7 7 7 7 8 8 8 9
-        #             dst: 1  3  4 3  5  0 2 1  3  4 5  0 1 2 5 0 2 6 7 1 3 4 6 7 4 5 7 8 4 5 6 8 6 7 9 8
+        #             idx: 0 1 2 3 4 5 6 7 8 9 1011121314151617181920212223242526272829303132333435
+        #             src: 0 0 0 1 1 1 1 2 2 2 3 3 3 3 4 4 4 4 4 5 5 5 5 5 6 6 6 6 7 7 7 7 8 8 8 9
+        #             dst: 1 3 4 3 5 0 2 1 3 4 5 0 1 2 5 0 2 6 7 1 3 4 6 7 4 5 7 8 4 5 6 8 6 7 9 8
         expected_tri = ' { 1,1,0,1,1,0,1,1,1,0,1,0,1,1,0,0,2,2,2,1,1,2,2,2,2,2,2,0,2,2,2,0,0,0,0,0  } '
         #                     0 1 2 3 4 5 6 7 8 9
         expected_degrees = '{ 0,0,0,0,3,3,3,3,0,0 }'
-        self.triangle_filter_runner(graph_input, 4, expected_tri, expected_degrees, 4)
+        expected_n_ktruss_nodes = 4
+        self.triangle_filter_runner(graph_input, 4, expected_tri, expected_degrees, expected_n_ktruss_nodes)
 
 if __name__ == '__main__':
     unittest.main()
