@@ -120,6 +120,10 @@ ast = Module([
     ]),
     Kernel('edge_removal', [graph.param(), ('unsigned*', 'outdegrees'), ('unsigned*', 'indegrees'), ('unsigned*', 'eremoved'), ('unsigned*', 'vremoved')], [
       ForAll('src', graph.nodes(), [
+        # Remove isolate vertices
+        If('outdegrees[src] == 0 && indegrees[src] == 0', [
+          CBlock('vremoved[src] = 1'),
+        ]),
         ClosureHint(ForAll('edge', graph.edges('src'), [
           CDecl(('index_type', 'dst', '= graph.getAbsDestination(edge)')),
           If('eremoved[edge]', [
@@ -168,11 +172,11 @@ ast = Module([
 
       CDecl(('Shared<unsigned>', 'removed_edge', '(1)')),
       CBlock('*removed_edge.cpu_wr_ptr() = 1'),
-      #While('*removed_edge.cpu_wr_ptr()', [
+      While('*removed_edge.cpu_wr_ptr()', [
         CBlock('*removed_edge.cpu_wr_ptr() = 0'),
         Invoke('init_triangles', ['gg', 'triangles.gpu_wr_ptr()', 'eremoved.gpu_wr_ptr()', 'vremoved.gpu_rd_ptr()', 'k']),
         Invoke('mark_triangles', ['gg', 'triangles.gpu_wr_ptr()', 'eremoved.gpu_wr_ptr()', 'k', 'removed_edge.gpu_wr_ptr()']),
-      #]),
+      ]),
       Invoke('edge_removal', ['gg', 'outdegrees.gpu_wr_ptr()', 'indegrees.gpu_wr_ptr()', 'eremoved.gpu_rd_ptr()', 'vremoved.gpu_rd_ptr()']),
 
       CBlock('#ifdef DEBUG'),
@@ -196,8 +200,18 @@ ast = Module([
       CDecl(('unsigned', 'n_nodes_removed', '= 0')),
       CBlock('mgpu::Reduce(vremoved.gpu_rd_ptr(), g.nnodes, 0U, mgpu::plus<unsigned>(), (unsigned*)0, &n_nodes_removed, *mgc);', parse=False),
       CBlock('*n_ktruss_nodes = g.nnodes - n_nodes_removed'),
+
+      CDecl(('unsigned', 'n_edges_removed', '= 0')),
+      CBlock('mgpu::Reduce(eremoved.gpu_rd_ptr(), g.nedges, 0U, mgpu::plus<unsigned>(), (unsigned*)0, &n_edges_removed, *mgc);', parse=False),
+      CDecl(('unsigned', 'n_ktruss_edges', '= g.nedges - n_edges_removed')),
+      CBlock('printf("# ktruss edges: %u\\n", n_ktruss_edges)'),
     ], host=True),
     Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), ('unsigned', 'k')], [
+      CBlock('#ifdef DEBUG'),
+        CBlock('printf("# nodes: %u\\n", g.nnodes)'),
+        CBlock('printf("# edges: %u\\n", g.nedges)'),
+      CBlock('#endif'),
+
       CBlock(['mgc = mgpu::CreateCudaDevice(CUDA_DEVICE)'], parse=False),
       CDecl(('Shared<unsigned>', 'outdegrees', '')),
       CDecl(('Shared<unsigned>', 'indegrees', '')),
