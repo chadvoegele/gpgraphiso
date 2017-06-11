@@ -139,7 +139,7 @@ ast = Module([
         ])),
       ]),
     ]),
-    Kernel('triangle_filter', [params.GraphParam('g', True), params.GraphParam('gg', True), ('unsigned', 'k'), ('Shared<unsigned>&', 'outdegrees'), ('Shared<unsigned>&', 'indegrees'), ('Shared<unsigned>&', 'triangles'), ('Shared<unsigned>&', 'eremoved'), ('Shared<unsigned>&', 'vremoved'), ('unsigned*', 'n_ktruss_nodes')], [
+    Kernel('triangle_filter', [params.GraphParam('g', True), params.GraphParam('gg', True), ('unsigned', 'k'), ('Shared<unsigned>&', 'outdegrees'), ('Shared<unsigned>&', 'indegrees'), ('Shared<unsigned>&', 'triangles'), ('Shared<unsigned>&', 'eremoved'), ('Shared<unsigned>&', 'vremoved'), ('unsigned*', 'n_ktruss_nodes'), ('unsigned*', 'n_ktruss_edges')], [
       CDecl(('dim3', 'blocks', '')),
       CDecl(('dim3', 'threads', '')),
       CBlock('kernel_sizing(g, blocks, threads)'),
@@ -203,8 +203,7 @@ ast = Module([
 
       CDecl(('unsigned', 'n_edges_removed', '= 0')),
       CBlock('mgpu::Reduce(eremoved.gpu_rd_ptr(), g.nedges, 0U, mgpu::plus<unsigned>(), (unsigned*)0, &n_edges_removed, *mgc);', parse=False),
-      CDecl(('unsigned', 'n_ktruss_edges', '= g.nedges - n_edges_removed')),
-      CBlock('printf("# ktruss edges: %u\\n", n_ktruss_edges)'),
+      CBlock('*n_ktruss_edges = g.nedges - n_edges_removed'),
     ], host=True),
     Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), ('unsigned', 'k')], [
       CBlock('#ifdef DEBUG'),
@@ -220,7 +219,9 @@ ast = Module([
       CDecl(('Shared<unsigned>', 'triangles', '')),
       CDecl(('Shared<unsigned>', 'eremoved', '')),
       CDecl(('unsigned', 'n_ktruss_nodes', '')),
-      CBlock('triangle_filter(g, gg, k, outdegrees, indegrees, triangles, eremoved, vremoved, &n_ktruss_nodes)'),
+      CDecl(('unsigned', 'n_ktruss_edges', '')),
+      CBlock('triangle_filter(g, gg, k, outdegrees, indegrees, triangles, eremoved, vremoved, &n_ktruss_nodes, &n_ktruss_edges)'),
       CBlock('printf("# ktruss nodes: %u\\n", n_ktruss_nodes)'),
+      CBlock('printf("# ktruss edges: %u\\n", n_ktruss_edges)'),
     ]),
 ])
