@@ -14,3 +14,4 @@
 /ggc/gen-*/*
 /ggc/pm-gen-*/*
 *.log
+SITE-IS.*

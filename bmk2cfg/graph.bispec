@@ -1,0 +1,4 @@
+#v1
+triangles rmat16.sym.tri
+ktruss abc
+

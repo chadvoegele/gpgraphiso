@@ -1,0 +1,85 @@
+[bmktest2-props]
+version = 2
+
+[complete5_sm]
+name = complete5_sm
+
+[complete5_sm.sym]
+name = complete5_sm.sym
+
+[tri_sm]
+name = tri_sm
+
+[tri_sm.sym]
+name = tri_sm.sym
+
+[disjoint_tri_sm]
+name = disjoint_tri_sm
+
+[disjoint_tri_sm.sym]
+name = disjoint_tri_sm.sym
+
+[ktruss_example]
+name = ktruss_example
+
+[ktruss_example.sym]
+name = ktruss_example.sym
+
+[A_adj]
+name = A_adj
+
+[A_inc]
+name = A_inc
+
+[rmat16.sym.tri]
+name = rmat16.sym.tri
+triangles=234373
+
+[rmat20]
+name = rmat20
+
+[rmat12.sym.tri]
+name = rmat12.sym.tri
+
+[rmat16]
+name = rmat16
+
+[rmat15.sym]
+name = rmat15.sym
+
+[rmat22]
+name = rmat22
+
+[rmat22.sym]
+name = rmat22.sym
+
+[rmat10]
+name = rmat10
+
+[rmat12]
+name = rmat12
+
+[rmat10.sym.tri]
+name = rmat10.sym.tri
+
+[rmat20.sym]
+name = rmat20.sym
+
+[rmat10.sym]
+name = rmat10.sym
+
+[rmat22.sym.tri]
+name = rmat22.sym.tri
+
+[rmat12.sym]
+name = rmat12.sym
+
+[rmat16.sym]
+name = rmat16.sym
+
+[x]
+name = x
+
+[rmat20.sym.tri]
+name = rmat20.sym.tri
+

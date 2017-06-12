@@ -1,0 +1,250 @@
+[bmktest2]
+basepath = ~/pd/hpec/inputs
+version = 2
+
+[ref/A_adj.mmio]
+flags = 
+name = A_adj
+file = ref/A_adj.mmio
+format = text/mmarket
+
+[ref/A_adj.tsv]
+flags = 
+name = A_adj
+file = ref/A_adj.tsv
+format = text/tsv
+
+[ref/A_inc.mmio]
+flags = 
+name = A_inc
+file = ref/A_inc.mmio
+format = text/mmarket
+
+[ref/A_inc.tsv]
+flags = 
+name = A_inc
+file = ref/A_inc.tsv
+format = text/tsv
+
+[ref/complete5_sm.tsv]
+flags = 
+name = complete5_sm
+file = ref/complete5_sm.tsv
+format = text/tsv
+
+[ref/ktruss_example.tsv]
+flags = 
+name = ktruss_example
+file = ref/ktruss_example.tsv
+format = text/tsv
+
+[small/complete5_sm.dimacs]
+flags = 
+name = complete5_sm
+file = small/complete5_sm.dimacs
+format = text/dimacs
+
+[small/complete5_sm.mtx]
+flags = 
+name = complete5_sm
+file = small/complete5_sm.mtx
+format = text/mmarket
+
+[small/complete5_sm.sym.mtx]
+flags = symmetric
+name = complete5_sm.sym
+file = small/complete5_sm.sym.mtx
+format = text/mmarket
+
+[small/tri_sm.dimacs]
+flags = 
+name = tri_sm
+file = small/tri_sm.dimacs
+format = text/dimacs
+
+[small/tri_sm.mtx]
+flags = 
+name = tri_sm
+file = small/tri_sm.mtx
+format = text/mmarket
+
+[small/tri_sm.sym.mtx]
+flags = symmetric
+name = tri_sm.sym
+file = small/tri_sm.sym.mtx
+format = text/mmarket
+
+[small/complete5_sm.sym.dimacs]
+flags = symmetric
+name = complete5_sm.sym
+file = small/complete5_sm.sym.dimacs
+format = text/dimacs
+
+[small/disjoint_tri_sm.dimacs]
+flags = 
+name = disjoint_tri_sm
+file = small/disjoint_tri_sm.dimacs
+format = text/dimacs
+
+[small/disjoint_tri_sm.sym.dimacs]
+flags = symmetric
+name = disjoint_tri_sm.sym
+file = small/disjoint_tri_sm.sym.dimacs
+format = text/dimacs
+
+[small/ktruss_example.dimacs]
+flags = 
+name = ktruss_example
+file = small/ktruss_example.dimacs
+format = text/dimacs
+
+[small/ktruss_example.sym.dimacs]
+flags = symmetric
+name = ktruss_example.sym
+file = small/ktruss_example.sym.dimacs
+format = text/dimacs
+
+[small/tri_sm.sym.dimacs]
+flags = symmetric
+name = tri_sm.sym
+file = small/tri_sm.sym.dimacs
+format = text/dimacs
+
+[rmat/rmat16.sym.tri.gr]
+flags = symmetric,triangle
+name = rmat16.sym.tri
+file = rmat/rmat16.sym.tri.gr
+format = bin/galois
+
+[rmat/rmat20.gr]
+flags = 
+name = rmat20
+file = rmat/rmat20.gr
+format = bin/galois
+
+[rmat/rmat12.sym.tri.gr]
+flags = symmetric,triangle
+name = rmat12.sym.tri
+file = rmat/rmat12.sym.tri.gr
+format = bin/galois
+
+[rmat/rmat16.gr]
+flags = 
+name = rmat16
+file = rmat/rmat16.gr
+format = bin/galois
+
+[rmat/rmat15.sym.gr]
+flags = symmetric
+name = rmat15.sym
+file = rmat/rmat15.sym.gr
+format = bin/galois
+
+[rmat/rmat22.gr]
+flags = 
+name = rmat22
+file = rmat/rmat22.gr
+format = bin/galois
+
+[rmat/rmat22.sym.gr]
+flags = symmetric
+name = rmat22.sym
+file = rmat/rmat22.sym.gr
+format = bin/galois
+
+[rmat/rmat22.dimacs]
+flags = 
+name = rmat22
+file = rmat/rmat22.dimacs
+format = text/dimacs
+
+[rmat/rmat10.dimacs]
+flags = 
+name = rmat10
+file = rmat/rmat10.dimacs
+format = text/dimacs
+
+[rmat/rmat12.gr]
+flags = 
+name = rmat12
+file = rmat/rmat12.gr
+format = bin/galois
+
+[rmat/rmat10.sym.tri.gr]
+flags = symmetric,triangle
+name = rmat10.sym.tri
+file = rmat/rmat10.sym.tri.gr
+format = bin/galois
+
+[rmat/rmat20.sym.gr]
+flags = symmetric
+name = rmat20.sym
+file = rmat/rmat20.sym.gr
+format = bin/galois
+
+[rmat/rmat10.sym.gr]
+flags = symmetric
+name = rmat10.sym
+file = rmat/rmat10.sym.gr
+format = bin/galois
+
+[rmat/rmat10.totem]
+flags = 
+name = rmat10
+file = rmat/rmat10.totem
+format = bin/totem
+
+[rmat/rmat10.gr]
+flags = 
+name = rmat10
+file = rmat/rmat10.gr
+format = bin/galois
+
+[rmat/rmat22.mtx]
+flags = 
+name = rmat22
+file = rmat/rmat22.mtx
+format = text/mmarket
+
+[rmat/rmat22.sym.tri.gr]
+flags = symmetric,triangle
+name = rmat22.sym.tri
+file = rmat/rmat22.sym.tri.gr
+format = bin/galois
+
+[rmat/rmat12.sym.gr]
+flags = symmetric
+name = rmat12.sym
+file = rmat/rmat12.sym.gr
+format = bin/galois
+
+[rmat/rmat16.sym.gr]
+flags = symmetric
+name = rmat16.sym
+file = rmat/rmat16.sym.gr
+format = bin/galois
+
+[rmat/rmat10.sym.dimacs]
+flags = symmetric
+name = rmat10.sym
+file = rmat/rmat10.sym.dimacs
+format = text/dimacs
+
+[rmat/rmat10.sym.tri.bin]
+flags = symmetric,triangle
+name = rmat10.sym.tri
+file = rmat/rmat10.sym.tri.bin
+format = bin/custom
+
+[rmat/x.dimacs]
+flags = 
+name = x
+file = rmat/x.dimacs
+format = text/dimacs
+
+[rmat/rmat20.sym.tri.gr]
+flags = symmetric,triangle
+name = rmat20.sym.tri
+file = rmat/rmat20.sym.tri.gr
+format = bin/galois
+
