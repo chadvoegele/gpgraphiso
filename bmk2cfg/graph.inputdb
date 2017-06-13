@@ -248,3 +248,57 @@ name = rmat20.sym.tri
 file = rmat/rmat20.sym.tri.gr
 format = bin/galois
 
+[small/complete5_sm.gr]
+flags = 
+name = complete5_sm
+file = small/complete5_sm.gr
+format = bin/galois
+
+[small/complete5_sm.sym.gr]
+flags = symmetric
+name = complete5_sm.sym
+file = small/complete5_sm.sym.gr
+format = bin/galois
+
+[small/disjoint_tri_sm.sym.gr]
+flags = symmetric
+name = disjoint_tri_sm.sym
+file = small/disjoint_tri_sm.sym.gr
+format = bin/galois
+
+[small/ktruss_example.gr]
+flags = 
+name = ktruss_example
+file = small/ktruss_example.gr
+format = bin/galois
+
+[small/ktruss_example.sym.gr]
+flags = symmetric
+name = ktruss_example.sym
+file = small/ktruss_example.sym.gr
+format = bin/galois
+
+[small/tri_sm.gr]
+flags = 
+name = tri_sm
+file = small/tri_sm.gr
+format = bin/galois
+
+[small/tri_sm.sym.gr]
+flags = symmetric
+name = tri_sm.sym
+file = small/tri_sm.sym.gr
+format = bin/galois
+
+[ref/A_adj.sym.mmio]
+flags = symmetric
+name = A_adj.sym
+file = ref/A_adj.sym.mmio
+format = text/mmarket
+
+[ref/A_inc.sym.mmio]
+flags = symmetric
+name = A_inc.sym
+file = ref/A_inc.sym.mmio
+format = text/mmarket
+

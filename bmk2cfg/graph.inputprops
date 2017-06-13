@@ -6,24 +6,29 @@ name = complete5_sm
 
 [complete5_sm.sym]
 name = complete5_sm.sym
+triangles=10
 
 [tri_sm]
 name = tri_sm
 
 [tri_sm.sym]
 name = tri_sm.sym
+triangles=1
+
 
 [disjoint_tri_sm]
 name = disjoint_tri_sm
 
 [disjoint_tri_sm.sym]
 name = disjoint_tri_sm.sym
+triangles=2
 
 [ktruss_example]
 name = ktruss_example
 
 [ktruss_example.sym]
 name = ktruss_example.sym
+triangles=2
 
 [A_adj]
 name = A_adj
@@ -33,7 +38,7 @@ name = A_inc
 
 [rmat16.sym.tri]
 name = rmat16.sym.tri
-triangles=234373
+triangles = 234373
 
 [rmat20]
 name = rmat20
@@ -82,4 +87,12 @@ name = x
 
 [rmat20.sym.tri]
 name = rmat20.sym.tri
+
+[A_adj.sym]
+name = A_adj.sym
+inc_file = A_inc.sym.mmio
+triangles = 2
+
+[A_inc.sym]
+name = A_inc.sym
 
