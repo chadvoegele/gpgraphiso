@@ -6,7 +6,9 @@ import os
 def parse(f):
     # TODO: possibly pass in a standard set of imports?
     g = {}
-    x = exec(compile(open(f).read(), f, 'exec'), g)
+
+    c = compile(open(f).read(), f, 'exec')
+    exec c in g
     return g['ast']
 
 Import = parse

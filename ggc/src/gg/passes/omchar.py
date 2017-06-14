@@ -1,3 +1,4 @@
+from __future__ import print_function
 import gg.ast.walkers
 import gg.ast
 import gg.passes

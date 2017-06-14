@@ -1,3 +1,4 @@
+from __future__ import print_function
 import gg.parser
 import gg.unit
 import gg.backend.cuda

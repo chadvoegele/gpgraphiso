@@ -1,3 +1,4 @@
+from __future__ import print_function
 from gg.ast import Kernel
 from gg.parser import parse
 import gg.ast.walkers

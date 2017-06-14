@@ -1,3 +1,4 @@
+from __future__ import print_function
 import gg.passes
 from gg.ast import Module, Kernel
 import gg.cfg

@@ -1,3 +1,4 @@
+from __future__ import print_function
 from gg.dfa.dom import *
 import gg.cfg
 import gg.dfa.cdep

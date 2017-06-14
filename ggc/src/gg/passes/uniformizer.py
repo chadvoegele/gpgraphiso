@@ -1,3 +1,4 @@
+from __future__ import print_function
 import gg.ast.modifier, gg.ast.walkers
 from gg.ast.anno import Uniform
 import gg.ast
