@@ -13,6 +13,7 @@ int main(int argc, char** argv) {
   graph.init();
   graph.read((char*)input.c_str());
 
+  std::cout << "%%MatrixMarket matrix coordinate integer general" << std::endl;
   std::cout << graph.nnodes << " " << graph.nnodes << " " << graph.nedges << std::endl;
 
   for (int node = 0; node < graph.nnodes; node++) {

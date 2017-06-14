@@ -302,3 +302,9 @@ name = A_inc.sym
 file = ref/A_inc.sym.mmio
 format = text/mmarket
 
+[ref/A_inc.sym.tsv]
+flags = symmetric
+name = A_inc.sym
+file = ref/A_inc.sym.tsv
+format = text/tsv
+

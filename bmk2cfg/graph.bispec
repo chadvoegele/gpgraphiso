@@ -1,4 +1,4 @@
 #v1
 triangles rmat16.sym.tri,A_adj.sym,complete5_sm.sym,ktruss_example.sym,disjoint_tri_sm.sym,tri_sm.sym
-ktruss abc
+ktruss complete5_sm.sym,A_inc.sym,rmat16.sym.tri
 

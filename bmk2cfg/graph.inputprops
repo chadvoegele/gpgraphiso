@@ -6,29 +6,28 @@ name = complete5_sm
 
 [complete5_sm.sym]
 name = complete5_sm.sym
-triangles=10
+triangles = 10
 
 [tri_sm]
 name = tri_sm
 
 [tri_sm.sym]
 name = tri_sm.sym
-triangles=1
-
+triangles = 1
 
 [disjoint_tri_sm]
 name = disjoint_tri_sm
 
 [disjoint_tri_sm.sym]
 name = disjoint_tri_sm.sym
-triangles=2
+triangles = 2
 
 [ktruss_example]
 name = ktruss_example
 
 [ktruss_example.sym]
 name = ktruss_example.sym
-triangles=2
+triangles = 2
 
 [A_adj]
 name = A_adj
@@ -95,4 +94,7 @@ triangles = 2
 
 [A_inc.sym]
 name = A_inc.sym
+
+[complete5_sm.sym.2]
+name = complete5_sm.sym.2
 

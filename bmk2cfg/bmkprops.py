@@ -21,3 +21,24 @@ def makevar(cls, variant, perf_title, flag = None):
     x.variant_flag = ("-%s" % (variant,)) if flag is None else flag
     x.perf_title = perf_title
     return x
+
+def get_ktruss_checker(inputfile, trussNum, output='@output', oflag = bmk2.AT_TEMPORARY_INPUT, path = None):
+    import os
+    ec = bmk2.BasicRunSpec()
+
+    if path is not None:
+        p1 = os.path.join(path, "verifyKTruss")
+        if os.path.exists(p1):
+            ec.set_binary(p1, "verifyKTruss")
+        else:
+            ec.set_binary("", "verifyKTruss", in_path = True)
+
+    else:
+        ec.set_binary("", "verifyKTruss", in_path = True)
+
+    ec.set_arg(inputfile, bmk2.AT_INPUT_FILE)
+    ec.set_arg('-trussFile=@output', oflag)
+    ec.set_arg('-trussNum=%d' % (trussNum), bmk2.AT_OPAQUE)
+    #ec.set_arg(output, oflag)
+
+    return ec
