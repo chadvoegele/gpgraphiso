@@ -126,5 +126,25 @@ class KTrussTests(pyirgltest.test.IrGLTest):
         expected_n_ktruss_edges = 12
         self.triangle_filter_runner(graph_input, 4, expected_n_ktruss_nodes, expected_n_ktruss_edges)
 
+    def graph_generator(self, n):
+        graph_base = [ [ 1,2 ], [ 5,6 ], [ 2,6 ], [ 2,7 ], [ 6,7 ], [ 7,0 ], [ 7,11 ], [ 0,11 ], [ 7,8 ], [ 0,8 ], [ 8,11 ], [ 3,8 ], [ 8,9 ], [ 3,9 ], [ 3,4 ], [ 9,10 ] ]
+        graph_max = 11
+
+        graph = []
+        for i in range(0, n):
+            graph_component = [ list((v+i*graph_max for v in e)) for e in graph_base ]
+            graph.extend(graph_component)
+
+        graph_str = '{' + ','.join(('{' + ','.join((str(v) for v in e)) + '}' for e in graph)) + '}'
+        return graph_str
+
+    @unittest.skipIf(skip_tests, 'triangle_filtering_test1')
+    def test_triangle_edges1(self):
+        n = 256
+        graph_input = self.graph_generator(n)
+        expected_n_ktruss_nodes = 3*n+1
+        expected_n_ktruss_edges = 6*n*2
+        self.triangle_filter_runner(graph_input, 4, expected_n_ktruss_nodes, expected_n_ktruss_edges)
+
 if __name__ == '__main__':
     unittest.main()
