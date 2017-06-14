@@ -75,7 +75,7 @@ class UniformityChecker2(object):
 
         return {}
 
-    def _test(self):
+    def _test(self):        
         for c in self.unit.cb.cfgs:
             # must be nodes on which control dependent
 
@@ -371,7 +371,7 @@ class UniformityCheckerPass(gg.passes.Pass):
 
     def run(self, compiler, unit, gen, pm):
         x = Test(compiler, unit)
-        x._test()
+        #x._test()
         
         x = UniformityChecker2(compiler, unit)
         x.check_uniformity_2()
