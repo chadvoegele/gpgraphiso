@@ -23,7 +23,7 @@ ks=(
   4
 )
 PYTHONPATH="$GRAPHCHALLENGE_ROOT/grtools"
-refktruss="$GRAPHCHALLENGE_ROOT/SubgraphIsomorphism/ktruss/code/python/runKtrussFromGr.py"
+refktruss="$GRAPHCHALLENGE_ROOT/SubgraphIsomorphism/ktruss/code/julia/runKtrussFromGr.py"
 irgltrinode="$GPGRAPHISO_ROOT/ktruss/tri_node_count/test"
 irglktruss="$GPGRAPHISO_ROOT/ktruss/ktruss/test"
 
@@ -36,7 +36,7 @@ do
     then
       timeout 60m $irgltrinode -o - $gr 2> /dev/null | grep 'triangle_nodes'
     fi
-    PYTHONPATH=${PYTHONPATH} timeout 5m python2 $refktruss $gr $k 2>&1 | grep '# nodes in ktruss'
+    PYTHONPATH=${PYTHONPATH} timeout 60m python2 $refktruss $gr $k 2>&1 | grep '# nodes in ktruss'
     timeout 60m $irglktruss -k $k -o - $gr 2> /dev/null | grep '# ktruss nodes:'
   done
 done
