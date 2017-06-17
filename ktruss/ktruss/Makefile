@@ -35,4 +35,4 @@ test: skel.o kernel.o mgpucontext.o mgpuutil.o edgelist_graph.o
 	nvcc -g $(EXTRAFLAGS) -arch $(ARCH) $(CXXFLAGS) $(NVCCFLAGS) $(INCLUDES) -L$(LIBDIR)  -o $@ $^ $(LIBS) -lcudadevrt $(COMPRESS_LIBS)
 
 clean:
-	rm *.dot kernel.cu mgpucontext.o mgpuutil.o kernel.o test edgelist_graph.o skel.o
+	rm kernel.cu mgpucontext.o mgpuutil.o kernel.o test edgelist_graph.o skel.o
