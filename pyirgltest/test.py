@@ -92,14 +92,22 @@ def run_irgl(ast, use_dir=None):
 
       makeflags = os.getenv('MAKEFLAGS')
       make_cmd = ['make', '-C', working_dir] + ([makeflags] if makeflags else [])
-      make_out = subprocess.run(make_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+      if sys.version_info.major == 3:
+          make_out = subprocess.run(make_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+      else:
+          make_out = subprocess.Popen(make_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+          make_out.wait()
 
       if not os.path.exists(os.path.join(working_dir, 'test')):
           os.chdir(restore_cd)
           raise Exception('make failed with %s' % (make_out.stderr.decode()))
 
       test_cmd = [os.path.join(working_dir, 'test')]
-      test_out = subprocess.run(test_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+      if sys.version_info.major == 3:
+          test_out = subprocess.run(test_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+      else:
+          test_out = subprocess.Popen(test_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+          test_out.wait()
 
       if not test_out.returncode == 0:
           raise Exception('test failed with return code: %d. stdout: %s\nstderr: %s' % (test_out.returncode, test_out.stdout.decode(), test_out.stderr.decode()))
@@ -136,7 +144,10 @@ def run_irgl(ast, use_dir=None):
           shutil.rmtree(working_dir)
 
 def parse_irgl_output(out):
-    out_lines = out.decode().split('\n')
+    if sys.version_info.major == 3:
+        out_lines = out.decode().split('\n')
+    else:
+        out_lines = [ l.decode().rstrip() for l in out.readlines() ]
     failure = [o for o in out_lines if o.find('Failure') > 0]
     result = {}
     result['passed'] = len(failure) == 0

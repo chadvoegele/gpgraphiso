@@ -7,8 +7,8 @@ def parse(f):
     # TODO: possibly pass in a standard set of imports?
     g = {}
 
-    c = compile(open(f).read(), f, 'exec')
-    exec c in g
+    exec(compile(open(f).read(), f, 'exec'), g)
+
     return g['ast']
 
 Import = parse
