@@ -22,7 +22,7 @@ def makevar(cls, variant, perf_title, flag = None):
     x.perf_title = perf_title
     return x
 
-def get_ktruss_checker(inputfile, trussNum, output='@output', oflag = bmk2.AT_TEMPORARY_INPUT, path = None):
+def get_ktruss_checker(bmkinput, trussNum, output='@output', oflag = bmk2.AT_TEMPORARY_INPUT, path = None):
     import os
     ec = bmk2.BasicRunSpec()
 
@@ -36,9 +36,12 @@ def get_ktruss_checker(inputfile, trussNum, output='@output', oflag = bmk2.AT_TE
     else:
         ec.set_binary("", "verifyKTruss", in_path = True)
 
-    ec.set_arg(inputfile, bmk2.AT_INPUT_FILE)
+    ec.set_arg(bmkinput.props.file, bmk2.AT_INPUT_FILE)
     ec.set_arg('-trussFile=@output', oflag)
     ec.set_arg('-trussNum=%d' % (trussNum), bmk2.AT_OPAQUE)
+    ec.set_arg('-trussNodes=%s' % (getattr(bmkinput.props, 'ktruss_%d_nodes' % (trussNum,))))
+    ec.set_arg('-trussEdges=%s' % (getattr(bmkinput.props, 'ktruss_%d_edges' % (trussNum,))))
+
     #ec.set_arg(output, oflag)
 
     return ec
