@@ -16,8 +16,9 @@ class KtrussIrgl(graph_bmk):
         return filter(finput, inputs)
 
     def get_run_spec(self, bmkinput):
-        x = bmk2.RunSpec(self, bmkinput)
-        k = 3
+        x = bmk2.RunSpec(self, bmkinput)        
+
+        k = int(self.config['k'])
 
         x.set_binary(self.props._cwd, 'test')
         x.set_arg(bmkinput.props.file, bmk2.AT_INPUT_FILE)

@@ -11,6 +11,9 @@ class graph_bmk(bmk2.Binary):
     def get_id(self):
         return "%s/%s" % (self.bmk, self.variant)
 
+    def apply_config(self, config):
+        self.config = config
+
 class graph_bmk_props(bmk2.Properties):
     def __init__(self, bmk, variant):
         self.bmk = bmk
