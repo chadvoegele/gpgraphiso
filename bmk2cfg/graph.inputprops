@@ -8,7 +8,7 @@ name = complete5_sm
 name = complete5_sm.sym
 triangles = 10
 ktruss_3_nodes = 5
-ktruss_3_edges = 20
+ktruss_3_edges = 10
 
 [tri_sm]
 name = tri_sm
@@ -40,7 +40,7 @@ name = A_inc
 [rmat16.sym.tri]
 name = rmat16.sym.tri
 triangles = 234373
-ktruss_3_edges=341316
+ktruss_3_edges=170658
 ktruss_3_nodes=20529
 
 [rmat20]
