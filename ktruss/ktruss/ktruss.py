@@ -223,7 +223,9 @@ ast = Module([
       CBlock('mgpu::Reduce(eremoved.gpu_rd_ptr(), g.nedges, 0U, mgpu::plus<unsigned>(), (unsigned*)0, &n_edges_removed, *mgc);', parse=False),
       CBlock('*n_ktruss_edges = g.nedges - n_edges_removed'),
     ], host=True),
-    Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), ('unsigned', 'k')], [
+    Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), ('unsigned', 'k'), ('char*', 'outputkind'), ('FILE*', 'outf')], [
+      CDecl(('ggc::Timer', 'timer', '("gg_main")')),
+
       CBlock('#ifdef DEBUG'),
         CBlock('printf("# nodes: %u\\n", g.nnodes)'),
         CBlock('printf("# edges: %u\\n", g.nedges)'),
@@ -231,10 +233,10 @@ ast = Module([
 
       CBlock(['mgc = mgpu::CreateCudaDevice(CUDA_DEVICE)'], parse=False),
 
+      CBlock('timer.start()'),
       Invoke("preprocess", ['gg']),
       CBlock('gg.copy_to_cpu(g)'),
       CBlock("mgpu::SegSortPairsFromIndices(gg.edge_data, gg.edge_dst, gg.nedges, (const int *) gg.row_start + 1, gg.nnodes - 1, *mgc);", parse=False),
-
       CDecl(('Shared<unsigned>', 'outdegrees', '')),
       CDecl(('Shared<unsigned>', 'indegrees', '')),
       CDecl(('Shared<unsigned>', 'vremoved', '')),
@@ -248,7 +250,26 @@ ast = Module([
       CDecl(('unsigned', 'n_ktruss_nodes', '')),
       CDecl(('unsigned', 'n_ktruss_edges', '')),
       CBlock('triangle_filter(g, gg, k, outdegrees, indegrees, triangles, eremoved, vremoved, &n_ktruss_nodes, &n_ktruss_edges)'),
-      CBlock('printf("# ktruss nodes: %u\\n", n_ktruss_nodes)'),
-      CBlock('printf("# ktruss edges: %u\\n", n_ktruss_edges)'),
+      CBlock('timer.stop()'),
+      CBlock('timer.print()'),
+      CBlock('fprintf(stderr, "Total time: %llu ms\\n", timer.duration_ms())'),
+      CBlock('fprintf(stderr, "Total time: %llu ns\\n", timer.duration())'),
+
+      If('strstr(outputkind, "counts")', [
+        CBlock('fprintf(outf, "# ktruss nodes: %u\\n", n_ktruss_nodes)'),
+        CBlock('fprintf(outf, "# ktruss edges: %u\\n", n_ktruss_edges)'),
+      ]),
+
+      If('strstr(outputkind, "edges")', [
+        CBlock('gg.copy_to_cpu(g)'),
+        CDecl(('unsigned*', 'eremoved_cp', '= eremoved.cpu_rd_ptr()')),
+        CFor(CDecl(('unsigned', 'n', '= 0')), 'n < g.nnodes', 'n++', [
+          CFor(CDecl(('unsigned', 'e', '= g.row_start[n]')), 'e < g.row_start[n+1]', 'e++', [
+            If('!eremoved_cp[e] && n < g.edge_dst[e]', [
+              CBlock('fprintf(outf, "(%d, %d)\\n", n, g.edge_dst[e])'),
+            ]),
+          ]),
+        ]),
+      ]),
     ]),
 ])

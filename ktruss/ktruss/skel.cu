@@ -10,16 +10,15 @@
 #include "Timer.h"
 #include "edgelist_graph.h"
 
-extern void gg_main(CSRGraphTy &, CSRGraphTy &, unsigned);
-extern void output(CSRGraphTy &, const char *output_file);
-extern const char *GGC_OPTIONS;
+extern void gg_main(CSRGraphTy &, CSRGraphTy &, unsigned, char*, FILE*);
 
+FILE* OUTF = 0;
 int QUIET = 0;
 char *INPUT, *OUTPUT;
+const char* OUTPUTKIND_DEFAULT = "counts|edges";
+char* OUTPUTKIND = (char*)OUTPUTKIND_DEFAULT;
 unsigned ktruss_k = 3;
-extern unsigned long DISCOUNT_TIME_NS;
 
-unsigned long DISCOUNT_TIME_NS = 0;
 int SKELAPP_RETVAL = 0;
 
 extern int CUDA_DEVICE;
@@ -60,42 +59,29 @@ CSRGraphTy load_graph(char* graph) {
 }
 
 int load_graph_and_run_kernel(char *graph_file) {
-  ggc::Timer k("gg_main");
-  fprintf(stderr, "OPTIONS: %s\n", GGC_OPTIONS);
-
   CSRGraphTy g = load_graph(graph_file);
   CSRGraphTy gg;
-  g.copy_to_gpu(gg);
 
   int *d;
   check_cuda(cudaMalloc(&d, sizeof(int) * 1));
 
-  k.start();
-  gg_main(g, gg, ktruss_k);
+  g.copy_to_gpu(gg);
+  gg_main(g, gg, ktruss_k, OUTPUTKIND, OUTF);
   check_cuda(cudaDeviceSynchronize());
-  k.stop();
-  k.print();
-  fprintf(stderr, "Total time: %llu ms\n", k.duration_ms());
-  fprintf(stderr, "Total time: %llu ns\n", k.duration());
-
-  if(DISCOUNT_TIME_NS > 0) {
-    fprintf(stderr, "Total time (discounted): %llu ns\n", k.duration() - DISCOUNT_TIME_NS);
-  }
-
-  gg.copy_to_cpu(g);
 
   return SKELAPP_RETVAL;
 }
 
 void usage(int argc, char *argv[])
 {
-  fprintf(stderr, "usage: %s [-q] [-g gpunum] [-o output-file] [-k #] input_graph.gr\n", argv[0]);
+  fprintf(stderr, "usage: %s [-q] [-g gpunum] [-o output-file] [-k #] [-p output-kind] input_graph.gr\n", argv[0]);
+  fprintf(stderr, "       output-kind=\"edges|counts\"\n", argv[0]);
 }
 
 void parse_args(int argc, char *argv[])
 {
   int c;
-  const char *opts = "g:qo:k:";
+  const char *opts = "g:qo:k:p:";
 
   while((c = getopt(argc, argv, opts)) != -1) {
     switch(c)
@@ -105,6 +91,13 @@ void parse_args(int argc, char *argv[])
 	break;
       case 'o':
 	OUTPUT = optarg; //TODO: copy?
+  if (!OUTF) {
+    if (strcmp(OUTPUT, "-") == 0) {
+      OUTF = stdout;
+    } else {
+      OUTF = fopen(OUTPUT, "w");
+    }
+  }
 	break;
       case 'k':
 	ktruss_k = atoi(optarg); //TODO: copy?
@@ -117,6 +110,9 @@ void parse_args(int argc, char *argv[])
 	  fprintf(stderr, "Invalid GPU device '%s'. An integer must be specified.\n", optarg);
 	  exit(EXIT_FAILURE);
 	}
+	break;
+      case 'p':
+	OUTPUTKIND = optarg;
 	break;
       case '?':
 	usage(argc, argv);
