@@ -29,6 +29,9 @@ class KtrussIrgl(graph_bmk):
         x.set_arg('-k', bmk2.AT_OPAQUE)
         x.set_arg(str(k), bmk2.AT_OPAQUE)
 
+        x.set_arg("-p", bmk2.AT_OPAQUE)
+        x.set_arg('edges', bmk2.AT_OPAQUE)
+
         x.set_arg("-o", bmk2.AT_OPAQUE)
         x.set_arg('@output', bmk2.AT_TEMPORARY_OUTPUT)
 

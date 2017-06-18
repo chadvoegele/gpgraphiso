@@ -266,7 +266,7 @@ ast = Module([
         CFor(CDecl(('unsigned', 'n', '= 0')), 'n < g.nnodes', 'n++', [
           CFor(CDecl(('unsigned', 'e', '= g.row_start[n]')), 'e < g.row_start[n+1]', 'e++', [
             If('!eremoved_cp[e] && n < g.edge_dst[e]', [
-              CBlock('fprintf(outf, "(%d, %d)\\n", n, g.edge_dst[e])'),
+              CBlock('fprintf(outf, "%d %d\\n", n, g.edge_dst[e])'),
             ]),
           ]),
         ]),
