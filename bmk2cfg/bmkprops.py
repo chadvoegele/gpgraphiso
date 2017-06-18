@@ -39,6 +39,11 @@ def get_ktruss_checker(bmkinput, trussNum, output='@output', oflag = bmk2.AT_TEM
     else:
         ec.set_binary("", "verifyKTruss", in_path = True)
 
+    if trussNum == 'max':
+        trussNum = int(bmkinput.props.ktruss_max)
+    else:
+        trussNum = int(trussNum)
+        
     ec.set_arg(bmkinput.props.file, bmk2.AT_INPUT_FILE)
     ec.set_arg('-trussFile=@output', oflag)
     ec.set_arg('-trussNum=%d' % (trussNum), bmk2.AT_OPAQUE)
@@ -47,4 +52,4 @@ def get_ktruss_checker(bmkinput, trussNum, output='@output', oflag = bmk2.AT_TEM
 
     #ec.set_arg(output, oflag)
 
-    return ec
+    return trussNum, ec

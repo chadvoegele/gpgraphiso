@@ -9,6 +9,7 @@ name = complete5_sm.sym
 triangles = 10
 ktruss_3_nodes = 5
 ktruss_3_edges = 10
+ktruss_max=3
 
 [tri_sm]
 name = tri_sm
@@ -40,8 +41,10 @@ name = A_inc
 [rmat16.sym.tri]
 name = rmat16.sym.tri
 triangles = 234373
-ktruss_3_edges=170658
-ktruss_3_nodes=20529
+ktruss_3_edges = 170658
+ktruss_3_nodes = 20529
+# actually unknown
+ktruss_max = 3 
 
 [rmat20]
 name = rmat20
@@ -101,4 +104,2911 @@ name = A_inc.sym
 
 [complete5_sm.sym.2]
 name = complete5_sm.sym.2
+
+[com-lj]
+name = com-lj
+
+[com-lj.sym]
+name = com-lj.sym
+
+[com-lj.wgt]
+name = com-lj.wgt
+
+[com-lj.wgt.sym]
+name = com-lj.wgt.sym
+
+[com-lj.wgt32]
+name = com-lj.wgt32
+
+[com-lj.wgt32.sym]
+name = com-lj.wgt32.sym
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_100_nodes=6605
+ktruss_100_edges=864894
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_101_nodes=6475
+ktruss_101_edges=855668
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_102_nodes=6335
+ktruss_102_edges=845091
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_103_nodes=6292
+ktruss_103_edges=839367
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_104_nodes=6145
+ktruss_104_edges=827717
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_105_nodes=5901
+ktruss_105_edges=812384
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_106_nodes=5879
+ktruss_106_edges=808816
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_107_nodes=5843
+ktruss_107_edges=803639
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_108_nodes=5820
+ktruss_108_edges=800399
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_109_nodes=5782
+ktruss_109_edges=794576
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_10_nodes=365244
+ktruss_10_edges=7107609
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_110_nodes=5759
+ktruss_110_edges=790942
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_111_nodes=5741
+ktruss_111_edges=787838
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_112_nodes=5704
+ktruss_112_edges=782534
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_113_nodes=5543
+ktruss_113_edges=769760
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_114_nodes=5509
+ktruss_114_edges=764970
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_115_nodes=5485
+ktruss_115_edges=760867
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_116_nodes=5450
+ktruss_116_edges=755215
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_117_nodes=5264
+ktruss_117_edges=739345
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_118_nodes=5149
+ktruss_118_edges=726675
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_119_nodes=4971
+ktruss_119_edges=710893
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_11_nodes=280072
+ktruss_11_edges=6035251
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_120_nodes=4928
+ktruss_120_edges=703697
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_121_nodes=4845
+ktruss_121_edges=690310
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_122_nodes=4584
+ktruss_122_edges=664170
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_123_nodes=4448
+ktruss_123_edges=654720
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_124_nodes=4442
+ktruss_124_edges=653471
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_125_nodes=4420
+ktruss_125_edges=649712
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_126_nodes=4352
+ktruss_126_edges=639353
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_127_nodes=4091
+ktruss_127_edges=619783
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_128_nodes=4005
+ktruss_128_edges=608655
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_129_nodes=3998
+ktruss_129_edges=607527
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_12_nodes=219434
+ktruss_12_edges=5204723
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_130_nodes=3989
+ktruss_130_edges=605911
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_131_nodes=3987
+ktruss_131_edges=605442
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_132_nodes=3982
+ktruss_132_edges=604554
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_133_nodes=3976
+ktruss_133_edges=603285
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_134_nodes=3967
+ktruss_134_edges=601603
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_135_nodes=3952
+ktruss_135_edges=599190
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_136_nodes=3943
+ktruss_136_edges=597432
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_137_nodes=3793
+ktruss_137_edges=586018
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_138_nodes=3787
+ktruss_138_edges=584864
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_139_nodes=3774
+ktruss_139_edges=582075
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_13_nodes=175283
+ktruss_13_edges=4554718
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_140_nodes=3760
+ktruss_140_edges=579614
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_141_nodes=3741
+ktruss_141_edges=575975
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_142_nodes=3578
+ktruss_142_edges=562469
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_143_nodes=3572
+ktruss_143_edges=560913
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_144_nodes=3550
+ktruss_144_edges=556836
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_145_nodes=3535
+ktruss_145_edges=554248
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_146_nodes=3524
+ktruss_146_edges=551950
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_147_nodes=3501
+ktruss_147_edges=546078
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_148_nodes=3496
+ktruss_148_edges=545060
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_149_nodes=3491
+ktruss_149_edges=543859
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_14_nodes=143237
+ktruss_14_edges=4043925
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_150_nodes=3486
+ktruss_150_edges=542683
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_151_nodes=3447
+ktruss_151_edges=534739
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_152_nodes=3433
+ktruss_152_edges=531996
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_153_nodes=3417
+ktruss_153_edges=528337
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_154_nodes=3412
+ktruss_154_edges=526896
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_155_nodes=3409
+ktruss_155_edges=526165
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_156_nodes=3405
+ktruss_156_edges=525287
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_157_nodes=3385
+ktruss_157_edges=521242
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_158_nodes=3377
+ktruss_158_edges=519400
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_159_nodes=3363
+ktruss_159_edges=516124
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_15_nodes=118263
+ktruss_15_edges=3629156
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_160_nodes=3358
+ktruss_160_edges=514466
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_161_nodes=3349
+ktruss_161_edges=512548
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_162_nodes=3343
+ktruss_162_edges=511246
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_163_nodes=3155
+ktruss_163_edges=481540
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_164_nodes=2959
+ktruss_164_edges=462544
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_165_nodes=2930
+ktruss_165_edges=457390
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_166_nodes=2925
+ktruss_166_edges=456164
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_167_nodes=2919
+ktruss_167_edges=454881
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_168_nodes=2914
+ktruss_168_edges=453720
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_169_nodes=2906
+ktruss_169_edges=451998
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_16_nodes=100826
+ktruss_16_edges=3312354
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_170_nodes=2888
+ktruss_170_edges=448511
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_171_nodes=2875
+ktruss_171_edges=445877
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_172_nodes=2867
+ktruss_172_edges=444007
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_173_nodes=2849
+ktruss_173_edges=440410
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_174_nodes=2838
+ktruss_174_edges=438102
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_175_nodes=2645
+ktruss_175_edges=419315
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_176_nodes=2450
+ktruss_176_edges=400235
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_177_nodes=2444
+ktruss_177_edges=398833
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_178_nodes=2414
+ktruss_178_edges=392706
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_179_nodes=2406
+ktruss_179_edges=390954
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_17_nodes=87451
+ktruss_17_edges=3052042
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_180_nodes=2213
+ktruss_180_edges=372027
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_181_nodes=2024
+ktruss_181_edges=353708
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_182_nodes=2016
+ktruss_182_edges=351870
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_183_nodes=2000
+ktruss_183_edges=348433
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_184_nodes=1995
+ktruss_184_edges=347096
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_185_nodes=1988
+ktruss_185_edges=345543
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_186_nodes=1980
+ktruss_186_edges=343618
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_187_nodes=1974
+ktruss_187_edges=342197
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_188_nodes=1968
+ktruss_188_edges=340740
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_189_nodes=1962
+ktruss_189_edges=339250
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_18_nodes=76250
+ktruss_18_edges=2826801
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_190_nodes=1956
+ktruss_190_edges=337828
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_191_nodes=1943
+ktruss_191_edges=334760
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_192_nodes=1930
+ktruss_192_edges=331764
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_193_nodes=1925
+ktruss_193_edges=330496
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_194_nodes=1920
+ktruss_194_edges=329297
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_195_nodes=1909
+ktruss_195_edges=326629
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_196_nodes=1879
+ktruss_196_edges=319585
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_197_nodes=1575
+ktruss_197_edges=277891
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_198_nodes=1570
+ktruss_198_edges=276749
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_199_nodes=1525
+ktruss_199_edges=267838
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_19_nodes=67879
+ktruss_19_edges=2639508
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_200_nodes=1521
+ktruss_200_edges=266896
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_201_nodes=1516
+ktruss_201_edges=265698
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_202_nodes=1514
+ktruss_202_edges=265175
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_203_nodes=1507
+ktruss_203_edges=263525
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_204_nodes=1502
+ktruss_204_edges=262323
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_205_nodes=1498
+ktruss_205_edges=261335
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_206_nodes=1495
+ktruss_206_edges=260580
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_207_nodes=1487
+ktruss_207_edges=258693
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_208_nodes=1483
+ktruss_208_edges=257673
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_209_nodes=1478
+ktruss_209_edges=256504
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_20_nodes=60497
+ktruss_20_edges=2474969
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_210_nodes=1474
+ktruss_210_edges=255517
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_211_nodes=1473
+ktruss_211_edges=255206
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_212_nodes=1466
+ktruss_212_edges=253518
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_213_nodes=1463
+ktruss_213_edges=252741
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_214_nodes=1457
+ktruss_214_edges=251294
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_215_nodes=1455
+ktruss_215_edges=250739
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_216_nodes=1453
+ktruss_216_edges=250209
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_217_nodes=1446
+ktruss_217_edges=248441
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_218_nodes=1444
+ktruss_218_edges=247861
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_219_nodes=1435
+ktruss_219_edges=245606
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_21_nodes=54787
+ktruss_21_edges=2336343
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_220_nodes=1428
+ktruss_220_edges=243842
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_221_nodes=1422
+ktruss_221_edges=242324
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_222_nodes=1415
+ktruss_222_edges=240594
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_223_nodes=1413
+ktruss_223_edges=240057
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_224_nodes=1407
+ktruss_224_edges=238472
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_225_nodes=1403
+ktruss_225_edges=237480
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_226_nodes=1394
+ktruss_226_edges=235185
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_227_nodes=1389
+ktruss_227_edges=233947
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_228_nodes=1383
+ktruss_228_edges=232362
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_229_nodes=1110
+ktruss_229_edges=195843
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_22_nodes=50143
+ktruss_22_edges=2222651
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_230_nodes=1106
+ktruss_230_edges=194802
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_231_nodes=1104
+ktruss_231_edges=194251
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_232_nodes=1100
+ktruss_232_edges=193204
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_233_nodes=1098
+ktruss_233_edges=192647
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_234_nodes=1094
+ktruss_234_edges=191550
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_235_nodes=1084
+ktruss_235_edges=188961
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_236_nodes=1076
+ktruss_236_edges=186902
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_237_nodes=1066
+ktruss_237_edges=184271
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_238_nodes=1059
+ktruss_238_edges=182403
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_239_nodes=1052
+ktruss_239_edges=180543
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_23_nodes=46031
+ktruss_23_edges=2120990
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_240_nodes=1042
+ktruss_240_edges=177931
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_241_nodes=750
+ktruss_241_edges=136603
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_242_nodes=747
+ktruss_242_edges=135859
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_243_nodes=746
+ktruss_243_edges=135612
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_244_nodes=744
+ktruss_244_edges=135096
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_245_nodes=743
+ktruss_245_edges=134830
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_246_nodes=743
+ktruss_246_edges=134815
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_247_nodes=742
+ktruss_247_edges=134526
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_248_nodes=740
+ktruss_248_edges=134016
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_249_nodes=739
+ktruss_249_edges=133746
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_24_nodes=42464
+ktruss_24_edges=2035334
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_250_nodes=739
+ktruss_250_edges=133732
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_251_nodes=739
+ktruss_251_edges=133714
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_252_nodes=738
+ktruss_252_edges=133450
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_253_nodes=735
+ktruss_253_edges=132646
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_254_nodes=734
+ktruss_254_edges=132379
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_255_nodes=734
+ktruss_255_edges=132349
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_256_nodes=734
+ktruss_256_edges=132341
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_257_nodes=734
+ktruss_257_edges=132341
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_258_nodes=734
+ktruss_258_edges=132323
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_259_nodes=734
+ktruss_259_edges=132303
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_25_nodes=39699
+ktruss_25_edges=1962322
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_260_nodes=734
+ktruss_260_edges=132287
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_261_nodes=731
+ktruss_261_edges=131466
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_262_nodes=731
+ktruss_262_edges=131454
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_263_nodes=731
+ktruss_263_edges=131432
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_264_nodes=731
+ktruss_264_edges=131414
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_265_nodes=729
+ktruss_265_edges=130847
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_266_nodes=727
+ktruss_266_edges=130294
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_267_nodes=727
+ktruss_267_edges=130287
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_268_nodes=725
+ktruss_268_edges=129725
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_269_nodes=720
+ktruss_269_edges=128340
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_26_nodes=36869
+ktruss_26_edges=1891112
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_270_nodes=719
+ktruss_270_edges=128057
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_271_nodes=717
+ktruss_271_edges=127491
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_272_nodes=717
+ktruss_272_edges=127488
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_273_nodes=716
+ktruss_273_edges=127191
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_274_nodes=715
+ktruss_274_edges=126905
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_275_nodes=711
+ktruss_275_edges=125783
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_276_nodes=711
+ktruss_276_edges=125775
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_277_nodes=709
+ktruss_277_edges=125215
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_278_nodes=703
+ktruss_278_edges=123508
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_279_nodes=703
+ktruss_279_edges=123507
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_27_nodes=34464
+ktruss_27_edges=1828627
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_280_nodes=703
+ktruss_280_edges=123506
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_281_nodes=703
+ktruss_281_edges=123503
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_282_nodes=702
+ktruss_282_edges=123217
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_283_nodes=701
+ktruss_283_edges=122927
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_284_nodes=700
+ktruss_284_edges=122638
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_285_nodes=698
+ktruss_285_edges=122061
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_286_nodes=698
+ktruss_286_edges=122057
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_287_nodes=695
+ktruss_287_edges=121187
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_288_nodes=694
+ktruss_288_edges=120891
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_289_nodes=693
+ktruss_289_edges=120598
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_28_nodes=32638
+ktruss_28_edges=1782819
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_290_nodes=692
+ktruss_290_edges=120305
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_291_nodes=691
+ktruss_291_edges=120006
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_292_nodes=386
+ktruss_292_edges=73719
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_293_nodes=386
+ktruss_293_edges=73719
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_294_nodes=386
+ktruss_294_edges=73718
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_295_nodes=386
+ktruss_295_edges=73718
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_296_nodes=386
+ktruss_296_edges=73717
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_297_nodes=386
+ktruss_297_edges=73717
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_298_nodes=386
+ktruss_298_edges=73717
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_299_nodes=386
+ktruss_299_edges=73717
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_29_nodes=30581
+ktruss_29_edges=1732265
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_2_nodes=3997962
+ktruss_2_edges=34681189
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_300_nodes=386
+ktruss_300_edges=73717
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_301_nodes=386
+ktruss_301_edges=73717
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_302_nodes=386
+ktruss_302_edges=73717
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_303_nodes=386
+ktruss_303_edges=73717
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_304_nodes=386
+ktruss_304_edges=73717
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_305_nodes=386
+ktruss_305_edges=73717
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_306_nodes=386
+ktruss_306_edges=73717
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_307_nodes=386
+ktruss_307_edges=73717
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_308_nodes=386
+ktruss_308_edges=73717
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_309_nodes=386
+ktruss_309_edges=73716
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_30_nodes=29040
+ktruss_30_edges=1693017
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_310_nodes=386
+ktruss_310_edges=73711
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_311_nodes=384
+ktruss_311_edges=73073
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_312_nodes=384
+ktruss_312_edges=73071
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_313_nodes=383
+ktruss_313_edges=72754
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_314_nodes=383
+ktruss_314_edges=72754
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_315_nodes=383
+ktruss_315_edges=72754
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_316_nodes=383
+ktruss_316_edges=72754
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_317_nodes=383
+ktruss_317_edges=72754
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_318_nodes=383
+ktruss_318_edges=72754
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_319_nodes=383
+ktruss_319_edges=72754
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_31_nodes=27649
+ktruss_31_edges=1657377
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_320_nodes=383
+ktruss_320_edges=72754
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_321_nodes=383
+ktruss_321_edges=72754
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_322_nodes=383
+ktruss_322_edges=72753
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_323_nodes=383
+ktruss_323_edges=72753
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_324_nodes=383
+ktruss_324_edges=72753
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_325_nodes=383
+ktruss_325_edges=72753
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_326_nodes=383
+ktruss_326_edges=72752
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_327_nodes=383
+ktruss_327_edges=72752
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_328_nodes=383
+ktruss_328_edges=72752
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_329_nodes=383
+ktruss_329_edges=72749
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_32_nodes=26710
+ktruss_32_edges=1633343
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_330_nodes=383
+ktruss_330_edges=72749
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_331_nodes=383
+ktruss_331_edges=72749
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_332_nodes=383
+ktruss_332_edges=72743
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_333_nodes=382
+ktruss_333_edges=72401
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_334_nodes=382
+ktruss_334_edges=72401
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_335_nodes=382
+ktruss_335_edges=72399
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_336_nodes=382
+ktruss_336_edges=72397
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_337_nodes=381
+ktruss_337_edges=72049
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_338_nodes=381
+ktruss_338_edges=72049
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_339_nodes=381
+ktruss_339_edges=72048
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_33_nodes=25681
+ktruss_33_edges=1607053
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_340_nodes=380
+ktruss_340_edges=71697
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_341_nodes=379
+ktruss_341_edges=71345
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_342_nodes=379
+ktruss_342_edges=71331
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_343_nodes=377
+ktruss_343_edges=70633
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_344_nodes=377
+ktruss_344_edges=70633
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_345_nodes=377
+ktruss_345_edges=70633
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_346_nodes=377
+ktruss_346_edges=70633
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_347_nodes=377
+ktruss_347_edges=70631
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_348_nodes=377
+ktruss_348_edges=70629
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_349_nodes=373
+ktruss_349_edges=69196
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_34_nodes=24812
+ktruss_34_edges=1582147
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_350_nodes=372
+ktruss_350_edges=68837
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_351_nodes=371
+ktruss_351_edges=68476
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_352_nodes=367
+ktruss_352_edges=67043
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_353_nodes=0
+ktruss_353_edges=0
+ktruss_max=352
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_35_nodes=23736
+ktruss_35_edges=1552795
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_36_nodes=23073
+ktruss_36_edges=1532624
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_37_nodes=22085
+ktruss_37_edges=1506448
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_38_nodes=21177
+ktruss_38_edges=1479069
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_39_nodes=20439
+ktruss_39_edges=1458306
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_3_nodes=2862767
+ktruss_3_edges=28871485
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_40_nodes=19820
+ktruss_40_edges=1441550
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_41_nodes=19182
+ktruss_41_edges=1423442
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_42_nodes=18519
+ktruss_42_edges=1405479
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_43_nodes=18163
+ktruss_43_edges=1393842
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_44_nodes=17583
+ktruss_44_edges=1376079
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_45_nodes=17113
+ktruss_45_edges=1362428
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_46_nodes=16855
+ktruss_46_edges=1352895
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_47_nodes=16400
+ktruss_47_edges=1337333
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_48_nodes=15916
+ktruss_48_edges=1321199
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_49_nodes=15435
+ktruss_49_edges=1304168
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_4_nodes=2126395
+ktruss_4_edges=23318996
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_50_nodes=14862
+ktruss_50_edges=1285595
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_51_nodes=14336
+ktruss_51_edges=1268224
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_52_nodes=13985
+ktruss_52_edges=1256044
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_53_nodes=13625
+ktruss_53_edges=1243421
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_54_nodes=13333
+ktruss_54_edges=1232714
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_55_nodes=13127
+ktruss_55_edges=1222324
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_56_nodes=12872
+ktruss_56_edges=1212019
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_57_nodes=12607
+ktruss_57_edges=1200986
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_58_nodes=12420
+ktruss_58_edges=1192665
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_59_nodes=12181
+ktruss_59_edges=1182790
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_5_nodes=1580436
+ktruss_5_edges=18855531
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_60_nodes=11850
+ktruss_60_edges=1169386
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_61_nodes=11517
+ktruss_61_edges=1155404
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_62_nodes=11384
+ktruss_62_edges=1147887
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_63_nodes=11120
+ktruss_63_edges=1135476
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_64_nodes=10953
+ktruss_64_edges=1128088
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_65_nodes=10792
+ktruss_65_edges=1121166
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_66_nodes=10475
+ktruss_66_edges=1108385
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_67_nodes=10315
+ktruss_67_edges=1100024
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_68_nodes=10079
+ktruss_68_edges=1089659
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_69_nodes=10040
+ktruss_69_edges=1086146
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_6_nodes=1169576
+ktruss_6_edges=15305841
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_70_nodes=9942
+ktruss_70_edges=1080861
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_71_nodes=9836
+ktruss_71_edges=1075003
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_72_nodes=9809
+ktruss_72_edges=1072266
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_73_nodes=9785
+ktruss_73_edges=1069683
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_74_nodes=9740
+ktruss_74_edges=1065319
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_75_nodes=9610
+ktruss_75_edges=1057382
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_76_nodes=9007
+ktruss_76_edges=1031062
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_77_nodes=8795
+ktruss_77_edges=1019744
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_78_nodes=8553
+ktruss_78_edges=1004364
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_79_nodes=8511
+ktruss_79_edges=1000175
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_7_nodes=867210
+ktruss_7_edges=12480727
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_80_nodes=8396
+ktruss_80_edges=993212
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_81_nodes=8299
+ktruss_81_edges=983770
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_82_nodes=8184
+ktruss_82_edges=976735
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_83_nodes=8017
+ktruss_83_edges=966381
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_84_nodes=7985
+ktruss_84_edges=962626
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_85_nodes=7783
+ktruss_85_edges=951862
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_86_nodes=7638
+ktruss_86_edges=942125
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_87_nodes=7598
+ktruss_87_edges=938003
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_88_nodes=7580
+ktruss_88_edges=935793
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_89_nodes=7385
+ktruss_89_edges=925958
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_8_nodes=643934
+ktruss_8_edges=10236127
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_90_nodes=7359
+ktruss_90_edges=922913
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_91_nodes=7245
+ktruss_91_edges=916059
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_92_nodes=7131
+ktruss_92_edges=908947
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_93_nodes=7008
+ktruss_93_edges=901008
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_94_nodes=6970
+ktruss_94_edges=896584
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_95_nodes=6830
+ktruss_95_edges=886859
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_96_nodes=6714
+ktruss_96_edges=879414
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_97_nodes=6691
+ktruss_97_edges=876391
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_98_nodes=6671
+ktruss_98_edges=873502
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_99_nodes=6637
+ktruss_99_edges=869190
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/LiveJournal/com-lj.wgt32.sym.gr
+ktruss_9_nodes=482069
+ktruss_9_edges=8477715
+
+[com-friendster]
+name = com-friendster
+
+[com-friendster.sym]
+name = com-friendster.sym
+
+[com-friendster.wgt]
+name = com-friendster.wgt
+
+[com-friendster.wgt.sym]
+name = com-friendster.wgt.sym
+
+[com-friendster.wgt32]
+name = com-friendster.wgt32
+
+[com-friendster.wgt32.sym]
+name = com-friendster.wgt32.sym
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_100_nodes=141
+ktruss_100_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_101_nodes=141
+ktruss_101_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_102_nodes=141
+ktruss_102_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_103_nodes=141
+ktruss_103_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_104_nodes=141
+ktruss_104_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_105_nodes=141
+ktruss_105_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_106_nodes=141
+ktruss_106_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_107_nodes=141
+ktruss_107_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_108_nodes=141
+ktruss_108_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_109_nodes=141
+ktruss_109_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_10_nodes=6574684
+ktruss_10_edges=199913960
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_110_nodes=141
+ktruss_110_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_111_nodes=141
+ktruss_111_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_112_nodes=141
+ktruss_112_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_113_nodes=141
+ktruss_113_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_114_nodes=141
+ktruss_114_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_115_nodes=141
+ktruss_115_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_116_nodes=141
+ktruss_116_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_117_nodes=141
+ktruss_117_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_118_nodes=141
+ktruss_118_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_119_nodes=141
+ktruss_119_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_11_nodes=5018329
+ktruss_11_edges=159643279
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_120_nodes=141
+ktruss_120_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_121_nodes=141
+ktruss_121_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_122_nodes=141
+ktruss_122_edges=9789
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_123_nodes=139
+ktruss_123_edges=9537
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_124_nodes=136
+ktruss_124_edges=9154
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_125_nodes=135
+ktruss_125_edges=9027
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_126_nodes=135
+ktruss_126_edges=9027
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_127_nodes=134
+ktruss_127_edges=8899
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_128_nodes=133
+ktruss_128_edges=8769
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_129_nodes=132
+ktruss_129_edges=8642
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_12_nodes=3864347
+ktruss_12_edges=128132246
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_130_nodes=0
+ktruss_130_edges=0
+ktruss_max=129
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_13_nodes=3004139
+ktruss_13_edges=103125797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_14_nodes=2352003
+ktruss_14_edges=83519532
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_15_nodes=1853239
+ktruss_15_edges=67848440
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_16_nodes=1465359
+ktruss_16_edges=55168385
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_17_nodes=1163069
+ktruss_17_edges=44964513
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_18_nodes=930228
+ktruss_18_edges=36752930
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_19_nodes=743664
+ktruss_19_edges=29996379
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_20_nodes=597591
+ktruss_20_edges=24506962
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_21_nodes=478436
+ktruss_21_edges=19989645
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_22_nodes=382200
+ktruss_22_edges=16240122
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_23_nodes=307673
+ktruss_23_edges=13215881
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_24_nodes=247596
+ktruss_24_edges=10762376
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_25_nodes=197514
+ktruss_25_edges=8686961
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_26_nodes=157241
+ktruss_26_edges=6998731
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_27_nodes=124473
+ktruss_27_edges=5596577
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_28_nodes=99300
+ktruss_28_edges=4493874
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_29_nodes=78258
+ktruss_29_edges=3571041
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_2_nodes=65608366
+ktruss_2_edges=1806067135
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_30_nodes=60886
+ktruss_30_edges=2834117
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_31_nodes=47240
+ktruss_31_edges=2241955
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_32_nodes=36073
+ktruss_32_edges=1754236
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_33_nodes=28211
+ktruss_33_edges=1394570
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_34_nodes=22299
+ktruss_34_edges=1106256
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_35_nodes=17524
+ktruss_35_edges=893379
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_36_nodes=13696
+ktruss_36_edges=722081
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_37_nodes=11150
+ktruss_37_edges=598605
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_38_nodes=9095
+ktruss_38_edges=498897
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_39_nodes=7452
+ktruss_39_edges=416958
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_3_nodes=45549749
+ktruss_3_edges=1445027034
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_40_nodes=6325
+ktruss_40_edges=357955
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_41_nodes=5300
+ktruss_41_edges=307233
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_42_nodes=4765
+ktruss_42_edges=279248
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_43_nodes=4084
+ktruss_43_edges=247469
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_44_nodes=3805
+ktruss_44_edges=228507
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_45_nodes=2911
+ktruss_45_edges=175177
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_46_nodes=2323
+ktruss_46_edges=139113
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_47_nodes=2082
+ktruss_47_edges=123313
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_48_nodes=1645
+ktruss_48_edges=98249
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_49_nodes=1534
+ktruss_49_edges=88349
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_4_nodes=34741800
+ktruss_4_edges=1010791155
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_50_nodes=1236
+ktruss_50_edges=70945
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_51_nodes=1071
+ktruss_51_edges=61407
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_52_nodes=943
+ktruss_52_edges=52997
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_53_nodes=887
+ktruss_53_edges=48121
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_54_nodes=831
+ktruss_54_edges=43326
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_55_nodes=429
+ktruss_55_edges=22678
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_56_nodes=423
+ktruss_56_edges=22348
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_57_nodes=418
+ktruss_57_edges=22064
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_58_nodes=415
+ktruss_58_edges=21891
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_59_nodes=349
+ktruss_59_edges=19774
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_5_nodes=26738711
+ktruss_5_edges=721026773
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_60_nodes=345
+ktruss_60_edges=19538
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_61_nodes=279
+ktruss_61_edges=17408
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_62_nodes=276
+ktruss_62_edges=17221
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_63_nodes=272
+ktruss_63_edges=16973
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_64_nodes=267
+ktruss_64_edges=16661
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_65_nodes=267
+ktruss_65_edges=16660
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_66_nodes=266
+ktruss_66_edges=16596
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_67_nodes=263
+ktruss_67_edges=16400
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_68_nodes=261
+ktruss_68_edges=16267
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_69_nodes=259
+ktruss_69_edges=16133
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_6_nodes=20399792
+ktruss_6_edges=540978530
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_70_nodes=258
+ktruss_70_edges=16061
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_71_nodes=257
+ktruss_71_edges=15991
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_72_nodes=257
+ktruss_72_edges=15991
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_73_nodes=255
+ktruss_73_edges=15849
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_74_nodes=254
+ktruss_74_edges=15776
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_75_nodes=253
+ktruss_75_edges=15701
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_76_nodes=253
+ktruss_76_edges=15699
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_77_nodes=250
+ktruss_77_edges=15472
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_78_nodes=248
+ktruss_78_edges=15320
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_79_nodes=248
+ktruss_79_edges=15320
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_7_nodes=15407238
+ktruss_7_edges=414476274
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_80_nodes=248
+ktruss_80_edges=15320
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_81_nodes=247
+ktruss_81_edges=15240
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_82_nodes=247
+ktruss_82_edges=15240
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_83_nodes=246
+ktruss_83_edges=15158
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_84_nodes=244
+ktruss_84_edges=14992
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_85_nodes=244
+ktruss_85_edges=14992
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_86_nodes=244
+ktruss_86_edges=14992
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_87_nodes=243
+ktruss_87_edges=14907
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_88_nodes=243
+ktruss_88_edges=14907
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_89_nodes=243
+ktruss_89_edges=14907
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_8_nodes=11572532
+ktruss_8_edges=321592400
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_90_nodes=243
+ktruss_90_edges=14907
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_91_nodes=243
+ktruss_91_edges=14907
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_92_nodes=242
+ktruss_92_edges=14817
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_93_nodes=242
+ktruss_93_edges=14817
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_94_nodes=240
+ktruss_94_edges=14633
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_95_nodes=141
+ktruss_95_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_96_nodes=141
+ktruss_96_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_97_nodes=141
+ktruss_97_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_98_nodes=141
+ktruss_98_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_99_nodes=141
+ktruss_99_edges=9797
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Friendster/com-friendster.wgt32.sym.gr
+ktruss_9_nodes=8693185
+ktruss_9_edges=252298465
+
+
+
+[com-orkut]
+name = com-orkut
+
+[com-orkut.sym]
+name = com-orkut.sym
+
+[com-orkut.wgt]
+name = com-orkut.wgt
+
+[com-orkut.wgt.sym]
+name = com-orkut.wgt.sym
+
+[com-orkut.wgt32]
+name = com-orkut.wgt32
+
+[com-orkut.wgt32.sym]
+name = com-orkut.wgt32.sym
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_10_nodes=1212897
+ktruss_10_edges=41407911
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_11_nodes=1044550
+ktruss_11_edges=36984483
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_12_nodes=899153
+ktruss_12_edges=33076845
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_13_nodes=774069
+ktruss_13_edges=29619736
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_14_nodes=665337
+ktruss_14_edges=26543680
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_15_nodes=574636
+ktruss_15_edges=23847356
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_16_nodes=496834
+ktruss_16_edges=21467314
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_17_nodes=429895
+ktruss_17_edges=19337384
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_18_nodes=373378
+ktruss_18_edges=17433398
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_19_nodes=325575
+ktruss_19_edges=15750448
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_20_nodes=285504
+ktruss_20_edges=14249155
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_21_nodes=249351
+ktruss_21_edges=12857621
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_22_nodes=219770
+ktruss_22_edges=11633654
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_23_nodes=192975
+ktruss_23_edges=10490265
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_24_nodes=170457
+ktruss_24_edges=9471543
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_25_nodes=151329
+ktruss_25_edges=8519125
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_26_nodes=133900
+ktruss_26_edges=7616902
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_27_nodes=118281
+ktruss_27_edges=6786341
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_28_nodes=104296
+ktruss_28_edges=6016617
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_29_nodes=92517
+ktruss_29_edges=5323948
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_2_nodes=3072441
+ktruss_2_edges=117185083
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_30_nodes=81142
+ktruss_30_edges=4733756
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_31_nodes=71634
+ktruss_31_edges=4205353
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_32_nodes=63786
+ktruss_32_edges=3733722
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_33_nodes=56741
+ktruss_33_edges=3341835
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_34_nodes=49269
+ktruss_34_edges=2969768
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_35_nodes=43609
+ktruss_35_edges=2664836
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_36_nodes=38872
+ktruss_36_edges=2406053
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_37_nodes=34680
+ktruss_37_edges=2162821
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_38_nodes=30088
+ktruss_38_edges=1911947
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_39_nodes=26235
+ktruss_39_edges=1695363
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_3_nodes=2936613
+ktruss_3_edges=101196543
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_40_nodes=22552
+ktruss_40_edges=1488316
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_41_nodes=19560
+ktruss_41_edges=1317831
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_42_nodes=17681
+ktruss_42_edges=1189500
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_43_nodes=15397
+ktruss_43_edges=1054759
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_44_nodes=13593
+ktruss_44_edges=932817
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_45_nodes=11211
+ktruss_45_edges=795145
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_46_nodes=10247
+ktruss_46_edges=724129
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_47_nodes=8919
+ktruss_47_edges=639826
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_48_nodes=8064
+ktruss_48_edges=571356
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_49_nodes=6977
+ktruss_49_edges=502553
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_4_nodes=2712816
+ktruss_4_edges=86221786
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_50_nodes=6083
+ktruss_50_edges=444092
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_51_nodes=5766
+ktruss_51_edges=409807
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_52_nodes=4974
+ktruss_52_edges=356454
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_53_nodes=4315
+ktruss_53_edges=310076
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_54_nodes=3945
+ktruss_54_edges=276758
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_55_nodes=3356
+ktruss_55_edges=236677
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_56_nodes=2808
+ktruss_56_edges=200325
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_57_nodes=2220
+ktruss_57_edges=163076
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_58_nodes=2086
+ktruss_58_edges=147729
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_59_nodes=1902
+ktruss_59_edges=131946
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_5_nodes=2430670
+ktruss_5_edges=75096516
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_60_nodes=1342
+ktruss_60_edges=94594
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_61_nodes=1021
+ktruss_61_edges=72766
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_62_nodes=685
+ktruss_62_edges=44266
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_63_nodes=658
+ktruss_63_edges=41785
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_64_nodes=624
+ktruss_64_edges=38821
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_65_nodes=511
+ktruss_65_edges=33016
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_66_nodes=490
+ktruss_66_edges=31097
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_67_nodes=472
+ktruss_67_edges=29401
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_68_nodes=321
+ktruss_68_edges=20422
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_69_nodes=306
+ktruss_69_edges=19084
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_6_nodes=2142270
+ktruss_6_edges=66154545
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_70_nodes=301
+ktruss_70_edges=18631
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_71_nodes=297
+ktruss_71_edges=18258
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_72_nodes=286
+ktruss_72_edges=17225
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_73_nodes=275
+ktruss_73_edges=16192
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_74_nodes=144
+ktruss_74_edges=8787
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_75_nodes=137
+ktruss_75_edges=8108
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_76_nodes=137
+ktruss_76_edges=8091
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_77_nodes=130
+ktruss_77_edges=7443
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_78_nodes=124
+ktruss_78_edges=6859
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_79_nodes=0
+ktruss_79_edges=0
+ktruss_max=78
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_7_nodes=1870979
+ktruss_7_edges=58602521
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_8_nodes=1626205
+ktruss_8_edges=52110130
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
+ktruss_9_nodes=1405763
+ktruss_9_edges=46406814
+
+[com-youtube]
+name = com-youtube
+
+[com-youtube.sym]
+name = com-youtube.sym
+
+[com-youtube.wgt]
+name = com-youtube.wgt
+
+[com-youtube.wgt.sym]
+name = com-youtube.wgt.sym
+
+[com-youtube.wgt32]
+name = com-youtube.wgt32
+
+[com-youtube.wgt32.sym]
+name = com-youtube.wgt32.sym
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_10_nodes=4061
+ktruss_10_edges=120055
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_11_nodes=2982
+ktruss_11_edges=93803
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_12_nodes=2256
+ktruss_12_edges=73622
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_13_nodes=1666
+ktruss_13_edges=56477
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_14_nodes=1313
+ktruss_14_edges=44451
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_15_nodes=998
+ktruss_15_edges=33637
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_16_nodes=673
+ktruss_16_edges=22154
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_17_nodes=472
+ktruss_17_edges=15636
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_18_nodes=387
+ktruss_18_edges=12217
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_19_nodes=253
+ktruss_19_edges=7012
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_20_nodes=0
+ktruss_20_edges=0
+ktruss_max=19
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_2_nodes=1134890
+ktruss_2_edges=2987624
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_3_nodes=261730
+ktruss_3_edges=1397278
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_4_nodes=95160
+ktruss_4_edges=831922
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_5_nodes=42508
+ktruss_5_edges=543739
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_6_nodes=22335
+ktruss_6_edges=378240
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_7_nodes=13148
+ktruss_7_edges=275283
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_8_nodes=8413
+ktruss_8_edges=206657
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Youtube/com-youtube.wgt32.sym.gr
+ktruss_9_nodes=5832
+ktruss_9_edges=158026
+
+
+[com-dblp]
+name = com-dblp
+
+[com-dblp.sym]
+name = com-dblp.sym
+
+[com-dblp.wgt]
+name = com-dblp.wgt
+
+[com-dblp.wgt.sym]
+name = com-dblp.wgt.sym
+
+[com-dblp.wgt32]
+name = com-dblp.wgt32
+
+[com-dblp.wgt32.sym]
+name = com-dblp.wgt32.sym
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_100_nodes=216
+ktruss_100_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_101_nodes=216
+ktruss_101_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_102_nodes=216
+ktruss_102_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_103_nodes=114
+ktruss_103_edges=6441
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_104_nodes=114
+ktruss_104_edges=6441
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_105_nodes=114
+ktruss_105_edges=6441
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_106_nodes=114
+ktruss_106_edges=6441
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_107_nodes=114
+ktruss_107_edges=6441
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_108_nodes=114
+ktruss_108_edges=6441
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_109_nodes=114
+ktruss_109_edges=6441
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_10_nodes=19354
+ktruss_10_edges=163059
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_110_nodes=114
+ktruss_110_edges=6441
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_111_nodes=114
+ktruss_111_edges=6441
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_112_nodes=114
+ktruss_112_edges=6441
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_113_nodes=114
+ktruss_113_edges=6441
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_114_nodes=114
+ktruss_114_edges=6441
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_115_nodes=0
+ktruss_115_edges=0
+ktruss_max=114
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_11_nodes=14756
+ktruss_11_edges=138944
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_12_nodes=11949
+ktruss_12_edges=122388
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_13_nodes=9961
+ktruss_13_edges=109874
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_14_nodes=8089
+ktruss_14_edges=97228
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_15_nodes=6767
+ktruss_15_edges=87483
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_16_nodes=5746
+ktruss_16_edges=79606
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_17_nodes=4743
+ktruss_17_edges=71447
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_18_nodes=4207
+ktruss_18_edges=66613
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_19_nodes=3656
+ktruss_19_edges=61494
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_20_nodes=3396
+ktruss_20_edges=58791
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_21_nodes=3060
+ktruss_21_edges=55363
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_22_nodes=2722
+ktruss_22_edges=51601
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_23_nodes=2438
+ktruss_23_edges=48317
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_24_nodes=2221
+ktruss_24_edges=45799
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_25_nodes=2069
+ktruss_25_edges=43945
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_26_nodes=1896
+ktruss_26_edges=41845
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_27_nodes=1715
+ktruss_27_edges=39354
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_28_nodes=1603
+ktruss_28_edges=37845
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_29_nodes=1487
+ktruss_29_edges=36143
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_2_nodes=317080
+ktruss_2_edges=1049866
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_30_nodes=1358
+ktruss_30_edges=34090
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_31_nodes=1206
+ktruss_31_edges=31611
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_32_nodes=1050
+ktruss_32_edges=29196
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_33_nodes=955
+ktruss_33_edges=27706
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_34_nodes=856
+ktruss_34_edges=26098
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_35_nodes=822
+ktruss_35_edges=25537
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_36_nodes=819
+ktruss_36_edges=25427
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_37_nodes=738
+ktruss_37_edges=23837
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_38_nodes=703
+ktruss_38_edges=23171
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_39_nodes=703
+ktruss_39_edges=23171
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_3_nodes=269181
+ktruss_3_edges=976724
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_40_nodes=625
+ktruss_40_edges=21689
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_41_nodes=585
+ktruss_41_edges=20909
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_42_nodes=585
+ktruss_42_edges=20909
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_43_nodes=585
+ktruss_43_edges=20909
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_44_nodes=542
+ktruss_44_edges=20006
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_45_nodes=454
+ktruss_45_edges=18114
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_46_nodes=454
+ktruss_46_edges=18114
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_47_nodes=454
+ktruss_47_edges=18114
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_48_nodes=454
+ktruss_48_edges=18114
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_49_nodes=358
+ktruss_49_edges=15858
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_4_nodes=194958
+ktruss_4_edges=792495
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_50_nodes=309
+ktruss_50_edges=14682
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_51_nodes=309
+ktruss_51_edges=14682
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_52_nodes=309
+ktruss_52_edges=14682
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_53_nodes=280
+ktruss_53_edges=13609
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_54_nodes=280
+ktruss_54_edges=13609
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_55_nodes=280
+ktruss_55_edges=13609
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_56_nodes=280
+ktruss_56_edges=13609
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_57_nodes=280
+ktruss_57_edges=13609
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_58_nodes=280
+ktruss_58_edges=13609
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_59_nodes=280
+ktruss_59_edges=13609
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_5_nodes=127809
+ktruss_5_edges=582683
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_60_nodes=280
+ktruss_60_edges=13609
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_61_nodes=280
+ktruss_61_edges=13609
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_62_nodes=280
+ktruss_62_edges=13609
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_63_nodes=280
+ktruss_63_edges=13609
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_64_nodes=217
+ktruss_64_edges=11656
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_65_nodes=217
+ktruss_65_edges=11656
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_66_nodes=216
+ktruss_66_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_67_nodes=216
+ktruss_67_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_68_nodes=216
+ktruss_68_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_69_nodes=216
+ktruss_69_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_6_nodes=82071
+ktruss_6_edges=422306
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_70_nodes=216
+ktruss_70_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_71_nodes=216
+ktruss_71_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_72_nodes=216
+ktruss_72_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_73_nodes=216
+ktruss_73_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_74_nodes=216
+ktruss_74_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_75_nodes=216
+ktruss_75_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_76_nodes=216
+ktruss_76_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_77_nodes=216
+ktruss_77_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_78_nodes=216
+ktruss_78_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_79_nodes=216
+ktruss_79_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_7_nodes=53496
+ktruss_7_edges=313152
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_80_nodes=216
+ktruss_80_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_81_nodes=216
+ktruss_81_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_82_nodes=216
+ktruss_82_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_83_nodes=216
+ktruss_83_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_84_nodes=216
+ktruss_84_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_85_nodes=216
+ktruss_85_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_86_nodes=216
+ktruss_86_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_87_nodes=216
+ktruss_87_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_88_nodes=216
+ktruss_88_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_89_nodes=216
+ktruss_89_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_8_nodes=36413
+ktruss_8_edges=243142
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_90_nodes=216
+ktruss_90_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_91_nodes=216
+ktruss_91_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_92_nodes=216
+ktruss_92_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_93_nodes=216
+ktruss_93_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_94_nodes=216
+ktruss_94_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_95_nodes=216
+ktruss_95_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_96_nodes=216
+ktruss_96_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_97_nodes=216
+ktruss_97_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_98_nodes=216
+ktruss_98_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_99_nodes=216
+ktruss_99_edges=11592
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/DBLP/com-dblp.wgt32.sym.gr
+ktruss_9_nodes=25993
+ktruss_9_edges=195955
+
+[com-amazon]
+name = com-amazon
+
+[com-amazon.sym]
+name = com-amazon.sym
+
+[com-amazon.wgt]
+name = com-amazon.wgt
+
+[com-amazon.wgt.sym]
+name = com-amazon.wgt.sym
+
+[com-amazon.wgt32]
+name = com-amazon.wgt32
+
+[com-amazon.wgt32.sym]
+name = com-amazon.wgt32.sym
+# /net/ohm/export/cdgc/inputs/stanford/communities/Amazon/com-amazon.wgt32.sym.gr
+ktruss_2_nodes=334863
+ktruss_2_edges=925872
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Amazon/com-amazon.wgt32.sym.gr
+ktruss_3_nodes=265088
+ktruss_3_edges=714660
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Amazon/com-amazon.wgt32.sym.gr
+ktruss_4_nodes=163643
+ktruss_4_edges=458688
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Amazon/com-amazon.wgt32.sym.gr
+ktruss_5_nodes=73102
+ktruss_5_edges=214596
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Amazon/com-amazon.wgt32.sym.gr
+ktruss_6_nodes=17681
+ktruss_6_edges=53178
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Amazon/com-amazon.wgt32.sym.gr
+ktruss_7_nodes=212
+ktruss_7_edges=642
+
+# /net/ohm/export/cdgc/inputs/stanford/communities/Amazon/com-amazon.wgt32.sym.gr
+ktruss_8_nodes=0
+ktruss_8_edges=0
+ktruss_max=7
 

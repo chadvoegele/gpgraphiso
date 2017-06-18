@@ -18,7 +18,7 @@ class KtrussIrgl(graph_bmk):
     def get_run_spec(self, bmkinput):
         x = bmk2.RunSpec(self, bmkinput)        
 
-        k = int(self.config['k'])
+        k, ec = get_ktruss_checker(bmkinput, self.config['k'])
 
         x.set_binary(self.props._cwd, 'test')
         x.set_arg(bmkinput.props.file, bmk2.AT_INPUT_FILE)
@@ -32,7 +32,7 @@ class KtrussIrgl(graph_bmk):
         x.set_arg("-o", bmk2.AT_OPAQUE)
         x.set_arg('@output', bmk2.AT_TEMPORARY_OUTPUT)
 
-        x.set_checker(bmk2.ExternalChecker(get_ktruss_checker(bmkinput, k)))
+        x.set_checker(bmk2.ExternalChecker(ec))
 
         x.set_perf(bmk2.PerfRE(PERF_RE))
         return x

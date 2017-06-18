@@ -308,3 +308,219 @@ name = A_inc.sym
 file = ref/A_inc.sym.tsv
 format = text/tsv
 
+[communities/LiveJournal/com-lj.gr]
+flags = 
+name = com-lj
+file = communities/LiveJournal/com-lj.gr
+format = bin/galois
+
+[communities/LiveJournal/com-lj.sym.gr]
+flags = symmetric
+name = com-lj.sym
+file = communities/LiveJournal/com-lj.sym.gr
+format = bin/galois
+
+[communities/LiveJournal/com-lj.wgt.gr]
+flags = 
+name = com-lj.wgt
+file = communities/LiveJournal/com-lj.wgt.gr
+format = bin/galois
+
+[communities/LiveJournal/com-lj.wgt.sym.gr]
+flags = symmetric
+name = com-lj.wgt.sym
+file = communities/LiveJournal/com-lj.wgt.sym.gr
+format = bin/galois
+
+[communities/LiveJournal/com-lj.wgt32.gr]
+flags = 
+name = com-lj.wgt32
+file = communities/LiveJournal/com-lj.wgt32.gr
+format = bin/galois
+
+[communities/LiveJournal/com-lj.wgt32.sym.gr]
+flags = symmetric
+name = com-lj.wgt32.sym
+file = communities/LiveJournal/com-lj.wgt32.sym.gr
+format = bin/galois
+
+[communities/Friendster/com-friendster.gr]
+flags = 
+name = com-friendster
+file = communities/Friendster/com-friendster.gr
+format = bin/galois
+
+[communities/Friendster/com-friendster.sym.gr]
+flags = symmetric
+name = com-friendster.sym
+file = communities/Friendster/com-friendster.sym.gr
+format = bin/galois
+
+[communities/Friendster/com-friendster.wgt.gr]
+flags = 
+name = com-friendster.wgt
+file = communities/Friendster/com-friendster.wgt.gr
+format = bin/galois
+
+[communities/Friendster/com-friendster.wgt.sym.gr]
+flags = symmetric
+name = com-friendster.wgt.sym
+file = communities/Friendster/com-friendster.wgt.sym.gr
+format = bin/galois
+
+[communities/Friendster/com-friendster.wgt32.gr]
+flags = 
+name = com-friendster.wgt32
+file = communities/Friendster/com-friendster.wgt32.gr
+format = bin/galois
+
+[communities/Friendster/com-friendster.wgt32.sym.gr]
+flags = symmetric
+name = com-friendster.wgt32.sym
+file = communities/Friendster/com-friendster.wgt32.sym.gr
+format = bin/galois
+
+[communities/Orkut/com-orkut.gr]
+flags = 
+name = com-orkut
+file = communities/Orkut/com-orkut.gr
+format = bin/galois
+
+[communities/Orkut/com-orkut.sym.gr]
+flags = symmetric
+name = com-orkut.sym
+file = communities/Orkut/com-orkut.sym.gr
+format = bin/galois
+
+[communities/Orkut/com-orkut.wgt.gr]
+flags = 
+name = com-orkut.wgt
+file = communities/Orkut/com-orkut.wgt.gr
+format = bin/galois
+
+[communities/Orkut/com-orkut.wgt.sym.gr]
+flags = symmetric
+name = com-orkut.wgt.sym
+file = communities/Orkut/com-orkut.wgt.sym.gr
+format = bin/galois
+
+[communities/Orkut/com-orkut.wgt32.gr]
+flags = 
+name = com-orkut.wgt32
+file = communities/Orkut/com-orkut.wgt32.gr
+format = bin/galois
+
+[communities/Orkut/com-orkut.wgt32.sym.gr]
+flags = symmetric
+name = com-orkut.wgt32.sym
+file = communities/Orkut/com-orkut.wgt32.sym.gr
+format = bin/galois
+
+[communities/Youtube/com-youtube.gr]
+flags = 
+name = com-youtube
+file = communities/Youtube/com-youtube.gr
+format = bin/galois
+
+[communities/Youtube/com-youtube.sym.gr]
+flags = symmetric
+name = com-youtube.sym
+file = communities/Youtube/com-youtube.sym.gr
+format = bin/galois
+
+[communities/Youtube/com-youtube.wgt.gr]
+flags = 
+name = com-youtube.wgt
+file = communities/Youtube/com-youtube.wgt.gr
+format = bin/galois
+
+[communities/Youtube/com-youtube.wgt.sym.gr]
+flags = symmetric
+name = com-youtube.wgt.sym
+file = communities/Youtube/com-youtube.wgt.sym.gr
+format = bin/galois
+
+[communities/Youtube/com-youtube.wgt32.gr]
+flags = 
+name = com-youtube.wgt32
+file = communities/Youtube/com-youtube.wgt32.gr
+format = bin/galois
+
+[communities/Youtube/com-youtube.wgt32.sym.gr]
+flags = symmetric
+name = com-youtube.wgt32.sym
+file = communities/Youtube/com-youtube.wgt32.sym.gr
+format = bin/galois
+
+[communities/DBLP/com-dblp.gr]
+flags = 
+name = com-dblp
+file = communities/DBLP/com-dblp.gr
+format = bin/galois
+
+[communities/DBLP/com-dblp.sym.gr]
+flags = symmetric
+name = com-dblp.sym
+file = communities/DBLP/com-dblp.sym.gr
+format = bin/galois
+
+[communities/DBLP/com-dblp.wgt.gr]
+flags = 
+name = com-dblp.wgt
+file = communities/DBLP/com-dblp.wgt.gr
+format = bin/galois
+
+[communities/DBLP/com-dblp.wgt.sym.gr]
+flags = symmetric
+name = com-dblp.wgt.sym
+file = communities/DBLP/com-dblp.wgt.sym.gr
+format = bin/galois
+
+[communities/DBLP/com-dblp.wgt32.gr]
+flags = 
+name = com-dblp.wgt32
+file = communities/DBLP/com-dblp.wgt32.gr
+format = bin/galois
+
+[communities/DBLP/com-dblp.wgt32.sym.gr]
+flags = symmetric
+name = com-dblp.wgt32.sym
+file = communities/DBLP/com-dblp.wgt32.sym.gr
+format = bin/galois
+
+[communities/Amazon/com-amazon.gr]
+flags = 
+name = com-amazon
+file = communities/Amazon/com-amazon.gr
+format = bin/galois
+
+[communities/Amazon/com-amazon.sym.gr]
+flags = symmetric
+name = com-amazon.sym
+file = communities/Amazon/com-amazon.sym.gr
+format = bin/galois
+
+[communities/Amazon/com-amazon.wgt.gr]
+flags = 
+name = com-amazon.wgt
+file = communities/Amazon/com-amazon.wgt.gr
+format = bin/galois
+
+[communities/Amazon/com-amazon.wgt.sym.gr]
+flags = symmetric
+name = com-amazon.wgt.sym
+file = communities/Amazon/com-amazon.wgt.sym.gr
+format = bin/galois
+
+[communities/Amazon/com-amazon.wgt32.gr]
+flags = 
+name = com-amazon.wgt32
+file = communities/Amazon/com-amazon.wgt32.gr
+format = bin/galois
+
+[communities/Amazon/com-amazon.wgt32.sym.gr]
+flags = symmetric
+name = com-amazon.wgt32.sym
+file = communities/Amazon/com-amazon.wgt32.sym.gr
+format = bin/galois
+
