@@ -10,7 +10,11 @@ class triangles(graph_bmk):
 
 	def get_run_spec(self, bmkinput):
 		x = bmk2.RunSpec(self, bmkinput)
-		x.set_binary(self.props._cwd, 'test')
+                if hasattr(bmkinput.props, 'nontex') and (int(bmkinput.props.nontex) == 1):
+                        x.set_binary(self.props._cwd, 'test-nontex')
+                else:
+                        x.set_binary(self.props._cwd, 'test')
+
 		x.set_arg(bmkinput.props.file, bmk2.AT_INPUT_FILE)
 		x.set_checker(bmk2.REChecker('^triangles: %s$' % (bmkinput.props.triangles)))
 		x.set_perf(bmk2.PerfRE(PERF_RE))
