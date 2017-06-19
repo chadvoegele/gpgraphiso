@@ -28,10 +28,19 @@ edgelist_graph.o: $(GPGRAPHLIB_ROOT)/src/edgelist_graph.cu
 kernel.cu: ktruss.py
 	$(GGC_ROOT)/src/ggc -o kernel.cu ktruss.py
 
+kernel-nontex.cu: ktruss.py
+	$(GGC_ROOT)/src/ggc --cuda-worklist basic --cuda-graph basic -o $@ ktruss.py
+
 %.o: %.cu
 	nvcc -dc -arch $(ARCH) $(CXXFLAGS) $(EXTRAFLAGS) $(NVCCFLAGS) $(INCLUDES) $< -o $@
 
+skel-nontex.o: skel.cu
+	nvcc -dc -arch $(ARCH) $(CXXFLAGS) $(NVCCFLAGS) $(INCLUDES) $< -o $@
+
 test: skel.o kernel.o mgpucontext.o mgpuutil.o edgelist_graph.o
+	nvcc -g $(EXTRAFLAGS) -arch $(ARCH) $(CXXFLAGS) $(NVCCFLAGS) $(INCLUDES) -L$(LIBDIR)  -o $@ $^ $(LIBS) -lcudadevrt $(COMPRESS_LIBS)
+
+test-nontex: skel-nontex.o kernel-nontex.o mgpucontext.o mgpuutil.o edgelist_graph.o
 	nvcc -g $(EXTRAFLAGS) -arch $(ARCH) $(CXXFLAGS) $(NVCCFLAGS) $(INCLUDES) -L$(LIBDIR)  -o $@ $^ $(LIBS) -lcudadevrt $(COMPRESS_LIBS)
 
 clean:

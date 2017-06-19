@@ -20,7 +20,11 @@ class KtrussIrgl(graph_bmk):
 
         k, ec = get_ktruss_checker(bmkinput, self.config['k'])
 
-        x.set_binary(self.props._cwd, 'test')
+        if hasattr(bmkinput.props, 'nontex') and (int(bmkinput.props.nontex) == 1):
+            x.set_binary(self.props._cwd, 'test-nontex')
+        else:
+            x.set_binary(self.props._cwd, 'test')
+
         x.set_arg(bmkinput.props.file, bmk2.AT_INPUT_FILE)
 
         # TODO: set GPU 

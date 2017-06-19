@@ -2084,6 +2084,7 @@ name = com-orkut.wgt32
 
 [com-orkut.wgt32.sym]
 name = com-orkut.wgt32.sym
+nontex = 1
 # /net/ohm/export/cdgc/inputs/stanford/communities/Orkut/com-orkut.wgt32.sym.gr
 ktruss_10_nodes=1212897
 ktruss_10_edges=41407911
