@@ -1,0 +1,91 @@
+# Evaluation
+
+# bmk2
+
+You can run bmk2 directly from `~sreepai/src/bmk2`. 
+
+Or clone it:
+
+  hg clone ~sreepai/src/bmk2
+
+# Inputs directory
+
+Create a directory called `inputs` which contains the following
+symlinks:
+
+  communities -> /net/ohm/export/cdgc/inputs/stanford/communities/
+  graphchallenge -> /net/ohm/export/cdgc/inputs/graphchallenge
+  ref -> /path/to/graph_challenge/SubgraphIsomorphism/data/
+  rmat -> /net/lightspeed/workspace/sreepai/inputs/rmat/
+  small -> /path/to/gpgraphiso/inputs/small
+
+Now, in `gpgraphiso/bmk2cfg`, create a file:
+
+  SITE-is.keyword
+
+Where `keyword` is anything you want. Then create a file called
+`graph.inputdb.keyword`, which contains the following lines:
+
+  [bmktest2]
+  version = 2
+  basepath = /absolute/path/to/inputs/directory
+
+Where `basepath` is set to the absolute path of the directory you
+created previously. You can use the `~` in the path.
+
+# Check that bmk2 is setup correctly
+
+Go to the directory that contains a binary (e.g. GPU K-truss or
+triangles) and the `bmktest2.py` file. Execute:
+
+  cd /path/to/gpgraphiso/ktruss/triangles
+
+  /path/to/bmk2/test2.py -d /path/to/gpgraphiso/bmk2cfg/ -v --cfg default list
+
+You should see:
+  [output elided]
+
+    triangles/irgl
+	oregon1_010414_adj.sym
+	cit-Patents_adj.sym
+	disjoint_tri_sm.sym
+	roadNet-TX_adj.sym
+	loc-brightkite_edges_adj.sym
+	as20000102_adj.sym
+	oregon1_010526_adj.sym
+	cit-HepPh_adj.sym
+	ktruss_example.sym
+	amazon0601_adj.sym
+	
+   [output elided]
+
+# Running benchmarks manually
+
+To run a benchmark manually (including its test), first switch to
+the directory containing the binary and the `bmktest2.py` file:
+  
+    cd /path/to/benchmark/directory/
+
+Now, use variants of the following command lines.
+
+To run all benchmark variants on all the inputs using default configuration:
+
+  /path/to/bmk2/test2.py -d /path/to/gpgraphiso/bmk2cfg/ -v --cfg default run
+
+To run all benchmark variants of ktruss on all the inputs for k=5
+(assuming you're in the ktruss benchmark directory):
+
+  /path/to/bmk2/test2.py -d /path/to/gpgraphiso/bmk2cfg/ -v --cfg default --varcfg k=5 run
+  
+To run on specific inputs:
+
+  /path/to/bmk2/test2.py ... run input-names-from-list-command
+
+To run with a specific number of threads (CPU k-truss):
+
+  /path/to/bmk2/test2.py -d /path/to/gpgraphiso/bmk2cfg/ -v --cfg default --varcfg t=12 run
+
+
+Performance numbers are obtained using `perf` instead of
+`run`. However, performance numbers will be obtained through a number
+of scripts.
