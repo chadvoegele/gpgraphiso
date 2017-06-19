@@ -6,12 +6,12 @@ class triangles(graph_bmk):
 	variant = 'irgl'
 
 	def filter_inputs(self, inputs):
-		return [x for x in inputs if x.props.format == 'bin/galois' and "triangle" in x.props.flags]
+		return [x for x in inputs if x.props.format == 'bin/galois' and ("triangle" in x.props.flags or hasattr(x.props, "triangles"))]
 
 	def get_run_spec(self, bmkinput):
 		x = bmk2.RunSpec(self, bmkinput)
                 if hasattr(bmkinput.props, 'nontex') and (int(bmkinput.props.nontex) == 1):
-                        x.set_binary(self.props._cwd, 'test-nontex')
+                        x.set_binary(self.props._cwd, 'test_nontex')
                 else:
                         x.set_binary(self.props._cwd, 'test')
 

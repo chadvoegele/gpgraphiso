@@ -524,3 +524,1095 @@ name = com-amazon.wgt32.sym
 file = communities/Amazon/com-amazon.wgt32.sym.gr
 format = bin/galois
 
+[graphchallenge/amazon0302_adj.mmio]
+flags = 
+name = amazon0302_adj
+file = graphchallenge/amazon0302_adj.mmio
+format = text/mmarket
+
+[graphchallenge/cit-HepPh_adj.sym.gr]
+flags = symmetric
+name = cit-HepPh_adj.sym
+file = graphchallenge/cit-HepPh_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/cit-HepTh_adj.sym.gr]
+flags = symmetric
+name = cit-HepTh_adj.sym
+file = graphchallenge/cit-HepTh_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/amazon0302_adj.gr]
+flags = 
+name = amazon0302_adj
+file = graphchallenge/amazon0302_adj.gr
+format = bin/galois
+
+[graphchallenge/amazon0302_adj.sym.gr]
+flags = symmetric
+name = amazon0302_adj.sym
+file = graphchallenge/amazon0302_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/amazon0312_adj.mmio]
+flags = 
+name = amazon0312_adj
+file = graphchallenge/amazon0312_adj.mmio
+format = text/mmarket
+
+[graphchallenge/amazon0505_adj.mmio]
+flags = 
+name = amazon0505_adj
+file = graphchallenge/amazon0505_adj.mmio
+format = text/mmarket
+
+[graphchallenge/amazon0601_adj.mmio]
+flags = 
+name = amazon0601_adj
+file = graphchallenge/amazon0601_adj.mmio
+format = text/mmarket
+
+[graphchallenge/as20000102_adj.mmio]
+flags = 
+name = as20000102_adj
+file = graphchallenge/as20000102_adj.mmio
+format = text/mmarket
+
+[graphchallenge/as-caida20071105_adj.mmio]
+flags = 
+name = as-caida20071105_adj
+file = graphchallenge/as-caida20071105_adj.mmio
+format = text/mmarket
+
+[graphchallenge/ca-AstroPh_adj.mmio]
+flags = 
+name = ca-AstroPh_adj
+file = graphchallenge/ca-AstroPh_adj.mmio
+format = text/mmarket
+
+[graphchallenge/ca-CondMat_adj.mmio]
+flags = 
+name = ca-CondMat_adj
+file = graphchallenge/ca-CondMat_adj.mmio
+format = text/mmarket
+
+[graphchallenge/ca-GrQc_adj.mmio]
+flags = 
+name = ca-GrQc_adj
+file = graphchallenge/ca-GrQc_adj.mmio
+format = text/mmarket
+
+[graphchallenge/ca-HepPh_adj.mmio]
+flags = 
+name = ca-HepPh_adj
+file = graphchallenge/ca-HepPh_adj.mmio
+format = text/mmarket
+
+[graphchallenge/ca-HepTh_adj.mmio]
+flags = 
+name = ca-HepTh_adj
+file = graphchallenge/ca-HepTh_adj.mmio
+format = text/mmarket
+
+[graphchallenge/cit-HepPh_adj.mmio]
+flags = 
+name = cit-HepPh_adj
+file = graphchallenge/cit-HepPh_adj.mmio
+format = text/mmarket
+
+[graphchallenge/cit-HepTh_adj.mmio]
+flags = 
+name = cit-HepTh_adj
+file = graphchallenge/cit-HepTh_adj.mmio
+format = text/mmarket
+
+[graphchallenge/cit-Patents_adj.mmio]
+flags = 
+name = cit-Patents_adj
+file = graphchallenge/cit-Patents_adj.mmio
+format = text/mmarket
+
+[graphchallenge/email-Enron_adj.mmio]
+flags = 
+name = email-Enron_adj
+file = graphchallenge/email-Enron_adj.mmio
+format = text/mmarket
+
+[graphchallenge/email-EuAll_adj.mmio]
+flags = 
+name = email-EuAll_adj
+file = graphchallenge/email-EuAll_adj.mmio
+format = text/mmarket
+
+[graphchallenge/facebook_combined_adj.mmio]
+flags = 
+name = facebook_combined_adj
+file = graphchallenge/facebook_combined_adj.mmio
+format = text/mmarket
+
+[graphchallenge/flickrEdges_adj.mmio]
+flags = 
+name = flickrEdges_adj
+file = graphchallenge/flickrEdges_adj.mmio
+format = text/mmarket
+
+[graphchallenge/loc-brightkite_edges_adj.mmio]
+flags = 
+name = loc-brightkite_edges_adj
+file = graphchallenge/loc-brightkite_edges_adj.mmio
+format = text/mmarket
+
+[graphchallenge/loc-gowalla_edges_adj.mmio]
+flags = 
+name = loc-gowalla_edges_adj
+file = graphchallenge/loc-gowalla_edges_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon1_010331_adj.mmio]
+flags = 
+name = oregon1_010331_adj
+file = graphchallenge/oregon1_010331_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon1_010407_adj.mmio]
+flags = 
+name = oregon1_010407_adj
+file = graphchallenge/oregon1_010407_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon1_010414_adj.mmio]
+flags = 
+name = oregon1_010414_adj
+file = graphchallenge/oregon1_010414_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon1_010421_adj.mmio]
+flags = 
+name = oregon1_010421_adj
+file = graphchallenge/oregon1_010421_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon1_010428_adj.mmio]
+flags = 
+name = oregon1_010428_adj
+file = graphchallenge/oregon1_010428_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon1_010505_adj.mmio]
+flags = 
+name = oregon1_010505_adj
+file = graphchallenge/oregon1_010505_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon1_010512_adj.mmio]
+flags = 
+name = oregon1_010512_adj
+file = graphchallenge/oregon1_010512_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon1_010519_adj.mmio]
+flags = 
+name = oregon1_010519_adj
+file = graphchallenge/oregon1_010519_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon1_010526_adj.mmio]
+flags = 
+name = oregon1_010526_adj
+file = graphchallenge/oregon1_010526_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon2_010331_adj.mmio]
+flags = 
+name = oregon2_010331_adj
+file = graphchallenge/oregon2_010331_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon2_010407_adj.mmio]
+flags = 
+name = oregon2_010407_adj
+file = graphchallenge/oregon2_010407_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon2_010414_adj.mmio]
+flags = 
+name = oregon2_010414_adj
+file = graphchallenge/oregon2_010414_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon2_010421_adj.mmio]
+flags = 
+name = oregon2_010421_adj
+file = graphchallenge/oregon2_010421_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon2_010428_adj.mmio]
+flags = 
+name = oregon2_010428_adj
+file = graphchallenge/oregon2_010428_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon2_010505_adj.mmio]
+flags = 
+name = oregon2_010505_adj
+file = graphchallenge/oregon2_010505_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon2_010512_adj.mmio]
+flags = 
+name = oregon2_010512_adj
+file = graphchallenge/oregon2_010512_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon2_010519_adj.mmio]
+flags = 
+name = oregon2_010519_adj
+file = graphchallenge/oregon2_010519_adj.mmio
+format = text/mmarket
+
+[graphchallenge/oregon2_010526_adj.mmio]
+flags = 
+name = oregon2_010526_adj
+file = graphchallenge/oregon2_010526_adj.mmio
+format = text/mmarket
+
+[graphchallenge/p2p-Gnutella04_adj.mmio]
+flags = 
+name = p2p-Gnutella04_adj
+file = graphchallenge/p2p-Gnutella04_adj.mmio
+format = text/mmarket
+
+[graphchallenge/p2p-Gnutella05_adj.mmio]
+flags = 
+name = p2p-Gnutella05_adj
+file = graphchallenge/p2p-Gnutella05_adj.mmio
+format = text/mmarket
+
+[graphchallenge/p2p-Gnutella06_adj.mmio]
+flags = 
+name = p2p-Gnutella06_adj
+file = graphchallenge/p2p-Gnutella06_adj.mmio
+format = text/mmarket
+
+[graphchallenge/p2p-Gnutella08_adj.mmio]
+flags = 
+name = p2p-Gnutella08_adj
+file = graphchallenge/p2p-Gnutella08_adj.mmio
+format = text/mmarket
+
+[graphchallenge/p2p-Gnutella09_adj.mmio]
+flags = 
+name = p2p-Gnutella09_adj
+file = graphchallenge/p2p-Gnutella09_adj.mmio
+format = text/mmarket
+
+[graphchallenge/p2p-Gnutella24_adj.mmio]
+flags = 
+name = p2p-Gnutella24_adj
+file = graphchallenge/p2p-Gnutella24_adj.mmio
+format = text/mmarket
+
+[graphchallenge/p2p-Gnutella25_adj.mmio]
+flags = 
+name = p2p-Gnutella25_adj
+file = graphchallenge/p2p-Gnutella25_adj.mmio
+format = text/mmarket
+
+[graphchallenge/p2p-Gnutella30_adj.mmio]
+flags = 
+name = p2p-Gnutella30_adj
+file = graphchallenge/p2p-Gnutella30_adj.mmio
+format = text/mmarket
+
+[graphchallenge/p2p-Gnutella31_adj.mmio]
+flags = 
+name = p2p-Gnutella31_adj
+file = graphchallenge/p2p-Gnutella31_adj.mmio
+format = text/mmarket
+
+[graphchallenge/roadNet-CA_adj.mmio]
+flags = 
+name = roadNet-CA_adj
+file = graphchallenge/roadNet-CA_adj.mmio
+format = text/mmarket
+
+[graphchallenge/roadNet-PA_adj.mmio]
+flags = 
+name = roadNet-PA_adj
+file = graphchallenge/roadNet-PA_adj.mmio
+format = text/mmarket
+
+[graphchallenge/roadNet-TX_adj.mmio]
+flags = 
+name = roadNet-TX_adj
+file = graphchallenge/roadNet-TX_adj.mmio
+format = text/mmarket
+
+[graphchallenge/soc-Epinions1_adj.mmio]
+flags = 
+name = soc-Epinions1_adj
+file = graphchallenge/soc-Epinions1_adj.mmio
+format = text/mmarket
+
+[graphchallenge/soc-Slashdot0811_adj.mmio]
+flags = 
+name = soc-Slashdot0811_adj
+file = graphchallenge/soc-Slashdot0811_adj.mmio
+format = text/mmarket
+
+[graphchallenge/soc-Slashdot0902_adj.mmio]
+flags = 
+name = soc-Slashdot0902_adj
+file = graphchallenge/soc-Slashdot0902_adj.mmio
+format = text/mmarket
+
+[graphchallenge/graph500-scale19-ef16_adj.mmio]
+flags = 
+name = graph500-scale19-ef16_adj
+file = graphchallenge/graph500-scale19-ef16_adj.mmio
+format = text/mmarket
+
+[graphchallenge/graph500-scale20-ef16_adj.mmio]
+flags = 
+name = graph500-scale20-ef16_adj
+file = graphchallenge/graph500-scale20-ef16_adj.mmio
+format = text/mmarket
+
+[graphchallenge/graph500-scale21-ef16_adj.mmio]
+flags = 
+name = graph500-scale21-ef16_adj
+file = graphchallenge/graph500-scale21-ef16_adj.mmio
+format = text/mmarket
+
+[graphchallenge/graph500-scale22-ef16_adj.mmio]
+flags = 
+name = graph500-scale22-ef16_adj
+file = graphchallenge/graph500-scale22-ef16_adj.mmio
+format = text/mmarket
+
+[graphchallenge/graph500-scale23-ef16_adj.mmio]
+flags = 
+name = graph500-scale23-ef16_adj
+file = graphchallenge/graph500-scale23-ef16_adj.mmio
+format = text/mmarket
+
+[graphchallenge/graph500-scale24-ef16_adj.mmio]
+flags = 
+name = graph500-scale24-ef16_adj
+file = graphchallenge/graph500-scale24-ef16_adj.mmio
+format = text/mmarket
+
+[graphchallenge/graph500-scale25-ef16_adj.mmio]
+flags = 
+name = graph500-scale25-ef16_adj
+file = graphchallenge/graph500-scale25-ef16_adj.mmio
+format = text/mmarket
+
+[graphchallenge/graph500-scale18-ef16_adj.gr]
+flags = 
+name = graph500-scale18-ef16_adj
+file = graphchallenge/graph500-scale18-ef16_adj.gr
+format = bin/galois
+
+[graphchallenge/amazon0312_adj.gr]
+flags = 
+name = amazon0312_adj
+file = graphchallenge/amazon0312_adj.gr
+format = bin/galois
+
+[graphchallenge/amazon0312_adj.sym.gr]
+flags = symmetric
+name = amazon0312_adj.sym
+file = graphchallenge/amazon0312_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/amazon0505_adj.gr]
+flags = 
+name = amazon0505_adj
+file = graphchallenge/amazon0505_adj.gr
+format = bin/galois
+
+[graphchallenge/amazon0505_adj.sym.gr]
+flags = symmetric
+name = amazon0505_adj.sym
+file = graphchallenge/amazon0505_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/amazon0601_adj.gr]
+flags = 
+name = amazon0601_adj
+file = graphchallenge/amazon0601_adj.gr
+format = bin/galois
+
+[graphchallenge/amazon0601_adj.sym.gr]
+flags = symmetric
+name = amazon0601_adj.sym
+file = graphchallenge/amazon0601_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/as20000102_adj.gr]
+flags = 
+name = as20000102_adj
+file = graphchallenge/as20000102_adj.gr
+format = bin/galois
+
+[graphchallenge/as20000102_adj.sym.gr]
+flags = symmetric
+name = as20000102_adj.sym
+file = graphchallenge/as20000102_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/as-caida20071105_adj.gr]
+flags = 
+name = as-caida20071105_adj
+file = graphchallenge/as-caida20071105_adj.gr
+format = bin/galois
+
+[graphchallenge/as-caida20071105_adj.sym.gr]
+flags = symmetric
+name = as-caida20071105_adj.sym
+file = graphchallenge/as-caida20071105_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/ca-AstroPh_adj.gr]
+flags = 
+name = ca-AstroPh_adj
+file = graphchallenge/ca-AstroPh_adj.gr
+format = bin/galois
+
+[graphchallenge/ca-AstroPh_adj.sym.gr]
+flags = symmetric
+name = ca-AstroPh_adj.sym
+file = graphchallenge/ca-AstroPh_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/ca-CondMat_adj.gr]
+flags = 
+name = ca-CondMat_adj
+file = graphchallenge/ca-CondMat_adj.gr
+format = bin/galois
+
+[graphchallenge/ca-CondMat_adj.sym.gr]
+flags = symmetric
+name = ca-CondMat_adj.sym
+file = graphchallenge/ca-CondMat_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/ca-GrQc_adj.gr]
+flags = 
+name = ca-GrQc_adj
+file = graphchallenge/ca-GrQc_adj.gr
+format = bin/galois
+
+[graphchallenge/ca-GrQc_adj.sym.gr]
+flags = symmetric
+name = ca-GrQc_adj.sym
+file = graphchallenge/ca-GrQc_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/ca-HepPh_adj.gr]
+flags = 
+name = ca-HepPh_adj
+file = graphchallenge/ca-HepPh_adj.gr
+format = bin/galois
+
+[graphchallenge/ca-HepPh_adj.sym.gr]
+flags = symmetric
+name = ca-HepPh_adj.sym
+file = graphchallenge/ca-HepPh_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/ca-HepTh_adj.gr]
+flags = 
+name = ca-HepTh_adj
+file = graphchallenge/ca-HepTh_adj.gr
+format = bin/galois
+
+[graphchallenge/ca-HepTh_adj.sym.gr]
+flags = symmetric
+name = ca-HepTh_adj.sym
+file = graphchallenge/ca-HepTh_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/cit-HepPh_adj.gr]
+flags = 
+name = cit-HepPh_adj
+file = graphchallenge/cit-HepPh_adj.gr
+format = bin/galois
+
+[graphchallenge/cit-HepTh_adj.gr]
+flags = 
+name = cit-HepTh_adj
+file = graphchallenge/cit-HepTh_adj.gr
+format = bin/galois
+
+[graphchallenge/cit-Patents_adj.gr]
+flags = 
+name = cit-Patents_adj
+file = graphchallenge/cit-Patents_adj.gr
+format = bin/galois
+
+[graphchallenge/cit-Patents_adj.sym.gr]
+flags = symmetric
+name = cit-Patents_adj.sym
+file = graphchallenge/cit-Patents_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/email-Enron_adj.gr]
+flags = 
+name = email-Enron_adj
+file = graphchallenge/email-Enron_adj.gr
+format = bin/galois
+
+[graphchallenge/email-Enron_adj.sym.gr]
+flags = symmetric
+name = email-Enron_adj.sym
+file = graphchallenge/email-Enron_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/email-EuAll_adj.gr]
+flags = 
+name = email-EuAll_adj
+file = graphchallenge/email-EuAll_adj.gr
+format = bin/galois
+
+[graphchallenge/email-EuAll_adj.sym.gr]
+flags = symmetric
+name = email-EuAll_adj.sym
+file = graphchallenge/email-EuAll_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/facebook_combined_adj.gr]
+flags = 
+name = facebook_combined_adj
+file = graphchallenge/facebook_combined_adj.gr
+format = bin/galois
+
+[graphchallenge/facebook_combined_adj.sym.gr]
+flags = symmetric
+name = facebook_combined_adj.sym
+file = graphchallenge/facebook_combined_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/flickrEdges_adj.gr]
+flags = 
+name = flickrEdges_adj
+file = graphchallenge/flickrEdges_adj.gr
+format = bin/galois
+
+[graphchallenge/flickrEdges_adj.sym.gr]
+flags = symmetric
+name = flickrEdges_adj.sym
+file = graphchallenge/flickrEdges_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/loc-brightkite_edges_adj.gr]
+flags = 
+name = loc-brightkite_edges_adj
+file = graphchallenge/loc-brightkite_edges_adj.gr
+format = bin/galois
+
+[graphchallenge/loc-brightkite_edges_adj.sym.gr]
+flags = symmetric
+name = loc-brightkite_edges_adj.sym
+file = graphchallenge/loc-brightkite_edges_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/loc-gowalla_edges_adj.gr]
+flags = 
+name = loc-gowalla_edges_adj
+file = graphchallenge/loc-gowalla_edges_adj.gr
+format = bin/galois
+
+[graphchallenge/loc-gowalla_edges_adj.sym.gr]
+flags = symmetric
+name = loc-gowalla_edges_adj.sym
+file = graphchallenge/loc-gowalla_edges_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010331_adj.gr]
+flags = 
+name = oregon1_010331_adj
+file = graphchallenge/oregon1_010331_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010331_adj.sym.gr]
+flags = symmetric
+name = oregon1_010331_adj.sym
+file = graphchallenge/oregon1_010331_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010407_adj.gr]
+flags = 
+name = oregon1_010407_adj
+file = graphchallenge/oregon1_010407_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010407_adj.sym.gr]
+flags = symmetric
+name = oregon1_010407_adj.sym
+file = graphchallenge/oregon1_010407_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010414_adj.gr]
+flags = 
+name = oregon1_010414_adj
+file = graphchallenge/oregon1_010414_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010414_adj.sym.gr]
+flags = symmetric
+name = oregon1_010414_adj.sym
+file = graphchallenge/oregon1_010414_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010421_adj.gr]
+flags = 
+name = oregon1_010421_adj
+file = graphchallenge/oregon1_010421_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010421_adj.sym.gr]
+flags = symmetric
+name = oregon1_010421_adj.sym
+file = graphchallenge/oregon1_010421_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010428_adj.gr]
+flags = 
+name = oregon1_010428_adj
+file = graphchallenge/oregon1_010428_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010428_adj.sym.gr]
+flags = symmetric
+name = oregon1_010428_adj.sym
+file = graphchallenge/oregon1_010428_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010505_adj.gr]
+flags = 
+name = oregon1_010505_adj
+file = graphchallenge/oregon1_010505_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010505_adj.sym.gr]
+flags = symmetric
+name = oregon1_010505_adj.sym
+file = graphchallenge/oregon1_010505_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010512_adj.gr]
+flags = 
+name = oregon1_010512_adj
+file = graphchallenge/oregon1_010512_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010512_adj.sym.gr]
+flags = symmetric
+name = oregon1_010512_adj.sym
+file = graphchallenge/oregon1_010512_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010519_adj.gr]
+flags = 
+name = oregon1_010519_adj
+file = graphchallenge/oregon1_010519_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010519_adj.sym.gr]
+flags = symmetric
+name = oregon1_010519_adj.sym
+file = graphchallenge/oregon1_010519_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010526_adj.gr]
+flags = 
+name = oregon1_010526_adj
+file = graphchallenge/oregon1_010526_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon1_010526_adj.sym.gr]
+flags = symmetric
+name = oregon1_010526_adj.sym
+file = graphchallenge/oregon1_010526_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010331_adj.gr]
+flags = 
+name = oregon2_010331_adj
+file = graphchallenge/oregon2_010331_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010331_adj.sym.gr]
+flags = symmetric
+name = oregon2_010331_adj.sym
+file = graphchallenge/oregon2_010331_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010407_adj.gr]
+flags = 
+name = oregon2_010407_adj
+file = graphchallenge/oregon2_010407_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010407_adj.sym.gr]
+flags = symmetric
+name = oregon2_010407_adj.sym
+file = graphchallenge/oregon2_010407_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010414_adj.gr]
+flags = 
+name = oregon2_010414_adj
+file = graphchallenge/oregon2_010414_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010414_adj.sym.gr]
+flags = symmetric
+name = oregon2_010414_adj.sym
+file = graphchallenge/oregon2_010414_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010421_adj.gr]
+flags = 
+name = oregon2_010421_adj
+file = graphchallenge/oregon2_010421_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010421_adj.sym.gr]
+flags = symmetric
+name = oregon2_010421_adj.sym
+file = graphchallenge/oregon2_010421_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010428_adj.gr]
+flags = 
+name = oregon2_010428_adj
+file = graphchallenge/oregon2_010428_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010428_adj.sym.gr]
+flags = symmetric
+name = oregon2_010428_adj.sym
+file = graphchallenge/oregon2_010428_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010505_adj.gr]
+flags = 
+name = oregon2_010505_adj
+file = graphchallenge/oregon2_010505_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010505_adj.sym.gr]
+flags = symmetric
+name = oregon2_010505_adj.sym
+file = graphchallenge/oregon2_010505_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010512_adj.gr]
+flags = 
+name = oregon2_010512_adj
+file = graphchallenge/oregon2_010512_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010512_adj.sym.gr]
+flags = symmetric
+name = oregon2_010512_adj.sym
+file = graphchallenge/oregon2_010512_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010519_adj.gr]
+flags = 
+name = oregon2_010519_adj
+file = graphchallenge/oregon2_010519_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010519_adj.sym.gr]
+flags = symmetric
+name = oregon2_010519_adj.sym
+file = graphchallenge/oregon2_010519_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010526_adj.gr]
+flags = 
+name = oregon2_010526_adj
+file = graphchallenge/oregon2_010526_adj.gr
+format = bin/galois
+
+[graphchallenge/oregon2_010526_adj.sym.gr]
+flags = symmetric
+name = oregon2_010526_adj.sym
+file = graphchallenge/oregon2_010526_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella04_adj.gr]
+flags = 
+name = p2p-Gnutella04_adj
+file = graphchallenge/p2p-Gnutella04_adj.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella04_adj.sym.gr]
+flags = symmetric
+name = p2p-Gnutella04_adj.sym
+file = graphchallenge/p2p-Gnutella04_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella05_adj.gr]
+flags = 
+name = p2p-Gnutella05_adj
+file = graphchallenge/p2p-Gnutella05_adj.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella05_adj.sym.gr]
+flags = symmetric
+name = p2p-Gnutella05_adj.sym
+file = graphchallenge/p2p-Gnutella05_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella06_adj.gr]
+flags = 
+name = p2p-Gnutella06_adj
+file = graphchallenge/p2p-Gnutella06_adj.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella06_adj.sym.gr]
+flags = symmetric
+name = p2p-Gnutella06_adj.sym
+file = graphchallenge/p2p-Gnutella06_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella08_adj.gr]
+flags = 
+name = p2p-Gnutella08_adj
+file = graphchallenge/p2p-Gnutella08_adj.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella08_adj.sym.gr]
+flags = symmetric
+name = p2p-Gnutella08_adj.sym
+file = graphchallenge/p2p-Gnutella08_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella09_adj.gr]
+flags = 
+name = p2p-Gnutella09_adj
+file = graphchallenge/p2p-Gnutella09_adj.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella09_adj.sym.gr]
+flags = symmetric
+name = p2p-Gnutella09_adj.sym
+file = graphchallenge/p2p-Gnutella09_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella24_adj.gr]
+flags = 
+name = p2p-Gnutella24_adj
+file = graphchallenge/p2p-Gnutella24_adj.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella24_adj.sym.gr]
+flags = symmetric
+name = p2p-Gnutella24_adj.sym
+file = graphchallenge/p2p-Gnutella24_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella25_adj.gr]
+flags = 
+name = p2p-Gnutella25_adj
+file = graphchallenge/p2p-Gnutella25_adj.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella25_adj.sym.gr]
+flags = symmetric
+name = p2p-Gnutella25_adj.sym
+file = graphchallenge/p2p-Gnutella25_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella30_adj.gr]
+flags = 
+name = p2p-Gnutella30_adj
+file = graphchallenge/p2p-Gnutella30_adj.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella30_adj.sym.gr]
+flags = symmetric
+name = p2p-Gnutella30_adj.sym
+file = graphchallenge/p2p-Gnutella30_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella31_adj.gr]
+flags = 
+name = p2p-Gnutella31_adj
+file = graphchallenge/p2p-Gnutella31_adj.gr
+format = bin/galois
+
+[graphchallenge/p2p-Gnutella31_adj.sym.gr]
+flags = symmetric
+name = p2p-Gnutella31_adj.sym
+file = graphchallenge/p2p-Gnutella31_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/roadNet-CA_adj.gr]
+flags = 
+name = roadNet-CA_adj
+file = graphchallenge/roadNet-CA_adj.gr
+format = bin/galois
+
+[graphchallenge/roadNet-CA_adj.sym.gr]
+flags = symmetric
+name = roadNet-CA_adj.sym
+file = graphchallenge/roadNet-CA_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/roadNet-PA_adj.gr]
+flags = 
+name = roadNet-PA_adj
+file = graphchallenge/roadNet-PA_adj.gr
+format = bin/galois
+
+[graphchallenge/roadNet-PA_adj.sym.gr]
+flags = symmetric
+name = roadNet-PA_adj.sym
+file = graphchallenge/roadNet-PA_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/roadNet-TX_adj.gr]
+flags = 
+name = roadNet-TX_adj
+file = graphchallenge/roadNet-TX_adj.gr
+format = bin/galois
+
+[graphchallenge/roadNet-TX_adj.sym.gr]
+flags = symmetric
+name = roadNet-TX_adj.sym
+file = graphchallenge/roadNet-TX_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/soc-Epinions1_adj.gr]
+flags = 
+name = soc-Epinions1_adj
+file = graphchallenge/soc-Epinions1_adj.gr
+format = bin/galois
+
+[graphchallenge/soc-Epinions1_adj.sym.gr]
+flags = symmetric
+name = soc-Epinions1_adj.sym
+file = graphchallenge/soc-Epinions1_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/soc-Slashdot0811_adj.gr]
+flags = 
+name = soc-Slashdot0811_adj
+file = graphchallenge/soc-Slashdot0811_adj.gr
+format = bin/galois
+
+[graphchallenge/soc-Slashdot0811_adj.sym.gr]
+flags = symmetric
+name = soc-Slashdot0811_adj.sym
+file = graphchallenge/soc-Slashdot0811_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/soc-Slashdot0902_adj.gr]
+flags = 
+name = soc-Slashdot0902_adj
+file = graphchallenge/soc-Slashdot0902_adj.gr
+format = bin/galois
+
+[graphchallenge/soc-Slashdot0902_adj.sym.gr]
+flags = symmetric
+name = soc-Slashdot0902_adj.sym
+file = graphchallenge/soc-Slashdot0902_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/graph500-scale18-ef16_adj.mmio]
+flags = 
+name = graph500-scale18-ef16_adj
+file = graphchallenge/graph500-scale18-ef16_adj.mmio
+format = text/mmarket
+
+[graphchallenge/graph500-scale18-ef16_adj.sym.gr]
+flags = symmetric
+name = graph500-scale18-ef16_adj.sym
+file = graphchallenge/graph500-scale18-ef16_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/graph500-scale19-ef16_adj.gr]
+flags = 
+name = graph500-scale19-ef16_adj
+file = graphchallenge/graph500-scale19-ef16_adj.gr
+format = bin/galois
+
+[graphchallenge/graph500-scale19-ef16_adj.sym.gr]
+flags = symmetric
+name = graph500-scale19-ef16_adj.sym
+file = graphchallenge/graph500-scale19-ef16_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/graph500-scale20-ef16_adj.gr]
+flags = 
+name = graph500-scale20-ef16_adj
+file = graphchallenge/graph500-scale20-ef16_adj.gr
+format = bin/galois
+
+[graphchallenge/graph500-scale20-ef16_adj.sym.gr]
+flags = symmetric
+name = graph500-scale20-ef16_adj.sym
+file = graphchallenge/graph500-scale20-ef16_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/graph500-scale21-ef16_adj.gr]
+flags = 
+name = graph500-scale21-ef16_adj
+file = graphchallenge/graph500-scale21-ef16_adj.gr
+format = bin/galois
+
+[graphchallenge/graph500-scale21-ef16_adj.sym.gr]
+flags = symmetric
+name = graph500-scale21-ef16_adj.sym
+file = graphchallenge/graph500-scale21-ef16_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/graph500-scale22-ef16_adj.gr]
+flags = 
+name = graph500-scale22-ef16_adj
+file = graphchallenge/graph500-scale22-ef16_adj.gr
+format = bin/galois
+
+[graphchallenge/graph500-scale22-ef16_adj.sym.gr]
+flags = symmetric
+name = graph500-scale22-ef16_adj.sym
+file = graphchallenge/graph500-scale22-ef16_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/graph500-scale23-ef16_adj.gr]
+flags = 
+name = graph500-scale23-ef16_adj
+file = graphchallenge/graph500-scale23-ef16_adj.gr
+format = bin/galois
+
+[graphchallenge/graph500-scale23-ef16_adj.sym.gr]
+flags = symmetric
+name = graph500-scale23-ef16_adj.sym
+file = graphchallenge/graph500-scale23-ef16_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/graph500-scale24-ef16_adj.gr]
+flags = 
+name = graph500-scale24-ef16_adj
+file = graphchallenge/graph500-scale24-ef16_adj.gr
+format = bin/galois
+
+[graphchallenge/graph500-scale24-ef16_adj.sym.gr]
+flags = symmetric
+name = graph500-scale24-ef16_adj.sym
+file = graphchallenge/graph500-scale24-ef16_adj.sym.gr
+format = bin/galois
+
+[graphchallenge/graph500-scale25-ef16_adj.gr]
+flags = 
+name = graph500-scale25-ef16_adj
+file = graphchallenge/graph500-scale25-ef16_adj.gr
+format = bin/galois
+
