@@ -2042,6 +2042,6 @@ triangles = 254165706
 [graph500-scale24-ef16_adj.sym]
 name = graph500-scale24-ef16_adj.sym
 nontex = 1
-comment = "this runs out of memory"
-triangles = -1
+comment = "this runs out of memory on the gtx1080"
+triangles = 1346226968
 
