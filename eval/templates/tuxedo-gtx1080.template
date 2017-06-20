@@ -1,0 +1,2 @@
+gpu-logs/ktruss/tuxedo-gtx1080/{input}.log:
+	$(BMK2)/test2.py -d $(BMK2CFG) --cfg default --cfg k=max --log $@ -v perf {binspec}

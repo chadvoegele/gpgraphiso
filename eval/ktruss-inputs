@@ -1,0 +1,8 @@
+complete5_sm.sym /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr
+com-dblp.wgt32.sym /h2/sreepai/pd/hpec/inputs/communities/DBLP/com-dblp.wgt32.sym.gr
+com-amazon.wgt32.sym /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr
+com-orkut.wgt32.sym /h2/sreepai/pd/hpec/inputs/communities/Orkut/com-orkut.wgt32.sym.gr
+rmat16.sym.tri /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr
+com-youtube.wgt32.sym /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr
+com-friendster.wgt32.sym /h2/sreepai/pd/hpec/inputs/communities/Friendster/com-friendster.wgt32.sym.gr
+com-lj.wgt32.sym /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr

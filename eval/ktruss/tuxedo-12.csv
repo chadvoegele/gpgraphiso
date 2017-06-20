@@ -1,0 +1,8 @@
+experiment,bmk,variant,input,time_ns_avg,time_ns_count,time_ns_sd,time_ns_sum,xid
+tuxedo-12,ktruss,galois+bspIm,com-amazon.wgt32.sym,48333333.3333,3,1527525.23165,145000000,1497905791.85.1
+tuxedo-12,ktruss,galois+bspIm,com-dblp.wgt32.sym,58000000.0,3,3464101.61514,174000000,1497905786.79.1
+tuxedo-12,ktruss,galois+bspIm,com-lj.wgt32.sym,3846666666.67,3,204661509.164,11540000000,1497907957.41.1
+tuxedo-12,ktruss,galois+bspIm,com-orkut.wgt32.sym,31399000000.0,3,2668385466.91,94197000000,1497905796.39.1
+tuxedo-12,ktruss,galois+bspIm,com-youtube.wgt32.sym,665666666.667,3,82730486.1181,1997000000,1497906259.34.1
+tuxedo-12,ktruss,galois+bspIm,complete5_sm.sym,5000000.0,3,0.0,15000000,1497905782.74.1
+tuxedo-12,ktruss,galois+bspIm,rmat16.sym.tri,79000000.0,3,8717797.88708,237000000,1497906253.85.1

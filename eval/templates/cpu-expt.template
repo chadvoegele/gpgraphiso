@@ -1,0 +1,4 @@
+#RULE
+cpu-logs/{bmk}/{expt}/{input}.log: 
+	$(BMK2)/test2.py -d $(BMK2CFG) --cfg default --varcfg k=max --varcfg t={threads} --scan {scandir} --log $@ -v perf {binspec} {input}
+
