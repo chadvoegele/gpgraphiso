@@ -20,7 +20,7 @@ setup: cpu-logs gpu-logs cpu-logs/ktruss cpu-logs/triangles gpu-logs/ktruss gpu-
 	mkdir $@
 
 inputs-desc.csv: ktruss-inputs triangle-inputs
-	PYTHONPATH=$(GR_CHALLENGE)/grtools/:$$PYTHONPATH scripts/desc_inputs.py $< > $@
+	PYTHONPATH=$(GR_CHALLENGE)/grtools/:$$PYTHONPATH scripts/desc_inputs.py $^ > $@
 
 ktruss-tuxedo-gtx1080.mk: ktruss-inputs gpu-logs/ktruss/tuxedo-gtx1080 templates/gpu-expt.template
 	scripts/gen_makefile.py $< ktruss/irgl tuxedo-gtx1080 templates/gpu-expt.template $@ -t "{bmk}-{expt}" -v bmk=ktruss -v scandir=$(KTRUSS) -v env_vars=
