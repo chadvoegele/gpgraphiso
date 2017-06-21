@@ -63,7 +63,7 @@ for f in data:
         print TEMPLATE.format(**xe)
         max_k = max(max_k, int(xe['k']))
 
-    print "ktruss_max=%d" % (max_k+1,)
+    print "ktruss_max=%d" % (max_k,)
     print 
 
 sout.sort()

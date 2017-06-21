@@ -1671,7 +1671,7 @@ ktruss_24_nodes = 37
 ktruss_24_edges = 600
 ktruss_25_nodes = 36
 ktruss_25_edges = 574
-ktruss_max = 26
+ktruss_max = 25
 
 [cit-HepTh_adj.sym]
 name = cit-HepTh_adj.sym
@@ -1734,7 +1734,7 @@ ktruss_29_nodes = 91
 ktruss_29_edges = 1824
 ktruss_30_nodes = 48
 ktruss_30_edges = 999
-ktruss_max = 31
+ktruss_max = 30
 
 [amazon0302_adj.sym]
 name = amazon0302_adj.sym
@@ -1751,7 +1751,7 @@ ktruss_6_nodes = 28719
 ktruss_6_edges = 77454
 ktruss_7_nodes = 105
 ktruss_7_edges = 315
-ktruss_max = 8
+ktruss_max = 7
 
 [amazon0312_adj]
 name = amazon0312_adj
@@ -1956,7 +1956,7 @@ ktruss_10_nodes = 18350
 ktruss_10_edges = 93517
 ktruss_11_nodes = 4534
 ktruss_11_edges = 23288
-ktruss_max = 12
+ktruss_max = 11
 
 [amazon0505_adj.sym]
 name = amazon0505_adj.sym
@@ -1981,7 +1981,7 @@ ktruss_10_nodes = 20851
 ktruss_10_edges = 106136
 ktruss_11_nodes = 4878
 ktruss_11_edges = 25175
-ktruss_max = 12
+ktruss_max = 11
 
 [amazon0601_adj.sym]
 name = amazon0601_adj.sym
@@ -2006,7 +2006,7 @@ ktruss_10_nodes = 21651
 ktruss_10_edges = 110473
 ktruss_11_nodes = 5361
 ktruss_11_edges = 27614
-ktruss_max = 12
+ktruss_max = 11
 
 [as20000102_adj.sym]
 name = as20000102_adj.sym
@@ -2029,7 +2029,7 @@ ktruss_9_nodes = 36
 ktruss_9_edges = 309
 ktruss_10_nodes = 23
 ktruss_10_edges = 179
-ktruss_max = 11
+ktruss_max = 10
 
 [as-caida20071105_adj.sym]
 name = as-caida20071105_adj.sym
@@ -2064,7 +2064,7 @@ ktruss_15_nodes = 30
 ktruss_15_edges = 359
 ktruss_16_nodes = 27
 ktruss_16_edges = 304
-ktruss_max = 17
+ktruss_max = 16
 
 [ca-AstroPh_adj.sym]
 name = ca-AstroPh_adj.sym
@@ -2127,7 +2127,7 @@ ktruss_29_nodes = 2016
 ktruss_29_edges = 48642
 ktruss_30_nodes = 1834
 ktruss_30_edges = 45152
-ktruss_max = 31
+ktruss_max = 30
 
 [ca-CondMat_adj.sym]
 name = ca-CondMat_adj.sym
@@ -2182,7 +2182,7 @@ ktruss_25_nodes = 26
 ktruss_25_edges = 325
 ktruss_26_nodes = 26
 ktruss_26_edges = 325
-ktruss_max = 27
+ktruss_max = 26
 
 [ca-GrQc_adj.sym]
 name = ca-GrQc_adj.sym
@@ -2245,7 +2245,7 @@ ktruss_29_nodes = 123
 ktruss_29_edges = 2406
 ktruss_30_nodes = 123
 ktruss_30_edges = 2406
-ktruss_max = 31
+ktruss_max = 30
 
 [ca-HepPh_adj.sym]
 name = ca-HepPh_adj.sym
@@ -2308,7 +2308,7 @@ ktruss_29_nodes = 1473
 ktruss_29_edges = 71818
 ktruss_30_nodes = 1422
 ktruss_30_edges = 70709
-ktruss_max = 31
+ktruss_max = 30
 
 [ca-HepTh_adj.sym]
 name = ca-HepTh_adj.sym
@@ -2371,7 +2371,7 @@ ktruss_29_nodes = 32
 ktruss_29_edges = 496
 ktruss_30_nodes = 32
 ktruss_30_edges = 496
-ktruss_max = 31
+ktruss_max = 30
 
 [cit-Patents_adj.sym]
 name = cit-Patents_adj.sym
@@ -2434,7 +2434,7 @@ ktruss_29_nodes = 113
 ktruss_29_edges = 4460
 ktruss_30_nodes = 113
 ktruss_30_edges = 4444
-ktruss_max = 31
+ktruss_max = 30
 
 [email-Enron_adj.sym]
 name = email-Enron_adj.sym
@@ -2481,7 +2481,7 @@ ktruss_21_nodes = 108
 ktruss_21_edges = 2116
 ktruss_22_nodes = 45
 ktruss_22_edges = 775
-ktruss_max = 23
+ktruss_max = 22
 
 [email-EuAll_adj.sym]
 name = email-EuAll_adj.sym
@@ -2524,7 +2524,7 @@ ktruss_19_nodes = 70
 ktruss_19_edges = 1462
 ktruss_20_nodes = 62
 ktruss_20_edges = 1215
-ktruss_max = 21
+ktruss_max = 20
 
 [facebook_combined_adj.sym]
 name = facebook_combined_adj.sym
@@ -2587,7 +2587,7 @@ ktruss_29_nodes = 758
 ktruss_29_edges = 40758
 ktruss_30_nodes = 720
 ktruss_30_edges = 39278
-ktruss_max = 31
+ktruss_max = 30
 
 [flickrEdges_adj.sym]
 name = flickrEdges_adj.sym
@@ -2650,7 +2650,7 @@ ktruss_29_nodes = 10711
 ktruss_29_edges = 1254177
 ktruss_30_nodes = 10410
 ktruss_30_edges = 1234237
-ktruss_max = 31
+ktruss_max = 30
 
 [loc-brightkite_edges_adj.sym]
 name = loc-brightkite_edges_adj.sym
@@ -2853,7 +2853,7 @@ ktruss_29_nodes = 9913
 ktruss_29_edges = 1318437
 ktruss_30_nodes = 9178
 ktruss_30_edges = 1273001
-ktruss_max = 31
+ktruss_max = 30
 
 [graph500-scale19-ef16_adj.sym]
 name = graph500-scale19-ef16_adj.sym
@@ -2916,7 +2916,7 @@ ktruss_29_nodes = 16395
 ktruss_29_edges = 2680048
 ktruss_30_nodes = 16281
 ktruss_30_edges = 2623179
-ktruss_max = 31
+ktruss_max = 30
 
 [graph500-scale20-ef16_adj.sym]
 name = graph500-scale20-ef16_adj.sym
@@ -2979,7 +2979,7 @@ ktruss_29_nodes = 22813
 ktruss_29_edges = 5347095
 ktruss_30_nodes = 22348
 ktruss_30_edges = 5278036
-ktruss_max = 31
+ktruss_max = 30
 
 [graph500-scale21-ef16_adj.sym]
 name = graph500-scale21-ef16_adj.sym
@@ -3043,7 +3043,7 @@ ktruss_29_nodes = 48345
 ktruss_29_edges = 10543715
 ktruss_30_nodes = 44807
 ktruss_30_edges = 10296487
-ktruss_max = 31
+ktruss_max = 30
 
 [graph500-scale22-ef16_adj.sym]
 name = graph500-scale22-ef16_adj.sym
@@ -3107,7 +3107,7 @@ ktruss_29_nodes = 97098
 ktruss_29_edges = 22182921
 ktruss_30_nodes = 94317
 ktruss_30_edges = 21656322
-ktruss_max = 31
+ktruss_max = 30
 
 [graph500-scale23-ef16_adj.sym]
 name = graph500-scale23-ef16_adj.sym
@@ -3171,7 +3171,7 @@ ktruss_29_nodes = 144595
 ktruss_29_edges = 43984932
 ktruss_30_nodes = 143239
 ktruss_30_edges = 43474744
-ktruss_max = 31
+ktruss_max = 30
 
 [graph500-scale24-ef16_adj.sym]
 name = graph500-scale24-ef16_adj.sym
