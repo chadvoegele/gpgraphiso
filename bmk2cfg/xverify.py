@@ -5,6 +5,7 @@
 
 import argparse
 import re
+import os
 
 K_RE = re.compile(r"^Verifying .* (?P<k>[0-9]+)-truss$")
 N_RE = re.compile(r"^Truss is computed for (?P<name>.*.gr) and .*")
@@ -40,9 +41,31 @@ p.add_argument("files", nargs="+", help="Output of the verifyTruss tool")
 
 args = p.parse_args()
 
+data = {}
+
 for f in args.files:
     x = extract_ne(f)
-    if x: 
-        print TEMPLATE.format(**x)
-        if x['nodes'] == '0':
-            print "ktruss_max=%s" % (int(x['k'] - 1))
+    if x:
+        if x['name'] not in data:
+            data[x['name']] = []
+
+        if x['nodes'] != '0':
+            data[x['name']].append(x)
+
+sout = []
+for f in data:    
+    max_k = 0
+    data[f].sort(key = lambda x: int(x['k']))
+    s = os.path.basename(f)[:-3] # remove .gr
+    sout.append(s)
+    print "[%s]" % (s,)
+    for xe in data[f]:
+        print TEMPLATE.format(**xe)
+        max_k = max(max_k, int(xe['k']))
+
+    print "ktruss_max=%d" % (max_k+1,)
+    print 
+
+sout.sort()
+
+print "#", ",".join(sout)

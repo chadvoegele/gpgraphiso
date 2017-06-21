@@ -1,6 +1,6 @@
 BMK2=~/src/bmk2
 
-all: triangles/tuxedo-gtx1080.csv triangles/tuxedo-k80.csv ktruss/tuxedo-12.csv ktruss/tuxedo-24.csv
+all: triangles/tuxedo-gtx1080.csv triangles/tuxedo-k80.csv ktruss/tuxedo-12.csv ktruss/tuxedo-24.csv ktruss/tuxedo-01.csv
 
 triangles/tuxedo-gtx1080-raw.csv: $(wildcard gpu-logs/triangles/tuxedo-gtx1080/*.log)
 	$(BMK2)/ps/log2csv.py -x tuxedo-gtx1080 $^ -o $@
@@ -18,6 +18,12 @@ ktruss/tuxedo-12-raw.csv: $(wildcard cpu-logs/ktruss/tuxedo-12/*.log)
 	$(BMK2)/ps/log2csv.py -x tuxedo-12 $^ -o $@
 
 ktruss/tuxedo-12.csv: ktruss/tuxedo-12-raw.csv
+	$(BMK2)/ps/import.py -o $@ $^
+
+ktruss/tuxedo-01-raw.csv: $(wildcard cpu-logs/ktruss/tuxedo-01/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-01 $^ -o $@
+
+ktruss/tuxedo-01.csv: ktruss/tuxedo-01-raw.csv
 	$(BMK2)/ps/import.py -o $@ $^
 
 ktruss/tuxedo-24-raw.csv: $(wildcard cpu-logs/ktruss/tuxedo-24/*.log)
