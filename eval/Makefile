@@ -1,6 +1,6 @@
 include common.mk
 
-all: ktruss-inputs triangle-inputs ktruss-tuxedo-gtx1080.mk ktruss-tuxedo-k80.mk triangles-tuxedo-gtx1080.mk triangles-tuxedo-k80.mk ktruss-tuxedo-01.mk ktruss-tuxedo-12.mk ktruss-tuxedo-24.mk inputs-desc.csv
+all: ktruss-inputs triangle-inputs ktruss-tuxedo-gtx1080.mk ktruss-tuxedo-k80.mk triangles-tuxedo-gtx1080.mk triangles-tuxedo-k80.mk ktruss-tuxedo-01.mk ktruss-tuxedo-12.mk ktruss-tuxedo-24.mk inputs-desc.csv triangles-tuxedo-gtx1080-power.mk
 
 ktruss-inputs: $(BMK2CFG)/graph.bispec
 	$(BMK2)/rsinfo.py -d $(BMK2CFG) --cfg default -o $@ --scan $(KTRUSS) -i inputs ktruss/irgl
@@ -31,9 +31,14 @@ ktruss-tuxedo-k80.mk: ktruss-inputs gpu-logs/ktruss/tuxedo-k80 templates/gpu-exp
 triangles-tuxedo-gtx1080.mk: triangle-inputs gpu-logs/triangles/tuxedo-gtx1080 templates/gpu-expt.template
 	scripts/gen_makefile.py $< triangles/irgl tuxedo-gtx1080 templates/gpu-expt.template $@ -t "{bmk}-{expt}" -v bmk=triangles -v scandir=$(TRIANGLES) -v env_vars=
 
+triangles-tuxedo-gtx1080-power.mk: triangle-inputs gpu-logs/triangles/tuxedo-gtx1080-power templates/gpu-expt-nvprof.template
+	scripts/gen_makefile.py $< triangles/irgl tuxedo-gtx1080-power templates/gpu-expt-nvprof.template $@ -t "{bmk}-{expt}" -v bmk=triangles -v scandir=$(TRIANGLES) -v env_vars= -v nvprof="--npsystem"
+
 triangles-tuxedo-k80.mk: triangle-inputs gpu-logs/triangles/tuxedo-k80 templates/gpu-expt.template
 	scripts/gen_makefile.py $< triangles/irgl tuxedo-k80 templates/gpu-expt.template $@ -t "{bmk}-{expt}" -v bmk=triangles -v scandir=$(TRIANGLES) -v env_vars="CUDA_VISIBLE_DEVICES=1"
 
+gpu-logs/triangles/%:
+	mkdir $@
 
 gpu-logs/ktruss/%:
 	mkdir $@

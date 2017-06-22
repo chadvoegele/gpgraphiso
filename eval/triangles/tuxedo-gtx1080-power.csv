@@ -1,0 +1,3 @@
+experiment,bmk,variant,input,energy_joules_1_avg,energy_joules_1_count,energy_joules_1_sd,energy_joules_1_sum,energy_joules_2_avg,energy_joules_2_count,energy_joules_2_sd,energy_joules_2_sum,time_ns_avg,time_ns_count,time_ns_sd,time_ns_sum,xid
+tuxedo-gtx1080-power,triangles,irgl,amazon0505_adj.sym,14.7525240975,3,0.581133532544,44.2575722926,18.3411515924,3,1.93084417088,55.0234547771,15966017.0,3,175039.283085,47898051,1498145951.99.1
+tuxedo-gtx1080-power,triangles,irgl,as20000102_adj.sym,12.2790759039,3,1.83531307757,36.8372277116,14.7466247206,3,1.34217110689,44.2398741619,2019941.66667,3,450757.683079,6059825,1498150033.16.1
