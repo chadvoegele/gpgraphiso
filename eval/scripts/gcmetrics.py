@@ -31,9 +31,11 @@ inpd = pd.read_csv(args.inputdescsv)
 
 perf = perf.merge(inpd, 'left', on='input')
 perf = perf.merge(metc[["bmk", "variant", "input", "energy_joules_2_avg", "energy_joules_2_sd", "energy_joules_2_count",
-                        "data_transfer_ns_avg", "data_transfer_ns_sd", "data_transfer_ns_count"]], 'left', on=['bmk', 'variant', 'input'])
+                        "data_transfer_ns_avg", "data_transfer_ns_sd", "data_transfer_ns_count",
+                        "malloc_ns_avg", "malloc_ns_sd", "malloc_ns_count",
+                    ]], 'left', on=['bmk', 'variant', 'input'])
 
-perf["adj_time_ns_avg"] = perf["time_ns_avg"] + perf["data_transfer_ns_avg"]
+perf["adj_time_ns_avg"] = perf["time_ns_avg"] + perf["data_transfer_ns_avg"] + perf["malloc_ns_avg"]
 
 perf['rate_eps'] = perf['edges'] * 1E9 / perf['adj_time_ns_avg']
 perf['rate_per_energy'] = perf['rate_eps'] / perf['energy_joules_2_avg']

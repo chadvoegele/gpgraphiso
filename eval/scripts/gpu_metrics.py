@@ -7,12 +7,13 @@ import npreader2.nvconstants as nvc
 
 def get_data_transfer_times(nvp):
     total_ns = 0
+    malloc_ns = 0
     start = 0
 
     # TODO: this double counts transfers that happen in the main timing loop
     # Maybe use markers? 
     for r in nvp.runtime():
-        print r.name(), r['start'] / 1E9
+        #print r.name(), r['start'] / 1E9
         #print r.name()
         if r.is_memcpy():
             t = r.memcpy()['end'] - r.memcpy()['start']
@@ -25,6 +26,8 @@ def get_data_transfer_times(nvp):
             if start == 0:
                 start = r['start']
             t = 0
+        elif "Malloc" in r.name():
+            malloc_ns += r['end'] - r['start']
         else:
             t = 0
 
@@ -32,9 +35,8 @@ def get_data_transfer_times(nvp):
            start = r['start']
 
         total_ns += t
-
-    print "start", start
-    return total_ns
+    
+    return (malloc_ns, total_ns)
 
 def get_gpu_power_samples(nvp):
     out = []
@@ -79,9 +81,10 @@ if __name__ == "__main__":
 
     print "Energy (from avg): %0.2f Joules" % (energy[0],)
     print "Energy (by integration): %0.2f Joules" % (energy[1],)
-    total_exec_ns = samples[-1]['timestamp_ns'] - samples[0]['timestamp_ns']
+    total_exec_ns = samples[-1]['timestamp_ns'] - samples[0]['timestamp_ns'] # not kernel execution time!
     print "Total duration: %d ns" % (total_exec_ns)
 
-    tns = get_data_transfer_times(nvp)
+    mns, tns = get_data_transfer_times(nvp)
     print "Total data transfer time: %d ns (%0.2f%%)" % (tns, tns / total_exec_ns*100)
+    print "Total malloc time: %d ns (%0.2f%%)" % (mns, mns / total_exec_ns*100)
     

@@ -17,7 +17,7 @@ if __name__ == "__main__":
     for me in bmk2.mapfile.read_mapfile(args.mapfile):
         if me.filetype == "cuda/nvprof":
             nvp = npreader2.dbreader.NVProfile(me.abspath)
-            dt = gpu_metrics.get_data_transfer_times(nvp)
+            mt, dt = gpu_metrics.get_data_transfer_times(nvp)
 
             s = gpu_metrics.get_gpu_power_samples(nvp)
             assert len(s)           
@@ -29,7 +29,8 @@ if __name__ == "__main__":
                  'energy_joules_1': e[0],
                  'energy_joules_2': e[1],
                  'nvprof_filename': me.filename,
-                 'data_transfer_ns': dt}
+                 'data_transfer_ns': dt,
+                 'malloc_ns': mt}
             
             out.append(o)
     

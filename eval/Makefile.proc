@@ -23,7 +23,7 @@ triangles/tuxedo-gtx1080-power-raw.csv: $(wildcard gpu-logs/triangles/tuxedo-gtx
 	$(BMK2)/ps/log2csv.py -x tuxedo-gtx1080-power $^ -o $@
 
 triangles/tuxedo-gtx1080-power.csv: triangles/tuxedo-gtx1080-power-raw.csv triangles/tuxedo-gtx1080-power-energy-raw.csv
-	$(BMK2)/ps/import.py -a energy_joules_1 -a energy_joules_2 -a data_transfer_ns -r triangles/tuxedo-gtx1080-power-energy-raw.csv -o $@ $<
+	$(BMK2)/ps/import.py -a energy_joules_1 -a energy_joules_2 -a data_transfer_ns -a malloc_ns -r triangles/tuxedo-gtx1080-power-energy-raw.csv -o $@ $<
 
 
 triangles/tuxedo-k80-raw.csv: $(wildcard gpu-logs/triangles/tuxedo-k80/*.log)
