@@ -17,7 +17,7 @@ import pandas as pd
 
 p = argparse.ArgumentParser(description="Compute Graph Challenge metrics")
 p.add_argument("perfcsv", help="Performance CSV (from bmk2)")
-p.add_argument("powercsv", help="Power CSV")
+p.add_argument("metricscsv", help="Metrics CSV")
 p.add_argument("inputdescsv", help="Input description CSV")
 
 p.add_argument("-o", dest="output", help="Output file")
@@ -25,14 +25,17 @@ p.add_argument("-o", dest="output", help="Output file")
 args = p.parse_args()
 
 perf = pd.read_csv(args.perfcsv)
-powe = pd.read_csv(args.powercsv)
+metc = pd.read_csv(args.metricscsv)
 
 inpd = pd.read_csv(args.inputdescsv)
 
 perf = perf.merge(inpd, 'left', on='input')
-perf = perf.merge(powe[["bmk", "variant", "input", "energy_joules_2_avg", "energy_joules_2_sd", "energy_joules_2_count"]], 'left', on=['bmk', 'variant', 'input'])
+perf = perf.merge(metc[["bmk", "variant", "input", "energy_joules_2_avg", "energy_joules_2_sd", "energy_joules_2_count",
+                        "data_transfer_ns_avg", "data_transfer_ns_sd", "data_transfer_ns_count"]], 'left', on=['bmk', 'variant', 'input'])
 
-perf['rate_eps'] = perf['edges'] * 1E9 / perf['time_ns_avg']
+perf["adj_time_ns_avg"] = perf["time_ns_avg"] + perf["data_transfer_ns_avg"]
+
+perf['rate_eps'] = perf['edges'] * 1E9 / perf['adj_time_ns_avg']
 perf['rate_per_energy'] = perf['rate_eps'] / perf['energy_joules_2_avg']
 
 if args.output:
