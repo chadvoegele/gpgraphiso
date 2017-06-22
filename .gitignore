@@ -15,3 +15,5 @@
 /ggc/pm-gen-*/*
 *.log
 SITE-IS.*
+*.nvprof
+
