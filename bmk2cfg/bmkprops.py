@@ -3,6 +3,7 @@ import bmk2
 # This applies to IrGL
 PERF_RE = "^Total time: (?P<time_ns>.*) ns$"
 PERF_DISCOUNTED_RE = r"^Total time \(discounted\): (?P<time_ns>.*) ns$"
+GALOIS_PERF_RE = r"^\(NULL\),.*, Time,0,0,(?P<time_ms>[0-9]+)$"
 
 class graph_bmk(bmk2.Binary):
     def __init__(self):
