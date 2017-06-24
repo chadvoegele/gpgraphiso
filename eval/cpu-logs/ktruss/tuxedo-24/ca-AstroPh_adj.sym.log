@@ -1,0 +1,149 @@
+INFO Site set to 'sree'.
+WARNING No site-specific configuration '../bmk2cfg/bmk2.cfg.sree' found.
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 4 ('../bmk2cfg/graphinp.py')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 2 ('../bmk2cfg/graph.inputdb')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 3 ('../bmk2cfg/graph.inputprops')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 1 ('../bmk2cfg/graph.bispec')
+DEBUG Ignoring binary id ktruss/galois+bsp in ../../GaloisCpp/build/default//exp/apps/ktruss/bmktest2.py, not in sel_binaries
+DEBUG Ignoring binary id ktruss/galois+bspCoreThenTruss in ../../GaloisCpp/build/default//exp/apps/ktruss/bmktest2.py, not in sel_binaries
+DEBUG Ignoring binary id ktruss/galois+async in ../../GaloisCpp/build/default//exp/apps/ktruss/bmktest2.py, not in sel_binaries
+INFO Applying configuration "{'k': 'max', 't': '24'}"
+DEBUG Ignoring input 'cit-Patents_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'as20000102_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'email-EuAll_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale21-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-dblp.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'amazon0505_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'cit-HepPh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'rmat16.sym.tri' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'amazon0601_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'facebook_combined_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-amazon.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-youtube.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'email-Enron_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'cit-HepTh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale20-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'as-caida20071105_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale19-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-HepTh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'flickrEdges_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'A_inc.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale18-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale22-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-lj.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-orkut.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale23-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-friendster.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'amazon0302_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-CondMat_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-GrQc_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'complete5_sm.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'amazon0312_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+INFO Configuration loaded successfully.
+INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
+INFO DATE START 2017-06-21 11:36:53
+COLLECT basepath /org/programs/postdocs/sreepai/hpec/GaloisCpp/build/default/exp/apps/ktruss
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=24 --scan ../../GaloisCpp/build/default//exp/apps/ktruss --log cpu-logs/ktruss/tuxedo-24/ca-AstroPh_adj.sym.log -v perf ktruss/galois+bspIm ca-AstroPh_adj.sym
+INFO Setting RLIMIT_CPU to 4800
+INFO TASK perf
+INFO PERFDATE BEGIN_RUN 2017-06-21 11:36:53
+DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussqqrLQ8' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2_RUNID=1498063013.81.1.0 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -algo=bspIm -trussNum=30 -t=24 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussqqrLQ8
+INFO ktruss/galois+bspIm/ca-AstroPh_adj.sym STDOUT
+Galois Benchmark Suite v2.3.0 (unknown)
+Copyright (C) 2015 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: Maximal k-trusses
+Computes the maximal k-trusses for a given undirected graph
+http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/k_truss
+
+Read 18772 nodes
+Running bspIm algorithm for maximal 30-truss
+Iteration 0: 18771 valid nodes, 198050 valid edges
+Iteration 1: 2457 valid nodes, 48159 valid edges
+Iteration 2: 1846 valid nodes, 45459 valid edges
+Iteration 3: 1837 valid nodes, 45300 valid edges
+Iteration 4: 1836 valid nodes, 45235 valid edges
+Iteration 5: 1835 valid nodes, 45209 valid edges
+Iteration 6: 1835 valid nodes, 45189 valid edges
+Iteration 7: 1834 valid nodes, 45157 valid edges
+Iteration 8: 1834 valid nodes, 45152 valid edges
+Ends at iteration 8
+LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
+(NULL),20 , Time,0,0,91
+(NULL),20 , TotalTime,0,0,227
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussqqrLQ8 -trussNum=30 -trussNodes=1834 -trussEdges=45152
+PASS ktruss/galois+bspIm/ca-AstroPh_adj.sym: BMK2=1 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2_RUNID=1498063013.81.1.0 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -algo=bspIm -trussNum=30 -t=24 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussqqrLQ8
+INFO PERFDATE END_RUN 2017-06-21 11:36:55
+PERF ktruss/galois+bspIm/ca-AstroPh_adj.sym 1498063013.81.1 0 91000000 BMK2=1 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2_RUNID=1498063013.81.1.0 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -algo=bspIm -trussNum=30 -t=24 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussqqrLQ8
+INFO PERFDATE BEGIN_RUN 2017-06-21 11:36:55
+DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussEqOAV4' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2_RUNID=1498063013.81.1.1 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -algo=bspIm -trussNum=30 -t=24 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussEqOAV4
+INFO ktruss/galois+bspIm/ca-AstroPh_adj.sym STDOUT
+Galois Benchmark Suite v2.3.0 (unknown)
+Copyright (C) 2015 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: Maximal k-trusses
+Computes the maximal k-trusses for a given undirected graph
+http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/k_truss
+
+Read 18772 nodes
+Running bspIm algorithm for maximal 30-truss
+Iteration 0: 18771 valid nodes, 198050 valid edges
+Iteration 1: 2500 valid nodes, 48220 valid edges
+Iteration 2: 1846 valid nodes, 45447 valid edges
+Iteration 3: 1837 valid nodes, 45290 valid edges
+Iteration 4: 1836 valid nodes, 45229 valid edges
+Iteration 5: 1835 valid nodes, 45206 valid edges
+Iteration 6: 1835 valid nodes, 45187 valid edges
+Iteration 7: 1834 valid nodes, 45155 valid edges
+Iteration 8: 1834 valid nodes, 45152 valid edges
+Ends at iteration 8
+LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
+(NULL),20 , Time,0,0,76
+(NULL),20 , TotalTime,0,0,123
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussEqOAV4 -trussNum=30 -trussNodes=1834 -trussEdges=45152
+PASS ktruss/galois+bspIm/ca-AstroPh_adj.sym: BMK2=1 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2_RUNID=1498063013.81.1.1 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -algo=bspIm -trussNum=30 -t=24 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussEqOAV4
+INFO PERFDATE END_RUN 2017-06-21 11:36:56
+PERF ktruss/galois+bspIm/ca-AstroPh_adj.sym 1498063013.81.1 1 76000000 BMK2=1 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2_RUNID=1498063013.81.1.1 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -algo=bspIm -trussNum=30 -t=24 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussEqOAV4
+INFO PERFDATE BEGIN_RUN 2017-06-21 11:36:56
+DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss8H6laX' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2_RUNID=1498063013.81.1.2 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -algo=bspIm -trussNum=30 -t=24 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss8H6laX
+INFO ktruss/galois+bspIm/ca-AstroPh_adj.sym STDOUT
+Galois Benchmark Suite v2.3.0 (unknown)
+Copyright (C) 2015 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: Maximal k-trusses
+Computes the maximal k-trusses for a given undirected graph
+http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/k_truss
+
+Read 18772 nodes
+Running bspIm algorithm for maximal 30-truss
+Iteration 0: 18771 valid nodes, 198050 valid edges
+Iteration 1: 2528 valid nodes, 48365 valid edges
+Iteration 2: 1844 valid nodes, 45426 valid edges
+Iteration 3: 1837 valid nodes, 45292 valid edges
+Iteration 4: 1836 valid nodes, 45231 valid edges
+Iteration 5: 1835 valid nodes, 45207 valid edges
+Iteration 6: 1835 valid nodes, 45188 valid edges
+Iteration 7: 1834 valid nodes, 45155 valid edges
+Iteration 8: 1834 valid nodes, 45152 valid edges
+Ends at iteration 8
+LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
+(NULL),20 , Time,0,0,79
+(NULL),20 , TotalTime,0,0,125
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss8H6laX -trussNum=30 -trussNodes=1834 -trussEdges=45152
+PASS ktruss/galois+bspIm/ca-AstroPh_adj.sym: BMK2=1 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2_RUNID=1498063013.81.1.2 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -algo=bspIm -trussNum=30 -t=24 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss8H6laX
+INFO PERFDATE END_RUN 2017-06-21 11:36:58
+PERF ktruss/galois+bspIm/ca-AstroPh_adj.sym 1498063013.81.1 2 79000000 BMK2=1 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2_RUNID=1498063013.81.1.2 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -algo=bspIm -trussNum=30 -t=24 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss8H6laX
+TASK_COMPLETE ktruss/galois+bspIm/ca-AstroPh_adj.sym PERF 3/0/3
+INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
+INFO DATE END 2017-06-21 11:36:58
+INFO APPROXIMATE DURATION 0:00:04.468981

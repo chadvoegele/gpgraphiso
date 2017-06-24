@@ -1,0 +1,42 @@
+INFO Site set to 'sree'.
+WARNING No site-specific configuration '../bmk2cfg/bmk2.cfg.sree' found.
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 4 ('../bmk2cfg/graphinp.py')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 2 ('../bmk2cfg/graph.inputdb')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 3 ('../bmk2cfg/graph.inputprops')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 1 ('../bmk2cfg/graph.bispec')
+DEBUG Ignoring binary id ktruss/galois+bsp in ../../GaloisCpp/build/default//exp/apps/ktruss/bmktest2.py, not in sel_binaries
+DEBUG Ignoring binary id ktruss/galois+bspCoreThenTruss in ../../GaloisCpp/build/default//exp/apps/ktruss/bmktest2.py, not in sel_binaries
+DEBUG Ignoring binary id ktruss/galois+async in ../../GaloisCpp/build/default//exp/apps/ktruss/bmktest2.py, not in sel_binaries
+INFO Applying configuration "{'k': 'max', 't': '24'}"
+DEBUG Ignoring input 'cit-Patents_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-AstroPh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'email-EuAll_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale21-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-dblp.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'amazon0505_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'cit-HepPh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'rmat16.sym.tri' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'amazon0601_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'facebook_combined_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-amazon.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-youtube.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'email-Enron_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'cit-HepTh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale20-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'as-caida20071105_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale19-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-HepTh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'flickrEdges_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'A_inc.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale18-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale22-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-lj.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-orkut.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale23-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-friendster.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'amazon0302_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-CondMat_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-GrQc_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'complete5_sm.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'amazon0312_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs

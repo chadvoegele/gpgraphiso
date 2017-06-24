@@ -1,0 +1,125 @@
+INFO Site set to 'sree'.
+WARNING No site-specific configuration '../bmk2cfg/bmk2.cfg.sree' found.
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 4 ('../bmk2cfg/graphinp.py')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 2 ('../bmk2cfg/graph.inputdb')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 3 ('../bmk2cfg/graph.inputprops')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 1 ('../bmk2cfg/graph.bispec')
+DEBUG Ignoring binary id ktruss/galois+bsp in ../../GaloisCpp/build/default//exp/apps/ktruss/bmktest2.py, not in sel_binaries
+DEBUG Ignoring binary id ktruss/galois+bspCoreThenTruss in ../../GaloisCpp/build/default//exp/apps/ktruss/bmktest2.py, not in sel_binaries
+DEBUG Ignoring binary id ktruss/galois+async in ../../GaloisCpp/build/default//exp/apps/ktruss/bmktest2.py, not in sel_binaries
+INFO Applying configuration "{'k': 'max', 't': '12'}"
+DEBUG Ignoring input 'com-lj.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-dblp.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'rmat16.sym.tri' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-amazon.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-friendster.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'complete5_sm.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-youtube.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'A_inc.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+INFO Configuration loaded successfully.
+INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
+INFO DATE START 2017-06-19 15:56:36
+COLLECT basepath /org/programs/postdocs/sreepai/hpec/GaloisCpp/build/default/exp/apps/ktruss
+INFO CMD_LINE: /h2/sreepai/src/bmk2//test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=12 --scan ../../GaloisCpp/build/default//exp/apps/ktruss --log cpu-logs/ktruss/tuxedo-12/com-orkut.wgt32.sym.log -v perf ktruss/galois+bspIm com-orkut.wgt32.sym
+INFO Setting RLIMIT_CPU to 4800
+INFO TASK perf
+INFO PERFDATE BEGIN_RUN 2017-06-19 15:56:36
+DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss71qXw_' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=com-orkut.wgt32.sym BMK2_RUNID=1497905796.39.1.0 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Orkut/com-orkut.wgt32.sym.gr -algo=bspIm -trussNum=78 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss71qXw_
+INFO ktruss/galois+bspIm/com-orkut.wgt32.sym STDOUT
+Galois Benchmark Suite v2.3.0 (unknown)
+Copyright (C) 2015 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: Maximal k-trusses
+Computes the maximal k-trusses for a given undirected graph
+http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/k_truss
+
+Read 3072627 nodes
+Running bspIm algorithm for maximal 78-truss
+Iteration 0: 3072441 valid nodes, 117185083 valid edges
+Iteration 1: 106124 valid nodes, 1246173 valid edges
+Iteration 2: 4327 valid nodes, 126553 valid edges
+Iteration 3: 962 valid nodes, 36652 valid edges
+Iteration 4: 420 valid nodes, 12433 valid edges
+Iteration 5: 144 valid nodes, 7259 valid edges
+Iteration 6: 128 valid nodes, 7173 valid edges
+Iteration 7: 126 valid nodes, 6934 valid edges
+Iteration 8: 124 valid nodes, 6859 valid edges
+Ends at iteration 8
+LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
+(NULL),20 , Time,0,0,34478
+(NULL),20 , TotalTime,0,0,37584
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Orkut/com-orkut.wgt32.sym.gr -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss71qXw_ -trussNum=78 -trussNodes=124 -trussEdges=6859
+PASS ktruss/galois+bspIm/com-orkut.wgt32.sym: BMK2=1 BMK2_INPUTID=com-orkut.wgt32.sym BMK2_RUNID=1497905796.39.1.0 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Orkut/com-orkut.wgt32.sym.gr -algo=bspIm -trussNum=78 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss71qXw_
+INFO PERFDATE END_RUN 2017-06-19 15:59:12
+PERF ktruss/galois+bspIm/com-orkut.wgt32.sym 1497905796.39.1 0 34478000000 BMK2=1 BMK2_INPUTID=com-orkut.wgt32.sym BMK2_RUNID=1497905796.39.1.0 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Orkut/com-orkut.wgt32.sym.gr -algo=bspIm -trussNum=78 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss71qXw_
+INFO PERFDATE BEGIN_RUN 2017-06-19 15:59:12
+DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusst9bWCc' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=com-orkut.wgt32.sym BMK2_RUNID=1497905796.39.1.1 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Orkut/com-orkut.wgt32.sym.gr -algo=bspIm -trussNum=78 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusst9bWCc
+INFO ktruss/galois+bspIm/com-orkut.wgt32.sym STDOUT
+Galois Benchmark Suite v2.3.0 (unknown)
+Copyright (C) 2015 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: Maximal k-trusses
+Computes the maximal k-trusses for a given undirected graph
+http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/k_truss
+
+Read 3072627 nodes
+Running bspIm algorithm for maximal 78-truss
+Iteration 0: 3072441 valid nodes, 117185083 valid edges
+Iteration 1: 107739 valid nodes, 1279803 valid edges
+Iteration 2: 4426 valid nodes, 128619 valid edges
+Iteration 3: 968 valid nodes, 36676 valid edges
+Iteration 4: 423 valid nodes, 12081 valid edges
+Iteration 5: 139 valid nodes, 7261 valid edges
+Iteration 6: 128 valid nodes, 7178 valid edges
+Iteration 7: 127 valid nodes, 6917 valid edges
+Iteration 8: 124 valid nodes, 6859 valid edges
+Ends at iteration 8
+LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
+(NULL),20 , Time,0,0,29759
+(NULL),20 , TotalTime,0,0,30934
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Orkut/com-orkut.wgt32.sym.gr -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusst9bWCc -trussNum=78 -trussNodes=124 -trussEdges=6859
+PASS ktruss/galois+bspIm/com-orkut.wgt32.sym: BMK2=1 BMK2_INPUTID=com-orkut.wgt32.sym BMK2_RUNID=1497905796.39.1.1 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Orkut/com-orkut.wgt32.sym.gr -algo=bspIm -trussNum=78 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusst9bWCc
+INFO PERFDATE END_RUN 2017-06-19 16:01:42
+PERF ktruss/galois+bspIm/com-orkut.wgt32.sym 1497905796.39.1 1 29759000000 BMK2=1 BMK2_INPUTID=com-orkut.wgt32.sym BMK2_RUNID=1497905796.39.1.1 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Orkut/com-orkut.wgt32.sym.gr -algo=bspIm -trussNum=78 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusst9bWCc
+INFO PERFDATE BEGIN_RUN 2017-06-19 16:01:42
+DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusssovI6e' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=com-orkut.wgt32.sym BMK2_RUNID=1497905796.39.1.2 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Orkut/com-orkut.wgt32.sym.gr -algo=bspIm -trussNum=78 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusssovI6e
+INFO ktruss/galois+bspIm/com-orkut.wgt32.sym STDOUT
+Galois Benchmark Suite v2.3.0 (unknown)
+Copyright (C) 2015 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: Maximal k-trusses
+Computes the maximal k-trusses for a given undirected graph
+http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/k_truss
+
+Read 3072627 nodes
+Running bspIm algorithm for maximal 78-truss
+Iteration 0: 3072441 valid nodes, 117185083 valid edges
+Iteration 1: 106773 valid nodes, 1269909 valid edges
+Iteration 2: 4445 valid nodes, 127524 valid edges
+Iteration 3: 960 valid nodes, 35945 valid edges
+Iteration 4: 416 valid nodes, 11825 valid edges
+Iteration 5: 136 valid nodes, 7251 valid edges
+Iteration 6: 128 valid nodes, 7164 valid edges
+Iteration 7: 126 valid nodes, 6893 valid edges
+Iteration 8: 124 valid nodes, 6859 valid edges
+Ends at iteration 8
+LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
+(NULL),20 , Time,0,0,29960
+(NULL),20 , TotalTime,0,0,31132
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Orkut/com-orkut.wgt32.sym.gr -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusssovI6e -trussNum=78 -trussNodes=124 -trussEdges=6859
+PASS ktruss/galois+bspIm/com-orkut.wgt32.sym: BMK2=1 BMK2_INPUTID=com-orkut.wgt32.sym BMK2_RUNID=1497905796.39.1.2 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Orkut/com-orkut.wgt32.sym.gr -algo=bspIm -trussNum=78 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusssovI6e
+INFO PERFDATE END_RUN 2017-06-19 16:04:12
+PERF ktruss/galois+bspIm/com-orkut.wgt32.sym 1497905796.39.1 2 29960000000 BMK2=1 BMK2_INPUTID=com-orkut.wgt32.sym BMK2_RUNID=1497905796.39.1.2 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Orkut/com-orkut.wgt32.sym.gr -algo=bspIm -trussNum=78 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusssovI6e
+TASK_COMPLETE ktruss/galois+bspIm/com-orkut.wgt32.sym PERF 3/0/3
+INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
+INFO DATE END 2017-06-19 16:04:12
+INFO APPROXIMATE DURATION 0:07:36.111904
