@@ -7079,7 +7079,8 @@ ktruss_max = 30
 [graph500-scale23-ef16_adj.sym]
 name = graph500-scale23-ef16_adj.sym
 nontex = 1
-triangles = 254165706
+#triangles = 254165706
+triangles = 4549133002
 ktruss_2_nodes = 4606314
 ktruss_2_edges = 129250705
 ktruss_3_nodes = 2130636
