@@ -1,0 +1,206 @@
+INFO Site set to 'sree'.
+WARNING No site-specific configuration '../bmk2cfg/bmk2.cfg.sree' found.
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 4 ('../bmk2cfg/graphinp.py')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 2 ('../bmk2cfg/graph.inputdb')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 3 ('../bmk2cfg/graph.inputprops')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 1 ('../bmk2cfg/graph.bispec')
+INFO Applying configuration "{'k': 'max', 't': '01'}"
+DEBUG Ignoring input 'oregon1_010414_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'cit-Patents_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'disjoint_tri_sm.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'roadNet-TX_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'loc-brightkite_edges_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'as20000102_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'A_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'cit-HepPh_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'ktruss_example.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'amazon0601_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010505_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'facebook_combined_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'roadNet-PA_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010407_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010526_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella06_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010421_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella05_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella24_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale19-ef16_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'roadNet-CA_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010428_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010512_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale22-ef16_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella30_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010519_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010512_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella31_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'ca-CondMat_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale24-ef16_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010331_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'complete5_sm.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'amazon0312_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'loc-gowalla_edges_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010428_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'amazon0302_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'ca-AstroPh_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'email-EuAll_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale21-ef16_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'amazon0505_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'rmat16.sym.tri' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella09_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'soc-Slashdot0902_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella08_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010414_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'ca-GrQc_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'tri_sm.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010519_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'cit-HepTh_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale20-ef16_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'as-caida20071105_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella04_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'email-Enron_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'soc-Epinions1_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'ca-HepTh_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010505_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'flickrEdges_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella25_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale18-ef16_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010421_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale23-ef16_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'soc-Slashdot0811_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010407_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/miniTri', not in sel_inputs
+DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/miniTri', not in sel_inputs
+INFO Configuration loaded successfully.
+INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
+INFO DATE START 2017-06-24 18:49:12
+COLLECT basepath /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --scan ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-minitri/oregon1_010526_adj.sym.log -v perf triangles/miniTri oregon1_010526_adj.sym
+INFO Setting RLIMIT_CPU to 4800
+INFO TASK perf
+INFO PERFDATE BEGIN_RUN 2017-06-24 18:49:12
+INFO Running BMK2_INPUTID=oregon1_010526_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498348152.98.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon1_010526_adj.sym.gr ggr
+INFO triangles/miniTri/oregon1_010526_adj.sym STDOUT
+Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon1_010526_adj.sym.gr
+/h2/sreepai/pd/hpec/inputs/graphchallenge/oregon1_010526_adj.sym.gr has 11174 nodes and 46818 edges
+**********************************************************************
+Enumerating triangles .....
+**********************************************************************
+--------------------
+Permuting matrix ... done
+TIME - Time to permute  matrix: 0
+--------------------
+--------------------
+Creating incident matrix B... done
+TIME - Time to create B: 0.026648
+--------------------
+--------------------
+C = A*B: 
+TIME - Time to compute C = L*B: 4.09045
+--------------------
+NNZ: 46818
+**********************************************************************
+Finished triangle enumeration
+**********************************************************************
+Number of Triangles: 19894
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 45803778
+INSTR intel-rapl:1:0 7562301
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 177690402
+INSTR intel-rapl:1 150183698
+
+INFO triangles/miniTri/oregon1_010526_adj.sym STDERR
+read 46818 edges
+read data for 46818 edges
+
+PASS triangles/miniTri/oregon1_010526_adj.sym: BMK2_INPUTID=oregon1_010526_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498348152.98.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon1_010526_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-24 18:49:17
+PERF triangles/miniTri/oregon1_010526_adj.sym 1498348152.98.1 0 4090449999 BMK2_INPUTID=oregon1_010526_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498348152.98.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon1_010526_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-24 18:49:17
+INFO Running BMK2_INPUTID=oregon1_010526_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498348152.98.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon1_010526_adj.sym.gr ggr
+INFO triangles/miniTri/oregon1_010526_adj.sym STDOUT
+Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon1_010526_adj.sym.gr
+/h2/sreepai/pd/hpec/inputs/graphchallenge/oregon1_010526_adj.sym.gr has 11174 nodes and 46818 edges
+**********************************************************************
+Enumerating triangles .....
+**********************************************************************
+--------------------
+Permuting matrix ... done
+TIME - Time to permute  matrix: 0
+--------------------
+--------------------
+Creating incident matrix B... done
+TIME - Time to create B: 0.027482
+--------------------
+--------------------
+C = A*B: 
+TIME - Time to compute C = L*B: 4.08073
+--------------------
+NNZ: 46818
+**********************************************************************
+Finished triangle enumeration
+**********************************************************************
+Number of Triangles: 19894
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 26810435
+INSTR intel-rapl:1:0 26297395
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 144854671
+INSTR intel-rapl:1 177629123
+
+INFO triangles/miniTri/oregon1_010526_adj.sym STDERR
+read 46818 edges
+read data for 46818 edges
+
+PASS triangles/miniTri/oregon1_010526_adj.sym: BMK2_INPUTID=oregon1_010526_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498348152.98.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon1_010526_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-24 18:49:21
+PERF triangles/miniTri/oregon1_010526_adj.sym 1498348152.98.1 1 4080730000 BMK2_INPUTID=oregon1_010526_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498348152.98.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon1_010526_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-24 18:49:21
+INFO Running BMK2_INPUTID=oregon1_010526_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498348152.98.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon1_010526_adj.sym.gr ggr
+INFO triangles/miniTri/oregon1_010526_adj.sym STDOUT
+Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon1_010526_adj.sym.gr
+/h2/sreepai/pd/hpec/inputs/graphchallenge/oregon1_010526_adj.sym.gr has 11174 nodes and 46818 edges
+**********************************************************************
+Enumerating triangles .....
+**********************************************************************
+--------------------
+Permuting matrix ... done
+TIME - Time to permute  matrix: 0
+--------------------
+--------------------
+Creating incident matrix B... done
+TIME - Time to create B: 0.026492
+--------------------
+--------------------
+C = A*B: 
+TIME - Time to compute C = L*B: 4.07596
+--------------------
+NNZ: 46818
+**********************************************************************
+Finished triangle enumeration
+**********************************************************************
+Number of Triangles: 19894
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 45694582
+INSTR intel-rapl:1:0 7609563
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 177769870
+INSTR intel-rapl:1 150939128
+
+INFO triangles/miniTri/oregon1_010526_adj.sym STDERR
+read 46818 edges
+read data for 46818 edges
+
+PASS triangles/miniTri/oregon1_010526_adj.sym: BMK2_INPUTID=oregon1_010526_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498348152.98.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon1_010526_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-24 18:49:25
+PERF triangles/miniTri/oregon1_010526_adj.sym 1498348152.98.1 2 4075960000 BMK2_INPUTID=oregon1_010526_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498348152.98.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon1_010526_adj.sym.gr ggr
+TASK_COMPLETE triangles/miniTri/oregon1_010526_adj.sym PERF 3/0/3
+INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
+INFO DATE END 2017-06-24 18:49:25
+INFO APPROXIMATE DURATION 0:00:12.700158
