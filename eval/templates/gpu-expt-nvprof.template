@@ -1,4 +1,4 @@
 #RULE
 gpu-logs/{bmk}/{expt}/{input}.log:
-	{env_vars} $(BMK2)/test2.py -d $(BMK2CFG) --cfg default --varcfg k=max --scan {scandir} --log $@ --nvprof --npdb {nvprof} -v perf {binspec} {input}
+	{env_vars} $(BMK2)/test2.py -d $(BMK2CFG) --cfg default --varcfg k=max --scan {scandir} --log $@ --max-output-bytes 0 --nvprof --npdb {nvprof} -v perf {binspec} {input}
 
