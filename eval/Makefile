@@ -1,6 +1,6 @@
 include common.mk
 
-all: ktruss-inputs triangle-inputs ktruss-tuxedo-gtx1080.mk ktruss-tuxedo-k80.mk triangles-tuxedo-gtx1080.mk triangles-tuxedo-k80.mk ktruss-tuxedo-01.mk ktruss-tuxedo-12.mk ktruss-tuxedo-24.mk inputs-desc.csv triangles-tuxedo-gtx1080-power.mk triangles-tuxedo-12.mk triangles-tuxedo-24.mk triangles-tuxedo-01.mk $(CPU_TRIANGLES)/bmktest2.py
+all: ktruss-inputs triangle-inputs ktruss-tuxedo-gtx1080.mk ktruss-tuxedo-k80.mk triangles-tuxedo-gtx1080.mk triangles-tuxedo-k80.mk ktruss-tuxedo-01.mk ktruss-tuxedo-12.mk ktruss-tuxedo-24.mk inputs-desc.csv triangles-tuxedo-gtx1080-power.mk triangles-tuxedo-12.mk triangles-tuxedo-24.mk triangles-tuxedo-01.mk $(CPU_TRIANGLES)/bmktest2.py triangles-tuxedo-minitri.mk
 
 ktruss-inputs: $(BMK2CFG)/graph.bispec
 	$(BMK2)/rsinfo.py -d $(BMK2CFG) --cfg default -o $@ --scan $(KTRUSS) -i inputs ktruss/irgl
@@ -64,9 +64,12 @@ triangles-tuxedo-12.mk: triangle-inputs cpu-logs/triangles/tuxedo-12 templates/c
 triangles-tuxedo-01.mk: triangle-inputs cpu-logs/triangles/tuxedo-01 templates/cpu-expt.template
 	scripts/gen_makefile.py $< triangles/galois+edge tuxedo-01 templates/cpu-expt.template $@ -t "{bmk}-{expt}" -v bmk=triangles -v scandir=$(CPU_TRIANGLES) -v threads=01
 
+triangles-tuxedo-minitri.mk: triangle-inputs cpu-logs/triangles/tuxedo-minitri templates/cpu-expt.template
+	scripts/gen_makefile.py $< triangles/miniTri tuxedo-minitri templates/cpu-expt.template $@ -t "{bmk}-{expt}" -v bmk=triangles -v scandir=$(CPU_MINITRI) -v threads=01
 
 cpu-logs/ktruss/%:
 	mkdir $@
 
+# copy, so as not to mess up lonestar
 $(CPU_TRIANGLES)/bmktest2.py: bmktest2-cpu-triangles.py
 	cp $< $@

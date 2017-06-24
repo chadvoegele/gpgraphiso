@@ -13,7 +13,6 @@
 /ggc/gensrc-*.tar.*
 /ggc/gen-*/*
 /ggc/pm-gen-*/*
-*.log
 SITE-IS.*
 *.nvprof
 

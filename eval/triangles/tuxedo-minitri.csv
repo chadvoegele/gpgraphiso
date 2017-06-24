@@ -1,0 +1,11 @@
+experiment,bmk,variant,input,time_ns_avg,time_ns_count,time_ns_sd,time_ns_sum,xid
+tuxedo-minitri,triangles,miniTri,amazon0505_adj.sym,49641500000.0,3,82338265.7092,148924500000,1498331372.23.1
+tuxedo-minitri,triangles,miniTri,amazon0601_adj.sym,48375966666.7,3,4619884.55844,145127900000,1498337523.29.1
+tuxedo-minitri,triangles,miniTri,as20000102_adj.sym,1385630000.0,3,13862629.6207,4156890000,1498330637.98.1
+tuxedo-minitri,triangles,miniTri,disjoint_tri_sm.sym,27000.0,3,1732.05080757,81000,1498337681.39.1
+tuxedo-minitri,triangles,miniTri,loc-brightkite_edges_adj.sym,10715400000.0,3,84577301.9196,32146200000,1498331534.0.1
+tuxedo-minitri,triangles,miniTri,loc-gowalla_edges_adj.sym,2.41311e+11,3,14131132863.3,723933000000,1498330642.82.1
+tuxedo-minitri,triangles,miniTri,oregon1_010331_adj.sym,3651840000.0,3,18823897.046,10955520000,1498337682.04.1
+tuxedo-minitri,triangles,miniTri,oregon1_010512_adj.sym,3934300000.0,3,20453598.7054,11802900000,1498331567.85.1
+tuxedo-minitri,triangles,miniTri,p2p-Gnutella06_adj.sym,369985333.333,3,827863.716643,1109956000,1498330403.76.1
+tuxedo-minitri,triangles,miniTri,p2p-Gnutella08_adj.sym,307748000.0,3,1111395.51916,923244000,1498337693.93.1

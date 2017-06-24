@@ -12,4 +12,5 @@ include ktruss-tuxedo-24.mk
 include triangles-tuxedo-01.mk
 include triangles-tuxedo-12.mk
 include triangles-tuxedo-24.mk
+include triangles-tuxedo-minitri.mk
 

@@ -10,6 +10,7 @@ GALOIS=../../GaloisCpp/build/default/
 CPU_KTRUSS=$(GALOIS)/exp/apps/ktruss
 GR_CHALLENGE=../../graph_challenge/
 CPU_TRIANGLES=$(GALOIS)/lonestar/triangles
+CPU_MINITRI=$(GR_CHALLENGE)/SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial
 
 USER:=$(shell whoami)
 HOST:=$(shell hostname -s)
