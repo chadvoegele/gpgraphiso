@@ -5,6 +5,7 @@ INFO ../bmk2cfg/bmk2.cfg: Loaded file type 2 ('../bmk2cfg/graph.inputdb')
 INFO ../bmk2cfg/bmk2.cfg: Loaded file type 3 ('../bmk2cfg/graph.inputprops')
 INFO ../bmk2cfg/bmk2.cfg: Loaded file type 1 ('../bmk2cfg/graph.bispec')
 DEBUG Ignoring binary id triangles/galois+node in ../../GaloisCpp/build/default//lonestar/triangles/bmktest2.py, not in sel_binaries
+DEBUG Ignoring binary id triangles/galois+hybrid in ../../GaloisCpp/build/default//lonestar/triangles/bmktest2.py, not in sel_binaries
 INFO Applying configuration "{'k': 'max', 't': '01'}"
 DEBUG Ignoring input 'oregon1_010414_adj.sym' for 'triangles/galois+edge', not in sel_inputs
 DEBUG Ignoring input 'cit-Patents_adj.sym' for 'triangles/galois+edge', not in sel_inputs
@@ -73,13 +74,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/galois+edge', not i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/galois+edge', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-23 20:24:58
+INFO DATE START 2017-06-25 17:21:20
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/GaloisCpp/build/default/lonestar/triangles
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --scan ../../GaloisCpp/build/default//lonestar/triangles --log cpu-logs/triangles/tuxedo-01/p2p-Gnutella06_adj.sym.log -v perf triangles/galois+edge p2p-Gnutella06_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --mtcpulimit 01 --scan ../../GaloisCpp/build/default//lonestar/triangles --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-01/p2p-Gnutella06_adj.sym.log -v perf triangles/galois+edge p2p-Gnutella06_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-23 20:24:58
-INFO Running BMK2=1 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2_RUNID=1498267498.85.1.0 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
+INFO PERFDATE BEGIN_RUN 2017-06-25 17:21:20
+INFO Running BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498429280.13.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
 INFO triangles/galois+edge/p2p-Gnutella06_adj.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -88,23 +89,37 @@ http://iss.ices.utexas.edu/galois/
 application: Triangles
 Counts the triangles in a graph
 
+Writing new input file: /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr.triangles
 NumTriangles: 1142
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),0 , MeminfoPre,0,0,0
-(NULL),0 , MeminfoMid,0,0,1
-(NULL),1 , Conflicts,0,0,0
-(NULL),1 , Commits,0,0,31525
-(NULL),1 , Pushes,0,0,0
-(NULL),1 , Iterations,0,0,31525
-(NULL),1 , Time,0,0,5
-(NULL),1 , MeminfoPost,0,0,2
-(NULL),1 , InitializeTime,0,0,2
+(NULL),1 , MeminfoPre,0,0,2
+(NULL),1 , PreprocessTime,0,0,5
+(NULL),1 , MeminfoMid,0,0,3
+(NULL),3 , Time,0,0,5
+(NULL),3 , MeminfoPost,0,0,4
+(NULL),3 , InitializeTime,0,0,11
+(NULL),0 , Conflicts,0,0,0
+(NULL),3 , Conflicts,0,0,0
+(NULL),0 , Commits,0,0,25
+(NULL),3 , Commits,0,0,31525
+(NULL),0 , Pushes,0,0,24
+(NULL),3 , Pushes,0,0,0
+(NULL),0 , Iterations,0,0,25
+(NULL),3 , Iterations,0,0,31525
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 5411961
+INSTR intel-rapl:1:0 5895396
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 20849190
+INSTR intel-rapl:1 23453919
 
-PASS triangles/galois+edge/p2p-Gnutella06_adj.sym: BMK2=1 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2_RUNID=1498267498.85.1.0 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
-INFO PERFDATE END_RUN 2017-06-23 20:24:59
-PERF triangles/galois+edge/p2p-Gnutella06_adj.sym 1498267498.85.1 0 5000000 BMK2=1 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2_RUNID=1498267498.85.1.0 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
-INFO PERFDATE BEGIN_RUN 2017-06-23 20:24:59
-INFO Running BMK2=1 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2_RUNID=1498267498.85.1.1 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
+PASS triangles/galois+edge/p2p-Gnutella06_adj.sym: BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498429280.13.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
+INFO PERFDATE END_RUN 2017-06-25 17:21:20
+PERF triangles/galois+edge/p2p-Gnutella06_adj.sym 1498429280.13.1 0 5000000 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498429280.13.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
+INFO PERFDATE BEGIN_RUN 2017-06-25 17:21:20
+INFO Running BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498429280.13.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
 INFO triangles/galois+edge/p2p-Gnutella06_adj.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -113,23 +128,37 @@ http://iss.ices.utexas.edu/galois/
 application: Triangles
 Counts the triangles in a graph
 
+Writing new input file: /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr.triangles
 NumTriangles: 1142
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),0 , MeminfoPre,0,0,0
-(NULL),0 , MeminfoMid,0,0,1
-(NULL),1 , Conflicts,0,0,0
-(NULL),1 , Commits,0,0,31525
-(NULL),1 , Pushes,0,0,0
-(NULL),1 , Iterations,0,0,31525
-(NULL),1 , Time,0,0,5
-(NULL),1 , MeminfoPost,0,0,2
-(NULL),1 , InitializeTime,0,0,2
+(NULL),1 , MeminfoPre,0,0,2
+(NULL),1 , PreprocessTime,0,0,5
+(NULL),1 , MeminfoMid,0,0,3
+(NULL),3 , Time,0,0,4
+(NULL),3 , MeminfoPost,0,0,4
+(NULL),3 , InitializeTime,0,0,11
+(NULL),0 , Conflicts,0,0,0
+(NULL),3 , Conflicts,0,0,0
+(NULL),0 , Commits,0,0,25
+(NULL),3 , Commits,0,0,31525
+(NULL),0 , Pushes,0,0,24
+(NULL),3 , Pushes,0,0,0
+(NULL),0 , Iterations,0,0,25
+(NULL),3 , Iterations,0,0,31525
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 5084909
+INSTR intel-rapl:1:0 8176244
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 23800721
+INSTR intel-rapl:1 27654287
 
-PASS triangles/galois+edge/p2p-Gnutella06_adj.sym: BMK2=1 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2_RUNID=1498267498.85.1.1 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
-INFO PERFDATE END_RUN 2017-06-23 20:25:00
-PERF triangles/galois+edge/p2p-Gnutella06_adj.sym 1498267498.85.1 1 5000000 BMK2=1 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2_RUNID=1498267498.85.1.1 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
-INFO PERFDATE BEGIN_RUN 2017-06-23 20:25:00
-INFO Running BMK2=1 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2_RUNID=1498267498.85.1.2 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
+PASS triangles/galois+edge/p2p-Gnutella06_adj.sym: BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498429280.13.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
+INFO PERFDATE END_RUN 2017-06-25 17:21:21
+PERF triangles/galois+edge/p2p-Gnutella06_adj.sym 1498429280.13.1 1 4000000 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498429280.13.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
+INFO PERFDATE BEGIN_RUN 2017-06-25 17:21:21
+INFO Running BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498429280.13.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
 INFO triangles/galois+edge/p2p-Gnutella06_adj.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -138,22 +167,36 @@ http://iss.ices.utexas.edu/galois/
 application: Triangles
 Counts the triangles in a graph
 
+Writing new input file: /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr.triangles
 NumTriangles: 1142
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),0 , MeminfoPre,0,0,0
-(NULL),0 , MeminfoMid,0,0,1
-(NULL),1 , Conflicts,0,0,0
-(NULL),1 , Commits,0,0,31525
-(NULL),1 , Pushes,0,0,0
-(NULL),1 , Iterations,0,0,31525
-(NULL),1 , Time,0,0,5
-(NULL),1 , MeminfoPost,0,0,2
-(NULL),1 , InitializeTime,0,0,2
+(NULL),1 , MeminfoPre,0,0,2
+(NULL),1 , PreprocessTime,0,0,5
+(NULL),1 , MeminfoMid,0,0,3
+(NULL),3 , Time,0,0,5
+(NULL),3 , MeminfoPost,0,0,4
+(NULL),3 , InitializeTime,0,0,11
+(NULL),0 , Conflicts,0,0,0
+(NULL),3 , Conflicts,0,0,0
+(NULL),0 , Commits,0,0,25
+(NULL),3 , Commits,0,0,31525
+(NULL),0 , Pushes,0,0,24
+(NULL),3 , Pushes,0,0,0
+(NULL),0 , Iterations,0,0,25
+(NULL),3 , Iterations,0,0,31525
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 4688547
+INSTR intel-rapl:1:0 7484653
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 21279486
+INSTR intel-rapl:1 24461791
 
-PASS triangles/galois+edge/p2p-Gnutella06_adj.sym: BMK2=1 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2_RUNID=1498267498.85.1.2 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
-INFO PERFDATE END_RUN 2017-06-23 20:25:00
-PERF triangles/galois+edge/p2p-Gnutella06_adj.sym 1498267498.85.1 2 5000000 BMK2=1 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2_RUNID=1498267498.85.1.2 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
+PASS triangles/galois+edge/p2p-Gnutella06_adj.sym: BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498429280.13.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
+INFO PERFDATE END_RUN 2017-06-25 17:21:22
+PERF triangles/galois+edge/p2p-Gnutella06_adj.sym 1498429280.13.1 2 5000000 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498429280.13.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr -t=1
 TASK_COMPLETE triangles/galois+edge/p2p-Gnutella06_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-23 20:25:00
-INFO APPROXIMATE DURATION 0:00:01.790102
+INFO DATE END 2017-06-25 17:21:22
+INFO APPROXIMATE DURATION 0:00:02.378118

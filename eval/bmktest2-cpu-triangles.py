@@ -32,6 +32,11 @@ class trianglesEdge(trianglesBase):
 	variant = 'galois+edge'
         algo = "edgeiterator"
 
+class trianglesHybrid(trianglesBase):
+	bmk = 'triangles'
+	variant = 'galois+hybrid'
+        algo = "hybrid"
+
 #triangles sample.sym,USA-road-d.NY.sym,rmat12.sym,2d-2e20.sym,USA-road-d.USA.sym,USA-road-d.CAL.sym,USA-road-d.FLA.sym,rmat20.sym,rmat10.sym,rmat22.sym
-BINARIES = [trianglesNode(), trianglesEdge()]
+BINARIES = [trianglesNode(), trianglesEdge(), trianglesHybrid()]
 

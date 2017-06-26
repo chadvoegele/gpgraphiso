@@ -5,6 +5,7 @@ INFO ../bmk2cfg/bmk2.cfg: Loaded file type 2 ('../bmk2cfg/graph.inputdb')
 INFO ../bmk2cfg/bmk2.cfg: Loaded file type 3 ('../bmk2cfg/graph.inputprops')
 INFO ../bmk2cfg/bmk2.cfg: Loaded file type 1 ('../bmk2cfg/graph.bispec')
 DEBUG Ignoring binary id triangles/galois+node in ../../GaloisCpp/build/default//lonestar/triangles/bmktest2.py, not in sel_binaries
+DEBUG Ignoring binary id triangles/galois+hybrid in ../../GaloisCpp/build/default//lonestar/triangles/bmktest2.py, not in sel_binaries
 INFO Applying configuration "{'k': 'max', 't': '24'}"
 DEBUG Ignoring input 'oregon1_010414_adj.sym' for 'triangles/galois+edge', not in sel_inputs
 DEBUG Ignoring input 'cit-Patents_adj.sym' for 'triangles/galois+edge', not in sel_inputs
@@ -73,13 +74,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/galois+edge', not i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/galois+edge', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-23 19:50:55
+INFO DATE START 2017-06-25 23:32:54
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/GaloisCpp/build/default/lonestar/triangles
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=24 --scan ../../GaloisCpp/build/default//lonestar/triangles --log cpu-logs/triangles/tuxedo-24/p2p-Gnutella05_adj.sym.log -v perf triangles/galois+edge p2p-Gnutella05_adj.sym
-INFO Setting RLIMIT_CPU to 4800
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=24 --mtcpulimit 24 --scan ../../GaloisCpp/build/default//lonestar/triangles --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-24/p2p-Gnutella05_adj.sym.log -v perf triangles/galois+edge p2p-Gnutella05_adj.sym
+INFO Setting RLIMIT_CPU to 115200
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-23 19:50:55
-INFO Running BMK2=1 BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2_RUNID=1498265455.61.1.0 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
+INFO PERFDATE BEGIN_RUN 2017-06-25 23:32:54
+INFO Running BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498451574.96.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
 INFO triangles/galois+edge/p2p-Gnutella05_adj.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -88,61 +89,106 @@ http://iss.ices.utexas.edu/galois/
 application: Triangles
 Counts the triangles in a graph
 
+Writing new input file: /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr.triangles
 NumTriangles: 1112
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),0 , MeminfoPre,0,0,0
-(NULL),0 , MeminfoMid,0,0,1
-(NULL),1 , Conflicts,0,0,0
-(NULL),1 , Commits,0,0,31839
-(NULL),1 , Pushes,0,0,0
-(NULL),1 , Iterations,0,0,31839
-(NULL),1 , Time,0,0,13
-(NULL),1 , MeminfoPost,0,0,2
-(NULL),1 , InitializeTime,0,0,3
-(NULL),0 , MeminfoPre,0,1,0
-(NULL),0 , MeminfoMid,0,1,1
-(NULL),1 , MeminfoPost,0,1,2
-(NULL),0 , MeminfoPre,0,2,0
-(NULL),0 , MeminfoMid,0,2,1
-(NULL),1 , MeminfoPost,0,2,2
-(NULL),0 , MeminfoPre,0,3,0
-(NULL),0 , MeminfoMid,0,3,1
-(NULL),1 , MeminfoPost,0,3,2
-(NULL),0 , MeminfoPre,0,4,0
- *** SQUASHED *** 
- (NULL),0 , MeminfoPre,0,15,0
-(NULL),0 , MeminfoMid,0,15,1
-(NULL),1 , MeminfoPost,0,15,2
-(NULL),0 , MeminfoPre,0,16,0
-(NULL),0 , MeminfoMid,0,16,1
-(NULL),1 , MeminfoPost,0,16,2
-(NULL),0 , MeminfoPre,0,17,0
-(NULL),0 , MeminfoMid,0,17,1
-(NULL),1 , MeminfoPost,0,17,2
-(NULL),0 , MeminfoPre,0,18,0
-(NULL),0 , MeminfoMid,0,18,1
-(NULL),1 , MeminfoPost,0,18,2
-(NULL),0 , MeminfoPre,0,19,0
-(NULL),0 , MeminfoMid,0,19,1
-(NULL),1 , MeminfoPost,0,19,2
-(NULL),0 , MeminfoPre,0,20,0
-(NULL),0 , MeminfoMid,0,20,1
-(NULL),1 , MeminfoPost,0,20,2
-(NULL),0 , MeminfoPre,0,21,0
-(NULL),0 , MeminfoMid,0,21,1
-(NULL),1 , MeminfoPost,0,21,2
-(NULL),0 , MeminfoPre,0,22,0
-(NULL),0 , MeminfoMid,0,22,1
-(NULL),1 , MeminfoPost,0,22,2
-(NULL),0 , MeminfoPre,0,23,0
-(NULL),0 , MeminfoMid,0,23,1
-(NULL),1 , MeminfoPost,0,23,2
+(NULL),1 , MeminfoPre,0,0,2
+(NULL),1 , PreprocessTime,0,0,9
+(NULL),1 , MeminfoMid,0,0,3
+(NULL),3 , Time,0,0,13
+(NULL),3 , MeminfoPost,0,0,4
+(NULL),3 , InitializeTime,0,0,14
+(NULL),0 , Conflicts,0,0,0
+(NULL),3 , Conflicts,0,0,0
+(NULL),0 , Commits,0,0,32
+(NULL),3 , Commits,0,0,31839
+(NULL),0 , Pushes,0,0,31
+(NULL),3 , Pushes,0,0,0
+(NULL),0 , Iterations,0,0,32
+(NULL),3 , Iterations,0,0,31839
+(NULL),1 , MeminfoPre,0,1,0
+(NULL),1 , MeminfoMid,0,1,1
+(NULL),3 , MeminfoPost,0,1,2
+(NULL),1 , MeminfoPre,0,2,0
+(NULL),1 , MeminfoMid,0,2,1
+(NULL),3 , MeminfoPost,0,2,2
+(NULL),1 , MeminfoPre,0,3,0
+(NULL),1 , MeminfoMid,0,3,1
+(NULL),3 , MeminfoPost,0,3,2
+(NULL),1 , MeminfoPre,0,4,0
+(NULL),1 , MeminfoMid,0,4,1
+(NULL),3 , MeminfoPost,0,4,2
+(NULL),1 , MeminfoPre,0,5,2
+(NULL),1 , MeminfoMid,0,5,3
+(NULL),3 , MeminfoPost,0,5,4
+(NULL),1 , MeminfoPre,0,6,0
+(NULL),1 , MeminfoMid,0,6,1
+(NULL),3 , MeminfoPost,0,6,2
+(NULL),1 , MeminfoPre,0,7,0
+(NULL),1 , MeminfoMid,0,7,1
+(NULL),3 , MeminfoPost,0,7,2
+(NULL),1 , MeminfoPre,0,8,0
+(NULL),1 , MeminfoMid,0,8,1
+(NULL),3 , MeminfoPost,0,8,2
+(NULL),1 , MeminfoPre,0,9,0
+(NULL),1 , MeminfoMid,0,9,1
+(NULL),3 , MeminfoPost,0,9,2
+(NULL),1 , MeminfoPre,0,10,0
+(NULL),1 , MeminfoMid,0,10,1
+(NULL),3 , MeminfoPost,0,10,2
+(NULL),1 , MeminfoPre,0,11,0
+(NULL),1 , MeminfoMid,0,11,1
+(NULL),3 , MeminfoPost,0,11,2
+(NULL),1 , MeminfoPre,0,12,0
+(NULL),1 , MeminfoMid,0,12,1
+(NULL),3 , MeminfoPost,0,12,2
+(NULL),1 , MeminfoPre,0,13,2
+(NULL),1 , MeminfoMid,0,13,3
+(NULL),3 , MeminfoPost,0,13,4
+(NULL),1 , MeminfoPre,0,14,0
+(NULL),1 , MeminfoMid,0,14,1
+(NULL),3 , MeminfoPost,0,14,2
+(NULL),1 , MeminfoPre,0,15,0
+(NULL),1 , MeminfoMid,0,15,1
+(NULL),3 , MeminfoPost,0,15,2
+(NULL),1 , MeminfoPre,0,16,0
+(NULL),1 , MeminfoMid,0,16,1
+(NULL),3 , MeminfoPost,0,16,2
+(NULL),1 , MeminfoPre,0,17,0
+(NULL),1 , MeminfoMid,0,17,1
+(NULL),3 , MeminfoPost,0,17,2
+(NULL),1 , MeminfoPre,0,18,0
+(NULL),1 , MeminfoMid,0,18,1
+(NULL),3 , MeminfoPost,0,18,2
+(NULL),1 , MeminfoPre,0,19,0
+(NULL),1 , MeminfoMid,0,19,1
+(NULL),3 , MeminfoPost,0,19,2
+(NULL),1 , MeminfoPre,0,20,0
+(NULL),1 , MeminfoMid,0,20,1
+(NULL),3 , MeminfoPost,0,20,2
+(NULL),1 , MeminfoPre,0,21,2
+(NULL),1 , MeminfoMid,0,21,3
+(NULL),3 , MeminfoPost,0,21,4
+(NULL),1 , MeminfoPre,0,22,0
+(NULL),1 , MeminfoMid,0,22,1
+(NULL),3 , MeminfoPost,0,22,2
+(NULL),1 , MeminfoPre,0,23,0
+(NULL),1 , MeminfoMid,0,23,1
+(NULL),3 , MeminfoPost,0,23,2
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 4692173
+INSTR intel-rapl:1:0 6687507
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 21489630
+INSTR intel-rapl:1 26564324
 
-PASS triangles/galois+edge/p2p-Gnutella05_adj.sym: BMK2=1 BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2_RUNID=1498265455.61.1.0 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
-INFO PERFDATE END_RUN 2017-06-23 19:50:56
-PERF triangles/galois+edge/p2p-Gnutella05_adj.sym 1498265455.61.1 0 13000000 BMK2=1 BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2_RUNID=1498265455.61.1.0 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
-INFO PERFDATE BEGIN_RUN 2017-06-23 19:50:56
-INFO Running BMK2=1 BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2_RUNID=1498265455.61.1.1 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
+PASS triangles/galois+edge/p2p-Gnutella05_adj.sym: BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498451574.96.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
+INFO PERFDATE END_RUN 2017-06-25 23:32:55
+PERF triangles/galois+edge/p2p-Gnutella05_adj.sym 1498451574.96.1 0 13000000 BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498451574.96.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
+INFO PERFDATE BEGIN_RUN 2017-06-25 23:32:55
+INFO Running BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498451574.96.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
 INFO triangles/galois+edge/p2p-Gnutella05_adj.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -151,61 +197,106 @@ http://iss.ices.utexas.edu/galois/
 application: Triangles
 Counts the triangles in a graph
 
+Writing new input file: /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr.triangles
 NumTriangles: 1112
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),0 , MeminfoPre,0,0,0
-(NULL),0 , MeminfoMid,0,0,1
-(NULL),1 , Conflicts,0,0,0
-(NULL),1 , Commits,0,0,31839
-(NULL),1 , Time,0,0,13
-(NULL),1 , MeminfoPost,0,0,2
-(NULL),1 , InitializeTime,0,0,2
-(NULL),1 , Pushes,0,0,0
-(NULL),1 , Iterations,0,0,31839
-(NULL),0 , MeminfoPre,0,1,0
-(NULL),0 , MeminfoMid,0,1,1
-(NULL),1 , MeminfoPost,0,1,2
-(NULL),0 , MeminfoPre,0,2,0
-(NULL),0 , MeminfoMid,0,2,1
-(NULL),1 , MeminfoPost,0,2,2
-(NULL),0 , MeminfoPre,0,3,0
-(NULL),0 , MeminfoMid,0,3,1
-(NULL),1 , MeminfoPost,0,3,2
-(NULL),0 , MeminfoPre,0,4,0
- *** SQUASHED *** 
- (NULL),0 , MeminfoPre,0,15,0
-(NULL),0 , MeminfoMid,0,15,1
-(NULL),1 , MeminfoPost,0,15,2
-(NULL),0 , MeminfoPre,0,16,0
-(NULL),0 , MeminfoMid,0,16,1
-(NULL),1 , MeminfoPost,0,16,2
-(NULL),0 , MeminfoPre,0,17,0
-(NULL),0 , MeminfoMid,0,17,1
-(NULL),1 , MeminfoPost,0,17,2
-(NULL),0 , MeminfoPre,0,18,0
-(NULL),0 , MeminfoMid,0,18,1
-(NULL),1 , MeminfoPost,0,18,2
-(NULL),0 , MeminfoPre,0,19,0
-(NULL),0 , MeminfoMid,0,19,1
-(NULL),1 , MeminfoPost,0,19,2
-(NULL),0 , MeminfoPre,0,20,0
-(NULL),0 , MeminfoMid,0,20,1
-(NULL),1 , MeminfoPost,0,20,2
-(NULL),0 , MeminfoPre,0,21,0
-(NULL),0 , MeminfoMid,0,21,1
-(NULL),1 , MeminfoPost,0,21,2
-(NULL),0 , MeminfoPre,0,22,0
-(NULL),0 , MeminfoMid,0,22,1
-(NULL),1 , MeminfoPost,0,22,2
-(NULL),0 , MeminfoPre,0,23,0
-(NULL),0 , MeminfoMid,0,23,1
-(NULL),1 , MeminfoPost,0,23,2
+(NULL),1 , MeminfoPre,0,0,2
+(NULL),1 , PreprocessTime,0,0,9
+(NULL),1 , MeminfoMid,0,0,3
+(NULL),3 , Time,0,0,13
+(NULL),3 , MeminfoPost,0,0,4
+(NULL),3 , InitializeTime,0,0,14
+(NULL),0 , Conflicts,0,0,0
+(NULL),3 , Conflicts,0,0,0
+(NULL),0 , Pushes,0,0,31
+(NULL),3 , Pushes,0,0,0
+(NULL),0 , Commits,0,0,32
+(NULL),3 , Commits,0,0,31839
+(NULL),0 , Iterations,0,0,32
+(NULL),3 , Iterations,0,0,31839
+(NULL),1 , MeminfoPre,0,1,0
+(NULL),1 , MeminfoMid,0,1,1
+(NULL),3 , MeminfoPost,0,1,2
+(NULL),1 , MeminfoPre,0,2,0
+(NULL),1 , MeminfoMid,0,2,1
+(NULL),3 , MeminfoPost,0,2,2
+(NULL),1 , MeminfoPre,0,3,0
+(NULL),1 , MeminfoMid,0,3,1
+(NULL),3 , MeminfoPost,0,3,2
+(NULL),1 , MeminfoPre,0,4,0
+(NULL),1 , MeminfoMid,0,4,1
+(NULL),3 , MeminfoPost,0,4,2
+(NULL),1 , MeminfoPre,0,5,0
+(NULL),1 , MeminfoMid,0,5,1
+(NULL),3 , MeminfoPost,0,5,2
+(NULL),1 , MeminfoPre,0,6,0
+(NULL),1 , MeminfoMid,0,6,1
+(NULL),3 , MeminfoPost,0,6,2
+(NULL),1 , MeminfoPre,0,7,0
+(NULL),1 , MeminfoMid,0,7,1
+(NULL),3 , MeminfoPost,0,7,2
+(NULL),1 , MeminfoPre,0,8,0
+(NULL),1 , MeminfoMid,0,8,1
+(NULL),3 , MeminfoPost,0,8,2
+(NULL),1 , MeminfoPre,0,9,0
+(NULL),1 , MeminfoMid,0,9,1
+(NULL),3 , MeminfoPost,0,9,2
+(NULL),1 , MeminfoPre,0,10,2
+(NULL),1 , MeminfoMid,0,10,3
+(NULL),3 , MeminfoPost,0,10,4
+(NULL),1 , MeminfoPre,0,11,0
+(NULL),1 , MeminfoMid,0,11,1
+(NULL),3 , MeminfoPost,0,11,2
+(NULL),1 , MeminfoPre,0,12,0
+(NULL),1 , MeminfoMid,0,12,1
+(NULL),3 , MeminfoPost,0,12,2
+(NULL),1 , MeminfoPre,0,13,0
+(NULL),1 , MeminfoMid,0,13,1
+(NULL),3 , MeminfoPost,0,13,2
+(NULL),1 , MeminfoPre,0,14,0
+(NULL),1 , MeminfoMid,0,14,1
+(NULL),3 , MeminfoPost,0,14,2
+(NULL),1 , MeminfoPre,0,15,0
+(NULL),1 , MeminfoMid,0,15,1
+(NULL),3 , MeminfoPost,0,15,2
+(NULL),1 , MeminfoPre,0,16,0
+(NULL),1 , MeminfoMid,0,16,1
+(NULL),3 , MeminfoPost,0,16,2
+(NULL),1 , MeminfoPre,0,17,0
+(NULL),1 , MeminfoMid,0,17,1
+(NULL),3 , MeminfoPost,0,17,2
+(NULL),1 , MeminfoPre,0,18,0
+(NULL),1 , MeminfoMid,0,18,1
+(NULL),3 , MeminfoPost,0,18,2
+(NULL),1 , MeminfoPre,0,19,0
+(NULL),1 , MeminfoMid,0,19,1
+(NULL),3 , MeminfoPost,0,19,2
+(NULL),1 , MeminfoPre,0,20,0
+(NULL),1 , MeminfoMid,0,20,1
+(NULL),3 , MeminfoPost,0,20,2
+(NULL),1 , MeminfoPre,0,21,2
+(NULL),1 , MeminfoMid,0,21,3
+(NULL),3 , MeminfoPost,0,21,4
+(NULL),1 , MeminfoPre,0,22,2
+(NULL),1 , MeminfoMid,0,22,3
+(NULL),3 , MeminfoPost,0,22,4
+(NULL),1 , MeminfoPre,0,23,0
+(NULL),1 , MeminfoMid,0,23,1
+(NULL),3 , MeminfoPost,0,23,2
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 5757742
+INSTR intel-rapl:1:0 7592916
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 25377620
+INSTR intel-rapl:1 31442485
 
-PASS triangles/galois+edge/p2p-Gnutella05_adj.sym: BMK2=1 BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2_RUNID=1498265455.61.1.1 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
-INFO PERFDATE END_RUN 2017-06-23 19:50:56
-PERF triangles/galois+edge/p2p-Gnutella05_adj.sym 1498265455.61.1 1 13000000 BMK2=1 BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2_RUNID=1498265455.61.1.1 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
-INFO PERFDATE BEGIN_RUN 2017-06-23 19:50:56
-INFO Running BMK2=1 BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2_RUNID=1498265455.61.1.2 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
+PASS triangles/galois+edge/p2p-Gnutella05_adj.sym: BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498451574.96.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
+INFO PERFDATE END_RUN 2017-06-25 23:32:56
+PERF triangles/galois+edge/p2p-Gnutella05_adj.sym 1498451574.96.1 1 13000000 BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498451574.96.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
+INFO PERFDATE BEGIN_RUN 2017-06-25 23:32:56
+INFO Running BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498451574.96.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
 INFO triangles/galois+edge/p2p-Gnutella05_adj.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -214,60 +305,105 @@ http://iss.ices.utexas.edu/galois/
 application: Triangles
 Counts the triangles in a graph
 
+Writing new input file: /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr.triangles
 NumTriangles: 1112
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),0 , MeminfoPre,0,0,0
-(NULL),0 , MeminfoMid,0,0,1
-(NULL),1 , Conflicts,0,0,0
-(NULL),1 , Pushes,0,0,0
-(NULL),1 , Time,0,0,13
-(NULL),1 , MeminfoPost,0,0,2
-(NULL),1 , InitializeTime,0,0,3
-(NULL),1 , Commits,0,0,31839
-(NULL),1 , Iterations,0,0,31839
-(NULL),0 , MeminfoPre,0,1,0
-(NULL),0 , MeminfoMid,0,1,1
-(NULL),1 , MeminfoPost,0,1,2
-(NULL),0 , MeminfoPre,0,2,0
-(NULL),0 , MeminfoMid,0,2,1
-(NULL),1 , MeminfoPost,0,2,2
-(NULL),0 , MeminfoPre,0,3,0
-(NULL),0 , MeminfoMid,0,3,1
-(NULL),1 , MeminfoPost,0,3,2
-(NULL),0 , MeminfoPre,0,4,0
- *** SQUASHED *** 
- (NULL),0 , MeminfoPre,0,15,0
-(NULL),0 , MeminfoMid,0,15,1
-(NULL),1 , MeminfoPost,0,15,2
-(NULL),0 , MeminfoPre,0,16,0
-(NULL),0 , MeminfoMid,0,16,1
-(NULL),1 , MeminfoPost,0,16,2
-(NULL),0 , MeminfoPre,0,17,0
-(NULL),0 , MeminfoMid,0,17,1
-(NULL),1 , MeminfoPost,0,17,2
-(NULL),0 , MeminfoPre,0,18,0
-(NULL),0 , MeminfoMid,0,18,1
-(NULL),1 , MeminfoPost,0,18,2
-(NULL),0 , MeminfoPre,0,19,0
-(NULL),0 , MeminfoMid,0,19,1
-(NULL),1 , MeminfoPost,0,19,2
-(NULL),0 , MeminfoPre,0,20,0
-(NULL),0 , MeminfoMid,0,20,1
-(NULL),1 , MeminfoPost,0,20,2
-(NULL),0 , MeminfoPre,0,21,0
-(NULL),0 , MeminfoMid,0,21,1
-(NULL),1 , MeminfoPost,0,21,2
-(NULL),0 , MeminfoPre,0,22,0
-(NULL),0 , MeminfoMid,0,22,1
-(NULL),1 , MeminfoPost,0,22,2
-(NULL),0 , MeminfoPre,0,23,0
-(NULL),0 , MeminfoMid,0,23,1
-(NULL),1 , MeminfoPost,0,23,2
+(NULL),1 , MeminfoPre,0,0,2
+(NULL),1 , PreprocessTime,0,0,9
+(NULL),1 , MeminfoMid,0,0,3
+(NULL),3 , Time,0,0,13
+(NULL),3 , MeminfoPost,0,0,4
+(NULL),3 , InitializeTime,0,0,14
+(NULL),0 , Conflicts,0,0,0
+(NULL),3 , Conflicts,0,0,0
+(NULL),0 , Pushes,0,0,31
+(NULL),3 , Pushes,0,0,0
+(NULL),0 , Iterations,0,0,32
+(NULL),3 , Iterations,0,0,31839
+(NULL),0 , Commits,0,0,32
+(NULL),3 , Commits,0,0,31839
+(NULL),1 , MeminfoPre,0,1,2
+(NULL),1 , MeminfoMid,0,1,3
+(NULL),3 , MeminfoPost,0,1,4
+(NULL),1 , MeminfoPre,0,2,0
+(NULL),1 , MeminfoMid,0,2,1
+(NULL),3 , MeminfoPost,0,2,2
+(NULL),1 , MeminfoPre,0,3,0
+(NULL),1 , MeminfoMid,0,3,1
+(NULL),3 , MeminfoPost,0,3,2
+(NULL),1 , MeminfoPre,0,4,2
+(NULL),1 , MeminfoMid,0,4,3
+(NULL),3 , MeminfoPost,0,4,4
+(NULL),1 , MeminfoPre,0,5,0
+(NULL),1 , MeminfoMid,0,5,1
+(NULL),3 , MeminfoPost,0,5,2
+(NULL),1 , MeminfoPre,0,6,0
+(NULL),1 , MeminfoMid,0,6,1
+(NULL),3 , MeminfoPost,0,6,2
+(NULL),1 , MeminfoPre,0,7,0
+(NULL),1 , MeminfoMid,0,7,1
+(NULL),3 , MeminfoPost,0,7,2
+(NULL),1 , MeminfoPre,0,8,0
+(NULL),1 , MeminfoMid,0,8,1
+(NULL),3 , MeminfoPost,0,8,2
+(NULL),1 , MeminfoPre,0,9,0
+(NULL),1 , MeminfoMid,0,9,1
+(NULL),3 , MeminfoPost,0,9,2
+(NULL),1 , MeminfoPre,0,10,2
+(NULL),1 , MeminfoMid,0,10,3
+(NULL),3 , MeminfoPost,0,10,4
+(NULL),1 , MeminfoPre,0,11,0
+(NULL),1 , MeminfoMid,0,11,1
+(NULL),3 , MeminfoPost,0,11,2
+(NULL),1 , MeminfoPre,0,12,0
+(NULL),1 , MeminfoMid,0,12,1
+(NULL),3 , MeminfoPost,0,12,2
+(NULL),1 , MeminfoPre,0,13,0
+(NULL),1 , MeminfoMid,0,13,1
+(NULL),3 , MeminfoPost,0,13,2
+(NULL),1 , MeminfoPre,0,14,0
+(NULL),1 , MeminfoMid,0,14,1
+(NULL),3 , MeminfoPost,0,14,2
+(NULL),1 , MeminfoPre,0,15,0
+(NULL),1 , MeminfoMid,0,15,1
+(NULL),3 , MeminfoPost,0,15,2
+(NULL),1 , MeminfoPre,0,16,0
+(NULL),1 , MeminfoMid,0,16,1
+(NULL),3 , MeminfoPost,0,16,2
+(NULL),1 , MeminfoPre,0,17,0
+(NULL),1 , MeminfoMid,0,17,1
+(NULL),3 , MeminfoPost,0,17,2
+(NULL),1 , MeminfoPre,0,18,0
+(NULL),1 , MeminfoMid,0,18,1
+(NULL),3 , MeminfoPost,0,18,2
+(NULL),1 , MeminfoPre,0,19,0
+(NULL),1 , MeminfoMid,0,19,1
+(NULL),3 , MeminfoPost,0,19,2
+(NULL),1 , MeminfoPre,0,20,0
+(NULL),1 , MeminfoMid,0,20,1
+(NULL),3 , MeminfoPost,0,20,2
+(NULL),1 , MeminfoPre,0,21,0
+(NULL),1 , MeminfoMid,0,21,1
+(NULL),3 , MeminfoPost,0,21,2
+(NULL),1 , MeminfoPre,0,22,0
+(NULL),1 , MeminfoMid,0,22,1
+(NULL),3 , MeminfoPost,0,22,2
+(NULL),1 , MeminfoPre,0,23,0
+(NULL),1 , MeminfoMid,0,23,1
+(NULL),3 , MeminfoPost,0,23,2
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 5383917
+INSTR intel-rapl:1:0 7567012
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 24775510
+INSTR intel-rapl:1 30512740
 
-PASS triangles/galois+edge/p2p-Gnutella05_adj.sym: BMK2=1 BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2_RUNID=1498265455.61.1.2 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
-INFO PERFDATE END_RUN 2017-06-23 19:50:57
-PERF triangles/galois+edge/p2p-Gnutella05_adj.sym 1498265455.61.1 2 13000000 BMK2=1 BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2_RUNID=1498265455.61.1.2 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
+PASS triangles/galois+edge/p2p-Gnutella05_adj.sym: BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498451574.96.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
+INFO PERFDATE END_RUN 2017-06-25 23:32:57
+PERF triangles/galois+edge/p2p-Gnutella05_adj.sym 1498451574.96.1 2 13000000 BMK2_INPUTID=p2p-Gnutella05_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498451574.96.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella05_adj.sym.gr -t=24
 TASK_COMPLETE triangles/galois+edge/p2p-Gnutella05_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-23 19:50:57
-INFO APPROXIMATE DURATION 0:00:01.905131
+INFO DATE END 2017-06-25 23:32:57
+INFO APPROXIMATE DURATION 0:00:02.370288

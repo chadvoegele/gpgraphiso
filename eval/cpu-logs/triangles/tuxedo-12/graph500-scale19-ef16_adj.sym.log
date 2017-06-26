@@ -5,6 +5,7 @@ INFO ../bmk2cfg/bmk2.cfg: Loaded file type 2 ('../bmk2cfg/graph.inputdb')
 INFO ../bmk2cfg/bmk2.cfg: Loaded file type 3 ('../bmk2cfg/graph.inputprops')
 INFO ../bmk2cfg/bmk2.cfg: Loaded file type 1 ('../bmk2cfg/graph.bispec')
 DEBUG Ignoring binary id triangles/galois+node in ../../GaloisCpp/build/default//lonestar/triangles/bmktest2.py, not in sel_binaries
+DEBUG Ignoring binary id triangles/galois+hybrid in ../../GaloisCpp/build/default//lonestar/triangles/bmktest2.py, not in sel_binaries
 INFO Applying configuration "{'k': 'max', 't': '12'}"
 DEBUG Ignoring input 'oregon1_010414_adj.sym' for 'triangles/galois+edge', not in sel_inputs
 DEBUG Ignoring input 'cit-Patents_adj.sym' for 'triangles/galois+edge', not in sel_inputs
@@ -73,13 +74,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/galois+edge', not i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/galois+edge', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-23 19:59:40
+INFO DATE START 2017-06-25 22:34:34
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/GaloisCpp/build/default/lonestar/triangles
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=12 --scan ../../GaloisCpp/build/default//lonestar/triangles --log cpu-logs/triangles/tuxedo-12/graph500-scale19-ef16_adj.sym.log -v perf triangles/galois+edge graph500-scale19-ef16_adj.sym
-INFO Setting RLIMIT_CPU to 4800
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=12 --mtcpulimit 12 --scan ../../GaloisCpp/build/default//lonestar/triangles --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-12/graph500-scale19-ef16_adj.sym.log -v perf triangles/galois+edge graph500-scale19-ef16_adj.sym
+INFO Setting RLIMIT_CPU to 57600
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-23 19:59:40
-INFO Running BMK2=1 BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2_RUNID=1498265980.53.1.0 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
+INFO PERFDATE BEGIN_RUN 2017-06-25 22:34:34
+INFO Running BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498448074.3.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
 INFO triangles/galois+edge/graph500-scale19-ef16_adj.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -88,56 +89,70 @@ http://iss.ices.utexas.edu/galois/
 application: Triangles
 Counts the triangles in a graph
 
+Writing new input file: /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr.triangles
 NumTriangles: 186288972
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),0 , MeminfoPre,0,0,0
-(NULL),0 , MeminfoMid,0,0,11
-(NULL),1 , Time,0,0,2854
-(NULL),1 , MeminfoPost,0,0,11
-(NULL),1 , InitializeTime,0,0,61
-(NULL),1 , Conflicts,0,0,0
-(NULL),1 , Commits,0,0,7729675
-(NULL),1 , Pushes,0,0,0
-(NULL),1 , Iterations,0,0,7729675
-(NULL),0 , MeminfoPre,0,1,0
-(NULL),0 , MeminfoMid,0,1,11
-(NULL),1 , MeminfoPost,0,1,11
-(NULL),0 , MeminfoPre,0,2,0
-(NULL),0 , MeminfoMid,0,2,11
-(NULL),1 , MeminfoPost,0,2,11
-(NULL),0 , MeminfoPre,0,3,0
-(NULL),0 , MeminfoMid,0,3,11
-(NULL),1 , MeminfoPost,0,3,11
-(NULL),0 , MeminfoPre,0,4,0
-(NULL),0 , MeminfoMid,0,4,11
-(NULL),1 , MeminfoPost,0,4,11
-(NULL),0 , MeminfoPre,0,5,0
-(NULL),0 , MeminfoMid,0,5,11
-(NULL),1 , MeminfoPost,0,5,11
-(NULL),0 , MeminfoPre,0,6,0
-(NULL),0 , MeminfoMid,0,6,11
-(NULL),1 , MeminfoPost,0,6,11
-(NULL),0 , MeminfoPre,0,7,0
-(NULL),0 , MeminfoMid,0,7,11
-(NULL),1 , MeminfoPost,0,7,11
-(NULL),0 , MeminfoPre,0,8,0
-(NULL),0 , MeminfoMid,0,8,11
-(NULL),1 , MeminfoPost,0,8,11
-(NULL),0 , MeminfoPre,0,9,0
-(NULL),0 , MeminfoMid,0,9,11
-(NULL),1 , MeminfoPost,0,9,12
-(NULL),0 , MeminfoPre,0,10,0
-(NULL),0 , MeminfoMid,0,10,11
-(NULL),1 , MeminfoPost,0,10,24
-(NULL),0 , MeminfoPre,0,11,0
-(NULL),0 , MeminfoMid,0,11,11
-(NULL),1 , MeminfoPost,0,11,69
+(NULL),1 , MeminfoPre,0,0,2
+(NULL),1 , PreprocessTime,0,0,1237
+(NULL),1 , MeminfoMid,0,0,13
+(NULL),3 , Time,0,0,2840
+(NULL),3 , MeminfoPost,0,0,13
+(NULL),3 , InitializeTime,0,0,1495
+(NULL),0 , Commits,0,0,245
+(NULL),3 , Commits,0,0,7729675
+(NULL),0 , Pushes,0,0,244
+(NULL),3 , Pushes,0,0,0
+(NULL),0 , Iterations,0,0,245
+(NULL),3 , Iterations,0,0,7729675
+(NULL),0 , Conflicts,0,0,0
+(NULL),3 , Conflicts,0,0,0
+(NULL),1 , MeminfoPre,0,1,2
+(NULL),1 , MeminfoMid,0,1,13
+(NULL),3 , MeminfoPost,0,1,13
+(NULL),1 , MeminfoPre,0,2,2
+(NULL),1 , MeminfoMid,0,2,13
+(NULL),3 , MeminfoPost,0,2,13
+(NULL),1 , MeminfoPre,0,3,2
+(NULL),1 , MeminfoMid,0,3,13
+(NULL),3 , MeminfoPost,0,3,13
+(NULL),1 , MeminfoPre,0,4,2
+(NULL),1 , MeminfoMid,0,4,13
+(NULL),3 , MeminfoPost,0,4,13
+(NULL),1 , MeminfoPre,0,5,2
+(NULL),1 , MeminfoMid,0,5,13
+(NULL),3 , MeminfoPost,0,5,13
+(NULL),1 , MeminfoPre,0,6,2
+(NULL),1 , MeminfoMid,0,6,13
+(NULL),3 , MeminfoPost,0,6,13
+(NULL),1 , MeminfoPre,0,7,2
+(NULL),1 , MeminfoMid,0,7,13
+(NULL),3 , MeminfoPost,0,7,13
+(NULL),1 , MeminfoPre,0,8,2
+(NULL),1 , MeminfoMid,0,8,13
+(NULL),3 , MeminfoPost,0,8,13
+(NULL),1 , MeminfoPre,0,9,2
+(NULL),1 , MeminfoMid,0,9,13
+(NULL),3 , MeminfoPost,0,9,14
+(NULL),1 , MeminfoPre,0,10,1
+(NULL),1 , MeminfoMid,0,10,12
+(NULL),3 , MeminfoPost,0,10,25
+(NULL),1 , MeminfoPre,0,11,2
+(NULL),1 , MeminfoMid,0,11,13
+(NULL),3 , MeminfoPost,0,11,71
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 36864034
+INSTR intel-rapl:1:0 56179121
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 181253259
+INSTR intel-rapl:1 326253316
 
-PASS triangles/galois+edge/graph500-scale19-ef16_adj.sym: BMK2=1 BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2_RUNID=1498265980.53.1.0 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
-INFO PERFDATE END_RUN 2017-06-23 19:59:44
-PERF triangles/galois+edge/graph500-scale19-ef16_adj.sym 1498265980.53.1 0 2854000000 BMK2=1 BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2_RUNID=1498265980.53.1.0 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
-INFO PERFDATE BEGIN_RUN 2017-06-23 19:59:44
-INFO Running BMK2=1 BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2_RUNID=1498265980.53.1.1 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
+PASS triangles/galois+edge/graph500-scale19-ef16_adj.sym: BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498448074.3.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
+INFO PERFDATE END_RUN 2017-06-25 22:34:39
+PERF triangles/galois+edge/graph500-scale19-ef16_adj.sym 1498448074.3.1 0 2840000000 BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498448074.3.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
+INFO PERFDATE BEGIN_RUN 2017-06-25 22:34:39
+INFO Running BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498448074.3.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
 INFO triangles/galois+edge/graph500-scale19-ef16_adj.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -146,56 +161,70 @@ http://iss.ices.utexas.edu/galois/
 application: Triangles
 Counts the triangles in a graph
 
+Writing new input file: /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr.triangles
 NumTriangles: 186288972
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),0 , MeminfoPre,0,0,0
-(NULL),0 , MeminfoMid,0,0,11
-(NULL),1 , Time,0,0,2851
-(NULL),1 , MeminfoPost,0,0,11
-(NULL),1 , InitializeTime,0,0,61
-(NULL),1 , Conflicts,0,0,0
-(NULL),1 , Commits,0,0,7729675
-(NULL),1 , Pushes,0,0,0
-(NULL),1 , Iterations,0,0,7729675
-(NULL),0 , MeminfoPre,0,1,0
-(NULL),0 , MeminfoMid,0,1,11
-(NULL),1 , MeminfoPost,0,1,11
-(NULL),0 , MeminfoPre,0,2,0
-(NULL),0 , MeminfoMid,0,2,11
-(NULL),1 , MeminfoPost,0,2,11
-(NULL),0 , MeminfoPre,0,3,0
-(NULL),0 , MeminfoMid,0,3,11
-(NULL),1 , MeminfoPost,0,3,11
-(NULL),0 , MeminfoPre,0,4,0
-(NULL),0 , MeminfoMid,0,4,11
-(NULL),1 , MeminfoPost,0,4,11
-(NULL),0 , MeminfoPre,0,5,0
-(NULL),0 , MeminfoMid,0,5,11
-(NULL),1 , MeminfoPost,0,5,11
-(NULL),0 , MeminfoPre,0,6,0
-(NULL),0 , MeminfoMid,0,6,11
-(NULL),1 , MeminfoPost,0,6,11
-(NULL),0 , MeminfoPre,0,7,0
-(NULL),0 , MeminfoMid,0,7,11
-(NULL),1 , MeminfoPost,0,7,11
-(NULL),0 , MeminfoPre,0,8,0
-(NULL),0 , MeminfoMid,0,8,11
-(NULL),1 , MeminfoPost,0,8,11
-(NULL),0 , MeminfoPre,0,9,0
-(NULL),0 , MeminfoMid,0,9,11
-(NULL),1 , MeminfoPost,0,9,12
-(NULL),0 , MeminfoPre,0,10,0
-(NULL),0 , MeminfoMid,0,10,11
-(NULL),1 , MeminfoPost,0,10,24
-(NULL),0 , MeminfoPre,0,11,0
-(NULL),0 , MeminfoMid,0,11,11
-(NULL),1 , MeminfoPost,0,11,69
+(NULL),1 , MeminfoPre,0,0,2
+(NULL),1 , MeminfoMid,0,0,13
+(NULL),1 , PreprocessTime,0,0,1235
+(NULL),3 , Time,0,0,2802
+(NULL),3 , MeminfoPost,0,0,13
+(NULL),3 , InitializeTime,0,0,1424
+(NULL),0 , Iterations,0,0,201
+(NULL),3 , Iterations,0,0,7729675
+(NULL),0 , Conflicts,0,0,0
+(NULL),3 , Conflicts,0,0,0
+(NULL),0 , Commits,0,0,201
+(NULL),3 , Commits,0,0,7729675
+(NULL),0 , Pushes,0,0,200
+(NULL),3 , Pushes,0,0,0
+(NULL),1 , MeminfoPre,0,1,2
+(NULL),1 , MeminfoMid,0,1,13
+(NULL),3 , MeminfoPost,0,1,13
+(NULL),1 , MeminfoPre,0,2,2
+(NULL),1 , MeminfoMid,0,2,13
+(NULL),3 , MeminfoPost,0,2,13
+(NULL),1 , MeminfoPre,0,3,2
+(NULL),1 , MeminfoMid,0,3,13
+(NULL),3 , MeminfoPost,0,3,13
+(NULL),1 , MeminfoPre,0,4,2
+(NULL),1 , MeminfoMid,0,4,13
+(NULL),3 , MeminfoPost,0,4,13
+(NULL),1 , MeminfoPre,0,5,1
+(NULL),1 , MeminfoMid,0,5,12
+(NULL),3 , MeminfoPost,0,5,12
+(NULL),1 , MeminfoPre,0,6,2
+(NULL),1 , MeminfoMid,0,6,13
+(NULL),3 , MeminfoPost,0,6,13
+(NULL),1 , MeminfoPre,0,7,2
+(NULL),1 , MeminfoMid,0,7,13
+(NULL),3 , MeminfoPost,0,7,13
+(NULL),1 , MeminfoPre,0,8,2
+(NULL),1 , MeminfoMid,0,8,13
+(NULL),3 , MeminfoPost,0,8,13
+(NULL),1 , MeminfoPre,0,9,2
+(NULL),1 , MeminfoMid,0,9,13
+(NULL),3 , MeminfoPost,0,9,14
+(NULL),1 , MeminfoPre,0,10,2
+(NULL),1 , MeminfoMid,0,10,13
+(NULL),3 , MeminfoPost,0,10,26
+(NULL),1 , MeminfoPre,0,11,2
+(NULL),1 , MeminfoMid,0,11,13
+(NULL),3 , MeminfoPost,0,11,71
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 36066813
+INSTR intel-rapl:1:0 56135072
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 177478305
+INSTR intel-rapl:1 323472499
 
-PASS triangles/galois+edge/graph500-scale19-ef16_adj.sym: BMK2=1 BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2_RUNID=1498265980.53.1.1 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
-INFO PERFDATE END_RUN 2017-06-23 19:59:47
-PERF triangles/galois+edge/graph500-scale19-ef16_adj.sym 1498265980.53.1 1 2851000000 BMK2=1 BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2_RUNID=1498265980.53.1.1 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
-INFO PERFDATE BEGIN_RUN 2017-06-23 19:59:47
-INFO Running BMK2=1 BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2_RUNID=1498265980.53.1.2 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
+PASS triangles/galois+edge/graph500-scale19-ef16_adj.sym: BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498448074.3.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
+INFO PERFDATE END_RUN 2017-06-25 22:34:44
+PERF triangles/galois+edge/graph500-scale19-ef16_adj.sym 1498448074.3.1 1 2802000000 BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498448074.3.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
+INFO PERFDATE BEGIN_RUN 2017-06-25 22:34:44
+INFO Running BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498448074.3.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
 INFO triangles/galois+edge/graph500-scale19-ef16_adj.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -204,55 +233,69 @@ http://iss.ices.utexas.edu/galois/
 application: Triangles
 Counts the triangles in a graph
 
+Writing new input file: /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr.triangles
 NumTriangles: 186288972
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),0 , MeminfoPre,0,0,0
-(NULL),0 , MeminfoMid,0,0,11
-(NULL),1 , Iterations,0,0,7729675
-(NULL),1 , Time,0,0,2822
-(NULL),1 , MeminfoPost,0,0,11
-(NULL),1 , InitializeTime,0,0,60
-(NULL),1 , Commits,0,0,7729675
-(NULL),1 , Pushes,0,0,0
-(NULL),1 , Conflicts,0,0,0
-(NULL),0 , MeminfoPre,0,1,0
-(NULL),0 , MeminfoMid,0,1,11
-(NULL),1 , MeminfoPost,0,1,11
-(NULL),0 , MeminfoPre,0,2,0
-(NULL),0 , MeminfoMid,0,2,11
-(NULL),1 , MeminfoPost,0,2,11
-(NULL),0 , MeminfoPre,0,3,0
-(NULL),0 , MeminfoMid,0,3,11
-(NULL),1 , MeminfoPost,0,3,11
-(NULL),0 , MeminfoPre,0,4,0
-(NULL),0 , MeminfoMid,0,4,11
-(NULL),1 , MeminfoPost,0,4,11
-(NULL),0 , MeminfoPre,0,5,0
-(NULL),0 , MeminfoMid,0,5,11
-(NULL),1 , MeminfoPost,0,5,11
-(NULL),0 , MeminfoPre,0,6,0
-(NULL),0 , MeminfoMid,0,6,11
-(NULL),1 , MeminfoPost,0,6,11
-(NULL),0 , MeminfoPre,0,7,0
-(NULL),0 , MeminfoMid,0,7,11
-(NULL),1 , MeminfoPost,0,7,11
-(NULL),0 , MeminfoPre,0,8,0
-(NULL),0 , MeminfoMid,0,8,11
-(NULL),1 , MeminfoPost,0,8,11
-(NULL),0 , MeminfoPre,0,9,0
-(NULL),0 , MeminfoMid,0,9,11
-(NULL),1 , MeminfoPost,0,9,12
-(NULL),0 , MeminfoPre,0,10,0
-(NULL),0 , MeminfoMid,0,10,11
-(NULL),1 , MeminfoPost,0,10,24
-(NULL),0 , MeminfoPre,0,11,0
-(NULL),0 , MeminfoMid,0,11,11
-(NULL),1 , MeminfoPost,0,11,69
+(NULL),1 , MeminfoPre,0,0,2
+(NULL),1 , PreprocessTime,0,0,1246
+(NULL),1 , MeminfoMid,0,0,13
+(NULL),3 , Time,0,0,2831
+(NULL),3 , MeminfoPost,0,0,13
+(NULL),3 , InitializeTime,0,0,1422
+(NULL),0 , Conflicts,0,0,0
+(NULL),3 , Conflicts,0,0,0
+(NULL),0 , Commits,0,0,224
+(NULL),3 , Commits,0,0,7729675
+(NULL),0 , Pushes,0,0,223
+(NULL),3 , Pushes,0,0,0
+(NULL),0 , Iterations,0,0,224
+(NULL),3 , Iterations,0,0,7729675
+(NULL),1 , MeminfoPre,0,1,2
+(NULL),1 , MeminfoMid,0,1,13
+(NULL),3 , MeminfoPost,0,1,13
+(NULL),1 , MeminfoPre,0,2,2
+(NULL),1 , MeminfoMid,0,2,13
+(NULL),3 , MeminfoPost,0,2,13
+(NULL),1 , MeminfoPre,0,3,2
+(NULL),1 , MeminfoMid,0,3,13
+(NULL),3 , MeminfoPost,0,3,13
+(NULL),1 , MeminfoPre,0,4,2
+(NULL),1 , MeminfoMid,0,4,13
+(NULL),3 , MeminfoPost,0,4,13
+(NULL),1 , MeminfoPre,0,5,2
+(NULL),1 , MeminfoMid,0,5,13
+(NULL),3 , MeminfoPost,0,5,13
+(NULL),1 , MeminfoPre,0,6,2
+(NULL),1 , MeminfoMid,0,6,13
+(NULL),3 , MeminfoPost,0,6,13
+(NULL),1 , MeminfoPre,0,7,2
+(NULL),1 , MeminfoMid,0,7,13
+(NULL),3 , MeminfoPost,0,7,13
+(NULL),1 , MeminfoPre,0,8,2
+(NULL),1 , MeminfoMid,0,8,13
+(NULL),3 , MeminfoPost,0,8,13
+(NULL),1 , MeminfoPre,0,9,2
+(NULL),1 , MeminfoMid,0,9,13
+(NULL),3 , MeminfoPost,0,9,14
+(NULL),1 , MeminfoPre,0,10,2
+(NULL),1 , MeminfoMid,0,10,13
+(NULL),3 , MeminfoPost,0,10,26
+(NULL),1 , MeminfoPre,0,11,2
+(NULL),1 , MeminfoMid,0,11,13
+(NULL),3 , MeminfoPost,0,11,71
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 36541449
+INSTR intel-rapl:1:0 56886960
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 180387966
+INSTR intel-rapl:1 329463023
 
-PASS triangles/galois+edge/graph500-scale19-ef16_adj.sym: BMK2=1 BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2_RUNID=1498265980.53.1.2 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
-INFO PERFDATE END_RUN 2017-06-23 19:59:51
-PERF triangles/galois+edge/graph500-scale19-ef16_adj.sym 1498265980.53.1 2 2822000000 BMK2=1 BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2_RUNID=1498265980.53.1.2 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
+PASS triangles/galois+edge/graph500-scale19-ef16_adj.sym: BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498448074.3.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
+INFO PERFDATE END_RUN 2017-06-25 22:34:49
+PERF triangles/galois+edge/graph500-scale19-ef16_adj.sym 1498448074.3.1 2 2831000000 BMK2_INPUTID=graph500-scale19-ef16_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498448074.3.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale19-ef16_adj.sym.gr -t=12
 TASK_COMPLETE triangles/galois+edge/graph500-scale19-ef16_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-23 19:59:51
-INFO APPROXIMATE DURATION 0:00:10.706466
+INFO DATE END 2017-06-25 22:34:49
+INFO APPROXIMATE DURATION 0:00:15.295469

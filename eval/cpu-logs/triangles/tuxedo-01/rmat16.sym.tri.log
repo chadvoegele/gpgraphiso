@@ -5,6 +5,7 @@ INFO ../bmk2cfg/bmk2.cfg: Loaded file type 2 ('../bmk2cfg/graph.inputdb')
 INFO ../bmk2cfg/bmk2.cfg: Loaded file type 3 ('../bmk2cfg/graph.inputprops')
 INFO ../bmk2cfg/bmk2.cfg: Loaded file type 1 ('../bmk2cfg/graph.bispec')
 DEBUG Ignoring binary id triangles/galois+node in ../../GaloisCpp/build/default//lonestar/triangles/bmktest2.py, not in sel_binaries
+DEBUG Ignoring binary id triangles/galois+hybrid in ../../GaloisCpp/build/default//lonestar/triangles/bmktest2.py, not in sel_binaries
 INFO Applying configuration "{'k': 'max', 't': '01'}"
 DEBUG Ignoring input 'oregon1_010414_adj.sym' for 'triangles/galois+edge', not in sel_inputs
 DEBUG Ignoring input 'cit-Patents_adj.sym' for 'triangles/galois+edge', not in sel_inputs
@@ -73,13 +74,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/galois+edge', not i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/galois+edge', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-23 22:19:05
+INFO DATE START 2017-06-25 19:18:32
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/GaloisCpp/build/default/lonestar/triangles
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --scan ../../GaloisCpp/build/default//lonestar/triangles --log cpu-logs/triangles/tuxedo-01/rmat16.sym.tri.log -v perf triangles/galois+edge rmat16.sym.tri
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --mtcpulimit 01 --scan ../../GaloisCpp/build/default//lonestar/triangles --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-01/rmat16.sym.tri.log -v perf triangles/galois+edge rmat16.sym.tri
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-23 22:19:05
-INFO Running BMK2=1 BMK2_INPUTID=rmat16.sym.tri BMK2_RUNID=1498274345.04.1.0 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
+INFO PERFDATE BEGIN_RUN 2017-06-25 19:18:32
+INFO Running BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498436312.79.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
 INFO triangles/galois+edge/rmat16.sym.tri STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -88,23 +89,37 @@ http://iss.ices.utexas.edu/galois/
 application: Triangles
 Counts the triangles in a graph
 
+Writing new input file: /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr.triangles
 NumTriangles: 234373
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),0 , MeminfoPre,0,0,0
-(NULL),0 , MeminfoMid,0,0,8
-(NULL),1 , Conflicts,0,0,0
-(NULL),1 , Commits,0,0,483933
-(NULL),1 , Pushes,0,0,0
-(NULL),1 , Iterations,0,0,483933
-(NULL),1 , Time,0,0,125
-(NULL),1 , MeminfoPost,0,0,8
-(NULL),1 , InitializeTime,0,0,129
+(NULL),1 , MeminfoPre,0,0,2
+(NULL),1 , PreprocessTime,0,0,82
+(NULL),1 , MeminfoMid,0,0,10
+(NULL),3 , Time,0,0,125
+(NULL),3 , MeminfoPost,0,0,10
+(NULL),3 , InitializeTime,0,0,242
+(NULL),0 , Commits,0,0,90
+(NULL),3 , Commits,0,0,483933
+(NULL),0 , Pushes,0,0,89
+(NULL),3 , Pushes,0,0,0
+(NULL),0 , Conflicts,0,0,0
+(NULL),3 , Conflicts,0,0,0
+(NULL),0 , Iterations,0,0,90
+(NULL),3 , Iterations,0,0,483933
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 6860719
+INSTR intel-rapl:1:0 8533116
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 30567915
+INSTR intel-rapl:1 35754913
 
-PASS triangles/galois+edge/rmat16.sym.tri: BMK2=1 BMK2_INPUTID=rmat16.sym.tri BMK2_RUNID=1498274345.04.1.0 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
-INFO PERFDATE END_RUN 2017-06-23 22:19:05
-PERF triangles/galois+edge/rmat16.sym.tri 1498274345.04.1 0 125000000 BMK2=1 BMK2_INPUTID=rmat16.sym.tri BMK2_RUNID=1498274345.04.1.0 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
-INFO PERFDATE BEGIN_RUN 2017-06-23 22:19:05
-INFO Running BMK2=1 BMK2_INPUTID=rmat16.sym.tri BMK2_RUNID=1498274345.04.1.1 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
+PASS triangles/galois+edge/rmat16.sym.tri: BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498436312.79.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
+INFO PERFDATE END_RUN 2017-06-25 19:18:33
+PERF triangles/galois+edge/rmat16.sym.tri 1498436312.79.1 0 125000000 BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498436312.79.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
+INFO PERFDATE BEGIN_RUN 2017-06-25 19:18:33
+INFO Running BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498436312.79.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
 INFO triangles/galois+edge/rmat16.sym.tri STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -113,23 +128,37 @@ http://iss.ices.utexas.edu/galois/
 application: Triangles
 Counts the triangles in a graph
 
+Writing new input file: /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr.triangles
 NumTriangles: 234373
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),0 , MeminfoPre,0,0,0
-(NULL),0 , MeminfoMid,0,0,8
-(NULL),1 , Conflicts,0,0,0
-(NULL),1 , Commits,0,0,483933
-(NULL),1 , Pushes,0,0,0
-(NULL),1 , Iterations,0,0,483933
-(NULL),1 , Time,0,0,126
-(NULL),1 , MeminfoPost,0,0,8
-(NULL),1 , InitializeTime,0,0,10
+(NULL),1 , MeminfoPre,0,0,2
+(NULL),1 , PreprocessTime,0,0,65
+(NULL),1 , MeminfoMid,0,0,10
+(NULL),3 , Time,0,0,161
+(NULL),3 , MeminfoPost,0,0,10
+(NULL),3 , InitializeTime,0,0,127
+(NULL),0 , Commits,0,0,90
+(NULL),3 , Commits,0,0,483933
+(NULL),0 , Pushes,0,0,89
+(NULL),3 , Pushes,0,0,0
+(NULL),0 , Conflicts,0,0,0
+(NULL),3 , Conflicts,0,0,0
+(NULL),0 , Iterations,0,0,90
+(NULL),3 , Iterations,0,0,483933
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 6677976
+INSTR intel-rapl:1:0 9779270
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 31537944
+INSTR intel-rapl:1 37620753
 
-PASS triangles/galois+edge/rmat16.sym.tri: BMK2=1 BMK2_INPUTID=rmat16.sym.tri BMK2_RUNID=1498274345.04.1.1 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
-INFO PERFDATE END_RUN 2017-06-23 22:19:06
-PERF triangles/galois+edge/rmat16.sym.tri 1498274345.04.1 1 126000000 BMK2=1 BMK2_INPUTID=rmat16.sym.tri BMK2_RUNID=1498274345.04.1.1 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
-INFO PERFDATE BEGIN_RUN 2017-06-23 22:19:06
-INFO Running BMK2=1 BMK2_INPUTID=rmat16.sym.tri BMK2_RUNID=1498274345.04.1.2 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
+PASS triangles/galois+edge/rmat16.sym.tri: BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498436312.79.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
+INFO PERFDATE END_RUN 2017-06-25 19:18:34
+PERF triangles/galois+edge/rmat16.sym.tri 1498436312.79.1 1 161000000 BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498436312.79.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
+INFO PERFDATE BEGIN_RUN 2017-06-25 19:18:34
+INFO Running BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498436312.79.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
 INFO triangles/galois+edge/rmat16.sym.tri STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -138,22 +167,36 @@ http://iss.ices.utexas.edu/galois/
 application: Triangles
 Counts the triangles in a graph
 
+Writing new input file: /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr.triangles
 NumTriangles: 234373
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),0 , MeminfoPre,0,0,0
-(NULL),0 , MeminfoMid,0,0,8
-(NULL),1 , Conflicts,0,0,0
-(NULL),1 , Commits,0,0,483933
-(NULL),1 , Pushes,0,0,0
-(NULL),1 , Iterations,0,0,483933
-(NULL),1 , Time,0,0,125
-(NULL),1 , MeminfoPost,0,0,8
-(NULL),1 , InitializeTime,0,0,9
+(NULL),1 , MeminfoPre,0,0,2
+(NULL),1 , PreprocessTime,0,0,64
+(NULL),1 , MeminfoMid,0,0,10
+(NULL),3 , Time,0,0,152
+(NULL),3 , MeminfoPost,0,0,10
+(NULL),3 , InitializeTime,0,0,123
+(NULL),0 , Commits,0,0,90
+(NULL),3 , Commits,0,0,483933
+(NULL),0 , Pushes,0,0,89
+(NULL),3 , Pushes,0,0,0
+(NULL),0 , Conflicts,0,0,0
+(NULL),3 , Conflicts,0,0,0
+(NULL),0 , Iterations,0,0,90
+(NULL),3 , Iterations,0,0,483933
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 6735886
+INSTR intel-rapl:1:0 9983388
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 32074564
+INSTR intel-rapl:1 38490502
 
-PASS triangles/galois+edge/rmat16.sym.tri: BMK2=1 BMK2_INPUTID=rmat16.sym.tri BMK2_RUNID=1498274345.04.1.2 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
-INFO PERFDATE END_RUN 2017-06-23 22:19:07
-PERF triangles/galois+edge/rmat16.sym.tri 1498274345.04.1 2 125000000 BMK2=1 BMK2_INPUTID=rmat16.sym.tri BMK2_RUNID=1498274345.04.1.2 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
+PASS triangles/galois+edge/rmat16.sym.tri: BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498436312.79.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
+INFO PERFDATE END_RUN 2017-06-25 19:18:36
+PERF triangles/galois+edge/rmat16.sym.tri 1498436312.79.1 2 152000000 BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498436312.79.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -t=1
 TASK_COMPLETE triangles/galois+edge/rmat16.sym.tri PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-23 22:19:07
-INFO APPROXIMATE DURATION 0:00:02.308264
+INFO DATE END 2017-06-25 19:18:36
+INFO APPROXIMATE DURATION 0:00:03.231390

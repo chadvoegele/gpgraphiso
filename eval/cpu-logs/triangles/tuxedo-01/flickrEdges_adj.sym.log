@@ -5,6 +5,7 @@ INFO ../bmk2cfg/bmk2.cfg: Loaded file type 2 ('../bmk2cfg/graph.inputdb')
 INFO ../bmk2cfg/bmk2.cfg: Loaded file type 3 ('../bmk2cfg/graph.inputprops')
 INFO ../bmk2cfg/bmk2.cfg: Loaded file type 1 ('../bmk2cfg/graph.bispec')
 DEBUG Ignoring binary id triangles/galois+node in ../../GaloisCpp/build/default//lonestar/triangles/bmktest2.py, not in sel_binaries
+DEBUG Ignoring binary id triangles/galois+hybrid in ../../GaloisCpp/build/default//lonestar/triangles/bmktest2.py, not in sel_binaries
 INFO Applying configuration "{'k': 'max', 't': '01'}"
 DEBUG Ignoring input 'oregon1_010414_adj.sym' for 'triangles/galois+edge', not in sel_inputs
 DEBUG Ignoring input 'cit-Patents_adj.sym' for 'triangles/galois+edge', not in sel_inputs
@@ -73,13 +74,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/galois+edge', not i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/galois+edge', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-23 21:40:47
+INFO DATE START 2017-06-25 18:38:24
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/GaloisCpp/build/default/lonestar/triangles
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --scan ../../GaloisCpp/build/default//lonestar/triangles --log cpu-logs/triangles/tuxedo-01/flickrEdges_adj.sym.log -v perf triangles/galois+edge flickrEdges_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --mtcpulimit 01 --scan ../../GaloisCpp/build/default//lonestar/triangles --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-01/flickrEdges_adj.sym.log -v perf triangles/galois+edge flickrEdges_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-23 21:40:47
-INFO Running BMK2=1 BMK2_INPUTID=flickrEdges_adj.sym BMK2_RUNID=1498272047.86.1.0 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
+INFO PERFDATE BEGIN_RUN 2017-06-25 18:38:24
+INFO Running BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498433904.46.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
 INFO triangles/galois+edge/flickrEdges_adj.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -88,23 +89,37 @@ http://iss.ices.utexas.edu/galois/
 application: Triangles
 Counts the triangles in a graph
 
+Writing new input file: /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr.triangles
 NumTriangles: 107987357
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),0 , MeminfoPre,0,0,0
-(NULL),0 , MeminfoMid,0,0,37
-(NULL),1 , Conflicts,0,0,0
-(NULL),1 , Commits,0,0,2316948
-(NULL),1 , Pushes,0,0,0
-(NULL),1 , Iterations,0,0,2316948
-(NULL),1 , Time,0,0,2295
-(NULL),1 , MeminfoPost,0,0,37
-(NULL),1 , InitializeTime,0,0,169
+(NULL),1 , MeminfoPre,0,0,2
+(NULL),1 , PreprocessTime,0,0,342
+(NULL),1 , MeminfoMid,0,0,39
+(NULL),3 , Time,0,0,2392
+(NULL),3 , MeminfoPost,0,0,39
+(NULL),3 , InitializeTime,0,0,560
+(NULL),0 , Commits,0,0,123
+(NULL),3 , Commits,0,0,2316948
+(NULL),0 , Pushes,0,0,122
+(NULL),3 , Pushes,0,0,0
+(NULL),0 , Conflicts,0,0,0
+(NULL),3 , Conflicts,0,0,0
+(NULL),0 , Iterations,0,0,123
+(NULL),3 , Iterations,0,0,2316948
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 24829223
+INSTR intel-rapl:1:0 36708602
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 128554725
+INSTR intel-rapl:1 156266629
 
-PASS triangles/galois+edge/flickrEdges_adj.sym: BMK2=1 BMK2_INPUTID=flickrEdges_adj.sym BMK2_RUNID=1498272047.86.1.0 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
-INFO PERFDATE END_RUN 2017-06-23 21:40:50
-PERF triangles/galois+edge/flickrEdges_adj.sym 1498272047.86.1 0 2295000000 BMK2=1 BMK2_INPUTID=flickrEdges_adj.sym BMK2_RUNID=1498272047.86.1.0 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
-INFO PERFDATE BEGIN_RUN 2017-06-23 21:40:50
-INFO Running BMK2=1 BMK2_INPUTID=flickrEdges_adj.sym BMK2_RUNID=1498272047.86.1.1 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
+PASS triangles/galois+edge/flickrEdges_adj.sym: BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498433904.46.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
+INFO PERFDATE END_RUN 2017-06-25 18:38:28
+PERF triangles/galois+edge/flickrEdges_adj.sym 1498433904.46.1 0 2392000000 BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498433904.46.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
+INFO PERFDATE BEGIN_RUN 2017-06-25 18:38:28
+INFO Running BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498433904.46.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
 INFO triangles/galois+edge/flickrEdges_adj.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -113,23 +128,37 @@ http://iss.ices.utexas.edu/galois/
 application: Triangles
 Counts the triangles in a graph
 
+Writing new input file: /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr.triangles
 NumTriangles: 107987357
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),0 , MeminfoPre,0,0,0
-(NULL),0 , MeminfoMid,0,0,37
-(NULL),1 , Conflicts,0,0,0
-(NULL),1 , Commits,0,0,2316948
-(NULL),1 , Pushes,0,0,0
-(NULL),1 , Iterations,0,0,2316948
-(NULL),1 , Time,0,0,2288
-(NULL),1 , MeminfoPost,0,0,37
-(NULL),1 , InitializeTime,0,0,36
+(NULL),1 , MeminfoPre,0,0,2
+(NULL),1 , PreprocessTime,0,0,312
+(NULL),1 , MeminfoMid,0,0,39
+(NULL),3 , Time,0,0,2298
+(NULL),3 , MeminfoPost,0,0,39
+(NULL),3 , InitializeTime,0,0,391
+(NULL),0 , Commits,0,0,123
+(NULL),3 , Commits,0,0,2316948
+(NULL),0 , Pushes,0,0,122
+(NULL),3 , Pushes,0,0,0
+(NULL),0 , Conflicts,0,0,0
+(NULL),3 , Conflicts,0,0,0
+(NULL),0 , Iterations,0,0,123
+(NULL),3 , Iterations,0,0,2316948
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 22580903
+INSTR intel-rapl:1:0 36478673
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 121071223
+INSTR intel-rapl:1 148562974
 
-PASS triangles/galois+edge/flickrEdges_adj.sym: BMK2=1 BMK2_INPUTID=flickrEdges_adj.sym BMK2_RUNID=1498272047.86.1.1 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
-INFO PERFDATE END_RUN 2017-06-23 21:40:53
-PERF triangles/galois+edge/flickrEdges_adj.sym 1498272047.86.1 1 2288000000 BMK2=1 BMK2_INPUTID=flickrEdges_adj.sym BMK2_RUNID=1498272047.86.1.1 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
-INFO PERFDATE BEGIN_RUN 2017-06-23 21:40:53
-INFO Running BMK2=1 BMK2_INPUTID=flickrEdges_adj.sym BMK2_RUNID=1498272047.86.1.2 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
+PASS triangles/galois+edge/flickrEdges_adj.sym: BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498433904.46.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
+INFO PERFDATE END_RUN 2017-06-25 18:38:31
+PERF triangles/galois+edge/flickrEdges_adj.sym 1498433904.46.1 1 2298000000 BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498433904.46.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
+INFO PERFDATE BEGIN_RUN 2017-06-25 18:38:31
+INFO Running BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498433904.46.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
 INFO triangles/galois+edge/flickrEdges_adj.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -138,22 +167,36 @@ http://iss.ices.utexas.edu/galois/
 application: Triangles
 Counts the triangles in a graph
 
+Writing new input file: /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr.triangles
 NumTriangles: 107987357
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),0 , MeminfoPre,0,0,0
-(NULL),0 , MeminfoMid,0,0,37
-(NULL),1 , Conflicts,0,0,0
-(NULL),1 , Commits,0,0,2316948
-(NULL),1 , Pushes,0,0,0
-(NULL),1 , Iterations,0,0,2316948
-(NULL),1 , Time,0,0,2294
-(NULL),1 , MeminfoPost,0,0,37
-(NULL),1 , InitializeTime,0,0,36
+(NULL),1 , MeminfoPre,0,0,2
+(NULL),1 , PreprocessTime,0,0,313
+(NULL),1 , MeminfoMid,0,0,39
+(NULL),3 , Time,0,0,2301
+(NULL),3 , MeminfoPost,0,0,39
+(NULL),3 , InitializeTime,0,0,389
+(NULL),0 , Commits,0,0,123
+(NULL),3 , Commits,0,0,2316948
+(NULL),0 , Pushes,0,0,122
+(NULL),3 , Pushes,0,0,0
+(NULL),0 , Conflicts,0,0,0
+(NULL),3 , Conflicts,0,0,0
+(NULL),0 , Iterations,0,0,123
+(NULL),3 , Iterations,0,0,2316948
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 22423466
+INSTR intel-rapl:1:0 36293818
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 122476555
+INSTR intel-rapl:1 148390611
 
-PASS triangles/galois+edge/flickrEdges_adj.sym: BMK2=1 BMK2_INPUTID=flickrEdges_adj.sym BMK2_RUNID=1498272047.86.1.2 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
-INFO PERFDATE END_RUN 2017-06-23 21:40:56
-PERF triangles/galois+edge/flickrEdges_adj.sym 1498272047.86.1 2 2294000000 BMK2=1 BMK2_INPUTID=flickrEdges_adj.sym BMK2_RUNID=1498272047.86.1.2 BMK2_BINID=triangles/galois+edge ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
+PASS triangles/galois+edge/flickrEdges_adj.sym: BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498433904.46.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
+INFO PERFDATE END_RUN 2017-06-25 18:38:35
+PERF triangles/galois+edge/flickrEdges_adj.sym 1498433904.46.1 2 2301000000 BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/galois+edge BMK2_RUNID=1498433904.46.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//lonestar/triangles/triangles -algo=edgeiterator /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -t=1
 TASK_COMPLETE triangles/galois+edge/flickrEdges_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-23 21:40:56
-INFO APPROXIMATE DURATION 0:00:09.062036
+INFO DATE END 2017-06-25 18:38:35
+INFO APPROXIMATE DURATION 0:00:10.756160
