@@ -12,3 +12,4 @@ all: tuxedo-01-cpu-metrics.csv tuxedo-12-cpu-metrics.csv tuxedo-24-cpu-metrics.c
 %-cpu-metrics.csv: %.csv ../inputs-desc.csv
 	../scripts/cpumetrics.py $^ -o $@
 
+%-gal.csv: %.csv

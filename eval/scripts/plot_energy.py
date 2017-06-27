@@ -5,12 +5,14 @@ import pandas as pd
 import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
+import plot_common
 
 p = argparse.ArgumentParser(description="Plot rate in eps")
 p.add_argument("inputs", nargs="+")
 p.add_argument("-l", dest="labels", action="append")
 p.add_argument("-t", dest="title")
 p.add_argument("-e", dest="energy", action="store_true")
+p.add_argument("--di", dest="drop_inputs", help="Drop inputs in file")
 
 args = p.parse_args()
 
@@ -24,7 +26,8 @@ for lbl, i in zip(args.labels, args.inputs):
 out = out.set_index(["edges", "input", "lbl"])
 out = out.unstack("lbl")
 
-print out
+out = plot_common.drop_inputs(out, args.drop_inputs)
+out = plot_common.rename_inputs(out)
 
 if not args.energy:
     e = out["rate_per_energy"]

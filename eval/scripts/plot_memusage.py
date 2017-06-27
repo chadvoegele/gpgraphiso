@@ -10,6 +10,7 @@ p = argparse.ArgumentParser(description="Plot memory usage")
 p.add_argument("inputs", nargs="+")
 p.add_argument("-l", dest="labels", action="append")
 p.add_argument("-t", dest="title")
+p.add_argument("--di", dest="drop_inputs", help="Drop inputs in file")
 
 args = p.parse_args()
 
@@ -22,6 +23,9 @@ for lbl, i in zip(args.labels, args.inputs):
 
 out = out.set_index(["edges", "input", "lbl"])
 out = out.unstack("lbl")
+
+out = plot_common.drop_inputs(out, args.drop_inputs)
+out = plot_common.rename_inputs(out)
 
 e = out["meminfo_post_mb_avg"]
 unit = "Memory Usage (MB)"

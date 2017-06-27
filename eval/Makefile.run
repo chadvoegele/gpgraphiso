@@ -1,3 +1,5 @@
+# -*- mode: Makefile -*-
+
 include common.mk
 
 include ktruss-tuxedo-gtx1080.mk
