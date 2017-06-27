@@ -8,24 +8,84 @@ DEBUG Ignoring binary id ktruss/galois+bsp in ../../GaloisCpp/build/default//exp
 DEBUG Ignoring binary id ktruss/galois+bspCoreThenTruss in ../../GaloisCpp/build/default//exp/apps/ktruss/bmktest2.py, not in sel_binaries
 DEBUG Ignoring binary id ktruss/galois+async in ../../GaloisCpp/build/default//exp/apps/ktruss/bmktest2.py, not in sel_binaries
 INFO Applying configuration "{'k': 'max', 't': '12'}"
-DEBUG Ignoring input 'com-lj.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010414_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'cit-Patents_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'roadNet-TX_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'loc-brightkite_edges_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'as20000102_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010526_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'cit-HepPh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'soc-Epinions1_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'amazon0601_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010505_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'facebook_combined_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'roadNet-PA_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010407_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010526_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella06_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010421_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella05_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
 DEBUG Ignoring input 'com-dblp.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
-DEBUG Ignoring input 'rmat16.sym.tri' for 'ktruss/galois+bspIm', not in sel_inputs
-DEBUG Ignoring input 'com-orkut.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
 DEBUG Ignoring input 'com-amazon.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
-DEBUG Ignoring input 'com-friendster.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale19-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'roadNet-CA_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010428_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010512_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale22-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-orkut.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella30_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010519_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010512_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella31_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-CondMat_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale24-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010331_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
 DEBUG Ignoring input 'complete5_sm.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'amazon0312_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'loc-gowalla_edges_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010428_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'amazon0302_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-AstroPh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'email-EuAll_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale21-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'amazon0505_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'rmat16.sym.tri' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella09_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'soc-Slashdot0902_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella08_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010414_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella24_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-GrQc_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010519_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'cit-HepTh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale20-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'as-caida20071105_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella04_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'email-Enron_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-HepTh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010505_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'flickrEdges_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella25_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
 DEBUG Ignoring input 'A_inc.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale18-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-lj.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010421_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale23-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-friendster.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'soc-Slashdot0811_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010407_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-19 16:04:19
+INFO DATE START 2017-06-26 19:34:09
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/GaloisCpp/build/default/exp/apps/ktruss
-INFO CMD_LINE: /h2/sreepai/src/bmk2//test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=12 --scan ../../GaloisCpp/build/default//exp/apps/ktruss --log cpu-logs/ktruss/tuxedo-12/com-youtube.wgt32.sym.log -v perf ktruss/galois+bspIm com-youtube.wgt32.sym
-INFO Setting RLIMIT_CPU to 4800
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=12 --mtcpulimit 12 --scan ../../GaloisCpp/build/default//exp/apps/ktruss --max-output-bytes 0 --measure-energy --log cpu-logs/ktruss/tuxedo-12/com-youtube.wgt32.sym.log -v perf ktruss/galois+bspIm com-youtube.wgt32.sym
+INFO Setting RLIMIT_CPU to 57600
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-19 16:04:19
-DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussKOxulu' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=com-youtube.wgt32.sym BMK2_RUNID=1497906259.34.1.0 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussKOxulu
+INFO PERFDATE BEGIN_RUN 2017-06-26 19:34:09
+DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussaef9CH' for '@output'
+INFO Running BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498523649.25.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussaef9CH
 INFO ktruss/galois+bspIm/com-youtube.wgt32.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -37,42 +97,49 @@ http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/k_truss
 
 Read 1157828 nodes
 Running bspIm algorithm for maximal 19-truss
-Iteration 0: 1134890 valid nodes, 2987624 valid edges
-Iteration 1: 7488 valid nodes, 65338 valid edges
-Iteration 2: 1239 valid nodes, 24446 valid edges
-Iteration 3: 664 valid nodes, 15201 valid edges
-Iteration 4: 469 valid nodes, 11782 valid edges
-Iteration 5: 377 valid nodes, 10025 valid edges
-Iteration 6: 332 valid nodes, 9085 valid edges
-Iteration 7: 308 valid nodes, 8541 valid edges
-Iteration 8: 297 valid nodes, 8281 valid edges
- *** SQUASHED *** 
- Iteration 10: 283 valid nodes, 7705 valid edges
-Iteration 11: 272 valid nodes, 7425 valid edges
-Iteration 12: 265 valid nodes, 7280 valid edges
-Iteration 13: 260 valid nodes, 7204 valid edges
-Iteration 14: 259 valid nodes, 7172 valid edges
-Iteration 15: 258 valid nodes, 7122 valid edges
-Iteration 16: 256 valid nodes, 7099 valid edges
-Iteration 17: 256 valid nodes, 7075 valid edges
-Iteration 18: 255 valid nodes, 7064 valid edges
-Iteration 19: 255 valid nodes, 7044 valid edges
-Iteration 20: 254 valid nodes, 7040 valid edges
-Iteration 21: 254 valid nodes, 7030 valid edges
-Iteration 22: 254 valid nodes, 7013 valid edges
-Iteration 23: 253 valid nodes, 7012 valid edges
-Ends at iteration 23
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),50 , Time,0,0,653
-(NULL),50 , TotalTime,0,0,966
+(NULL),23 , Time,0,0,608
+(NULL),0 , MeminfoPre,0,0,0
+(NULL),23 , MeminfoPost,0,0,4
+(NULL),23 , TotalTime,0,0,838
+(NULL),0 , MeminfoPre,0,1,0
+(NULL),23 , MeminfoPost,0,1,3
+(NULL),0 , MeminfoPre,0,2,0
+(NULL),23 , MeminfoPost,0,2,3
+(NULL),0 , MeminfoPre,0,3,0
+(NULL),23 , MeminfoPost,0,3,3
+(NULL),0 , MeminfoPre,0,4,0
+(NULL),23 , MeminfoPost,0,4,2
+(NULL),0 , MeminfoPre,0,5,0
+(NULL),23 , MeminfoPost,0,5,2
+(NULL),0 , MeminfoPre,0,6,0
+(NULL),23 , MeminfoPost,0,6,2
+(NULL),0 , MeminfoPre,0,7,0
+(NULL),23 , MeminfoPost,0,7,2
+(NULL),0 , MeminfoPre,0,8,0
+(NULL),23 , MeminfoPost,0,8,2
+(NULL),0 , MeminfoPre,0,9,0
+(NULL),23 , MeminfoPost,0,9,3
+(NULL),0 , MeminfoPre,0,10,0
+(NULL),23 , MeminfoPost,0,10,2
+(NULL),0 , MeminfoPre,0,11,0
+(NULL),23 , MeminfoPost,0,11,2
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 10619699
+INSTR intel-rapl:1:0 15647631
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 51399954
+INSTR intel-rapl:1 71644897
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussKOxulu -trussNum=19 -trussNodes=253 -trussEdges=7012
-PASS ktruss/galois+bspIm/com-youtube.wgt32.sym: BMK2=1 BMK2_INPUTID=com-youtube.wgt32.sym BMK2_RUNID=1497906259.34.1.0 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussKOxulu
-INFO PERFDATE END_RUN 2017-06-19 16:04:23
-PERF ktruss/galois+bspIm/com-youtube.wgt32.sym 1497906259.34.1 0 653000000 BMK2=1 BMK2_INPUTID=com-youtube.wgt32.sym BMK2_RUNID=1497906259.34.1.0 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussKOxulu
-INFO PERFDATE BEGIN_RUN 2017-06-19 16:04:23
-DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussE7Ug8c' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=com-youtube.wgt32.sym BMK2_RUNID=1497906259.34.1.1 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussE7Ug8c
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussaef9CH -trussNum=19 -trussNodes=253 -trussEdges=7012
+PASS ktruss/galois+bspIm/com-youtube.wgt32.sym: BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498523649.25.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussaef9CH
+INFO PERFDATE END_RUN 2017-06-26 19:34:13
+PERF ktruss/galois+bspIm/com-youtube.wgt32.sym 1498523649.25.1 0 608000000 BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498523649.25.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussaef9CH
+INFO PERFDATE BEGIN_RUN 2017-06-26 19:34:13
+DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussO2rCHC' for '@output'
+INFO Running BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498523649.25.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussO2rCHC
 INFO ktruss/galois+bspIm/com-youtube.wgt32.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -84,39 +151,49 @@ http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/k_truss
 
 Read 1157828 nodes
 Running bspIm algorithm for maximal 19-truss
-Iteration 0: 1134890 valid nodes, 2987624 valid edges
-Iteration 1: 7367 valid nodes, 64660 valid edges
-Iteration 2: 1226 valid nodes, 23632 valid edges
-Iteration 3: 646 valid nodes, 14805 valid edges
-Iteration 4: 462 valid nodes, 11448 valid edges
-Iteration 5: 365 valid nodes, 9852 valid edges
-Iteration 6: 325 valid nodes, 8964 valid edges
-Iteration 7: 305 valid nodes, 8495 valid edges
-Iteration 8: 296 valid nodes, 8228 valid edges
-Iteration 9: 290 valid nodes, 7987 valid edges
-Iteration 10: 281 valid nodes, 7647 valid edges
-Iteration 11: 271 valid nodes, 7371 valid edges
-Iteration 12: 264 valid nodes, 7242 valid edges
-Iteration 13: 259 valid nodes, 7179 valid edges
-Iteration 14: 257 valid nodes, 7136 valid edges
-Iteration 15: 257 valid nodes, 7115 valid edges
-Iteration 16: 256 valid nodes, 7101 valid edges
-Iteration 17: 256 valid nodes, 7076 valid edges
-Iteration 18: 255 valid nodes, 7056 valid edges
-Iteration 19: 254 valid nodes, 7019 valid edges
-Iteration 20: 253 valid nodes, 7012 valid edges
-Ends at iteration 20
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),44 , Time,0,0,754
-(NULL),44 , TotalTime,0,0,825
+(NULL),25 , Time,0,0,598
+(NULL),0 , MeminfoPre,0,0,0
+(NULL),25 , MeminfoPost,0,0,4
+(NULL),25 , TotalTime,0,0,671
+(NULL),0 , MeminfoPre,0,1,0
+(NULL),25 , MeminfoPost,0,1,3
+(NULL),0 , MeminfoPre,0,2,0
+(NULL),25 , MeminfoPost,0,2,3
+(NULL),0 , MeminfoPre,0,3,0
+(NULL),25 , MeminfoPost,0,3,3
+(NULL),0 , MeminfoPre,0,4,0
+(NULL),25 , MeminfoPost,0,4,2
+(NULL),0 , MeminfoPre,0,5,0
+(NULL),25 , MeminfoPost,0,5,2
+(NULL),0 , MeminfoPre,0,6,0
+(NULL),25 , MeminfoPost,0,6,2
+(NULL),0 , MeminfoPre,0,7,0
+(NULL),25 , MeminfoPost,0,7,2
+(NULL),0 , MeminfoPre,0,8,0
+(NULL),25 , MeminfoPost,0,8,2
+(NULL),0 , MeminfoPre,0,9,0
+(NULL),25 , MeminfoPost,0,9,2
+(NULL),0 , MeminfoPre,0,10,0
+(NULL),25 , MeminfoPost,0,10,2
+(NULL),0 , MeminfoPre,0,11,0
+(NULL),25 , MeminfoPost,0,11,2
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 9463448
+INSTR intel-rapl:1:0 14635643
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 48128417
+INSTR intel-rapl:1 67252147
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussE7Ug8c -trussNum=19 -trussNodes=253 -trussEdges=7012
-PASS ktruss/galois+bspIm/com-youtube.wgt32.sym: BMK2=1 BMK2_INPUTID=com-youtube.wgt32.sym BMK2_RUNID=1497906259.34.1.1 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussE7Ug8c
-INFO PERFDATE END_RUN 2017-06-19 16:04:27
-PERF ktruss/galois+bspIm/com-youtube.wgt32.sym 1497906259.34.1 1 754000000 BMK2=1 BMK2_INPUTID=com-youtube.wgt32.sym BMK2_RUNID=1497906259.34.1.1 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussE7Ug8c
-INFO PERFDATE BEGIN_RUN 2017-06-19 16:04:27
-DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussX5yTby' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=com-youtube.wgt32.sym BMK2_RUNID=1497906259.34.1.2 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussX5yTby
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussO2rCHC -trussNum=19 -trussNodes=253 -trussEdges=7012
+PASS ktruss/galois+bspIm/com-youtube.wgt32.sym: BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498523649.25.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussO2rCHC
+INFO PERFDATE END_RUN 2017-06-26 19:34:17
+PERF ktruss/galois+bspIm/com-youtube.wgt32.sym 1498523649.25.1 1 598000000 BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498523649.25.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussO2rCHC
+INFO PERFDATE BEGIN_RUN 2017-06-26 19:34:17
+DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusssGBbvm' for '@output'
+INFO Running BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498523649.25.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusssGBbvm
 INFO ktruss/galois+bspIm/com-youtube.wgt32.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -128,39 +205,47 @@ http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/k_truss
 
 Read 1157828 nodes
 Running bspIm algorithm for maximal 19-truss
-Iteration 0: 1134890 valid nodes, 2987624 valid edges
-Iteration 1: 7448 valid nodes, 64824 valid edges
-Iteration 2: 1236 valid nodes, 23943 valid edges
-Iteration 3: 648 valid nodes, 14930 valid edges
-Iteration 4: 455 valid nodes, 11452 valid edges
-Iteration 5: 363 valid nodes, 9895 valid edges
-Iteration 6: 329 valid nodes, 8984 valid edges
-Iteration 7: 304 valid nodes, 8511 valid edges
-Iteration 8: 296 valid nodes, 8298 valid edges
-Iteration 9: 292 valid nodes, 8014 valid edges
-Iteration 10: 283 valid nodes, 7682 valid edges
-Iteration 11: 272 valid nodes, 7443 valid edges
-Iteration 12: 267 valid nodes, 7296 valid edges
-Iteration 13: 261 valid nodes, 7205 valid edges
-Iteration 14: 259 valid nodes, 7172 valid edges
-Iteration 15: 258 valid nodes, 7115 valid edges
-Iteration 16: 256 valid nodes, 7081 valid edges
-Iteration 17: 255 valid nodes, 7073 valid edges
-Iteration 18: 255 valid nodes, 7067 valid edges
-Iteration 19: 255 valid nodes, 7061 valid edges
-Iteration 20: 255 valid nodes, 7038 valid edges
-Iteration 21: 254 valid nodes, 7014 valid edges
-Iteration 22: 253 valid nodes, 7012 valid edges
-Ends at iteration 22
 LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
-(NULL),48 , Time,0,0,590
-(NULL),48 , TotalTime,0,0,661
+(NULL),26 , Time,0,0,529
+(NULL),0 , MeminfoPre,0,0,0
+(NULL),26 , MeminfoPost,0,0,4
+(NULL),26 , TotalTime,0,0,601
+(NULL),0 , MeminfoPre,0,1,0
+(NULL),26 , MeminfoPost,0,1,3
+(NULL),0 , MeminfoPre,0,2,0
+(NULL),26 , MeminfoPost,0,2,3
+(NULL),0 , MeminfoPre,0,3,0
+(NULL),26 , MeminfoPost,0,3,2
+(NULL),0 , MeminfoPre,0,4,0
+(NULL),26 , MeminfoPost,0,4,3
+(NULL),0 , MeminfoPre,0,5,0
+(NULL),26 , MeminfoPost,0,5,3
+(NULL),0 , MeminfoPre,0,6,0
+(NULL),26 , MeminfoPost,0,6,2
+(NULL),0 , MeminfoPre,0,7,0
+(NULL),26 , MeminfoPost,0,7,2
+(NULL),0 , MeminfoPre,0,8,0
+(NULL),26 , MeminfoPost,0,8,2
+(NULL),0 , MeminfoPre,0,9,0
+(NULL),26 , MeminfoPost,0,9,2
+(NULL),0 , MeminfoPre,0,10,0
+(NULL),26 , MeminfoPost,0,10,2
+(NULL),0 , MeminfoPre,0,11,0
+(NULL),26 , MeminfoPost,0,11,2
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 8867222
+INSTR intel-rapl:1:0 13513082
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 44614266
+INSTR intel-rapl:1 63231527
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussX5yTby -trussNum=19 -trussNodes=253 -trussEdges=7012
-PASS ktruss/galois+bspIm/com-youtube.wgt32.sym: BMK2=1 BMK2_INPUTID=com-youtube.wgt32.sym BMK2_RUNID=1497906259.34.1.2 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussX5yTby
-INFO PERFDATE END_RUN 2017-06-19 16:04:31
-PERF ktruss/galois+bspIm/com-youtube.wgt32.sym 1497906259.34.1 2 590000000 BMK2=1 BMK2_INPUTID=com-youtube.wgt32.sym BMK2_RUNID=1497906259.34.1.2 BMK2_BINID=ktruss/galois+bspIm ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussX5yTby
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusssGBbvm -trussNum=19 -trussNodes=253 -trussEdges=7012
+PASS ktruss/galois+bspIm/com-youtube.wgt32.sym: BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498523649.25.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusssGBbvm
+INFO PERFDATE END_RUN 2017-06-26 19:34:21
+PERF ktruss/galois+bspIm/com-youtube.wgt32.sym 1498523649.25.1 2 529000000 BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498523649.25.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -algo=bspIm -trussNum=19 -t=12 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusssGBbvm
 TASK_COMPLETE ktruss/galois+bspIm/com-youtube.wgt32.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-19 16:04:31
-INFO APPROXIMATE DURATION 0:00:11.666475
+INFO DATE END 2017-06-26 19:34:21
+INFO APPROXIMATE DURATION 0:00:11.970859

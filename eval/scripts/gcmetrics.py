@@ -19,7 +19,7 @@ p = argparse.ArgumentParser(description="Compute Graph Challenge metrics for GPU
 p.add_argument("perfcsv", help="Performance CSV (from bmk2)")
 p.add_argument("metricscsv", help="Metrics CSV")
 p.add_argument("inputdescsv", help="Input description CSV")
-
+p.add_argument("--na", dest="no_adjust", action="store_true", help="Do not adjust time")
 p.add_argument("-o", dest="output", help="Output file")
 
 args = p.parse_args()
@@ -35,8 +35,12 @@ perf = perf.merge(metc[["bmk", "variant", "input", "energy_joules_2_avg", "energ
                         "malloc_ns_avg", "malloc_ns_sd", "malloc_ns_count",
                     ]], 'left', on=['bmk', 'variant', 'input'])
 
-perf["adj_time_ns_avg"] = perf["time_ns_avg"] + perf["data_transfer_ns_avg"] + perf["malloc_ns_avg"]
+if args.no_adjust:
+    perf["adj_time_ns_avg"] = perf["time_ns_avg"]
+else:
+    perf["adj_time_ns_avg"] = perf["time_ns_avg"] + perf["data_transfer_ns_avg"] + perf["malloc_ns_avg"]    
 
+perf["energy_joules_avg"] = perf["energy_joules_2_avg"]
 perf['rate_eps'] = perf['edges'] * 1E9 / perf['adj_time_ns_avg']
 perf['rate_per_energy'] = perf['rate_eps'] / perf['energy_joules_2_avg']
 
