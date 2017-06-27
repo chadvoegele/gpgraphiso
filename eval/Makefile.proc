@@ -76,7 +76,7 @@ triangles/tuxedo-minitri-raw.csv: $(wildcard cpu-logs/triangles/tuxedo-minitri/*
 	$(BMK2)/ps/log2csv.py -x tuxedo-minitri $^ -o $@
 
 triangles/tuxedo-minitri.csv: triangles/tuxedo-minitri-raw.csv
-	$(BMK2)/ps/import.py -o $@ $^
+	$(BMK2)/ps/import.py -a instr_intel-rapl:0 -a instr_intel-rapl:0:0 -a instr_intel-rapl:1 -a instr_intel-rapl:1:0 -o $@ $^
 
 
 # **** KTRUSS CPU ****

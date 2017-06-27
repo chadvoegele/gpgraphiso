@@ -72,13 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/miniTri', not in se
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/miniTri', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-24 15:54:41
+INFO DATE START 2017-06-27 09:37:46
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --scan ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-minitri/disjoint_tri_sm.sym.log -v perf triangles/miniTri disjoint_tri_sm.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --mtcpulimit 01 --scan ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-minitri/disjoint_tri_sm.sym.log -v perf triangles/miniTri disjoint_tri_sm.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-24 15:54:41
-INFO Running BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498337681.39.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 09:37:46
+INFO Running BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574266.36.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
 INFO triangles/miniTri/disjoint_tri_sm.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr
 /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr has 6 nodes and 12 edges
@@ -91,11 +91,11 @@ TIME - Time to permute  matrix: 0
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 2.6e-05
+TIME - Time to create B: 2.4e-05
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 2.9e-05
+TIME - Time to compute C = L*B: 2.8e-05
 --------------------
 NNZ: 12
 **********************************************************************
@@ -103,23 +103,23 @@ Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 2
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 72002
-INSTR intel-rapl:1:0 36598
+INSTR intel-rapl:0:0 88832
+INSTR intel-rapl:1:0 39076
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 180969
-INSTR intel-rapl:1 183777
+INSTR intel-rapl:0 203185
+INSTR intel-rapl:1 191283
 
 INFO triangles/miniTri/disjoint_tri_sm.sym STDERR
 read 12 edges
 read data for 12 edges
 
-PASS triangles/miniTri/disjoint_tri_sm.sym: BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498337681.39.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 15:54:41
-PERF triangles/miniTri/disjoint_tri_sm.sym 1498337681.39.1 0 29000 BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498337681.39.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
-INFO PERFDATE BEGIN_RUN 2017-06-24 15:54:41
-INFO Running BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498337681.39.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
+PASS triangles/miniTri/disjoint_tri_sm.sym: BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574266.36.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 09:37:46
+PERF triangles/miniTri/disjoint_tri_sm.sym 1498574266.36.1 0 28000 BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574266.36.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 09:37:46
+INFO Running BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574266.36.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
 INFO triangles/miniTri/disjoint_tri_sm.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr
 /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr has 6 nodes and 12 edges
@@ -144,23 +144,23 @@ Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 2
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 76515
-INSTR intel-rapl:1:0 27876
+INSTR intel-rapl:0:0 87608
+INSTR intel-rapl:1:0 39000
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 177367
-INSTR intel-rapl:1 145019
+INSTR intel-rapl:0 172668
+INSTR intel-rapl:1 162414
 
 INFO triangles/miniTri/disjoint_tri_sm.sym STDERR
 read 12 edges
 read data for 12 edges
 
-PASS triangles/miniTri/disjoint_tri_sm.sym: BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498337681.39.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 15:54:41
-PERF triangles/miniTri/disjoint_tri_sm.sym 1498337681.39.1 1 26000 BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498337681.39.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
-INFO PERFDATE BEGIN_RUN 2017-06-24 15:54:41
-INFO Running BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498337681.39.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
+PASS triangles/miniTri/disjoint_tri_sm.sym: BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574266.36.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 09:37:46
+PERF triangles/miniTri/disjoint_tri_sm.sym 1498574266.36.1 1 26000 BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574266.36.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 09:37:46
+INFO Running BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574266.36.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
 INFO triangles/miniTri/disjoint_tri_sm.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr
 /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr has 6 nodes and 12 edges
@@ -177,7 +177,7 @@ TIME - Time to create B: 2.3e-05
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 2.6e-05
+TIME - Time to compute C = L*B: 2.5e-05
 --------------------
 NNZ: 12
 **********************************************************************
@@ -185,22 +185,22 @@ Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 2
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 62041
-INSTR intel-rapl:1:0 28978
+INSTR intel-rapl:0:0 81931
+INSTR intel-rapl:1:0 50796
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 146606
-INSTR intel-rapl:1 155089
+INSTR intel-rapl:0 181579
+INSTR intel-rapl:1 197143
 
 INFO triangles/miniTri/disjoint_tri_sm.sym STDERR
 read 12 edges
 read data for 12 edges
 
-PASS triangles/miniTri/disjoint_tri_sm.sym: BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498337681.39.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 15:54:41
-PERF triangles/miniTri/disjoint_tri_sm.sym 1498337681.39.1 2 26000 BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498337681.39.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
+PASS triangles/miniTri/disjoint_tri_sm.sym: BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574266.36.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 09:37:46
+PERF triangles/miniTri/disjoint_tri_sm.sym 1498574266.36.1 2 25000 BMK2_INPUTID=disjoint_tri_sm.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574266.36.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/small/disjoint_tri_sm.sym.gr ggr
 TASK_COMPLETE triangles/miniTri/disjoint_tri_sm.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-24 15:54:41
-INFO APPROXIMATE DURATION 0:00:00.245186
+INFO DATE END 2017-06-27 09:37:46
+INFO APPROXIMATE DURATION 0:00:00.264815

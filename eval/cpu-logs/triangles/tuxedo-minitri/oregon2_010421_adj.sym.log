@@ -72,13 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/miniTri', not in se
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/miniTri', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-24 18:09:04
+INFO DATE START 2017-06-27 09:41:07
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --scan ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-minitri/oregon2_010421_adj.sym.log -v perf triangles/miniTri oregon2_010421_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --mtcpulimit 01 --scan ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-minitri/oregon2_010421_adj.sym.log -v perf triangles/miniTri oregon2_010421_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-24 18:09:04
-INFO Running BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498345744.85.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 09:41:07
+INFO Running BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574467.61.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
 INFO triangles/miniTri/oregon2_010421_adj.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr
 /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr has 11080 nodes and 63076 edges
@@ -91,11 +91,11 @@ TIME - Time to permute  matrix: 0
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 0.035822
+TIME - Time to create B: 0.035998
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 4.48339
+TIME - Time to compute C = L*B: 4.59664
 --------------------
 NNZ: 63076
 **********************************************************************
@@ -103,23 +103,23 @@ Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 82129
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 51438080
-INSTR intel-rapl:1:0 8564741
+INSTR intel-rapl:0:0 30320408
+INSTR intel-rapl:1:0 35119268
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 196311631
-INSTR intel-rapl:1 166643434
+INSTR intel-rapl:0 165180181
+INSTR intel-rapl:1 202864715
 
 INFO triangles/miniTri/oregon2_010421_adj.sym STDERR
 read 63076 edges
 read data for 63076 edges
 
-PASS triangles/miniTri/oregon2_010421_adj.sym: BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498345744.85.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 18:09:09
-PERF triangles/miniTri/oregon2_010421_adj.sym 1498345744.85.1 0 4483390000 BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498345744.85.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
-INFO PERFDATE BEGIN_RUN 2017-06-24 18:09:09
-INFO Running BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498345744.85.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
+PASS triangles/miniTri/oregon2_010421_adj.sym: BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574467.61.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 09:41:12
+PERF triangles/miniTri/oregon2_010421_adj.sym 1498574467.61.1 0 4596640000 BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574467.61.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 09:41:12
+INFO Running BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574467.61.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
 INFO triangles/miniTri/oregon2_010421_adj.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr
 /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr has 11080 nodes and 63076 edges
@@ -132,11 +132,11 @@ TIME - Time to permute  matrix: 0
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 0.034943
+TIME - Time to create B: 0.032726
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 4.57104
+TIME - Time to compute C = L*B: 4.6018
 --------------------
 NNZ: 63076
 **********************************************************************
@@ -144,23 +144,23 @@ Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 82129
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 30255780
-INSTR intel-rapl:1:0 32096295
+INSTR intel-rapl:0:0 54007241
+INSTR intel-rapl:1:0 8768644
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 163387277
-INSTR intel-rapl:1 200442663
+INSTR intel-rapl:0 201955721
+INSTR intel-rapl:1 170075554
 
 INFO triangles/miniTri/oregon2_010421_adj.sym STDERR
 read 63076 edges
 read data for 63076 edges
 
-PASS triangles/miniTri/oregon2_010421_adj.sym: BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498345744.85.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 18:09:14
-PERF triangles/miniTri/oregon2_010421_adj.sym 1498345744.85.1 1 4571040000 BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498345744.85.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
-INFO PERFDATE BEGIN_RUN 2017-06-24 18:09:14
-INFO Running BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498345744.85.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
+PASS triangles/miniTri/oregon2_010421_adj.sym: BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574467.61.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 09:41:17
+PERF triangles/miniTri/oregon2_010421_adj.sym 1498574467.61.1 1 4601800000 BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574467.61.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 09:41:17
+INFO Running BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574467.61.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
 INFO triangles/miniTri/oregon2_010421_adj.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr
 /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr has 11080 nodes and 63076 edges
@@ -169,15 +169,15 @@ Enumerating triangles .....
 **********************************************************************
 --------------------
 Permuting matrix ... done
-TIME - Time to permute  matrix: 0
+TIME - Time to permute  matrix: 1e-06
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 0.034844
+TIME - Time to create B: 0.03365
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 4.46576
+TIME - Time to compute C = L*B: 4.59377
 --------------------
 NNZ: 63076
 **********************************************************************
@@ -185,22 +185,22 @@ Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 82129
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 51122349
-INSTR intel-rapl:1:0 8591975
+INSTR intel-rapl:0:0 30296050
+INSTR intel-rapl:1:0 34767154
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 196542527
-INSTR intel-rapl:1 165559207
+INSTR intel-rapl:0 164147651
+INSTR intel-rapl:1 201998934
 
 INFO triangles/miniTri/oregon2_010421_adj.sym STDERR
 read 63076 edges
 read data for 63076 edges
 
-PASS triangles/miniTri/oregon2_010421_adj.sym: BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498345744.85.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 18:09:18
-PERF triangles/miniTri/oregon2_010421_adj.sym 1498345744.85.1 2 4465760000 BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498345744.85.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
+PASS triangles/miniTri/oregon2_010421_adj.sym: BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574467.61.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 09:41:21
+PERF triangles/miniTri/oregon2_010421_adj.sym 1498574467.61.1 2 4593770000 BMK2_INPUTID=oregon2_010421_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574467.61.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010421_adj.sym.gr ggr
 TASK_COMPLETE triangles/miniTri/oregon2_010421_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-24 18:09:18
-INFO APPROXIMATE DURATION 0:00:14.105734
+INFO DATE END 2017-06-27 09:41:21
+INFO APPROXIMATE DURATION 0:00:14.373350

@@ -72,13 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/miniTri', not in se
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/miniTri', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-24 14:09:32
+INFO DATE START 2017-06-27 11:22:07
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --scan ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-minitri/amazon0505_adj.sym.log -v perf triangles/miniTri amazon0505_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --mtcpulimit 01 --scan ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-minitri/amazon0505_adj.sym.log -v perf triangles/miniTri amazon0505_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-24 14:09:32
-INFO Running BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498331372.23.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 11:22:07
+INFO Running BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498580527.62.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
 INFO triangles/miniTri/amazon0505_adj.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr
 /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr has 410236 nodes and 4878874 edges
@@ -91,31 +91,35 @@ TIME - Time to permute  matrix: 0
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 2.31697
+TIME - Time to create B: 2.34137
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 49.736
+TIME - Time to compute C = L*B: 49.6189
 --------------------
 NNZ: 4878874
 **********************************************************************
 Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 3951063
-INSTR intel-rapl:0 1949671889
-INSTR intel-rapl:1 2486425702
-INSTR intel-rapl:0:0 349760127
-INSTR intel-rapl:1:0 588566123
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 834729627
+INSTR intel-rapl:1:0 100464910
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 2412162404
+INSTR intel-rapl:1 2042294637
 
 INFO triangles/miniTri/amazon0505_adj.sym STDERR
 read 4878874 edges
 read data for 4878874 edges
 
-PASS triangles/miniTri/amazon0505_adj.sym: BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498331372.23.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 14:10:26
-PERF triangles/miniTri/amazon0505_adj.sym 1498331372.23.1 0 49736000000 BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498331372.23.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
-INFO PERFDATE BEGIN_RUN 2017-06-24 14:10:26
-INFO Running BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498331372.23.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
+PASS triangles/miniTri/amazon0505_adj.sym: BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498580527.62.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 11:23:01
+PERF triangles/miniTri/amazon0505_adj.sym 1498580527.62.1 0 49618900000 BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498580527.62.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 11:23:01
+INFO Running BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498580527.62.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
 INFO triangles/miniTri/amazon0505_adj.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr
 /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr has 410236 nodes and 4878874 edges
@@ -128,31 +132,35 @@ TIME - Time to permute  matrix: 0
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 2.31885
+TIME - Time to create B: 2.33087
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 49.6033
+TIME - Time to compute C = L*B: 49.7346
 --------------------
 NNZ: 4878874
 **********************************************************************
 Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 3951063
-INSTR intel-rapl:0 2405872686
-INSTR intel-rapl:1 2039138030
-INSTR intel-rapl:0:0 835311318
-INSTR intel-rapl:1:0 100793218
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 349719918
+INSTR intel-rapl:1:0 587678830
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 1949483291
+INSTR intel-rapl:1 2449613846
 
 INFO triangles/miniTri/amazon0505_adj.sym STDERR
 read 4878874 edges
 read data for 4878874 edges
 
-PASS triangles/miniTri/amazon0505_adj.sym: BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498331372.23.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 14:11:19
-PERF triangles/miniTri/amazon0505_adj.sym 1498331372.23.1 1 49603300000 BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498331372.23.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
-INFO PERFDATE BEGIN_RUN 2017-06-24 14:11:19
-INFO Running BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498331372.23.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
+PASS triangles/miniTri/amazon0505_adj.sym: BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498580527.62.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 11:23:55
+PERF triangles/miniTri/amazon0505_adj.sym 1498580527.62.1 1 49734600000 BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498580527.62.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 11:23:55
+INFO Running BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498580527.62.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
 INFO triangles/miniTri/amazon0505_adj.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr
 /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr has 410236 nodes and 4878874 edges
@@ -165,30 +173,34 @@ TIME - Time to permute  matrix: 0
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 2.28986
+TIME - Time to create B: 2.31047
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 49.5852
+TIME - Time to compute C = L*B: 49.6203
 --------------------
 NNZ: 4878874
 **********************************************************************
 Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 3951063
-INSTR intel-rapl:0 1939256693
-INSTR intel-rapl:1 2417712378
-INSTR intel-rapl:0:0 347523757
-INSTR intel-rapl:1:0 586298785
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 349126906
+INSTR intel-rapl:1:0 585939725
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 2013026585
+INSTR intel-rapl:1 2464675270
 
 INFO triangles/miniTri/amazon0505_adj.sym STDERR
 read 4878874 edges
 read data for 4878874 edges
 
-PASS triangles/miniTri/amazon0505_adj.sym: BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498331372.23.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 14:12:13
-PERF triangles/miniTri/amazon0505_adj.sym 1498331372.23.1 2 49585200000 BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498331372.23.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
+PASS triangles/miniTri/amazon0505_adj.sym: BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498580527.62.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 11:24:49
+PERF triangles/miniTri/amazon0505_adj.sym 1498580527.62.1 2 49620300000 BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498580527.62.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr ggr
 TASK_COMPLETE triangles/miniTri/amazon0505_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-24 14:12:13
-INFO APPROXIMATE DURATION 0:02:41.392721
+INFO DATE END 2017-06-27 11:24:49
+INFO APPROXIMATE DURATION 0:02:41.832869

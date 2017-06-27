@@ -72,13 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/miniTri', not in se
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/miniTri', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-24 18:38:23
+INFO DATE START 2017-06-27 09:46:19
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --scan ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-minitri/cit-HepTh_adj.sym.log -v perf triangles/miniTri cit-HepTh_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --mtcpulimit 01 --scan ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-minitri/cit-HepTh_adj.sym.log -v perf triangles/miniTri cit-HepTh_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-24 18:38:23
-INFO Running BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347503.41.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 09:46:19
+INFO Running BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574779.23.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
 INFO triangles/miniTri/cit-HepTh_adj.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr
 /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr has 27770 nodes and 704570 edges
@@ -91,11 +91,11 @@ TIME - Time to permute  matrix: 0
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 0.395097
+TIME - Time to create B: 0.397522
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 40.0961
+TIME - Time to compute C = L*B: 40.4442
 --------------------
 NNZ: 704570
 **********************************************************************
@@ -103,64 +103,23 @@ Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 1478735
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 267481118
-INSTR intel-rapl:1:0 442295047
+INSTR intel-rapl:0:0 267337665
+INSTR intel-rapl:1:0 446291484
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 1538480924
-INSTR intel-rapl:1 1828425556
+INSTR intel-rapl:0 1496432692
+INSTR intel-rapl:1 1839081413
 
 INFO triangles/miniTri/cit-HepTh_adj.sym STDERR
 read 704570 edges
 read data for 704570 edges
 
-PASS triangles/miniTri/cit-HepTh_adj.sym: BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347503.41.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 18:39:04
-PERF triangles/miniTri/cit-HepTh_adj.sym 1498347503.41.1 0 40096100000 BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347503.41.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
-INFO PERFDATE BEGIN_RUN 2017-06-24 18:39:04
-INFO Running BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347503.41.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
-INFO triangles/miniTri/cit-HepTh_adj.sym STDOUT
-Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr
-/h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr has 27770 nodes and 704570 edges
-**********************************************************************
-Enumerating triangles .....
-**********************************************************************
---------------------
-Permuting matrix ... done
-TIME - Time to permute  matrix: 1e-06
---------------------
---------------------
-Creating incident matrix B... done
-TIME - Time to create B: 0.398292
---------------------
---------------------
-C = A*B: 
-TIME - Time to compute C = L*B: 37.6301
---------------------
-NNZ: 704570
-**********************************************************************
-Finished triangle enumeration
-**********************************************************************
-Number of Triangles: 1478735
-INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 588528745
-INSTR intel-rapl:1:0 72532817
-INSTR intel-rapl:1:0:wraps 0
-INSTR intel-rapl:1:wraps 0
-INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 1708722005
-INSTR intel-rapl:1 1449140821
-
-INFO triangles/miniTri/cit-HepTh_adj.sym STDERR
-read 704570 edges
-read data for 704570 edges
-
-PASS triangles/miniTri/cit-HepTh_adj.sym: BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347503.41.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 18:39:42
-PERF triangles/miniTri/cit-HepTh_adj.sym 1498347503.41.1 1 37630100000 BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347503.41.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
-INFO PERFDATE BEGIN_RUN 2017-06-24 18:39:42
-INFO Running BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347503.41.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
+PASS triangles/miniTri/cit-HepTh_adj.sym: BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574779.23.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 09:47:00
+PERF triangles/miniTri/cit-HepTh_adj.sym 1498574779.23.1 0 40444200000 BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574779.23.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 09:47:00
+INFO Running BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574779.23.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
 INFO triangles/miniTri/cit-HepTh_adj.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr
 /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr has 27770 nodes and 704570 edges
@@ -173,11 +132,11 @@ TIME - Time to permute  matrix: 0
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 0.398074
+TIME - Time to create B: 0.337446
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 36.9002
+TIME - Time to compute C = L*B: 40.9352
 --------------------
 NNZ: 704570
 **********************************************************************
@@ -185,22 +144,63 @@ Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 1478735
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 248180994
-INSTR intel-rapl:1:0 407684214
+INSTR intel-rapl:0:0 274022633
+INSTR intel-rapl:1:0 449666419
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 1416422704
-INSTR intel-rapl:1 1683702233
+INSTR intel-rapl:0 1535577184
+INSTR intel-rapl:1 1859908202
 
 INFO triangles/miniTri/cit-HepTh_adj.sym STDERR
 read 704570 edges
 read data for 704570 edges
 
-PASS triangles/miniTri/cit-HepTh_adj.sym: BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347503.41.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 18:40:20
-PERF triangles/miniTri/cit-HepTh_adj.sym 1498347503.41.1 2 36900200000 BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347503.41.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
+PASS triangles/miniTri/cit-HepTh_adj.sym: BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574779.23.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 09:47:41
+PERF triangles/miniTri/cit-HepTh_adj.sym 1498574779.23.1 1 40935200000 BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574779.23.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 09:47:41
+INFO Running BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574779.23.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
+INFO triangles/miniTri/cit-HepTh_adj.sym STDOUT
+Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr
+/h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr has 27770 nodes and 704570 edges
+**********************************************************************
+Enumerating triangles .....
+**********************************************************************
+--------------------
+Permuting matrix ... done
+TIME - Time to permute  matrix: 0
+--------------------
+--------------------
+Creating incident matrix B... done
+TIME - Time to create B: 0.410149
+--------------------
+--------------------
+C = A*B: 
+TIME - Time to compute C = L*B: 39.9538
+--------------------
+NNZ: 704570
+**********************************************************************
+Finished triangle enumeration
+**********************************************************************
+Number of Triangles: 1478735
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 625543300
+INSTR intel-rapl:1:0 78796943
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 1814938347
+INSTR intel-rapl:1 1536826876
+
+INFO triangles/miniTri/cit-HepTh_adj.sym STDERR
+read 704570 edges
+read data for 704570 edges
+
+PASS triangles/miniTri/cit-HepTh_adj.sym: BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574779.23.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 09:48:22
+PERF triangles/miniTri/cit-HepTh_adj.sym 1498574779.23.1 2 39953800000 BMK2_INPUTID=cit-HepTh_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574779.23.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepTh_adj.sym.gr ggr
 TASK_COMPLETE triangles/miniTri/cit-HepTh_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-24 18:40:20
-INFO APPROXIMATE DURATION 0:01:56.625164
+INFO DATE END 2017-06-27 09:48:22
+INFO APPROXIMATE DURATION 0:02:03.242581

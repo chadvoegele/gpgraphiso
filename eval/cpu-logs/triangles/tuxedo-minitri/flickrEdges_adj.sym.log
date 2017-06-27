@@ -72,13 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/miniTri', not in se
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/miniTri', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-24 16:16:55
+INFO DATE START 2017-06-27 10:20:28
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --scan ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-minitri/flickrEdges_adj.sym.log -v perf triangles/miniTri flickrEdges_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --mtcpulimit 01 --scan ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-minitri/flickrEdges_adj.sym.log -v perf triangles/miniTri flickrEdges_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-24 16:16:55
-INFO Running BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498339015.4.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 10:20:28
+INFO Running BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498576828.53.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
 INFO triangles/miniTri/flickrEdges_adj.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr
 /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr has 105938 nodes and 4633896 edges
@@ -91,11 +91,11 @@ TIME - Time to permute  matrix: 0
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 2.94777
+TIME - Time to create B: 2.99703
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 1231
+TIME - Time to compute C = L*B: 1196.73
 --------------------
 NNZ: 4633896
 **********************************************************************
@@ -103,23 +103,23 @@ Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 107987357
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 8194168414
-INSTR intel-rapl:1:0 13515806596
+INSTR intel-rapl:0:0 18977288246
+INSTR intel-rapl:1:0 2273739564
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 46716176366
-INSTR intel-rapl:1 55686603597
+INSTR intel-rapl:0 54014531949
+INSTR intel-rapl:1 45701728402
 
 INFO triangles/miniTri/flickrEdges_adj.sym STDERR
 read 4633896 edges
 read data for 4633896 edges
 
-PASS triangles/miniTri/flickrEdges_adj.sym: BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498339015.4.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 16:37:30
-PERF triangles/miniTri/flickrEdges_adj.sym 1498339015.4.1 0 1231000000000 BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498339015.4.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
-INFO PERFDATE BEGIN_RUN 2017-06-24 16:37:30
-INFO Running BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498339015.4.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
+PASS triangles/miniTri/flickrEdges_adj.sym: BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498576828.53.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 10:40:29
+PERF triangles/miniTri/flickrEdges_adj.sym 1498576828.53.1 0 1196730000000 BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498576828.53.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 10:40:29
+INFO Running BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498576828.53.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
 INFO triangles/miniTri/flickrEdges_adj.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr
 /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr has 105938 nodes and 4633896 edges
@@ -128,79 +128,79 @@ Enumerating triangles .....
 **********************************************************************
 --------------------
 Permuting matrix ... done
-TIME - Time to permute  matrix: 0
+TIME - Time to permute  matrix: 1e-06
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 2.94169
+TIME - Time to create B: 3.01304
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 1162.59
+TIME - Time to compute C = L*B: 1170.56
 --------------------
 NNZ: 4633896
 **********************************************************************
 Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 107987357
-INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 18418929663
-INSTR intel-rapl:1:0 2259749657
-INSTR intel-rapl:1:0:wraps 0
-INSTR intel-rapl:1:wraps 41
-INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 52541017289
-INSTR intel-rapl:1 10530227630181
-
-INFO triangles/miniTri/flickrEdges_adj.sym STDERR
-read 4633896 edges
-read data for 4633896 edges
-
-PASS triangles/miniTri/flickrEdges_adj.sym: BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498339015.4.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 16:56:56
-PERF triangles/miniTri/flickrEdges_adj.sym 1498339015.4.1 1 1162590000000 BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498339015.4.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
-INFO PERFDATE BEGIN_RUN 2017-06-24 16:56:56
-INFO Running BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498339015.4.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
-INFO triangles/miniTri/flickrEdges_adj.sym STDOUT
-Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr
-/h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr has 105938 nodes and 4633896 edges
-**********************************************************************
-Enumerating triangles .....
-**********************************************************************
---------------------
-Permuting matrix ... done
-TIME - Time to permute  matrix: 0
---------------------
---------------------
-Creating incident matrix B... done
-TIME - Time to create B: 2.93836
---------------------
---------------------
-C = A*B: 
-TIME - Time to compute C = L*B: 1163.28
---------------------
-NNZ: 4633896
-**********************************************************************
-Finished triangle enumeration
-**********************************************************************
-Number of Triangles: 107987357
-INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 7671290440
-INSTR intel-rapl:1:0 12779098361
+INSTR intel-rapl:0:0:wraps 1
+INSTR intel-rapl:0:0 7704305682
+INSTR intel-rapl:1:0 12850796793
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 44124527422
-INSTR intel-rapl:1 52806424691
+INSTR intel-rapl:0 44389269298
+INSTR intel-rapl:1 52928335328
 
 INFO triangles/miniTri/flickrEdges_adj.sym STDERR
 read 4633896 edges
 read data for 4633896 edges
 
-PASS triangles/miniTri/flickrEdges_adj.sym: BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498339015.4.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 17:16:24
-PERF triangles/miniTri/flickrEdges_adj.sym 1498339015.4.1 2 1163280000000 BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498339015.4.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
+PASS triangles/miniTri/flickrEdges_adj.sym: BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498576828.53.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 11:00:04
+PERF triangles/miniTri/flickrEdges_adj.sym 1498576828.53.1 1 1170560000000 BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498576828.53.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 11:00:04
+INFO Running BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498576828.53.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
+INFO triangles/miniTri/flickrEdges_adj.sym STDOUT
+Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr
+/h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr has 105938 nodes and 4633896 edges
+**********************************************************************
+Enumerating triangles .....
+**********************************************************************
+--------------------
+Permuting matrix ... done
+TIME - Time to permute  matrix: 0
+--------------------
+--------------------
+Creating incident matrix B... done
+TIME - Time to create B: 2.94053
+--------------------
+--------------------
+C = A*B: 
+TIME - Time to compute C = L*B: 1167.39
+--------------------
+NNZ: 4633896
+**********************************************************************
+Finished triangle enumeration
+**********************************************************************
+Number of Triangles: 107987357
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 7686435557
+INSTR intel-rapl:1:0 12810377971
+INSTR intel-rapl:1:0:wraps 1
+INSTR intel-rapl:1:wraps 1
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 44089308884
+INSTR intel-rapl:1 52682116842
+
+INFO triangles/miniTri/flickrEdges_adj.sym STDERR
+read 4633896 edges
+read data for 4633896 edges
+
+PASS triangles/miniTri/flickrEdges_adj.sym: BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498576828.53.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 11:19:35
+PERF triangles/miniTri/flickrEdges_adj.sym 1498576828.53.1 2 1167390000000 BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498576828.53.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr ggr
 TASK_COMPLETE triangles/miniTri/flickrEdges_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-24 17:16:24
-INFO APPROXIMATE DURATION 0:59:28.653649
+INFO DATE END 2017-06-27 11:19:35
+INFO APPROXIMATE DURATION 0:59:06.942927

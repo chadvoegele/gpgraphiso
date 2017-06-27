@@ -72,13 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/miniTri', not in se
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/miniTri', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-24 18:40:45
+INFO DATE START 2017-06-27 09:48:22
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --scan ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-minitri/email-EuAll_adj.sym.log -v perf triangles/miniTri email-EuAll_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --mtcpulimit 01 --scan ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-minitri/email-EuAll_adj.sym.log -v perf triangles/miniTri email-EuAll_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-24 18:40:45
-INFO Running BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347645.73.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 09:48:22
+INFO Running BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574902.87.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
 INFO triangles/miniTri/email-EuAll_adj.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr
 /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr has 265214 nodes and 728962 edges
@@ -91,11 +91,11 @@ TIME - Time to permute  matrix: 0
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 0.442371
+TIME - Time to create B: 0.441806
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 124.157
+TIME - Time to compute C = L*B: 131.495
 --------------------
 NNZ: 728962
 **********************************************************************
@@ -103,23 +103,23 @@ Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 267313
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 1918998538
-INSTR intel-rapl:1:0 243303813
+INSTR intel-rapl:0:0 2044122901
+INSTR intel-rapl:1:0 310379228
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 5709491731
-INSTR intel-rapl:1 4758125209
+INSTR intel-rapl:0 6023081200
+INSTR intel-rapl:1 5080694757
 
 INFO triangles/miniTri/email-EuAll_adj.sym STDERR
 read 728962 edges
 read data for 728962 edges
 
-PASS triangles/miniTri/email-EuAll_adj.sym: BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347645.73.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 18:42:50
-PERF triangles/miniTri/email-EuAll_adj.sym 1498347645.73.1 0 124157000000 BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347645.73.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
-INFO PERFDATE BEGIN_RUN 2017-06-24 18:42:50
-INFO Running BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347645.73.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
+PASS triangles/miniTri/email-EuAll_adj.sym: BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574902.87.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 09:50:35
+PERF triangles/miniTri/email-EuAll_adj.sym 1498574902.87.1 0 131495000000 BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574902.87.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 09:50:35
+INFO Running BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574902.87.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
 INFO triangles/miniTri/email-EuAll_adj.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr
 /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr has 265214 nodes and 728962 edges
@@ -132,11 +132,11 @@ TIME - Time to permute  matrix: 0
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 0.457025
+TIME - Time to create B: 0.446582
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 134.435
+TIME - Time to compute C = L*B: 124.461
 --------------------
 NNZ: 728962
 **********************************************************************
@@ -144,23 +144,23 @@ Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 267313
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 880786743
-INSTR intel-rapl:1:0 1452941504
+INSTR intel-rapl:0:0 825992134
+INSTR intel-rapl:1:0 1348150411
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 5003621956
-INSTR intel-rapl:1 6213832786
+INSTR intel-rapl:0 4749129260
+INSTR intel-rapl:1 5723802364
 
 INFO triangles/miniTri/email-EuAll_adj.sym STDERR
 read 728962 edges
 read data for 728962 edges
 
-PASS triangles/miniTri/email-EuAll_adj.sym: BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347645.73.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 18:45:06
-PERF triangles/miniTri/email-EuAll_adj.sym 1498347645.73.1 1 134435000000 BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347645.73.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
-INFO PERFDATE BEGIN_RUN 2017-06-24 18:45:06
-INFO Running BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347645.73.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
+PASS triangles/miniTri/email-EuAll_adj.sym: BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574902.87.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 09:52:40
+PERF triangles/miniTri/email-EuAll_adj.sym 1498574902.87.1 1 124461000000 BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574902.87.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 09:52:40
+INFO Running BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574902.87.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
 INFO triangles/miniTri/email-EuAll_adj.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr
 /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr has 265214 nodes and 728962 edges
@@ -173,11 +173,11 @@ TIME - Time to permute  matrix: 0
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 0.473447
+TIME - Time to create B: 0.443855
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 133.777
+TIME - Time to compute C = L*B: 134.458
 --------------------
 NNZ: 728962
 **********************************************************************
@@ -185,22 +185,22 @@ Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 267313
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 2076606484
-INSTR intel-rapl:1:0 245564740
+INSTR intel-rapl:0:0 2092255982
+INSTR intel-rapl:1:0 300804441
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 6104073241
-INSTR intel-rapl:1 5112472996
+INSTR intel-rapl:0 6113699253
+INSTR intel-rapl:1 5186098112
 
 INFO triangles/miniTri/email-EuAll_adj.sym STDERR
 read 728962 edges
 read data for 728962 edges
 
-PASS triangles/miniTri/email-EuAll_adj.sym: BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347645.73.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 18:47:20
-PERF triangles/miniTri/email-EuAll_adj.sym 1498347645.73.1 2 133776999999 BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498347645.73.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
+PASS triangles/miniTri/email-EuAll_adj.sym: BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574902.87.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 09:54:55
+PERF triangles/miniTri/email-EuAll_adj.sym 1498574902.87.1 2 134458000000 BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574902.87.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr ggr
 TASK_COMPLETE triangles/miniTri/email-EuAll_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-24 18:47:20
-INFO APPROXIMATE DURATION 0:06:35.130557
+INFO DATE END 2017-06-27 09:54:55
+INFO APPROXIMATE DURATION 0:06:33.080573

@@ -72,13 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/miniTri', not in se
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/miniTri', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-24 13:53:23
+INFO DATE START 2017-06-27 09:41:05
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --scan ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-minitri/p2p-Gnutella06_adj.sym.log -v perf triangles/miniTri p2p-Gnutella06_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --mtcpulimit 01 --scan ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-minitri/p2p-Gnutella06_adj.sym.log -v perf triangles/miniTri p2p-Gnutella06_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-24 13:53:23
-INFO Running BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498330403.76.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 09:41:05
+INFO Running BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574465.49.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
 INFO triangles/miniTri/p2p-Gnutella06_adj.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr
 /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr has 8717 nodes and 63050 edges
@@ -91,68 +91,35 @@ TIME - Time to permute  matrix: 0
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 0.033513
+TIME - Time to create B: 0.033139
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 0.370927
+TIME - Time to compute C = L*B: 0.369355
 --------------------
 NNZ: 63050
 **********************************************************************
 Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 1142
-INSTR intel-rapl:0 21165717
-INSTR intel-rapl:1 22629642
-INSTR intel-rapl:0:0 7480048
-INSTR intel-rapl:1:0 2640673
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 3442194
+INSTR intel-rapl:1:0 2136003
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 14007411
+INSTR intel-rapl:1 15484579
 
 INFO triangles/miniTri/p2p-Gnutella06_adj.sym STDERR
 read 63050 edges
 read data for 63050 edges
 
-PASS triangles/miniTri/p2p-Gnutella06_adj.sym: BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498330403.76.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 13:53:24
-PERF triangles/miniTri/p2p-Gnutella06_adj.sym 1498330403.76.1 0 370927000 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498330403.76.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
-INFO PERFDATE BEGIN_RUN 2017-06-24 13:53:24
-INFO Running BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498330403.76.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
-INFO triangles/miniTri/p2p-Gnutella06_adj.sym STDOUT
-Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr
-/h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr has 8717 nodes and 63050 edges
-**********************************************************************
-Enumerating triangles .....
-**********************************************************************
---------------------
-Permuting matrix ... done
-TIME - Time to permute  matrix: 1e-06
---------------------
---------------------
-Creating incident matrix B... done
-TIME - Time to create B: 0.032092
---------------------
---------------------
-C = A*B: 
-TIME - Time to compute C = L*B: 0.369657
---------------------
-NNZ: 63050
-**********************************************************************
-Finished triangle enumeration
-**********************************************************************
-Number of Triangles: 1142
-INSTR intel-rapl:0 13164700
-INSTR intel-rapl:1 11730378
-INSTR intel-rapl:0:0 3808889
-INSTR intel-rapl:1:0 957505
-
-INFO triangles/miniTri/p2p-Gnutella06_adj.sym STDERR
-read 63050 edges
-read data for 63050 edges
-
-PASS triangles/miniTri/p2p-Gnutella06_adj.sym: BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498330403.76.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 13:53:25
-PERF triangles/miniTri/p2p-Gnutella06_adj.sym 1498330403.76.1 1 369657000 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498330403.76.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
-INFO PERFDATE BEGIN_RUN 2017-06-24 13:53:25
-INFO Running BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498330403.76.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
+PASS triangles/miniTri/p2p-Gnutella06_adj.sym: BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574465.49.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 09:41:06
+PERF triangles/miniTri/p2p-Gnutella06_adj.sym 1498574465.49.1 0 369355000 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574465.49.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 09:41:06
+INFO Running BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574465.49.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
 INFO triangles/miniTri/p2p-Gnutella06_adj.sym STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr
 /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr has 8717 nodes and 63050 edges
@@ -165,30 +132,75 @@ TIME - Time to permute  matrix: 0
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 0.031346
+TIME - Time to create B: 0.031634
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 0.369372
+TIME - Time to compute C = L*B: 0.36987
 --------------------
 NNZ: 63050
 **********************************************************************
 Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 1142
-INSTR intel-rapl:0 11808747
-INSTR intel-rapl:1 13065335
-INSTR intel-rapl:0:0 2759753
-INSTR intel-rapl:1:0 1793482
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 3741156
+INSTR intel-rapl:1:0 907474
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 13377956
+INSTR intel-rapl:1 11937408
 
 INFO triangles/miniTri/p2p-Gnutella06_adj.sym STDERR
 read 63050 edges
 read data for 63050 edges
 
-PASS triangles/miniTri/p2p-Gnutella06_adj.sym: BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498330403.76.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 13:53:25
-PERF triangles/miniTri/p2p-Gnutella06_adj.sym 1498330403.76.1 2 369372000 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498330403.76.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
+PASS triangles/miniTri/p2p-Gnutella06_adj.sym: BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574465.49.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 09:41:06
+PERF triangles/miniTri/p2p-Gnutella06_adj.sym 1498574465.49.1 1 369870000 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574465.49.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 09:41:06
+INFO Running BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574465.49.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
+INFO triangles/miniTri/p2p-Gnutella06_adj.sym STDOUT
+Opening file: /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr
+/h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr has 8717 nodes and 63050 edges
+**********************************************************************
+Enumerating triangles .....
+**********************************************************************
+--------------------
+Permuting matrix ... done
+TIME - Time to permute  matrix: 0
+--------------------
+--------------------
+Creating incident matrix B... done
+TIME - Time to create B: 0.031828
+--------------------
+--------------------
+C = A*B: 
+TIME - Time to compute C = L*B: 0.369484
+--------------------
+NNZ: 63050
+**********************************************************************
+Finished triangle enumeration
+**********************************************************************
+Number of Triangles: 1142
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 3702600
+INSTR intel-rapl:1:0 842617
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 13370633
+INSTR intel-rapl:1 11956207
+
+INFO triangles/miniTri/p2p-Gnutella06_adj.sym STDERR
+read 63050 edges
+read data for 63050 edges
+
+PASS triangles/miniTri/p2p-Gnutella06_adj.sym: BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574465.49.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 09:41:07
+PERF triangles/miniTri/p2p-Gnutella06_adj.sym 1498574465.49.1 2 369484000 BMK2_INPUTID=p2p-Gnutella06_adj.sym BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498574465.49.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella06_adj.sym.gr ggr
 TASK_COMPLETE triangles/miniTri/p2p-Gnutella06_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-24 13:53:25
-INFO APPROXIMATE DURATION 0:00:01.883229
+INFO DATE END 2017-06-27 09:41:07
+INFO APPROXIMATE DURATION 0:00:01.677741

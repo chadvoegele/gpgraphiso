@@ -72,13 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/miniTri', not in se
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/miniTri', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-24 18:28:44
+INFO DATE START 2017-06-27 10:03:07
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --scan ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-minitri/rmat16.sym.tri.log -v perf triangles/miniTri rmat16.sym.tri
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=01 --mtcpulimit 01 --scan ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial --max-output-bytes 0 --measure-energy --log cpu-logs/triangles/tuxedo-minitri/rmat16.sym.tri.log -v perf triangles/miniTri rmat16.sym.tri
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-24 18:28:44
-INFO Running BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498346924.02.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 10:03:07
+INFO Running BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498575787.45.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
 INFO triangles/miniTri/rmat16.sym.tri STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr
 /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr has 65535 nodes and 967866 edges
@@ -91,11 +91,11 @@ TIME - Time to permute  matrix: 0
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 0.644354
+TIME - Time to create B: 0.626471
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 21.694
+TIME - Time to compute C = L*B: 21.8624
 --------------------
 NNZ: 967866
 **********************************************************************
@@ -103,23 +103,23 @@ Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 234373
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 348053152
-INSTR intel-rapl:1:0 46658742
+INSTR intel-rapl:0:0 148670728
+INSTR intel-rapl:1:0 239809538
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 1007970686
-INSTR intel-rapl:1 853819775
+INSTR intel-rapl:0 820215003
+INSTR intel-rapl:1 1018037311
 
 INFO triangles/miniTri/rmat16.sym.tri STDERR
 read 967866 edges
 read data for 967866 edges
 
-PASS triangles/miniTri/rmat16.sym.tri: BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498346924.02.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 18:29:06
-PERF triangles/miniTri/rmat16.sym.tri 1498346924.02.1 0 21694000000 BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498346924.02.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
-INFO PERFDATE BEGIN_RUN 2017-06-24 18:29:06
-INFO Running BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498346924.02.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
+PASS triangles/miniTri/rmat16.sym.tri: BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498575787.45.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 10:03:30
+PERF triangles/miniTri/rmat16.sym.tri 1498575787.45.1 0 21862400000 BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498575787.45.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 10:03:30
+INFO Running BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498575787.45.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
 INFO triangles/miniTri/rmat16.sym.tri STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr
 /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr has 65535 nodes and 967866 edges
@@ -132,11 +132,11 @@ TIME - Time to permute  matrix: 0
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 0.638351
+TIME - Time to create B: 0.623737
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 21.814
+TIME - Time to compute C = L*B: 21.6464
 --------------------
 NNZ: 967866
 **********************************************************************
@@ -144,23 +144,23 @@ Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 234373
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 149261659
-INSTR intel-rapl:1:0 244985344
+INSTR intel-rapl:0:0 345861748
+INSTR intel-rapl:1:0 41351570
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 815416919
-INSTR intel-rapl:1 1012093844
+INSTR intel-rapl:0 1000977968
+INSTR intel-rapl:1 847189725
 
 INFO triangles/miniTri/rmat16.sym.tri STDERR
 read 967866 edges
 read data for 967866 edges
 
-PASS triangles/miniTri/rmat16.sym.tri: BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498346924.02.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 18:29:29
-PERF triangles/miniTri/rmat16.sym.tri 1498346924.02.1 1 21814000000 BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498346924.02.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
-INFO PERFDATE BEGIN_RUN 2017-06-24 18:29:29
-INFO Running BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498346924.02.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
+PASS triangles/miniTri/rmat16.sym.tri: BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498575787.45.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 10:03:52
+PERF triangles/miniTri/rmat16.sym.tri 1498575787.45.1 1 21646400000 BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498575787.45.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
+INFO PERFDATE BEGIN_RUN 2017-06-27 10:03:52
+INFO Running BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498575787.45.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
 INFO triangles/miniTri/rmat16.sym.tri STDOUT
 Opening file: /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr
 /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr has 65535 nodes and 967866 edges
@@ -173,11 +173,11 @@ TIME - Time to permute  matrix: 0
 --------------------
 --------------------
 Creating incident matrix B... done
-TIME - Time to create B: 0.653478
+TIME - Time to create B: 0.637863
 --------------------
 --------------------
 C = A*B: 
-TIME - Time to compute C = L*B: 21.6789
+TIME - Time to compute C = L*B: 21.6507
 --------------------
 NNZ: 967866
 **********************************************************************
@@ -185,22 +185,22 @@ Finished triangle enumeration
 **********************************************************************
 Number of Triangles: 234373
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 346813194
-INSTR intel-rapl:1:0 44011842
+INSTR intel-rapl:0:0 146568476
+INSTR intel-rapl:1:0 237671102
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 1003775507
-INSTR intel-rapl:1 851245197
+INSTR intel-rapl:0 821766024
+INSTR intel-rapl:1 1004728873
 
 INFO triangles/miniTri/rmat16.sym.tri STDERR
 read 967866 edges
 read data for 967866 edges
 
-PASS triangles/miniTri/rmat16.sym.tri: BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498346924.02.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
-INFO PERFDATE END_RUN 2017-06-24 18:29:52
-PERF triangles/miniTri/rmat16.sym.tri 1498346924.02.1 2 21678900000 BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498346924.02.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
+PASS triangles/miniTri/rmat16.sym.tri: BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498575787.45.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
+INFO PERFDATE END_RUN 2017-06-27 10:04:15
+PERF triangles/miniTri/rmat16.sym.tri 1498575787.45.1 2 21650700000 BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=triangles/miniTri BMK2_RUNID=1498575787.45.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial/miniTri.exe /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr ggr
 TASK_COMPLETE triangles/miniTri/rmat16.sym.tri PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-24 18:29:52
-INFO APPROXIMATE DURATION 0:01:08.102920
+INFO DATE END 2017-06-27 10:04:15
+INFO APPROXIMATE DURATION 0:01:08.047723
