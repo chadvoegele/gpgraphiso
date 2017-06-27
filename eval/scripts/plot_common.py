@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-markers = ['o', '^', 's', 'H', 'd']
+markers = ['o', '^', 's', 'p', 'd', 'v']
 def drop_inputs(df, todrop_file):
     if todrop_file is not None:
         todrop = [s.strip() for s in open(todrop_file, "r").readlines() if s[0] != "#"]
