@@ -11,6 +11,7 @@ CPU_KTRUSS=$(GALOIS)/exp/apps/ktruss
 GR_CHALLENGE=../../graph_challenge/
 CPU_TRIANGLES=$(GALOIS)/lonestar/triangles
 CPU_MINITRI=$(GR_CHALLENGE)/SubgraphIsomorphism/triangle/code/cpp/code/linearAlgebra/serial
+CPU_KTRUSS_REF=$(GR_CHALLENGE)/SubgraphIsomorphism/ktruss/code/
 
 USER:=$(shell whoami)
 HOST:=$(shell hostname -s)

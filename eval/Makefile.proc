@@ -1,6 +1,8 @@
 include common.mk
 
 BMK2=~/src/bmk2
+AVG_RAPL=-a instr_intel-rapl:0 -a instr_intel-rapl:0:0 -a instr_intel-rapl:1 -a instr_intel-rapl:1:0
+AVG_MEM = -a meminfo_post_sum -a meminfo_post_mb
 
 all:  triangles ktruss
 
@@ -8,7 +10,7 @@ all:  triangles ktruss
 
 triangles: triangles/tuxedo-gtx1080.csv triangles/tuxedo-k80.csv triangles/tuxedo-gtx1080-power.csv triangles/tuxedo-12.csv triangles/tuxedo-24.csv triangles/tuxedo-01.csv triangles/tuxedo-minitri.csv
 
-ktruss:  ktruss/tuxedo-12.csv ktruss/tuxedo-24.csv ktruss/tuxedo-01.csv 
+ktruss:  ktruss/tuxedo-12.csv ktruss/tuxedo-24.csv ktruss/tuxedo-01.csv ktruss/tuxedo-ref-julia.csv
 
 # TODO: use make to generate rules below ...
 
@@ -49,7 +51,7 @@ triangles/tuxedo-12-gal.csv: $(wildcard cpu-logs/triangles/tuxedo-12/*.log)
 	scripts/extract_galois_counters.py $^ -o $@
 
 triangles/tuxedo-12.csv: triangles/tuxedo-12-raw.csv triangles/tuxedo-12-gal.csv
-	$(BMK2)/ps/import.py -a meminfo_post_sum -a meminfo_post_mb -a preprocess_time_ms -a instr_intel-rapl:0 -a instr_intel-rapl:0:0 -a instr_intel-rapl:1 -a instr_intel-rapl:1:0 -r triangles/tuxedo-12-gal.csv -o $@ $<
+	$(BMK2)/ps/import.py -a meminfo_post_sum -a meminfo_post_mb -a preprocess_time_ms $(AVG_RAPL) -r triangles/tuxedo-12-gal.csv -o $@ $<
 
 
 triangles/tuxedo-24-raw.csv: $(wildcard cpu-logs/triangles/tuxedo-24/*.log)
@@ -59,7 +61,7 @@ triangles/tuxedo-24-gal.csv: $(wildcard cpu-logs/triangles/tuxedo-24/*.log)
 	scripts/extract_galois_counters.py $^ -o $@
 
 triangles/tuxedo-24.csv: triangles/tuxedo-24-raw.csv triangles/tuxedo-24-gal.csv
-	$(BMK2)/ps/import.py -a meminfo_post_sum -a meminfo_post_mb -a preprocess_time_ms -a instr_intel-rapl:0 -a instr_intel-rapl:0:0 -a instr_intel-rapl:1 -a instr_intel-rapl:1:0 -r triangles/tuxedo-24-gal.csv -o $@ $<
+	$(BMK2)/ps/import.py $(AVG_MEM) -a preprocess_time_ms $(AVG_RAPL) -r triangles/tuxedo-24-gal.csv -o $@ $<
 
 
 triangles/tuxedo-01-raw.csv: $(wildcard cpu-logs/triangles/tuxedo-01/*.log)
@@ -69,14 +71,14 @@ triangles/tuxedo-01-gal.csv: $(wildcard cpu-logs/triangles/tuxedo-01/*.log)
 	scripts/extract_galois_counters.py $^ -o $@
 
 triangles/tuxedo-01.csv: triangles/tuxedo-01-raw.csv triangles/tuxedo-01-gal.csv
-	$(BMK2)/ps/import.py -a meminfo_post_sum -a meminfo_post_mb -a preprocess_time_ms -a instr_intel-rapl:0 -a instr_intel-rapl:0:0 -a instr_intel-rapl:1 -a instr_intel-rapl:1:0 -r triangles/tuxedo-01-gal.csv -o $@ $<
+	$(BMK2)/ps/import.py -a meminfo_post_sum -a meminfo_post_mb -a preprocess_time_ms $(AVG_RAPL) -r triangles/tuxedo-01-gal.csv -o $@ $<
 
 
 triangles/tuxedo-minitri-raw.csv: $(wildcard cpu-logs/triangles/tuxedo-minitri/*.log)
 	$(BMK2)/ps/log2csv.py -x tuxedo-minitri $^ -o $@
 
 triangles/tuxedo-minitri.csv: triangles/tuxedo-minitri-raw.csv
-	$(BMK2)/ps/import.py -a instr_intel-rapl:0 -a instr_intel-rapl:0:0 -a instr_intel-rapl:1 -a instr_intel-rapl:1:0 -o $@ $^
+	$(BMK2)/ps/import.py $(AVG_RAPL) -o $@ $^
 
 
 # **** KTRUSS CPU ****
@@ -84,21 +86,39 @@ triangles/tuxedo-minitri.csv: triangles/tuxedo-minitri-raw.csv
 ktruss/tuxedo-12-raw.csv: $(wildcard cpu-logs/ktruss/tuxedo-12/*.log)
 	$(BMK2)/ps/log2csv.py -x tuxedo-12 $^ -o $@
 
-ktruss/tuxedo-12.csv: ktruss/tuxedo-12-raw.csv
-	$(BMK2)/ps/import.py -o $@ $^
+ktruss/tuxedo-12.csv: ktruss/tuxedo-12-raw.csv ktruss/tuxedo-12-gal.csv
+	$(BMK2)/ps/import.py $(AVG_MEM) $(AVG_RAPL) -r ktruss/tuxedo-12-gal.csv -o $@ $<
 
+ktruss/tuxedo-12-gal.csv: $(wildcard cpu-logs/ktruss/tuxedo-12/*.log)
+	scripts/extract_galois_counters.py $^ -o $@
 
 ktruss/tuxedo-01-raw.csv: $(wildcard cpu-logs/ktruss/tuxedo-01/*.log)
 	$(BMK2)/ps/log2csv.py -x tuxedo-01 $^ -o $@
 
-ktruss/tuxedo-01.csv: ktruss/tuxedo-01-raw.csv
-	$(BMK2)/ps/import.py -o $@ $^
+ktruss/tuxedo-01-gal.csv: $(wildcard cpu-logs/ktruss/tuxedo-01/*.log)
+	scripts/extract_galois_counters.py $^ -o $@
+
+ktruss/tuxedo-01.csv: ktruss/tuxedo-01-raw.csv ktruss/tuxedo-01-gal.csv
+	$(BMK2)/ps/import.py $(AVG_MEM) $(AVG_RAPL) -r ktruss/tuxedo-01-gal.csv -o $@ $<
+
 
 ktruss/tuxedo-24-raw.csv: $(wildcard cpu-logs/ktruss/tuxedo-24/*.log)
 	$(BMK2)/ps/log2csv.py -x tuxedo-12 $^ -o $@
 
-ktruss/tuxedo-24.csv: ktruss/tuxedo-24-raw.csv
-	$(BMK2)/ps/import.py -o $@ $^
+ktruss/tuxedo-24-gal.csv: $(wildcard cpu-logs/ktruss/tuxedo-24/*.log)
+	scripts/extract_galois_counters.py $^ -o $@
+
+ktruss/tuxedo-24.csv: ktruss/tuxedo-24-raw.csv ktruss/tuxedo-24-gal.csv
+	$(BMK2)/ps/import.py $(AVG_MEM) $(AVG_RAPL) -r ktruss/tuxedo-24-gal.csv -o $@ $<
+
+
+ktruss/tuxedo-ref-julia-raw.csv: $(wildcard cpu-logs/ktruss/tuxedo-ref-julia/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-ref-julia $^ -o $@
+
+ktruss/tuxedo-ref-julia.csv: ktruss/tuxedo-ref-julia-raw.csv
+	$(BMK2)/ps/import.py $(AVG_RAPL) -o $@ $^
+
+				 
 
 
 # **** KTRUSS GPU ****
