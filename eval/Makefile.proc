@@ -3,7 +3,7 @@ include common.mk
 
 BMK2=~/src/bmk2
 AVG_RAPL=-a instr_intel-rapl:0 -a instr_intel-rapl:0:0 -a instr_intel-rapl:1 -a instr_intel-rapl:1:0
-AVG_MEM=-a meminfo_post_sum -a meminfo_post_mb
+AVG_MEM=-a meminfo_post_sum -a meminfo_post_mb -a meminfo_bytes
 
 all:  triangles ktruss
 
@@ -121,8 +121,11 @@ ktruss/tuxedo-24.csv: ktruss/tuxedo-24-raw.csv ktruss/tuxedo-24-gal.csv
 ktruss/tuxedo-ref-julia-raw.csv: $(wildcard cpu-logs/ktruss/tuxedo-ref-julia/*.log)
 	$(BMK2)/ps/log2csv.py -x tuxedo-ref-julia $^ -o $@
 
-ktruss/tuxedo-ref-julia.csv: ktruss/tuxedo-ref-julia-raw.csv
-	$(BMK2)/ps/import.py $(AVG_RAPL) -o $@ $^
+ktruss/tuxedo-ref-julia-mem.csv: $(wildcard cpu-logs/ktruss/tuxedo-ref-julia/*.log)
+	scripts/extract_julia_counters.py $^ -o $@
+
+ktruss/tuxedo-ref-julia.csv: ktruss/tuxedo-ref-julia-raw.csv ktruss/tuxedo-ref-julia-mem.csv
+	$(BMK2)/ps/import.py -a meminfo_bytes $(AVG_RAPL) -r ktruss/tuxedo-ref-julia-mem.csv -o $@ $<
 
 
 # **** KTRUSS GPU ****

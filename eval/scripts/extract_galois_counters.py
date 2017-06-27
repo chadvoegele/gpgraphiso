@@ -73,7 +73,8 @@ def extract_relevant_counters(gcdf):
     mip = gcdf[gcdf["CATEGORY"].str.match("MeminfoPost")]["VAL"]
     if len(mip):
         out['meminfo_post_sum'] = mip.astype(int).sum()
-        out['meminfo_post_mb'] = out['meminfo_post_sum'] * 1024 * 1024 * 4
+        out['meminfo_post_mb'] = out['meminfo_post_sum'] * 4 
+        out['meminfo_bytes'] = out['meminfo_post_mb'] * 1024 * 1024
 
     return out
 

@@ -22,7 +22,7 @@ out = pd.DataFrame()
 for lbl, i in zip(args.labels, args.inputs):
     f = pd.read_csv(i)
     f["lbl"] = lbl
-    out = out.append(f[["input", "lbl", "edges", "meminfo_post_mb_avg"]])
+    out = out.append(f[["input", "lbl", "edges", "meminfo_bytes_avg"]])
 
 out = out.set_index(["edges", "input", "lbl"])
 out = out.unstack("lbl")
@@ -30,10 +30,10 @@ out = out.unstack("lbl")
 out = plot_common.drop_inputs(out, args.drop_inputs)
 out = plot_common.rename_inputs(out)
 
-e = out["meminfo_post_mb_avg"]
-unit = "Memory Usage (MB)"
+e = out["meminfo_bytes_avg"]
+unit = "Memory Usage (Bytes)"
 
-p = e.plot(linestyle='dotted', rot=90)
+p = e.plot(linestyle='dotted', rot=90, figsize=(8, 5))
 p.set_xticks(range(len(e)))
 p.set_xticklabels(e.index.get_level_values("input"))
 p.set_yscale('log')
