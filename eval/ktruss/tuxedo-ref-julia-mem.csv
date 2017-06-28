@@ -1,4 +1,7 @@
 alloc,alloc_raw,alloc_unit,binid,meminfo_bytes,memory_raw,memory_unit,run,xid
+33960000.0,33.96,M,ktruss/ref+julia/com-dblp.wgt32.sym,5178656817.15,4.823,GiB,0,1498616165.8.1
+33960000.0,33.96,M,ktruss/ref+julia/com-dblp.wgt32.sym,5178656817.15,4.823,GiB,1,1498616165.8.1
+33960000.0,33.96,M,ktruss/ref+julia/com-dblp.wgt32.sym,5178656817.15,4.823,GiB,2,1498616165.8.1
 6780000.0,6.78,M,ktruss/ref+julia/oregon2_010505_adj.sym,1228360646.66,1.144,GiB,0,1498587139.66.1
 6780000.0,6.78,M,ktruss/ref+julia/oregon2_010505_adj.sym,1228360646.66,1.144,GiB,1,1498587139.66.1
 6780000.0,6.78,M,ktruss/ref+julia/oregon2_010505_adj.sym,1228360646.66,1.144,GiB,2,1498587139.66.1
@@ -26,6 +29,12 @@ alloc,alloc_raw,alloc_unit,binid,meminfo_bytes,memory_raw,memory_unit,run,xid
 6280000.0,6.28,M,ktruss/ref+julia/oregon1_010331_adj.sym,933022924.8,889.8,MiB,0,1498586790.09.1
 6280000.0,6.28,M,ktruss/ref+julia/oregon1_010331_adj.sym,933022924.8,889.8,MiB,1,1498586790.09.1
 6280000.0,6.28,M,ktruss/ref+julia/oregon1_010331_adj.sym,933022924.8,889.8,MiB,2,1498586790.09.1
+67200000.0,67.2,M,ktruss/ref+julia/flickrEdges_adj.sym,1.28901632229e+11,120.049,GiB,0,1498657633.33.1
+67200000.0,67.2,M,ktruss/ref+julia/flickrEdges_adj.sym,1.28901632229e+11,120.049,GiB,1,1498657633.33.1
+67200000.0,67.2,M,ktruss/ref+julia/flickrEdges_adj.sym,1.28901632229e+11,120.049,GiB,2,1498657633.33.1
+37090000.0,37.09,M,ktruss/ref+julia/com-amazon.wgt32.sym,4781372342.27,4.453,GiB,0,1498605814.67.1
+37090000.0,37.09,M,ktruss/ref+julia/com-amazon.wgt32.sym,4781372342.27,4.453,GiB,1,1498605814.67.1
+37090000.0,37.09,M,ktruss/ref+julia/com-amazon.wgt32.sym,4781372342.27,4.453,GiB,2,1498605814.67.1
 6100000.0,6.1,M,ktruss/ref+julia/oregon1_010414_adj.sym,1078036791.3,1.004,GiB,0,1498586822.89.1
 6100000.0,6.1,M,ktruss/ref+julia/oregon1_010414_adj.sym,1078036791.3,1.004,GiB,1,1498586822.89.1
 6100000.0,6.1,M,ktruss/ref+julia/oregon1_010414_adj.sym,1078036791.3,1.004,GiB,2,1498586822.89.1
@@ -116,6 +125,9 @@ alloc,alloc_raw,alloc_unit,binid,meminfo_bytes,memory_raw,memory_unit,run,xid
 6590000.0,6.59,M,ktruss/ref+julia/oregon2_010526_adj.sym,1219770712.06,1.136,GiB,0,1498587475.35.1
 6590000.0,6.59,M,ktruss/ref+julia/oregon2_010526_adj.sym,1219770712.06,1.136,GiB,1,1498587475.35.1
 6590000.0,6.59,M,ktruss/ref+julia/oregon2_010526_adj.sym,1219770712.06,1.136,GiB,2,1498587475.35.1
+46470000.0,46.47,M,ktruss/ref+julia/loc-gowalla_edges_adj.sym,40871982530.6,38.065,GiB,0,1498610525.35.1
+46470000.0,46.47,M,ktruss/ref+julia/loc-gowalla_edges_adj.sym,40871982530.6,38.065,GiB,1,1498610525.35.1
+46470000.0,46.47,M,ktruss/ref+julia/loc-gowalla_edges_adj.sym,40871982530.6,38.065,GiB,2,1498610525.35.1
 6110000.0,6.11,M,ktruss/ref+julia/oregon1_010512_adj.sym,1093069176.83,1.018,GiB,0,1498586919.3.1
 6110000.0,6.11,M,ktruss/ref+julia/oregon1_010512_adj.sym,1093069176.83,1.018,GiB,1,1498586919.3.1
 6110000.0,6.11,M,ktruss/ref+julia/oregon1_010512_adj.sym,1093069176.83,1.018,GiB,2,1498586919.3.1
