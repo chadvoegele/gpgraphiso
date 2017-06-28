@@ -33,7 +33,7 @@ perf = perf.merge(inpd, 'left', on='input')
 perf = perf.merge(metc[["bmk", "variant", "input", "energy_joules_2_avg", "energy_joules_2_sd", "energy_joules_2_count",
                         "data_transfer_ns_avg", "data_transfer_ns_sd", "data_transfer_ns_count",
                         "malloc_ns_avg", "malloc_ns_sd", "malloc_ns_count",
-                    ]], 'left', on=['bmk', 'variant', 'input'])
+                    ]], 'left', on=['bmk', 'variant', 'input'], suffixes=('', '_y'))
 
 if args.no_adjust:
     perf["adj_time_ns_avg"] = perf["time_ns_avg"]

@@ -1,0 +1,179 @@
+INFO Site set to 'sree'.
+WARNING No site-specific configuration '../bmk2cfg/bmk2.cfg.sree' found.
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 4 ('../bmk2cfg/graphinp.py')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 2 ('../bmk2cfg/graph.inputdb')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 3 ('../bmk2cfg/graph.inputprops')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 1 ('../bmk2cfg/graph.bispec')
+INFO Applying configuration "{'k': 'max', 't': '1'}"
+DEBUG Ignoring input 'oregon1_010414_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'cit-Patents_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'roadNet-TX_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'loc-brightkite_edges_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'as20000102_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010526_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'cit-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'soc-Epinions1_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'amazon0601_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010505_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'facebook_combined_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'roadNet-PA_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010407_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010526_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella06_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010421_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella05_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'com-dblp.wgt32.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'com-amazon.wgt32.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale19-ef16_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'roadNet-CA_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010428_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010512_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale22-ef16_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'com-orkut.wgt32.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella30_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010519_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010512_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella31_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'ca-CondMat_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale24-ef16_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'complete5_sm.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'amazon0312_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'loc-gowalla_edges_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010428_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'amazon0302_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'ca-AstroPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'email-EuAll_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale21-ef16_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'amazon0505_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella09_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'soc-Slashdot0902_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella08_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010414_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella24_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'com-youtube.wgt32.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'ca-GrQc_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010519_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'cit-HepTh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale20-ef16_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'as-caida20071105_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella04_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'email-Enron_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'ca-HepTh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010505_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'flickrEdges_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella25_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'A_inc.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale18-ef16_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'com-lj.wgt32.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010421_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale23-ef16_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'com-friendster.wgt32.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'soc-Slashdot0811_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010407_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+INFO Configuration loaded successfully.
+INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
+INFO DATE START 2017-06-28 16:38:22
+COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --log gpu-logs/ktruss/tuxedo-gtx1080-power/rmat16.sym.tri.log --max-output-bytes 0 --nvprof --npdb --npsystem -v perf ktruss/irgl+wl rmat16.sym.tri
+INFO Setting RLIMIT_CPU to 4800
+INFO TASK perf
+INFO PERFDATE BEGIN_RUN 2017-06-28 16:38:22
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testcz6GvQ' for '@output'
+COLLECT ktruss/irgl+wl/rmat16.sym.tri 1498685902.9.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_rmat16symtri_1498685902.9.1.0.nvprof
+INFO Running BMK2=1 BMK2_INPUTID=rmat16.sym.tri BMK2_RUNID=1498685902.9.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_rmat16symtri_1498685902.9.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testcz6GvQ
+INFO ktruss/irgl+wl/rmat16.sym.tri STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=65535, nedges=967866.
+Host memory for graph:   7 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 8267240 bytes in 78 ms (105.99 MB/s)
+
+
+INFO ktruss/irgl+wl/rmat16.sym.tri STDERR
+==16622== NVPROF is profiling process 16622, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testcz6GvQ
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8316256256
+Total time: 35 ms
+Total time: 35756392 ns
+==16622== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_rmat16symtri_1498685902.9.1.0.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testcz6GvQ -trussNum=3 -trussNodes=20529 -trussEdges=170658
+PASS ktruss/irgl+wl/rmat16.sym.tri: BMK2=1 BMK2_INPUTID=rmat16.sym.tri BMK2_RUNID=1498685902.9.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_rmat16symtri_1498685902.9.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testcz6GvQ
+INFO PERFDATE END_RUN 2017-06-28 16:38:28
+PERF ktruss/irgl+wl/rmat16.sym.tri 1498685902.9.1 0 35756392 BMK2=1 BMK2_INPUTID=rmat16.sym.tri BMK2_RUNID=1498685902.9.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_rmat16symtri_1498685902.9.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testcz6GvQ
+INFO PERFDATE BEGIN_RUN 2017-06-28 16:38:28
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test53lROS' for '@output'
+COLLECT ktruss/irgl+wl/rmat16.sym.tri 1498685902.9.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_rmat16symtri_1498685902.9.1.1.nvprof
+INFO Running BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685902.9.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_rmat16symtri_1498685902.9.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_test53lROS
+INFO ktruss/irgl+wl/rmat16.sym.tri STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=65535, nedges=967866.
+Host memory for graph:   7 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 8267240 bytes in 13 ms (635.94 MB/s)
+
+
+INFO ktruss/irgl+wl/rmat16.sym.tri STDERR
+==16692== NVPROF is profiling process 16692, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_test53lROS
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8316256256
+Total time: 32 ms
+Total time: 32748763 ns
+==16692== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_rmat16symtri_1498685902.9.1.1.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test53lROS -trussNum=3 -trussNodes=20529 -trussEdges=170658
+PASS ktruss/irgl+wl/rmat16.sym.tri: BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685902.9.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_rmat16symtri_1498685902.9.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_test53lROS
+INFO PERFDATE END_RUN 2017-06-28 16:38:33
+PERF ktruss/irgl+wl/rmat16.sym.tri 1498685902.9.1 1 32748763 BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685902.9.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_rmat16symtri_1498685902.9.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_test53lROS
+INFO PERFDATE BEGIN_RUN 2017-06-28 16:38:33
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testj1n7g7' for '@output'
+COLLECT ktruss/irgl+wl/rmat16.sym.tri 1498685902.9.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_rmat16symtri_1498685902.9.1.2.nvprof
+INFO Running BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685902.9.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_rmat16symtri_1498685902.9.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testj1n7g7
+INFO ktruss/irgl+wl/rmat16.sym.tri STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=65535, nedges=967866.
+Host memory for graph:   7 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 8267240 bytes in 14 ms (590.52 MB/s)
+
+
+INFO ktruss/irgl+wl/rmat16.sym.tri STDERR
+==16758== NVPROF is profiling process 16758, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testj1n7g7
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8316256256
+Total time: 37 ms
+Total time: 37717578 ns
+==16758== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_rmat16symtri_1498685902.9.1.2.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testj1n7g7 -trussNum=3 -trussNodes=20529 -trussEdges=170658
+PASS ktruss/irgl+wl/rmat16.sym.tri: BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685902.9.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_rmat16symtri_1498685902.9.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testj1n7g7
+INFO PERFDATE END_RUN 2017-06-28 16:38:38
+PERF ktruss/irgl+wl/rmat16.sym.tri 1498685902.9.1 2 37717578 BMK2_INPUTID=rmat16.sym.tri BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685902.9.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_rmat16symtri_1498685902.9.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/rmat/rmat16.sym.tri.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testj1n7g7
+TASK_COMPLETE ktruss/irgl+wl/rmat16.sym.tri PERF 3/0/3
+INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
+INFO DATE END 2017-06-28 16:38:38
+INFO APPROXIMATE DURATION 0:00:15.907512

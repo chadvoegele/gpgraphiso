@@ -4,6 +4,8 @@ include common.mk
 
 include ktruss-tuxedo-gtx1080.mk
 include ktruss-tuxedo-k80.mk
+include ktruss-tuxedo-gtx1080-power.mk
+
 include triangles-tuxedo-gtx1080.mk
 include triangles-tuxedo-k80.mk
 include triangles-tuxedo-gtx1080-power.mk

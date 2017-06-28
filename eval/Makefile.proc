@@ -11,7 +11,7 @@ all:  triangles ktruss
 
 triangles: triangles/tuxedo-gtx1080.csv triangles/tuxedo-k80.csv triangles/tuxedo-gtx1080-power.csv triangles/tuxedo-12.csv triangles/tuxedo-24.csv triangles/tuxedo-01.csv triangles/tuxedo-minitri.csv
 
-ktruss:  ktruss/tuxedo-12.csv ktruss/tuxedo-24.csv ktruss/tuxedo-01.csv ktruss/tuxedo-ref-julia.csv
+ktruss:  ktruss/tuxedo-12.csv ktruss/tuxedo-24.csv ktruss/tuxedo-01.csv ktruss/tuxedo-ref-julia.csv ktruss/tuxedo-gtx1080-power.csv ktruss/tuxedo-gtx1080.csv
 
 # TODO: use make to generate rules below ...
 
@@ -19,6 +19,7 @@ ktruss:  ktruss/tuxedo-12.csv ktruss/tuxedo-24.csv ktruss/tuxedo-01.csv ktruss/t
 
 triangles/tuxedo-gtx1080-raw.csv: $(wildcard gpu-logs/triangles/tuxedo-gtx1080/*.log)
 	$(BMK2)/ps/log2csv.py -x tuxedo-gtx1080 $^ -o $@
+	scripts/postproc_gpu_raw.py $@ -o $@
 
 triangles/tuxedo-gtx1080.csv: triangles/tuxedo-gtx1080-raw.csv
 	$(BMK2)/ps/import.py -o $@ $^
@@ -135,3 +136,16 @@ ktruss/tuxedo-gtx1080-raw.csv: $(wildcard gpu-logs/ktruss/tuxedo-gtx1080/*.log)
 
 ktruss/tuxedo-gtx1080.csv: ktruss/tuxedo-gtx1080-raw.csv
 	$(BMK2)/ps/import.py -o $@ $^
+
+ktruss/tuxedo-gtx1080-power.map: $(wildcard gpu-logs/ktruss/tuxedo-gtx1080-power/*.log)
+	$(BMK2)/collect_multi.py -p3 $^ -m $@
+
+ktruss/tuxedo-gtx1080-power-energy-raw.csv: ktruss/tuxedo-gtx1080-power.map
+	scripts/extract_gpu_metrics.py $< -o $@
+
+ktruss/tuxedo-gtx1080-power-raw.csv: $(wildcard gpu-logs/ktruss/tuxedo-gtx1080-power/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-gtx1080-power $^ -o $@
+	scripts/postproc_gpu_raw.py $@ -o $@
+
+ktruss/tuxedo-gtx1080-power.csv: ktruss/tuxedo-gtx1080-power-raw.csv ktruss/tuxedo-gtx1080-power-energy-raw.csv
+	$(BMK2)/ps/import.py -a energy_joules_1 -a energy_joules_2 -a data_transfer_ns -a malloc_ns -a meminfo_bytes -r ktruss/tuxedo-gtx1080-power-energy-raw.csv -o $@ $<

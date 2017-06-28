@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <getopt.h>
 #include <errno.h>
+#include <cuda_profiler_api.h>
 
 #include "gg.h"
 #include "Timer.h"
@@ -169,5 +170,6 @@ int main(int argc, char *argv[]) {
   mgc = mgpu::CreateCudaDevice(CUDA_DEVICE);
   printf("Using GPU: %s\n", mgc->DeviceString().c_str());
   int r = load_graph_and_run_kernel(INPUT);
+  cudaProfilerStop();
   return r;
 }

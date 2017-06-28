@@ -20,7 +20,10 @@ if __name__ == "__main__":
             mt, dt = gpu_metrics.get_data_transfer_times(nvp)
 
             s = gpu_metrics.get_gpu_power_samples(nvp)
-            assert len(s)           
+            if len(s) == 0:
+                print >>sys.stderr, "ERROR: %s (%s) does not have power samples" % (me.binid, me.filename)
+                continue
+
 
             e = gpu_metrics.get_gpu_energy(s)
             x,r = bmk2.mapfile.split_runid(me.runid)

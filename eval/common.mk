@@ -4,6 +4,7 @@
 BMK2=~/src/bmk2/
 BMK2CFG=../bmk2cfg/
 KTRUSS=../ktruss/ktruss
+KTRUSS_WL=../ktruss/ktruss-wl
 TRIANGLES=../ktruss/triangle
 TRIANGLES_NC=../ktruss/tri_node_count
 GALOIS=../../GaloisCpp/build/default/
