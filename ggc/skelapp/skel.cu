@@ -136,6 +136,15 @@ void parse_args(int argc, char *argv[])
   }
 }
 
+void dump_memory_info(const char *s) {
+  size_t total, free;
+
+  if(cudaMemGetInfo(&free, &total) == cudaSuccess) {
+    fprintf(stderr, "INSTR gpu_memory_total_%s %zu\n", s, total);
+    fprintf(stderr, "INSTR gpu_memory_free_%s %zu\n", s, free);
+  }
+}
+
 int main(int argc, char *argv[]) {
   if(argc == 1) {
     usage(argc, argv);
@@ -144,6 +153,7 @@ int main(int argc, char *argv[]) {
 
   parse_args(argc, argv);
   ggc_set_gpu_device(CUDA_DEVICE);
+  dump_memory_info("start");
   mgc = mgpu::CreateCudaDevice(CUDA_DEVICE);
   printf("Using GPU: %s\n", mgc->DeviceString().c_str());
   int r = load_graph_and_run_kernel(INPUT);

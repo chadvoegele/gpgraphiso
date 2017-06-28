@@ -16,7 +16,7 @@ class triangles(graph_bmk):
                         x.set_binary(self.props._cwd, 'test')
 
 		x.set_arg(bmkinput.props.file, bmk2.AT_INPUT_FILE)
-		x.set_checker(bmk2.REChecker('^triangles: %s$' % (bmkinput.props.triangles % 2**32))) # actually tri is int, not uint ...
+		x.set_checker(bmk2.REChecker('^triangles: %s$' % (int(bmkinput.props.triangles) % 2**32))) # actually tri is int, not uint ...
 		x.set_perf(bmk2.PerfRE(PERF_RE))
 		return x
 

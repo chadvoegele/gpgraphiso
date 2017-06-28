@@ -9,6 +9,7 @@ ast = Module([
         CBlock([cgen.Include("kernels/segmentedsort.cuh"),
                 ]),
         CBlock(["void debug_output(CSRGraphTy &g, unsigned int *valid_edges);"], parse=False),
+        CBlock(["void dump_memory_info(const char *);"], parse=False),
         Kernel("preprocess", [G.param(), ('unsigned int *', 'valid_edges')], 
                [CDecl(('const index_type', 'last', ' = graph.nnodes')),
                 ForAll("node", G.nodes(), 
@@ -94,7 +95,8 @@ ast = Module([
                 #CBlock('debug_output(hg, valid_edges.cpu_rd_ptr())'),
                 #CBlock("exit(0)"),
                 Invoke("count_triangles", ['gg', 'valid_edges.gpu_rd_ptr()', 'count.gpu_wr_ptr()']),
-                CBlock('printf("triangles: %d\\n", *count.cpu_rd_ptr())')
+                CBlock('printf("triangles: %d\\n", *count.cpu_rd_ptr())'),
+                CBlock('dump_memory_info("end")')
                 ]
                ),
         ])

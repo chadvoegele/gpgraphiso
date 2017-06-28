@@ -34,7 +34,7 @@ ast = Module([
         ])
     ]),
 
-    Kernel("intersect", [graph.param(), ('index_type', 'u'), ('index_type', 'v'), ('unsigned*', 'vremoved'), ('unsigned*', 'eremoved')], [
+    Kernel("intersect", [graph.param(), ('index_type', 'u'), ('index_type', 'v'), ('unsigned*', 'vremoved'), ('unsigned char*', 'eremoved')], [
         CDecl(('index_type', 'u_start', '= graph.getFirstEdge(u)')),
         CDecl(('index_type', 'u_end', '= graph.getFirstEdge(u+1)')),
         CDecl(('index_type', 'v_start', '= graph.getFirstEdge(v)')),
@@ -57,9 +57,11 @@ ast = Module([
 
     Kernel("place_edges_on_wl", [graph.param()],
            [
+               If('tid == 0', [CBlock('*out_wl.dindex = graph.nedges', parse=False)]),
                ForAll("edge", RangeIterator("graph.nedges"),
                    [
-                       WL.push("edge"),
+                       CBlock('out_wl.push_id(edge, edge)', parse=False),
+                       If("0", [WL.push("edge")]),
                    ]
                ),
            ]
@@ -69,7 +71,7 @@ ast = Module([
                                       ('unsigned *', 'src'),
                                       ('unsigned *', 'indegree'), 
                                       ('unsigned *', 'outdegree'),
-                                      ('unsigned *', 'eremoved'),
+                                      ('unsigned char*', 'eremoved'),
                                       ('bool *', 'edge_removed'),
                                       ('unsigned ', 'k')],
            [
@@ -109,7 +111,7 @@ ast = Module([
                                   ('unsigned *', 'indegree'), 
                                   ('unsigned *', 'outdegree'),
                                   ('unsigned *', 'triangles'),
-                                  ('unsigned *', 'eremoved'),],
+                                  ('unsigned char *', 'eremoved'),],
            [
                ForAll("wledge", WL.items(),
                       [
@@ -134,7 +136,7 @@ ast = Module([
                                     ('unsigned *', 'indegree'), 
                                     ('unsigned *', 'outdegree'),
                                     ('unsigned *', 'triangles'),
-                                    ('unsigned *', 'eremoved'),
+                                    ('unsigned char*', 'eremoved'),
                                     ('bool *', 'edge_removed'),                                    
                                     ('unsigned ', 'k')],
            [
@@ -172,14 +174,9 @@ ast = Module([
 
     Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), 
                        ('unsigned', 'k'), 
-                       ('Shared<unsigned>&', 'eremoved'),
+                       ('Shared<unsigned char>&', 'eremoved'),
                        ('unsigned &', 'n_ktruss_nodes'),
                        ('unsigned &', 'n_ktruss_edges')], [
-      If('DEBUG', [
-            CBlock('printf("# nodes: %u\\n", g.nnodes)'),
-            CBlock('printf("# edges: %u\\n", g.nedges)'),
-      ]),
-
       # not sure we require two
       CDecl(('Shared<unsigned>', 'outdegrees', '(g.nnodes)')),
       CDecl(('Shared<unsigned>', 'indegrees', '(g.nnodes)')),
@@ -237,6 +234,7 @@ ast = Module([
               ]),
 
           #CBlock('printf("%u %u\\n", gg.nedges, pipe.in_wl().nitems())', parse=False),
+          CBlock('dump_memory_info("end")')
       ], once=True, wlinit=WLInit("gg.nedges", [])),
     ]),
 ])
