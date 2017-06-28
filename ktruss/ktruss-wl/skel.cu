@@ -9,8 +9,9 @@
 #include "gg.h"
 #include "Timer.h"
 #include "edgelist_graph.h"
+#include "ktruss.h"
 
-extern void gg_main(CSRGraphTy &, CSRGraphTy &, unsigned, char*, FILE*);
+extern void gg_main(CSRGraphTy &, CSRGraphTy &, unsigned, Shared<unsigned>&, unsigned&, unsigned&);
 
 FILE* OUTF = 0;
 int QUIET = 0;
@@ -66,9 +67,25 @@ int load_graph_and_run_kernel(char *graph_file) {
   int *d;
   check_cuda(cudaMalloc(&d, sizeof(int) * 1));
 
+  Shared<unsigned> eremoved (g.nedges);
+
   g.copy_to_gpu(gg);
-  gg_main(g, gg, ktruss_k, OUTPUTKIND, OUTF);
+  ggc::Timer timer("gg_main");
+  unsigned n_ktruss_nodes, n_ktruss_edges;
+
+  timer.start();
+
+  gg_main(g, gg, ktruss_k, eremoved, n_ktruss_nodes, n_ktruss_edges);
   check_cuda(cudaDeviceSynchronize());
+  timer.stop();
+
+  fprintf(stderr, "Total time: %llu ms\n", timer.duration_ms());
+  fprintf(stderr, "Total time: %llu ns\n", timer.duration());
+
+  if(OUTPUT) {
+    gg.copy_to_cpu(g);
+    output(g, OUTPUTKIND, OUTF, n_ktruss_nodes, n_ktruss_edges, eremoved.cpu_rd_ptr());
+  }
 
   return SKELAPP_RETVAL;
 }
