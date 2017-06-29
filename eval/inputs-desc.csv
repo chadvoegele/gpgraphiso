@@ -1,4 +1,3 @@
-loading max-degree
 input,edges,file,max_degree,nodes,phy_edges,symmetric
 loc-gowalla_edges_adj.sym,950327,/h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr,14730,196591,1900654,True
 cit-Patents_adj.sym,16518947,/h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr,793,3774768,33037894,True
