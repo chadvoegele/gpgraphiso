@@ -34,7 +34,7 @@ ast = Module([
         ])
     ]),
 
-    Kernel("intersect", [graph.param(), ('index_type', 'u'), ('index_type', 'v'), ('unsigned*', 'vremoved'), ('unsigned char*', 'eremoved')], [
+    Kernel("intersect", [graph.param(), ('index_type', 'u'), ('index_type', 'v'), ('unsigned*', 'vremoved'), ('unsigned char*', 'eremoved'), ('unsigned', 'k')], [
         CDecl(('index_type', 'u_start', '= graph.getFirstEdge(u)')),
         CDecl(('index_type', 'u_end', '= graph.getFirstEdge(u+1)')),
         CDecl(('index_type', 'v_start', '= graph.getFirstEdge(v)')),
@@ -44,7 +44,7 @@ ast = Module([
         CDecl(('index_type', 'a', '')),
         CDecl(('index_type', 'b', '')),
         CDecl(('int', 'count', '= 0')),
-        While('u_it < u_end && v_it < v_end', [
+        While('u_it < u_end && v_it < v_end && count < k', [
             CBlock('a = graph.getAbsDestination(u_it)'),
             CBlock('b = graph.getAbsDestination(v_it)'),
             CDecl(('int', 'd', '= a - b')),
@@ -111,12 +111,16 @@ ast = Module([
                                   ('unsigned *', 'indegree'), 
                                   ('unsigned *', 'outdegree'),
                                   ('unsigned *', 'triangles'),
-                                  ('unsigned char *', 'eremoved'),],
+                                  ('unsigned char *', 'eremoved'),
+                                  ('bool *', 'edge_removed'),
+                                  ('unsigned', 'k')],
            [
+               CDecl(('bool', 'er', ' = false')),
                ForAll("wledge", WL.items(),
                       [
                           CDecl([("unsigned ", "u", ""),
-                                 ("unsigned", "v", "")]),
+                                 ("unsigned", "v", ""),
+                                 ('unsigned', 'count', "= 0")]),
 
                           CDecl([("int", "edge", ""),
                                  ("bool", "pop", "")]),
@@ -126,34 +130,12 @@ ast = Module([
                           CBlock(['u = src[edge]',
                                   'v = graph.getAbsDestination(edge)']),
 
-                          CBlock("triangles[edge] = intersect(graph, u, v, 0, eremoved)"),
-                      ]
-                  ),
-           ]),
+                          If("outdegree[u] < k - 1 || indegree[v] < k - 1",
+                             [CBlock("count = 0")],
+                             [CBlock("count = intersect(graph, u, v, 0, eremoved, k - 2)")]
+                         ),
 
-    Kernel("cull_edges_tri_count", [graph.param(), 
-                                    ('unsigned *', 'src'),
-                                    ('unsigned *', 'indegree'), 
-                                    ('unsigned *', 'outdegree'),
-                                    ('unsigned *', 'triangles'),
-                                    ('unsigned char*', 'eremoved'),
-                                    ('bool *', 'edge_removed'),                                    
-                                    ('unsigned ', 'k')],
-           [
-               CDecl(('bool', 'er', ' = false')),
-               ForAll("wledge", WL.items(),
-                      [
-                          CDecl([("unsigned ", "u", ""),
-                                 ("unsigned", "v", "")]),
-
-                          CDecl([("int", "edge", ""),
-                                 ("bool", "pop", "")]),
-
-                          WL.pop("pop", "wledge", "edge"),
-
-                          CBlock("assert(eremoved[edge] == 0)"),
-
-                          If('triangles[edge] < k - 2', 
+                          If('count < k - 2', 
                              [
                                                           
                                  CBlock(['u = src[edge]',
@@ -164,13 +146,12 @@ ast = Module([
                                          "atomicSub(indegree + v, 1)"])
                              ],
                              [CBlock("eremoved[edge] = 0"),
-                              WL.push("edge"),]
-                         )
+                              WL.push("edge"),])
+
                       ]
-                  ),
+                      ),
                If("er", [CBlock("*edge_removed = true")]),
            ]),
-    
 
     Kernel("gg_main", [params.GraphParam('g', True), params.GraphParam('gg', True), 
                        ('unsigned', 'k'), 
@@ -196,42 +177,27 @@ ast = Module([
       Pipe([
           Invoke("place_edges_on_wl", ['gg']),
           Pipe([
-              CBlock("*(update.cpu_wr_ptr()) = false"),
-              Invoke("cull_edges_node_degree", ['gg', 
-                                                'src.gpu_rd_ptr()',
-                                                'indegrees.gpu_rd_ptr()',
-                                                'outdegrees.gpu_rd_ptr()',
-                                                'eremoved.gpu_wr_ptr()',
-                                                'update.gpu_wr_ptr()',
-                                                'k']),
+              Pipe([
+                  CBlock("*(update.cpu_wr_ptr()) = false"),
+                  Invoke("cull_edges_node_degree", ['gg', 
+                                                    'src.gpu_rd_ptr()',
+                                                    'indegrees.gpu_rd_ptr()',
+                                                    'outdegrees.gpu_rd_ptr()',
+                                                    'eremoved.gpu_wr_ptr()',
+                                                    'update.gpu_wr_ptr()',
+                                                    'k']),
+                  If("!*(update.cpu_rd_ptr())", [CBlock("break")]),
+              ]),
+
+              Invoke("count_tri_per_edge", ['gg', 'src.gpu_rd_ptr()',
+                                            'indegrees.gpu_rd_ptr()',
+                                            'outdegrees.gpu_rd_ptr()',
+                                            'triangles.gpu_wr_ptr()',
+                                            'eremoved.gpu_wr_ptr()',
+                                            'update.gpu_wr_ptr()',
+                                            'k']),
               If("!*(update.cpu_rd_ptr())", [CBlock("break")]),
           ]),
-
-          Pipe([
-              CBlock("*(update.cpu_wr_ptr()) = false"),
-              Invoke("count_tri_per_edge", ['gg', 'src.gpu_rd_ptr()',
-                                                'indegrees.gpu_rd_ptr()',
-                                                'outdegrees.gpu_rd_ptr()',
-                                                'triangles.gpu_wr_ptr()',
-                                                'eremoved.gpu_wr_ptr()']),
-              Invoke("cull_edges_tri_count", ['gg', 
-                                              'src.gpu_rd_ptr()',
-                                              'indegrees.gpu_rd_ptr()',
-                                              'outdegrees.gpu_rd_ptr()',
-                                              'triangles.gpu_rd_ptr()',
-                                              'eremoved.gpu_wr_ptr()',
-                                              'update.gpu_wr_ptr()',
-                                              'k']),
-              # not sure this can help ...
-              # Invoke("cull_edges_node_degree", ['gg', 
-              #                                   'src.gpu_rd_ptr()',
-              #                                   'indegrees.gpu_rd_ptr()',
-              #                                   'outdegrees.gpu_rd_ptr()',
-              #                                   'eremoved.gpu_wr_ptr()',
-              #                                   'update.gpu_wr_ptr()',
-              #                                   'k']),
-              If("!*(update.cpu_rd_ptr())", [CBlock("break")]),
-              ]),
 
           #CBlock('printf("%u %u\\n", gg.nedges, pipe.in_wl().nitems())', parse=False),
           CBlock('dump_memory_info("end")')
