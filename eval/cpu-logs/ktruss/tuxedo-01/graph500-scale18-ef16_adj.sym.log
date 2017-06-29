@@ -78,16 +78,14 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/galois+bspIm', not in 
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-26 18:21:08
+INFO DATE START 2017-06-29 14:37:22
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/GaloisCpp/build/default/exp/apps/ktruss
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=1 --mtcpulimit 1 --scan ../../GaloisCpp/build/default//exp/apps/ktruss --max-output-bytes 0 --measure-energy --log cpu-logs/ktruss/tuxedo-01/graph500-scale18-ef16_adj.sym.log -v perf ktruss/galois+bspIm graph500-scale18-ef16_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-26 18:21:08
-DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussTRinw7' for '@output'
-INFO Running BMK2_INPUTID=graph500-scale18-ef16_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498519268.28.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussTRinw7
-ERROR Execute failed (241): /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussTRinw7
-FAIL ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym 1498519268.28.1.0: run failed
+INFO PERFDATE BEGIN_RUN 2017-06-29 14:37:22
+DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussSZg7At' for '@output'
+INFO Running BMK2_INPUTID=graph500-scale18-ef16_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498765042.43.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussSZg7At
 INFO ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -99,22 +97,27 @@ http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/k_truss
 
 Read 174147 nodes
 Running bspIm algorithm for maximal 159-truss
+LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
+(NULL),0 , MeminfoPre,0,0,0
+(NULL),29 , Time,0,0,99477
+(NULL),29 , MeminfoPost,0,0,17
+(NULL),29 , TotalTime,0,0,100290
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 273889951
-INSTR intel-rapl:1:0 427135241
+INSTR intel-rapl:0:0 660118331
+INSTR intel-rapl:1:0 978171290
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 1433585746
-INSTR intel-rapl:1 1774182165
+INSTR intel-rapl:0 3736177203
+INSTR intel-rapl:1 4471474271
 
-INFO PERFDATE END_RUN 2017-06-26 18:21:48
-FAIL ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym 1498519268.28.1.0: failed, re-running: BMK2_INPUTID=graph500-scale18-ef16_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498519268.28.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussTRinw7
-INFO PERFDATE BEGIN_RUN 2017-06-26 18:21:48
-DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusst2YYTU' for '@output'
-INFO Running BMK2_INPUTID=graph500-scale18-ef16_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498519268.28.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusst2YYTU
-ERROR Execute failed (241): /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusst2YYTU
-FAIL ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym 1498519268.28.1.1: run failed
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -t=24 -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussSZg7At -trussNum=159 -trussNodes=901 -trussEdges=200660
+PASS ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym: BMK2_INPUTID=graph500-scale18-ef16_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498765042.43.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussSZg7At
+INFO PERFDATE END_RUN 2017-06-29 14:39:04
+PERF ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym 1498765042.43.1 0 99477000000 BMK2_INPUTID=graph500-scale18-ef16_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498765042.43.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussSZg7At
+INFO PERFDATE BEGIN_RUN 2017-06-29 14:39:04
+DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss042ZnQ' for '@output'
+INFO Running BMK2_INPUTID=graph500-scale18-ef16_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498765042.43.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss042ZnQ
 INFO ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -126,22 +129,27 @@ http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/k_truss
 
 Read 174147 nodes
 Running bspIm algorithm for maximal 159-truss
+LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
+(NULL),0 , MeminfoPre,0,0,0
+(NULL),29 , Time,0,0,99401
+(NULL),29 , MeminfoPost,0,0,17
+(NULL),29 , TotalTime,0,0,99784
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 30944647
-INSTR intel-rapl:1:0 51104846
+INSTR intel-rapl:0:0 655804390
+INSTR intel-rapl:1:0 986020664
 INSTR intel-rapl:1:0:wraps 0
 INSTR intel-rapl:1:wraps 0
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 174257428
-INSTR intel-rapl:1 207791644
+INSTR intel-rapl:0 3816395869
+INSTR intel-rapl:1 4521229270
 
-INFO PERFDATE END_RUN 2017-06-26 18:21:52
-FAIL ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym 1498519268.28.1.1: failed, re-running: BMK2_INPUTID=graph500-scale18-ef16_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498519268.28.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trusst2YYTU
-INFO PERFDATE BEGIN_RUN 2017-06-26 18:21:52
-DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussQV5OIm' for '@output'
-INFO Running BMK2_INPUTID=graph500-scale18-ef16_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498519268.28.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussQV5OIm
-ERROR Execute failed (241): /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussQV5OIm
-FAIL ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym 1498519268.28.1.2: run failed
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -t=24 -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss042ZnQ -trussNum=159 -trussNodes=901 -trussEdges=200660
+PASS ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym: BMK2_INPUTID=graph500-scale18-ef16_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498765042.43.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss042ZnQ
+INFO PERFDATE END_RUN 2017-06-29 14:40:46
+PERF ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym 1498765042.43.1 1 99401000000 BMK2_INPUTID=graph500-scale18-ef16_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498765042.43.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss042ZnQ
+INFO PERFDATE BEGIN_RUN 2017-06-29 14:40:46
+DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss9GMaV4' for '@output'
+INFO Running BMK2_INPUTID=graph500-scale18-ef16_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498765042.43.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss9GMaV4
 INFO ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym STDOUT
 Galois Benchmark Suite v2.3.0 (unknown)
 Copyright (C) 2015 The University of Texas at Austin
@@ -153,44 +161,25 @@ http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/k_truss
 
 Read 174147 nodes
 Running bspIm algorithm for maximal 159-truss
+LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
+(NULL),0 , MeminfoPre,0,0,0
+(NULL),29 , Time,0,0,99660
+(NULL),29 , MeminfoPost,0,0,17
+(NULL),29 , TotalTime,0,0,100047
 INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 29781619
-INSTR intel-rapl:1:0 49060292
+INSTR intel-rapl:0:0 675183783
+INSTR intel-rapl:1:0 976829525
 INSTR intel-rapl:1:0:wraps 0
-INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:1:wraps 1
 INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 167589476
-INSTR intel-rapl:1 199716224
+INSTR intel-rapl:0 3825131016
+INSTR intel-rapl:1 4548713696
 
-INFO PERFDATE END_RUN 2017-06-26 18:21:57
-FAIL ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym 1498519268.28.1.2: failed, re-running: BMK2_INPUTID=graph500-scale18-ef16_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498519268.28.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussQV5OIm
-INFO PERFDATE BEGIN_RUN 2017-06-26 18:21:57
-DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussHrotBZ' for '@output'
-INFO Running BMK2_INPUTID=graph500-scale18-ef16_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498519268.28.1.3 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussHrotBZ
-ERROR Execute failed (241): /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussHrotBZ
-FAIL ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym 1498519268.28.1.3: run failed
-INFO ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym STDOUT
-Galois Benchmark Suite v2.3.0 (unknown)
-Copyright (C) 2015 The University of Texas at Austin
-http://iss.ices.utexas.edu/galois/
-
-application: Maximal k-trusses
-Computes the maximal k-trusses for a given undirected graph
-http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/k_truss
-
-Read 174147 nodes
-Running bspIm algorithm for maximal 159-truss
-INSTR intel-rapl:0:0:wraps 0
-INSTR intel-rapl:0:0 32051205
-INSTR intel-rapl:1:0 52728206
-INSTR intel-rapl:1:0:wraps 0
-INSTR intel-rapl:1:wraps 0
-INSTR intel-rapl:0:wraps 0
-INSTR intel-rapl:0 180428555
-INSTR intel-rapl:1 214866943
-
-INFO PERFDATE END_RUN 2017-06-26 18:22:02
-FAIL MISSING PERF ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym
-INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 4 Failed: 4 Failed Checks: 4
-INFO DATE END 2017-06-26 18:22:02
-INFO APPROXIMATE DURATION 0:00:54.095645
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -t=24 -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss9GMaV4 -trussNum=159 -trussNodes=901 -trussEdges=200660
+PASS ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym: BMK2_INPUTID=graph500-scale18-ef16_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498765042.43.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss9GMaV4
+INFO PERFDATE END_RUN 2017-06-29 14:42:28
+PERF ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym 1498765042.43.1 2 99660000000 BMK2_INPUTID=graph500-scale18-ef16_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498765042.43.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale18-ef16_adj.sym.gr -algo=bspIm -trussNum=159 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-truss9GMaV4
+TASK_COMPLETE ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym PERF 3/0/3
+INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
+INFO DATE END 2017-06-29 14:42:28
+INFO APPROXIMATE DURATION 0:05:06.239106

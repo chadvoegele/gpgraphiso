@@ -95,6 +95,9 @@ ktruss/galois+bspIm/oregon1_010505_adj.sym,8388608,8,2,2,1498517176.42.1
 ktruss/galois+bspIm/p2p-Gnutella30_adj.sym,8388608,8,2,0,1498519449.7.1
 ktruss/galois+bspIm/p2p-Gnutella30_adj.sym,8388608,8,2,1,1498519449.7.1
 ktruss/galois+bspIm/p2p-Gnutella30_adj.sym,8388608,8,2,2,1498519449.7.1
+ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym,71303168,68,17,0,1498765042.43.1
+ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym,71303168,68,17,1,1498765042.43.1
+ktruss/galois+bspIm/graph500-scale18-ef16_adj.sym,71303168,68,17,2,1498765042.43.1
 ktruss/galois+bspIm/com-lj.wgt32.sym,562036736,536,134,0,1498496036.99.1
 ktruss/galois+bspIm/com-lj.wgt32.sym,562036736,536,134,1,1498496036.99.1
 ktruss/galois+bspIm/com-lj.wgt32.sym,562036736,536,134,2,1498496036.99.1
