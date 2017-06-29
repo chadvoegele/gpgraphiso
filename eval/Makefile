@@ -58,7 +58,7 @@ ktruss-tuxedo-12.mk: ktruss-inputs cpu-logs/ktruss/tuxedo-12 templates/cpu-expt.
 ktruss-tuxedo-24.mk: ktruss-inputs cpu-logs/ktruss/tuxedo-24 templates/cpu-expt.template
 	scripts/gen_makefile.py $< ktruss/galois+bspIm tuxedo-24 templates/cpu-expt.template $@ -t "{bmk}-{expt}" -v bmk=ktruss -v scandir=$(CPU_KTRUSS) -v threads=24
 
-ktruss-tuxedo-24-ctt.mk: ktruss-inputs cpu-logs/ktruss/tuxedo-24 templates/cpu-expt.template
+ktruss-tuxedo-24-ctt.mk: ktruss-inputs cpu-logs/ktruss/tuxedo-24-ctt templates/cpu-expt.template
 	scripts/gen_makefile.py $< ktruss/galois+bspCoreThenTruss tuxedo-24-ctt templates/cpu-expt.template $@ -t "{bmk}-{expt}" -v bmk=ktruss -v scandir=$(CPU_KTRUSS) -v threads=24
 
 

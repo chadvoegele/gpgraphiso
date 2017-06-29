@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import matplotlib
 
 markers = ['o', '^', 's', 'p', 'd', 'v']
 def drop_inputs(df, todrop_file):
@@ -27,6 +28,10 @@ def set_markers(p):
     for l, m in zip(pp, markers):
         l.set_marker(m)
 
+def set_grid(p, spacing=5):
+    ml = matplotlib.ticker.MultipleLocator(spacing)
+    p.xaxis.set_minor_locator(ml)
+    p.grid(b=True,which='minor',axis='x',linestyle='dotted', color='gray')
 
 def set_legend(plt, p, d):
     d = d.columns.get_level_values('lbl')

@@ -41,6 +41,7 @@ p.set_ylabel(unit)
 p.set_title(args.title)
 p.set_xlabel("Input")
 
+plot_common.set_grid(p)
 plot_common.set_markers(p)
 plot_common.set_legend(plt, p, e)
 

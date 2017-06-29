@@ -46,6 +46,7 @@ def get_ktruss_checker(bmkinput, trussNum, output='@output', oflag = bmk2.AT_TEM
         trussNum = int(trussNum)
         
     ec.set_arg(bmkinput.props.file, bmk2.AT_INPUT_FILE)
+    ec.set_arg('-t=24', bmk2.AT_OPAQUE)
     ec.set_arg('-trussFile=@output', oflag)
     ec.set_arg('-trussNum=%d' % (trussNum), bmk2.AT_OPAQUE)
     ec.set_arg('-trussNodes=%s' % (getattr(bmkinput.props, 'ktruss_%d_nodes' % (trussNum,))))

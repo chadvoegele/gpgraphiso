@@ -13,6 +13,8 @@ include triangles-tuxedo-gtx1080-power.mk
 include ktruss-tuxedo-01.mk
 include ktruss-tuxedo-12.mk
 include ktruss-tuxedo-24.mk
+include ktruss-tuxedo-24-ctt.mk
+
 include ktruss-ref-python.mk
 include ktruss-ref-julia.mk
 

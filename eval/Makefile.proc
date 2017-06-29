@@ -11,7 +11,7 @@ all:  triangles ktruss
 
 triangles: triangles/tuxedo-gtx1080.csv triangles/tuxedo-k80.csv triangles/tuxedo-gtx1080-power.csv triangles/tuxedo-12.csv triangles/tuxedo-24.csv triangles/tuxedo-01.csv triangles/tuxedo-minitri.csv
 
-ktruss:  ktruss/tuxedo-12.csv ktruss/tuxedo-24.csv ktruss/tuxedo-01.csv ktruss/tuxedo-ref-julia.csv ktruss/tuxedo-gtx1080-power.csv ktruss/tuxedo-gtx1080.csv
+ktruss:  ktruss/tuxedo-12.csv ktruss/tuxedo-24.csv ktruss/tuxedo-01.csv ktruss/tuxedo-ref-julia.csv ktruss/tuxedo-gtx1080-power.csv ktruss/tuxedo-gtx1080.csv ktruss/tuxedo-24-ctt.csv
 
 # TODO: use make to generate rules below ...
 
@@ -99,6 +99,7 @@ ktruss/tuxedo-12.csv: ktruss/tuxedo-12-raw.csv ktruss/tuxedo-12-gal.csv
 ktruss/tuxedo-12-gal.csv: $(wildcard cpu-logs/ktruss/tuxedo-12/*.log)
 	scripts/extract_galois_counters.py $^ -o $@
 
+
 ktruss/tuxedo-01-raw.csv: $(wildcard cpu-logs/ktruss/tuxedo-01/*.log)
 	$(BMK2)/ps/log2csv.py -x tuxedo-01 $^ -o $@
 
@@ -110,13 +111,23 @@ ktruss/tuxedo-01.csv: ktruss/tuxedo-01-raw.csv ktruss/tuxedo-01-gal.csv
 
 
 ktruss/tuxedo-24-raw.csv: $(wildcard cpu-logs/ktruss/tuxedo-24/*.log)
-	$(BMK2)/ps/log2csv.py -x tuxedo-12 $^ -o $@
+	$(BMK2)/ps/log2csv.py -x tuxedo-24 $^ -o $@
 
 ktruss/tuxedo-24-gal.csv: $(wildcard cpu-logs/ktruss/tuxedo-24/*.log)
 	scripts/extract_galois_counters.py $^ -o $@
 
 ktruss/tuxedo-24.csv: ktruss/tuxedo-24-raw.csv ktruss/tuxedo-24-gal.csv
 	$(BMK2)/ps/import.py $(AVG_MEM) $(AVG_RAPL) -r ktruss/tuxedo-24-gal.csv -o $@ $<
+
+
+ktruss/tuxedo-24-ctt-raw.csv: $(wildcard cpu-logs/ktruss/tuxedo-24-ctt/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-24-ctt $^ -o $@
+
+ktruss/tuxedo-24-ctt-gal.csv: $(wildcard cpu-logs/ktruss/tuxedo-24-ctt/*.log)
+	scripts/extract_galois_counters.py $^ -o $@
+
+ktruss/tuxedo-24-ctt.csv: ktruss/tuxedo-24-ctt-raw.csv ktruss/tuxedo-24-ctt-gal.csv
+	$(BMK2)/ps/import.py $(AVG_MEM) $(AVG_RAPL) -r ktruss/tuxedo-24-ctt-gal.csv -o $@ $<
 
 
 ktruss/tuxedo-ref-julia-raw.csv: $(wildcard cpu-logs/ktruss/tuxedo-ref-julia/*.log)

@@ -89,7 +89,7 @@ if __name__ == "__main__":
     out = []
     for lf in args.logfiles:
         for rd in get_run_data(lf):
-            if rd.status != 'FAIL':
+            if rd.status != 'FAIL' and hasattr(rd, 'perf'):
                 df = extract_galois_csv(rd.entries)
                 o = extract_relevant_counters(df)
                 o.update({'xid': rd.perf.xid, 'run': rd.perf.run, 'binid': rd.perf.binid})
