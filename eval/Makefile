@@ -19,8 +19,8 @@ setup: cpu-logs gpu-logs cpu-logs/ktruss cpu-logs/triangles gpu-logs/ktruss gpu-
 %-logs/triangles: %-logs
 	mkdir -p $@
 
-inputs-desc.csv: ktruss-inputs triangle-inputs
-	PYTHONPATH=$(GR_CHALLENGE)/grtools/:$$PYTHONPATH scripts/desc_inputs.py $^ > $@
+inputs-desc.csv: ktruss-inputs triangle-inputs max-degree
+	PYTHONPATH=$(GR_CHALLENGE)/grtools/:$$PYTHONPATH scripts/desc_inputs.py -m max-degree ktruss-inputs triangle-inputs > $@
 
 ktruss-tuxedo-gtx1080.mk: ktruss-inputs gpu-logs/ktruss/tuxedo-gtx1080 templates/gpu-expt.template
 	scripts/gen_makefile.py $< ktruss/irgl+wl tuxedo-gtx1080 templates/gpu-expt.template $@ -t "{bmk}-{expt}" -v bmk=ktruss -v scandir=$(KTRUSS_WL) -v env_vars=
