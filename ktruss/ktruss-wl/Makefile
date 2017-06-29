@@ -14,7 +14,7 @@ EXTRAFLAGS=-g -O3 -DCSRG_TEX
 COMPRESS_LIBS=-lz
 NVCCFLAGS+=-D_FORCE_INLINES -L /usr/lib/x86_64-linux-gnu/ -Xptxas -v
 
-all: test
+all: test test-nontex
 
 mgpucontext.o: $(GGC_ROOT)/rt/include/mgpu/src/mgpucontext.cu
 	nvcc -dc -arch $(ARCH) $(CXXFLAGS) $(EXTRAFLAGS) $(NVCCFLAGS) $(INCLUDES) $< -o $@
