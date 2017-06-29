@@ -5,25 +5,113 @@ INFO ../bmk2cfg/bmk2.cfg: Loaded file type 2 ('../bmk2cfg/graph.inputdb')
 INFO ../bmk2cfg/bmk2.cfg: Loaded file type 3 ('../bmk2cfg/graph.inputprops')
 INFO ../bmk2cfg/bmk2.cfg: Loaded file type 1 ('../bmk2cfg/graph.bispec')
 INFO Applying configuration "{'k': 'max', 't': '1'}"
-DEBUG Ignoring input 'com-lj.wgt32.sym' for 'ktruss/irgl', not in sel_inputs
-DEBUG Ignoring input 'com-dblp.wgt32.sym' for 'ktruss/irgl', not in sel_inputs
-DEBUG Ignoring input 'rmat16.sym.tri' for 'ktruss/irgl', not in sel_inputs
-DEBUG Ignoring input 'com-orkut.wgt32.sym' for 'ktruss/irgl', not in sel_inputs
-DEBUG Ignoring input 'com-friendster.wgt32.sym' for 'ktruss/irgl', not in sel_inputs
-DEBUG Ignoring input 'complete5_sm.sym' for 'ktruss/irgl', not in sel_inputs
-DEBUG Ignoring input 'com-youtube.wgt32.sym' for 'ktruss/irgl', not in sel_inputs
-DEBUG Ignoring input 'A_inc.sym' for 'ktruss/irgl', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010414_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'cit-Patents_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'roadNet-TX_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'loc-brightkite_edges_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'as20000102_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010526_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'cit-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'soc-Epinions1_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'amazon0601_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010505_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'facebook_combined_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'roadNet-PA_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010407_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010526_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella06_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010421_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella05_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'com-dblp.wgt32.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale19-ef16_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'roadNet-CA_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010428_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010512_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale22-ef16_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'com-orkut.wgt32.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella30_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010519_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010512_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella31_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'ca-CondMat_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale24-ef16_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'complete5_sm.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'amazon0312_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'loc-gowalla_edges_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010428_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'amazon0302_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'ca-AstroPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'email-EuAll_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale21-ef16_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'amazon0505_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'rmat16.sym.tri' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella09_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'soc-Slashdot0902_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella08_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010414_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella24_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'com-youtube.wgt32.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'ca-GrQc_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010519_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'cit-HepTh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale20-ef16_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'as-caida20071105_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella04_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'email-Enron_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'ca-HepTh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010505_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'flickrEdges_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella25_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'A_inc.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale18-ef16_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'com-lj.wgt32.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010421_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale23-ef16_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'com-friendster.wgt32.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'soc-Slashdot0811_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010407_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
+DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-19 17:40:40
-COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss
-INFO CMD_LINE: /h2/sreepai/src/bmk2//test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss --log gpu-logs/ktruss/tuxedo-gtx1080/com-amazon.wgt32.sym.log -v perf ktruss/irgl com-amazon.wgt32.sym
+INFO DATE START 2017-06-28 22:36:04
+COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --max-output-bytes 0 --log gpu-logs/ktruss/tuxedo-gtx1080/com-amazon.wgt32.sym.log -v perf ktruss/irgl+wl com-amazon.wgt32.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-19 17:40:40
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss_testn8C68W' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1497912040.62.1.0 BMK2_BINID=ktruss/irgl ../ktruss/ktruss/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss_testn8C68W
-INFO ktruss/irgl/com-amazon.wgt32.sym STDOUT
+INFO PERFDATE BEGIN_RUN 2017-06-28 22:36:04
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testQeKX8_' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1498707364.55.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testQeKX8_
+INFO ktruss/irgl+wl/com-amazon.wgt32.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7999MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=548552, nedges=1851744.
+Host memory for graph:  18 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 19202400 bytes in 43 ms (446.57 MB/s)
+
+
+INFO ktruss/irgl+wl/com-amazon.wgt32.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8263827456
+Total time: 16 ms
+Total time: 16584829 ns
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testQeKX8_ -trussNum=7 -trussNodes=212 -trussEdges=642
+PASS ktruss/irgl+wl/com-amazon.wgt32.sym: BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1498707364.55.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testQeKX8_
+INFO PERFDATE END_RUN 2017-06-28 22:36:06
+PERF ktruss/irgl+wl/com-amazon.wgt32.sym 1498707364.55.1 0 16584829 BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1498707364.55.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testQeKX8_
+INFO PERFDATE BEGIN_RUN 2017-06-28 22:36:06
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testerH27t' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1498707364.55.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testerH27t
+INFO ktruss/irgl+wl/com-amazon.wgt32.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
 FreeMem:   7999MB   TotalMem:   8114MB   64-bit pointers.
@@ -35,20 +123,23 @@ nnodes=548552, nedges=1851744.
 Host memory for graph:  18 MB
 	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 19202400 bytes in 41 ms (468.35 MB/s)
 
-gg_main 2260505930996454 2260505953932733
 
-INFO ktruss/irgl/com-amazon.wgt32.sym STDERR
-Total time: 22 ms
-Total time: 22936279 ns
+INFO ktruss/irgl+wl/com-amazon.wgt32.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8263827456
+Total time: 15 ms
+Total time: 15216887 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss_testn8C68W -trussNum=7 -trussNodes=212 -trussEdges=642
-PASS ktruss/irgl/com-amazon.wgt32.sym: BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1497912040.62.1.0 BMK2_BINID=ktruss/irgl ../ktruss/ktruss/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss_testn8C68W
-INFO PERFDATE END_RUN 2017-06-19 17:40:42
-PERF ktruss/irgl/com-amazon.wgt32.sym 1497912040.62.1 0 22936279 BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1497912040.62.1.0 BMK2_BINID=ktruss/irgl ../ktruss/ktruss/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss_testn8C68W
-INFO PERFDATE BEGIN_RUN 2017-06-19 17:40:42
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss_test68dsZQ' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1497912040.62.1.1 BMK2_BINID=ktruss/irgl ../ktruss/ktruss/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss_test68dsZQ
-INFO ktruss/irgl/com-amazon.wgt32.sym STDOUT
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testerH27t -trussNum=7 -trussNodes=212 -trussEdges=642
+PASS ktruss/irgl+wl/com-amazon.wgt32.sym: BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1498707364.55.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testerH27t
+INFO PERFDATE END_RUN 2017-06-28 22:36:08
+PERF ktruss/irgl+wl/com-amazon.wgt32.sym 1498707364.55.1 1 15216887 BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1498707364.55.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testerH27t
+INFO PERFDATE BEGIN_RUN 2017-06-28 22:36:08
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testeoSCMy' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1498707364.55.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testeoSCMy
+INFO ktruss/irgl+wl/com-amazon.wgt32.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
 FreeMem:   7999MB   TotalMem:   8114MB   64-bit pointers.
@@ -60,42 +151,20 @@ nnodes=548552, nedges=1851744.
 Host memory for graph:  18 MB
 	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 19202400 bytes in 42 ms (457.20 MB/s)
 
-gg_main 2260508107920363 2260508131032267
 
-INFO ktruss/irgl/com-amazon.wgt32.sym STDERR
-Total time: 23 ms
-Total time: 23111904 ns
+INFO ktruss/irgl+wl/com-amazon.wgt32.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8263827456
+Total time: 15 ms
+Total time: 15667853 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss_test68dsZQ -trussNum=7 -trussNodes=212 -trussEdges=642
-PASS ktruss/irgl/com-amazon.wgt32.sym: BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1497912040.62.1.1 BMK2_BINID=ktruss/irgl ../ktruss/ktruss/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss_test68dsZQ
-INFO PERFDATE END_RUN 2017-06-19 17:40:44
-PERF ktruss/irgl/com-amazon.wgt32.sym 1497912040.62.1 1 23111904 BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1497912040.62.1.1 BMK2_BINID=ktruss/irgl ../ktruss/ktruss/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss_test68dsZQ
-INFO PERFDATE BEGIN_RUN 2017-06-19 17:40:44
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss_testrtZGmY' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1497912040.62.1.2 BMK2_BINID=ktruss/irgl ../ktruss/ktruss/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss_testrtZGmY
-INFO ktruss/irgl/com-amazon.wgt32.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7999MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=548552, nedges=1851744.
-Host memory for graph:  18 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 19202400 bytes in 41 ms (468.35 MB/s)
-
-gg_main 2260510233550184 2260510256616272
-
-INFO ktruss/irgl/com-amazon.wgt32.sym STDERR
-Total time: 23 ms
-Total time: 23066088 ns
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss_testrtZGmY -trussNum=7 -trussNodes=212 -trussEdges=642
-PASS ktruss/irgl/com-amazon.wgt32.sym: BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1497912040.62.1.2 BMK2_BINID=ktruss/irgl ../ktruss/ktruss/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss_testrtZGmY
-INFO PERFDATE END_RUN 2017-06-19 17:40:47
-PERF ktruss/irgl/com-amazon.wgt32.sym 1497912040.62.1 2 23066088 BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1497912040.62.1.2 BMK2_BINID=ktruss/irgl ../ktruss/ktruss/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss_testrtZGmY
-TASK_COMPLETE ktruss/irgl/com-amazon.wgt32.sym PERF 3/0/3
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testeoSCMy -trussNum=7 -trussNodes=212 -trussEdges=642
+PASS ktruss/irgl+wl/com-amazon.wgt32.sym: BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1498707364.55.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testeoSCMy
+INFO PERFDATE END_RUN 2017-06-28 22:36:10
+PERF ktruss/irgl+wl/com-amazon.wgt32.sym 1498707364.55.1 2 15667853 BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1498707364.55.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testeoSCMy
+TASK_COMPLETE ktruss/irgl+wl/com-amazon.wgt32.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-19 17:40:47
-INFO APPROXIMATE DURATION 0:00:06.486813
+INFO DATE END 2017-06-28 22:36:10
+INFO APPROXIMATE DURATION 0:00:06.413172

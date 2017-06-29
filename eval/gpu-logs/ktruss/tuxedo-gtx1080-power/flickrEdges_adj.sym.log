@@ -75,15 +75,15 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 16:40:31
+INFO DATE START 2017-06-28 20:40:16
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --log gpu-logs/ktruss/tuxedo-gtx1080-power/flickrEdges_adj.sym.log --max-output-bytes 0 --nvprof --npdb --npsystem -v perf ktruss/irgl+wl flickrEdges_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:40:31
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testZHkEf6' for '@output'
-COLLECT ktruss/irgl+wl/flickrEdges_adj.sym 1498686031.59.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498686031.59.1.0.nvprof
-INFO Running BMK2=1 BMK2_INPUTID=flickrEdges_adj.sym BMK2_RUNID=1498686031.59.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498686031.59.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testZHkEf6
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:40:16
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test1xC8H9' for '@output'
+COLLECT ktruss/irgl+wl/flickrEdges_adj.sym 1498700416.82.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498700416.82.1.0.nvprof
+INFO Running BMK2=1 BMK2_INPUTID=flickrEdges_adj.sym BMK2_RUNID=1498700416.82.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498700416.82.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1xC8H9
 INFO ktruss/irgl+wl/flickrEdges_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -94,58 +94,27 @@ ECC Disabled
 
 nnodes=105938, nedges=4633896.
 Host memory for graph:  36 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 37918704 bytes in 66 ms (574.53 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 37918704 bytes in 50 ms (758.37 MB/s)
 
 
 INFO ktruss/irgl+wl/flickrEdges_adj.sym STDERR
-==18359== NVPROF is profiling process 18359, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testZHkEf6
-INSTR gpu_memory_total_start 8508145664
-INSTR gpu_memory_free_start 8377073664
-INSTR gpu_memory_total_end 8508145664
-INSTR gpu_memory_free_end 8135901184
-Total time: 59 ms
-Total time: 59745550 ns
-==18359== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498686031.59.1.0.nvprof
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testZHkEf6 -trussNum=574 -trussNodes=574 -trussEdges=164451
-PASS ktruss/irgl+wl/flickrEdges_adj.sym: BMK2=1 BMK2_INPUTID=flickrEdges_adj.sym BMK2_RUNID=1498686031.59.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498686031.59.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testZHkEf6
-INFO PERFDATE END_RUN 2017-06-28 16:40:41
-PERF ktruss/irgl+wl/flickrEdges_adj.sym 1498686031.59.1 0 59745550 BMK2=1 BMK2_INPUTID=flickrEdges_adj.sym BMK2_RUNID=1498686031.59.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498686031.59.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testZHkEf6
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:40:41
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testxOgvA4' for '@output'
-COLLECT ktruss/irgl+wl/flickrEdges_adj.sym 1498686031.59.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498686031.59.1.1.nvprof
-INFO Running BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686031.59.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498686031.59.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testxOgvA4
-INFO ktruss/irgl+wl/flickrEdges_adj.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=105938, nedges=4633896.
-Host memory for graph:  36 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 37918704 bytes in 45 ms (842.64 MB/s)
-
-
-INFO ktruss/irgl+wl/flickrEdges_adj.sym STDERR
-==18427== NVPROF is profiling process 18427, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testxOgvA4
+==30005== NVPROF is profiling process 30005, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1xC8H9
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8135901184
 Total time: 56 ms
-Total time: 56826016 ns
-==18427== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498686031.59.1.1.nvprof
+Total time: 56782835 ns
+==30005== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498700416.82.1.0.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testxOgvA4 -trussNum=574 -trussNodes=574 -trussEdges=164451
-PASS ktruss/irgl+wl/flickrEdges_adj.sym: BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686031.59.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498686031.59.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testxOgvA4
-INFO PERFDATE END_RUN 2017-06-28 16:40:50
-PERF ktruss/irgl+wl/flickrEdges_adj.sym 1498686031.59.1 1 56826016 BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686031.59.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498686031.59.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testxOgvA4
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:40:50
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testpGJ_f5' for '@output'
-COLLECT ktruss/irgl+wl/flickrEdges_adj.sym 1498686031.59.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498686031.59.1.2.nvprof
-INFO Running BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686031.59.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498686031.59.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testpGJ_f5
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test1xC8H9 -trussNum=574 -trussNodes=574 -trussEdges=164451
+PASS ktruss/irgl+wl/flickrEdges_adj.sym: BMK2=1 BMK2_INPUTID=flickrEdges_adj.sym BMK2_RUNID=1498700416.82.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498700416.82.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1xC8H9
+INFO PERFDATE END_RUN 2017-06-28 20:40:24
+PERF ktruss/irgl+wl/flickrEdges_adj.sym 1498700416.82.1 0 56782835 BMK2=1 BMK2_INPUTID=flickrEdges_adj.sym BMK2_RUNID=1498700416.82.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498700416.82.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1xC8H9
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:40:24
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testsPqpTV' for '@output'
+COLLECT ktruss/irgl+wl/flickrEdges_adj.sym 1498700416.82.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498700416.82.1.1.nvprof
+INFO Running BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700416.82.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498700416.82.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testsPqpTV
 INFO ktruss/irgl+wl/flickrEdges_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -156,24 +125,55 @@ ECC Disabled
 
 nnodes=105938, nedges=4633896.
 Host memory for graph:  36 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 37918704 bytes in 43 ms (881.83 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 37918704 bytes in 51 ms (743.50 MB/s)
 
 
 INFO ktruss/irgl+wl/flickrEdges_adj.sym STDERR
-==18498== NVPROF is profiling process 18498, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testpGJ_f5
+==30071== NVPROF is profiling process 30071, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testsPqpTV
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8135901184
-Total time: 56 ms
-Total time: 56805639 ns
-==18498== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498686031.59.1.2.nvprof
+Total time: 57 ms
+Total time: 57336236 ns
+==30071== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498700416.82.1.1.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testpGJ_f5 -trussNum=574 -trussNodes=574 -trussEdges=164451
-PASS ktruss/irgl+wl/flickrEdges_adj.sym: BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686031.59.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498686031.59.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testpGJ_f5
-INFO PERFDATE END_RUN 2017-06-28 16:40:59
-PERF ktruss/irgl+wl/flickrEdges_adj.sym 1498686031.59.1 2 56805639 BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686031.59.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498686031.59.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testpGJ_f5
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testsPqpTV -trussNum=574 -trussNodes=574 -trussEdges=164451
+PASS ktruss/irgl+wl/flickrEdges_adj.sym: BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700416.82.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498700416.82.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testsPqpTV
+INFO PERFDATE END_RUN 2017-06-28 20:40:31
+PERF ktruss/irgl+wl/flickrEdges_adj.sym 1498700416.82.1 1 57336236 BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700416.82.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498700416.82.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testsPqpTV
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:40:31
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testr3AbiS' for '@output'
+COLLECT ktruss/irgl+wl/flickrEdges_adj.sym 1498700416.82.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498700416.82.1.2.nvprof
+INFO Running BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700416.82.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498700416.82.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testr3AbiS
+INFO ktruss/irgl+wl/flickrEdges_adj.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=105938, nedges=4633896.
+Host memory for graph:  36 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 37918704 bytes in 51 ms (743.50 MB/s)
+
+
+INFO ktruss/irgl+wl/flickrEdges_adj.sym STDERR
+==30139== NVPROF is profiling process 30139, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testr3AbiS
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8135901184
+Total time: 55 ms
+Total time: 55892783 ns
+==30139== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498700416.82.1.2.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testr3AbiS -trussNum=574 -trussNodes=574 -trussEdges=164451
+PASS ktruss/irgl+wl/flickrEdges_adj.sym: BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700416.82.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498700416.82.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testr3AbiS
+INFO PERFDATE END_RUN 2017-06-28 20:40:38
+PERF ktruss/irgl+wl/flickrEdges_adj.sym 1498700416.82.1 2 55892783 BMK2_INPUTID=flickrEdges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700416.82.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_flickrEdges_adjsym_1498700416.82.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/flickrEdges_adj.sym.gr -k 574 -p edges -o /tmp/test-_ktruss_ktruss-wl_testr3AbiS
 TASK_COMPLETE ktruss/irgl+wl/flickrEdges_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 16:40:59
-INFO APPROXIMATE DURATION 0:00:28.033661
+INFO DATE END 2017-06-28 20:40:38
+INFO APPROXIMATE DURATION 0:00:21.969528

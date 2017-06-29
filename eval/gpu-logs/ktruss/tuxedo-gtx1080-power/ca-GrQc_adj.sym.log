@@ -75,15 +75,15 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 16:28:33
+INFO DATE START 2017-06-28 20:27:53
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --log gpu-logs/ktruss/tuxedo-gtx1080-power/ca-GrQc_adj.sym.log --max-output-bytes 0 --nvprof --npdb --npsystem -v perf ktruss/irgl+wl ca-GrQc_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:28:33
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testwwZ3mR' for '@output'
-COLLECT ktruss/irgl+wl/ca-GrQc_adj.sym 1498685313.48.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498685313.48.1.0.nvprof
-INFO Running BMK2=1 BMK2_INPUTID=ca-GrQc_adj.sym BMK2_RUNID=1498685313.48.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498685313.48.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testwwZ3mR
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:27:53
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testfQYlRb' for '@output'
+COLLECT ktruss/irgl+wl/ca-GrQc_adj.sym 1498699673.15.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498699673.15.1.0.nvprof
+INFO Running BMK2=1 BMK2_INPUTID=ca-GrQc_adj.sym BMK2_RUNID=1498699673.15.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498699673.15.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testfQYlRb
 INFO ktruss/irgl+wl/ca-GrQc_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -98,54 +98,23 @@ Host memory for graph:   0 MB
 
 
 INFO ktruss/irgl+wl/ca-GrQc_adj.sym STDERR
-==8001== NVPROF is profiling process 8001, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testwwZ3mR
-INSTR gpu_memory_total_start 8508145664
-INSTR gpu_memory_free_start 8377073664
-INSTR gpu_memory_total_end 8508145664
-INSTR gpu_memory_free_end 8368685056
-Total time: 5 ms
-Total time: 5080051 ns
-==8001== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498685313.48.1.0.nvprof
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testwwZ3mR -trussNum=44 -trussNodes=44 -trussEdges=946
-PASS ktruss/irgl+wl/ca-GrQc_adj.sym: BMK2=1 BMK2_INPUTID=ca-GrQc_adj.sym BMK2_RUNID=1498685313.48.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498685313.48.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testwwZ3mR
-INFO PERFDATE END_RUN 2017-06-28 16:28:38
-PERF ktruss/irgl+wl/ca-GrQc_adj.sym 1498685313.48.1 0 5080051 BMK2=1 BMK2_INPUTID=ca-GrQc_adj.sym BMK2_RUNID=1498685313.48.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498685313.48.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testwwZ3mR
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:28:38
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testx2F0Vp' for '@output'
-COLLECT ktruss/irgl+wl/ca-GrQc_adj.sym 1498685313.48.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498685313.48.1.1.nvprof
-INFO Running BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685313.48.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498685313.48.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testx2F0Vp
-INFO ktruss/irgl+wl/ca-GrQc_adj.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=5242, nedges=28968.
-Host memory for graph:   0 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 273712 bytes in 0 ms (inf MB/s)
-
-
-INFO ktruss/irgl+wl/ca-GrQc_adj.sym STDERR
-==8066== NVPROF is profiling process 8066, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testx2F0Vp
+==20119== NVPROF is profiling process 20119, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testfQYlRb
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8368685056
 Total time: 3 ms
-Total time: 3373334 ns
-==8066== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498685313.48.1.1.nvprof
+Total time: 3554586 ns
+==20119== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498699673.15.1.0.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testx2F0Vp -trussNum=44 -trussNodes=44 -trussEdges=946
-PASS ktruss/irgl+wl/ca-GrQc_adj.sym: BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685313.48.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498685313.48.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testx2F0Vp
-INFO PERFDATE END_RUN 2017-06-28 16:28:42
-PERF ktruss/irgl+wl/ca-GrQc_adj.sym 1498685313.48.1 1 3373334 BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685313.48.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498685313.48.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testx2F0Vp
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:28:42
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testeJ7L5s' for '@output'
-COLLECT ktruss/irgl+wl/ca-GrQc_adj.sym 1498685313.48.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498685313.48.1.2.nvprof
-INFO Running BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685313.48.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498685313.48.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testeJ7L5s
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testfQYlRb -trussNum=44 -trussNodes=44 -trussEdges=946
+PASS ktruss/irgl+wl/ca-GrQc_adj.sym: BMK2=1 BMK2_INPUTID=ca-GrQc_adj.sym BMK2_RUNID=1498699673.15.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498699673.15.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testfQYlRb
+INFO PERFDATE END_RUN 2017-06-28 20:27:57
+PERF ktruss/irgl+wl/ca-GrQc_adj.sym 1498699673.15.1 0 3554586 BMK2=1 BMK2_INPUTID=ca-GrQc_adj.sym BMK2_RUNID=1498699673.15.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498699673.15.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testfQYlRb
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:27:57
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testCDxk4A' for '@output'
+COLLECT ktruss/irgl+wl/ca-GrQc_adj.sym 1498699673.15.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498699673.15.1.1.nvprof
+INFO Running BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699673.15.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498699673.15.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testCDxk4A
 INFO ktruss/irgl+wl/ca-GrQc_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -160,20 +129,51 @@ Host memory for graph:   0 MB
 
 
 INFO ktruss/irgl+wl/ca-GrQc_adj.sym STDERR
-==8130== NVPROF is profiling process 8130, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testeJ7L5s
+==20185== NVPROF is profiling process 20185, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testCDxk4A
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8368685056
 Total time: 3 ms
-Total time: 3425612 ns
-==8130== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498685313.48.1.2.nvprof
+Total time: 3550073 ns
+==20185== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498699673.15.1.1.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testeJ7L5s -trussNum=44 -trussNodes=44 -trussEdges=946
-PASS ktruss/irgl+wl/ca-GrQc_adj.sym: BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685313.48.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498685313.48.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testeJ7L5s
-INFO PERFDATE END_RUN 2017-06-28 16:28:47
-PERF ktruss/irgl+wl/ca-GrQc_adj.sym 1498685313.48.1 2 3425612 BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685313.48.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498685313.48.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testeJ7L5s
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testCDxk4A -trussNum=44 -trussNodes=44 -trussEdges=946
+PASS ktruss/irgl+wl/ca-GrQc_adj.sym: BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699673.15.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498699673.15.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testCDxk4A
+INFO PERFDATE END_RUN 2017-06-28 20:28:02
+PERF ktruss/irgl+wl/ca-GrQc_adj.sym 1498699673.15.1 1 3550073 BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699673.15.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498699673.15.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testCDxk4A
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:28:02
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testKenhMa' for '@output'
+COLLECT ktruss/irgl+wl/ca-GrQc_adj.sym 1498699673.15.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498699673.15.1.2.nvprof
+INFO Running BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699673.15.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498699673.15.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testKenhMa
+INFO ktruss/irgl+wl/ca-GrQc_adj.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=5242, nedges=28968.
+Host memory for graph:   0 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 273712 bytes in 0 ms (inf MB/s)
+
+
+INFO ktruss/irgl+wl/ca-GrQc_adj.sym STDERR
+==20250== NVPROF is profiling process 20250, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testKenhMa
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8368685056
+Total time: 3 ms
+Total time: 3515776 ns
+==20250== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498699673.15.1.2.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testKenhMa -trussNum=44 -trussNodes=44 -trussEdges=946
+PASS ktruss/irgl+wl/ca-GrQc_adj.sym: BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699673.15.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498699673.15.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testKenhMa
+INFO PERFDATE END_RUN 2017-06-28 20:28:07
+PERF ktruss/irgl+wl/ca-GrQc_adj.sym 1498699673.15.1 2 3515776 BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699673.15.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-GrQc_adjsym_1498699673.15.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -k 44 -p edges -o /tmp/test-_ktruss_ktruss-wl_testKenhMa
 TASK_COMPLETE ktruss/irgl+wl/ca-GrQc_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 16:28:47
-INFO APPROXIMATE DURATION 0:00:13.574555
+INFO DATE END 2017-06-28 20:28:07
+INFO APPROXIMATE DURATION 0:00:14.332230

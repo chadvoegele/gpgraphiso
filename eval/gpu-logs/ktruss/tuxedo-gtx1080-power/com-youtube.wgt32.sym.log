@@ -75,15 +75,15 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 16:42:10
+INFO DATE START 2017-06-28 20:41:45
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --log gpu-logs/ktruss/tuxedo-gtx1080-power/com-youtube.wgt32.sym.log --max-output-bytes 0 --nvprof --npdb --npsystem -v perf ktruss/irgl+wl com-youtube.wgt32.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:42:10
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test_HzcPA' for '@output'
-COLLECT ktruss/irgl+wl/com-youtube.wgt32.sym 1498686130.06.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498686130.06.1.0.nvprof
-INFO Running BMK2=1 BMK2_INPUTID=com-youtube.wgt32.sym BMK2_RUNID=1498686130.06.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498686130.06.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_test_HzcPA
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:41:45
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test3LiGfv' for '@output'
+COLLECT ktruss/irgl+wl/com-youtube.wgt32.sym 1498700505.62.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498700505.62.1.0.nvprof
+INFO Running BMK2=1 BMK2_INPUTID=com-youtube.wgt32.sym BMK2_RUNID=1498700505.62.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498700505.62.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_test3LiGfv
 INFO ktruss/irgl+wl/com-youtube.wgt32.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -94,27 +94,27 @@ ECC Disabled
 
 nnodes=1157828, nedges=5975248.
 Host memory for graph:  54 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 57064640 bytes in 232 ms (245.97 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 57064640 bytes in 233 ms (244.91 MB/s)
 
 
 INFO ktruss/irgl+wl/com-youtube.wgt32.sym STDERR
-==19984== NVPROF is profiling process 19984, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_test_HzcPA
+==31014== NVPROF is profiling process 31014, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_test3LiGfv
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8037335040
-Total time: 698 ms
-Total time: 698635934 ns
-==19984== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498686130.06.1.0.nvprof
+Total time: 277 ms
+Total time: 277058683 ns
+==31014== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498700505.62.1.0.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test_HzcPA -trussNum=19 -trussNodes=253 -trussEdges=7012
-PASS ktruss/irgl+wl/com-youtube.wgt32.sym: BMK2=1 BMK2_INPUTID=com-youtube.wgt32.sym BMK2_RUNID=1498686130.06.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498686130.06.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_test_HzcPA
-INFO PERFDATE END_RUN 2017-06-28 16:42:20
-PERF ktruss/irgl+wl/com-youtube.wgt32.sym 1498686130.06.1 0 698635934 BMK2=1 BMK2_INPUTID=com-youtube.wgt32.sym BMK2_RUNID=1498686130.06.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498686130.06.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_test_HzcPA
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:42:20
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testOozGp1' for '@output'
-COLLECT ktruss/irgl+wl/com-youtube.wgt32.sym 1498686130.06.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498686130.06.1.1.nvprof
-INFO Running BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686130.06.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498686130.06.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_testOozGp1
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test3LiGfv -trussNum=19 -trussNodes=253 -trussEdges=7012
+PASS ktruss/irgl+wl/com-youtube.wgt32.sym: BMK2=1 BMK2_INPUTID=com-youtube.wgt32.sym BMK2_RUNID=1498700505.62.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498700505.62.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_test3LiGfv
+INFO PERFDATE END_RUN 2017-06-28 20:41:52
+PERF ktruss/irgl+wl/com-youtube.wgt32.sym 1498700505.62.1 0 277058683 BMK2=1 BMK2_INPUTID=com-youtube.wgt32.sym BMK2_RUNID=1498700505.62.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498700505.62.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_test3LiGfv
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:41:52
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testToj6OX' for '@output'
+COLLECT ktruss/irgl+wl/com-youtube.wgt32.sym 1498700505.62.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498700505.62.1.1.nvprof
+INFO Running BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700505.62.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498700505.62.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_testToj6OX
 INFO ktruss/irgl+wl/com-youtube.wgt32.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -125,27 +125,27 @@ ECC Disabled
 
 nnodes=1157828, nedges=5975248.
 Host memory for graph:  54 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 57064640 bytes in 84 ms (679.34 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 57064640 bytes in 87 ms (655.92 MB/s)
 
 
 INFO ktruss/irgl+wl/com-youtube.wgt32.sym STDERR
-==20166== NVPROF is profiling process 20166, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_testOozGp1
+==31082== NVPROF is profiling process 31082, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_testToj6OX
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8037335040
-Total time: 661 ms
-Total time: 661185834 ns
-==20166== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498686130.06.1.1.nvprof
+Total time: 270 ms
+Total time: 270601144 ns
+==31082== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498700505.62.1.1.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testOozGp1 -trussNum=19 -trussNodes=253 -trussEdges=7012
-PASS ktruss/irgl+wl/com-youtube.wgt32.sym: BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686130.06.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498686130.06.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_testOozGp1
-INFO PERFDATE END_RUN 2017-06-28 16:42:30
-PERF ktruss/irgl+wl/com-youtube.wgt32.sym 1498686130.06.1 1 661185834 BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686130.06.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498686130.06.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_testOozGp1
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:42:30
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testkBPjaZ' for '@output'
-COLLECT ktruss/irgl+wl/com-youtube.wgt32.sym 1498686130.06.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498686130.06.1.2.nvprof
-INFO Running BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686130.06.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498686130.06.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_testkBPjaZ
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testToj6OX -trussNum=19 -trussNodes=253 -trussEdges=7012
+PASS ktruss/irgl+wl/com-youtube.wgt32.sym: BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700505.62.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498700505.62.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_testToj6OX
+INFO PERFDATE END_RUN 2017-06-28 20:41:59
+PERF ktruss/irgl+wl/com-youtube.wgt32.sym 1498700505.62.1 1 270601144 BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700505.62.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498700505.62.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_testToj6OX
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:41:59
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test3gU_2c' for '@output'
+COLLECT ktruss/irgl+wl/com-youtube.wgt32.sym 1498700505.62.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498700505.62.1.2.nvprof
+INFO Running BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700505.62.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498700505.62.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_test3gU_2c
 INFO ktruss/irgl+wl/com-youtube.wgt32.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -156,24 +156,24 @@ ECC Disabled
 
 nnodes=1157828, nedges=5975248.
 Host memory for graph:  54 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 57064640 bytes in 77 ms (741.10 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 57064640 bytes in 88 ms (648.46 MB/s)
 
 
 INFO ktruss/irgl+wl/com-youtube.wgt32.sym STDERR
-==20253== NVPROF is profiling process 20253, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_testkBPjaZ
+==31147== NVPROF is profiling process 31147, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_test3gU_2c
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8037335040
-Total time: 657 ms
-Total time: 657949990 ns
-==20253== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498686130.06.1.2.nvprof
+Total time: 269 ms
+Total time: 269337388 ns
+==31147== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498700505.62.1.2.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testkBPjaZ -trussNum=19 -trussNodes=253 -trussEdges=7012
-PASS ktruss/irgl+wl/com-youtube.wgt32.sym: BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686130.06.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498686130.06.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_testkBPjaZ
-INFO PERFDATE END_RUN 2017-06-28 16:42:40
-PERF ktruss/irgl+wl/com-youtube.wgt32.sym 1498686130.06.1 2 657949990 BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686130.06.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498686130.06.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_testkBPjaZ
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test3gU_2c -trussNum=19 -trussNodes=253 -trussEdges=7012
+PASS ktruss/irgl+wl/com-youtube.wgt32.sym: BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700505.62.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498700505.62.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_test3gU_2c
+INFO PERFDATE END_RUN 2017-06-28 20:42:06
+PERF ktruss/irgl+wl/com-youtube.wgt32.sym 1498700505.62.1 2 269337388 BMK2_INPUTID=com-youtube.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700505.62.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-youtubewgt32sym_1498700505.62.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Youtube/com-youtube.wgt32.sym.gr -k 19 -p edges -o /tmp/test-_ktruss_ktruss-wl_test3gU_2c
 TASK_COMPLETE ktruss/irgl+wl/com-youtube.wgt32.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 16:42:40
-INFO APPROXIMATE DURATION 0:00:30.090183
+INFO DATE END 2017-06-28 20:42:06
+INFO APPROXIMATE DURATION 0:00:21.348415

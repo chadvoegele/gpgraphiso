@@ -75,46 +75,15 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 16:37:37
+INFO DATE START 2017-06-28 20:37:22
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --log gpu-logs/ktruss/tuxedo-gtx1080-power/soc-Epinions1_adj.sym.log --max-output-bytes 0 --nvprof --npdb --npsystem -v perf ktruss/irgl+wl soc-Epinions1_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:37:37
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testQFqodo' for '@output'
-COLLECT ktruss/irgl+wl/soc-Epinions1_adj.sym 1498685857.14.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498685857.14.1.0.nvprof
-INFO Running BMK2=1 BMK2_INPUTID=soc-Epinions1_adj.sym BMK2_RUNID=1498685857.14.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498685857.14.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testQFqodo
-INFO ktruss/irgl+wl/soc-Epinions1_adj.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=75879, nedges=811480.
-Host memory for graph:   6 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 7098904 bytes in 89 ms (79.76 MB/s)
-
-
-INFO ktruss/irgl+wl/soc-Epinions1_adj.sym STDERR
-==15974== NVPROF is profiling process 15974, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testQFqodo
-INSTR gpu_memory_total_start 8508145664
-INSTR gpu_memory_free_start 8377073664
-INSTR gpu_memory_total_end 8508145664
-INSTR gpu_memory_free_end 8320450560
-Total time: 77 ms
-Total time: 77815280 ns
-==15974== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498685857.14.1.0.nvprof
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testQFqodo -trussNum=33 -trussNodes=61 -trussEdges=1539
-PASS ktruss/irgl+wl/soc-Epinions1_adj.sym: BMK2=1 BMK2_INPUTID=soc-Epinions1_adj.sym BMK2_RUNID=1498685857.14.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498685857.14.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testQFqodo
-INFO PERFDATE END_RUN 2017-06-28 16:37:42
-PERF ktruss/irgl+wl/soc-Epinions1_adj.sym 1498685857.14.1 0 77815280 BMK2=1 BMK2_INPUTID=soc-Epinions1_adj.sym BMK2_RUNID=1498685857.14.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498685857.14.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testQFqodo
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:37:42
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testF9UrV5' for '@output'
-COLLECT ktruss/irgl+wl/soc-Epinions1_adj.sym 1498685857.14.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498685857.14.1.1.nvprof
-INFO Running BMK2_INPUTID=soc-Epinions1_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685857.14.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498685857.14.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testF9UrV5
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:37:22
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testo4AWb2' for '@output'
+COLLECT ktruss/irgl+wl/soc-Epinions1_adj.sym 1498700242.18.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498700242.18.1.0.nvprof
+INFO Running BMK2=1 BMK2_INPUTID=soc-Epinions1_adj.sym BMK2_RUNID=1498700242.18.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498700242.18.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testo4AWb2
 INFO ktruss/irgl+wl/soc-Epinions1_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -129,23 +98,23 @@ Host memory for graph:   6 MB
 
 
 INFO ktruss/irgl+wl/soc-Epinions1_adj.sym STDERR
-==16040== NVPROF is profiling process 16040, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testF9UrV5
+==27759== NVPROF is profiling process 27759, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testo4AWb2
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8320450560
-Total time: 74 ms
-Total time: 74447034 ns
-==16040== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498685857.14.1.1.nvprof
+Total time: 57 ms
+Total time: 57523551 ns
+==27759== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498700242.18.1.0.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testF9UrV5 -trussNum=33 -trussNodes=61 -trussEdges=1539
-PASS ktruss/irgl+wl/soc-Epinions1_adj.sym: BMK2_INPUTID=soc-Epinions1_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685857.14.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498685857.14.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testF9UrV5
-INFO PERFDATE END_RUN 2017-06-28 16:37:47
-PERF ktruss/irgl+wl/soc-Epinions1_adj.sym 1498685857.14.1 1 74447034 BMK2_INPUTID=soc-Epinions1_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685857.14.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498685857.14.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testF9UrV5
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:37:47
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testfVyabR' for '@output'
-COLLECT ktruss/irgl+wl/soc-Epinions1_adj.sym 1498685857.14.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498685857.14.1.2.nvprof
-INFO Running BMK2_INPUTID=soc-Epinions1_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685857.14.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498685857.14.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testfVyabR
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testo4AWb2 -trussNum=33 -trussNodes=61 -trussEdges=1539
+PASS ktruss/irgl+wl/soc-Epinions1_adj.sym: BMK2=1 BMK2_INPUTID=soc-Epinions1_adj.sym BMK2_RUNID=1498700242.18.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498700242.18.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testo4AWb2
+INFO PERFDATE END_RUN 2017-06-28 20:37:27
+PERF ktruss/irgl+wl/soc-Epinions1_adj.sym 1498700242.18.1 0 57523551 BMK2=1 BMK2_INPUTID=soc-Epinions1_adj.sym BMK2_RUNID=1498700242.18.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498700242.18.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testo4AWb2
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:37:27
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testO2QVPD' for '@output'
+COLLECT ktruss/irgl+wl/soc-Epinions1_adj.sym 1498700242.18.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498700242.18.1.1.nvprof
+INFO Running BMK2_INPUTID=soc-Epinions1_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700242.18.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498700242.18.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testO2QVPD
 INFO ktruss/irgl+wl/soc-Epinions1_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -160,20 +129,51 @@ Host memory for graph:   6 MB
 
 
 INFO ktruss/irgl+wl/soc-Epinions1_adj.sym STDERR
-==16106== NVPROF is profiling process 16106, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testfVyabR
+==27822== NVPROF is profiling process 27822, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testO2QVPD
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8320450560
-Total time: 69 ms
-Total time: 69937327 ns
-==16106== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498685857.14.1.2.nvprof
+Total time: 57 ms
+Total time: 57248943 ns
+==27822== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498700242.18.1.1.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testfVyabR -trussNum=33 -trussNodes=61 -trussEdges=1539
-PASS ktruss/irgl+wl/soc-Epinions1_adj.sym: BMK2_INPUTID=soc-Epinions1_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685857.14.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498685857.14.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testfVyabR
-INFO PERFDATE END_RUN 2017-06-28 16:37:52
-PERF ktruss/irgl+wl/soc-Epinions1_adj.sym 1498685857.14.1 2 69937327 BMK2_INPUTID=soc-Epinions1_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685857.14.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498685857.14.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testfVyabR
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testO2QVPD -trussNum=33 -trussNodes=61 -trussEdges=1539
+PASS ktruss/irgl+wl/soc-Epinions1_adj.sym: BMK2_INPUTID=soc-Epinions1_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700242.18.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498700242.18.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testO2QVPD
+INFO PERFDATE END_RUN 2017-06-28 20:37:32
+PERF ktruss/irgl+wl/soc-Epinions1_adj.sym 1498700242.18.1 1 57248943 BMK2_INPUTID=soc-Epinions1_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700242.18.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498700242.18.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testO2QVPD
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:37:32
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testdAZ0c8' for '@output'
+COLLECT ktruss/irgl+wl/soc-Epinions1_adj.sym 1498700242.18.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498700242.18.1.2.nvprof
+INFO Running BMK2_INPUTID=soc-Epinions1_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700242.18.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498700242.18.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testdAZ0c8
+INFO ktruss/irgl+wl/soc-Epinions1_adj.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=75879, nedges=811480.
+Host memory for graph:   6 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 7098904 bytes in 13 ms (546.07 MB/s)
+
+
+INFO ktruss/irgl+wl/soc-Epinions1_adj.sym STDERR
+==27888== NVPROF is profiling process 27888, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testdAZ0c8
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8320450560
+Total time: 53 ms
+Total time: 53586808 ns
+==27888== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498700242.18.1.2.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testdAZ0c8 -trussNum=33 -trussNodes=61 -trussEdges=1539
+PASS ktruss/irgl+wl/soc-Epinions1_adj.sym: BMK2_INPUTID=soc-Epinions1_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700242.18.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498700242.18.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testdAZ0c8
+INFO PERFDATE END_RUN 2017-06-28 20:37:37
+PERF ktruss/irgl+wl/soc-Epinions1_adj.sym 1498700242.18.1 2 53586808 BMK2_INPUTID=soc-Epinions1_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700242.18.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Epinions1_adjsym_1498700242.18.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Epinions1_adj.sym.gr -k 33 -p edges -o /tmp/test-_ktruss_ktruss-wl_testdAZ0c8
 TASK_COMPLETE ktruss/irgl+wl/soc-Epinions1_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 16:37:52
-INFO APPROXIMATE DURATION 0:00:14.945381
+INFO DATE END 2017-06-28 20:37:37
+INFO APPROXIMATE DURATION 0:00:15.113794

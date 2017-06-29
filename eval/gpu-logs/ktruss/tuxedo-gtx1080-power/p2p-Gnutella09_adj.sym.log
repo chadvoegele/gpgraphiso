@@ -75,15 +75,15 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 16:31:23
+INFO DATE START 2017-06-28 20:30:52
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --log gpu-logs/ktruss/tuxedo-gtx1080-power/p2p-Gnutella09_adj.sym.log --max-output-bytes 0 --nvprof --npdb --npsystem -v perf ktruss/irgl+wl p2p-Gnutella09_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:31:23
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testgdguIH' for '@output'
-COLLECT ktruss/irgl+wl/p2p-Gnutella09_adj.sym 1498685483.9.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498685483.9.1.0.nvprof
-INFO Running BMK2=1 BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2_RUNID=1498685483.9.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498685483.9.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testgdguIH
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:30:52
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testb_RMCB' for '@output'
+COLLECT ktruss/irgl+wl/p2p-Gnutella09_adj.sym 1498699852.44.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498699852.44.1.0.nvprof
+INFO Running BMK2=1 BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2_RUNID=1498699852.44.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498699852.44.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testb_RMCB
 INFO ktruss/irgl+wl/p2p-Gnutella09_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -98,54 +98,23 @@ Host memory for graph:   0 MB
 
 
 INFO ktruss/irgl+wl/p2p-Gnutella09_adj.sym STDERR
-==10528== NVPROF is profiling process 10528, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testgdguIH
+==22542== NVPROF is profiling process 22542, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testb_RMCB
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8366587904
-Total time: 3 ms
-Total time: 3434517 ns
-==10528== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498685483.9.1.0.nvprof
+Total time: 8 ms
+Total time: 8114605 ns
+==22542== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498699852.44.1.0.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testgdguIH -trussNum=5 -trussNodes=16 -trussEdges=47
-PASS ktruss/irgl+wl/p2p-Gnutella09_adj.sym: BMK2=1 BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2_RUNID=1498685483.9.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498685483.9.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testgdguIH
-INFO PERFDATE END_RUN 2017-06-28 16:31:28
-PERF ktruss/irgl+wl/p2p-Gnutella09_adj.sym 1498685483.9.1 0 3434517 BMK2=1 BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2_RUNID=1498685483.9.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498685483.9.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testgdguIH
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:31:28
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testW7Mn0i' for '@output'
-COLLECT ktruss/irgl+wl/p2p-Gnutella09_adj.sym 1498685483.9.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498685483.9.1.1.nvprof
-INFO Running BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685483.9.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498685483.9.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testW7Mn0i
-INFO ktruss/irgl+wl/p2p-Gnutella09_adj.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=8114, nedges=52026.
-Host memory for graph:   0 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 481152 bytes in 1 ms (481.15 MB/s)
-
-
-INFO ktruss/irgl+wl/p2p-Gnutella09_adj.sym STDERR
-==10602== NVPROF is profiling process 10602, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testW7Mn0i
-INSTR gpu_memory_total_start 8508145664
-INSTR gpu_memory_free_start 8377073664
-INSTR gpu_memory_total_end 8508145664
-INSTR gpu_memory_free_end 8366587904
-Total time: 5 ms
-Total time: 5713501 ns
-==10602== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498685483.9.1.1.nvprof
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testW7Mn0i -trussNum=5 -trussNodes=16 -trussEdges=47
-PASS ktruss/irgl+wl/p2p-Gnutella09_adj.sym: BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685483.9.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498685483.9.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testW7Mn0i
-INFO PERFDATE END_RUN 2017-06-28 16:31:32
-PERF ktruss/irgl+wl/p2p-Gnutella09_adj.sym 1498685483.9.1 1 5713501 BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685483.9.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498685483.9.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testW7Mn0i
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:31:32
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testo4GIAB' for '@output'
-COLLECT ktruss/irgl+wl/p2p-Gnutella09_adj.sym 1498685483.9.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498685483.9.1.2.nvprof
-INFO Running BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685483.9.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498685483.9.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testo4GIAB
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testb_RMCB -trussNum=5 -trussNodes=16 -trussEdges=47
+PASS ktruss/irgl+wl/p2p-Gnutella09_adj.sym: BMK2=1 BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2_RUNID=1498699852.44.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498699852.44.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testb_RMCB
+INFO PERFDATE END_RUN 2017-06-28 20:30:57
+PERF ktruss/irgl+wl/p2p-Gnutella09_adj.sym 1498699852.44.1 0 8114605 BMK2=1 BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2_RUNID=1498699852.44.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498699852.44.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testb_RMCB
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:30:57
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testeicTFV' for '@output'
+COLLECT ktruss/irgl+wl/p2p-Gnutella09_adj.sym 1498699852.44.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498699852.44.1.1.nvprof
+INFO Running BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699852.44.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498699852.44.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testeicTFV
 INFO ktruss/irgl+wl/p2p-Gnutella09_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -160,20 +129,51 @@ Host memory for graph:   0 MB
 
 
 INFO ktruss/irgl+wl/p2p-Gnutella09_adj.sym STDERR
-==10666== NVPROF is profiling process 10666, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testo4GIAB
+==22607== NVPROF is profiling process 22607, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testeicTFV
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8366587904
-Total time: 5 ms
-Total time: 5699953 ns
-==10666== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498685483.9.1.2.nvprof
+Total time: 6 ms
+Total time: 6191714 ns
+==22607== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498699852.44.1.1.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testo4GIAB -trussNum=5 -trussNodes=16 -trussEdges=47
-PASS ktruss/irgl+wl/p2p-Gnutella09_adj.sym: BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685483.9.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498685483.9.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testo4GIAB
-INFO PERFDATE END_RUN 2017-06-28 16:31:37
-PERF ktruss/irgl+wl/p2p-Gnutella09_adj.sym 1498685483.9.1 2 5699953 BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685483.9.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498685483.9.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testo4GIAB
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testeicTFV -trussNum=5 -trussNodes=16 -trussEdges=47
+PASS ktruss/irgl+wl/p2p-Gnutella09_adj.sym: BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699852.44.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498699852.44.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testeicTFV
+INFO PERFDATE END_RUN 2017-06-28 20:31:01
+PERF ktruss/irgl+wl/p2p-Gnutella09_adj.sym 1498699852.44.1 1 6191714 BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699852.44.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498699852.44.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testeicTFV
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:31:01
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testqc2mDl' for '@output'
+COLLECT ktruss/irgl+wl/p2p-Gnutella09_adj.sym 1498699852.44.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498699852.44.1.2.nvprof
+INFO Running BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699852.44.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498699852.44.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testqc2mDl
+INFO ktruss/irgl+wl/p2p-Gnutella09_adj.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=8114, nedges=52026.
+Host memory for graph:   0 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 481152 bytes in 0 ms (inf MB/s)
+
+
+INFO ktruss/irgl+wl/p2p-Gnutella09_adj.sym STDERR
+==22676== NVPROF is profiling process 22676, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testqc2mDl
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8366587904
+Total time: 6 ms
+Total time: 6495056 ns
+==22676== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498699852.44.1.2.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testqc2mDl -trussNum=5 -trussNodes=16 -trussEdges=47
+PASS ktruss/irgl+wl/p2p-Gnutella09_adj.sym: BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699852.44.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498699852.44.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testqc2mDl
+INFO PERFDATE END_RUN 2017-06-28 20:31:06
+PERF ktruss/irgl+wl/p2p-Gnutella09_adj.sym 1498699852.44.1 2 6495056 BMK2_INPUTID=p2p-Gnutella09_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699852.44.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_p2p-Gnutella09_adjsym_1498699852.44.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella09_adj.sym.gr -k 5 -p edges -o /tmp/test-_ktruss_ktruss-wl_testqc2mDl
 TASK_COMPLETE ktruss/irgl+wl/p2p-Gnutella09_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 16:31:37
-INFO APPROXIMATE DURATION 0:00:13.459447
+INFO DATE END 2017-06-28 20:31:06
+INFO APPROXIMATE DURATION 0:00:14.216987

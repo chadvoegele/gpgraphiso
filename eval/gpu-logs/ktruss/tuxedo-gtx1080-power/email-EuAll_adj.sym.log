@@ -75,15 +75,15 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 16:37:20
+INFO DATE START 2017-06-28 20:37:06
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --log gpu-logs/ktruss/tuxedo-gtx1080-power/email-EuAll_adj.sym.log --max-output-bytes 0 --nvprof --npdb --npsystem -v perf ktruss/irgl+wl email-EuAll_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:37:20
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testeIb11c' for '@output'
-COLLECT ktruss/irgl+wl/email-EuAll_adj.sym 1498685840.38.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498685840.38.1.0.nvprof
-INFO Running BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498685840.38.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498685840.38.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testeIb11c
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:37:06
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testw1yNbE' for '@output'
+COLLECT ktruss/irgl+wl/email-EuAll_adj.sym 1498700226.11.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498700226.11.1.0.nvprof
+INFO Running BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498700226.11.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498700226.11.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testw1yNbE
 INFO ktruss/irgl+wl/email-EuAll_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -94,58 +94,27 @@ ECC Disabled
 
 nnodes=265214, nedges=728962.
 Host memory for graph:   7 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 7953440 bytes in 100 ms (79.53 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 7953440 bytes in 17 ms (467.85 MB/s)
 
 
 INFO ktruss/irgl+wl/email-EuAll_adj.sym STDERR
-==15765== NVPROF is profiling process 15765, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testeIb11c
+==27558== NVPROF is profiling process 27558, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testw1yNbE
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8316256256
-Total time: 52 ms
-Total time: 52757509 ns
-==15765== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498685840.38.1.0.nvprof
+Total time: 44 ms
+Total time: 44558594 ns
+==27558== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498700226.11.1.0.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testeIb11c -trussNum=20 -trussNodes=62 -trussEdges=1215
-PASS ktruss/irgl+wl/email-EuAll_adj.sym: BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498685840.38.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498685840.38.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testeIb11c
-INFO PERFDATE END_RUN 2017-06-28 16:37:25
-PERF ktruss/irgl+wl/email-EuAll_adj.sym 1498685840.38.1 0 52757509 BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498685840.38.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498685840.38.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testeIb11c
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:37:25
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testU_eduw' for '@output'
-COLLECT ktruss/irgl+wl/email-EuAll_adj.sym 1498685840.38.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498685840.38.1.1.nvprof
-INFO Running BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685840.38.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498685840.38.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testU_eduw
-INFO ktruss/irgl+wl/email-EuAll_adj.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=265214, nedges=728962.
-Host memory for graph:   7 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 7953440 bytes in 16 ms (497.09 MB/s)
-
-
-INFO ktruss/irgl+wl/email-EuAll_adj.sym STDERR
-==15828== NVPROF is profiling process 15828, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testU_eduw
-INSTR gpu_memory_total_start 8508145664
-INSTR gpu_memory_free_start 8377073664
-INSTR gpu_memory_total_end 8508145664
-INSTR gpu_memory_free_end 8316256256
-Total time: 46 ms
-Total time: 46984565 ns
-==15828== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498685840.38.1.1.nvprof
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testU_eduw -trussNum=20 -trussNodes=62 -trussEdges=1215
-PASS ktruss/irgl+wl/email-EuAll_adj.sym: BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685840.38.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498685840.38.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testU_eduw
-INFO PERFDATE END_RUN 2017-06-28 16:37:31
-PERF ktruss/irgl+wl/email-EuAll_adj.sym 1498685840.38.1 1 46984565 BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685840.38.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498685840.38.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testU_eduw
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:37:31
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test6fCBpP' for '@output'
-COLLECT ktruss/irgl+wl/email-EuAll_adj.sym 1498685840.38.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498685840.38.1.2.nvprof
-INFO Running BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685840.38.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498685840.38.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_test6fCBpP
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testw1yNbE -trussNum=20 -trussNodes=62 -trussEdges=1215
+PASS ktruss/irgl+wl/email-EuAll_adj.sym: BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498700226.11.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498700226.11.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testw1yNbE
+INFO PERFDATE END_RUN 2017-06-28 20:37:11
+PERF ktruss/irgl+wl/email-EuAll_adj.sym 1498700226.11.1 0 44558594 BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498700226.11.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498700226.11.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testw1yNbE
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:37:11
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testS_JM3T' for '@output'
+COLLECT ktruss/irgl+wl/email-EuAll_adj.sym 1498700226.11.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498700226.11.1.1.nvprof
+INFO Running BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700226.11.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498700226.11.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testS_JM3T
 INFO ktruss/irgl+wl/email-EuAll_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -160,20 +129,51 @@ Host memory for graph:   7 MB
 
 
 INFO ktruss/irgl+wl/email-EuAll_adj.sym STDERR
-==15895== NVPROF is profiling process 15895, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_test6fCBpP
+==27622== NVPROF is profiling process 27622, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testS_JM3T
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8316256256
-Total time: 43 ms
-Total time: 43428979 ns
-==15895== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498685840.38.1.2.nvprof
+Total time: 44 ms
+Total time: 44012195 ns
+==27622== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498700226.11.1.1.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test6fCBpP -trussNum=20 -trussNodes=62 -trussEdges=1215
-PASS ktruss/irgl+wl/email-EuAll_adj.sym: BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685840.38.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498685840.38.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_test6fCBpP
-INFO PERFDATE END_RUN 2017-06-28 16:37:36
-PERF ktruss/irgl+wl/email-EuAll_adj.sym 1498685840.38.1 2 43428979 BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685840.38.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498685840.38.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_test6fCBpP
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testS_JM3T -trussNum=20 -trussNodes=62 -trussEdges=1215
+PASS ktruss/irgl+wl/email-EuAll_adj.sym: BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700226.11.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498700226.11.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testS_JM3T
+INFO PERFDATE END_RUN 2017-06-28 20:37:16
+PERF ktruss/irgl+wl/email-EuAll_adj.sym 1498700226.11.1 1 44012195 BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700226.11.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498700226.11.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testS_JM3T
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:37:16
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testN4Uhd7' for '@output'
+COLLECT ktruss/irgl+wl/email-EuAll_adj.sym 1498700226.11.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498700226.11.1.2.nvprof
+INFO Running BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700226.11.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498700226.11.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testN4Uhd7
+INFO ktruss/irgl+wl/email-EuAll_adj.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=265214, nedges=728962.
+Host memory for graph:   7 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 7953440 bytes in 17 ms (467.85 MB/s)
+
+
+INFO ktruss/irgl+wl/email-EuAll_adj.sym STDERR
+==27689== NVPROF is profiling process 27689, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testN4Uhd7
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8316256256
+Total time: 39 ms
+Total time: 39592287 ns
+==27689== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498700226.11.1.2.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testN4Uhd7 -trussNum=20 -trussNodes=62 -trussEdges=1215
+PASS ktruss/irgl+wl/email-EuAll_adj.sym: BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700226.11.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498700226.11.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testN4Uhd7
+INFO PERFDATE END_RUN 2017-06-28 20:37:21
+PERF ktruss/irgl+wl/email-EuAll_adj.sym 1498700226.11.1 2 39592287 BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700226.11.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_email-EuAll_adjsym_1498700226.11.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testN4Uhd7
 TASK_COMPLETE ktruss/irgl+wl/email-EuAll_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 16:37:36
-INFO APPROXIMATE DURATION 0:00:16.305057
+INFO DATE END 2017-06-28 20:37:21
+INFO APPROXIMATE DURATION 0:00:15.617969

@@ -75,15 +75,15 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 18:18:52
+INFO DATE START 2017-06-28 21:13:34
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --log gpu-logs/ktruss/tuxedo-gtx1080-power/cit-Patents_adj.sym.log --max-output-bytes 0 --nvprof --npdb --npsystem -v perf ktruss/irgl+wl cit-Patents_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 18:18:52
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testqa77Pr' for '@output'
-COLLECT ktruss/irgl+wl/cit-Patents_adj.sym 1498691932.51.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498691932.51.1.0.nvprof
-INFO Running BMK2=1 BMK2_INPUTID=cit-Patents_adj.sym BMK2_RUNID=1498691932.51.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498691932.51.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testqa77Pr
+INFO PERFDATE BEGIN_RUN 2017-06-28 21:13:34
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testUOYyT3' for '@output'
+COLLECT ktruss/irgl+wl/cit-Patents_adj.sym 1498702414.55.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498702414.55.1.0.nvprof
+INFO Running BMK2=1 BMK2_INPUTID=cit-Patents_adj.sym BMK2_RUNID=1498702414.55.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498702414.55.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testUOYyT3
 INFO ktruss/irgl+wl/cit-Patents_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -94,86 +94,86 @@ ECC Disabled
 
 nnodes=3774768, nedges=33037894.
 Host memory for graph: 280 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 294501328 bytes in 511 ms (576.32 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 294501328 bytes in 236 ms (1247.89 MB/s)
 
 
 INFO ktruss/irgl+wl/cit-Patents_adj.sym STDERR
-==46300== NVPROF is profiling process 46300, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testqa77Pr
-INSTR gpu_memory_total_start 8508145664
-INSTR gpu_memory_free_start 8377073664
-INSTR gpu_memory_total_end 8508145664
-INSTR gpu_memory_free_end 6930038784
-Total time: 105 ms
-Total time: 105202013 ns
-==46300== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498691932.51.1.0.nvprof
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testqa77Pr -trussNum=36 -trussNodes=83 -trussEdges=2625
-PASS ktruss/irgl+wl/cit-Patents_adj.sym: BMK2=1 BMK2_INPUTID=cit-Patents_adj.sym BMK2_RUNID=1498691932.51.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498691932.51.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testqa77Pr
-INFO PERFDATE END_RUN 2017-06-28 18:19:06
-PERF ktruss/irgl+wl/cit-Patents_adj.sym 1498691932.51.1 0 105202013 BMK2=1 BMK2_INPUTID=cit-Patents_adj.sym BMK2_RUNID=1498691932.51.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498691932.51.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testqa77Pr
-INFO PERFDATE BEGIN_RUN 2017-06-28 18:19:06
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testd1evUy' for '@output'
-COLLECT ktruss/irgl+wl/cit-Patents_adj.sym 1498691932.51.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498691932.51.1.1.nvprof
-INFO Running BMK2_INPUTID=cit-Patents_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498691932.51.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498691932.51.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testd1evUy
-INFO ktruss/irgl+wl/cit-Patents_adj.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=3774768, nedges=33037894.
-Host memory for graph: 280 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 294501328 bytes in 301 ms (978.41 MB/s)
-
-
-INFO ktruss/irgl+wl/cit-Patents_adj.sym STDERR
-==46407== NVPROF is profiling process 46407, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testd1evUy
-INSTR gpu_memory_total_start 8508145664
-INSTR gpu_memory_free_start 8377073664
-INSTR gpu_memory_total_end 8508145664
-INSTR gpu_memory_free_end 6930038784
-Total time: 101 ms
-Total time: 101847661 ns
-==46407== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498691932.51.1.1.nvprof
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testd1evUy -trussNum=36 -trussNodes=83 -trussEdges=2625
-PASS ktruss/irgl+wl/cit-Patents_adj.sym: BMK2_INPUTID=cit-Patents_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498691932.51.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498691932.51.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testd1evUy
-INFO PERFDATE END_RUN 2017-06-28 18:19:19
-PERF ktruss/irgl+wl/cit-Patents_adj.sym 1498691932.51.1 1 101847661 BMK2_INPUTID=cit-Patents_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498691932.51.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498691932.51.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testd1evUy
-INFO PERFDATE BEGIN_RUN 2017-06-28 18:19:19
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testv_Er6i' for '@output'
-COLLECT ktruss/irgl+wl/cit-Patents_adj.sym 1498691932.51.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498691932.51.1.2.nvprof
-INFO Running BMK2_INPUTID=cit-Patents_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498691932.51.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498691932.51.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testv_Er6i
-INFO ktruss/irgl+wl/cit-Patents_adj.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=3774768, nedges=33037894.
-Host memory for graph: 280 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 294501328 bytes in 324 ms (908.95 MB/s)
-
-
-INFO ktruss/irgl+wl/cit-Patents_adj.sym STDERR
-==46561== NVPROF is profiling process 46561, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testv_Er6i
+==32889== NVPROF is profiling process 32889, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testUOYyT3
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 6930038784
 Total time: 100 ms
-Total time: 100048099 ns
-==46561== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498691932.51.1.2.nvprof
+Total time: 100182199 ns
+==32889== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498702414.55.1.0.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testv_Er6i -trussNum=36 -trussNodes=83 -trussEdges=2625
-PASS ktruss/irgl+wl/cit-Patents_adj.sym: BMK2_INPUTID=cit-Patents_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498691932.51.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498691932.51.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testv_Er6i
-INFO PERFDATE END_RUN 2017-06-28 18:19:32
-PERF ktruss/irgl+wl/cit-Patents_adj.sym 1498691932.51.1 2 100048099 BMK2_INPUTID=cit-Patents_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498691932.51.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498691932.51.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testv_Er6i
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testUOYyT3 -trussNum=36 -trussNodes=83 -trussEdges=2625
+PASS ktruss/irgl+wl/cit-Patents_adj.sym: BMK2=1 BMK2_INPUTID=cit-Patents_adj.sym BMK2_RUNID=1498702414.55.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498702414.55.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testUOYyT3
+INFO PERFDATE END_RUN 2017-06-28 21:13:43
+PERF ktruss/irgl+wl/cit-Patents_adj.sym 1498702414.55.1 0 100182199 BMK2=1 BMK2_INPUTID=cit-Patents_adj.sym BMK2_RUNID=1498702414.55.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498702414.55.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testUOYyT3
+INFO PERFDATE BEGIN_RUN 2017-06-28 21:13:43
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test4ivPYu' for '@output'
+COLLECT ktruss/irgl+wl/cit-Patents_adj.sym 1498702414.55.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498702414.55.1.1.nvprof
+INFO Running BMK2_INPUTID=cit-Patents_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498702414.55.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498702414.55.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_test4ivPYu
+INFO ktruss/irgl+wl/cit-Patents_adj.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=3774768, nedges=33037894.
+Host memory for graph: 280 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 294501328 bytes in 326 ms (903.38 MB/s)
+
+
+INFO ktruss/irgl+wl/cit-Patents_adj.sym STDERR
+==32955== NVPROF is profiling process 32955, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_test4ivPYu
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 6930038784
+Total time: 102 ms
+Total time: 102639810 ns
+==32955== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498702414.55.1.1.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test4ivPYu -trussNum=36 -trussNodes=83 -trussEdges=2625
+PASS ktruss/irgl+wl/cit-Patents_adj.sym: BMK2_INPUTID=cit-Patents_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498702414.55.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498702414.55.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_test4ivPYu
+INFO PERFDATE END_RUN 2017-06-28 21:13:52
+PERF ktruss/irgl+wl/cit-Patents_adj.sym 1498702414.55.1 1 102639810 BMK2_INPUTID=cit-Patents_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498702414.55.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498702414.55.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_test4ivPYu
+INFO PERFDATE BEGIN_RUN 2017-06-28 21:13:52
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testuTfZPb' for '@output'
+COLLECT ktruss/irgl+wl/cit-Patents_adj.sym 1498702414.55.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498702414.55.1.2.nvprof
+INFO Running BMK2_INPUTID=cit-Patents_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498702414.55.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498702414.55.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testuTfZPb
+INFO ktruss/irgl+wl/cit-Patents_adj.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=3774768, nedges=33037894.
+Host memory for graph: 280 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 294501328 bytes in 325 ms (906.16 MB/s)
+
+
+INFO ktruss/irgl+wl/cit-Patents_adj.sym STDERR
+==33027== NVPROF is profiling process 33027, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testuTfZPb
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 6930038784
+Total time: 103 ms
+Total time: 103732219 ns
+==33027== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498702414.55.1.2.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testuTfZPb -trussNum=36 -trussNodes=83 -trussEdges=2625
+PASS ktruss/irgl+wl/cit-Patents_adj.sym: BMK2_INPUTID=cit-Patents_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498702414.55.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498702414.55.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testuTfZPb
+INFO PERFDATE END_RUN 2017-06-28 21:14:01
+PERF ktruss/irgl+wl/cit-Patents_adj.sym 1498702414.55.1 2 103732219 BMK2_INPUTID=cit-Patents_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498702414.55.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_cit-Patents_adjsym_1498702414.55.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-Patents_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testuTfZPb
 TASK_COMPLETE ktruss/irgl+wl/cit-Patents_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 18:19:32
-INFO APPROXIMATE DURATION 0:00:40.435566
+INFO DATE END 2017-06-28 21:14:01
+INFO APPROXIMATE DURATION 0:00:26.921717

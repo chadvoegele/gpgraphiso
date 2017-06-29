@@ -75,15 +75,15 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 16:41:35
+INFO DATE START 2017-06-28 20:41:12
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --log gpu-logs/ktruss/tuxedo-gtx1080-power/amazon0601_adj.sym.log --max-output-bytes 0 --nvprof --npdb --npsystem -v perf ktruss/irgl+wl amazon0601_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:41:35
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testwK5B50' for '@output'
-COLLECT ktruss/irgl+wl/amazon0601_adj.sym 1498686095.36.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498686095.36.1.0.nvprof
-INFO Running BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498686095.36.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498686095.36.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testwK5B50
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:41:12
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test_KSb3b' for '@output'
+COLLECT ktruss/irgl+wl/amazon0601_adj.sym 1498700472.34.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498700472.34.1.0.nvprof
+INFO Running BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498700472.34.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498700472.34.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_test_KSb3b
 INFO ktruss/irgl+wl/amazon0601_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -94,27 +94,27 @@ ECC Disabled
 
 nnodes=403394, nedges=4886816.
 Host memory for graph:  40 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 42321712 bytes in 173 ms (244.63 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 42321712 bytes in 63 ms (671.77 MB/s)
 
 
 INFO ktruss/irgl+wl/amazon0601_adj.sym STDERR
-==19318== NVPROF is profiling process 19318, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testwK5B50
+==30614== NVPROF is profiling process 30614, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_test_KSb3b
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8104443904
-Total time: 58 ms
-Total time: 58263421 ns
-==19318== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498686095.36.1.0.nvprof
+Total time: 51 ms
+Total time: 51120372 ns
+==30614== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498700472.34.1.0.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testwK5B50 -trussNum=11 -trussNodes=5361 -trussEdges=27614
-PASS ktruss/irgl+wl/amazon0601_adj.sym: BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498686095.36.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498686095.36.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testwK5B50
-INFO PERFDATE END_RUN 2017-06-28 16:41:40
-PERF ktruss/irgl+wl/amazon0601_adj.sym 1498686095.36.1 0 58263421 BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498686095.36.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498686095.36.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testwK5B50
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:41:40
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testUUDMvK' for '@output'
-COLLECT ktruss/irgl+wl/amazon0601_adj.sym 1498686095.36.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498686095.36.1.1.nvprof
-INFO Running BMK2_INPUTID=amazon0601_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686095.36.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498686095.36.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testUUDMvK
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test_KSb3b -trussNum=11 -trussNodes=5361 -trussEdges=27614
+PASS ktruss/irgl+wl/amazon0601_adj.sym: BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498700472.34.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498700472.34.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_test_KSb3b
+INFO PERFDATE END_RUN 2017-06-28 20:41:17
+PERF ktruss/irgl+wl/amazon0601_adj.sym 1498700472.34.1 0 51120372 BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498700472.34.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498700472.34.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_test_KSb3b
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:41:17
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testEWH6Ek' for '@output'
+COLLECT ktruss/irgl+wl/amazon0601_adj.sym 1498700472.34.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498700472.34.1.1.nvprof
+INFO Running BMK2_INPUTID=amazon0601_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700472.34.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498700472.34.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testEWH6Ek
 INFO ktruss/irgl+wl/amazon0601_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -125,27 +125,27 @@ ECC Disabled
 
 nnodes=403394, nedges=4886816.
 Host memory for graph:  40 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 42321712 bytes in 60 ms (705.36 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 42321712 bytes in 62 ms (682.61 MB/s)
 
 
 INFO ktruss/irgl+wl/amazon0601_adj.sym STDERR
-==19432== NVPROF is profiling process 19432, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testUUDMvK
+==30679== NVPROF is profiling process 30679, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testEWH6Ek
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8104443904
-Total time: 61 ms
-Total time: 61170344 ns
-==19432== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498686095.36.1.1.nvprof
+Total time: 55 ms
+Total time: 55614917 ns
+==30679== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498700472.34.1.1.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testUUDMvK -trussNum=11 -trussNodes=5361 -trussEdges=27614
-PASS ktruss/irgl+wl/amazon0601_adj.sym: BMK2_INPUTID=amazon0601_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686095.36.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498686095.36.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testUUDMvK
-INFO PERFDATE END_RUN 2017-06-28 16:41:46
-PERF ktruss/irgl+wl/amazon0601_adj.sym 1498686095.36.1 1 61170344 BMK2_INPUTID=amazon0601_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686095.36.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498686095.36.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testUUDMvK
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:41:46
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testa2lo2J' for '@output'
-COLLECT ktruss/irgl+wl/amazon0601_adj.sym 1498686095.36.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498686095.36.1.2.nvprof
-INFO Running BMK2_INPUTID=amazon0601_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686095.36.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498686095.36.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testa2lo2J
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testEWH6Ek -trussNum=11 -trussNodes=5361 -trussEdges=27614
+PASS ktruss/irgl+wl/amazon0601_adj.sym: BMK2_INPUTID=amazon0601_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700472.34.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498700472.34.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testEWH6Ek
+INFO PERFDATE END_RUN 2017-06-28 20:41:23
+PERF ktruss/irgl+wl/amazon0601_adj.sym 1498700472.34.1 1 55614917 BMK2_INPUTID=amazon0601_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700472.34.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498700472.34.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testEWH6Ek
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:41:23
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test7vf7cg' for '@output'
+COLLECT ktruss/irgl+wl/amazon0601_adj.sym 1498700472.34.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498700472.34.1.2.nvprof
+INFO Running BMK2_INPUTID=amazon0601_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700472.34.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498700472.34.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_test7vf7cg
 INFO ktruss/irgl+wl/amazon0601_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -156,24 +156,24 @@ ECC Disabled
 
 nnodes=403394, nedges=4886816.
 Host memory for graph:  40 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 42321712 bytes in 47 ms (900.46 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 42321712 bytes in 64 ms (661.28 MB/s)
 
 
 INFO ktruss/irgl+wl/amazon0601_adj.sym STDERR
-==19529== NVPROF is profiling process 19529, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testa2lo2J
+==30745== NVPROF is profiling process 30745, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_test7vf7cg
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8104443904
-Total time: 52 ms
-Total time: 52875028 ns
-==19529== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498686095.36.1.2.nvprof
+Total time: 49 ms
+Total time: 49810832 ns
+==30745== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498700472.34.1.2.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testa2lo2J -trussNum=11 -trussNodes=5361 -trussEdges=27614
-PASS ktruss/irgl+wl/amazon0601_adj.sym: BMK2_INPUTID=amazon0601_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686095.36.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498686095.36.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testa2lo2J
-INFO PERFDATE END_RUN 2017-06-28 16:41:52
-PERF ktruss/irgl+wl/amazon0601_adj.sym 1498686095.36.1 2 52875028 BMK2_INPUTID=amazon0601_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498686095.36.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498686095.36.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testa2lo2J
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test7vf7cg -trussNum=11 -trussNodes=5361 -trussEdges=27614
+PASS ktruss/irgl+wl/amazon0601_adj.sym: BMK2_INPUTID=amazon0601_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700472.34.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498700472.34.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_test7vf7cg
+INFO PERFDATE END_RUN 2017-06-28 20:41:28
+PERF ktruss/irgl+wl/amazon0601_adj.sym 1498700472.34.1 2 49810832 BMK2_INPUTID=amazon0601_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700472.34.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_amazon0601_adjsym_1498700472.34.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_test7vf7cg
 TASK_COMPLETE ktruss/irgl+wl/amazon0601_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 16:41:52
-INFO APPROXIMATE DURATION 0:00:17.467014
+INFO DATE END 2017-06-28 20:41:28
+INFO APPROXIMATE DURATION 0:00:16.145597

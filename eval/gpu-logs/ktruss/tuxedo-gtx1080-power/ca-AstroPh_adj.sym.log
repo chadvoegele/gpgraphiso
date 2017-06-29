@@ -75,15 +75,15 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 16:36:36
+INFO DATE START 2017-06-28 20:36:20
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --log gpu-logs/ktruss/tuxedo-gtx1080-power/ca-AstroPh_adj.sym.log --max-output-bytes 0 --nvprof --npdb --npsystem -v perf ktruss/irgl+wl ca-AstroPh_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:36:36
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testNYJj8b' for '@output'
-COLLECT ktruss/irgl+wl/ca-AstroPh_adj.sym 1498685796.18.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498685796.18.1.0.nvprof
-INFO Running BMK2=1 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2_RUNID=1498685796.18.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498685796.18.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_testNYJj8b
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:36:20
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testhhLoE0' for '@output'
+COLLECT ktruss/irgl+wl/ca-AstroPh_adj.sym 1498700180.9.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498700180.9.1.0.nvprof
+INFO Running BMK2=1 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2_RUNID=1498700180.9.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498700180.9.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_testhhLoE0
 INFO ktruss/irgl+wl/ca-AstroPh_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -94,86 +94,86 @@ ECC Disabled
 
 nnodes=18772, nedges=396100.
 Host memory for graph:   3 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 3319008 bytes in 7 ms (474.14 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 3319008 bytes in 4 ms (829.75 MB/s)
 
 
 INFO ktruss/irgl+wl/ca-AstroPh_adj.sym STDERR
-==15153== NVPROF is profiling process 15153, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_testNYJj8b
+==26959== NVPROF is profiling process 26959, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_testhhLoE0
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8343519232
+Total time: 16 ms
+Total time: 16067184 ns
+==26959== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498700180.9.1.0.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testhhLoE0 -trussNum=57 -trussNodes=57 -trussEdges=1596
+PASS ktruss/irgl+wl/ca-AstroPh_adj.sym: BMK2=1 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2_RUNID=1498700180.9.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498700180.9.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_testhhLoE0
+INFO PERFDATE END_RUN 2017-06-28 20:36:25
+PERF ktruss/irgl+wl/ca-AstroPh_adj.sym 1498700180.9.1 0 16067184 BMK2=1 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2_RUNID=1498700180.9.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498700180.9.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_testhhLoE0
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:36:25
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test4wwE_o' for '@output'
+COLLECT ktruss/irgl+wl/ca-AstroPh_adj.sym 1498700180.9.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498700180.9.1.1.nvprof
+INFO Running BMK2_INPUTID=ca-AstroPh_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700180.9.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498700180.9.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_test4wwE_o
+INFO ktruss/irgl+wl/ca-AstroPh_adj.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=18772, nedges=396100.
+Host memory for graph:   3 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 3319008 bytes in 5 ms (663.80 MB/s)
+
+
+INFO ktruss/irgl+wl/ca-AstroPh_adj.sym STDERR
+==27022== NVPROF is profiling process 27022, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_test4wwE_o
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8343519232
+Total time: 16 ms
+Total time: 16078427 ns
+==27022== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498700180.9.1.1.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test4wwE_o -trussNum=57 -trussNodes=57 -trussEdges=1596
+PASS ktruss/irgl+wl/ca-AstroPh_adj.sym: BMK2_INPUTID=ca-AstroPh_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700180.9.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498700180.9.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_test4wwE_o
+INFO PERFDATE END_RUN 2017-06-28 20:36:30
+PERF ktruss/irgl+wl/ca-AstroPh_adj.sym 1498700180.9.1 1 16078427 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700180.9.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498700180.9.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_test4wwE_o
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:36:30
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testJRo4vb' for '@output'
+COLLECT ktruss/irgl+wl/ca-AstroPh_adj.sym 1498700180.9.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498700180.9.1.2.nvprof
+INFO Running BMK2_INPUTID=ca-AstroPh_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700180.9.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498700180.9.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_testJRo4vb
+INFO ktruss/irgl+wl/ca-AstroPh_adj.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=18772, nedges=396100.
+Host memory for graph:   3 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 3319008 bytes in 6 ms (553.17 MB/s)
+
+
+INFO ktruss/irgl+wl/ca-AstroPh_adj.sym STDERR
+==27088== NVPROF is profiling process 27088, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_testJRo4vb
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8343519232
 Total time: 18 ms
-Total time: 18577038 ns
-==15153== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498685796.18.1.0.nvprof
+Total time: 18454275 ns
+==27088== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498700180.9.1.2.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testNYJj8b -trussNum=57 -trussNodes=57 -trussEdges=1596
-PASS ktruss/irgl+wl/ca-AstroPh_adj.sym: BMK2=1 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2_RUNID=1498685796.18.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498685796.18.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_testNYJj8b
-INFO PERFDATE END_RUN 2017-06-28 16:36:40
-PERF ktruss/irgl+wl/ca-AstroPh_adj.sym 1498685796.18.1 0 18577038 BMK2=1 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2_RUNID=1498685796.18.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498685796.18.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_testNYJj8b
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:36:40
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test6iFIUm' for '@output'
-COLLECT ktruss/irgl+wl/ca-AstroPh_adj.sym 1498685796.18.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498685796.18.1.1.nvprof
-INFO Running BMK2_INPUTID=ca-AstroPh_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685796.18.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498685796.18.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_test6iFIUm
-INFO ktruss/irgl+wl/ca-AstroPh_adj.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=18772, nedges=396100.
-Host memory for graph:   3 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 3319008 bytes in 6 ms (553.17 MB/s)
-
-
-INFO ktruss/irgl+wl/ca-AstroPh_adj.sym STDERR
-==15217== NVPROF is profiling process 15217, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_test6iFIUm
-INSTR gpu_memory_total_start 8508145664
-INSTR gpu_memory_free_start 8377073664
-INSTR gpu_memory_total_end 8508145664
-INSTR gpu_memory_free_end 8343519232
-Total time: 19 ms
-Total time: 19097547 ns
-==15217== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498685796.18.1.1.nvprof
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test6iFIUm -trussNum=57 -trussNodes=57 -trussEdges=1596
-PASS ktruss/irgl+wl/ca-AstroPh_adj.sym: BMK2_INPUTID=ca-AstroPh_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685796.18.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498685796.18.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_test6iFIUm
-INFO PERFDATE END_RUN 2017-06-28 16:36:45
-PERF ktruss/irgl+wl/ca-AstroPh_adj.sym 1498685796.18.1 1 19097547 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685796.18.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498685796.18.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_test6iFIUm
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:36:45
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test1AxCXc' for '@output'
-COLLECT ktruss/irgl+wl/ca-AstroPh_adj.sym 1498685796.18.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498685796.18.1.2.nvprof
-INFO Running BMK2_INPUTID=ca-AstroPh_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685796.18.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498685796.18.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1AxCXc
-INFO ktruss/irgl+wl/ca-AstroPh_adj.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=18772, nedges=396100.
-Host memory for graph:   3 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 3319008 bytes in 6 ms (553.17 MB/s)
-
-
-INFO ktruss/irgl+wl/ca-AstroPh_adj.sym STDERR
-==15284== NVPROF is profiling process 15284, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1AxCXc
-INSTR gpu_memory_total_start 8508145664
-INSTR gpu_memory_free_start 8377073664
-INSTR gpu_memory_total_end 8508145664
-INSTR gpu_memory_free_end 8343519232
-Total time: 19 ms
-Total time: 19102260 ns
-==15284== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498685796.18.1.2.nvprof
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test1AxCXc -trussNum=57 -trussNodes=57 -trussEdges=1596
-PASS ktruss/irgl+wl/ca-AstroPh_adj.sym: BMK2_INPUTID=ca-AstroPh_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685796.18.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498685796.18.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1AxCXc
-INFO PERFDATE END_RUN 2017-06-28 16:36:50
-PERF ktruss/irgl+wl/ca-AstroPh_adj.sym 1498685796.18.1 2 19102260 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685796.18.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498685796.18.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1AxCXc
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testJRo4vb -trussNum=57 -trussNodes=57 -trussEdges=1596
+PASS ktruss/irgl+wl/ca-AstroPh_adj.sym: BMK2_INPUTID=ca-AstroPh_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700180.9.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498700180.9.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_testJRo4vb
+INFO PERFDATE END_RUN 2017-06-28 20:36:35
+PERF ktruss/irgl+wl/ca-AstroPh_adj.sym 1498700180.9.1 2 18454275 BMK2_INPUTID=ca-AstroPh_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700180.9.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_ca-AstroPh_adjsym_1498700180.9.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-AstroPh_adj.sym.gr -k 57 -p edges -o /tmp/test-_ktruss_ktruss-wl_testJRo4vb
 TASK_COMPLETE ktruss/irgl+wl/ca-AstroPh_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 16:36:50
-INFO APPROXIMATE DURATION 0:00:14.115451
+INFO DATE END 2017-06-28 20:36:35
+INFO APPROXIMATE DURATION 0:00:14.618031

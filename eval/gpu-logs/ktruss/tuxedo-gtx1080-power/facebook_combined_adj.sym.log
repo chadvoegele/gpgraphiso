@@ -75,15 +75,15 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 16:35:10
+INFO DATE START 2017-06-28 20:34:50
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --log gpu-logs/ktruss/tuxedo-gtx1080-power/facebook_combined_adj.sym.log --max-output-bytes 0 --nvprof --npdb --npsystem -v perf ktruss/irgl+wl facebook_combined_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:35:10
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test_hV3eM' for '@output'
-COLLECT ktruss/irgl+wl/facebook_combined_adj.sym 1498685710.04.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498685710.04.1.0.nvprof
-INFO Running BMK2=1 BMK2_INPUTID=facebook_combined_adj.sym BMK2_RUNID=1498685710.04.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498685710.04.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_test_hV3eM
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:34:50
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testOAbvQK' for '@output'
+COLLECT ktruss/irgl+wl/facebook_combined_adj.sym 1498700090.97.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498700090.97.1.0.nvprof
+INFO Running BMK2=1 BMK2_INPUTID=facebook_combined_adj.sym BMK2_RUNID=1498700090.97.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498700090.97.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testOAbvQK
 INFO ktruss/irgl+wl/facebook_combined_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -98,23 +98,23 @@ Host memory for graph:   1 MB
 
 
 INFO ktruss/irgl+wl/facebook_combined_adj.sym STDERR
-==13849== NVPROF is profiling process 13849, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_test_hV3eM
+==25748== NVPROF is profiling process 25748, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testOAbvQK
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8358199296
 Total time: 16 ms
-Total time: 16031251 ns
-==13849== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498685710.04.1.0.nvprof
+Total time: 16973716 ns
+==25748== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498700090.97.1.0.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test_hV3eM -trussNum=97 -trussNodes=139 -trussEdges=8987
-PASS ktruss/irgl+wl/facebook_combined_adj.sym: BMK2=1 BMK2_INPUTID=facebook_combined_adj.sym BMK2_RUNID=1498685710.04.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498685710.04.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_test_hV3eM
-INFO PERFDATE END_RUN 2017-06-28 16:35:14
-PERF ktruss/irgl+wl/facebook_combined_adj.sym 1498685710.04.1 0 16031251 BMK2=1 BMK2_INPUTID=facebook_combined_adj.sym BMK2_RUNID=1498685710.04.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498685710.04.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_test_hV3eM
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:35:14
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testlrfteB' for '@output'
-COLLECT ktruss/irgl+wl/facebook_combined_adj.sym 1498685710.04.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498685710.04.1.1.nvprof
-INFO Running BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685710.04.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498685710.04.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testlrfteB
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testOAbvQK -trussNum=97 -trussNodes=139 -trussEdges=8987
+PASS ktruss/irgl+wl/facebook_combined_adj.sym: BMK2=1 BMK2_INPUTID=facebook_combined_adj.sym BMK2_RUNID=1498700090.97.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498700090.97.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testOAbvQK
+INFO PERFDATE END_RUN 2017-06-28 20:34:55
+PERF ktruss/irgl+wl/facebook_combined_adj.sym 1498700090.97.1 0 16973716 BMK2=1 BMK2_INPUTID=facebook_combined_adj.sym BMK2_RUNID=1498700090.97.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498700090.97.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testOAbvQK
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:34:55
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testrwaEHx' for '@output'
+COLLECT ktruss/irgl+wl/facebook_combined_adj.sym 1498700090.97.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498700090.97.1.1.nvprof
+INFO Running BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700090.97.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498700090.97.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testrwaEHx
 INFO ktruss/irgl+wl/facebook_combined_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -129,23 +129,23 @@ Host memory for graph:   1 MB
 
 
 INFO ktruss/irgl+wl/facebook_combined_adj.sym STDERR
-==13926== NVPROF is profiling process 13926, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testlrfteB
+==25812== NVPROF is profiling process 25812, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testrwaEHx
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8358199296
-Total time: 15 ms
-Total time: 15271052 ns
-==13926== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498685710.04.1.1.nvprof
+Total time: 17 ms
+Total time: 17309913 ns
+==25812== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498700090.97.1.1.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testlrfteB -trussNum=97 -trussNodes=139 -trussEdges=8987
-PASS ktruss/irgl+wl/facebook_combined_adj.sym: BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685710.04.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498685710.04.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testlrfteB
-INFO PERFDATE END_RUN 2017-06-28 16:35:19
-PERF ktruss/irgl+wl/facebook_combined_adj.sym 1498685710.04.1 1 15271052 BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685710.04.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498685710.04.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testlrfteB
-INFO PERFDATE BEGIN_RUN 2017-06-28 16:35:19
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testqbBwXU' for '@output'
-COLLECT ktruss/irgl+wl/facebook_combined_adj.sym 1498685710.04.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498685710.04.1.2.nvprof
-INFO Running BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685710.04.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498685710.04.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testqbBwXU
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testrwaEHx -trussNum=97 -trussNodes=139 -trussEdges=8987
+PASS ktruss/irgl+wl/facebook_combined_adj.sym: BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700090.97.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498700090.97.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testrwaEHx
+INFO PERFDATE END_RUN 2017-06-28 20:35:00
+PERF ktruss/irgl+wl/facebook_combined_adj.sym 1498700090.97.1 1 17309913 BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700090.97.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498700090.97.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testrwaEHx
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:35:00
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testt9by1q' for '@output'
+COLLECT ktruss/irgl+wl/facebook_combined_adj.sym 1498700090.97.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498700090.97.1.2.nvprof
+INFO Running BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700090.97.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498700090.97.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testt9by1q
 INFO ktruss/irgl+wl/facebook_combined_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -160,20 +160,20 @@ Host memory for graph:   1 MB
 
 
 INFO ktruss/irgl+wl/facebook_combined_adj.sym STDERR
-==13993== NVPROF is profiling process 13993, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testqbBwXU
+==25878== NVPROF is profiling process 25878, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testt9by1q
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8358199296
-Total time: 18 ms
-Total time: 18496190 ns
-==13993== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498685710.04.1.2.nvprof
+Total time: 17 ms
+Total time: 17305456 ns
+==25878== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498700090.97.1.2.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testqbBwXU -trussNum=97 -trussNodes=139 -trussEdges=8987
-PASS ktruss/irgl+wl/facebook_combined_adj.sym: BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685710.04.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498685710.04.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testqbBwXU
-INFO PERFDATE END_RUN 2017-06-28 16:35:24
-PERF ktruss/irgl+wl/facebook_combined_adj.sym 1498685710.04.1 2 18496190 BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498685710.04.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498685710.04.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testqbBwXU
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testt9by1q -trussNum=97 -trussNodes=139 -trussEdges=8987
+PASS ktruss/irgl+wl/facebook_combined_adj.sym: BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700090.97.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498700090.97.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testt9by1q
+INFO PERFDATE END_RUN 2017-06-28 20:35:05
+PERF ktruss/irgl+wl/facebook_combined_adj.sym 1498700090.97.1 2 17305456 BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700090.97.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_facebook_combined_adjsym_1498700090.97.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -k 97 -p edges -o /tmp/test-_ktruss_ktruss-wl_testt9by1q
 TASK_COMPLETE ktruss/irgl+wl/facebook_combined_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 16:35:24
-INFO APPROXIMATE DURATION 0:00:14.036780
+INFO DATE END 2017-06-28 20:35:05
+INFO APPROXIMATE DURATION 0:00:14.433801
