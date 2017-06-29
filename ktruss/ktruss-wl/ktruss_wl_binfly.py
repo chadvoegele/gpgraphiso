@@ -75,20 +75,15 @@ ast = Module([
         CBlock('return count'),
     ], device=True, ret_type = 'unsigned int'),
 
-    Kernel("place_edges_on_wl", [graph.param(), ('unsigned *', 'src'), ('unsigned *', 'miredge')],
+    Kernel("place_edges_on_wl", [graph.param(), ('unsigned *', 'src')],
            [
-               #If('tid == 0', [CBlock('*out_wl.dindex = graph.nedges', parse=False)]),
+               If('tid == 0', [CBlock('*out_wl.dindex = graph.nedges', parse=False)]),
                ForAll("edge", RangeIterator("graph.nedges"),
                    [
                        CDecl([('index_type', 'u', '= src[edge]'),
                               ('index_type', 'v', '= graph.getAbsDestination(edge)')]),
                        
-                       If("u < v", 
-                          [
-                              CBlock("miredge[edge] = find_mirror_edge(graph, u, v)"),
-                              WL.push("edge")
-                          ]
-                      ),
+                       If("u < v", [WL.push("edge")]),
                        #CBlock('out_wl.push_id(edge, edge)', parse=False),
                        #If("0", [WL.push("edge")]),
                    ]
@@ -100,7 +95,6 @@ ast = Module([
                                       ('unsigned *', 'src'),
                                       ('unsigned *', 'indegree'), 
                                       ('unsigned *', 'outdegree'),
-                                      ('unsigned *', 'miredge'),
                                       ('unsigned char*', 'eremoved'),
                                       ('bool *', 'edge_removed'),
                                       ('unsigned ', 'k')],
@@ -110,8 +104,7 @@ ast = Module([
                       [
                           CDecl([("unsigned ", "u", ""),
                                  ("unsigned", "v", ""),
-                                 #("unsigned", "miredge", "")
-                             ]),
+                                 ("unsigned", "miredge", "")]),
 
                           CDecl([("int", "edge", ""),
                                  ("bool", "pop", "")]),
@@ -125,9 +118,9 @@ ast = Module([
                           
                           If('outdegree[u] < k - 1 || indegree[v] < k - 1', 
                              [
-                                 #CBlock("miredge = find_mirror_edge(graph, u, v)"),
+                                 CBlock("miredge = find_mirror_edge(graph, u, v)"),
                                  CBlock("eremoved[edge] = 1"),
-                                 CBlock("eremoved[miredge[edge]] = 1"),
+                                 CBlock("eremoved[miredge] = 1"),
                                  CBlock("er = true"),
                                  CBlock(["atomicSub(outdegree + u, 1)",
                                          "atomicSub(indegree + u, 1)",
@@ -146,7 +139,7 @@ ast = Module([
                                   ('unsigned *', 'src'), 
                                   ('unsigned *', 'indegree'), 
                                   ('unsigned *', 'outdegree'),
-                                  ('unsigned *', 'miredge'),
+                                  ('unsigned *', 'triangles'),
                                   ('unsigned char *', 'eremoved'),
                                   ('bool *', 'edge_removed'),
                                   ('unsigned', 'k')],
@@ -156,7 +149,7 @@ ast = Module([
                       [
                           CDecl([("unsigned ", "u", ""),
                                  ("unsigned", "v", ""),
-                                 #("unsigned", "miredge", ""),
+                                 ("unsigned", "miredge", ""),
                                  ('unsigned', 'count', "= 0")]),
 
                           CDecl([("int", "edge", ""),
@@ -176,9 +169,9 @@ ast = Module([
                              [                                                          
                                  CBlock(['u = src[edge]',
                                          'v = graph.getAbsDestination(edge)']),
-                                 #CBlock("miredge = find_mirror_edge(graph, u, v)"),
+                                 CBlock("miredge = find_mirror_edge(graph, u, v)"),
                                  CBlock("eremoved[edge] = 1"),
-                                 CBlock("eremoved[miredge[edge]] = 1"),
+                                 CBlock("eremoved[miredge] = 1"),
                                  CBlock("er = true"),
                                  CBlock(["atomicSub(outdegree + u, 1)",
                                          "atomicSub(outdegree + v, 1)",
@@ -204,7 +197,7 @@ ast = Module([
 
       CDecl(('Shared<unsigned>', 'src', '(g.nedges)')),
       CDecl(('Shared<bool>', 'update', '(1)')),
-      CDecl(('Shared<unsigned>', 'miredges', '(g.nedges)')),
+      CDecl(('Shared<unsigned>', 'triangles', '(g.nedges)')),
 
       # this version does not calculate these n_ktruss_nodes and n_ktruss_edges
  
@@ -215,7 +208,7 @@ ast = Module([
       CBlock('eremoved.zero_gpu()'),
 
       Pipe([
-          Invoke("place_edges_on_wl", ['gg', 'src.gpu_rd_ptr()', 'miredges.gpu_wr_ptr()']),
+          Invoke("place_edges_on_wl", ['gg', 'src.gpu_rd_ptr()']),
           Pipe([
               Pipe([
                   CBlock("*(update.cpu_wr_ptr()) = false"),
@@ -223,7 +216,6 @@ ast = Module([
                                                     'src.gpu_rd_ptr()',
                                                     'indegrees.gpu_rd_ptr()',
                                                     'outdegrees.gpu_rd_ptr()',
-                                                    'miredges.gpu_rd_ptr()',
                                                     'eremoved.gpu_wr_ptr()',
                                                     'update.gpu_wr_ptr()',
                                                     'k']),
@@ -233,7 +225,7 @@ ast = Module([
               Invoke("count_tri_per_edge", ['gg', 'src.gpu_rd_ptr()',
                                             'indegrees.gpu_rd_ptr()',
                                             'outdegrees.gpu_rd_ptr()',
-                                            'miredges.gpu_rd_ptr()',
+                                            'triangles.gpu_wr_ptr()',
                                             'eremoved.gpu_wr_ptr()',
                                             'update.gpu_wr_ptr()',
                                             'k']),
