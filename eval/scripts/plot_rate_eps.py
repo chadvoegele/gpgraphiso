@@ -14,6 +14,7 @@ p.add_argument("-l", dest="labels", action="append")
 p.add_argument("-t", dest="title", default="")
 p.add_argument("--di", dest="drop_inputs", help="Drop inputs in file")
 p.add_argument("-o", dest='output')
+p.add_argument("-s", dest="sort_by", default="edges")
 
 args = p.parse_args()
 
@@ -22,9 +23,9 @@ out = pd.DataFrame()
 for lbl, i in zip(args.labels, args.inputs):
     f = pd.read_csv(i)
     f["lbl"] = lbl
-    out = out.append(f[["input", "lbl", "edges", "rate_eps"]])
+    out = out.append(f[["input", "lbl", args.sort_by, "rate_eps"]])
 
-out = out.set_index(["edges", "input", "lbl"])
+out = out.set_index([args.sort_by, "input", "lbl"])
 out = out.unstack("lbl")
 
 out = plot_common.drop_inputs(out, args.drop_inputs)
