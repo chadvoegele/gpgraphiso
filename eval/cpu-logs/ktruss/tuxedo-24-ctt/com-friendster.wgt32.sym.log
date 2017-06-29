@@ -246,3 +246,84 @@ PERF ktruss/galois+bspCoreThenTruss/com-friendster.wgt32.sym 1498762001.87.1 1 2
 INFO PERFDATE BEGIN_RUN 2017-06-29 13:59:52
 DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussTlgBV0' for '@output'
 INFO Running BMK2_INPUTID=com-friendster.wgt32.sym BMK2=1 BMK2_BINID=ktruss/galois+bspCoreThenTruss BMK2_RUNID=1498762001.87.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Friendster/com-friendster.wgt32.sym.gr -algo=bspCoreThenTruss -trussNum=129 -t=24 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussTlgBV0
+INFO ktruss/galois+bspCoreThenTruss/com-friendster.wgt32.sym STDOUT
+Galois Benchmark Suite v2.3.0 (unknown)
+Copyright (C) 2015 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: Maximal k-trusses
+Computes the maximal k-trusses for a given undirected graph
+http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/k_truss
+
+Read 124836180 nodes
+Running bspCoreThenTruss algorithm for maximal 129-truss
+LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
+(NULL),0 , MeminfoPre,0,0,0
+(NULL),39 , Time,0,0,210230
+(NULL),39 , Reduce_to_k_truss,0,0,154961
+(NULL),39 , Reduce_to_k-1_core,0,0,53640
+(NULL),39 , MeminfoPost,0,0,41
+(NULL),39 , TotalTime,0,0,226348
+(NULL),0 , MeminfoPre,0,1,0
+(NULL),39 , MeminfoPost,0,1,57
+(NULL),0 , MeminfoPre,0,2,0
+(NULL),39 , MeminfoPost,0,2,69
+(NULL),0 , MeminfoPre,0,3,0
+(NULL),39 , MeminfoPost,0,3,69
+(NULL),0 , MeminfoPre,0,4,0
+(NULL),39 , MeminfoPost,0,4,82
+(NULL),0 , MeminfoPre,0,5,0
+(NULL),39 , MeminfoPost,0,5,88
+(NULL),0 , MeminfoPre,0,6,0
+(NULL),39 , MeminfoPost,0,6,85
+(NULL),0 , MeminfoPre,0,7,0
+(NULL),39 , MeminfoPost,0,7,83
+(NULL),0 , MeminfoPre,0,8,0
+(NULL),39 , MeminfoPost,0,8,95
+(NULL),0 , MeminfoPre,0,9,0
+(NULL),39 , MeminfoPost,0,9,91
+(NULL),0 , MeminfoPre,0,10,0
+(NULL),39 , MeminfoPost,0,10,82
+(NULL),0 , MeminfoPre,0,11,0
+(NULL),39 , MeminfoPost,0,11,84
+(NULL),0 , MeminfoPre,0,12,0
+(NULL),39 , MeminfoPost,0,12,67
+(NULL),0 , MeminfoPre,0,13,0
+(NULL),39 , MeminfoPost,0,13,65
+(NULL),0 , MeminfoPre,0,14,0
+(NULL),39 , MeminfoPost,0,14,73
+(NULL),0 , MeminfoPre,0,15,0
+(NULL),39 , MeminfoPost,0,15,69
+(NULL),0 , MeminfoPre,0,16,0
+(NULL),39 , MeminfoPost,0,16,67
+(NULL),0 , MeminfoPre,0,17,0
+(NULL),39 , MeminfoPost,0,17,63
+(NULL),0 , MeminfoPre,0,18,0
+(NULL),39 , MeminfoPost,0,18,52
+(NULL),0 , MeminfoPre,0,19,0
+(NULL),39 , MeminfoPost,0,19,47
+(NULL),0 , MeminfoPre,0,20,0
+(NULL),39 , MeminfoPost,0,20,42
+(NULL),0 , MeminfoPre,0,21,0
+(NULL),39 , MeminfoPost,0,21,39
+(NULL),0 , MeminfoPre,0,22,0
+(NULL),39 , MeminfoPost,0,22,46
+(NULL),0 , MeminfoPre,0,23,0
+(NULL),39 , MeminfoPost,0,23,37
+INSTR intel-rapl:0:0:wraps 1
+INSTR intel-rapl:0:0 4564176965
+INSTR intel-rapl:1:0 2999113665
+INSTR intel-rapl:1:0:wraps 1
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 17003070425
+INSTR intel-rapl:1 18326098654
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Friendster/com-friendster.wgt32.sym.gr -t=24 -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussTlgBV0 -trussNum=129 -trussNodes=132 -trussEdges=8642
+PASS ktruss/galois+bspCoreThenTruss/com-friendster.wgt32.sym: BMK2_INPUTID=com-friendster.wgt32.sym BMK2=1 BMK2_BINID=ktruss/galois+bspCoreThenTruss BMK2_RUNID=1498762001.87.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Friendster/com-friendster.wgt32.sym.gr -algo=bspCoreThenTruss -trussNum=129 -t=24 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussTlgBV0
+INFO PERFDATE END_RUN 2017-06-29 14:06:06
+PERF ktruss/galois+bspCoreThenTruss/com-friendster.wgt32.sym 1498762001.87.1 2 210230000000 BMK2_INPUTID=com-friendster.wgt32.sym BMK2=1 BMK2_BINID=ktruss/galois+bspCoreThenTruss BMK2_RUNID=1498762001.87.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/communities/Friendster/com-friendster.wgt32.sym.gr -algo=bspCoreThenTruss -trussNum=129 -t=24 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussTlgBV0
+TASK_COMPLETE ktruss/galois+bspCoreThenTruss/com-friendster.wgt32.sym PERF 3/0/3
+INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
+INFO DATE END 2017-06-29 14:06:06
+INFO APPROXIMATE DURATION 0:19:24.755932

@@ -1,7 +1,4 @@
 binid,meminfo_bytes,meminfo_post_mb,meminfo_post_sum,run,xid
-ktruss/galois+bspCoreThenTruss/p2p-Gnutella05_adj.sym,402653184,384,96,0,1498752814.13.1
-ktruss/galois+bspCoreThenTruss/p2p-Gnutella05_adj.sym,402653184,384,96,1,1498752814.13.1
-ktruss/galois+bspCoreThenTruss/p2p-Gnutella05_adj.sym,402653184,384,96,2,1498752814.13.1
 ktruss/galois+bspCoreThenTruss/graph500-scale20-ef16_adj.sym,406847488,388,97,0,1498753120.82.1
 ktruss/galois+bspCoreThenTruss/graph500-scale20-ef16_adj.sym,406847488,388,97,1,1498753120.82.1
 ktruss/galois+bspCoreThenTruss/graph500-scale20-ef16_adj.sym,419430400,400,100,2,1498753120.82.1
@@ -17,6 +14,9 @@ ktruss/galois+bspCoreThenTruss/ca-GrQc_adj.sym,402653184,384,96,2,1498752710.96.
 ktruss/galois+bspCoreThenTruss/oregon2_010421_adj.sym,390070272,372,93,0,1498752804.29.1
 ktruss/galois+bspCoreThenTruss/oregon2_010421_adj.sym,402653184,384,96,1,1498752804.29.1
 ktruss/galois+bspCoreThenTruss/oregon2_010421_adj.sym,398458880,380,95,2,1498752804.29.1
+ktruss/galois+bspCoreThenTruss/com-friendster.wgt32.sym,6689914880,6380,1595,0,1498762001.87.1
+ktruss/galois+bspCoreThenTruss/com-friendster.wgt32.sym,6685720576,6376,1594,1,1498762001.87.1
+ktruss/galois+bspCoreThenTruss/com-friendster.wgt32.sym,6681526272,6372,1593,2,1498762001.87.1
 ktruss/galois+bspCoreThenTruss/p2p-Gnutella31_adj.sym,402653184,384,96,0,1498752868.73.1
 ktruss/galois+bspCoreThenTruss/p2p-Gnutella31_adj.sym,402653184,384,96,1,1498752868.73.1
 ktruss/galois+bspCoreThenTruss/p2p-Gnutella31_adj.sym,402653184,384,96,2,1498752868.73.1
@@ -64,6 +64,7 @@ ktruss/galois+bspCoreThenTruss/com-youtube.wgt32.sym,402653184,384,96,1,14987530
 ktruss/galois+bspCoreThenTruss/com-youtube.wgt32.sym,402653184,384,96,2,1498753002.27.1
 ktruss/galois+bspCoreThenTruss/graph500-scale24-ef16_adj.sym,1157627904,1104,276,0,1498757199.4.1
 ktruss/galois+bspCoreThenTruss/graph500-scale24-ef16_adj.sym,1161822208,1108,277,1,1498757199.4.1
+ktruss/galois+bspCoreThenTruss/graph500-scale24-ef16_adj.sym,1157627904,1104,276,2,1498757199.4.1
 ktruss/galois+bspCoreThenTruss/ca-HepTh_adj.sym,390070272,372,93,0,1498752765.17.1
 ktruss/galois+bspCoreThenTruss/ca-HepTh_adj.sym,402653184,384,96,1,1498752765.17.1
 ktruss/galois+bspCoreThenTruss/ca-HepTh_adj.sym,402653184,384,96,2,1498752765.17.1
@@ -199,3 +200,6 @@ ktruss/galois+bspCoreThenTruss/oregon2_010505_adj.sym,402653184,384,96,2,1498752
 ktruss/galois+bspCoreThenTruss/oregon2_010407_adj.sym,394264576,376,94,0,1498752775.0.1
 ktruss/galois+bspCoreThenTruss/oregon2_010407_adj.sym,394264576,376,94,1,1498752775.0.1
 ktruss/galois+bspCoreThenTruss/oregon2_010407_adj.sym,394264576,376,94,2,1498752775.0.1
+ktruss/galois+bspCoreThenTruss/p2p-Gnutella05_adj.sym,402653184,384,96,0,1498752814.13.1
+ktruss/galois+bspCoreThenTruss/p2p-Gnutella05_adj.sym,402653184,384,96,1,1498752814.13.1
+ktruss/galois+bspCoreThenTruss/p2p-Gnutella05_adj.sym,402653184,384,96,2,1498752814.13.1
