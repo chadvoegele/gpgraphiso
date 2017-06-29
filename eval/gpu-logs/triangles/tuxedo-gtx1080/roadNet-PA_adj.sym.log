@@ -72,13 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/irgl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/irgl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-22 17:06:16
+INFO DATE START 2017-06-28 20:24:44
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/triangle
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --log gpu-logs/triangles/tuxedo-gtx1080/roadNet-PA_adj.sym.log -v perf triangles/irgl roadNet-PA_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --max-output-bytes 0 --log gpu-logs/triangles/tuxedo-gtx1080/roadNet-PA_adj.sym.log -v perf triangles/irgl roadNet-PA_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:06:16
-INFO Running BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498169176.56.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:24:44
+INFO Running BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498699484.29.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
 INFO triangles/irgl/roadNet-PA_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -92,18 +92,51 @@ Host memory for graph:  31 MB
 	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 33375136 bytes in 58 ms (575.43 MB/s)
 
 triangles: 67150
-gg_main 2517631793732570 2517631798556437
+gg_main 3047918648373364 3047918653700109
 
 INFO triangles/irgl/roadNet-PA_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
-Total time: 4 ms
-Total time: 4823867 ns
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8312061952
+Total time: 5 ms
+Total time: 5326745 ns
 
-PASS triangles/irgl/roadNet-PA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498169176.56.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:06:17
-PERF triangles/irgl/roadNet-PA_adj.sym 1498169176.56.1 0 4823867 BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498169176.56.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:06:17
-INFO Running BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498169176.56.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
+PASS triangles/irgl/roadNet-PA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498699484.29.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:24:45
+PERF triangles/irgl/roadNet-PA_adj.sym 1498699484.29.1 0 5326745 BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498699484.29.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:24:45
+INFO Running BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498699484.29.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
+INFO triangles/irgl/roadNet-PA_adj.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7999MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=1088092, nedges=3083796.
+Host memory for graph:  31 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 33375136 bytes in 58 ms (575.43 MB/s)
+
+triangles: 67150
+gg_main 3047919928112731 3047919933477598
+
+INFO triangles/irgl/roadNet-PA_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
+OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8312061952
+Total time: 5 ms
+Total time: 5364867 ns
+
+PASS triangles/irgl/roadNet-PA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498699484.29.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:24:46
+PERF triangles/irgl/roadNet-PA_adj.sym 1498699484.29.1 1 5364867 BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498699484.29.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:24:46
+INFO Running BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498699484.29.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
 INFO triangles/irgl/roadNet-PA_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -117,42 +150,21 @@ Host memory for graph:  31 MB
 	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 33375136 bytes in 59 ms (565.68 MB/s)
 
 triangles: 67150
-gg_main 2517633045803337 2517633050718517
+gg_main 3047921212896414 3047921218052188
 
 INFO triangles/irgl/roadNet-PA_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
-Total time: 4 ms
-Total time: 4915180 ns
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8312061952
+Total time: 5 ms
+Total time: 5155774 ns
 
-PASS triangles/irgl/roadNet-PA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498169176.56.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:06:19
-PERF triangles/irgl/roadNet-PA_adj.sym 1498169176.56.1 1 4915180 BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498169176.56.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:06:19
-INFO Running BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498169176.56.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
-INFO triangles/irgl/roadNet-PA_adj.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7999MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=1088092, nedges=3083796.
-Host memory for graph:  31 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 33375136 bytes in 58 ms (575.43 MB/s)
-
-triangles: 67150
-gg_main 2517634289664958 2517634294532018
-
-INFO triangles/irgl/roadNet-PA_adj.sym STDERR
-OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
-Total time: 4 ms
-Total time: 4867060 ns
-
-PASS triangles/irgl/roadNet-PA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498169176.56.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:06:20
-PERF triangles/irgl/roadNet-PA_adj.sym 1498169176.56.1 2 4867060 BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498169176.56.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
+PASS triangles/irgl/roadNet-PA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498699484.29.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:24:48
+PERF triangles/irgl/roadNet-PA_adj.sym 1498699484.29.1 2 5155774 BMK2=1 BMK2_INPUTID=roadNet-PA_adj.sym BMK2_RUNID=1498699484.29.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-PA_adj.sym.gr
 TASK_COMPLETE triangles/irgl/roadNet-PA_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-22 17:06:20
-INFO APPROXIMATE DURATION 0:00:03.771513
+INFO DATE END 2017-06-28 20:24:48
+INFO APPROXIMATE DURATION 0:00:03.842781

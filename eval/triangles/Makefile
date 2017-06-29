@@ -49,5 +49,5 @@ triangles-energy.pdf: tuxedo-01-cpu-metrics.csv tuxedo-12-cpu-metrics.csv tuxedo
 triangles-reu.pdf: tuxedo-01-cpu-metrics.csv tuxedo-12-cpu-metrics.csv tuxedo-24-cpu-metrics.csv tuxedo-gtx1080-gpu-metrics.csv tuxedo-gtx1080-gpu-na-metrics.csv  tuxedo-minitri-cpu-metrics.csv dropInputs.txt
 	../scripts/plot_energy.py tuxedo-01-cpu-metrics.csv tuxedo-12-cpu-metrics.csv tuxedo-24-cpu-metrics.csv tuxedo-gtx1080-gpu-metrics.csv tuxedo-gtx1080-gpu-na-metrics.csv tuxedo-minitri-cpu-metrics.csv -l cpu-01 -l cpu-12 -l cpu-24 -l gpu -l gpu-nomem -l minitri -o $@ --di dropInputs.txt
 
-triangles-memusage.pdf: tuxedo-01-cpu-metrics.csv tuxedo-12-cpu-metrics.csv tuxedo-24-cpu-metrics.csv dropInputs.txt
-	../scripts/plot_memusage.py tuxedo-01-cpu-metrics.csv tuxedo-12-cpu-metrics.csv tuxedo-24-cpu-metrics.csv -l cpu-01 -l cpu-12 -l cpu-24 -o $@ --di dropInputs.txt
+triangles-memusage.pdf: tuxedo-01-cpu-metrics.csv tuxedo-12-cpu-metrics.csv tuxedo-24-cpu-metrics.csv tuxedo-gtx1080-gpu-metrics.csv tuxedo-gtx1080-gpu-na-metrics.csv dropInputs.txt
+	../scripts/plot_memusage.py tuxedo-01-cpu-metrics.csv tuxedo-12-cpu-metrics.csv tuxedo-24-cpu-metrics.csv tuxedo-gtx1080-gpu-metrics.csv tuxedo-gtx1080-gpu-na-metrics.csv -l cpu-01 -l cpu-12 -l cpu-24 -l gpu -l gpu-nomem -o $@ --di dropInputs.txt

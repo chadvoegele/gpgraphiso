@@ -72,13 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/irgl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/irgl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-22 17:06:12
+INFO DATE START 2017-06-28 20:21:25
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/triangle
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --log gpu-logs/triangles/tuxedo-gtx1080/ktruss_example.sym.log -v perf triangles/irgl ktruss_example.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --max-output-bytes 0 --log gpu-logs/triangles/tuxedo-gtx1080/ktruss_example.sym.log -v perf triangles/irgl ktruss_example.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:06:12
-INFO Running BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498169172.6.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:21:25
+INFO Running BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498699285.25.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
 INFO triangles/irgl/ktruss_example.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -92,18 +92,22 @@ Host memory for graph:   0 MB
 	  1%	 21%	 41%	 61%	 81%read 168 bytes in 0 ms (inf MB/s)
 
 triangles: 2
-gg_main 2517627766479870 2517627766788857
+gg_main 3047719553859818 3047719554729055
 
 INFO triangles/irgl/ktruss_example.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8385462272
 Total time: 0 ms
-Total time: 308987 ns
+Total time: 869237 ns
 
-PASS triangles/irgl/ktruss_example.sym: BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498169172.6.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:06:13
-PERF triangles/irgl/ktruss_example.sym 1498169172.6.1 0 308987 BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498169172.6.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:06:13
-INFO Running BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498169172.6.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
+PASS triangles/irgl/ktruss_example.sym: BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498699285.25.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:21:26
+PERF triangles/irgl/ktruss_example.sym 1498699285.25.1 0 869237 BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498699285.25.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:21:26
+INFO Running BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498699285.25.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
 INFO triangles/irgl/ktruss_example.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -117,18 +121,22 @@ Host memory for graph:   0 MB
 	  1%	 21%	 41%	 61%	 81%read 168 bytes in 0 ms (inf MB/s)
 
 triangles: 2
-gg_main 2517628960489915 2517628960809678
+gg_main 3047720717340319 3047720718210252
 
 INFO triangles/irgl/ktruss_example.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8385462272
 Total time: 0 ms
-Total time: 319763 ns
+Total time: 869933 ns
 
-PASS triangles/irgl/ktruss_example.sym: BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498169172.6.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:06:14
-PERF triangles/irgl/ktruss_example.sym 1498169172.6.1 1 319763 BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498169172.6.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:06:14
-INFO Running BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498169172.6.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
+PASS triangles/irgl/ktruss_example.sym: BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498699285.25.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:21:27
+PERF triangles/irgl/ktruss_example.sym 1498699285.25.1 1 869933 BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498699285.25.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:21:27
+INFO Running BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498699285.25.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
 INFO triangles/irgl/ktruss_example.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -142,17 +150,21 @@ Host memory for graph:   0 MB
 	  1%	 21%	 41%	 61%	 81%read 168 bytes in 0 ms (inf MB/s)
 
 triangles: 2
-gg_main 2517630134768416 2517630135094245
+gg_main 3047721917561485 3047721918450195
 
 INFO triangles/irgl/ktruss_example.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8385462272
 Total time: 0 ms
-Total time: 325829 ns
+Total time: 888710 ns
 
-PASS triangles/irgl/ktruss_example.sym: BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498169172.6.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:06:16
-PERF triangles/irgl/ktruss_example.sym 1498169172.6.1 2 325829 BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498169172.6.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
+PASS triangles/irgl/ktruss_example.sym: BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498699285.25.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:21:28
+PERF triangles/irgl/ktruss_example.sym 1498699285.25.1 2 888710 BMK2=1 BMK2_INPUTID=ktruss_example.sym BMK2_RUNID=1498699285.25.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/small/ktruss_example.sym.gr
 TASK_COMPLETE triangles/irgl/ktruss_example.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-22 17:06:16
-INFO APPROXIMATE DURATION 0:00:03.589867
+INFO DATE END 2017-06-28 20:21:28
+INFO APPROXIMATE DURATION 0:00:03.588367

@@ -72,13 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/irgl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/irgl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-22 17:06:08
+INFO DATE START 2017-06-28 20:23:22
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/triangle
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --log gpu-logs/triangles/tuxedo-gtx1080/as-caida20071105_adj.sym.log -v perf triangles/irgl as-caida20071105_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --max-output-bytes 0 --log gpu-logs/triangles/tuxedo-gtx1080/as-caida20071105_adj.sym.log -v perf triangles/irgl as-caida20071105_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:06:08
-INFO Running BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498169168.61.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:23:22
+INFO Running BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498699402.7.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
 INFO triangles/irgl/as-caida20071105_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -92,18 +92,22 @@ Host memory for graph:   1 MB
 	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 1065928 bytes in 2 ms (532.96 MB/s)
 
 triangles: 36365
-gg_main 2517623789788465 2517623791313589
+gg_main 3047837000287382 3047837002368324
 
 INFO triangles/irgl/as-caida20071105_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
-Total time: 1 ms
-Total time: 1525124 ns
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8379170816
+Total time: 2 ms
+Total time: 2080942 ns
 
-PASS triangles/irgl/as-caida20071105_adj.sym: BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498169168.61.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:06:09
-PERF triangles/irgl/as-caida20071105_adj.sym 1498169168.61.1 0 1525124 BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498169168.61.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:06:09
-INFO Running BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498169168.61.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
+PASS triangles/irgl/as-caida20071105_adj.sym: BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498699402.7.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:23:23
+PERF triangles/irgl/as-caida20071105_adj.sym 1498699402.7.1 0 2080942 BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498699402.7.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:23:23
+INFO Running BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498699402.7.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
 INFO triangles/irgl/as-caida20071105_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -117,18 +121,22 @@ Host memory for graph:   1 MB
 	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 1065928 bytes in 2 ms (532.96 MB/s)
 
 triangles: 36365
-gg_main 2517624992279125 2517624993789739
+gg_main 3047838200973189 3047838203022457
 
 INFO triangles/irgl/as-caida20071105_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
-Total time: 1 ms
-Total time: 1510614 ns
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8379170816
+Total time: 2 ms
+Total time: 2049268 ns
 
-PASS triangles/irgl/as-caida20071105_adj.sym: BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498169168.61.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:06:11
-PERF triangles/irgl/as-caida20071105_adj.sym 1498169168.61.1 1 1510614 BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498169168.61.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:06:11
-INFO Running BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498169168.61.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
+PASS triangles/irgl/as-caida20071105_adj.sym: BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498699402.7.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:23:25
+PERF triangles/irgl/as-caida20071105_adj.sym 1498699402.7.1 1 2049268 BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498699402.7.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:23:25
+INFO Running BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498699402.7.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
 INFO triangles/irgl/as-caida20071105_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -142,17 +150,21 @@ Host memory for graph:   1 MB
 	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 1065928 bytes in 2 ms (532.96 MB/s)
 
 triangles: 36365
-gg_main 2517626151131260 2517626152645038
+gg_main 3047839405619122 3047839407670251
 
 INFO triangles/irgl/as-caida20071105_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
-Total time: 1 ms
-Total time: 1513778 ns
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8379170816
+Total time: 2 ms
+Total time: 2051129 ns
 
-PASS triangles/irgl/as-caida20071105_adj.sym: BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498169168.61.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:06:12
-PERF triangles/irgl/as-caida20071105_adj.sym 1498169168.61.1 2 1513778 BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498169168.61.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
+PASS triangles/irgl/as-caida20071105_adj.sym: BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498699402.7.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:23:26
+PERF triangles/irgl/as-caida20071105_adj.sym 1498699402.7.1 2 2051129 BMK2=1 BMK2_INPUTID=as-caida20071105_adj.sym BMK2_RUNID=1498699402.7.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/as-caida20071105_adj.sym.gr
 TASK_COMPLETE triangles/irgl/as-caida20071105_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-22 17:06:12
-INFO APPROXIMATE DURATION 0:00:03.600612
+INFO DATE END 2017-06-28 20:23:26
+INFO APPROXIMATE DURATION 0:00:03.603818

@@ -72,13 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/irgl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/irgl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-22 17:07:05
+INFO DATE START 2017-06-28 20:24:23
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/triangle
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --log gpu-logs/triangles/tuxedo-gtx1080/soc-Slashdot0811_adj.sym.log -v perf triangles/irgl soc-Slashdot0811_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --max-output-bytes 0 --log gpu-logs/triangles/tuxedo-gtx1080/soc-Slashdot0811_adj.sym.log -v perf triangles/irgl soc-Slashdot0811_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:07:05
-INFO Running BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498169225.45.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:24:23
+INFO Running BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498699463.69.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
 INFO triangles/irgl/soc-Slashdot0811_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -89,21 +89,25 @@ ECC Disabled
 
 nnodes=77360, nedges=938360.
 Host memory for graph:   7 MB
-	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 8125792 bytes in 14 ms (580.41 MB/s)
+	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 8125792 bytes in 15 ms (541.72 MB/s)
 
 triangles: 551724
-gg_main 2517680596436390 2517680602562789
+gg_main 3047897952072305 3047897958911710
 
 INFO triangles/irgl/soc-Slashdot0811_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8362393600
 Total time: 6 ms
-Total time: 6126399 ns
+Total time: 6839405 ns
 
-PASS triangles/irgl/soc-Slashdot0811_adj.sym: BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498169225.45.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:07:06
-PERF triangles/irgl/soc-Slashdot0811_adj.sym 1498169225.45.1 0 6126399 BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498169225.45.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:07:06
-INFO Running BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498169225.45.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
+PASS triangles/irgl/soc-Slashdot0811_adj.sym: BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498699463.69.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:24:24
+PERF triangles/irgl/soc-Slashdot0811_adj.sym 1498699463.69.1 0 6839405 BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498699463.69.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:24:24
+INFO Running BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498699463.69.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
 INFO triangles/irgl/soc-Slashdot0811_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -114,21 +118,25 @@ ECC Disabled
 
 nnodes=77360, nedges=938360.
 Host memory for graph:   7 MB
-	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 8125792 bytes in 14 ms (580.41 MB/s)
+	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 8125792 bytes in 15 ms (541.72 MB/s)
 
 triangles: 551724
-gg_main 2517681773006462 2517681779258633
+gg_main 3047899178143474 3047899184997003
 
 INFO triangles/irgl/soc-Slashdot0811_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8362393600
 Total time: 6 ms
-Total time: 6252171 ns
+Total time: 6853529 ns
 
-PASS triangles/irgl/soc-Slashdot0811_adj.sym: BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498169225.45.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:07:07
-PERF triangles/irgl/soc-Slashdot0811_adj.sym 1498169225.45.1 1 6252171 BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498169225.45.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:07:07
-INFO Running BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498169225.45.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
+PASS triangles/irgl/soc-Slashdot0811_adj.sym: BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498699463.69.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:24:26
+PERF triangles/irgl/soc-Slashdot0811_adj.sym 1498699463.69.1 1 6853529 BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498699463.69.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:24:26
+INFO Running BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498699463.69.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
 INFO triangles/irgl/soc-Slashdot0811_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -139,20 +147,24 @@ ECC Disabled
 
 nnodes=77360, nedges=938360.
 Host memory for graph:   7 MB
-	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 8125792 bytes in 14 ms (580.41 MB/s)
+	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 8125792 bytes in 15 ms (541.72 MB/s)
 
 triangles: 551724
-gg_main 2517682984854141 2517682991121123
+gg_main 3047900415933879 3047900422921131
 
 INFO triangles/irgl/soc-Slashdot0811_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8362393600
 Total time: 6 ms
-Total time: 6266982 ns
+Total time: 6987252 ns
 
-PASS triangles/irgl/soc-Slashdot0811_adj.sym: BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498169225.45.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:07:09
-PERF triangles/irgl/soc-Slashdot0811_adj.sym 1498169225.45.1 2 6266982 BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498169225.45.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
+PASS triangles/irgl/soc-Slashdot0811_adj.sym: BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498699463.69.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:24:27
+PERF triangles/irgl/soc-Slashdot0811_adj.sym 1498699463.69.1 2 6987252 BMK2=1 BMK2_INPUTID=soc-Slashdot0811_adj.sym BMK2_RUNID=1498699463.69.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0811_adj.sym.gr
 TASK_COMPLETE triangles/irgl/soc-Slashdot0811_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-22 17:07:09
-INFO APPROXIMATE DURATION 0:00:03.594607
+INFO DATE END 2017-06-28 20:24:27
+INFO APPROXIMATE DURATION 0:00:03.661052

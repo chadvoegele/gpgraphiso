@@ -72,13 +72,42 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/irgl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/irgl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-22 17:07:29
+INFO DATE START 2017-06-28 20:23:50
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/triangle
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --log gpu-logs/triangles/tuxedo-gtx1080/p2p-Gnutella31_adj.sym.log -v perf triangles/irgl p2p-Gnutella31_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --max-output-bytes 0 --log gpu-logs/triangles/tuxedo-gtx1080/p2p-Gnutella31_adj.sym.log -v perf triangles/irgl p2p-Gnutella31_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:07:29
-INFO Running BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498169249.36.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:23:50
+INFO Running BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498699430.92.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
+INFO triangles/irgl/p2p-Gnutella31_adj.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7999MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=62586, nedges=295784.
+Host memory for graph:   2 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 2866992 bytes in 7 ms (409.57 MB/s)
+
+triangles: 2024
+gg_main 3047865206349629 3047865211032769
+
+INFO triangles/irgl/p2p-Gnutella31_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
+OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8370782208
+Total time: 4 ms
+Total time: 4683140 ns
+
+PASS triangles/irgl/p2p-Gnutella31_adj.sym: BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498699430.92.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:23:52
+PERF triangles/irgl/p2p-Gnutella31_adj.sym 1498699430.92.1 0 4683140 BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498699430.92.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:23:52
+INFO Running BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498699430.92.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
 INFO triangles/irgl/p2p-Gnutella31_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -92,18 +121,22 @@ Host memory for graph:   2 MB
 	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 2866992 bytes in 6 ms (477.83 MB/s)
 
 triangles: 2024
-gg_main 2517704554318463 2517704558499537
+gg_main 3047866413329266 3047866417991469
 
 INFO triangles/irgl/p2p-Gnutella31_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8370782208
 Total time: 4 ms
-Total time: 4181074 ns
+Total time: 4662203 ns
 
-PASS triangles/irgl/p2p-Gnutella31_adj.sym: BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498169249.36.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:07:30
-PERF triangles/irgl/p2p-Gnutella31_adj.sym 1498169249.36.1 0 4181074 BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498169249.36.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:07:30
-INFO Running BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498169249.36.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
+PASS triangles/irgl/p2p-Gnutella31_adj.sym: BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498699430.92.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:23:53
+PERF triangles/irgl/p2p-Gnutella31_adj.sym 1498699430.92.1 1 4662203 BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498699430.92.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:23:53
+INFO Running BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498699430.92.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
 INFO triangles/irgl/p2p-Gnutella31_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -114,45 +147,24 @@ ECC Disabled
 
 nnodes=62586, nedges=295784.
 Host memory for graph:   2 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 2866992 bytes in 6 ms (477.83 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 2866992 bytes in 7 ms (409.57 MB/s)
 
 triangles: 2024
-gg_main 2517705781538424 2517705785988589
+gg_main 3047867625240523 3047867629926568
 
 INFO triangles/irgl/p2p-Gnutella31_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8370782208
 Total time: 4 ms
-Total time: 4450165 ns
+Total time: 4686045 ns
 
-PASS triangles/irgl/p2p-Gnutella31_adj.sym: BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498169249.36.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:07:31
-PERF triangles/irgl/p2p-Gnutella31_adj.sym 1498169249.36.1 1 4450165 BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498169249.36.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:07:31
-INFO Running BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498169249.36.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
-INFO triangles/irgl/p2p-Gnutella31_adj.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7999MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=62586, nedges=295784.
-Host memory for graph:   2 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 2866992 bytes in 6 ms (477.83 MB/s)
-
-triangles: 2024
-gg_main 2517706993276589 2517706997427478
-
-INFO triangles/irgl/p2p-Gnutella31_adj.sym STDERR
-OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
-Total time: 4 ms
-Total time: 4150889 ns
-
-PASS triangles/irgl/p2p-Gnutella31_adj.sym: BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498169249.36.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:07:33
-PERF triangles/irgl/p2p-Gnutella31_adj.sym 1498169249.36.1 2 4150889 BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498169249.36.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
+PASS triangles/irgl/p2p-Gnutella31_adj.sym: BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498699430.92.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:23:54
+PERF triangles/irgl/p2p-Gnutella31_adj.sym 1498699430.92.1 2 4686045 BMK2=1 BMK2_INPUTID=p2p-Gnutella31_adj.sym BMK2_RUNID=1498699430.92.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/p2p-Gnutella31_adj.sym.gr
 TASK_COMPLETE triangles/irgl/p2p-Gnutella31_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-22 17:07:33
-INFO APPROXIMATE DURATION 0:00:03.674245
+INFO DATE END 2017-06-28 20:23:54
+INFO APPROXIMATE DURATION 0:00:03.630939

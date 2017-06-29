@@ -72,13 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/irgl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/irgl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-22 17:08:09
+INFO DATE START 2017-06-28 20:25:09
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/triangle
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --log gpu-logs/triangles/tuxedo-gtx1080/roadNet-CA_adj.sym.log -v perf triangles/irgl roadNet-CA_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --max-output-bytes 0 --log gpu-logs/triangles/tuxedo-gtx1080/roadNet-CA_adj.sym.log -v perf triangles/irgl roadNet-CA_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:08:09
-INFO Running BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498169289.58.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:25:09
+INFO Running BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498699509.88.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
 INFO triangles/irgl/roadNet-CA_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -92,18 +92,22 @@ Host memory for graph:  57 MB
 	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 59987392 bytes in 95 ms (631.45 MB/s)
 
 triangles: 120676
-gg_main 2517744838484959 2517744843974896
+gg_main 3047944283772079 3047944289426882
 
 INFO triangles/irgl/roadNet-CA_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8263827456
 Total time: 5 ms
-Total time: 5489937 ns
+Total time: 5654803 ns
 
-PASS triangles/irgl/roadNet-CA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498169289.58.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:08:10
-PERF triangles/irgl/roadNet-CA_adj.sym 1498169289.58.1 0 5489937 BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498169289.58.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:08:10
-INFO Running BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498169289.58.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
+PASS triangles/irgl/roadNet-CA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498699509.88.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:25:11
+PERF triangles/irgl/roadNet-CA_adj.sym 1498699509.88.1 0 5654803 BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498699509.88.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:25:11
+INFO Running BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498699509.88.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
 INFO triangles/irgl/roadNet-CA_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -117,18 +121,22 @@ Host memory for graph:  57 MB
 	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 59987392 bytes in 94 ms (638.16 MB/s)
 
 triangles: 120676
-gg_main 2517746094773874 2517746100090996
+gg_main 3047945567003416 3047945572635363
 
 INFO triangles/irgl/roadNet-CA_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8263827456
 Total time: 5 ms
-Total time: 5317122 ns
+Total time: 5631947 ns
 
-PASS triangles/irgl/roadNet-CA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498169289.58.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:08:12
-PERF triangles/irgl/roadNet-CA_adj.sym 1498169289.58.1 1 5317122 BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498169289.58.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:08:12
-INFO Running BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498169289.58.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
+PASS triangles/irgl/roadNet-CA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498699509.88.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:25:12
+PERF triangles/irgl/roadNet-CA_adj.sym 1498699509.88.1 1 5631947 BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498699509.88.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:25:12
+INFO Running BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498699509.88.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
 INFO triangles/irgl/roadNet-CA_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -139,20 +147,24 @@ ECC Disabled
 
 nnodes=1965206, nedges=5533214.
 Host memory for graph:  57 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 59987392 bytes in 92 ms (652.04 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 59987392 bytes in 93 ms (645.03 MB/s)
 
 triangles: 120676
-gg_main 2517747362729468 2517747367992760
+gg_main 3047946829035425 3047946834677975
 
 INFO triangles/irgl/roadNet-CA_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8263827456
 Total time: 5 ms
-Total time: 5263292 ns
+Total time: 5642550 ns
 
-PASS triangles/irgl/roadNet-CA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498169289.58.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:08:13
-PERF triangles/irgl/roadNet-CA_adj.sym 1498169289.58.1 2 5263292 BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498169289.58.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
+PASS triangles/irgl/roadNet-CA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498699509.88.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:25:13
+PERF triangles/irgl/roadNet-CA_adj.sym 1498699509.88.1 2 5642550 BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498699509.88.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr
 TASK_COMPLETE triangles/irgl/roadNet-CA_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-22 17:08:13
-INFO APPROXIMATE DURATION 0:00:03.812646
+INFO DATE END 2017-06-28 20:25:13
+INFO APPROXIMATE DURATION 0:00:03.868522

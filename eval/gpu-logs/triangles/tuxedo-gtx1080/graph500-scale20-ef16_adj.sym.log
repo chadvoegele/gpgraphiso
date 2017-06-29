@@ -72,13 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/irgl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/irgl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-22 17:02:47
+INFO DATE START 2017-06-28 20:25:24
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/triangle
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --log gpu-logs/triangles/tuxedo-gtx1080/graph500-scale20-ef16_adj.sym.log -v perf triangles/irgl graph500-scale20-ef16_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --max-output-bytes 0 --log gpu-logs/triangles/tuxedo-gtx1080/graph500-scale20-ef16_adj.sym.log -v perf triangles/irgl graph500-scale20-ef16_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:02:47
-INFO Running BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498168967.32.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:25:24
+INFO Running BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498699524.06.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
 INFO triangles/irgl/graph500-scale20-ef16_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -89,21 +89,25 @@ ECC Disabled
 
 nnodes=645820, nedges=31361722.
 Host memory for graph: 244 MB
-	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 256060368 bytes in 239 ms (1071.38 MB/s)
+	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 256060368 bytes in 241 ms (1062.49 MB/s)
 
 triangles: 419349784
-gg_main 2517422753633771 2517423454053036
+gg_main 3047958671874156 3047959366775662
 
 INFO triangles/irgl/graph500-scale20-ef16_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
-Total time: 700 ms
-Total time: 700419265 ns
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8119123968
+Total time: 694 ms
+Total time: 694901506 ns
 
-PASS triangles/irgl/graph500-scale20-ef16_adj.sym: BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498168967.32.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:02:49
-PERF triangles/irgl/graph500-scale20-ef16_adj.sym 1498168967.32.1 0 700419265 BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498168967.32.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:02:49
-INFO Running BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498168967.32.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
+PASS triangles/irgl/graph500-scale20-ef16_adj.sym: BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498699524.06.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:25:26
+PERF triangles/irgl/graph500-scale20-ef16_adj.sym 1498699524.06.1 0 694901506 BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498699524.06.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:25:26
+INFO Running BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498699524.06.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
 INFO triangles/irgl/graph500-scale20-ef16_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -114,21 +118,25 @@ ECC Disabled
 
 nnodes=645820, nedges=31361722.
 Host memory for graph: 244 MB
-	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 256060368 bytes in 242 ms (1058.10 MB/s)
+	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 256060368 bytes in 252 ms (1016.11 MB/s)
 
 triangles: 419349784
-gg_main 2517424859955535 2517425550136595
+gg_main 3047960888528654 3047961561828344
 
 INFO triangles/irgl/graph500-scale20-ef16_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
-Total time: 690 ms
-Total time: 690181060 ns
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8119123968
+Total time: 673 ms
+Total time: 673299690 ns
 
-PASS triangles/irgl/graph500-scale20-ef16_adj.sym: BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498168967.32.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:02:51
-PERF triangles/irgl/graph500-scale20-ef16_adj.sym 1498168967.32.1 1 690181060 BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498168967.32.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:02:51
-INFO Running BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498168967.32.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
+PASS triangles/irgl/graph500-scale20-ef16_adj.sym: BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498699524.06.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:25:28
+PERF triangles/irgl/graph500-scale20-ef16_adj.sym 1498699524.06.1 1 673299690 BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498699524.06.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:25:28
+INFO Running BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498699524.06.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
 INFO triangles/irgl/graph500-scale20-ef16_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -139,20 +147,24 @@ ECC Disabled
 
 nnodes=645820, nedges=31361722.
 Host memory for graph: 244 MB
-	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 256060368 bytes in 238 ms (1075.88 MB/s)
+	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 256060368 bytes in 237 ms (1080.42 MB/s)
 
 triangles: 419349784
-gg_main 2517427028203599 2517427717726528
+gg_main 3047963003248881 3047963705556744
 
 INFO triangles/irgl/graph500-scale20-ef16_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
-Total time: 689 ms
-Total time: 689522929 ns
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8119123968
+Total time: 702 ms
+Total time: 702307863 ns
 
-PASS triangles/irgl/graph500-scale20-ef16_adj.sym: BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498168967.32.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:02:53
-PERF triangles/irgl/graph500-scale20-ef16_adj.sym 1498168967.32.1 2 689522929 BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498168967.32.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
+PASS triangles/irgl/graph500-scale20-ef16_adj.sym: BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498699524.06.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:25:30
+PERF triangles/irgl/graph500-scale20-ef16_adj.sym 1498699524.06.1 2 702307863 BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498699524.06.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr
 TASK_COMPLETE triangles/irgl/graph500-scale20-ef16_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-22 17:02:53
-INFO APPROXIMATE DURATION 0:00:06.472300
+INFO DATE END 2017-06-28 20:25:30
+INFO APPROXIMATE DURATION 0:00:06.613082

@@ -22,7 +22,7 @@ triangles/tuxedo-gtx1080-raw.csv: $(wildcard gpu-logs/triangles/tuxedo-gtx1080/*
 	scripts/postproc_gpu_raw.py $@ -o $@
 
 triangles/tuxedo-gtx1080.csv: triangles/tuxedo-gtx1080-raw.csv
-	$(BMK2)/ps/import.py -o $@ $^
+	$(BMK2)/ps/import.py -a meminfo_bytes -o $@ $^
 
 
 triangles/tuxedo-gtx1080-power.map: $(wildcard gpu-logs/triangles/tuxedo-gtx1080-power/*.log)

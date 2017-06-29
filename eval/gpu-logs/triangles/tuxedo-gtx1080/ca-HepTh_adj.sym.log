@@ -72,13 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/irgl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/irgl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-22 17:04:37
+INFO DATE START 2017-06-28 20:22:25
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/triangle
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --log gpu-logs/triangles/tuxedo-gtx1080/ca-HepTh_adj.sym.log -v perf triangles/irgl ca-HepTh_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --max-output-bytes 0 --log gpu-logs/triangles/tuxedo-gtx1080/ca-HepTh_adj.sym.log -v perf triangles/irgl ca-HepTh_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:04:37
-INFO Running BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498169077.23.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:22:25
+INFO Running BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498699345.84.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
 INFO triangles/irgl/ca-HepTh_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -92,18 +92,22 @@ Host memory for graph:   0 MB
 	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 494616 bytes in 1 ms (494.62 MB/s)
 
 triangles: 28339
-gg_main 2517532414122019 2517532415520562
+gg_main 3047780123655266 3047780125524561
 
 INFO triangles/irgl/ca-HepTh_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8379170816
 Total time: 1 ms
-Total time: 1398543 ns
+Total time: 1869295 ns
 
-PASS triangles/irgl/ca-HepTh_adj.sym: BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498169077.23.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:04:38
-PERF triangles/irgl/ca-HepTh_adj.sym 1498169077.23.1 0 1398543 BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498169077.23.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:04:38
-INFO Running BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498169077.23.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
+PASS triangles/irgl/ca-HepTh_adj.sym: BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498699345.84.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:22:27
+PERF triangles/irgl/ca-HepTh_adj.sym 1498699345.84.1 0 1869295 BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498699345.84.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:22:27
+INFO Running BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498699345.84.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
 INFO triangles/irgl/ca-HepTh_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -117,18 +121,22 @@ Host memory for graph:   0 MB
 	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 494616 bytes in 1 ms (494.62 MB/s)
 
 triangles: 28339
-gg_main 2517533572837514 2517533574316194
+gg_main 3047781332085208 3047781334106004
 
 INFO triangles/irgl/ca-HepTh_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
-Total time: 1 ms
-Total time: 1478680 ns
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8379170816
+Total time: 2 ms
+Total time: 2020796 ns
 
-PASS triangles/irgl/ca-HepTh_adj.sym: BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498169077.23.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:04:39
-PERF triangles/irgl/ca-HepTh_adj.sym 1498169077.23.1 1 1478680 BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498169077.23.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:04:39
-INFO Running BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498169077.23.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
+PASS triangles/irgl/ca-HepTh_adj.sym: BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498699345.84.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:22:28
+PERF triangles/irgl/ca-HepTh_adj.sym 1498699345.84.1 1 2020796 BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498699345.84.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:22:28
+INFO Running BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498699345.84.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
 INFO triangles/irgl/ca-HepTh_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -139,20 +147,24 @@ ECC Disabled
 
 nnodes=9877, nedges=51946.
 Host memory for graph:   0 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 494616 bytes in 1 ms (494.62 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 494616 bytes in 0 ms (inf MB/s)
 
 triangles: 28339
-gg_main 2517534771894053 2517534773354671
+gg_main 3047782553331332 3047782555333210
 
 INFO triangles/irgl/ca-HepTh_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
-Total time: 1 ms
-Total time: 1460618 ns
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8379170816
+Total time: 2 ms
+Total time: 2001878 ns
 
-PASS triangles/irgl/ca-HepTh_adj.sym: BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498169077.23.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:04:40
-PERF triangles/irgl/ca-HepTh_adj.sym 1498169077.23.1 2 1460618 BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498169077.23.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
+PASS triangles/irgl/ca-HepTh_adj.sym: BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498699345.84.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:22:29
+PERF triangles/irgl/ca-HepTh_adj.sym 1498699345.84.1 2 2001878 BMK2=1 BMK2_INPUTID=ca-HepTh_adj.sym BMK2_RUNID=1498699345.84.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-HepTh_adj.sym.gr
 TASK_COMPLETE triangles/irgl/ca-HepTh_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-22 17:04:40
-INFO APPROXIMATE DURATION 0:00:03.589018
+INFO DATE END 2017-06-28 20:22:29
+INFO APPROXIMATE DURATION 0:00:03.628571

@@ -72,13 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/irgl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/irgl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-22 17:04:09
+INFO DATE START 2017-06-28 20:22:46
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/triangle
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --log gpu-logs/triangles/tuxedo-gtx1080/oregon2_010512_adj.sym.log -v perf triangles/irgl oregon2_010512_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --max-output-bytes 0 --log gpu-logs/triangles/tuxedo-gtx1080/oregon2_010512_adj.sym.log -v perf triangles/irgl oregon2_010512_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:04:09
-INFO Running BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498169049.4.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:22:46
+INFO Running BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498699366.08.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
 INFO triangles/irgl/oregon2_010512_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -92,18 +92,22 @@ Host memory for graph:   0 MB
 	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 590960 bytes in 1 ms (590.96 MB/s)
 
 triangles: 72866
-gg_main 2517504572401291 2517504573936532
+gg_main 3047800367747594 3047800369836681
 
 INFO triangles/irgl/oregon2_010512_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
-Total time: 1 ms
-Total time: 1535241 ns
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8379170816
+Total time: 2 ms
+Total time: 2089087 ns
 
-PASS triangles/irgl/oregon2_010512_adj.sym: BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498169049.4.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:04:10
-PERF triangles/irgl/oregon2_010512_adj.sym 1498169049.4.1 0 1535241 BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498169049.4.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:04:10
-INFO Running BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498169049.4.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
+PASS triangles/irgl/oregon2_010512_adj.sym: BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498699366.08.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:22:47
+PERF triangles/irgl/oregon2_010512_adj.sym 1498699366.08.1 0 2089087 BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498699366.08.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:22:47
+INFO Running BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498699366.08.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
 INFO triangles/irgl/oregon2_010512_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -117,18 +121,22 @@ Host memory for graph:   0 MB
 	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 590960 bytes in 1 ms (590.96 MB/s)
 
 triangles: 72866
-gg_main 2517505692871747 2517505694424892
+gg_main 3047801590264193 3047801592427475
 
 INFO triangles/irgl/oregon2_010512_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
-Total time: 1 ms
-Total time: 1553145 ns
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8379170816
+Total time: 2 ms
+Total time: 2163282 ns
 
-PASS triangles/irgl/oregon2_010512_adj.sym: BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498169049.4.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:04:11
-PERF triangles/irgl/oregon2_010512_adj.sym 1498169049.4.1 1 1553145 BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498169049.4.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:04:11
-INFO Running BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498169049.4.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
+PASS triangles/irgl/oregon2_010512_adj.sym: BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498699366.08.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:22:48
+PERF triangles/irgl/oregon2_010512_adj.sym 1498699366.08.1 1 2163282 BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498699366.08.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:22:48
+INFO Running BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498699366.08.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
 INFO triangles/irgl/oregon2_010512_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -139,20 +147,24 @@ ECC Disabled
 
 nnodes=11260, nedges=62606.
 Host memory for graph:   0 MB
-	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 590960 bytes in 0 ms (inf MB/s)
+	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 590960 bytes in 1 ms (590.96 MB/s)
 
 triangles: 72866
-gg_main 2517506876461050 2517506878021922
+gg_main 3047802770980855 3047802773094783
 
 INFO triangles/irgl/oregon2_010512_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
-Total time: 1 ms
-Total time: 1560872 ns
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8379170816
+Total time: 2 ms
+Total time: 2113928 ns
 
-PASS triangles/irgl/oregon2_010512_adj.sym: BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498169049.4.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:04:12
-PERF triangles/irgl/oregon2_010512_adj.sym 1498169049.4.1 2 1560872 BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498169049.4.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
+PASS triangles/irgl/oregon2_010512_adj.sym: BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498699366.08.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:22:49
+PERF triangles/irgl/oregon2_010512_adj.sym 1498699366.08.1 2 2113928 BMK2=1 BMK2_INPUTID=oregon2_010512_adj.sym BMK2_RUNID=1498699366.08.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010512_adj.sym.gr
 TASK_COMPLETE triangles/irgl/oregon2_010512_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-22 17:04:12
-INFO APPROXIMATE DURATION 0:00:03.517145
+INFO DATE END 2017-06-28 20:22:49
+INFO APPROXIMATE DURATION 0:00:03.596670

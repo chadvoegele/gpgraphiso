@@ -72,38 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/irgl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/irgl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-22 17:02:31
+INFO DATE START 2017-06-28 20:24:40
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/triangle
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --log gpu-logs/triangles/tuxedo-gtx1080/loc-gowalla_edges_adj.sym.log -v perf triangles/irgl loc-gowalla_edges_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --max-output-bytes 0 --log gpu-logs/triangles/tuxedo-gtx1080/loc-gowalla_edges_adj.sym.log -v perf triangles/irgl loc-gowalla_edges_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:02:31
-INFO Running BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498168951.1.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
-INFO triangles/irgl/loc-gowalla_edges_adj.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7999MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=196591, nedges=1900654.
-Host memory for graph:  15 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 16777992 bytes in 26 ms (645.31 MB/s)
-
-triangles: 2273138
-gg_main 2517406303613845 2517406310668411
-
-INFO triangles/irgl/loc-gowalla_edges_adj.sym STDERR
-OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
-Total time: 7 ms
-Total time: 7054566 ns
-
-PASS triangles/irgl/loc-gowalla_edges_adj.sym: BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498168951.1.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:02:32
-PERF triangles/irgl/loc-gowalla_edges_adj.sym 1498168951.1.1 0 7054566 BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498168951.1.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:02:32
-INFO Running BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498168951.1.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:24:40
+INFO Running BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498699480.11.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
 INFO triangles/irgl/loc-gowalla_edges_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -117,18 +92,22 @@ Host memory for graph:  15 MB
 	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 16777992 bytes in 27 ms (621.41 MB/s)
 
 triangles: 2273138
-gg_main 2517407556159766 2517407563329403
+gg_main 3047914413601571 3047914421131248
 
 INFO triangles/irgl/loc-gowalla_edges_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8343519232
 Total time: 7 ms
-Total time: 7169637 ns
+Total time: 7529677 ns
 
-PASS triangles/irgl/loc-gowalla_edges_adj.sym: BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498168951.1.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:02:33
-PERF triangles/irgl/loc-gowalla_edges_adj.sym 1498168951.1.1 1 7169637 BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498168951.1.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:02:33
-INFO Running BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498168951.1.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
+PASS triangles/irgl/loc-gowalla_edges_adj.sym: BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498699480.11.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:24:41
+PERF triangles/irgl/loc-gowalla_edges_adj.sym 1498699480.11.1 0 7529677 BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498699480.11.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:24:41
+INFO Running BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498699480.11.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
 INFO triangles/irgl/loc-gowalla_edges_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -142,17 +121,50 @@ Host memory for graph:  15 MB
 	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 16777992 bytes in 27 ms (621.41 MB/s)
 
 triangles: 2273138
-gg_main 2517408781060658 2517408788203679
+gg_main 3047915644177645 3047915651781604
 
 INFO triangles/irgl/loc-gowalla_edges_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8343519232
 Total time: 7 ms
-Total time: 7143021 ns
+Total time: 7603959 ns
 
-PASS triangles/irgl/loc-gowalla_edges_adj.sym: BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498168951.1.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:02:34
-PERF triangles/irgl/loc-gowalla_edges_adj.sym 1498168951.1.1 2 7143021 BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498168951.1.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
+PASS triangles/irgl/loc-gowalla_edges_adj.sym: BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498699480.11.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:24:42
+PERF triangles/irgl/loc-gowalla_edges_adj.sym 1498699480.11.1 1 7603959 BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498699480.11.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:24:42
+INFO Running BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498699480.11.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
+INFO triangles/irgl/loc-gowalla_edges_adj.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7999MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=196591, nedges=1900654.
+Host memory for graph:  15 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 16777992 bytes in 28 ms (599.21 MB/s)
+
+triangles: 2273138
+gg_main 3047916898666857 3047916906144691
+
+INFO triangles/irgl/loc-gowalla_edges_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
+OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8343519232
+Total time: 7 ms
+Total time: 7477834 ns
+
+PASS triangles/irgl/loc-gowalla_edges_adj.sym: BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498699480.11.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:24:43
+PERF triangles/irgl/loc-gowalla_edges_adj.sym 1498699480.11.1 2 7477834 BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498699480.11.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr
 TASK_COMPLETE triangles/irgl/loc-gowalla_edges_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-22 17:02:34
-INFO APPROXIMATE DURATION 0:00:03.740169
+INFO DATE END 2017-06-28 20:24:43
+INFO APPROXIMATE DURATION 0:00:03.739601

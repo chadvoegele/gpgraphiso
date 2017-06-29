@@ -72,13 +72,13 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'triangles/irgl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'triangles/irgl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-22 17:03:44
+INFO DATE START 2017-06-28 20:25:05
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/triangle
-INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --log gpu-logs/triangles/tuxedo-gtx1080/amazon0601_adj.sym.log -v perf triangles/irgl amazon0601_adj.sym
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/triangle --max-output-bytes 0 --log gpu-logs/triangles/tuxedo-gtx1080/amazon0601_adj.sym.log -v perf triangles/irgl amazon0601_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:03:44
-INFO Running BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498169024.5.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:25:05
+INFO Running BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498699505.62.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
 INFO triangles/irgl/amazon0601_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -92,18 +92,22 @@ Host memory for graph:  40 MB
 	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 42321712 bytes in 58 ms (729.68 MB/s)
 
 triangles: 3986507
-gg_main 2517479727755183 2517479735942862
+gg_main 3047939967302024 3047939976026903
 
 INFO triangles/irgl/amazon0601_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8291090432
 Total time: 8 ms
-Total time: 8187679 ns
+Total time: 8724879 ns
 
-PASS triangles/irgl/amazon0601_adj.sym: BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498169024.5.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:03:45
-PERF triangles/irgl/amazon0601_adj.sym 1498169024.5.1 0 8187679 BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498169024.5.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:03:45
-INFO Running BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498169024.5.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
+PASS triangles/irgl/amazon0601_adj.sym: BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498699505.62.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:25:06
+PERF triangles/irgl/amazon0601_adj.sym 1498699505.62.1 0 8724879 BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498699505.62.1.0 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:25:06
+INFO Running BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498699505.62.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
 INFO triangles/irgl/amazon0601_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -114,21 +118,25 @@ ECC Disabled
 
 nnodes=403394, nedges=4886816.
 Host memory for graph:  40 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 42321712 bytes in 41 ms (1032.24 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 42321712 bytes in 59 ms (717.32 MB/s)
 
 triangles: 3986507
-gg_main 2517480978094675 2517480985864882
+gg_main 3047941255112007 3047941263736372
 
 INFO triangles/irgl/amazon0601_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
-Total time: 7 ms
-Total time: 7770207 ns
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8291090432
+Total time: 8 ms
+Total time: 8624365 ns
 
-PASS triangles/irgl/amazon0601_adj.sym: BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498169024.5.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:03:47
-PERF triangles/irgl/amazon0601_adj.sym 1498169024.5.1 1 7770207 BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498169024.5.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
-INFO PERFDATE BEGIN_RUN 2017-06-22 17:03:47
-INFO Running BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498169024.5.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
+PASS triangles/irgl/amazon0601_adj.sym: BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498699505.62.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:25:08
+PERF triangles/irgl/amazon0601_adj.sym 1498699505.62.1 1 8624365 BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498699505.62.1.1 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
+INFO PERFDATE BEGIN_RUN 2017-06-28 20:25:08
+INFO Running BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498699505.62.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
 INFO triangles/irgl/amazon0601_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -139,20 +147,24 @@ ECC Disabled
 
 nnodes=403394, nedges=4886816.
 Host memory for graph:  40 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 42321712 bytes in 60 ms (705.36 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 42321712 bytes in 57 ms (742.49 MB/s)
 
 triangles: 3986507
-gg_main 2517482207452182 2517482215683029
+gg_main 3047942502303006 3047942510893947
 
 INFO triangles/irgl/amazon0601_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
 OPTIONS: coop_conv=False $ outline_iterate_gb=False $ backoff_blocking_factor=4 $ parcomb=False $ np_schedulers=set(['tb', 'fg']) $ cc_disable=set([]) $ hacks=set([]) $ np_factor=8 $ instrument=set([]) $ unroll=[] $ instrument_mode=None $ read_props=None $ outline_iterate=True $ ignore_nested_errors=False $ np=True $ write_props=None $ quiet_cgen=True $ retry_backoff=True $ cuda.graph_type=texture $ cuda.use_worklist_slots=True $ cuda.worklist_type=texture
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8291090432
 Total time: 8 ms
-Total time: 8230847 ns
+Total time: 8590941 ns
 
-PASS triangles/irgl/amazon0601_adj.sym: BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498169024.5.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
-INFO PERFDATE END_RUN 2017-06-22 17:03:48
-PERF triangles/irgl/amazon0601_adj.sym 1498169024.5.1 2 8230847 BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498169024.5.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
+PASS triangles/irgl/amazon0601_adj.sym: BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498699505.62.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
+INFO PERFDATE END_RUN 2017-06-28 20:25:09
+PERF triangles/irgl/amazon0601_adj.sym 1498699505.62.1 2 8590941 BMK2=1 BMK2_INPUTID=amazon0601_adj.sym BMK2_RUNID=1498699505.62.1.2 BMK2_BINID=triangles/irgl ../ktruss/triangle/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0601_adj.sym.gr
 TASK_COMPLETE triangles/irgl/amazon0601_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-22 17:03:48
-INFO APPROXIMATE DURATION 0:00:03.724746
+INFO DATE END 2017-06-28 20:25:09
+INFO APPROXIMATE DURATION 0:00:03.819064
