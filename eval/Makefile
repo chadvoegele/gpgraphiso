@@ -1,6 +1,6 @@
 include common.mk
 
-all: ktruss-inputs triangle-inputs ktruss-tuxedo-gtx1080.mk ktruss-tuxedo-gtx1080-power.mk ktruss-tuxedo-k80.mk triangles-tuxedo-gtx1080.mk triangles-tuxedo-k80.mk ktruss-tuxedo-01.mk ktruss-tuxedo-12.mk ktruss-tuxedo-24.mk inputs-desc.csv triangles-tuxedo-gtx1080-power.mk triangles-tuxedo-12.mk triangles-tuxedo-24.mk triangles-tuxedo-01.mk $(CPU_TRIANGLES)/bmktest2.py triangles-tuxedo-minitri.mk ktruss-ref-python.mk ktruss-ref-julia.mk
+all: ktruss-inputs triangle-inputs ktruss-tuxedo-gtx1080.mk ktruss-tuxedo-gtx1080-power.mk ktruss-tuxedo-k80.mk triangles-tuxedo-gtx1080.mk triangles-tuxedo-k80.mk ktruss-tuxedo-01.mk ktruss-tuxedo-12.mk ktruss-tuxedo-24.mk inputs-desc.csv triangles-tuxedo-gtx1080-power.mk triangles-tuxedo-12.mk triangles-tuxedo-24.mk triangles-tuxedo-01.mk $(CPU_TRIANGLES)/bmktest2.py triangles-tuxedo-minitri.mk ktruss-ref-python.mk ktruss-ref-julia.mk ktruss-tuxedo-24-ctt.mk
 
 ktruss-inputs: $(BMK2CFG)/graph.bispec
 	$(BMK2)/rsinfo.py -d $(BMK2CFG) --cfg default -o $@ --scan $(KTRUSS) -i inputs ktruss/irgl
@@ -58,11 +58,16 @@ ktruss-tuxedo-12.mk: ktruss-inputs cpu-logs/ktruss/tuxedo-12 templates/cpu-expt.
 ktruss-tuxedo-24.mk: ktruss-inputs cpu-logs/ktruss/tuxedo-24 templates/cpu-expt.template
 	scripts/gen_makefile.py $< ktruss/galois+bspIm tuxedo-24 templates/cpu-expt.template $@ -t "{bmk}-{expt}" -v bmk=ktruss -v scandir=$(CPU_KTRUSS) -v threads=24
 
+ktruss-tuxedo-24-ctt.mk: ktruss-inputs cpu-logs/ktruss/tuxedo-24 templates/cpu-expt.template
+	scripts/gen_makefile.py $< ktruss/galois+bspCoreThenTruss tuxedo-24-ctt templates/cpu-expt.template $@ -t "{bmk}-{expt}" -v bmk=ktruss -v scandir=$(CPU_KTRUSS) -v threads=24
+
+
 ktruss-ref-python.mk: ktruss-inputs cpu-logs/ktruss/tuxedo-ref-python templates/cpu-expt.template
 	scripts/gen_makefile.py $< ktruss/ref+python tuxedo-ref-python templates/cpu-expt.template $@ -t "{bmk}-{expt}" -v bmk=ktruss -v scandir=$(CPU_KTRUSS_REF)/python -v threads=1
 
 ktruss-ref-julia.mk: ktruss-inputs cpu-logs/ktruss/tuxedo-ref-julia templates/cpu-expt.template
 	scripts/gen_makefile.py $< ktruss/ref+julia tuxedo-ref-julia templates/cpu-expt.template $@ -t "{bmk}-{expt}" -v bmk=ktruss -v scandir=$(CPU_KTRUSS_REF)/julia -v threads=1
+
 
 triangles-tuxedo-24.mk: triangle-inputs cpu-logs/triangles/tuxedo-24 templates/cpu-expt.template
 	scripts/gen_makefile.py $< triangles/galois+edge tuxedo-24 templates/cpu-expt.template $@ -t "{bmk}-{expt}" -v bmk=triangles -v scandir=$(CPU_TRIANGLES) -v threads=24
@@ -72,6 +77,7 @@ triangles-tuxedo-12.mk: triangle-inputs cpu-logs/triangles/tuxedo-12 templates/c
 
 triangles-tuxedo-01.mk: triangle-inputs cpu-logs/triangles/tuxedo-01 templates/cpu-expt.template
 	scripts/gen_makefile.py $< triangles/galois+edge tuxedo-01 templates/cpu-expt.template $@ -t "{bmk}-{expt}" -v bmk=triangles -v scandir=$(CPU_TRIANGLES) -v threads=01
+
 
 triangles-tuxedo-minitri.mk: triangle-inputs cpu-logs/triangles/tuxedo-minitri templates/cpu-expt.template
 	scripts/gen_makefile.py $< triangles/miniTri tuxedo-minitri templates/cpu-expt.template $@ -t "{bmk}-{expt}" -v bmk=triangles -v scandir=$(CPU_MINITRI) -v threads=01

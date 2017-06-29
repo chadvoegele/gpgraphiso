@@ -124,6 +124,7 @@ name = com-lj.wgt32
 
 [com-lj.wgt32.sym]
 name = com-lj.wgt32.sym
+triangles = 177820130
 ktruss_100_nodes = 6605
 ktruss_100_edges = 864894
 ktruss_101_nodes = 6475
@@ -847,6 +848,7 @@ name = com-friendster.wgt32
 
 [com-friendster.wgt32.sym]
 name = com-friendster.wgt32.sym
+triangles = 4173724142
 ktruss_100_nodes = 141
 ktruss_100_edges = 9797
 ktruss_101_nodes = 141
@@ -1124,6 +1126,7 @@ name = com-orkut.wgt32
 
 [com-orkut.wgt32.sym]
 name = com-orkut.wgt32.sym
+triangles = 627584181
 nontex = 1
 ktruss_10_nodes = 1212897
 ktruss_10_edges = 41407911
@@ -1300,6 +1303,7 @@ name = com-youtube.wgt32
 
 [com-youtube.wgt32.sym]
 name = com-youtube.wgt32.sym
+triangles = 3056386
 ktruss_10_nodes = 4061
 ktruss_10_edges = 120055
 ktruss_11_nodes = 2982
@@ -1357,6 +1361,7 @@ name = com-dblp.wgt32
 
 [com-dblp.wgt32.sym]
 name = com-dblp.wgt32.sym
+triangles = 2224385
 ktruss_100_nodes = 216
 ktruss_100_edges = 11592
 ktruss_101_nodes = 216
@@ -1604,6 +1609,7 @@ name = com-amazon.wgt32
 
 [com-amazon.wgt32.sym]
 name = com-amazon.wgt32.sym
+triangles = 667129
 ktruss_2_nodes = 334863
 ktruss_2_edges = 925872
 ktruss_3_nodes = 265088
