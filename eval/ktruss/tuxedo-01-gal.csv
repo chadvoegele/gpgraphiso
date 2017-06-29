@@ -1,4 +1,7 @@
 binid,meminfo_bytes,meminfo_post_mb,meminfo_post_sum,run,xid
+ktruss/galois+bspIm/graph500-scale22-ef16_adj.sym,1052770304,1004,251,0,1498765539.71.1
+ktruss/galois+bspIm/graph500-scale22-ef16_adj.sym,1052770304,1004,251,1,1498765539.71.1
+ktruss/galois+bspIm/graph500-scale22-ef16_adj.sym,1052770304,1004,251,2,1498765539.71.1
 ktruss/galois+bspIm/oregon2_010414_adj.sym,8388608,8,2,0,1498519463.78.1
 ktruss/galois+bspIm/oregon2_010414_adj.sym,8388608,8,2,1,1498519463.78.1
 ktruss/galois+bspIm/oregon2_010414_adj.sym,8388608,8,2,2,1498519463.78.1
