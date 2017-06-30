@@ -12,6 +12,11 @@ tuxedo-gtx1080 triangles/irgl/ca-HepTh_adj.sym 1.96 +- 0.21 ms  s.d. 0.08 ms run
 tuxedo-gtx1080 triangles/irgl/cit-HepPh_adj.sym 5.61 +- 0.33 ms  s.d. 0.13 ms runs 3
 tuxedo-gtx1080 triangles/irgl/cit-HepTh_adj.sym 5.66 +- 0.02 ms  s.d. 0.01 ms runs 3
 tuxedo-gtx1080 triangles/irgl/cit-Patents_adj.sym 78.45 +- 0.14 ms  s.d. 0.06 ms runs 3
+tuxedo-gtx1080 triangles/irgl/com-amazon.wgt32.sym 6.43 +- 0.05 ms  s.d. 0.02 ms runs 3
+tuxedo-gtx1080 triangles/irgl/com-dblp.wgt32.sym 6.81 +- 0.22 ms  s.d. 0.09 ms runs 3
+tuxedo-gtx1080 triangles/irgl/com-lj.wgt32.sym 216.75 +- 3.86 ms  s.d. 1.55 ms runs 3
+tuxedo-gtx1080 triangles/irgl/com-orkut.wgt32.sym 1908.79 +- 9.08 ms  s.d. 3.66 ms runs 3
+tuxedo-gtx1080 triangles/irgl/com-youtube.wgt32.sym 11.38 +- 0.22 ms  s.d. 0.09 ms runs 3
 tuxedo-gtx1080 triangles/irgl/complete5_sm.sym 0.87 +- 0.05 ms  s.d. 0.02 ms runs 3
 tuxedo-gtx1080 triangles/irgl/disjoint_tri_sm.sym 0.87 +- 0.05 ms  s.d. 0.02 ms runs 3
 tuxedo-gtx1080 triangles/irgl/email-Enron_adj.sym 5.17 +- 0.07 ms  s.d. 0.03 ms runs 3
