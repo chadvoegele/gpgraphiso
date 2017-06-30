@@ -75,15 +75,15 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 20:39:11
+INFO DATE START 2017-06-29 16:55:57
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --log gpu-logs/ktruss/tuxedo-gtx1080-power/loc-gowalla_edges_adj.sym.log --max-output-bytes 0 --nvprof --npdb --npsystem -v perf ktruss/irgl+wl loc-gowalla_edges_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:39:11
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testRW9xzY' for '@output'
-COLLECT ktruss/irgl+wl/loc-gowalla_edges_adj.sym 1498700351.96.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498700351.96.1.0.nvprof
-INFO Running BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498700351.96.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498700351.96.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_testRW9xzY
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:55:57
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test3dIODp' for '@output'
+COLLECT ktruss/irgl+wl/loc-gowalla_edges_adj.sym 1498773357.41.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498773357.41.1.0.nvprof
+INFO Running BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498773357.41.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498773357.41.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_test3dIODp
 INFO ktruss/irgl+wl/loc-gowalla_edges_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -94,27 +94,27 @@ ECC Disabled
 
 nnodes=196591, nedges=1900654.
 Host memory for graph:  15 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 16777992 bytes in 26 ms (645.31 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 16777992 bytes in 146 ms (114.92 MB/s)
 
 
 INFO ktruss/irgl+wl/loc-gowalla_edges_adj.sym STDERR
-==29169== NVPROF is profiling process 29169, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_testRW9xzY
+==22340== NVPROF is profiling process 22340, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_test3dIODp
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8263827456
-Total time: 59 ms
-Total time: 59297134 ns
-==29169== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498700351.96.1.0.nvprof
+Total time: 55 ms
+Total time: 55937449 ns
+==22340== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498773357.41.1.0.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testRW9xzY -trussNum=29 -trussNodes=30 -trussEdges=434
-PASS ktruss/irgl+wl/loc-gowalla_edges_adj.sym: BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498700351.96.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498700351.96.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_testRW9xzY
-INFO PERFDATE END_RUN 2017-06-28 20:39:17
-PERF ktruss/irgl+wl/loc-gowalla_edges_adj.sym 1498700351.96.1 0 59297134 BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498700351.96.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498700351.96.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_testRW9xzY
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:39:17
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testconz3X' for '@output'
-COLLECT ktruss/irgl+wl/loc-gowalla_edges_adj.sym 1498700351.96.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498700351.96.1.1.nvprof
-INFO Running BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700351.96.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498700351.96.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_testconz3X
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_test3dIODp -trussNum=29 -trussNodes=30 -trussEdges=434
+PASS ktruss/irgl+wl/loc-gowalla_edges_adj.sym: BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498773357.41.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498773357.41.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_test3dIODp
+INFO PERFDATE END_RUN 2017-06-29 16:56:02
+PERF ktruss/irgl+wl/loc-gowalla_edges_adj.sym 1498773357.41.1 0 55937449 BMK2=1 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2_RUNID=1498773357.41.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498773357.41.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_test3dIODp
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:56:02
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testKDxZQi' for '@output'
+COLLECT ktruss/irgl+wl/loc-gowalla_edges_adj.sym 1498773357.41.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498773357.41.1.1.nvprof
+INFO Running BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773357.41.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498773357.41.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_testKDxZQi
 INFO ktruss/irgl+wl/loc-gowalla_edges_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -125,27 +125,27 @@ ECC Disabled
 
 nnodes=196591, nedges=1900654.
 Host memory for graph:  15 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 16777992 bytes in 29 ms (578.55 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 16777992 bytes in 24 ms (699.08 MB/s)
 
 
 INFO ktruss/irgl+wl/loc-gowalla_edges_adj.sym STDERR
-==29235== NVPROF is profiling process 29235, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_testconz3X
+==22404== NVPROF is profiling process 22404, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_testKDxZQi
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8263827456
-Total time: 59 ms
-Total time: 59106579 ns
-==29235== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498700351.96.1.1.nvprof
+Total time: 50 ms
+Total time: 50156281 ns
+==22404== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498773357.41.1.1.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testconz3X -trussNum=29 -trussNodes=30 -trussEdges=434
-PASS ktruss/irgl+wl/loc-gowalla_edges_adj.sym: BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700351.96.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498700351.96.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_testconz3X
-INFO PERFDATE END_RUN 2017-06-28 20:39:22
-PERF ktruss/irgl+wl/loc-gowalla_edges_adj.sym 1498700351.96.1 1 59106579 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700351.96.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498700351.96.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_testconz3X
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:39:22
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test1ajAcL' for '@output'
-COLLECT ktruss/irgl+wl/loc-gowalla_edges_adj.sym 1498700351.96.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498700351.96.1.2.nvprof
-INFO Running BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700351.96.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498700351.96.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1ajAcL
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testKDxZQi -trussNum=29 -trussNodes=30 -trussEdges=434
+PASS ktruss/irgl+wl/loc-gowalla_edges_adj.sym: BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773357.41.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498773357.41.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_testKDxZQi
+INFO PERFDATE END_RUN 2017-06-29 16:56:07
+PERF ktruss/irgl+wl/loc-gowalla_edges_adj.sym 1498773357.41.1 1 50156281 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773357.41.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498773357.41.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_testKDxZQi
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:56:07
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testdLMtlg' for '@output'
+COLLECT ktruss/irgl+wl/loc-gowalla_edges_adj.sym 1498773357.41.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498773357.41.1.2.nvprof
+INFO Running BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773357.41.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498773357.41.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_testdLMtlg
 INFO ktruss/irgl+wl/loc-gowalla_edges_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -160,20 +160,20 @@ Host memory for graph:  15 MB
 
 
 INFO ktruss/irgl+wl/loc-gowalla_edges_adj.sym STDERR
-==29301== NVPROF is profiling process 29301, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1ajAcL
+==22470== NVPROF is profiling process 22470, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_testdLMtlg
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8263827456
-Total time: 58 ms
-Total time: 58858062 ns
-==29301== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498700351.96.1.2.nvprof
+Total time: 49 ms
+Total time: 49676920 ns
+==22470== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498773357.41.1.2.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test1ajAcL -trussNum=29 -trussNodes=30 -trussEdges=434
-PASS ktruss/irgl+wl/loc-gowalla_edges_adj.sym: BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700351.96.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498700351.96.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1ajAcL
-INFO PERFDATE END_RUN 2017-06-28 20:39:28
-PERF ktruss/irgl+wl/loc-gowalla_edges_adj.sym 1498700351.96.1 2 58858062 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700351.96.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498700351.96.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1ajAcL
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testdLMtlg -trussNum=29 -trussNodes=30 -trussEdges=434
+PASS ktruss/irgl+wl/loc-gowalla_edges_adj.sym: BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773357.41.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498773357.41.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_testdLMtlg
+INFO PERFDATE END_RUN 2017-06-29 16:56:12
+PERF ktruss/irgl+wl/loc-gowalla_edges_adj.sym 1498773357.41.1 2 49676920 BMK2_INPUTID=loc-gowalla_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773357.41.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-gowalla_edges_adjsym_1498773357.41.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-gowalla_edges_adj.sym.gr -k 29 -p edges -o /tmp/test-_ktruss_ktruss-wl_testdLMtlg
 TASK_COMPLETE ktruss/irgl+wl/loc-gowalla_edges_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 20:39:28
-INFO APPROXIMATE DURATION 0:00:16.623783
+INFO DATE END 2017-06-29 16:56:12
+INFO APPROXIMATE DURATION 0:00:15.121081

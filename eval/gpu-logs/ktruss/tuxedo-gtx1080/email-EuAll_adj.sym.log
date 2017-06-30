@@ -75,14 +75,14 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 22:35:15
+INFO DATE START 2017-06-29 17:56:30
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --max-output-bytes 0 --log gpu-logs/ktruss/tuxedo-gtx1080/email-EuAll_adj.sym.log -v perf ktruss/irgl+wl email-EuAll_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:35:15
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testpdAw_d' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498707315.73.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testpdAw_d
+INFO PERFDATE BEGIN_RUN 2017-06-29 17:56:30
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testCYOtGx' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498776990.19.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testCYOtGx
 INFO ktruss/irgl+wl/email-EuAll_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -101,16 +101,16 @@ INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8326742016
-Total time: 34 ms
-Total time: 34657649 ns
+Total time: 32 ms
+Total time: 32076938 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testpdAw_d -trussNum=20 -trussNodes=62 -trussEdges=1215
-PASS ktruss/irgl+wl/email-EuAll_adj.sym: BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498707315.73.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testpdAw_d
-INFO PERFDATE END_RUN 2017-06-28 22:35:18
-PERF ktruss/irgl+wl/email-EuAll_adj.sym 1498707315.73.1 0 34657649 BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498707315.73.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testpdAw_d
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:35:18
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testY32Y7K' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498707315.73.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testY32Y7K
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testCYOtGx -trussNum=20 -trussNodes=62 -trussEdges=1215
+PASS ktruss/irgl+wl/email-EuAll_adj.sym: BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498776990.19.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testCYOtGx
+INFO PERFDATE END_RUN 2017-06-29 17:56:32
+PERF ktruss/irgl+wl/email-EuAll_adj.sym 1498776990.19.1 0 32076938 BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498776990.19.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testCYOtGx
+INFO PERFDATE BEGIN_RUN 2017-06-29 17:56:32
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test1w8EeU' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498776990.19.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1w8EeU
 INFO ktruss/irgl+wl/email-EuAll_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -121,7 +121,7 @@ ECC Disabled
 
 nnodes=265214, nedges=728962.
 Host memory for graph:   7 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 7953440 bytes in 15 ms (530.23 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 7953440 bytes in 16 ms (497.09 MB/s)
 
 
 INFO ktruss/irgl+wl/email-EuAll_adj.sym STDERR
@@ -129,16 +129,16 @@ INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8326742016
-Total time: 34 ms
-Total time: 34026677 ns
+Total time: 32 ms
+Total time: 32377262 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testY32Y7K -trussNum=20 -trussNodes=62 -trussEdges=1215
-PASS ktruss/irgl+wl/email-EuAll_adj.sym: BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498707315.73.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testY32Y7K
-INFO PERFDATE END_RUN 2017-06-28 22:35:20
-PERF ktruss/irgl+wl/email-EuAll_adj.sym 1498707315.73.1 1 34026677 BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498707315.73.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testY32Y7K
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:35:20
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testtvzwxE' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498707315.73.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testtvzwxE
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_test1w8EeU -trussNum=20 -trussNodes=62 -trussEdges=1215
+PASS ktruss/irgl+wl/email-EuAll_adj.sym: BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498776990.19.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1w8EeU
+INFO PERFDATE END_RUN 2017-06-29 17:56:34
+PERF ktruss/irgl+wl/email-EuAll_adj.sym 1498776990.19.1 1 32377262 BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498776990.19.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1w8EeU
+INFO PERFDATE BEGIN_RUN 2017-06-29 17:56:34
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testVDjGu5' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498776990.19.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testVDjGu5
 INFO ktruss/irgl+wl/email-EuAll_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -149,7 +149,7 @@ ECC Disabled
 
 nnodes=265214, nedges=728962.
 Host memory for graph:   7 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 7953440 bytes in 15 ms (530.23 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 7953440 bytes in 7 ms (1136.21 MB/s)
 
 
 INFO ktruss/irgl+wl/email-EuAll_adj.sym STDERR
@@ -157,14 +157,14 @@ INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8326742016
-Total time: 33 ms
-Total time: 33944474 ns
+Total time: 26 ms
+Total time: 26315831 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testtvzwxE -trussNum=20 -trussNodes=62 -trussEdges=1215
-PASS ktruss/irgl+wl/email-EuAll_adj.sym: BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498707315.73.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testtvzwxE
-INFO PERFDATE END_RUN 2017-06-28 22:35:22
-PERF ktruss/irgl+wl/email-EuAll_adj.sym 1498707315.73.1 2 33944474 BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498707315.73.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testtvzwxE
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testVDjGu5 -trussNum=20 -trussNodes=62 -trussEdges=1215
+PASS ktruss/irgl+wl/email-EuAll_adj.sym: BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498776990.19.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testVDjGu5
+INFO PERFDATE END_RUN 2017-06-29 17:56:36
+PERF ktruss/irgl+wl/email-EuAll_adj.sym 1498776990.19.1 2 26315831 BMK2=1 BMK2_INPUTID=email-EuAll_adj.sym BMK2_RUNID=1498776990.19.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -k 20 -p edges -o /tmp/test-_ktruss_ktruss-wl_testVDjGu5
 TASK_COMPLETE ktruss/irgl+wl/email-EuAll_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 22:35:22
-INFO APPROXIMATE DURATION 0:00:06.853910
+INFO DATE END 2017-06-29 17:56:36
+INFO APPROXIMATE DURATION 0:00:06.098220

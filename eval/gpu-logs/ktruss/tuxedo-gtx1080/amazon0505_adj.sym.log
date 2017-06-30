@@ -75,14 +75,42 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 22:37:01
+INFO DATE START 2017-06-29 17:58:02
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --max-output-bytes 0 --log gpu-logs/ktruss/tuxedo-gtx1080/amazon0505_adj.sym.log -v perf ktruss/irgl+wl amazon0505_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:37:01
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testh3dyWd' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498707421.83.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testh3dyWd
+INFO PERFDATE BEGIN_RUN 2017-06-29 17:58:02
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testdoxRl9' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498777082.26.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testdoxRl9
+INFO ktruss/irgl+wl/amazon0505_adj.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7999MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=410236, nedges=4878874.
+Host memory for graph:  40 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 42312912 bytes in 58 ms (729.53 MB/s)
+
+
+INFO ktruss/irgl+wl/amazon0505_adj.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8114929664
+Total time: 40 ms
+Total time: 40256858 ns
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testdoxRl9 -trussNum=11 -trussNodes=4878 -trussEdges=25175
+PASS ktruss/irgl+wl/amazon0505_adj.sym: BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498777082.26.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testdoxRl9
+INFO PERFDATE END_RUN 2017-06-29 17:58:04
+PERF ktruss/irgl+wl/amazon0505_adj.sym 1498777082.26.1 0 40256858 BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498777082.26.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testdoxRl9
+INFO PERFDATE BEGIN_RUN 2017-06-29 17:58:04
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testBR8fSj' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498777082.26.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testBR8fSj
 INFO ktruss/irgl+wl/amazon0505_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -101,16 +129,16 @@ INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8114929664
-Total time: 41 ms
-Total time: 41433747 ns
+Total time: 40 ms
+Total time: 40084935 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testh3dyWd -trussNum=11 -trussNodes=4878 -trussEdges=25175
-PASS ktruss/irgl+wl/amazon0505_adj.sym: BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498707421.83.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testh3dyWd
-INFO PERFDATE END_RUN 2017-06-28 22:37:04
-PERF ktruss/irgl+wl/amazon0505_adj.sym 1498707421.83.1 0 41433747 BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498707421.83.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testh3dyWd
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:37:04
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testok7pqV' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498707421.83.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testok7pqV
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testBR8fSj -trussNum=11 -trussNodes=4878 -trussEdges=25175
+PASS ktruss/irgl+wl/amazon0505_adj.sym: BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498777082.26.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testBR8fSj
+INFO PERFDATE END_RUN 2017-06-29 17:58:06
+PERF ktruss/irgl+wl/amazon0505_adj.sym 1498777082.26.1 1 40084935 BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498777082.26.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testBR8fSj
+INFO PERFDATE BEGIN_RUN 2017-06-29 17:58:06
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testEDQKwM' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498777082.26.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testEDQKwM
 INFO ktruss/irgl+wl/amazon0505_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -121,7 +149,7 @@ ECC Disabled
 
 nnodes=410236, nedges=4878874.
 Host memory for graph:  40 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 42312912 bytes in 61 ms (693.65 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 42312912 bytes in 59 ms (717.17 MB/s)
 
 
 INFO ktruss/irgl+wl/amazon0505_adj.sym STDERR
@@ -129,42 +157,14 @@ INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8114929664
-Total time: 41 ms
-Total time: 41355372 ns
+Total time: 40 ms
+Total time: 40860173 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testok7pqV -trussNum=11 -trussNodes=4878 -trussEdges=25175
-PASS ktruss/irgl+wl/amazon0505_adj.sym: BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498707421.83.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testok7pqV
-INFO PERFDATE END_RUN 2017-06-28 22:37:06
-PERF ktruss/irgl+wl/amazon0505_adj.sym 1498707421.83.1 1 41355372 BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498707421.83.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testok7pqV
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:37:06
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testfU_tDl' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498707421.83.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testfU_tDl
-INFO ktruss/irgl+wl/amazon0505_adj.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7999MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=410236, nedges=4878874.
-Host memory for graph:  40 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 42312912 bytes in 61 ms (693.65 MB/s)
-
-
-INFO ktruss/irgl+wl/amazon0505_adj.sym STDERR
-INSTR gpu_memory_total_start 8508145664
-INSTR gpu_memory_free_start 8387559424
-INSTR gpu_memory_total_end 8508145664
-INSTR gpu_memory_free_end 8114929664
-Total time: 41 ms
-Total time: 41614700 ns
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testfU_tDl -trussNum=11 -trussNodes=4878 -trussEdges=25175
-PASS ktruss/irgl+wl/amazon0505_adj.sym: BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498707421.83.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testfU_tDl
-INFO PERFDATE END_RUN 2017-06-28 22:37:09
-PERF ktruss/irgl+wl/amazon0505_adj.sym 1498707421.83.1 2 41614700 BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498707421.83.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testfU_tDl
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testEDQKwM -trussNum=11 -trussNodes=4878 -trussEdges=25175
+PASS ktruss/irgl+wl/amazon0505_adj.sym: BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498777082.26.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testEDQKwM
+INFO PERFDATE END_RUN 2017-06-29 17:58:08
+PERF ktruss/irgl+wl/amazon0505_adj.sym 1498777082.26.1 2 40860173 BMK2=1 BMK2_INPUTID=amazon0505_adj.sym BMK2_RUNID=1498777082.26.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -k 11 -p edges -o /tmp/test-_ktruss_ktruss-wl_testEDQKwM
 TASK_COMPLETE ktruss/irgl+wl/amazon0505_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 22:37:09
-INFO APPROXIMATE DURATION 0:00:07.295207
+INFO DATE END 2017-06-29 17:58:08
+INFO APPROXIMATE DURATION 0:00:06.091969

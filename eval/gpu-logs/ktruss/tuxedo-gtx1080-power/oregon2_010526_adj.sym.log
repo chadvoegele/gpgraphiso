@@ -75,15 +75,77 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 20:33:36
+INFO DATE START 2017-06-29 16:50:25
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --log gpu-logs/ktruss/tuxedo-gtx1080-power/oregon2_010526_adj.sym.log --max-output-bytes 0 --nvprof --npdb --npsystem -v perf ktruss/irgl+wl oregon2_010526_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:33:36
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test95HT9X' for '@output'
-COLLECT ktruss/irgl+wl/oregon2_010526_adj.sym 1498700016.51.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498700016.51.1.0.nvprof
-INFO Running BMK2=1 BMK2_INPUTID=oregon2_010526_adj.sym BMK2_RUNID=1498700016.51.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498700016.51.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_test95HT9X
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:50:25
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testW4ibpU' for '@output'
+COLLECT ktruss/irgl+wl/oregon2_010526_adj.sym 1498773025.86.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498773025.86.1.0.nvprof
+INFO Running BMK2=1 BMK2_INPUTID=oregon2_010526_adj.sym BMK2_RUNID=1498773025.86.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498773025.86.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testW4ibpU
+INFO ktruss/irgl+wl/oregon2_010526_adj.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=11461, nedges=65460.
+Host memory for graph:   0 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 615400 bytes in 81 ms (7.60 MB/s)
+
+
+INFO ktruss/irgl+wl/oregon2_010526_adj.sym STDERR
+==17908== NVPROF is profiling process 17908, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testW4ibpU
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8366587904
+Total time: 7 ms
+Total time: 7285352 ns
+==17908== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498773025.86.1.0.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testW4ibpU -trussNum=25 -trussNodes=34 -trussEdges=527
+PASS ktruss/irgl+wl/oregon2_010526_adj.sym: BMK2=1 BMK2_INPUTID=oregon2_010526_adj.sym BMK2_RUNID=1498773025.86.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498773025.86.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testW4ibpU
+INFO PERFDATE END_RUN 2017-06-29 16:50:30
+PERF ktruss/irgl+wl/oregon2_010526_adj.sym 1498773025.86.1 0 7285352 BMK2=1 BMK2_INPUTID=oregon2_010526_adj.sym BMK2_RUNID=1498773025.86.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498773025.86.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testW4ibpU
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:50:30
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testzkkXaR' for '@output'
+COLLECT ktruss/irgl+wl/oregon2_010526_adj.sym 1498773025.86.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498773025.86.1.1.nvprof
+INFO Running BMK2_INPUTID=oregon2_010526_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773025.86.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498773025.86.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testzkkXaR
+INFO ktruss/irgl+wl/oregon2_010526_adj.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=11461, nedges=65460.
+Host memory for graph:   0 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 615400 bytes in 0 ms (inf MB/s)
+
+
+INFO ktruss/irgl+wl/oregon2_010526_adj.sym STDERR
+==17974== NVPROF is profiling process 17974, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testzkkXaR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8366587904
+Total time: 6 ms
+Total time: 6759712 ns
+==17974== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498773025.86.1.1.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testzkkXaR -trussNum=25 -trussNodes=34 -trussEdges=527
+PASS ktruss/irgl+wl/oregon2_010526_adj.sym: BMK2_INPUTID=oregon2_010526_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773025.86.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498773025.86.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testzkkXaR
+INFO PERFDATE END_RUN 2017-06-29 16:50:35
+PERF ktruss/irgl+wl/oregon2_010526_adj.sym 1498773025.86.1 1 6759712 BMK2_INPUTID=oregon2_010526_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773025.86.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498773025.86.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testzkkXaR
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:50:35
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testHnE_Hd' for '@output'
+COLLECT ktruss/irgl+wl/oregon2_010526_adj.sym 1498773025.86.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498773025.86.1.2.nvprof
+INFO Running BMK2_INPUTID=oregon2_010526_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773025.86.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498773025.86.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testHnE_Hd
 INFO ktruss/irgl+wl/oregon2_010526_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -98,82 +160,20 @@ Host memory for graph:   0 MB
 
 
 INFO ktruss/irgl+wl/oregon2_010526_adj.sym STDERR
-==24751== NVPROF is profiling process 24751, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_test95HT9X
+==18040== NVPROF is profiling process 18040, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testHnE_Hd
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8366587904
 Total time: 8 ms
-Total time: 8489835 ns
-==24751== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498700016.51.1.0.nvprof
+Total time: 8355619 ns
+==18040== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498773025.86.1.2.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test95HT9X -trussNum=25 -trussNodes=34 -trussEdges=527
-PASS ktruss/irgl+wl/oregon2_010526_adj.sym: BMK2=1 BMK2_INPUTID=oregon2_010526_adj.sym BMK2_RUNID=1498700016.51.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498700016.51.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_test95HT9X
-INFO PERFDATE END_RUN 2017-06-28 20:33:41
-PERF ktruss/irgl+wl/oregon2_010526_adj.sym 1498700016.51.1 0 8489835 BMK2=1 BMK2_INPUTID=oregon2_010526_adj.sym BMK2_RUNID=1498700016.51.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498700016.51.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_test95HT9X
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:33:41
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testRRwm_h' for '@output'
-COLLECT ktruss/irgl+wl/oregon2_010526_adj.sym 1498700016.51.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498700016.51.1.1.nvprof
-INFO Running BMK2_INPUTID=oregon2_010526_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700016.51.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498700016.51.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testRRwm_h
-INFO ktruss/irgl+wl/oregon2_010526_adj.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=11461, nedges=65460.
-Host memory for graph:   0 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 615400 bytes in 1 ms (615.40 MB/s)
-
-
-INFO ktruss/irgl+wl/oregon2_010526_adj.sym STDERR
-==24815== NVPROF is profiling process 24815, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testRRwm_h
-INSTR gpu_memory_total_start 8508145664
-INSTR gpu_memory_free_start 8377073664
-INSTR gpu_memory_total_end 8508145664
-INSTR gpu_memory_free_end 8366587904
-Total time: 8 ms
-Total time: 8607535 ns
-==24815== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498700016.51.1.1.nvprof
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testRRwm_h -trussNum=25 -trussNodes=34 -trussEdges=527
-PASS ktruss/irgl+wl/oregon2_010526_adj.sym: BMK2_INPUTID=oregon2_010526_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700016.51.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498700016.51.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testRRwm_h
-INFO PERFDATE END_RUN 2017-06-28 20:33:46
-PERF ktruss/irgl+wl/oregon2_010526_adj.sym 1498700016.51.1 1 8607535 BMK2_INPUTID=oregon2_010526_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700016.51.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498700016.51.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testRRwm_h
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:33:46
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testAB29uC' for '@output'
-COLLECT ktruss/irgl+wl/oregon2_010526_adj.sym 1498700016.51.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498700016.51.1.2.nvprof
-INFO Running BMK2_INPUTID=oregon2_010526_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700016.51.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498700016.51.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testAB29uC
-INFO ktruss/irgl+wl/oregon2_010526_adj.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=11461, nedges=65460.
-Host memory for graph:   0 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 615400 bytes in 1 ms (615.40 MB/s)
-
-
-INFO ktruss/irgl+wl/oregon2_010526_adj.sym STDERR
-==24882== NVPROF is profiling process 24882, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testAB29uC
-INSTR gpu_memory_total_start 8508145664
-INSTR gpu_memory_free_start 8377073664
-INSTR gpu_memory_total_end 8508145664
-INSTR gpu_memory_free_end 8366587904
-Total time: 8 ms
-Total time: 8848714 ns
-==24882== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498700016.51.1.2.nvprof
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testAB29uC -trussNum=25 -trussNodes=34 -trussEdges=527
-PASS ktruss/irgl+wl/oregon2_010526_adj.sym: BMK2_INPUTID=oregon2_010526_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700016.51.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498700016.51.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testAB29uC
-INFO PERFDATE END_RUN 2017-06-28 20:33:51
-PERF ktruss/irgl+wl/oregon2_010526_adj.sym 1498700016.51.1 2 8848714 BMK2_INPUTID=oregon2_010526_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700016.51.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498700016.51.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testAB29uC
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testHnE_Hd -trussNum=25 -trussNodes=34 -trussEdges=527
+PASS ktruss/irgl+wl/oregon2_010526_adj.sym: BMK2_INPUTID=oregon2_010526_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773025.86.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498773025.86.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testHnE_Hd
+INFO PERFDATE END_RUN 2017-06-29 16:50:40
+PERF ktruss/irgl+wl/oregon2_010526_adj.sym 1498773025.86.1 2 8355619 BMK2_INPUTID=oregon2_010526_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773025.86.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_oregon2_010526_adjsym_1498773025.86.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/oregon2_010526_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testHnE_Hd
 TASK_COMPLETE ktruss/irgl+wl/oregon2_010526_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 20:33:51
-INFO APPROXIMATE DURATION 0:00:14.560074
+INFO DATE END 2017-06-29 16:50:40
+INFO APPROXIMATE DURATION 0:00:14.314061

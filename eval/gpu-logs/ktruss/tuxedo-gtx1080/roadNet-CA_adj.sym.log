@@ -75,14 +75,14 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 22:37:17
+INFO DATE START 2017-06-29 17:58:15
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --max-output-bytes 0 --log gpu-logs/ktruss/tuxedo-gtx1080/roadNet-CA_adj.sym.log -v perf ktruss/irgl+wl roadNet-CA_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:37:17
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test7OBgqh' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498707437.57.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_test7OBgqh
+INFO PERFDATE BEGIN_RUN 2017-06-29 17:58:15
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test5zL5U2' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498777095.44.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_test5zL5U2
 INFO ktruss/irgl+wl/roadNet-CA_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -93,7 +93,7 @@ ECC Disabled
 
 nnodes=1965206, nedges=5533214.
 Host memory for graph:  57 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 59987392 bytes in 91 ms (659.20 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 59987392 bytes in 94 ms (638.16 MB/s)
 
 
 INFO ktruss/irgl+wl/roadNet-CA_adj.sym STDERR
@@ -101,16 +101,16 @@ INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8064598016
-Total time: 20 ms
-Total time: 20908393 ns
+Total time: 25 ms
+Total time: 25437126 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test7OBgqh -trussNum=4 -trussNodes=168 -trussEdges=252
-PASS ktruss/irgl+wl/roadNet-CA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498707437.57.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_test7OBgqh
-INFO PERFDATE END_RUN 2017-06-28 22:37:19
-PERF ktruss/irgl+wl/roadNet-CA_adj.sym 1498707437.57.1 0 20908393 BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498707437.57.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_test7OBgqh
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:37:19
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testXYFA1o' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498707437.57.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_testXYFA1o
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_test5zL5U2 -trussNum=4 -trussNodes=168 -trussEdges=252
+PASS ktruss/irgl+wl/roadNet-CA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498777095.44.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_test5zL5U2
+INFO PERFDATE END_RUN 2017-06-29 17:58:17
+PERF ktruss/irgl+wl/roadNet-CA_adj.sym 1498777095.44.1 0 25437126 BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498777095.44.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_test5zL5U2
+INFO PERFDATE BEGIN_RUN 2017-06-29 17:58:17
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testPNwNpr' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498777095.44.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_testPNwNpr
 INFO ktruss/irgl+wl/roadNet-CA_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -121,7 +121,7 @@ ECC Disabled
 
 nnodes=1965206, nedges=5533214.
 Host memory for graph:  57 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 59987392 bytes in 97 ms (618.43 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 59987392 bytes in 94 ms (638.16 MB/s)
 
 
 INFO ktruss/irgl+wl/roadNet-CA_adj.sym STDERR
@@ -129,16 +129,16 @@ INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8064598016
-Total time: 21 ms
-Total time: 21099577 ns
+Total time: 25 ms
+Total time: 25375660 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testXYFA1o -trussNum=4 -trussNodes=168 -trussEdges=252
-PASS ktruss/irgl+wl/roadNet-CA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498707437.57.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_testXYFA1o
-INFO PERFDATE END_RUN 2017-06-28 22:37:22
-PERF ktruss/irgl+wl/roadNet-CA_adj.sym 1498707437.57.1 1 21099577 BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498707437.57.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_testXYFA1o
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:37:22
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_teste5o6XN' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498707437.57.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_teste5o6XN
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testPNwNpr -trussNum=4 -trussNodes=168 -trussEdges=252
+PASS ktruss/irgl+wl/roadNet-CA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498777095.44.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_testPNwNpr
+INFO PERFDATE END_RUN 2017-06-29 17:58:19
+PERF ktruss/irgl+wl/roadNet-CA_adj.sym 1498777095.44.1 1 25375660 BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498777095.44.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_testPNwNpr
+INFO PERFDATE BEGIN_RUN 2017-06-29 17:58:19
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testW2BOJw' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498777095.44.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_testW2BOJw
 INFO ktruss/irgl+wl/roadNet-CA_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -157,14 +157,14 @@ INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8064598016
-Total time: 21 ms
-Total time: 21279742 ns
+Total time: 25 ms
+Total time: 25253787 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_teste5o6XN -trussNum=4 -trussNodes=168 -trussEdges=252
-PASS ktruss/irgl+wl/roadNet-CA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498707437.57.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_teste5o6XN
-INFO PERFDATE END_RUN 2017-06-28 22:37:24
-PERF ktruss/irgl+wl/roadNet-CA_adj.sym 1498707437.57.1 2 21279742 BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498707437.57.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_teste5o6XN
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testW2BOJw -trussNum=4 -trussNodes=168 -trussEdges=252
+PASS ktruss/irgl+wl/roadNet-CA_adj.sym: BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498777095.44.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_testW2BOJw
+INFO PERFDATE END_RUN 2017-06-29 17:58:21
+PERF ktruss/irgl+wl/roadNet-CA_adj.sym 1498777095.44.1 2 25253787 BMK2=1 BMK2_INPUTID=roadNet-CA_adj.sym BMK2_RUNID=1498777095.44.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/roadNet-CA_adj.sym.gr -k 4 -p edges -o /tmp/test-_ktruss_ktruss-wl_testW2BOJw
 TASK_COMPLETE ktruss/irgl+wl/roadNet-CA_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 22:37:24
-INFO APPROXIMATE DURATION 0:00:07.338824
+INFO DATE END 2017-06-29 17:58:21
+INFO APPROXIMATE DURATION 0:00:06.040786

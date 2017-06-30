@@ -75,14 +75,14 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 23:25:10
+INFO DATE START 2017-06-29 18:21:02
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --max-output-bytes 0 --log gpu-logs/ktruss/tuxedo-gtx1080/com-lj.wgt32.sym.log -v perf ktruss/irgl+wl com-lj.wgt32.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 23:25:10
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testq27QFy' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498710310.8.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_testq27QFy
+INFO PERFDATE BEGIN_RUN 2017-06-29 18:21:02
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testowItsz' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498778462.13.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_testowItsz
 INFO ktruss/irgl+wl/com-lj.wgt32.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -93,7 +93,7 @@ ECC Disabled
 
 nnodes=4036538, nedges=69362378.
 Host memory for graph: 559 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 587191360 bytes in 548 ms (1071.52 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 587191360 bytes in 470 ms (1249.34 MB/s)
 
 
 INFO ktruss/irgl+wl/com-lj.wgt32.sym STDERR
@@ -101,44 +101,16 @@ INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 5246025728
-Total time: 213 ms
-Total time: 213526799 ns
+Total time: 321 ms
+Total time: 321990832 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testq27QFy -trussNum=352 -trussNodes=367 -trussEdges=67043
-PASS ktruss/irgl+wl/com-lj.wgt32.sym: BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498710310.8.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_testq27QFy
-INFO PERFDATE END_RUN 2017-06-28 23:25:27
-PERF ktruss/irgl+wl/com-lj.wgt32.sym 1498710310.8.1 0 213526799 BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498710310.8.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_testq27QFy
-INFO PERFDATE BEGIN_RUN 2017-06-28 23:25:27
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testr_8y5R' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498710310.8.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_testr_8y5R
-INFO ktruss/irgl+wl/com-lj.wgt32.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7999MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=4036538, nedges=69362378.
-Host memory for graph: 559 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 587191360 bytes in 559 ms (1050.43 MB/s)
-
-
-INFO ktruss/irgl+wl/com-lj.wgt32.sym STDERR
-INSTR gpu_memory_total_start 8508145664
-INSTR gpu_memory_free_start 8387559424
-INSTR gpu_memory_total_end 8508145664
-INSTR gpu_memory_free_end 5246025728
-Total time: 216 ms
-Total time: 216920104 ns
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testr_8y5R -trussNum=352 -trussNodes=367 -trussEdges=67043
-PASS ktruss/irgl+wl/com-lj.wgt32.sym: BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498710310.8.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_testr_8y5R
-INFO PERFDATE END_RUN 2017-06-28 23:25:44
-PERF ktruss/irgl+wl/com-lj.wgt32.sym 1498710310.8.1 1 216920104 BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498710310.8.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_testr_8y5R
-INFO PERFDATE BEGIN_RUN 2017-06-28 23:25:44
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testCHCtpI' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498710310.8.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_testCHCtpI
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testowItsz -trussNum=352 -trussNodes=367 -trussEdges=67043
+PASS ktruss/irgl+wl/com-lj.wgt32.sym: BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498778462.13.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_testowItsz
+INFO PERFDATE END_RUN 2017-06-29 18:21:06
+PERF ktruss/irgl+wl/com-lj.wgt32.sym 1498778462.13.1 0 321990832 BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498778462.13.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_testowItsz
+INFO PERFDATE BEGIN_RUN 2017-06-29 18:21:06
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test9GlSmZ' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498778462.13.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_test9GlSmZ
 INFO ktruss/irgl+wl/com-lj.wgt32.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -157,14 +129,42 @@ INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 5246025728
-Total time: 210 ms
-Total time: 210699414 ns
+Total time: 322 ms
+Total time: 322732471 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testCHCtpI -trussNum=352 -trussNodes=367 -trussEdges=67043
-PASS ktruss/irgl+wl/com-lj.wgt32.sym: BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498710310.8.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_testCHCtpI
-INFO PERFDATE END_RUN 2017-06-28 23:26:01
-PERF ktruss/irgl+wl/com-lj.wgt32.sym 1498710310.8.1 2 210699414 BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498710310.8.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_testCHCtpI
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_test9GlSmZ -trussNum=352 -trussNodes=367 -trussEdges=67043
+PASS ktruss/irgl+wl/com-lj.wgt32.sym: BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498778462.13.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_test9GlSmZ
+INFO PERFDATE END_RUN 2017-06-29 18:21:12
+PERF ktruss/irgl+wl/com-lj.wgt32.sym 1498778462.13.1 1 322732471 BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498778462.13.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_test9GlSmZ
+INFO PERFDATE BEGIN_RUN 2017-06-29 18:21:12
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test3mwAoj' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498778462.13.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_test3mwAoj
+INFO ktruss/irgl+wl/com-lj.wgt32.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7999MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=4036538, nedges=69362378.
+Host memory for graph: 559 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 587191360 bytes in 551 ms (1065.68 MB/s)
+
+
+INFO ktruss/irgl+wl/com-lj.wgt32.sym STDERR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8387559424
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 5246025728
+Total time: 325 ms
+Total time: 325819631 ns
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_test3mwAoj -trussNum=352 -trussNodes=367 -trussEdges=67043
+PASS ktruss/irgl+wl/com-lj.wgt32.sym: BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498778462.13.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_test3mwAoj
+INFO PERFDATE END_RUN 2017-06-29 18:21:17
+PERF ktruss/irgl+wl/com-lj.wgt32.sym 1498778462.13.1 2 325819631 BMK2=1 BMK2_INPUTID=com-lj.wgt32.sym BMK2_RUNID=1498778462.13.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/LiveJournal/com-lj.wgt32.sym.gr -k 352 -p edges -o /tmp/test-_ktruss_ktruss-wl_test3mwAoj
 TASK_COMPLETE ktruss/irgl+wl/com-lj.wgt32.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 23:26:01
-INFO APPROXIMATE DURATION 0:00:51.095916
+INFO DATE END 2017-06-29 18:21:17
+INFO APPROXIMATE DURATION 0:00:15.018781

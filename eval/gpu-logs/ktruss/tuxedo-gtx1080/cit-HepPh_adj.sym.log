@@ -75,14 +75,14 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 22:35:29
+INFO DATE START 2017-06-29 17:56:43
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --max-output-bytes 0 --log gpu-logs/ktruss/tuxedo-gtx1080/cit-HepPh_adj.sym.log -v perf ktruss/irgl+wl cit-HepPh_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:35:29
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testcBO6Xn' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498707329.87.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testcBO6Xn
+INFO PERFDATE BEGIN_RUN 2017-06-29 17:56:43
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test7Y_PBE' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498777003.21.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_test7Y_PBE
 INFO ktruss/irgl+wl/cit-HepPh_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -101,16 +101,16 @@ INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8326742016
-Total time: 21 ms
-Total time: 21445274 ns
+Total time: 20 ms
+Total time: 20595464 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testcBO6Xn -trussNum=25 -trussNodes=36 -trussEdges=574
-PASS ktruss/irgl+wl/cit-HepPh_adj.sym: BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498707329.87.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testcBO6Xn
-INFO PERFDATE END_RUN 2017-06-28 22:35:31
-PERF ktruss/irgl+wl/cit-HepPh_adj.sym 1498707329.87.1 0 21445274 BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498707329.87.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testcBO6Xn
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:35:31
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testxy04Qk' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498707329.87.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testxy04Qk
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_test7Y_PBE -trussNum=25 -trussNodes=36 -trussEdges=574
+PASS ktruss/irgl+wl/cit-HepPh_adj.sym: BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498777003.21.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_test7Y_PBE
+INFO PERFDATE END_RUN 2017-06-29 17:56:45
+PERF ktruss/irgl+wl/cit-HepPh_adj.sym 1498777003.21.1 0 20595464 BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498777003.21.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_test7Y_PBE
+INFO PERFDATE BEGIN_RUN 2017-06-29 17:56:45
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testQmwIht' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498777003.21.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testQmwIht
 INFO ktruss/irgl+wl/cit-HepPh_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -129,16 +129,16 @@ INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8326742016
-Total time: 21 ms
-Total time: 21902549 ns
+Total time: 20 ms
+Total time: 20654035 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testxy04Qk -trussNum=25 -trussNodes=36 -trussEdges=574
-PASS ktruss/irgl+wl/cit-HepPh_adj.sym: BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498707329.87.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testxy04Qk
-INFO PERFDATE END_RUN 2017-06-28 22:35:33
-PERF ktruss/irgl+wl/cit-HepPh_adj.sym 1498707329.87.1 1 21902549 BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498707329.87.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testxy04Qk
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:35:33
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test1BS9CB' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498707329.87.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1BS9CB
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testQmwIht -trussNum=25 -trussNodes=36 -trussEdges=574
+PASS ktruss/irgl+wl/cit-HepPh_adj.sym: BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498777003.21.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testQmwIht
+INFO PERFDATE END_RUN 2017-06-29 17:56:47
+PERF ktruss/irgl+wl/cit-HepPh_adj.sym 1498777003.21.1 1 20654035 BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498777003.21.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testQmwIht
+INFO PERFDATE BEGIN_RUN 2017-06-29 17:56:47
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testBkUIZi' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498777003.21.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testBkUIZi
 INFO ktruss/irgl+wl/cit-HepPh_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -157,14 +157,14 @@ INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8326742016
-Total time: 22 ms
-Total time: 22201493 ns
+Total time: 20 ms
+Total time: 20819304 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test1BS9CB -trussNum=25 -trussNodes=36 -trussEdges=574
-PASS ktruss/irgl+wl/cit-HepPh_adj.sym: BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498707329.87.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1BS9CB
-INFO PERFDATE END_RUN 2017-06-28 22:35:35
-PERF ktruss/irgl+wl/cit-HepPh_adj.sym 1498707329.87.1 2 22201493 BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498707329.87.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1BS9CB
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testBkUIZi -trussNum=25 -trussNodes=36 -trussEdges=574
+PASS ktruss/irgl+wl/cit-HepPh_adj.sym: BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498777003.21.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testBkUIZi
+INFO PERFDATE END_RUN 2017-06-29 17:56:49
+PERF ktruss/irgl+wl/cit-HepPh_adj.sym 1498777003.21.1 2 20819304 BMK2=1 BMK2_INPUTID=cit-HepPh_adj.sym BMK2_RUNID=1498777003.21.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/cit-HepPh_adj.sym.gr -k 25 -p edges -o /tmp/test-_ktruss_ktruss-wl_testBkUIZi
 TASK_COMPLETE ktruss/irgl+wl/cit-HepPh_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 22:35:35
-INFO APPROXIMATE DURATION 0:00:06.112245
+INFO DATE END 2017-06-29 17:56:49
+INFO APPROXIMATE DURATION 0:00:05.827227

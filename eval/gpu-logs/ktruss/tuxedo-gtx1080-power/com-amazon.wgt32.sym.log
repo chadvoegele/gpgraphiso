@@ -75,15 +75,15 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 20:38:56
+INFO DATE START 2017-06-29 16:55:42
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --log gpu-logs/ktruss/tuxedo-gtx1080-power/com-amazon.wgt32.sym.log --max-output-bytes 0 --nvprof --npdb --npsystem -v perf ktruss/irgl+wl com-amazon.wgt32.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:38:56
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testBpc3u9' for '@output'
-COLLECT ktruss/irgl+wl/com-amazon.wgt32.sym 1498700336.09.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498700336.09.1.0.nvprof
-INFO Running BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1498700336.09.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498700336.09.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testBpc3u9
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:55:42
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testMLVjN_' for '@output'
+COLLECT ktruss/irgl+wl/com-amazon.wgt32.sym 1498773342.13.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498773342.13.1.0.nvprof
+INFO Running BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1498773342.13.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498773342.13.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testMLVjN_
 INFO ktruss/irgl+wl/com-amazon.wgt32.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -94,86 +94,86 @@ ECC Disabled
 
 nnodes=548552, nedges=1851744.
 Host memory for graph:  18 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 19202400 bytes in 89 ms (215.76 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 19202400 bytes in 162 ms (118.53 MB/s)
 
 
 INFO ktruss/irgl+wl/com-amazon.wgt32.sym STDERR
-==28970== NVPROF is profiling process 28970, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testBpc3u9
+==22136== NVPROF is profiling process 22136, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testMLVjN_
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8253341696
+Total time: 22 ms
+Total time: 22756674 ns
+==22136== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498773342.13.1.0.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testMLVjN_ -trussNum=7 -trussNodes=212 -trussEdges=642
+PASS ktruss/irgl+wl/com-amazon.wgt32.sym: BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1498773342.13.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498773342.13.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testMLVjN_
+INFO PERFDATE END_RUN 2017-06-29 16:55:47
+PERF ktruss/irgl+wl/com-amazon.wgt32.sym 1498773342.13.1 0 22756674 BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1498773342.13.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498773342.13.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testMLVjN_
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:55:47
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testZfu10U' for '@output'
+COLLECT ktruss/irgl+wl/com-amazon.wgt32.sym 1498773342.13.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498773342.13.1.1.nvprof
+INFO Running BMK2_INPUTID=com-amazon.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773342.13.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498773342.13.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testZfu10U
+INFO ktruss/irgl+wl/com-amazon.wgt32.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=548552, nedges=1851744.
+Host memory for graph:  18 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 19202400 bytes in 41 ms (468.35 MB/s)
+
+
+INFO ktruss/irgl+wl/com-amazon.wgt32.sym STDERR
+==22200== NVPROF is profiling process 22200, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testZfu10U
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8253341696
+Total time: 22 ms
+Total time: 22178497 ns
+==22200== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498773342.13.1.1.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testZfu10U -trussNum=7 -trussNodes=212 -trussEdges=642
+PASS ktruss/irgl+wl/com-amazon.wgt32.sym: BMK2_INPUTID=com-amazon.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773342.13.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498773342.13.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testZfu10U
+INFO PERFDATE END_RUN 2017-06-29 16:55:52
+PERF ktruss/irgl+wl/com-amazon.wgt32.sym 1498773342.13.1 1 22178497 BMK2_INPUTID=com-amazon.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773342.13.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498773342.13.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testZfu10U
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:55:52
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testpLDdnf' for '@output'
+COLLECT ktruss/irgl+wl/com-amazon.wgt32.sym 1498773342.13.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498773342.13.1.2.nvprof
+INFO Running BMK2_INPUTID=com-amazon.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773342.13.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498773342.13.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testpLDdnf
+INFO ktruss/irgl+wl/com-amazon.wgt32.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=548552, nedges=1851744.
+Host memory for graph:  18 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 19202400 bytes in 29 ms (662.15 MB/s)
+
+
+INFO ktruss/irgl+wl/com-amazon.wgt32.sym STDERR
+==22266== NVPROF is profiling process 22266, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testpLDdnf
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8253341696
 Total time: 23 ms
-Total time: 23327430 ns
-==28970== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498700336.09.1.0.nvprof
+Total time: 23174945 ns
+==22266== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498773342.13.1.2.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testBpc3u9 -trussNum=7 -trussNodes=212 -trussEdges=642
-PASS ktruss/irgl+wl/com-amazon.wgt32.sym: BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1498700336.09.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498700336.09.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testBpc3u9
-INFO PERFDATE END_RUN 2017-06-28 20:39:01
-PERF ktruss/irgl+wl/com-amazon.wgt32.sym 1498700336.09.1 0 23327430 BMK2=1 BMK2_INPUTID=com-amazon.wgt32.sym BMK2_RUNID=1498700336.09.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498700336.09.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testBpc3u9
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:39:01
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testzUS9Wp' for '@output'
-COLLECT ktruss/irgl+wl/com-amazon.wgt32.sym 1498700336.09.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498700336.09.1.1.nvprof
-INFO Running BMK2_INPUTID=com-amazon.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700336.09.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498700336.09.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testzUS9Wp
-INFO ktruss/irgl+wl/com-amazon.wgt32.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=548552, nedges=1851744.
-Host memory for graph:  18 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 19202400 bytes in 43 ms (446.57 MB/s)
-
-
-INFO ktruss/irgl+wl/com-amazon.wgt32.sym STDERR
-==29037== NVPROF is profiling process 29037, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testzUS9Wp
-INSTR gpu_memory_total_start 8508145664
-INSTR gpu_memory_free_start 8377073664
-INSTR gpu_memory_total_end 8508145664
-INSTR gpu_memory_free_end 8253341696
-Total time: 18 ms
-Total time: 18133666 ns
-==29037== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498700336.09.1.1.nvprof
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testzUS9Wp -trussNum=7 -trussNodes=212 -trussEdges=642
-PASS ktruss/irgl+wl/com-amazon.wgt32.sym: BMK2_INPUTID=com-amazon.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700336.09.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498700336.09.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testzUS9Wp
-INFO PERFDATE END_RUN 2017-06-28 20:39:06
-PERF ktruss/irgl+wl/com-amazon.wgt32.sym 1498700336.09.1 1 18133666 BMK2_INPUTID=com-amazon.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700336.09.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498700336.09.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testzUS9Wp
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:39:06
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testKFF1hO' for '@output'
-COLLECT ktruss/irgl+wl/com-amazon.wgt32.sym 1498700336.09.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498700336.09.1.2.nvprof
-INFO Running BMK2_INPUTID=com-amazon.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700336.09.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498700336.09.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testKFF1hO
-INFO ktruss/irgl+wl/com-amazon.wgt32.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=548552, nedges=1851744.
-Host memory for graph:  18 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 19202400 bytes in 40 ms (480.06 MB/s)
-
-
-INFO ktruss/irgl+wl/com-amazon.wgt32.sym STDERR
-==29103== NVPROF is profiling process 29103, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testKFF1hO
-INSTR gpu_memory_total_start 8508145664
-INSTR gpu_memory_free_start 8377073664
-INSTR gpu_memory_total_end 8508145664
-INSTR gpu_memory_free_end 8253341696
-Total time: 15 ms
-Total time: 15555006 ns
-==29103== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498700336.09.1.2.nvprof
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testKFF1hO -trussNum=7 -trussNodes=212 -trussEdges=642
-PASS ktruss/irgl+wl/com-amazon.wgt32.sym: BMK2_INPUTID=com-amazon.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700336.09.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498700336.09.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testKFF1hO
-INFO PERFDATE END_RUN 2017-06-28 20:39:11
-PERF ktruss/irgl+wl/com-amazon.wgt32.sym 1498700336.09.1 2 15555006 BMK2_INPUTID=com-amazon.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700336.09.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498700336.09.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testKFF1hO
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testpLDdnf -trussNum=7 -trussNodes=212 -trussEdges=642
+PASS ktruss/irgl+wl/com-amazon.wgt32.sym: BMK2_INPUTID=com-amazon.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773342.13.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498773342.13.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testpLDdnf
+INFO PERFDATE END_RUN 2017-06-29 16:55:56
+PERF ktruss/irgl+wl/com-amazon.wgt32.sym 1498773342.13.1 2 23174945 BMK2_INPUTID=com-amazon.wgt32.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773342.13.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_com-amazonwgt32sym_1498773342.13.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/communities/Amazon/com-amazon.wgt32.sym.gr -k 7 -p edges -o /tmp/test-_ktruss_ktruss-wl_testpLDdnf
 TASK_COMPLETE ktruss/irgl+wl/com-amazon.wgt32.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 20:39:11
-INFO APPROXIMATE DURATION 0:00:15.418794
+INFO DATE END 2017-06-29 16:55:56
+INFO APPROXIMATE DURATION 0:00:14.823080

@@ -75,15 +75,15 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 20:27:23
+INFO DATE START 2017-06-29 16:44:15
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --log gpu-logs/ktruss/tuxedo-gtx1080-power/complete5_sm.sym.log --max-output-bytes 0 --nvprof --npdb --npsystem -v perf ktruss/irgl+wl complete5_sm.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:27:23
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testygjHKc' for '@output'
-COLLECT ktruss/irgl+wl/complete5_sm.sym 1498699643.82.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498699643.82.1.0.nvprof
-INFO Running BMK2=1 BMK2_INPUTID=complete5_sm.sym BMK2_RUNID=1498699643.82.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498699643.82.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testygjHKc
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:44:15
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testOaEm2F' for '@output'
+COLLECT ktruss/irgl+wl/complete5_sm.sym 1498772655.3.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498772655.3.1.0.nvprof
+INFO Running BMK2=1 BMK2_INPUTID=complete5_sm.sym BMK2_RUNID=1498772655.3.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498772655.3.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testOaEm2F
 INFO ktruss/irgl+wl/complete5_sm.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -98,23 +98,23 @@ Host memory for graph:   0 MB
 
 
 INFO ktruss/irgl+wl/complete5_sm.sym STDERR
-==19715== NVPROF is profiling process 19715, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testygjHKc
+==12872== NVPROF is profiling process 12872, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testOaEm2F
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8374976512
 Total time: 1 ms
-Total time: 1747420 ns
-==19715== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498699643.82.1.0.nvprof
+Total time: 1686252 ns
+==12872== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498772655.3.1.0.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testygjHKc -trussNum=3 -trussNodes=5 -trussEdges=10
-PASS ktruss/irgl+wl/complete5_sm.sym: BMK2=1 BMK2_INPUTID=complete5_sm.sym BMK2_RUNID=1498699643.82.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498699643.82.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testygjHKc
-INFO PERFDATE END_RUN 2017-06-28 20:27:28
-PERF ktruss/irgl+wl/complete5_sm.sym 1498699643.82.1 0 1747420 BMK2=1 BMK2_INPUTID=complete5_sm.sym BMK2_RUNID=1498699643.82.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498699643.82.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testygjHKc
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:27:28
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testBCaDti' for '@output'
-COLLECT ktruss/irgl+wl/complete5_sm.sym 1498699643.82.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498699643.82.1.1.nvprof
-INFO Running BMK2_INPUTID=complete5_sm.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699643.82.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498699643.82.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testBCaDti
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testOaEm2F -trussNum=3 -trussNodes=5 -trussEdges=10
+PASS ktruss/irgl+wl/complete5_sm.sym: BMK2=1 BMK2_INPUTID=complete5_sm.sym BMK2_RUNID=1498772655.3.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498772655.3.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testOaEm2F
+INFO PERFDATE END_RUN 2017-06-29 16:44:20
+PERF ktruss/irgl+wl/complete5_sm.sym 1498772655.3.1 0 1686252 BMK2=1 BMK2_INPUTID=complete5_sm.sym BMK2_RUNID=1498772655.3.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498772655.3.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testOaEm2F
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:44:20
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testYbpsvv' for '@output'
+COLLECT ktruss/irgl+wl/complete5_sm.sym 1498772655.3.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498772655.3.1.1.nvprof
+INFO Running BMK2_INPUTID=complete5_sm.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498772655.3.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498772655.3.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testYbpsvv
 INFO ktruss/irgl+wl/complete5_sm.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -129,23 +129,23 @@ Host memory for graph:   0 MB
 
 
 INFO ktruss/irgl+wl/complete5_sm.sym STDERR
-==19782== NVPROF is profiling process 19782, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testBCaDti
+==12942== NVPROF is profiling process 12942, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testYbpsvv
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8374976512
 Total time: 1 ms
-Total time: 1751266 ns
-==19782== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498699643.82.1.1.nvprof
+Total time: 1751233 ns
+==12942== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498772655.3.1.1.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testBCaDti -trussNum=3 -trussNodes=5 -trussEdges=10
-PASS ktruss/irgl+wl/complete5_sm.sym: BMK2_INPUTID=complete5_sm.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699643.82.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498699643.82.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testBCaDti
-INFO PERFDATE END_RUN 2017-06-28 20:27:33
-PERF ktruss/irgl+wl/complete5_sm.sym 1498699643.82.1 1 1751266 BMK2_INPUTID=complete5_sm.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699643.82.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498699643.82.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testBCaDti
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:27:33
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testt2WUUk' for '@output'
-COLLECT ktruss/irgl+wl/complete5_sm.sym 1498699643.82.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498699643.82.1.2.nvprof
-INFO Running BMK2_INPUTID=complete5_sm.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699643.82.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498699643.82.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testt2WUUk
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testYbpsvv -trussNum=3 -trussNodes=5 -trussEdges=10
+PASS ktruss/irgl+wl/complete5_sm.sym: BMK2_INPUTID=complete5_sm.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498772655.3.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498772655.3.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testYbpsvv
+INFO PERFDATE END_RUN 2017-06-29 16:44:24
+PERF ktruss/irgl+wl/complete5_sm.sym 1498772655.3.1 1 1751233 BMK2_INPUTID=complete5_sm.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498772655.3.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498772655.3.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testYbpsvv
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:44:25
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testchqm6W' for '@output'
+COLLECT ktruss/irgl+wl/complete5_sm.sym 1498772655.3.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498772655.3.1.2.nvprof
+INFO Running BMK2_INPUTID=complete5_sm.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498772655.3.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498772655.3.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testchqm6W
 INFO ktruss/irgl+wl/complete5_sm.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -160,20 +160,20 @@ Host memory for graph:   0 MB
 
 
 INFO ktruss/irgl+wl/complete5_sm.sym STDERR
-==19846== NVPROF is profiling process 19846, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testt2WUUk
+==13009== NVPROF is profiling process 13009, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testchqm6W
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8374976512
 Total time: 1 ms
-Total time: 1701007 ns
-==19846== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498699643.82.1.2.nvprof
+Total time: 1674836 ns
+==13009== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498772655.3.1.2.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testt2WUUk -trussNum=3 -trussNodes=5 -trussEdges=10
-PASS ktruss/irgl+wl/complete5_sm.sym: BMK2_INPUTID=complete5_sm.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699643.82.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498699643.82.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testt2WUUk
-INFO PERFDATE END_RUN 2017-06-28 20:27:37
-PERF ktruss/irgl+wl/complete5_sm.sym 1498699643.82.1 2 1701007 BMK2_INPUTID=complete5_sm.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498699643.82.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498699643.82.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testt2WUUk
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testchqm6W -trussNum=3 -trussNodes=5 -trussEdges=10
+PASS ktruss/irgl+wl/complete5_sm.sym: BMK2_INPUTID=complete5_sm.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498772655.3.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498772655.3.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testchqm6W
+INFO PERFDATE END_RUN 2017-06-29 16:44:29
+PERF ktruss/irgl+wl/complete5_sm.sym 1498772655.3.1 2 1674836 BMK2_INPUTID=complete5_sm.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498772655.3.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_complete5_smsym_1498772655.3.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/small/complete5_sm.sym.gr -k 3 -p edges -o /tmp/test-_ktruss_ktruss-wl_testchqm6W
 TASK_COMPLETE ktruss/irgl+wl/complete5_sm.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 20:27:37
-INFO APPROXIMATE DURATION 0:00:14.123522
+INFO DATE END 2017-06-29 16:44:29
+INFO APPROXIMATE DURATION 0:00:14.443971

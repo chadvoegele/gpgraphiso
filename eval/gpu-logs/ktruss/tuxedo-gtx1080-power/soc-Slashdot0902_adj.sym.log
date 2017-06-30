@@ -75,15 +75,46 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 20:38:24
+INFO DATE START 2017-06-29 16:55:11
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --log gpu-logs/ktruss/tuxedo-gtx1080-power/soc-Slashdot0902_adj.sym.log --max-output-bytes 0 --nvprof --npdb --npsystem -v perf ktruss/irgl+wl soc-Slashdot0902_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:38:24
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test2yXYZJ' for '@output'
-COLLECT ktruss/irgl+wl/soc-Slashdot0902_adj.sym 1498700304.75.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498700304.75.1.0.nvprof
-INFO Running BMK2=1 BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2_RUNID=1498700304.75.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498700304.75.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_test2yXYZJ
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:55:11
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testrnpwjR' for '@output'
+COLLECT ktruss/irgl+wl/soc-Slashdot0902_adj.sym 1498773311.97.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498773311.97.1.0.nvprof
+INFO Running BMK2=1 BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2_RUNID=1498773311.97.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498773311.97.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testrnpwjR
+INFO ktruss/irgl+wl/soc-Slashdot0902_adj.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=82168, nedges=1008460.
+Host memory for graph:   8 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 8725056 bytes in 109 ms (80.05 MB/s)
+
+
+INFO ktruss/irgl+wl/soc-Slashdot0902_adj.sym STDERR
+==21730== NVPROF is profiling process 21730, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testrnpwjR
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8316256256
+Total time: 33 ms
+Total time: 33238280 ns
+==21730== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498773311.97.1.0.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testrnpwjR -trussNum=36 -trussNodes=96 -trussEdges=3280
+PASS ktruss/irgl+wl/soc-Slashdot0902_adj.sym: BMK2=1 BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2_RUNID=1498773311.97.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498773311.97.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testrnpwjR
+INFO PERFDATE END_RUN 2017-06-29 16:55:16
+PERF ktruss/irgl+wl/soc-Slashdot0902_adj.sym 1498773311.97.1 0 33238280 BMK2=1 BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2_RUNID=1498773311.97.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498773311.97.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testrnpwjR
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:55:16
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testEBmn0C' for '@output'
+COLLECT ktruss/irgl+wl/soc-Slashdot0902_adj.sym 1498773311.97.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498773311.97.1.1.nvprof
+INFO Running BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773311.97.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498773311.97.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testEBmn0C
 INFO ktruss/irgl+wl/soc-Slashdot0902_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -98,23 +129,23 @@ Host memory for graph:   8 MB
 
 
 INFO ktruss/irgl+wl/soc-Slashdot0902_adj.sym STDERR
-==28569== NVPROF is profiling process 28569, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_test2yXYZJ
+==21795== NVPROF is profiling process 21795, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testEBmn0C
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8316256256
-Total time: 37 ms
-Total time: 37227468 ns
-==28569== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498700304.75.1.0.nvprof
+Total time: 30 ms
+Total time: 30293797 ns
+==21795== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498773311.97.1.1.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test2yXYZJ -trussNum=36 -trussNodes=96 -trussEdges=3280
-PASS ktruss/irgl+wl/soc-Slashdot0902_adj.sym: BMK2=1 BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2_RUNID=1498700304.75.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498700304.75.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_test2yXYZJ
-INFO PERFDATE END_RUN 2017-06-28 20:38:29
-PERF ktruss/irgl+wl/soc-Slashdot0902_adj.sym 1498700304.75.1 0 37227468 BMK2=1 BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2_RUNID=1498700304.75.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498700304.75.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_test2yXYZJ
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:38:29
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testbY7eMB' for '@output'
-COLLECT ktruss/irgl+wl/soc-Slashdot0902_adj.sym 1498700304.75.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498700304.75.1.1.nvprof
-INFO Running BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700304.75.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498700304.75.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testbY7eMB
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testEBmn0C -trussNum=36 -trussNodes=96 -trussEdges=3280
+PASS ktruss/irgl+wl/soc-Slashdot0902_adj.sym: BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773311.97.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498773311.97.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testEBmn0C
+INFO PERFDATE END_RUN 2017-06-29 16:55:21
+PERF ktruss/irgl+wl/soc-Slashdot0902_adj.sym 1498773311.97.1 1 30293797 BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773311.97.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498773311.97.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testEBmn0C
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:55:21
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testnLvTsq' for '@output'
+COLLECT ktruss/irgl+wl/soc-Slashdot0902_adj.sym 1498773311.97.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498773311.97.1.2.nvprof
+INFO Running BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773311.97.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498773311.97.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testnLvTsq
 INFO ktruss/irgl+wl/soc-Slashdot0902_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -129,51 +160,20 @@ Host memory for graph:   8 MB
 
 
 INFO ktruss/irgl+wl/soc-Slashdot0902_adj.sym STDERR
-==28634== NVPROF is profiling process 28634, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testbY7eMB
+==21861== NVPROF is profiling process 21861, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testnLvTsq
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8316256256
-Total time: 34 ms
-Total time: 34545438 ns
-==28634== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498700304.75.1.1.nvprof
+Total time: 31 ms
+Total time: 31253150 ns
+==21861== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498773311.97.1.2.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testbY7eMB -trussNum=36 -trussNodes=96 -trussEdges=3280
-PASS ktruss/irgl+wl/soc-Slashdot0902_adj.sym: BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700304.75.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498700304.75.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testbY7eMB
-INFO PERFDATE END_RUN 2017-06-28 20:38:34
-PERF ktruss/irgl+wl/soc-Slashdot0902_adj.sym 1498700304.75.1 1 34545438 BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700304.75.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498700304.75.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testbY7eMB
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:38:34
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testbJQy25' for '@output'
-COLLECT ktruss/irgl+wl/soc-Slashdot0902_adj.sym 1498700304.75.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498700304.75.1.2.nvprof
-INFO Running BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700304.75.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498700304.75.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testbJQy25
-INFO ktruss/irgl+wl/soc-Slashdot0902_adj.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=82168, nedges=1008460.
-Host memory for graph:   8 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 8725056 bytes in 13 ms (671.16 MB/s)
-
-
-INFO ktruss/irgl+wl/soc-Slashdot0902_adj.sym STDERR
-==28704== NVPROF is profiling process 28704, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testbJQy25
-INSTR gpu_memory_total_start 8508145664
-INSTR gpu_memory_free_start 8377073664
-INSTR gpu_memory_total_end 8508145664
-INSTR gpu_memory_free_end 8316256256
-Total time: 34 ms
-Total time: 34011905 ns
-==28704== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498700304.75.1.2.nvprof
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testbJQy25 -trussNum=36 -trussNodes=96 -trussEdges=3280
-PASS ktruss/irgl+wl/soc-Slashdot0902_adj.sym: BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700304.75.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498700304.75.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testbJQy25
-INFO PERFDATE END_RUN 2017-06-28 20:38:39
-PERF ktruss/irgl+wl/soc-Slashdot0902_adj.sym 1498700304.75.1 2 34011905 BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700304.75.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498700304.75.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testbJQy25
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testnLvTsq -trussNum=36 -trussNodes=96 -trussEdges=3280
+PASS ktruss/irgl+wl/soc-Slashdot0902_adj.sym: BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773311.97.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498773311.97.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testnLvTsq
+INFO PERFDATE END_RUN 2017-06-29 16:55:26
+PERF ktruss/irgl+wl/soc-Slashdot0902_adj.sym 1498773311.97.1 2 31253150 BMK2_INPUTID=soc-Slashdot0902_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773311.97.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_soc-Slashdot0902_adjsym_1498773311.97.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/soc-Slashdot0902_adj.sym.gr -k 36 -p edges -o /tmp/test-_ktruss_ktruss-wl_testnLvTsq
 TASK_COMPLETE ktruss/irgl+wl/soc-Slashdot0902_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 20:38:39
-INFO APPROXIMATE DURATION 0:00:15.103648
+INFO DATE END 2017-06-29 16:55:26
+INFO APPROXIMATE DURATION 0:00:14.662518

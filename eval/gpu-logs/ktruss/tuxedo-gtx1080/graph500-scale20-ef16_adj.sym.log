@@ -75,14 +75,14 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 22:42:57
+INFO DATE START 2017-06-29 18:00:49
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --max-output-bytes 0 --log gpu-logs/ktruss/tuxedo-gtx1080/graph500-scale20-ef16_adj.sym.log -v perf ktruss/irgl+wl graph500-scale20-ef16_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:42:57
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testyLh873' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498707777.95.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_testyLh873
+INFO PERFDATE BEGIN_RUN 2017-06-29 18:00:49
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testtMJQr2' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498777249.97.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_testtMJQr2
 INFO ktruss/irgl+wl/graph500-scale20-ef16_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -93,7 +93,7 @@ ECC Disabled
 
 nnodes=645820, nedges=31361722.
 Host memory for graph: 244 MB
-	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 256060368 bytes in 236 ms (1085.00 MB/s)
+	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 256060368 bytes in 247 ms (1036.68 MB/s)
 
 
 INFO ktruss/irgl+wl/graph500-scale20-ef16_adj.sym STDERR
@@ -101,16 +101,16 @@ INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 7076839424
-Total time: 455895 ms
-Total time: 455895311033 ns
+Total time: 248781 ms
+Total time: 248781532372 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testyLh873 -trussNum=284 -trussNodes=1185 -trussEdges=395637
-PASS ktruss/irgl+wl/graph500-scale20-ef16_adj.sym: BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498707777.95.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_testyLh873
-INFO PERFDATE END_RUN 2017-06-28 22:51:01
-PERF ktruss/irgl+wl/graph500-scale20-ef16_adj.sym 1498707777.95.1 0 455895311033 BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498707777.95.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_testyLh873
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:51:01
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test_1UU8d' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498707777.95.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_test_1UU8d
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testtMJQr2 -trussNum=284 -trussNodes=1185 -trussEdges=395637
+PASS ktruss/irgl+wl/graph500-scale20-ef16_adj.sym: BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498777249.97.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_testtMJQr2
+INFO PERFDATE END_RUN 2017-06-29 18:05:03
+PERF ktruss/irgl+wl/graph500-scale20-ef16_adj.sym 1498777249.97.1 0 248781532372 BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498777249.97.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_testtMJQr2
+INFO PERFDATE BEGIN_RUN 2017-06-29 18:05:03
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testL65BNO' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498777249.97.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_testL65BNO
 INFO ktruss/irgl+wl/graph500-scale20-ef16_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -121,7 +121,7 @@ ECC Disabled
 
 nnodes=645820, nedges=31361722.
 Host memory for graph: 244 MB
-	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 256060368 bytes in 231 ms (1108.49 MB/s)
+	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 256060368 bytes in 251 ms (1020.16 MB/s)
 
 
 INFO ktruss/irgl+wl/graph500-scale20-ef16_adj.sym STDERR
@@ -129,16 +129,16 @@ INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 7076839424
-Total time: 469040 ms
-Total time: 469040184356 ns
+Total time: 220820 ms
+Total time: 220820070730 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test_1UU8d -trussNum=284 -trussNodes=1185 -trussEdges=395637
-PASS ktruss/irgl+wl/graph500-scale20-ef16_adj.sym: BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498707777.95.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_test_1UU8d
-INFO PERFDATE END_RUN 2017-06-28 22:59:19
-PERF ktruss/irgl+wl/graph500-scale20-ef16_adj.sym 1498707777.95.1 1 469040184356 BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498707777.95.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_test_1UU8d
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:59:19
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testPe81V6' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498707777.95.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_testPe81V6
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testL65BNO -trussNum=284 -trussNodes=1185 -trussEdges=395637
+PASS ktruss/irgl+wl/graph500-scale20-ef16_adj.sym: BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498777249.97.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_testL65BNO
+INFO PERFDATE END_RUN 2017-06-29 18:08:49
+PERF ktruss/irgl+wl/graph500-scale20-ef16_adj.sym 1498777249.97.1 1 220820070730 BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498777249.97.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_testL65BNO
+INFO PERFDATE BEGIN_RUN 2017-06-29 18:08:49
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testTs6cwF' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498777249.97.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_testTs6cwF
 INFO ktruss/irgl+wl/graph500-scale20-ef16_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -149,7 +149,7 @@ ECC Disabled
 
 nnodes=645820, nedges=31361722.
 Host memory for graph: 244 MB
-	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 256060368 bytes in 231 ms (1108.49 MB/s)
+	  1%	 11%	 21%	 31%	 41%	 51%	 61%	 71%	 81%	 91%read 256060368 bytes in 237 ms (1080.42 MB/s)
 
 
 INFO ktruss/irgl+wl/graph500-scale20-ef16_adj.sym STDERR
@@ -157,14 +157,14 @@ INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 7076839424
-Total time: 462213 ms
-Total time: 462213668207 ns
+Total time: 245810 ms
+Total time: 245810594911 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testPe81V6 -trussNum=284 -trussNodes=1185 -trussEdges=395637
-PASS ktruss/irgl+wl/graph500-scale20-ef16_adj.sym: BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498707777.95.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_testPe81V6
-INFO PERFDATE END_RUN 2017-06-28 23:07:29
-PERF ktruss/irgl+wl/graph500-scale20-ef16_adj.sym 1498707777.95.1 2 462213668207 BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498707777.95.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_testPe81V6
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testTs6cwF -trussNum=284 -trussNodes=1185 -trussEdges=395637
+PASS ktruss/irgl+wl/graph500-scale20-ef16_adj.sym: BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498777249.97.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_testTs6cwF
+INFO PERFDATE END_RUN 2017-06-29 18:13:00
+PERF ktruss/irgl+wl/graph500-scale20-ef16_adj.sym 1498777249.97.1 2 245810594911 BMK2=1 BMK2_INPUTID=graph500-scale20-ef16_adj.sym BMK2_RUNID=1498777249.97.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale20-ef16_adj.sym.gr -k 284 -p edges -o /tmp/test-_ktruss_ktruss-wl_testTs6cwF
 TASK_COMPLETE ktruss/irgl+wl/graph500-scale20-ef16_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 23:07:29
-INFO APPROXIMATE DURATION 0:24:31.928431
+INFO DATE END 2017-06-29 18:13:00
+INFO APPROXIMATE DURATION 0:12:10.419288

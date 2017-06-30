@@ -75,16 +75,16 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-29 00:16:22
+INFO DATE START 2017-06-29 18:43:42
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --max-output-bytes 0 --log gpu-logs/ktruss/tuxedo-gtx1080/graph500-scale23-ef16_adj.sym.log -v perf ktruss/irgl+wl graph500-scale23-ef16_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-29 00:16:22
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test-nontexVC6Ja2' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=graph500-scale23-ef16_adj.sym BMK2_RUNID=1498713382.45.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontexVC6Ja2
-ERROR Execute failed (1): ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontexVC6Ja2
-FAIL ktruss/irgl+wl/graph500-scale23-ef16_adj.sym 1498713382.45.1.0: run failed
+INFO PERFDATE BEGIN_RUN 2017-06-29 18:43:42
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test-nontexdPIGPD' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=graph500-scale23-ef16_adj.sym BMK2_RUNID=1498779822.4.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontexdPIGPD
+ERROR Execute failed (1): ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontexdPIGPD
+FAIL ktruss/irgl+wl/graph500-scale23-ef16_adj.sym 1498779822.4.1.0: run failed
 INFO ktruss/irgl+wl/graph500-scale23-ef16_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -95,7 +95,7 @@ ECC Disabled
 
 nnodes=4606314, nedges=258501410.
 Host memory for graph: 2007 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 2104861824 bytes in 1457 ms (1444.65 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 2104861824 bytes in 1579 ms (1333.03 MB/s)
 
 
 INFO ktruss/irgl+wl/graph500-scale23-ef16_adj.sym STDERR
@@ -104,13 +104,13 @@ INSTR gpu_memory_free_start 8387559424
 Cuda error in file '../../ggc/rt/include/worklist.h' in line 83 : out of memory.
 ktruss/irgl+wl/graph500-scale23-ef16_adj.sym END
 
-INFO PERFDATE END_RUN 2017-06-29 00:16:25
-FAIL ktruss/irgl+wl/graph500-scale23-ef16_adj.sym 1498713382.45.1.0: failed, re-running: BMK2=1 BMK2_INPUTID=graph500-scale23-ef16_adj.sym BMK2_RUNID=1498713382.45.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontexVC6Ja2
-INFO PERFDATE BEGIN_RUN 2017-06-29 00:16:25
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test-nontex6hVdSD' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=graph500-scale23-ef16_adj.sym BMK2_RUNID=1498713382.45.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontex6hVdSD
-ERROR Execute failed (1): ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontex6hVdSD
-FAIL ktruss/irgl+wl/graph500-scale23-ef16_adj.sym 1498713382.45.1.1: run failed
+INFO PERFDATE END_RUN 2017-06-29 18:43:45
+FAIL ktruss/irgl+wl/graph500-scale23-ef16_adj.sym 1498779822.4.1.0: failed, re-running: BMK2=1 BMK2_INPUTID=graph500-scale23-ef16_adj.sym BMK2_RUNID=1498779822.4.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontexdPIGPD
+INFO PERFDATE BEGIN_RUN 2017-06-29 18:43:45
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test-nontex4lx7SA' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=graph500-scale23-ef16_adj.sym BMK2_RUNID=1498779822.4.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontex4lx7SA
+ERROR Execute failed (1): ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontex4lx7SA
+FAIL ktruss/irgl+wl/graph500-scale23-ef16_adj.sym 1498779822.4.1.1: run failed
 INFO ktruss/irgl+wl/graph500-scale23-ef16_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -121,7 +121,7 @@ ECC Disabled
 
 nnodes=4606314, nedges=258501410.
 Host memory for graph: 2007 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 2104861824 bytes in 1614 ms (1304.13 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 2104861824 bytes in 1625 ms (1295.30 MB/s)
 
 
 INFO ktruss/irgl+wl/graph500-scale23-ef16_adj.sym STDERR
@@ -130,13 +130,13 @@ INSTR gpu_memory_free_start 8387559424
 Cuda error in file '../../ggc/rt/include/worklist.h' in line 83 : out of memory.
 ktruss/irgl+wl/graph500-scale23-ef16_adj.sym END
 
-INFO PERFDATE END_RUN 2017-06-29 00:16:28
-FAIL ktruss/irgl+wl/graph500-scale23-ef16_adj.sym 1498713382.45.1.1: failed, re-running: BMK2=1 BMK2_INPUTID=graph500-scale23-ef16_adj.sym BMK2_RUNID=1498713382.45.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontex6hVdSD
-INFO PERFDATE BEGIN_RUN 2017-06-29 00:16:28
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test-nontex7kBokv' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=graph500-scale23-ef16_adj.sym BMK2_RUNID=1498713382.45.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontex7kBokv
-ERROR Execute failed (1): ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontex7kBokv
-FAIL ktruss/irgl+wl/graph500-scale23-ef16_adj.sym 1498713382.45.1.2: run failed
+INFO PERFDATE END_RUN 2017-06-29 18:43:48
+FAIL ktruss/irgl+wl/graph500-scale23-ef16_adj.sym 1498779822.4.1.1: failed, re-running: BMK2=1 BMK2_INPUTID=graph500-scale23-ef16_adj.sym BMK2_RUNID=1498779822.4.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontex4lx7SA
+INFO PERFDATE BEGIN_RUN 2017-06-29 18:43:48
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test-nontexdZteNj' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=graph500-scale23-ef16_adj.sym BMK2_RUNID=1498779822.4.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontexdZteNj
+ERROR Execute failed (1): ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontexdZteNj
+FAIL ktruss/irgl+wl/graph500-scale23-ef16_adj.sym 1498779822.4.1.2: run failed
 INFO ktruss/irgl+wl/graph500-scale23-ef16_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -147,7 +147,7 @@ ECC Disabled
 
 nnodes=4606314, nedges=258501410.
 Host memory for graph: 2007 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 2104861824 bytes in 1632 ms (1289.74 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 2104861824 bytes in 1646 ms (1278.77 MB/s)
 
 
 INFO ktruss/irgl+wl/graph500-scale23-ef16_adj.sym STDERR
@@ -156,13 +156,13 @@ INSTR gpu_memory_free_start 8387559424
 Cuda error in file '../../ggc/rt/include/worklist.h' in line 83 : out of memory.
 ktruss/irgl+wl/graph500-scale23-ef16_adj.sym END
 
-INFO PERFDATE END_RUN 2017-06-29 00:16:32
-FAIL ktruss/irgl+wl/graph500-scale23-ef16_adj.sym 1498713382.45.1.2: failed, re-running: BMK2=1 BMK2_INPUTID=graph500-scale23-ef16_adj.sym BMK2_RUNID=1498713382.45.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontex7kBokv
-INFO PERFDATE BEGIN_RUN 2017-06-29 00:16:32
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test-nontexI9A4lf' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=graph500-scale23-ef16_adj.sym BMK2_RUNID=1498713382.45.1.3 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontexI9A4lf
-ERROR Execute failed (1): ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontexI9A4lf
-FAIL ktruss/irgl+wl/graph500-scale23-ef16_adj.sym 1498713382.45.1.3: run failed
+INFO PERFDATE END_RUN 2017-06-29 18:43:52
+FAIL ktruss/irgl+wl/graph500-scale23-ef16_adj.sym 1498779822.4.1.2: failed, re-running: BMK2=1 BMK2_INPUTID=graph500-scale23-ef16_adj.sym BMK2_RUNID=1498779822.4.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontexdZteNj
+INFO PERFDATE BEGIN_RUN 2017-06-29 18:43:52
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test-nontexPQoYwF' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=graph500-scale23-ef16_adj.sym BMK2_RUNID=1498779822.4.1.3 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontexPQoYwF
+ERROR Execute failed (1): ../ktruss/ktruss-wl/test-nontex /h2/sreepai/pd/hpec/inputs/graphchallenge/graph500-scale23-ef16_adj.sym.gr -k 625 -p edges -o /tmp/test-_ktruss_ktruss-wl_test-nontexPQoYwF
+FAIL ktruss/irgl+wl/graph500-scale23-ef16_adj.sym 1498779822.4.1.3: run failed
 INFO ktruss/irgl+wl/graph500-scale23-ef16_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -173,7 +173,7 @@ ECC Disabled
 
 nnodes=4606314, nedges=258501410.
 Host memory for graph: 2007 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 2104861824 bytes in 1520 ms (1384.78 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 2104861824 bytes in 1554 ms (1354.48 MB/s)
 
 
 INFO ktruss/irgl+wl/graph500-scale23-ef16_adj.sym STDERR
@@ -182,8 +182,8 @@ INSTR gpu_memory_free_start 8387559424
 Cuda error in file '../../ggc/rt/include/worklist.h' in line 83 : out of memory.
 ktruss/irgl+wl/graph500-scale23-ef16_adj.sym END
 
-INFO PERFDATE END_RUN 2017-06-29 00:16:35
+INFO PERFDATE END_RUN 2017-06-29 18:43:55
 FAIL MISSING PERF ktruss/irgl+wl/graph500-scale23-ef16_adj.sym
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 4 Failed: 4 Failed Checks: 4
-INFO DATE END 2017-06-29 00:16:35
-INFO APPROXIMATE DURATION 0:00:13.036021
+INFO DATE END 2017-06-29 18:43:55
+INFO APPROXIMATE DURATION 0:00:13.062193

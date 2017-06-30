@@ -75,14 +75,14 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 22:34:30
+INFO DATE START 2017-06-29 17:55:46
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --max-output-bytes 0 --log gpu-logs/ktruss/tuxedo-gtx1080/ca-CondMat_adj.sym.log -v perf ktruss/irgl+wl ca-CondMat_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:34:30
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test96qdGo' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498707270.64.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_test96qdGo
+INFO PERFDATE BEGIN_RUN 2017-06-29 17:55:46
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test0Ew1qg' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498776946.92.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_test0Ew1qg
 INFO ktruss/irgl+wl/ca-CondMat_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -102,15 +102,15 @@ INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8368685056
 Total time: 8 ms
-Total time: 8672018 ns
+Total time: 8309381 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test96qdGo -trussNum=26 -trussNodes=26 -trussEdges=325
-PASS ktruss/irgl+wl/ca-CondMat_adj.sym: BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498707270.64.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_test96qdGo
-INFO PERFDATE END_RUN 2017-06-28 22:34:32
-PERF ktruss/irgl+wl/ca-CondMat_adj.sym 1498707270.64.1 0 8672018 BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498707270.64.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_test96qdGo
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:34:32
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testAzllyJ' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498707270.64.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_testAzllyJ
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_test0Ew1qg -trussNum=26 -trussNodes=26 -trussEdges=325
+PASS ktruss/irgl+wl/ca-CondMat_adj.sym: BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498776946.92.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_test0Ew1qg
+INFO PERFDATE END_RUN 2017-06-29 17:55:48
+PERF ktruss/irgl+wl/ca-CondMat_adj.sym 1498776946.92.1 0 8309381 BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498776946.92.1.0 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_test0Ew1qg
+INFO PERFDATE BEGIN_RUN 2017-06-29 17:55:48
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testANPLdP' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498776946.92.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_testANPLdP
 INFO ktruss/irgl+wl/ca-CondMat_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -130,15 +130,15 @@ INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8368685056
 Total time: 8 ms
-Total time: 8375885 ns
+Total time: 8400118 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testAzllyJ -trussNum=26 -trussNodes=26 -trussEdges=325
-PASS ktruss/irgl+wl/ca-CondMat_adj.sym: BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498707270.64.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_testAzllyJ
-INFO PERFDATE END_RUN 2017-06-28 22:34:34
-PERF ktruss/irgl+wl/ca-CondMat_adj.sym 1498707270.64.1 1 8375885 BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498707270.64.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_testAzllyJ
-INFO PERFDATE BEGIN_RUN 2017-06-28 22:34:34
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testDVDiKH' for '@output'
-INFO Running BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498707270.64.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_testDVDiKH
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testANPLdP -trussNum=26 -trussNodes=26 -trussEdges=325
+PASS ktruss/irgl+wl/ca-CondMat_adj.sym: BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498776946.92.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_testANPLdP
+INFO PERFDATE END_RUN 2017-06-29 17:55:50
+PERF ktruss/irgl+wl/ca-CondMat_adj.sym 1498776946.92.1 1 8400118 BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498776946.92.1.1 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_testANPLdP
+INFO PERFDATE BEGIN_RUN 2017-06-29 17:55:50
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testJzpI26' for '@output'
+INFO Running BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498776946.92.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_testJzpI26
 INFO ktruss/irgl+wl/ca-CondMat_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -158,13 +158,13 @@ INSTR gpu_memory_free_start 8387559424
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8368685056
 Total time: 8 ms
-Total time: 8456759 ns
+Total time: 8298998 ns
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testDVDiKH -trussNum=26 -trussNodes=26 -trussEdges=325
-PASS ktruss/irgl+wl/ca-CondMat_adj.sym: BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498707270.64.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_testDVDiKH
-INFO PERFDATE END_RUN 2017-06-28 22:34:36
-PERF ktruss/irgl+wl/ca-CondMat_adj.sym 1498707270.64.1 2 8456759 BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498707270.64.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_testDVDiKH
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testJzpI26 -trussNum=26 -trussNodes=26 -trussEdges=325
+PASS ktruss/irgl+wl/ca-CondMat_adj.sym: BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498776946.92.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_testJzpI26
+INFO PERFDATE END_RUN 2017-06-29 17:55:52
+PERF ktruss/irgl+wl/ca-CondMat_adj.sym 1498776946.92.1 2 8298998 BMK2=1 BMK2_INPUTID=ca-CondMat_adj.sym BMK2_RUNID=1498776946.92.1.2 BMK2_BINID=ktruss/irgl+wl ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-CondMat_adj.sym.gr -k 26 -p edges -o /tmp/test-_ktruss_ktruss-wl_testJzpI26
 TASK_COMPLETE ktruss/irgl+wl/ca-CondMat_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 22:34:36
-INFO APPROXIMATE DURATION 0:00:05.847273
+INFO DATE END 2017-06-29 17:55:52
+INFO APPROXIMATE DURATION 0:00:05.852433

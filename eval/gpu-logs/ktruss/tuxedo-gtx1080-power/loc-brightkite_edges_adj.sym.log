@@ -75,15 +75,15 @@ DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/irgl+wl', not in sel_i
 DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/irgl+wl', not in sel_inputs
 INFO Configuration loaded successfully.
 INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
-INFO DATE START 2017-06-28 20:36:35
+INFO DATE START 2017-06-29 16:53:24
 COLLECT basepath /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl
 INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --scan ../ktruss/ktruss-wl --log gpu-logs/ktruss/tuxedo-gtx1080-power/loc-brightkite_edges_adj.sym.log --max-output-bytes 0 --nvprof --npdb --npsystem -v perf ktruss/irgl+wl loc-brightkite_edges_adj.sym
 INFO Setting RLIMIT_CPU to 4800
 INFO TASK perf
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:36:35
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testnB7cLf' for '@output'
-COLLECT ktruss/irgl+wl/loc-brightkite_edges_adj.sym 1498700195.96.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498700195.96.1.0.nvprof
-INFO Running BMK2=1 BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2_RUNID=1498700195.96.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498700195.96.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_testnB7cLf
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:53:24
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testtHMq9w' for '@output'
+COLLECT ktruss/irgl+wl/loc-brightkite_edges_adj.sym 1498773204.79.1.0 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498773204.79.1.0.nvprof
+INFO Running BMK2=1 BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2_RUNID=1498773204.79.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498773204.79.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_testtHMq9w
 INFO ktruss/irgl+wl/loc-brightkite_edges_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -94,58 +94,27 @@ ECC Disabled
 
 nnodes=58228, nedges=428156.
 Host memory for graph:   3 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 3891104 bytes in 9 ms (432.34 MB/s)
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 3891104 bytes in 94 ms (41.39 MB/s)
 
 
 INFO ktruss/irgl+wl/loc-brightkite_edges_adj.sym STDERR
-==27158== NVPROF is profiling process 27158, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_testnB7cLf
+==20324== NVPROF is profiling process 20324, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_testtHMq9w
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8341422080
-Total time: 25 ms
-Total time: 25018103 ns
-==27158== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498700195.96.1.0.nvprof
+Total time: 21 ms
+Total time: 21851774 ns
+==20324== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498773204.79.1.0.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_testnB7cLf -trussNum=43 -trussNodes=63 -trussEdges=1799
-PASS ktruss/irgl+wl/loc-brightkite_edges_adj.sym: BMK2=1 BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2_RUNID=1498700195.96.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498700195.96.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_testnB7cLf
-INFO PERFDATE END_RUN 2017-06-28 20:36:40
-PERF ktruss/irgl+wl/loc-brightkite_edges_adj.sym 1498700195.96.1 0 25018103 BMK2=1 BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2_RUNID=1498700195.96.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498700195.96.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_testnB7cLf
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:36:40
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test45RQJb' for '@output'
-COLLECT ktruss/irgl+wl/loc-brightkite_edges_adj.sym 1498700195.96.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498700195.96.1.1.nvprof
-INFO Running BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700195.96.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498700195.96.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_test45RQJb
-INFO ktruss/irgl+wl/loc-brightkite_edges_adj.sym STDOUT
-Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
-20 SMs enabled. Compute Capability sm_61
-FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
-Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
-ECC Disabled
-
-
-nnodes=58228, nedges=428156.
-Host memory for graph:   3 MB
-	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 3891104 bytes in 8 ms (486.39 MB/s)
-
-
-INFO ktruss/irgl+wl/loc-brightkite_edges_adj.sym STDERR
-==27222== NVPROF is profiling process 27222, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_test45RQJb
-INSTR gpu_memory_total_start 8508145664
-INSTR gpu_memory_free_start 8377073664
-INSTR gpu_memory_total_end 8508145664
-INSTR gpu_memory_free_end 8341422080
-Total time: 24 ms
-Total time: 24330421 ns
-==27222== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498700195.96.1.1.nvprof
-
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test45RQJb -trussNum=43 -trussNodes=63 -trussEdges=1799
-PASS ktruss/irgl+wl/loc-brightkite_edges_adj.sym: BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700195.96.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498700195.96.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_test45RQJb
-INFO PERFDATE END_RUN 2017-06-28 20:36:45
-PERF ktruss/irgl+wl/loc-brightkite_edges_adj.sym 1498700195.96.1 1 24330421 BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700195.96.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498700195.96.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_test45RQJb
-INFO PERFDATE BEGIN_RUN 2017-06-28 20:36:45
-DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_test1LTM7k' for '@output'
-COLLECT ktruss/irgl+wl/loc-brightkite_edges_adj.sym 1498700195.96.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498700195.96.1.2.nvprof
-INFO Running BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700195.96.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498700195.96.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1LTM7k
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testtHMq9w -trussNum=43 -trussNodes=63 -trussEdges=1799
+PASS ktruss/irgl+wl/loc-brightkite_edges_adj.sym: BMK2=1 BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2_RUNID=1498773204.79.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498773204.79.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_testtHMq9w
+INFO PERFDATE END_RUN 2017-06-29 16:53:29
+PERF ktruss/irgl+wl/loc-brightkite_edges_adj.sym 1498773204.79.1 0 21851774 BMK2=1 BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2_RUNID=1498773204.79.1.0 BMK2_BINID=ktruss/irgl+wl nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498773204.79.1.0.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_testtHMq9w
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:53:29
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testuZbejQ' for '@output'
+COLLECT ktruss/irgl+wl/loc-brightkite_edges_adj.sym 1498773204.79.1.1 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498773204.79.1.1.nvprof
+INFO Running BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773204.79.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498773204.79.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_testuZbejQ
 INFO ktruss/irgl+wl/loc-brightkite_edges_adj.sym STDOUT
 Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
 20 SMs enabled. Compute Capability sm_61
@@ -160,20 +129,51 @@ Host memory for graph:   3 MB
 
 
 INFO ktruss/irgl+wl/loc-brightkite_edges_adj.sym STDERR
-==27287== NVPROF is profiling process 27287, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1LTM7k
+==20389== NVPROF is profiling process 20389, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_testuZbejQ
 INSTR gpu_memory_total_start 8508145664
 INSTR gpu_memory_free_start 8377073664
 INSTR gpu_memory_total_end 8508145664
 INSTR gpu_memory_free_end 8341422080
 Total time: 24 ms
-Total time: 24100781 ns
-==27287== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498700195.96.1.2.nvprof
+Total time: 24623981 ns
+==20389== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498773204.79.1.1.nvprof
 
-INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -trussFile=/tmp/test-_ktruss_ktruss-wl_test1LTM7k -trussNum=43 -trussNodes=63 -trussEdges=1799
-PASS ktruss/irgl+wl/loc-brightkite_edges_adj.sym: BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700195.96.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498700195.96.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1LTM7k
-INFO PERFDATE END_RUN 2017-06-28 20:36:50
-PERF ktruss/irgl+wl/loc-brightkite_edges_adj.sym 1498700195.96.1 2 24100781 BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498700195.96.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498700195.96.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_test1LTM7k
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testuZbejQ -trussNum=43 -trussNodes=63 -trussEdges=1799
+PASS ktruss/irgl+wl/loc-brightkite_edges_adj.sym: BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773204.79.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498773204.79.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_testuZbejQ
+INFO PERFDATE END_RUN 2017-06-29 16:53:34
+PERF ktruss/irgl+wl/loc-brightkite_edges_adj.sym 1498773204.79.1 1 24623981 BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773204.79.1.1 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498773204.79.1.1.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_testuZbejQ
+INFO PERFDATE BEGIN_RUN 2017-06-29 16:53:34
+DEBUG Created temporary file '/tmp/test-_ktruss_ktruss-wl_testvpB6cc' for '@output'
+COLLECT ktruss/irgl+wl/loc-brightkite_edges_adj.sym 1498773204.79.1.2 cuda/nvprof ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498773204.79.1.2.nvprof
+INFO Running BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773204.79.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498773204.79.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_testvpB6cc
+INFO ktruss/irgl+wl/loc-brightkite_edges_adj.sym STDOUT
+Using GPU: GeForce GTX 1080 : 1733.500 Mhz   (Ordinal 0)
+20 SMs enabled. Compute Capability sm_61
+FreeMem:   7989MB   TotalMem:   8114MB   64-bit pointers.
+Mem Clock: 5005.000 Mhz x 256 bits   (320.3 GB/s)
+ECC Disabled
+
+
+nnodes=58228, nedges=428156.
+Host memory for graph:   3 MB
+	  1%	 10%	 20%	 30%	 40%	 50%	 60%	 70%	 80%	 90%	100%read 3891104 bytes in 8 ms (486.39 MB/s)
+
+
+INFO ktruss/irgl+wl/loc-brightkite_edges_adj.sym STDERR
+==20455== NVPROF is profiling process 20455, command: ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_testvpB6cc
+INSTR gpu_memory_total_start 8508145664
+INSTR gpu_memory_free_start 8377073664
+INSTR gpu_memory_total_end 8508145664
+INSTR gpu_memory_free_end 8341422080
+Total time: 23 ms
+Total time: 23771738 ns
+==20455== Generated result file: /org/programs/postdocs/sreepai/hpec/gpgraphiso/ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498773204.79.1.2.nvprof
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -t=24 -trussFile=/tmp/test-_ktruss_ktruss-wl_testvpB6cc -trussNum=43 -trussNodes=63 -trussEdges=1799
+PASS ktruss/irgl+wl/loc-brightkite_edges_adj.sym: BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773204.79.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498773204.79.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_testvpB6cc
+INFO PERFDATE END_RUN 2017-06-29 16:53:39
+PERF ktruss/irgl+wl/loc-brightkite_edges_adj.sym 1498773204.79.1 2 23771738 BMK2_INPUTID=loc-brightkite_edges_adj.sym BMK2=1 BMK2_BINID=ktruss/irgl+wl BMK2_RUNID=1498773204.79.1.2 nvprof -o ../ktruss/ktruss-wl/cp_ktruss_irgl+wl_loc-brightkite_edges_adjsym_1498773204.79.1.2.nvprof --system-profiling on ../ktruss/ktruss-wl/test /h2/sreepai/pd/hpec/inputs/graphchallenge/loc-brightkite_edges_adj.sym.gr -k 43 -p edges -o /tmp/test-_ktruss_ktruss-wl_testvpB6cc
 TASK_COMPLETE ktruss/irgl+wl/loc-brightkite_edges_adj.sym PERF 3/0/3
 INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
-INFO DATE END 2017-06-28 20:36:50
-INFO APPROXIMATE DURATION 0:00:14.477691
+INFO DATE END 2017-06-29 16:53:39
+INFO APPROXIMATE DURATION 0:00:14.755937
