@@ -1,0 +1,120 @@
+# Evaluation Data
+
+This folder contains the evaluation (raw data, processed data, scripts
+and graphs) for the HPEC GraphChallenge. 
+
+This folder is intended to be kept in version control.
+
+## Organization
+
+This folder is organized as below:
+
+     gpu-logs/<benchmark>/<expt>/logfiles
+     cpu-logs/<benchmark>/<expt>/logfiles
+
+Here, <benchmark> is one of `ktruss` or `triangles`.
+
+<expt> is any experiment whose data has been collected. The following
+experiments are currently defined for the GPU:
+
+1. tuxedo-gtx1080: Run on the GTX1080 on tuxedo
+2. tuxedo-k80: Run on the K80 on tuxedo
+
+Similarly, for the CPU, the following experiments have been defined
+  
+1. tuxedo-01: Run on tuxedo CPU using single thread
+2. tuxedo-12: Run on tuxedo CPU using 12 threads
+3. tuxedo-24: Run on tuxedo CPU using 24 threads
+
+Note some factors are implicitly encoded. For example, the above
+experiments all run ktruss with `k=max`.
+
+There is one logfile per input. This allows different inputs to run
+separately.
+
+## Setup
+
+Make sure variables in common.mk are correctly set. If there are not
+correct for your setup, create *one* of the following files:
+
+  <username>-<hostname>-common.mk
+
+Or:
+
+  <username>-common.mk
+
+And put in the variables that override `common.mk` (do not modify
+`common.mk` unless you're introducing new variables).
+
+## Running experiments
+
+Make sure to commit log files before you run new experiments, since
+log files are overwritten.
+
+To run an entire experiment:
+
+  make -f Makefile.run <expt> -B
+
+To run a single input of a GPU experiment:
+  
+  make -f Makefile.run gpu-logs/<benchmark>/<expt>/<logfile> -B
+
+Similarly for a CPU experiment
+
+  make -f Makefile.run cpu-logs/<benchmark>/<expt>/<logfile> -B
+
+## Updating existing experiments
+
+If you add new inputs, you need to regenerate the scripts that run
+experiments. You can do this by executing:
+
+  make 
+
+Then, to run experiments on the new inputs only:
+
+  make -f Makefile.run <expt>
+
+(not the absence of the `-B`)
+
+## Processing raw log files
+
+To process the raw log files obtained by running experiments, run:
+
+  make -f Makefile.proc
+
+These will deposit the processed files <expt>-raw.csv and <expt>.csv
+in a directory <expt>/ under `eval/`.
+
+Each experiment may further process this data. For such experiments,
+after processing the raw data:
+
+   cd <expt>
+   make
+
+will run any <expt>-specific scripts.
+
+## Defining new experiments
+
+This section will detail the steps required to get experiments
+behaving as above.
+
+1. Create an experiment running script.
+
+Edit `Makefile`, and add the lines to generate "an experiment-running
+script" and the directory to store the experimental logs. Here is an
+example:
+
+  ktruss-tuxedo-k80.mk: ktruss-inputs gpu-logs/ktruss/tuxedo-k80 templates/gpu-expt.template
+       scripts/gen_makefile.py $< ktruss/irgl tuxedo-k80 templates/gpu-expt.template $@ -t "{bmk}-{expt}" -v bmk=ktruss -v scandir=$(KTRUSS) -v env_vars="CUDA_VISIBLE_DEVICES=1"
+
+  gpu-logs/ktruss/%:
+	mkdir $@
+
+
+2. Add the newly created experimental makefile to `Makefile.run`.
+
+3. Add commands to process the log files to `Makefile.data`.
+
+Now you should be able to run experiments and collect data using the
+standard `make -f Makefile.run` and `make -f Makefile.data` commands.
+

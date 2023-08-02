@@ -1,0 +1,980 @@
+^ ../../ktruss/triangle/cp_triangles_irgl_amazon0302_adjsym_1498152094.16.1.0.nvprof
+Energy (from avg): 15.94 Joules
+Energy (by integration): 22.29 Joules
+Total duration: 548967853 ns
+Total data transfer time: 5008782 ns (0.91%)
+^ ../../ktruss/triangle/cp_triangles_irgl_amazon0302_adjsym_1498152094.16.1.1.nvprof
+Energy (from avg): 14.38 Joules
+Energy (by integration): 19.86 Joules
+Total duration: 493921137 ns
+Total data transfer time: 5137276 ns (1.04%)
+^ ../../ktruss/triangle/cp_triangles_irgl_amazon0302_adjsym_1498152094.16.1.2.nvprof
+Energy (from avg): 13.20 Joules
+Energy (by integration): 17.45 Joules
+Total duration: 485088237 ns
+Total data transfer time: 4999397 ns (1.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_amazon0312_adjsym_1498152426.84.1.0.nvprof
+Energy (from avg): 18.13 Joules
+Energy (by integration): 23.49 Joules
+Total duration: 664121460 ns
+Total data transfer time: 13950986 ns (2.10%)
+^ ../../ktruss/triangle/cp_triangles_irgl_amazon0312_adjsym_1498152426.84.1.1.nvprof
+Energy (from avg): 13.05 Joules
+Energy (by integration): 16.58 Joules
+Total duration: 489941288 ns
+Total data transfer time: 11932948 ns (2.44%)
+^ ../../ktruss/triangle/cp_triangles_irgl_amazon0312_adjsym_1498152426.84.1.2.nvprof
+Energy (from avg): 14.55 Joules
+Energy (by integration): 18.89 Joules
+Total duration: 540651286 ns
+Total data transfer time: 13853003 ns (2.56%)
+^ ../../ktruss/triangle/cp_triangles_irgl_amazon0505_adjsym_1498145951.99.1.0.nvprof
+Energy (from avg): 14.09 Joules
+Energy (by integration): 16.13 Joules
+Total duration: 556399319 ns
+Total data transfer time: 12203887 ns (2.19%)
+^ ../../ktruss/triangle/cp_triangles_irgl_amazon0505_adjsym_1498145951.99.1.1.nvprof
+Energy (from avg): 15.19 Joules
+Energy (by integration): 19.70 Joules
+Total duration: 563000767 ns
+Total data transfer time: 15174595 ns (2.70%)
+^ ../../ktruss/triangle/cp_triangles_irgl_amazon0505_adjsym_1498145951.99.1.2.nvprof
+Energy (from avg): 14.97 Joules
+Energy (by integration): 19.19 Joules
+Total duration: 558440537 ns
+Total data transfer time: 12535409 ns (2.24%)
+^ ../../ktruss/triangle/cp_triangles_irgl_amazon0601_adjsym_1498151781.23.1.0.nvprof
+Energy (from avg): 18.43 Joules
+Energy (by integration): 24.99 Joules
+Total duration: 660384047 ns
+Total data transfer time: 11740080 ns (1.78%)
+^ ../../ktruss/triangle/cp_triangles_irgl_amazon0601_adjsym_1498151781.23.1.1.nvprof
+Energy (from avg): 15.09 Joules
+Energy (by integration): 19.51 Joules
+Total duration: 551718286 ns
+Total data transfer time: 15387397 ns (2.79%)
+^ ../../ktruss/triangle/cp_triangles_irgl_amazon0601_adjsym_1498151781.23.1.2.nvprof
+Energy (from avg): 14.67 Joules
+Energy (by integration): 18.95 Joules
+Total duration: 540655955 ns
+Total data transfer time: 12220065 ns (2.26%)
+^ ../../ktruss/triangle/cp_triangles_irgl_as20000102_adjsym_1498150033.16.1.0.nvprof
+Energy (from avg): 14.38 Joules
+Energy (by integration): 16.26 Joules
+Total duration: 571479178 ns
+Total data transfer time: 54189 ns (0.01%)
+^ ../../ktruss/triangle/cp_triangles_irgl_as20000102_adjsym_1498150033.16.1.1.nvprof
+Energy (from avg): 11.00 Joules
+Energy (by integration): 13.70 Joules
+Total duration: 419405964 ns
+Total data transfer time: 59383 ns (0.01%)
+^ ../../ktruss/triangle/cp_triangles_irgl_as20000102_adjsym_1498150033.16.1.2.nvprof
+Energy (from avg): 11.46 Joules
+Energy (by integration): 14.28 Joules
+Total duration: 437718204 ns
+Total data transfer time: 53139 ns (0.01%)
+^ ../../ktruss/triangle/cp_triangles_irgl_as-caida20071105_adjsym_1498152196.49.1.0.nvprof
+Energy (from avg): 11.72 Joules
+Energy (by integration): 14.75 Joules
+Total duration: 435012463 ns
+Total data transfer time: 188089 ns (0.04%)
+^ ../../ktruss/triangle/cp_triangles_irgl_as-caida20071105_adjsym_1498152196.49.1.1.nvprof
+Energy (from avg): 11.34 Joules
+Energy (by integration): 14.19 Joules
+Total duration: 421983556 ns
+Total data transfer time: 190417 ns (0.05%)
+^ ../../ktruss/triangle/cp_triangles_irgl_as-caida20071105_adjsym_1498152196.49.1.2.nvprof
+Energy (from avg): 11.24 Joules
+Energy (by integration): 14.29 Joules
+Total duration: 419688024 ns
+Total data transfer time: 229850 ns (0.05%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ca-AstroPh_adjsym_1498151909.75.1.0.nvprof
+Energy (from avg): 12.76 Joules
+Energy (by integration): 16.30 Joules
+Total duration: 479999956 ns
+Total data transfer time: 571609 ns (0.12%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ca-AstroPh_adjsym_1498151909.75.1.1.nvprof
+Energy (from avg): 11.15 Joules
+Energy (by integration): 13.99 Joules
+Total duration: 420537690 ns
+Total data transfer time: 743189 ns (0.18%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ca-AstroPh_adjsym_1498151909.75.1.2.nvprof
+Energy (from avg): 13.90 Joules
+Energy (by integration): 17.89 Joules
+Total duration: 510459808 ns
+Total data transfer time: 793616 ns (0.16%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ca-CondMat_adjsym_1498152502.75.1.0.nvprof
+Energy (from avg): 11.11 Joules
+Energy (by integration): 13.93 Joules
+Total duration: 415091828 ns
+Total data transfer time: 297316 ns (0.07%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ca-CondMat_adjsym_1498152502.75.1.1.nvprof
+Energy (from avg): 10.89 Joules
+Energy (by integration): 13.71 Joules
+Total duration: 407519352 ns
+Total data transfer time: 346551 ns (0.09%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ca-CondMat_adjsym_1498152502.75.1.2.nvprof
+Energy (from avg): 11.22 Joules
+Energy (by integration): 14.18 Joules
+Total duration: 419327135 ns
+Total data transfer time: 287636 ns (0.07%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ca-GrQc_adjsym_1498152029.42.1.0.nvprof
+Energy (from avg): 11.97 Joules
+Energy (by integration): 16.65 Joules
+Total duration: 413904808 ns
+Total data transfer time: 57032 ns (0.01%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ca-GrQc_adjsym_1498152029.42.1.1.nvprof
+Energy (from avg): 11.47 Joules
+Energy (by integration): 14.54 Joules
+Total duration: 427200972 ns
+Total data transfer time: 55577 ns (0.01%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ca-GrQc_adjsym_1498152029.42.1.2.nvprof
+Energy (from avg): 11.07 Joules
+Energy (by integration): 13.94 Joules
+Total duration: 411933116 ns
+Total data transfer time: 55560 ns (0.01%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ca-HepPh_adjsym_1498152401.76.1.0.nvprof
+Energy (from avg): 12.18 Joules
+Energy (by integration): 15.42 Joules
+Total duration: 451122090 ns
+Total data transfer time: 344428 ns (0.08%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ca-HepPh_adjsym_1498152401.76.1.1.nvprof
+Energy (from avg): 11.36 Joules
+Energy (by integration): 14.30 Joules
+Total duration: 423030293 ns
+Total data transfer time: 333733 ns (0.08%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ca-HepPh_adjsym_1498152401.76.1.2.nvprof
+Energy (from avg): 11.92 Joules
+Energy (by integration): 14.95 Joules
+Total duration: 444353584 ns
+Total data transfer time: 334979 ns (0.08%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ca-HepTh_adjsym_1498151947.26.1.0.nvprof
+Energy (from avg): 12.35 Joules
+Energy (by integration): 16.04 Joules
+Total duration: 458287741 ns
+Total data transfer time: 105537 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ca-HepTh_adjsym_1498151947.26.1.1.nvprof
+Energy (from avg): 11.70 Joules
+Energy (by integration): 14.77 Joules
+Total duration: 437705132 ns
+Total data transfer time: 104562 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ca-HepTh_adjsym_1498151947.26.1.2.nvprof
+Energy (from avg): 11.13 Joules
+Energy (by integration): 14.09 Joules
+Total duration: 416674766 ns
+Total data transfer time: 108166 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_cit-HepPh_adjsym_1498151972.23.1.0.nvprof
+Energy (from avg): 14.69 Joules
+Energy (by integration): 18.81 Joules
+Total duration: 546367123 ns
+Total data transfer time: 3055346 ns (0.56%)
+^ ../../ktruss/triangle/cp_triangles_irgl_cit-HepPh_adjsym_1498151972.23.1.1.nvprof
+Energy (from avg): 13.19 Joules
+Energy (by integration): 16.57 Joules
+Total duration: 489739241 ns
+Total data transfer time: 2305851 ns (0.47%)
+^ ../../ktruss/triangle/cp_triangles_irgl_cit-HepPh_adjsym_1498151972.23.1.2.nvprof
+Energy (from avg): 12.73 Joules
+Energy (by integration): 16.23 Joules
+Total duration: 473341560 ns
+Total data transfer time: 2198507 ns (0.46%)
+^ ../../ktruss/triangle/cp_triangles_irgl_cit-HepTh_adjsym_1498152439.77.1.0.nvprof
+Energy (from avg): 11.01 Joules
+Energy (by integration): 13.90 Joules
+Total duration: 410975337 ns
+Total data transfer time: 1430081 ns (0.35%)
+^ ../../ktruss/triangle/cp_triangles_irgl_cit-HepTh_adjsym_1498152439.77.1.1.nvprof
+Energy (from avg): 13.28 Joules
+Energy (by integration): 17.01 Joules
+Total duration: 492272347 ns
+Total data transfer time: 1944262 ns (0.39%)
+^ ../../ktruss/triangle/cp_triangles_irgl_cit-HepTh_adjsym_1498152439.77.1.2.nvprof
+Energy (from avg): 12.66 Joules
+Energy (by integration): 16.40 Joules
+Total duration: 468949048 ns
+Total data transfer time: 2115375 ns (0.45%)
+^ ../../ktruss/triangle/cp_triangles_irgl_cit-Patents_adjsym_1498152054.76.1.0.nvprof
+Energy (from avg): 38.02 Joules
+Energy (by integration): 50.96 Joules
+Total duration: 1345772499 ns
+Total data transfer time: 89499636 ns (6.65%)
+^ ../../ktruss/triangle/cp_triangles_irgl_cit-Patents_adjsym_1498152054.76.1.1.nvprof
+Energy (from avg): 29.98 Joules
+Energy (by integration): 41.99 Joules
+Total duration: 996680481 ns
+Total data transfer time: 92456821 ns (9.28%)
+^ ../../ktruss/triangle/cp_triangles_irgl_cit-Patents_adjsym_1498152054.76.1.2.nvprof
+Energy (from avg): 30.68 Joules
+Energy (by integration): 44.06 Joules
+Total duration: 984619266 ns
+Total data transfer time: 83385171 ns (8.47%)
+^ ../../ktruss/triangle/cp_triangles_irgl_complete5_smsym_1498152376.89.1.0.nvprof
+Energy (from avg): 10.83 Joules
+Energy (by integration): 13.82 Joules
+Total duration: 409910388 ns
+Total data transfer time: 10718 ns (0.00%)
+^ ../../ktruss/triangle/cp_triangles_irgl_complete5_smsym_1498152376.89.1.1.nvprof
+Energy (from avg): 10.19 Joules
+Energy (by integration): 12.84 Joules
+Total duration: 384995123 ns
+Total data transfer time: 10267 ns (0.00%)
+^ ../../ktruss/triangle/cp_triangles_irgl_complete5_smsym_1498152376.89.1.2.nvprof
+Energy (from avg): 10.99 Joules
+Energy (by integration): 13.96 Joules
+Total duration: 414485374 ns
+Total data transfer time: 11363 ns (0.00%)
+^ ../../ktruss/triangle/cp_triangles_irgl_disjoint_tri_smsym_1498151794.29.1.0.nvprof
+Energy (from avg): 10.80 Joules
+Energy (by integration): 13.72 Joules
+Total duration: 400740035 ns
+Total data transfer time: 10742 ns (0.00%)
+^ ../../ktruss/triangle/cp_triangles_irgl_disjoint_tri_smsym_1498151794.29.1.1.nvprof
+Energy (from avg): 10.98 Joules
+Energy (by integration): 13.97 Joules
+Total duration: 408492916 ns
+Total data transfer time: 10353 ns (0.00%)
+^ ../../ktruss/triangle/cp_triangles_irgl_disjoint_tri_smsym_1498151794.29.1.2.nvprof
+Energy (from avg): 10.03 Joules
+Energy (by integration): 12.73 Joules
+Total duration: 372082273 ns
+Total data transfer time: 9955 ns (0.00%)
+^ ../../ktruss/triangle/cp_triangles_irgl_email-Enron_adjsym_1498152527.67.1.0.nvprof
+Energy (from avg): 13.03 Joules
+Energy (by integration): 16.43 Joules
+Total duration: 489409456 ns
+Total data transfer time: 742417 ns (0.15%)
+^ ../../ktruss/triangle/cp_triangles_irgl_email-Enron_adjsym_1498152527.67.1.1.nvprof
+Energy (from avg): 11.12 Joules
+Energy (by integration): 14.00 Joules
+Total duration: 416877811 ns
+Total data transfer time: 697887 ns (0.17%)
+^ ../../ktruss/triangle/cp_triangles_irgl_email-Enron_adjsym_1498152527.67.1.2.nvprof
+Energy (from avg): 11.16 Joules
+Energy (by integration): 13.82 Joules
+Total duration: 416939156 ns
+Total data transfer time: 545733 ns (0.13%)
+^ ../../ktruss/triangle/cp_triangles_irgl_email-EuAll_adjsym_1498152477.45.1.0.nvprof
+Energy (from avg): 15.15 Joules
+Energy (by integration): 19.39 Joules
+Total duration: 563347541 ns
+Total data transfer time: 2406395 ns (0.43%)
+^ ../../ktruss/triangle/cp_triangles_irgl_email-EuAll_adjsym_1498152477.45.1.1.nvprof
+Energy (from avg): 11.21 Joules
+Energy (by integration): 14.04 Joules
+Total duration: 417961667 ns
+Total data transfer time: 1879301 ns (0.45%)
+^ ../../ktruss/triangle/cp_triangles_irgl_email-EuAll_adjsym_1498152477.45.1.2.nvprof
+Energy (from avg): 11.44 Joules
+Energy (by integration): 14.36 Joules
+Total duration: 428576097 ns
+Total data transfer time: 1860503 ns (0.43%)
+^ ../../ktruss/triangle/cp_triangles_irgl_facebook_combined_adjsym_1498151934.68.1.0.nvprof
+Energy (from avg): 11.45 Joules
+Energy (by integration): 14.31 Joules
+Total duration: 434809841 ns
+Total data transfer time: 247476 ns (0.06%)
+^ ../../ktruss/triangle/cp_triangles_irgl_facebook_combined_adjsym_1498151934.68.1.1.nvprof
+Energy (from avg): 12.95 Joules
+Energy (by integration): 16.31 Joules
+Total duration: 487713716 ns
+Total data transfer time: 246894 ns (0.05%)
+^ ../../ktruss/triangle/cp_triangles_irgl_facebook_combined_adjsym_1498151934.68.1.2.nvprof
+Energy (from avg): 11.45 Joules
+Energy (by integration): 14.34 Joules
+Total duration: 435035273 ns
+Total data transfer time: 245541 ns (0.06%)
+^ ../../ktruss/triangle/cp_triangles_irgl_flickrEdges_adjsym_1498151846.64.1.0.nvprof
+Energy (from avg): 23.53 Joules
+Energy (by integration): 33.66 Joules
+Total duration: 767653431 ns
+Total data transfer time: 13551482 ns (1.77%)
+^ ../../ktruss/triangle/cp_triangles_irgl_flickrEdges_adjsym_1498151846.64.1.1.nvprof
+Energy (from avg): 19.18 Joules
+Energy (by integration): 27.18 Joules
+Total duration: 622960664 ns
+Total data transfer time: 11111091 ns (1.78%)
+^ ../../ktruss/triangle/cp_triangles_irgl_flickrEdges_adjsym_1498151846.64.1.2.nvprof
+Energy (from avg): 20.37 Joules
+Energy (by integration): 29.46 Joules
+Total duration: 661735892 ns
+Total data transfer time: 12242984 ns (1.85%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale18-ef16_adjsym_1498152259.45.1.0.nvprof
+Energy (from avg): 27.03 Joules
+Energy (by integration): 36.85 Joules
+Total duration: 929436682 ns
+Total data transfer time: 20552783 ns (2.21%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale18-ef16_adjsym_1498152259.45.1.1.nvprof
+Energy (from avg): 22.93 Joules
+Energy (by integration): 33.69 Joules
+Total duration: 720208906 ns
+Total data transfer time: 20890816 ns (2.90%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale18-ef16_adjsym_1498152259.45.1.2.nvprof
+Energy (from avg): 23.25 Joules
+Energy (by integration): 34.37 Joules
+Total duration: 725013939 ns
+Total data transfer time: 17481985 ns (2.41%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale19-ef16_adjsym_1498151831.92.1.0.nvprof
+Energy (from avg): 40.28 Joules
+Energy (by integration): 56.76 Joules
+Total duration: 1303483051 ns
+Total data transfer time: 44883069 ns (3.44%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale19-ef16_adjsym_1498151831.92.1.1.nvprof
+Energy (from avg): 36.09 Joules
+Energy (by integration): 54.73 Joules
+Total duration: 1049524890 ns
+Total data transfer time: 38519032 ns (3.67%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale19-ef16_adjsym_1498151831.92.1.2.nvprof
+Energy (from avg): 35.88 Joules
+Energy (by integration): 54.39 Joules
+Total duration: 1049030202 ns
+Total data transfer time: 37732812 ns (3.60%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale20-ef16_adjsym_1498151673.83.1.0.nvprof
+Energy (from avg): 73.84 Joules
+Energy (by integration): 109.49 Joules
+Total duration: 2214716391 ns
+Total data transfer time: 73468982 ns (3.32%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale20-ef16_adjsym_1498151673.83.1.1.nvprof
+Energy (from avg): 68.92 Joules
+Energy (by integration): 108.10 Joules
+Total duration: 1921841564 ns
+Total data transfer time: 73812407 ns (3.84%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale20-ef16_adjsym_1498151673.83.1.2.nvprof
+Energy (from avg): 68.45 Joules
+Energy (by integration): 107.45 Joules
+Total duration: 1903378762 ns
+Total data transfer time: 61152808 ns (3.21%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale21-ef16_adjsym_1498152107.0.1.0.nvprof
+Energy (from avg): 191.55 Joules
+Energy (by integration): 310.70 Joules
+Total duration: 5259642741 ns
+Total data transfer time: 152601267 ns (2.90%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale21-ef16_adjsym_1498152107.0.1.1.nvprof
+Energy (from avg): 176.74 Joules
+Energy (by integration): 296.48 Joules
+Total duration: 4635363344 ns
+Total data transfer time: 139509502 ns (3.01%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale21-ef16_adjsym_1498152107.0.1.2.nvprof
+Energy (from avg): 175.76 Joules
+Energy (by integration): 293.97 Joules
+Total duration: 4607867583 ns
+Total data transfer time: 148821642 ns (3.23%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale22-ef16_adjsym_1498151985.02.1.0.nvprof
+Energy (from avg): 425.63 Joules
+Energy (by integration): 717.58 Joules
+Total duration: 11203451854 ns
+Total data transfer time: 285684435 ns (2.55%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale22-ef16_adjsym_1498151985.02.1.1.nvprof
+Energy (from avg): 420.58 Joules
+Energy (by integration): 716.89 Joules
+Total duration: 10834585229 ns
+Total data transfer time: 435507579 ns (4.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale22-ef16_adjsym_1498151985.02.1.2.nvprof
+Energy (from avg): 422.28 Joules
+Energy (by integration): 720.94 Joules
+Total duration: 10895317751 ns
+Total data transfer time: 267965336 ns (2.46%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale23-ef16_adjsym_1498151691.3.1.0.nvprof
+Energy (from avg): 1041.48 Joules
+Energy (by integration): 1801.56 Joules
+Total duration: 27004413257 ns
+Total data transfer time: 849910339 ns (3.15%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale23-ef16_adjsym_1498151691.3.1.1.nvprof
+Energy (from avg): 995.05 Joules
+Energy (by integration): 1730.49 Joules
+Total duration: 25489802029 ns
+Total data transfer time: 514179304 ns (2.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale23-ef16_adjsym_1498151691.3.1.2.nvprof
+Energy (from avg): 1003.06 Joules
+Energy (by integration): 1750.99 Joules
+Total duration: 25514597968 ns
+Total data transfer time: 529557319 ns (2.08%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale24-ef16_adjsym_1498152300.24.1.0.nvprof
+Energy (from avg): 170.23 Joules
+Energy (by integration): 243.12 Joules
+Total duration: 5738417194 ns
+Total data transfer time: 730285249 ns (12.73%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale24-ef16_adjsym_1498152300.24.1.1.nvprof
+Energy (from avg): 122.15 Joules
+Energy (by integration): 177.16 Joules
+Total duration: 4032354529 ns
+Total data transfer time: 731848448 ns (18.15%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale24-ef16_adjsym_1498152300.24.1.2.nvprof
+Energy (from avg): 115.57 Joules
+Energy (by integration): 167.51 Joules
+Total duration: 3811009055 ns
+Total data transfer time: 647641387 ns (16.99%)
+^ ../../ktruss/triangle/cp_triangles_irgl_graph500-scale24-ef16_adjsym_1498152300.24.1.3.nvprof
+Energy (from avg): 121.20 Joules
+Energy (by integration): 175.82 Joules
+Total duration: 3998561141 ns
+Total data transfer time: 544699034 ns (13.62%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ktruss_examplesym_1498152208.95.1.0.nvprof
+Energy (from avg): 11.35 Joules
+Energy (by integration): 14.21 Joules
+Total duration: 430248918 ns
+Total data transfer time: 10893 ns (0.00%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ktruss_examplesym_1498152208.95.1.1.nvprof
+Energy (from avg): 11.25 Joules
+Energy (by integration): 14.36 Joules
+Total duration: 425987310 ns
+Total data transfer time: 11052 ns (0.00%)
+^ ../../ktruss/triangle/cp_triangles_irgl_ktruss_examplesym_1498152208.95.1.2.nvprof
+Energy (from avg): 11.82 Joules
+Energy (by integration): 15.14 Joules
+Total duration: 448154539 ns
+Total data transfer time: 11422 ns (0.00%)
+^ ../../ktruss/triangle/cp_triangles_irgl_loc-brightkite_edges_adjsym_1498151648.68.1.0.nvprof
+Energy (from avg): 13.10 Joules
+Energy (by integration): 16.38 Joules
+Total duration: 495830781 ns
+Total data transfer time: 706137 ns (0.14%)
+^ ../../ktruss/triangle/cp_triangles_irgl_loc-brightkite_edges_adjsym_1498151648.68.1.1.nvprof
+Energy (from avg): 11.17 Joules
+Energy (by integration): 14.15 Joules
+Total duration: 417081122 ns
+Total data transfer time: 797239 ns (0.19%)
+^ ../../ktruss/triangle/cp_triangles_irgl_loc-brightkite_edges_adjsym_1498151648.68.1.2.nvprof
+Energy (from avg): 11.28 Joules
+Energy (by integration): 14.48 Joules
+Total duration: 421014614 ns
+Total data transfer time: 845668 ns (0.20%)
+^ ../../ktruss/triangle/cp_triangles_irgl_loc-gowalla_edges_adjsym_1498151635.78.1.0.nvprof
+Energy (from avg): 16.40 Joules
+Energy (by integration): 20.80 Joules
+Total duration: 615237888 ns
+Total data transfer time: 6659682 ns (1.08%)
+^ ../../ktruss/triangle/cp_triangles_irgl_loc-gowalla_edges_adjsym_1498151635.78.1.1.nvprof
+Energy (from avg): 12.90 Joules
+Energy (by integration): 16.22 Joules
+Total duration: 480053189 ns
+Total data transfer time: 4813284 ns (1.00%)
+^ ../../ktruss/triangle/cp_triangles_irgl_loc-gowalla_edges_adjsym_1498151635.78.1.2.nvprof
+Energy (from avg): 13.38 Joules
+Energy (by integration): 16.77 Joules
+Total duration: 501789356 ns
+Total data transfer time: 5504149 ns (1.10%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010331_adjsym_1498151806.62.1.0.nvprof
+Energy (from avg): 11.90 Joules
+Energy (by integration): 15.03 Joules
+Total duration: 447364339 ns
+Total data transfer time: 97687 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010331_adjsym_1498151806.62.1.1.nvprof
+Energy (from avg): 12.02 Joules
+Energy (by integration): 15.14 Joules
+Total duration: 454115351 ns
+Total data transfer time: 85153 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010331_adjsym_1498151806.62.1.2.nvprof
+Energy (from avg): 11.24 Joules
+Energy (by integration): 14.94 Joules
+Total duration: 412903268 ns
+Total data transfer time: 96835 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010407_adjsym_1498152134.13.1.0.nvprof
+Energy (from avg): 12.36 Joules
+Energy (by integration): 17.02 Joules
+Total duration: 427184565 ns
+Total data transfer time: 91591 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010407_adjsym_1498152134.13.1.1.nvprof
+Energy (from avg): 11.93 Joules
+Energy (by integration): 16.77 Joules
+Total duration: 409890265 ns
+Total data transfer time: 96552 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010407_adjsym_1498152134.13.1.2.nvprof
+Energy (from avg): 11.78 Joules
+Energy (by integration): 16.29 Joules
+Total duration: 404033803 ns
+Total data transfer time: 93418 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010414_adjsym_1498151897.25.1.0.nvprof
+Energy (from avg): 11.24 Joules
+Energy (by integration): 14.06 Joules
+Total duration: 420762484 ns
+Total data transfer time: 84134 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010414_adjsym_1498151897.25.1.1.nvprof
+Energy (from avg): 11.23 Joules
+Energy (by integration): 14.07 Joules
+Total duration: 419030572 ns
+Total data transfer time: 84238 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010414_adjsym_1498151897.25.1.2.nvprof
+Energy (from avg): 12.75 Joules
+Energy (by integration): 15.70 Joules
+Total duration: 476456813 ns
+Total data transfer time: 101605 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010421_adjsym_1498152464.87.1.0.nvprof
+Energy (from avg): 10.77 Joules
+Energy (by integration): 13.74 Joules
+Total duration: 405515626 ns
+Total data transfer time: 84140 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010421_adjsym_1498152464.87.1.1.nvprof
+Energy (from avg): 11.14 Joules
+Energy (by integration): 14.22 Joules
+Total duration: 420545272 ns
+Total data transfer time: 100352 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010421_adjsym_1498152464.87.1.2.nvprof
+Energy (from avg): 11.40 Joules
+Energy (by integration): 14.48 Joules
+Total duration: 431576912 ns
+Total data transfer time: 96208 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010428_adjsym_1498152247.08.1.0.nvprof
+Energy (from avg): 11.10 Joules
+Energy (by integration): 13.84 Joules
+Total duration: 419160333 ns
+Total data transfer time: 96895 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010428_adjsym_1498152247.08.1.1.nvprof
+Energy (from avg): 11.35 Joules
+Energy (by integration): 14.12 Joules
+Total duration: 430945562 ns
+Total data transfer time: 90131 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010428_adjsym_1498152247.08.1.2.nvprof
+Energy (from avg): 11.27 Joules
+Energy (by integration): 14.41 Joules
+Total duration: 426950263 ns
+Total data transfer time: 97083 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010505_adjsym_1498151959.83.1.0.nvprof
+Energy (from avg): 11.25 Joules
+Energy (by integration): 14.29 Joules
+Total duration: 426895690 ns
+Total data transfer time: 84006 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010505_adjsym_1498151959.83.1.1.nvprof
+Energy (from avg): 11.38 Joules
+Energy (by integration): 14.23 Joules
+Total duration: 430215528 ns
+Total data transfer time: 86546 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010505_adjsym_1498151959.83.1.2.nvprof
+Energy (from avg): 11.21 Joules
+Energy (by integration): 14.00 Joules
+Total duration: 423993612 ns
+Total data transfer time: 84938 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010512_adjsym_1498151661.15.1.0.nvprof
+Energy (from avg): 11.07 Joules
+Energy (by integration): 13.91 Joules
+Total duration: 418950059 ns
+Total data transfer time: 105040 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010512_adjsym_1498151661.15.1.1.nvprof
+Energy (from avg): 10.86 Joules
+Energy (by integration): 13.35 Joules
+Total duration: 410349091 ns
+Total data transfer time: 84917 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010512_adjsym_1498151661.15.1.2.nvprof
+Energy (from avg): 11.57 Joules
+Energy (by integration): 14.59 Joules
+Total duration: 442715914 ns
+Total data transfer time: 109466 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010519_adjsym_1498152452.38.1.0.nvprof
+Energy (from avg): 11.33 Joules
+Energy (by integration): 14.27 Joules
+Total duration: 428223901 ns
+Total data transfer time: 99623 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010519_adjsym_1498152452.38.1.1.nvprof
+Energy (from avg): 11.20 Joules
+Energy (by integration): 14.60 Joules
+Total duration: 413486872 ns
+Total data transfer time: 110879 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010519_adjsym_1498152452.38.1.2.nvprof
+Energy (from avg): 11.45 Joules
+Energy (by integration): 14.92 Joules
+Total duration: 422324524 ns
+Total data transfer time: 106228 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010526_adjsym_1498152553.24.1.0.nvprof
+Energy (from avg): 13.27 Joules
+Energy (by integration): 16.90 Joules
+Total duration: 497638768 ns
+Total data transfer time: 87107 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010526_adjsym_1498152553.24.1.1.nvprof
+Energy (from avg): 11.09 Joules
+Energy (by integration): 14.13 Joules
+Total duration: 419843048 ns
+Total data transfer time: 100578 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon1_010526_adjsym_1498152553.24.1.2.nvprof
+Energy (from avg): 11.27 Joules
+Energy (by integration): 14.31 Joules
+Total duration: 425184204 ns
+Total data transfer time: 100652 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010331_adjsym_1498152158.87.1.0.nvprof
+Energy (from avg): 12.57 Joules
+Energy (by integration): 15.87 Joules
+Total duration: 471093257 ns
+Total data transfer time: 114535 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010331_adjsym_1498152158.87.1.1.nvprof
+Energy (from avg): 10.90 Joules
+Energy (by integration): 13.64 Joules
+Total duration: 412093524 ns
+Total data transfer time: 112761 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010331_adjsym_1498152158.87.1.2.nvprof
+Energy (from avg): 11.47 Joules
+Energy (by integration): 14.30 Joules
+Total duration: 434817606 ns
+Total data transfer time: 108678 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010407_adjsym_1498152287.76.1.0.nvprof
+Energy (from avg): 14.54 Joules
+Energy (by integration): 20.15 Joules
+Total duration: 502072091 ns
+Total data transfer time: 106004 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010407_adjsym_1498152287.76.1.1.nvprof
+Energy (from avg): 11.62 Joules
+Energy (by integration): 16.32 Joules
+Total duration: 402209932 ns
+Total data transfer time: 123016 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010407_adjsym_1498152287.76.1.2.nvprof
+Energy (from avg): 11.92 Joules
+Energy (by integration): 16.80 Joules
+Total duration: 412952893 ns
+Total data transfer time: 104939 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010414_adjsym_1498152389.35.1.0.nvprof
+Energy (from avg): 11.30 Joules
+Energy (by integration): 14.32 Joules
+Total duration: 427664484 ns
+Total data transfer time: 122462 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010414_adjsym_1498152389.35.1.1.nvprof
+Energy (from avg): 11.07 Joules
+Energy (by integration): 14.61 Joules
+Total duration: 409820249 ns
+Total data transfer time: 127201 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010414_adjsym_1498152389.35.1.2.nvprof
+Energy (from avg): 11.57 Joules
+Energy (by integration): 14.98 Joules
+Total duration: 426623187 ns
+Total data transfer time: 123228 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010421_adjsym_1498152146.49.1.0.nvprof
+Energy (from avg): 12.28 Joules
+Energy (by integration): 16.99 Joules
+Total duration: 427130703 ns
+Total data transfer time: 117111 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010421_adjsym_1498152146.49.1.1.nvprof
+Energy (from avg): 12.68 Joules
+Energy (by integration): 17.46 Joules
+Total duration: 435332115 ns
+Total data transfer time: 106510 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010421_adjsym_1498152146.49.1.2.nvprof
+Energy (from avg): 11.45 Joules
+Energy (by integration): 15.15 Joules
+Total duration: 422906471 ns
+Total data transfer time: 108333 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010428_adjsym_1498152490.25.1.0.nvprof
+Energy (from avg): 11.79 Joules
+Energy (by integration): 15.04 Joules
+Total duration: 447938363 ns
+Total data transfer time: 124698 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010428_adjsym_1498152490.25.1.1.nvprof
+Energy (from avg): 11.17 Joules
+Energy (by integration): 14.24 Joules
+Total duration: 423123744 ns
+Total data transfer time: 108142 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010428_adjsym_1498152490.25.1.2.nvprof
+Energy (from avg): 10.99 Joules
+Energy (by integration): 14.46 Joules
+Total duration: 406705610 ns
+Total data transfer time: 127221 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010505_adjsym_1498151922.3.1.0.nvprof
+Energy (from avg): 11.19 Joules
+Energy (by integration): 13.87 Joules
+Total duration: 419309973 ns
+Total data transfer time: 108216 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010505_adjsym_1498151922.3.1.1.nvprof
+Energy (from avg): 11.28 Joules
+Energy (by integration): 14.21 Joules
+Total duration: 421175489 ns
+Total data transfer time: 106596 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010505_adjsym_1498151922.3.1.2.nvprof
+Energy (from avg): 11.49 Joules
+Energy (by integration): 14.27 Joules
+Total duration: 428928745 ns
+Total data transfer time: 121852 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010512_adjsym_1498151860.03.1.0.nvprof
+Energy (from avg): 11.81 Joules
+Energy (by integration): 16.41 Joules
+Total duration: 409290317 ns
+Total data transfer time: 121900 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010512_adjsym_1498151860.03.1.1.nvprof
+Energy (from avg): 11.96 Joules
+Energy (by integration): 16.65 Joules
+Total duration: 411668545 ns
+Total data transfer time: 104651 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010512_adjsym_1498151860.03.1.2.nvprof
+Energy (from avg): 11.29 Joules
+Energy (by integration): 15.94 Joules
+Total duration: 389221564 ns
+Total data transfer time: 114567 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010519_adjsym_1498152171.47.1.0.nvprof
+Energy (from avg): 11.40 Joules
+Energy (by integration): 14.52 Joules
+Total duration: 428510895 ns
+Total data transfer time: 109764 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010519_adjsym_1498152171.47.1.1.nvprof
+Energy (from avg): 10.88 Joules
+Energy (by integration): 13.88 Joules
+Total duration: 403461790 ns
+Total data transfer time: 117630 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010519_adjsym_1498152171.47.1.2.nvprof
+Energy (from avg): 11.15 Joules
+Energy (by integration): 13.98 Joules
+Total duration: 414721405 ns
+Total data transfer time: 108418 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010526_adjsym_1498152081.78.1.0.nvprof
+Energy (from avg): 11.45 Joules
+Energy (by integration): 15.83 Joules
+Total duration: 398594623 ns
+Total data transfer time: 119820 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010526_adjsym_1498152081.78.1.1.nvprof
+Energy (from avg): 12.12 Joules
+Energy (by integration): 16.76 Joules
+Total duration: 421337118 ns
+Total data transfer time: 124177 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_oregon2_010526_adjsym_1498152081.78.1.2.nvprof
+Energy (from avg): 12.39 Joules
+Energy (by integration): 17.30 Joules
+Total duration: 433074793 ns
+Total data transfer time: 129863 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella04_adjsym_1498152326.9.1.0.nvprof
+Energy (from avg): 12.47 Joules
+Energy (by integration): 16.99 Joules
+Total duration: 434758821 ns
+Total data transfer time: 154503 ns (0.04%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella04_adjsym_1498152326.9.1.1.nvprof
+Energy (from avg): 12.53 Joules
+Energy (by integration): 17.26 Joules
+Total duration: 435476804 ns
+Total data transfer time: 128899 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella04_adjsym_1498152326.9.1.2.nvprof
+Energy (from avg): 12.75 Joules
+Energy (by integration): 17.56 Joules
+Total duration: 443640435 ns
+Total data transfer time: 132294 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella05_adjsym_1498152364.4.1.0.nvprof
+Energy (from avg): 10.98 Joules
+Energy (by integration): 13.80 Joules
+Total duration: 415902650 ns
+Total data transfer time: 122094 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella05_adjsym_1498152364.4.1.1.nvprof
+Energy (from avg): 11.54 Joules
+Energy (by integration): 15.01 Joules
+Total duration: 426303065 ns
+Total data transfer time: 128763 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella05_adjsym_1498152364.4.1.2.nvprof
+Energy (from avg): 11.69 Joules
+Energy (by integration): 15.06 Joules
+Total duration: 430928543 ns
+Total data transfer time: 105384 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella06_adjsym_1498151623.11.1.0.nvprof
+Energy (from avg): 12.19 Joules
+Energy (by integration): 13.37 Joules
+Total duration: 492085618 ns
+Total data transfer time: 104832 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella06_adjsym_1498151623.11.1.1.nvprof
+Energy (from avg): 11.44 Joules
+Energy (by integration): 14.27 Joules
+Total duration: 432874841 ns
+Total data transfer time: 105198 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella06_adjsym_1498151623.11.1.2.nvprof
+Energy (from avg): 11.11 Joules
+Energy (by integration): 13.88 Joules
+Total duration: 424799522 ns
+Total data transfer time: 122113 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella08_adjsym_1498151819.22.1.0.nvprof
+Energy (from avg): 11.79 Joules
+Energy (by integration): 14.83 Joules
+Total duration: 439406646 ns
+Total data transfer time: 84847 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella08_adjsym_1498151819.22.1.1.nvprof
+Energy (from avg): 11.12 Joules
+Energy (by integration): 14.05 Joules
+Total duration: 417110915 ns
+Total data transfer time: 74529 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella08_adjsym_1498151819.22.1.2.nvprof
+Energy (from avg): 11.22 Joules
+Energy (by integration): 14.28 Joules
+Total duration: 423986158 ns
+Total data transfer time: 75000 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella09_adjsym_1498152515.31.1.0.nvprof
+Energy (from avg): 11.24 Joules
+Energy (by integration): 14.35 Joules
+Total duration: 426975390 ns
+Total data transfer time: 105470 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella09_adjsym_1498152515.31.1.1.nvprof
+Energy (from avg): 11.01 Joules
+Energy (by integration): 14.41 Joules
+Total duration: 407008530 ns
+Total data transfer time: 104137 ns (0.03%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella09_adjsym_1498152515.31.1.2.nvprof
+Energy (from avg): 11.31 Joules
+Energy (by integration): 14.29 Joules
+Total duration: 427303986 ns
+Total data transfer time: 102693 ns (0.02%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella24_adjsym_1498151872.41.1.0.nvprof
+Energy (from avg): 12.17 Joules
+Energy (by integration): 16.87 Joules
+Total duration: 421306744 ns
+Total data transfer time: 262339 ns (0.06%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella24_adjsym_1498151872.41.1.1.nvprof
+Energy (from avg): 12.08 Joules
+Energy (by integration): 16.67 Joules
+Total duration: 417913768 ns
+Total data transfer time: 220150 ns (0.05%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella24_adjsym_1498151872.41.1.2.nvprof
+Energy (from avg): 12.07 Joules
+Energy (by integration): 14.95 Joules
+Total duration: 455875092 ns
+Total data transfer time: 264260 ns (0.06%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella25_adjsym_1498152069.31.1.0.nvprof
+Energy (from avg): 12.24 Joules
+Energy (by integration): 17.24 Joules
+Total duration: 423931813 ns
+Total data transfer time: 217683 ns (0.05%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella25_adjsym_1498152069.31.1.1.nvprof
+Energy (from avg): 12.39 Joules
+Energy (by integration): 17.35 Joules
+Total duration: 429077697 ns
+Total data transfer time: 187123 ns (0.04%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella25_adjsym_1498152069.31.1.2.nvprof
+Energy (from avg): 12.14 Joules
+Energy (by integration): 16.62 Joules
+Total duration: 420705460 ns
+Total data transfer time: 186377 ns (0.04%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella30_adjsym_1498152352.0.1.0.nvprof
+Energy (from avg): 11.15 Joules
+Energy (by integration): 14.05 Joules
+Total duration: 420909709 ns
+Total data transfer time: 362207 ns (0.09%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella30_adjsym_1498152352.0.1.1.nvprof
+Energy (from avg): 11.30 Joules
+Energy (by integration): 14.18 Joules
+Total duration: 426366033 ns
+Total data transfer time: 351877 ns (0.08%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella30_adjsym_1498152352.0.1.2.nvprof
+Energy (from avg): 11.13 Joules
+Energy (by integration): 14.30 Joules
+Total duration: 421633309 ns
+Total data transfer time: 363112 ns (0.09%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella31_adjsym_1498152414.43.1.0.nvprof
+Energy (from avg): 11.34 Joules
+Energy (by integration): 14.30 Joules
+Total duration: 429204432 ns
+Total data transfer time: 487377 ns (0.11%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella31_adjsym_1498152414.43.1.1.nvprof
+Energy (from avg): 11.00 Joules
+Energy (by integration): 14.50 Joules
+Total duration: 405644444 ns
+Total data transfer time: 619542 ns (0.15%)
+^ ../../ktruss/triangle/cp_triangles_irgl_p2p-Gnutella31_adjsym_1498152414.43.1.2.nvprof
+Energy (from avg): 11.09 Joules
+Energy (by integration): 14.50 Joules
+Total duration: 409509400 ns
+Total data transfer time: 648595 ns (0.16%)
+^ ../../ktruss/triangle/cp_triangles_irgl_rmat16symtri_1498152275.0.1.0.nvprof
+Energy (from avg): 17.84 Joules
+Energy (by integration): 25.05 Joules
+Total duration: 605632007 ns
+Total data transfer time: 3251067 ns (0.54%)
+^ ../../ktruss/triangle/cp_triangles_irgl_rmat16symtri_1498152275.0.1.1.nvprof
+Energy (from avg): 12.72 Joules
+Energy (by integration): 17.83 Joules
+Total duration: 438090237 ns
+Total data transfer time: 2730735 ns (0.62%)
+^ ../../ktruss/triangle/cp_triangles_irgl_rmat16symtri_1498152275.0.1.2.nvprof
+Energy (from avg): 13.98 Joules
+Energy (by integration): 19.72 Joules
+Total duration: 475569735 ns
+Total data transfer time: 3324855 ns (0.70%)
+^ ../../ktruss/triangle/cp_triangles_irgl_roadNet-CA_adjsym_1498152540.17.1.0.nvprof
+Energy (from avg): 19.33 Joules
+Energy (by integration): 24.91 Joules
+Total duration: 712216957 ns
+Total data transfer time: 21044641 ns (2.95%)
+^ ../../ktruss/triangle/cp_triangles_irgl_roadNet-CA_adjsym_1498152540.17.1.1.nvprof
+Energy (from avg): 14.29 Joules
+Energy (by integration): 18.93 Joules
+Total duration: 520740428 ns
+Total data transfer time: 21394141 ns (4.11%)
+^ ../../ktruss/triangle/cp_triangles_irgl_roadNet-CA_adjsym_1498152540.17.1.2.nvprof
+Energy (from avg): 15.44 Joules
+Energy (by integration): 20.15 Joules
+Total duration: 568111993 ns
+Total data transfer time: 18533386 ns (3.26%)
+^ ../../ktruss/triangle/cp_triangles_irgl_roadNet-PA_adjsym_1498152221.43.1.0.nvprof
+Energy (from avg): 14.71 Joules
+Energy (by integration): 18.86 Joules
+Total duration: 547116760 ns
+Total data transfer time: 12720198 ns (2.32%)
+^ ../../ktruss/triangle/cp_triangles_irgl_roadNet-PA_adjsym_1498152221.43.1.1.nvprof
+Energy (from avg): 14.88 Joules
+Energy (by integration): 19.01 Joules
+Total duration: 551532312 ns
+Total data transfer time: 10433359 ns (1.89%)
+^ ../../ktruss/triangle/cp_triangles_irgl_roadNet-PA_adjsym_1498152221.43.1.2.nvprof
+Energy (from avg): 13.20 Joules
+Energy (by integration): 16.53 Joules
+Total duration: 490983087 ns
+Total data transfer time: 11781129 ns (2.40%)
+^ ../../ktruss/triangle/cp_triangles_irgl_roadNet-TX_adjsym_1498152041.83.1.0.nvprof
+Energy (from avg): 20.34 Joules
+Energy (by integration): 26.38 Joules
+Total duration: 744210330 ns
+Total data transfer time: 12034665 ns (1.62%)
+^ ../../ktruss/triangle/cp_triangles_irgl_roadNet-TX_adjsym_1498152041.83.1.1.nvprof
+Energy (from avg): 13.18 Joules
+Energy (by integration): 16.95 Joules
+Total duration: 481487073 ns
+Total data transfer time: 10389802 ns (2.16%)
+^ ../../ktruss/triangle/cp_triangles_irgl_roadNet-TX_adjsym_1498152041.83.1.2.nvprof
+Energy (from avg): 13.39 Joules
+Energy (by integration): 17.75 Joules
+Total duration: 489005960 ns
+Total data transfer time: 11998367 ns (2.45%)
+^ ../../ktruss/triangle/cp_triangles_irgl_soc-Epinions1_adjsym_1498152183.88.1.0.nvprof
+Energy (from avg): 15.80 Joules
+Energy (by integration): 20.38 Joules
+Total duration: 583492388 ns
+Total data transfer time: 3073146 ns (0.53%)
+^ ../../ktruss/triangle/cp_triangles_irgl_soc-Epinions1_adjsym_1498152183.88.1.1.nvprof
+Energy (from avg): 11.41 Joules
+Energy (by integration): 14.92 Joules
+Total duration: 421014397 ns
+Total data transfer time: 2512552 ns (0.60%)
+^ ../../ktruss/triangle/cp_triangles_irgl_soc-Epinions1_adjsym_1498152183.88.1.2.nvprof
+Energy (from avg): 11.16 Joules
+Energy (by integration): 14.51 Joules
+Total duration: 411400634 ns
+Total data transfer time: 2536171 ns (0.62%)
+^ ../../ktruss/triangle/cp_triangles_irgl_soc-Slashdot0811_adjsym_1498152339.32.1.0.nvprof
+Energy (from avg): 16.39 Joules
+Energy (by integration): 22.95 Joules
+Total duration: 556090922 ns
+Total data transfer time: 3122415 ns (0.56%)
+^ ../../ktruss/triangle/cp_triangles_irgl_soc-Slashdot0811_adjsym_1498152339.32.1.1.nvprof
+Energy (from avg): 12.73 Joules
+Energy (by integration): 17.54 Joules
+Total duration: 438400742 ns
+Total data transfer time: 2423694 ns (0.55%)
+^ ../../ktruss/triangle/cp_triangles_irgl_soc-Slashdot0811_adjsym_1498152339.32.1.2.nvprof
+Energy (from avg): 12.00 Joules
+Energy (by integration): 16.79 Joules
+Total duration: 412559075 ns
+Total data transfer time: 2205547 ns (0.53%)
+^ ../../ktruss/triangle/cp_triangles_irgl_soc-Slashdot0902_adjsym_1498152234.31.1.0.nvprof
+Energy (from avg): 14.57 Joules
+Energy (by integration): 18.77 Joules
+Total duration: 540381252 ns
+Total data transfer time: 2487708 ns (0.46%)
+^ ../../ktruss/triangle/cp_triangles_irgl_soc-Slashdot0902_adjsym_1498152234.31.1.1.nvprof
+Energy (from avg): 13.07 Joules
+Energy (by integration): 16.64 Joules
+Total duration: 483429174 ns
+Total data transfer time: 2502649 ns (0.52%)
+^ ../../ktruss/triangle/cp_triangles_irgl_soc-Slashdot0902_adjsym_1498152234.31.1.2.nvprof
+Energy (from avg): 13.67 Joules
+Energy (by integration): 17.70 Joules
+Total duration: 506752502 ns
+Total data transfer time: 2566792 ns (0.51%)
+^ ../../ktruss/triangle/cp_triangles_irgl_tri_smsym_1498151884.9.1.0.nvprof
+Energy (from avg): 11.24 Joules
+Energy (by integration): 14.19 Joules
+Total duration: 422999521 ns
+Total data transfer time: 11168 ns (0.00%)
+^ ../../ktruss/triangle/cp_triangles_irgl_tri_smsym_1498151884.9.1.1.nvprof
+Energy (from avg): 11.61 Joules
+Energy (by integration): 14.89 Joules
+Total duration: 428235671 ns
+Total data transfer time: 10316 ns (0.00%)
+^ ../../ktruss/triangle/cp_triangles_irgl_tri_smsym_1498151884.9.1.2.nvprof
+Energy (from avg): 11.14 Joules
+Energy (by integration): 14.53 Joules
+Total duration: 409734171 ns
+Total data transfer time: 10295 ns (0.00%)

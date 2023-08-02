@@ -1,0 +1,185 @@
+INFO Site set to 'sree'.
+WARNING No site-specific configuration '../bmk2cfg/bmk2.cfg.sree' found.
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 4 ('../bmk2cfg/graphinp.py')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 2 ('../bmk2cfg/graph.inputdb')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 3 ('../bmk2cfg/graph.inputprops')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 1 ('../bmk2cfg/graph.bispec')
+DEBUG Ignoring binary id ktruss/galois+bsp in ../../GaloisCpp/build/default//exp/apps/ktruss/bmktest2.py, not in sel_binaries
+DEBUG Ignoring binary id ktruss/galois+bspCoreThenTruss in ../../GaloisCpp/build/default//exp/apps/ktruss/bmktest2.py, not in sel_binaries
+DEBUG Ignoring binary id ktruss/galois+async in ../../GaloisCpp/build/default//exp/apps/ktruss/bmktest2.py, not in sel_binaries
+INFO Applying configuration "{'k': 'max', 't': '1'}"
+DEBUG Ignoring input 'oregon1_010414_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'cit-Patents_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'roadNet-TX_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'loc-brightkite_edges_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'as20000102_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010526_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'cit-HepPh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'soc-Epinions1_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'amazon0601_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010505_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'facebook_combined_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'roadNet-PA_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010407_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010526_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella06_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010421_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella05_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-dblp.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-amazon.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale19-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'roadNet-CA_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010428_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010512_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale22-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-orkut.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella30_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010519_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010512_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella31_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-CondMat_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale24-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010331_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'complete5_sm.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'amazon0312_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'loc-gowalla_edges_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010428_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'amazon0302_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-AstroPh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'email-EuAll_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale21-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'amazon0505_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'rmat16.sym.tri' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella09_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'soc-Slashdot0902_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella08_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010414_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella24_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-youtube.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010519_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'cit-HepTh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale20-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'as-caida20071105_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella04_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'email-Enron_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-HepTh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010505_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'flickrEdges_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella25_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'A_inc.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale18-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-lj.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010421_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale23-ef16_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'com-friendster.wgt32.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'soc-Slashdot0811_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010407_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/galois+bspIm', not in sel_inputs
+INFO Configuration loaded successfully.
+INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
+INFO DATE START 2017-06-26 18:03:56
+COLLECT basepath /org/programs/postdocs/sreepai/hpec/GaloisCpp/build/default/exp/apps/ktruss
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=1 --mtcpulimit 1 --scan ../../GaloisCpp/build/default//exp/apps/ktruss --max-output-bytes 0 --measure-energy --log cpu-logs/ktruss/tuxedo-01/ca-GrQc_adj.sym.log -v perf ktruss/galois+bspIm ca-GrQc_adj.sym
+INFO Setting RLIMIT_CPU to 4800
+INFO TASK perf
+INFO PERFDATE BEGIN_RUN 2017-06-26 18:03:56
+DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussKpXX08' for '@output'
+INFO Running BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498518236.66.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -algo=bspIm -trussNum=44 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussKpXX08
+INFO ktruss/galois+bspIm/ca-GrQc_adj.sym STDOUT
+Galois Benchmark Suite v2.3.0 (unknown)
+Copyright (C) 2015 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: Maximal k-trusses
+Computes the maximal k-trusses for a given undirected graph
+http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/k_truss
+
+Read 5242 nodes
+Running bspIm algorithm for maximal 44-truss
+LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
+(NULL),0 , MeminfoPre,0,0,0
+(NULL),5 , Time,0,0,6
+(NULL),5 , MeminfoPost,0,0,2
+(NULL),5 , TotalTime,0,0,88
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 5643848
+INSTR intel-rapl:1:0 6139676
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 24018249
+INSTR intel-rapl:1 26863335
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussKpXX08 -trussNum=44 -trussNodes=44 -trussEdges=946
+PASS ktruss/galois+bspIm/ca-GrQc_adj.sym: BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498518236.66.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -algo=bspIm -trussNum=44 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussKpXX08
+INFO PERFDATE END_RUN 2017-06-26 18:03:58
+PERF ktruss/galois+bspIm/ca-GrQc_adj.sym 1498518236.66.1 0 6000000 BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498518236.66.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -algo=bspIm -trussNum=44 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussKpXX08
+INFO PERFDATE BEGIN_RUN 2017-06-26 18:03:58
+DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussaqXnJF' for '@output'
+INFO Running BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498518236.66.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -algo=bspIm -trussNum=44 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussaqXnJF
+INFO ktruss/galois+bspIm/ca-GrQc_adj.sym STDOUT
+Galois Benchmark Suite v2.3.0 (unknown)
+Copyright (C) 2015 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: Maximal k-trusses
+Computes the maximal k-trusses for a given undirected graph
+http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/k_truss
+
+Read 5242 nodes
+Running bspIm algorithm for maximal 44-truss
+LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
+(NULL),0 , MeminfoPre,0,0,0
+(NULL),5 , Time,0,0,4
+(NULL),5 , MeminfoPost,0,0,2
+(NULL),5 , TotalTime,0,0,8
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 4967803
+INSTR intel-rapl:1:0 7401681
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 23345460
+INSTR intel-rapl:1 28444934
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussaqXnJF -trussNum=44 -trussNodes=44 -trussEdges=946
+PASS ktruss/galois+bspIm/ca-GrQc_adj.sym: BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498518236.66.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -algo=bspIm -trussNum=44 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussaqXnJF
+INFO PERFDATE END_RUN 2017-06-26 18:03:59
+PERF ktruss/galois+bspIm/ca-GrQc_adj.sym 1498518236.66.1 1 4000000 BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498518236.66.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -algo=bspIm -trussNum=44 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussaqXnJF
+INFO PERFDATE BEGIN_RUN 2017-06-26 18:03:59
+DEBUG Created temporary file '/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussr0h2fB' for '@output'
+INFO Running BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498518236.66.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -algo=bspIm -trussNum=44 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussr0h2fB
+INFO ktruss/galois+bspIm/ca-GrQc_adj.sym STDOUT
+Galois Benchmark Suite v2.3.0 (unknown)
+Copyright (C) 2015 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: Maximal k-trusses
+Computes the maximal k-trusses for a given undirected graph
+http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/k_truss
+
+Read 5242 nodes
+Running bspIm algorithm for maximal 44-truss
+LOOP,INSTANCE,CATEGORY,THREAD,HOST,VAL
+(NULL),0 , MeminfoPre,0,0,0
+(NULL),5 , Time,0,0,4
+(NULL),5 , MeminfoPost,0,0,2
+(NULL),5 , TotalTime,0,0,9
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 4596609
+INSTR intel-rapl:1:0 6684739
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 21101753
+INSTR intel-rapl:1 25448238
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -trussFile=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussr0h2fB -trussNum=44 -trussNodes=44 -trussEdges=946
+PASS ktruss/galois+bspIm/ca-GrQc_adj.sym: BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498518236.66.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -algo=bspIm -trussNum=44 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussr0h2fB
+INFO PERFDATE END_RUN 2017-06-26 18:04:01
+PERF ktruss/galois+bspIm/ca-GrQc_adj.sym 1498518236.66.1 2 4000000 BMK2_INPUTID=ca-GrQc_adj.sym BMK2=1 BMK2_BINID=ktruss/galois+bspIm BMK2_RUNID=1498518236.66.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../GaloisCpp/build/default//exp/apps/ktruss/k-truss /h2/sreepai/pd/hpec/inputs/graphchallenge/ca-GrQc_adj.sym.gr -algo=bspIm -trussNum=44 -t=1 -o=/tmp/test-__GaloisCpp_build_default__exp_apps_ktruss_k-trussr0h2fB
+TASK_COMPLETE ktruss/galois+bspIm/ca-GrQc_adj.sym PERF 3/0/3
+INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
+INFO DATE END 2017-06-26 18:04:01
+INFO APPROXIMATE DURATION 0:00:04.413190

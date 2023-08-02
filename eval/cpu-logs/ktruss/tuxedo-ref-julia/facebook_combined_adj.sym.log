@@ -1,0 +1,197 @@
+INFO Site set to 'sree'.
+WARNING No site-specific configuration '../bmk2cfg/bmk2.cfg.sree' found.
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 4 ('../bmk2cfg/graphinp.py')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 2 ('../bmk2cfg/graph.inputdb')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 3 ('../bmk2cfg/graph.inputprops')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 1 ('../bmk2cfg/graph.bispec')
+INFO Applying configuration "{'k': 'max', 't': '1'}"
+DEBUG Ignoring input 'oregon1_010414_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'cit-Patents_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'roadNet-TX_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'loc-brightkite_edges_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'as20000102_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010526_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'cit-HepPh_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'soc-Epinions1_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'amazon0601_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010505_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'roadNet-PA_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010407_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010526_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella06_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010421_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella05_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-dblp.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-amazon.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale19-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'roadNet-CA_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010428_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010512_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale22-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-orkut.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella30_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010519_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010512_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella31_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'ca-CondMat_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale24-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010331_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'complete5_sm.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'amazon0312_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'loc-gowalla_edges_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010428_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'amazon0302_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'ca-AstroPh_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'email-EuAll_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale21-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'amazon0505_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'rmat16.sym.tri' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella09_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'soc-Slashdot0902_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella08_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010414_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella24_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-youtube.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'ca-GrQc_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010519_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'cit-HepTh_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale20-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'as-caida20071105_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella04_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'email-Enron_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'ca-HepTh_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010505_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'flickrEdges_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella25_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'A_inc.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale18-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-lj.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010421_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale23-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-friendster.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'soc-Slashdot0811_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010407_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+INFO Configuration loaded successfully.
+INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
+INFO DATE START 2017-06-27 13:21:35
+COLLECT basepath /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=1 --mtcpulimit 1 --scan ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia --max-output-bytes 0 --measure-energy --log cpu-logs/ktruss/tuxedo-ref-julia/facebook_combined_adj.sym.log -v perf ktruss/ref+julia facebook_combined_adj.sym
+INFO Setting RLIMIT_CPU to 4800
+INFO TASK perf
+INFO PERFDATE BEGIN_RUN 2017-06-27 13:21:35
+DEBUG Created temporary file '/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshmJHqp2' for '@output'
+INFO Running BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498587695.86.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr 97 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshmJHqp2
+INFO ktruss/ref+julia/facebook_combined_adj.sym STDOUT
+incidence matrix read time : 0.483200614
+sparse adj. matrix creation time : 0.148486069
+Time: 16253330911 ns
+ 19.935848 seconds (9.39 M allocations: 3.689 GiB, 8.97% gc time)
+# nodes in ktruss: 139
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 146479966
+INSTR intel-rapl:1:0 220689480
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 777298303
+INSTR intel-rapl:1 942753385
+
+INFO ktruss/ref+julia/facebook_combined_adj.sym STDERR
+reading /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr: 4039 nodes, 176468 edges
+reading done. 0.0
+WARNING: !(B::BitArray) is deprecated, use .!(B) instead.
+Stacktrace:
+ [1] depwarn(::String, ::Symbol) at ./deprecated.jl:70
+ [2] !(::BitArray{2}) at ./deprecated.jl:57
+ [3] calcx(::SparseMatrixCSC{Int64,Int64}, ::Int64, ::Int64, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:9
+ [4] ktruss(::String, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:29
+ [5] include_from_node1(::String) at ./loading.jl:569
+ [6] include(::String) at ./sysimg.jl:14
+ [7] process_options(::Base.JLOptions) at ./client.jl:305
+ [8] _start() at ./client.jl:371
+while loading /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/runKtrussInputK.jl, in expression starting on line 237
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -trussFile=/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshmJHqp2 -trussNum=97 -trussNodes=139 -trussEdges=8987
+PASS ktruss/ref+julia/facebook_combined_adj.sym: BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498587695.86.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr 97 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshmJHqp2
+INFO PERFDATE END_RUN 2017-06-27 13:21:58
+PERF ktruss/ref+julia/facebook_combined_adj.sym 1498587695.86.1 0 16253330911 BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498587695.86.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr 97 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshmJHqp2
+INFO PERFDATE BEGIN_RUN 2017-06-27 13:21:58
+DEBUG Created temporary file '/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshd_g1Dc' for '@output'
+INFO Running BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498587695.86.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr 97 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshd_g1Dc
+INFO ktruss/ref+julia/facebook_combined_adj.sym STDOUT
+incidence matrix read time : 0.48419731
+sparse adj. matrix creation time : 0.148601369
+Time: 16319328361 ns
+ 19.983882 seconds (9.39 M allocations: 3.689 GiB, 8.85% gc time)
+# nodes in ktruss: 139
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 321996839
+INSTR intel-rapl:1:0 43368201
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 940505527
+INSTR intel-rapl:1 799899869
+
+INFO ktruss/ref+julia/facebook_combined_adj.sym STDERR
+reading /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr: 4039 nodes, 176468 edges
+reading done. 0.0
+WARNING: !(B::BitArray) is deprecated, use .!(B) instead.
+Stacktrace:
+ [1] depwarn(::String, ::Symbol) at ./deprecated.jl:70
+ [2] !(::BitArray{2}) at ./deprecated.jl:57
+ [3] calcx(::SparseMatrixCSC{Int64,Int64}, ::Int64, ::Int64, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:9
+ [4] ktruss(::String, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:29
+ [5] include_from_node1(::String) at ./loading.jl:569
+ [6] include(::String) at ./sysimg.jl:14
+ [7] process_options(::Base.JLOptions) at ./client.jl:305
+ [8] _start() at ./client.jl:371
+while loading /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/runKtrussInputK.jl, in expression starting on line 237
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -trussFile=/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshd_g1Dc -trussNum=97 -trussNodes=139 -trussEdges=8987
+PASS ktruss/ref+julia/facebook_combined_adj.sym: BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498587695.86.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr 97 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshd_g1Dc
+INFO PERFDATE END_RUN 2017-06-27 13:22:20
+PERF ktruss/ref+julia/facebook_combined_adj.sym 1498587695.86.1 1 16319328361 BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498587695.86.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr 97 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshd_g1Dc
+INFO PERFDATE BEGIN_RUN 2017-06-27 13:22:20
+DEBUG Created temporary file '/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshEmvonf' for '@output'
+INFO Running BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498587695.86.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr 97 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshEmvonf
+INFO ktruss/ref+julia/facebook_combined_adj.sym STDOUT
+incidence matrix read time : 0.481705166
+sparse adj. matrix creation time : 0.147831329
+Time: 16241689223 ns
+ 19.923558 seconds (9.39 M allocations: 3.689 GiB, 8.92% gc time)
+# nodes in ktruss: 139
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 326716567
+INSTR intel-rapl:1:0 57840151
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 961322551
+INSTR intel-rapl:1 823084746
+
+INFO ktruss/ref+julia/facebook_combined_adj.sym STDERR
+reading /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr: 4039 nodes, 176468 edges
+reading done. 0.0
+WARNING: !(B::BitArray) is deprecated, use .!(B) instead.
+Stacktrace:
+ [1] depwarn(::String, ::Symbol) at ./deprecated.jl:70
+ [2] !(::BitArray{2}) at ./deprecated.jl:57
+ [3] calcx(::SparseMatrixCSC{Int64,Int64}, ::Int64, ::Int64, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:9
+ [4] ktruss(::String, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:29
+ [5] include_from_node1(::String) at ./loading.jl:569
+ [6] include(::String) at ./sysimg.jl:14
+ [7] process_options(::Base.JLOptions) at ./client.jl:305
+ [8] _start() at ./client.jl:371
+while loading /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/runKtrussInputK.jl, in expression starting on line 237
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr -trussFile=/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshEmvonf -trussNum=97 -trussNodes=139 -trussEdges=8987
+PASS ktruss/ref+julia/facebook_combined_adj.sym: BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498587695.86.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr 97 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshEmvonf
+INFO PERFDATE END_RUN 2017-06-27 13:22:42
+PERF ktruss/ref+julia/facebook_combined_adj.sym 1498587695.86.1 2 16241689223 BMK2_INPUTID=facebook_combined_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498587695.86.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/facebook_combined_adj.sym.gr 97 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshEmvonf
+TASK_COMPLETE ktruss/ref+julia/facebook_combined_adj.sym PERF 3/0/3
+INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
+INFO DATE END 2017-06-27 13:22:42
+INFO APPROXIMATE DURATION 0:01:06.397449

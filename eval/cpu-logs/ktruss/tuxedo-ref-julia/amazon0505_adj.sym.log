@@ -1,0 +1,387 @@
+INFO Site set to 'sree'.
+WARNING No site-specific configuration '../bmk2cfg/bmk2.cfg.sree' found.
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 4 ('../bmk2cfg/graphinp.py')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 2 ('../bmk2cfg/graph.inputdb')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 3 ('../bmk2cfg/graph.inputprops')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 1 ('../bmk2cfg/graph.bispec')
+INFO Applying configuration "{'k': 'max', 't': '1'}"
+DEBUG Ignoring input 'oregon1_010414_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'cit-Patents_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'roadNet-TX_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'loc-brightkite_edges_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'as20000102_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010526_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'cit-HepPh_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'soc-Epinions1_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'amazon0601_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010505_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'facebook_combined_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'roadNet-PA_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010407_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010526_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella06_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010421_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella05_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-dblp.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-amazon.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale19-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'roadNet-CA_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010428_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010512_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale22-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-orkut.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella30_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010519_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010512_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella31_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'ca-CondMat_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale24-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010331_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'complete5_sm.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'amazon0312_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'loc-gowalla_edges_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010428_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'amazon0302_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'ca-AstroPh_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'email-EuAll_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale21-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'rmat16.sym.tri' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella09_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'soc-Slashdot0902_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella08_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010414_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella24_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-youtube.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'ca-GrQc_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010519_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'cit-HepTh_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale20-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'as-caida20071105_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella04_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'email-Enron_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'ca-HepTh_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010505_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'flickrEdges_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella25_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'A_inc.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale18-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-lj.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010421_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale23-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-friendster.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'soc-Slashdot0811_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010407_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+INFO Configuration loaded successfully.
+INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
+INFO DATE START 2017-06-28 11:29:50
+COLLECT basepath /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=1 --mtcpulimit 1 --scan ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia --max-output-bytes 0 --measure-energy --log cpu-logs/ktruss/tuxedo-ref-julia/amazon0505_adj.sym.log -v perf ktruss/ref+julia amazon0505_adj.sym
+INFO Setting RLIMIT_CPU to 4800
+INFO TASK perf
+INFO PERFDATE BEGIN_RUN 2017-06-28 11:29:50
+DEBUG Created temporary file '/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshMasJjp' for '@output'
+INFO Running BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498667390.29.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr 11 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshMasJjp
+INFO ktruss/ref+julia/amazon0505_adj.sym STDOUT
+incidence matrix read time : 4.68470984
+sparse adj. matrix creation time : 0.465162974
+INSTR intel-rapl:0:0:wraps 1
+INSTR intel-rapl:0:0 69437718027
+INSTR intel-rapl:1:0 9021138478
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 217691196189
+INSTR intel-rapl:1 182973642182
+
+INFO ktruss/ref+julia/amazon0505_adj.sym STDERR
+reading /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr: 410236 nodes, 4878874 edges
+reading done. 0.04
+WARNING: !(B::BitArray) is deprecated, use .!(B) instead.
+Stacktrace:
+ [1] depwarn(::String, ::Symbol) at ./deprecated.jl:70
+ [2] !(::BitArray{2}) at ./deprecated.jl:57
+ [3] calcx(::SparseMatrixCSC{Int64,Int64}, ::Int64, ::Int64, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:9
+ [4] ktruss(::String, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:29
+ [5] include_from_node1(::String) at ./loading.jl:569
+ [6] include(::String) at ./sysimg.jl:14
+ [7] process_options(::Base.JLOptions) at ./client.jl:305
+ [8] _start() at ./client.jl:371
+while loading /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/runKtrussInputK.jl, in expression starting on line 237
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -trussFile=/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshMasJjp -trussNum=11 -trussNodes=4878 -trussEdges=25175
+ERROR Execute failed (-6): verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -trussFile=/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshMasJjp -trussNum=11 -trussNodes=4878 -trussEdges=25175
+FAIL ktruss/ref+julia/amazon0505_adj.sym 1498667390.29.1.0: check failed: BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498667390.29.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr 11 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshMasJjp
+INFO PERFDATE END_RUN 2017-06-28 12:50:00
+FAIL ktruss/ref+julia/amazon0505_adj.sym 1498667390.29.1.0: failed, re-running: BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498667390.29.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr 11 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshMasJjp
+INFO PERFDATE BEGIN_RUN 2017-06-28 12:50:00
+DEBUG Created temporary file '/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshEm2N2W' for '@output'
+INFO Running BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498667390.29.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr 11 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshEm2N2W
+INFO ktruss/ref+julia/amazon0505_adj.sym STDOUT
+incidence matrix read time : 4.620488874
+sparse adj. matrix creation time : 0.474674314
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 1141341582
+INSTR intel-rapl:1:0 209134476
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 3575261661
+INSTR intel-rapl:1 3071168651
+
+INFO ktruss/ref+julia/amazon0505_adj.sym STDERR
+reading /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr: 410236 nodes, 4878874 edges
+reading done. 0.03
+WARNING: !(B::BitArray) is deprecated, use .!(B) instead.
+Stacktrace:
+ [1] depwarn(::String, ::Symbol) at ./deprecated.jl:70
+ [2] !(::BitArray{2}) at ./deprecated.jl:57
+ [3] calcx(::SparseMatrixCSC{Int64,Int64}, ::Int64, ::Int64, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:9
+ [4] ktruss(::String, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:29
+ [5] include_from_node1(::String) at ./loading.jl:569
+ [6] include(::String) at ./sysimg.jl:14
+ [7] process_options(::Base.JLOptions) at ./client.jl:305
+ [8] _start() at ./client.jl:371
+while loading /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/runKtrussInputK.jl, in expression starting on line 237
+
+signal (15): Terminated
+while loading /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/runKtrussInputK.jl, in expression starting on line 237
+_spsetz_setindex! at ./sparse/sparsematrix.jl:2289
+unknown function (ip: 0x7f20426bdbfd)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+jl_apply at /home/centos/buildbot/slave/package_tarball64/build/src/julia.h:1424 [inlined]
+jl_invoke at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:51
+setindex! at ./sparse/sparsematrix.jl:2268
+setindex! at ./sparse/sparsematrix.jl:2256
+unknown function (ip: 0x7f20426bb5f0)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+ktruss at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:31
+unknown function (ip: 0x7f204269e034)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+do_call at /home/centos/buildbot/slave/package_tarball64/build/src/interpreter.c:75
+eval at /home/centos/buildbot/slave/package_tarball64/build/src/interpreter.c:242
+eval_body at /home/centos/buildbot/slave/package_tarball64/build/src/interpreter.c:543
+jl_interpret_toplevel_thunk at /home/centos/buildbot/slave/package_tarball64/build/src/interpreter.c:692
+jl_toplevel_eval_flex at /home/centos/buildbot/slave/package_tarball64/build/src/toplevel.c:592
+jl_toplevel_eval_flex at /home/centos/buildbot/slave/package_tarball64/build/src/toplevel.c:551
+jl_parse_eval_all at /home/centos/buildbot/slave/package_tarball64/build/src/ast.c:873
+jl_load at /home/centos/buildbot/slave/package_tarball64/build/src/toplevel.c:616
+include_from_node1 at ./loading.jl:569
+unknown function (ip: 0x7f2074ccfb1b)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+include at ./sysimg.jl:14
+unknown function (ip: 0x7f2074b7486b)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+process_options at ./client.jl:305
+_start at ./client.jl:371
+unknown function (ip: 0x7f2074cdb6e8)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+unknown function (ip: 0x401e41)
+unknown function (ip: 0x401662)
+__libc_start_main at /lib64/libc.so.6 (unknown line)
+unknown function (ip: 0x40170c)
+unknown function (ip: 0xffffffffffffffff)
+Allocations: 57365447 (Pool: 57363912; Big: 1535); GC: 18
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -trussFile=/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshEm2N2W -trussNum=11 -trussNodes=4878 -trussEdges=25175
+ERROR Execute failed (-6): verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -trussFile=/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshEm2N2W -trussNum=11 -trussNodes=4878 -trussEdges=25175
+FAIL ktruss/ref+julia/amazon0505_adj.sym 1498667390.29.1.1: check failed: BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498667390.29.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr 11 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshEm2N2W
+INFO PERFDATE END_RUN 2017-06-28 12:51:24
+FAIL ktruss/ref+julia/amazon0505_adj.sym 1498667390.29.1.1: failed, re-running: BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498667390.29.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr 11 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshEm2N2W
+INFO PERFDATE BEGIN_RUN 2017-06-28 12:51:24
+DEBUG Created temporary file '/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshEO13oa' for '@output'
+INFO Running BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498667390.29.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr 11 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshEO13oa
+INFO ktruss/ref+julia/amazon0505_adj.sym STDOUT
+incidence matrix read time : 4.666721593
+sparse adj. matrix creation time : 0.475607675
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 590428438
+INSTR intel-rapl:1:0 776586766
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 1
+INSTR intel-rapl:0 3061539769
+INSTR intel-rapl:1 3612106048
+
+INFO ktruss/ref+julia/amazon0505_adj.sym STDERR
+reading /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr: 410236 nodes, 4878874 edges
+reading done. 0.04
+WARNING: !(B::BitArray) is deprecated, use .!(B) instead.
+Stacktrace:
+ [1] depwarn(::String, ::Symbol) at ./deprecated.jl:70
+ [2] !(::BitArray{2}) at ./deprecated.jl:57
+ [3] calcx(::SparseMatrixCSC{Int64,Int64}, ::Int64, ::Int64, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:9
+ [4] ktruss(::String, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:29
+ [5] include_from_node1(::String) at ./loading.jl:569
+ [6] include(::String) at ./sysimg.jl:14
+ [7] process_options(::Base.JLOptions) at ./client.jl:305
+ [8] _start() at ./client.jl:371
+while loading /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/runKtrussInputK.jl, in expression starting on line 237
+
+signal (15): Terminated
+while loading /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/runKtrussInputK.jl, in expression starting on line 237
+_spsetz_setindex! at ./sparse/sparsematrix.jl:2296
+unknown function (ip: 0x7f426c15bbed)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+jl_apply at /home/centos/buildbot/slave/package_tarball64/build/src/julia.h:1424 [inlined]
+jl_invoke at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:51
+setindex! at ./sparse/sparsematrix.jl:2268
+setindex! at ./sparse/sparsematrix.jl:2256
+unknown function (ip: 0x7f426c1595e0)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+ktruss at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:31
+unknown function (ip: 0x7f426c13c034)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+do_call at /home/centos/buildbot/slave/package_tarball64/build/src/interpreter.c:75
+eval at /home/centos/buildbot/slave/package_tarball64/build/src/interpreter.c:242
+eval_body at /home/centos/buildbot/slave/package_tarball64/build/src/interpreter.c:543
+jl_interpret_toplevel_thunk at /home/centos/buildbot/slave/package_tarball64/build/src/interpreter.c:692
+jl_toplevel_eval_flex at /home/centos/buildbot/slave/package_tarball64/build/src/toplevel.c:592
+jl_toplevel_eval_flex at /home/centos/buildbot/slave/package_tarball64/build/src/toplevel.c:551
+jl_parse_eval_all at /home/centos/buildbot/slave/package_tarball64/build/src/ast.c:873
+jl_load at /home/centos/buildbot/slave/package_tarball64/build/src/toplevel.c:616
+include_from_node1 at ./loading.jl:569
+unknown function (ip: 0x7f429e76db1b)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+include at ./sysimg.jl:14
+unknown function (ip: 0x7f429e61286b)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+process_options at ./client.jl:305
+_start at ./client.jl:371
+unknown function (ip: 0x7f429e7796e8)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+unknown function (ip: 0x401e41)
+unknown function (ip: 0x401662)
+__libc_start_main at /lib64/libc.so.6 (unknown line)
+unknown function (ip: 0x40170c)
+unknown function (ip: 0xffffffffffffffff)
+Allocations: 57365446 (Pool: 57363913; Big: 1533); GC: 18
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -trussFile=/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshEO13oa -trussNum=11 -trussNodes=4878 -trussEdges=25175
+ERROR Execute failed (-6): verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -trussFile=/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshEO13oa -trussNum=11 -trussNodes=4878 -trussEdges=25175
+FAIL ktruss/ref+julia/amazon0505_adj.sym 1498667390.29.1.2: check failed: BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498667390.29.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr 11 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshEO13oa
+INFO PERFDATE END_RUN 2017-06-28 12:52:50
+FAIL ktruss/ref+julia/amazon0505_adj.sym 1498667390.29.1.2: failed, re-running: BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498667390.29.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr 11 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshEO13oa
+INFO PERFDATE BEGIN_RUN 2017-06-28 12:52:50
+DEBUG Created temporary file '/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshAVs33M' for '@output'
+INFO Running BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498667390.29.1.3 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr 11 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshAVs33M
+INFO ktruss/ref+julia/amazon0505_adj.sym STDOUT
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 100446596
+INSTR intel-rapl:1:0 80305094
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 399141129
+INSTR intel-rapl:1 440153659
+
+INFO ktruss/ref+julia/amazon0505_adj.sym STDERR
+reading /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr: 410236 nodes, 4878874 edges
+reading done. 0.03
+
+signal (15): Terminated
+while loading /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/runKtrussInputK.jl, in expression starting on line 237
+__libc_malloc at /lib64/libc.so.6 (unknown line)
+operator new at /home/centos/src/gcc_source/gcc-6.2.0/libstdc++-v3/libsupc++/new_op.cc:50
+unknown function (ip: 0x7fdff5e440f4)
+unknown function (ip: 0x7fdff5e49553)
+_ZN4llvm19MachineFunctionPass13runOnFunctionERNS_8FunctionE at /net/lightspeed/workspace/sreepai/julia-903644385b/bin/../lib/julia/libLLVM-3.9.so (unknown line)
+_ZN4llvm13FPPassManager13runOnFunctionERNS_8FunctionE at /net/lightspeed/workspace/sreepai/julia-903644385b/bin/../lib/julia/libLLVM-3.9.so (unknown line)
+_ZN4llvm13FPPassManager11runOnModuleERNS_6ModuleE at /net/lightspeed/workspace/sreepai/julia-903644385b/bin/../lib/julia/libLLVM-3.9.so (unknown line)
+_ZN4llvm6legacy15PassManagerImpl3runERNS_6ModuleE at /net/lightspeed/workspace/sreepai/julia-903644385b/bin/../lib/julia/libLLVM-3.9.so (unknown line)
+operator() at /home/centos/buildbot/slave/package_tarball64/build/src/jitlayers.cpp:460 [inlined]
+_M_invoke at /home/centos/local/include/c++/6.2.0/functional:1726
+operator() at /home/centos/local/include/c++/6.2.0/functional:2136 [inlined]
+addModuleSet<llvm::SmallVector<std::unique_ptr<llvm::Module>, 1u>, llvm::RTDyldMemoryManager*, std::unique_ptr<llvm::orc::LambdaResolver<JuliaOJIT::addModule(std::unique_ptr<llvm::Module>)::<lambda(const string&)>, JuliaOJIT::addModule(std::unique_ptr<llvm::Module>)::<lambda(const string&)> >, std::default_delete<llvm::orc::LambdaResolver<JuliaOJIT::addModule(std::unique_ptr<llvm::Module>)::<lambda(const string&)>, JuliaOJIT::addModule(std::unique_ptr<llvm::Module>)::<lambda(const string&)> > > > > at /home/centos/buildbot/slave/package_tarball64/build/usr/include/llvm/ExecutionEngine/Orc/IRCompileLayer.h:73 [inlined]
+addModule at /home/centos/buildbot/slave/package_tarball64/build/src/jitlayers.cpp:587
+jl_add_to_ee at /home/centos/buildbot/slave/package_tarball64/build/src/jitlayers.cpp:810 [inlined]
+jl_finalize_function at /home/centos/buildbot/slave/package_tarball64/build/src/jitlayers.cpp:821
+getAddressForFunction at /home/centos/buildbot/slave/package_tarball64/build/src/codegen.cpp:1407
+jl_generate_fptr at /home/centos/buildbot/slave/package_tarball64/build/src/codegen.cpp:1504
+jl_compile_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:326 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:354 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+#readdlm#8 at ./datafmt.jl:114 [inlined]
+readdlm at ./datafmt.jl:114
+unknown function (ip: 0x7fdfb99d8395)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+#readdlm#4 at ./datafmt.jl:54 [inlined]
+readdlm at ./datafmt.jl:54
+unknown function (ip: 0x7fdfb99d81be)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+jl_apply at /home/centos/buildbot/slave/package_tarball64/build/src/julia.h:1424 [inlined]
+jl_invoke at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:51
+macro expansion at ./util.jl:293 [inlined]
+ktruss at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:19
+unknown function (ip: 0x7fdfb99d8034)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+do_call at /home/centos/buildbot/slave/package_tarball64/build/src/interpreter.c:75
+eval at /home/centos/buildbot/slave/package_tarball64/build/src/interpreter.c:242
+eval_body at /home/centos/buildbot/slave/package_tarball64/build/src/interpreter.c:543
+jl_interpret_toplevel_thunk at /home/centos/buildbot/slave/package_tarball64/build/src/interpreter.c:692
+jl_toplevel_eval_flex at /home/centos/buildbot/slave/package_tarball64/build/src/toplevel.c:592
+jl_toplevel_eval_flex at /home/centos/buildbot/slave/package_tarball64/build/src/toplevel.c:551
+jl_parse_eval_all at /home/centos/buildbot/slave/package_tarball64/build/src/ast.c:873
+jl_load at /home/centos/buildbot/slave/package_tarball64/build/src/toplevel.c:616
+include_from_node1 at ./loading.jl:569
+unknown function (ip: 0x7fdfec009b1b)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+include at ./sysimg.jl:14
+unknown function (ip: 0x7fdfebeae86b)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+process_options at ./client.jl:305
+_start at ./client.jl:371
+unknown function (ip: 0x7fdfec0156e8)
+jl_call_fptr_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:339 [inlined]
+jl_call_method_internal at /home/centos/buildbot/slave/package_tarball64/build/src/julia_internal.h:358 [inlined]
+jl_apply_generic at /home/centos/buildbot/slave/package_tarball64/build/src/gf.c:1933
+unknown function (ip: 0x401e41)
+unknown function (ip: 0x401662)
+__libc_start_main at /lib64/libc.so.6 (unknown line)
+unknown function (ip: 0x40170c)
+unknown function (ip: 0xffffffffffffffff)
+Allocations: 5112352 (Pool: 5110976; Big: 1376); GC: 10
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -trussFile=/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshAVs33M -trussNum=11 -trussNodes=4878 -trussEdges=25175
+ERROR Execute failed (-6): verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr -trussFile=/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshAVs33M -trussNum=11 -trussNodes=4878 -trussEdges=25175
+FAIL ktruss/ref+julia/amazon0505_adj.sym 1498667390.29.1.3: check failed: BMK2_INPUTID=amazon0505_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498667390.29.1.3 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/amazon0505_adj.sym.gr 11 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshAVs33M
+INFO PERFDATE END_RUN 2017-06-28 12:53:02
+FAIL MISSING PERF ktruss/ref+julia/amazon0505_adj.sym
+INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 4 Failed: 0 Failed Checks: 4
+INFO DATE END 2017-06-28 12:53:02
+INFO APPROXIMATE DURATION 1:23:12.148004

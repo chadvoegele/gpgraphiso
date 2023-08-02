@@ -1,0 +1,5 @@
+tri_sm.sym
+disjoint_tri_sm.sym
+ktruss_example.sym
+complete5_sm.sym
+

@@ -1,0 +1,95 @@
+Pre-requisites
+--------------
+
+Python 2.7
+CUDA 5.5+
+Kepler or above graphics card
+
+
+Software pre-requisites
+-----------------------
+
+* CUB (v1.3.1 or later)
+
+https://github.com/NVlabs/cub
+
+
+* ModernGPU (v1.1 or later)
+
+https://github.com/NVlabs/moderngpu/releases
+
+
+Create symlinks to the above in rt/include directory.
+
+  $ ln -s path-to-cub-x.y/cub
+  $ ln -s path-to-mgpu-x.y/ mgpu
+
+
+* cgen
+
+Pick revision 697deaca4ff6c4cd2789b07c5096b5fc2ea6c581 or later (2015.1.1+).
+
+https://github.com/inducer/cgen.git
+
+Or 
+
+  pip install cgen
+
+Or if you don't have root privileges
+  
+  pip install cgen --user
+
+* pycparser (2.09.1 or later)
+
+https://github.com/eliben/pycparser/releases
+
+Or
+	
+  pip install pycparser
+
+* toposort (1.0 or later)
+
+https://pypi.python.org/pypi/toposort
+
+
+You can install the python packages above using any technique. I
+prefer downloading the packages and running:
+
+  $ python setup.py install --user
+
+in each downloaded directory.
+
+
+Make
+----
+
+$ cd $GGC
+$ make
+
+This should make the runtime as well compile the sample programs in bmks.
+
+
+Inputs
+------
+
+$ cd $GGC
+$ ln -s /path/to/inputs inputs
+
+Within ISS, /path/to/inputs is /net/ohm/export/cdgc/inputs
+
+
+Running
+-------
+
+Change to the gensrc/$bmk directory, and run 
+
+$ make
+$ ./test /path/to/graph/file
+
+Example:
+
+$ cd $GGC/gensrc/bfs-topo
+$ ./test /path/to/NY.gr -o output-NY
+
+For an automated system that can run, verify and gather performance
+data for each benchmark, see README.bmk2.

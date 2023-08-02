@@ -1,0 +1,197 @@
+INFO Site set to 'sree'.
+WARNING No site-specific configuration '../bmk2cfg/bmk2.cfg.sree' found.
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 4 ('../bmk2cfg/graphinp.py')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 2 ('../bmk2cfg/graph.inputdb')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 3 ('../bmk2cfg/graph.inputprops')
+INFO ../bmk2cfg/bmk2.cfg: Loaded file type 1 ('../bmk2cfg/graph.bispec')
+INFO Applying configuration "{'k': 'max', 't': '1'}"
+DEBUG Ignoring input 'oregon1_010414_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'cit-Patents_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'roadNet-TX_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'loc-brightkite_edges_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'as20000102_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010526_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'cit-HepPh_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'soc-Epinions1_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'amazon0601_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010505_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'facebook_combined_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'roadNet-PA_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010407_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010526_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella06_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010421_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella05_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-dblp.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-amazon.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale19-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'roadNet-CA_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010428_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010512_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale22-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-orkut.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella30_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010519_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010512_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella31_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'ca-CondMat_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale24-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010331_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'complete5_sm.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'amazon0312_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'loc-gowalla_edges_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010428_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'amazon0302_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'ca-AstroPh_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale21-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'amazon0505_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'rmat16.sym.tri' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella09_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'soc-Slashdot0902_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella08_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010414_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella24_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-youtube.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'ca-GrQc_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010519_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'cit-HepTh_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale20-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'as-caida20071105_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella04_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'email-Enron_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'ca-HepTh_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010505_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'flickrEdges_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'p2p-Gnutella25_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'A_inc.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale18-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-lj.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010421_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'graph500-scale23-ef16_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'com-friendster.wgt32.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'soc-Slashdot0811_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon2_010407_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'oregon1_010331_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+DEBUG Ignoring input 'ca-HepPh_adj.sym' for 'ktruss/ref+julia', not in sel_inputs
+INFO Configuration loaded successfully.
+INFO SYSTEM: Linux,tuxedo.ices.utexas.edu,3.10.0-514.16.1.el7.x86_64,#1 SMP Wed Apr 12 15:04:24 UTC 2017,x86_64,x86_64
+INFO DATE START 2017-06-27 13:52:38
+COLLECT basepath /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia
+INFO CMD_LINE: /h2/sreepai/src/bmk2/test2.py -d ../bmk2cfg/ --cfg default --varcfg k=max --varcfg t=1 --mtcpulimit 1 --scan ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia --max-output-bytes 0 --measure-energy --log cpu-logs/ktruss/tuxedo-ref-julia/email-EuAll_adj.sym.log -v perf ktruss/ref+julia email-EuAll_adj.sym
+INFO Setting RLIMIT_CPU to 4800
+INFO TASK perf
+INFO PERFDATE BEGIN_RUN 2017-06-27 13:52:38
+DEBUG Created temporary file '/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshdqVwnb' for '@output'
+INFO Running BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498589558.94.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr 20 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshdqVwnb
+INFO ktruss/ref+julia/email-EuAll_adj.sym STDOUT
+incidence matrix read time : 1.011754025
+sparse adj. matrix creation time : 0.242590236
+Time: 1290802525708 ns
+1295.094837 seconds (24.45 M allocations: 24.937 GiB, 0.25% gc time)
+# nodes in ktruss: 62
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 16388489109
+INSTR intel-rapl:1:0 2461864508
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 1
+INSTR intel-rapl:0 58415310051
+INSTR intel-rapl:1 49389847194
+
+INFO ktruss/ref+julia/email-EuAll_adj.sym STDERR
+reading /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr: 265214 nodes, 728962 edges
+reading done. 0.01
+WARNING: !(B::BitArray) is deprecated, use .!(B) instead.
+Stacktrace:
+ [1] depwarn(::String, ::Symbol) at ./deprecated.jl:70
+ [2] !(::BitArray{2}) at ./deprecated.jl:57
+ [3] calcx(::SparseMatrixCSC{Int64,Int64}, ::Int64, ::Int64, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:9
+ [4] ktruss(::String, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:29
+ [5] include_from_node1(::String) at ./loading.jl:569
+ [6] include(::String) at ./sysimg.jl:14
+ [7] process_options(::Base.JLOptions) at ./client.jl:305
+ [8] _start() at ./client.jl:371
+while loading /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/runKtrussInputK.jl, in expression starting on line 237
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -trussFile=/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshdqVwnb -trussNum=20 -trussNodes=62 -trussEdges=1215
+PASS ktruss/ref+julia/email-EuAll_adj.sym: BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498589558.94.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr 20 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshdqVwnb
+INFO PERFDATE END_RUN 2017-06-27 14:14:17
+PERF ktruss/ref+julia/email-EuAll_adj.sym 1498589558.94.1 0 1290802525708 BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498589558.94.1.0 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr 20 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshdqVwnb
+INFO PERFDATE BEGIN_RUN 2017-06-27 14:14:17
+DEBUG Created temporary file '/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshlAUo4b' for '@output'
+INFO Running BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498589558.94.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr 20 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshlAUo4b
+INFO ktruss/ref+julia/email-EuAll_adj.sym STDOUT
+incidence matrix read time : 1.049866125
+sparse adj. matrix creation time : 0.247537128
+Time: 1290474388466 ns
+1294.786635 seconds (24.45 M allocations: 24.937 GiB, 0.25% gc time)
+# nodes in ktruss: 62
+INSTR intel-rapl:0:0:wraps 0
+INSTR intel-rapl:0:0 16406012474
+INSTR intel-rapl:1:0 2433585548
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 0
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 58384738718
+INSTR intel-rapl:1 49369239764
+
+INFO ktruss/ref+julia/email-EuAll_adj.sym STDERR
+reading /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr: 265214 nodes, 728962 edges
+reading done. 0.01
+WARNING: !(B::BitArray) is deprecated, use .!(B) instead.
+Stacktrace:
+ [1] depwarn(::String, ::Symbol) at ./deprecated.jl:70
+ [2] !(::BitArray{2}) at ./deprecated.jl:57
+ [3] calcx(::SparseMatrixCSC{Int64,Int64}, ::Int64, ::Int64, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:9
+ [4] ktruss(::String, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:29
+ [5] include_from_node1(::String) at ./loading.jl:569
+ [6] include(::String) at ./sysimg.jl:14
+ [7] process_options(::Base.JLOptions) at ./client.jl:305
+ [8] _start() at ./client.jl:371
+while loading /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/runKtrussInputK.jl, in expression starting on line 237
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -trussFile=/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshlAUo4b -trussNum=20 -trussNodes=62 -trussEdges=1215
+PASS ktruss/ref+julia/email-EuAll_adj.sym: BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498589558.94.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr 20 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshlAUo4b
+INFO PERFDATE END_RUN 2017-06-27 14:35:56
+PERF ktruss/ref+julia/email-EuAll_adj.sym 1498589558.94.1 1 1290474388466 BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498589558.94.1.1 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr 20 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshlAUo4b
+INFO PERFDATE BEGIN_RUN 2017-06-27 14:35:56
+DEBUG Created temporary file '/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshxHwC4z' for '@output'
+INFO Running BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498589558.94.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr 20 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshxHwC4z
+INFO ktruss/ref+julia/email-EuAll_adj.sym STDOUT
+incidence matrix read time : 1.029663079
+sparse adj. matrix creation time : 0.243844434
+Time: 1291012571205 ns
+1295.321663 seconds (24.45 M allocations: 24.937 GiB, 0.25% gc time)
+# nodes in ktruss: 62
+INSTR intel-rapl:0:0:wraps 1
+INSTR intel-rapl:0:0 16480888883
+INSTR intel-rapl:1:0 2437418643
+INSTR intel-rapl:1:0:wraps 0
+INSTR intel-rapl:1:wraps 1
+INSTR intel-rapl:0:wraps 0
+INSTR intel-rapl:0 58443130720
+INSTR intel-rapl:1 49396663156
+
+INFO ktruss/ref+julia/email-EuAll_adj.sym STDERR
+reading /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr: 265214 nodes, 728962 edges
+reading done. 0.01
+WARNING: !(B::BitArray) is deprecated, use .!(B) instead.
+Stacktrace:
+ [1] depwarn(::String, ::Symbol) at ./deprecated.jl:70
+ [2] !(::BitArray{2}) at ./deprecated.jl:57
+ [3] calcx(::SparseMatrixCSC{Int64,Int64}, ::Int64, ::Int64, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:9
+ [4] ktruss(::String, ::Int64) at /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/ktruss.jl:29
+ [5] include_from_node1(::String) at ./loading.jl:569
+ [6] include(::String) at ./sysimg.jl:14
+ [7] process_options(::Base.JLOptions) at ./client.jl:305
+ [8] _start() at ./client.jl:371
+while loading /org/programs/postdocs/sreepai/hpec/graph_challenge/SubgraphIsomorphism/ktruss/code/julia/runKtrussInputK.jl, in expression starting on line 237
+
+INFO Running  verifyKTruss /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr -trussFile=/tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshxHwC4z -trussNum=20 -trussNodes=62 -trussEdges=1215
+PASS ktruss/ref+julia/email-EuAll_adj.sym: BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498589558.94.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr 20 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshxHwC4z
+INFO PERFDATE END_RUN 2017-06-27 14:57:36
+PERF ktruss/ref+julia/email-EuAll_adj.sym 1498589558.94.1 2 1291012571205 BMK2_INPUTID=email-EuAll_adj.sym BMK2=1 BMK2_BINID=ktruss/ref+julia BMK2_RUNID=1498589558.94.1.2 /h2/sreepai/src/bmk2/measure_energy.py ../../graph_challenge//SubgraphIsomorphism/ktruss/code//julia/run.sh /h2/sreepai/pd/hpec/inputs/graphchallenge/email-EuAll_adj.sym.gr 20 /tmp/test-__graph_challenge__SubgraphIsomorphism_ktruss_code__julia_runshxHwC4z
+TASK_COMPLETE ktruss/ref+julia/email-EuAll_adj.sym PERF 3/0/3
+INFO Summary: Runspecs: 1 Binaries: 1 Inputs: 1  Total runs: 3 Failed: 0 Failed Checks: 0
+INFO DATE END 2017-06-27 14:57:36
+INFO APPROXIMATE DURATION 1:04:57.098307

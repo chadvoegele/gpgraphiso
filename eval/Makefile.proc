@@ -1,0 +1,163 @@
+# -*- mode: Makefile -*-
+include common.mk
+
+BMK2=~/src/bmk2
+AVG_RAPL=-a instr_intel-rapl:0 -a instr_intel-rapl:0:0 -a instr_intel-rapl:1 -a instr_intel-rapl:1:0
+AVG_MEM=-a meminfo_post_sum -a meminfo_post_mb -a meminfo_bytes
+
+all:  triangles ktruss
+
+.PHONY: triangles ktruss
+
+triangles: triangles/tuxedo-gtx1080.csv triangles/tuxedo-k80.csv triangles/tuxedo-gtx1080-power.csv triangles/tuxedo-12.csv triangles/tuxedo-24.csv triangles/tuxedo-01.csv triangles/tuxedo-minitri.csv
+
+ktruss:  ktruss/tuxedo-12.csv ktruss/tuxedo-24.csv ktruss/tuxedo-01.csv ktruss/tuxedo-ref-julia.csv ktruss/tuxedo-gtx1080-power.csv ktruss/tuxedo-gtx1080.csv ktruss/tuxedo-24-ctt.csv
+
+# TODO: use make to generate rules below ...
+
+# **** TRIANGLES GPU ****
+
+triangles/tuxedo-gtx1080-raw.csv: $(wildcard gpu-logs/triangles/tuxedo-gtx1080/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-gtx1080 $^ -o $@
+	scripts/postproc_gpu_raw.py $@ -o $@
+
+triangles/tuxedo-gtx1080.csv: triangles/tuxedo-gtx1080-raw.csv
+	$(BMK2)/ps/import.py -a meminfo_bytes -o $@ $^
+
+
+triangles/tuxedo-gtx1080-power.map: $(wildcard gpu-logs/triangles/tuxedo-gtx1080-power/*.log)
+	$(BMK2)/collect_multi.py -p3 $^ -m $@
+
+triangles/tuxedo-gtx1080-power-energy-raw.csv: triangles/tuxedo-gtx1080-power.map
+	scripts/extract_gpu_metrics.py $< -o $@
+
+triangles/tuxedo-gtx1080-power-raw.csv: $(wildcard gpu-logs/triangles/tuxedo-gtx1080-power/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-gtx1080-power $^ -o $@
+
+triangles/tuxedo-gtx1080-power.csv: triangles/tuxedo-gtx1080-power-raw.csv triangles/tuxedo-gtx1080-power-energy-raw.csv
+	$(BMK2)/ps/import.py -a energy_joules_1 -a energy_joules_2 -a data_transfer_ns -a malloc_ns -r triangles/tuxedo-gtx1080-power-energy-raw.csv -o $@ $<
+
+
+triangles/tuxedo-k80-raw.csv: $(wildcard gpu-logs/triangles/tuxedo-k80/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-k80 $^ -o $@
+
+triangles/tuxedo-k80.csv: triangles/tuxedo-k80-raw.csv
+	$(BMK2)/ps/import.py -o $@ $^
+
+# **** TRIANGLES CPU ****
+
+# ** 12
+
+triangles/tuxedo-12-raw.csv: $(wildcard cpu-logs/triangles/tuxedo-12/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-12 $^ -o $@
+
+triangles/tuxedo-12-gal.csv: $(wildcard cpu-logs/triangles/tuxedo-12/*.log)
+	scripts/extract_galois_counters.py $^ -o $@
+
+triangles/tuxedo-12.csv: triangles/tuxedo-12-raw.csv triangles/tuxedo-12-gal.csv
+	$(BMK2)/ps/import.py $(AVG_MEM) -a preprocess_time_ms $(AVG_RAPL) -r triangles/tuxedo-12-gal.csv -o $@ $<
+
+# ** 24
+
+triangles/tuxedo-24-raw.csv: $(wildcard cpu-logs/triangles/tuxedo-24/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-24 $^ -o $@
+
+triangles/tuxedo-24-gal.csv: $(wildcard cpu-logs/triangles/tuxedo-24/*.log)
+	scripts/extract_galois_counters.py $^ -o $@
+
+triangles/tuxedo-24.csv: triangles/tuxedo-24-raw.csv triangles/tuxedo-24-gal.csv
+	$(BMK2)/ps/import.py $(AVG_MEM) -a preprocess_time_ms $(AVG_RAPL) -r triangles/tuxedo-24-gal.csv -o $@ $<
+
+# ** 01
+
+triangles/tuxedo-01-raw.csv: $(wildcard cpu-logs/triangles/tuxedo-01/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-01 $^ -o $@
+
+triangles/tuxedo-01-gal.csv: $(wildcard cpu-logs/triangles/tuxedo-01/*.log)
+	scripts/extract_galois_counters.py $^ -o $@
+
+triangles/tuxedo-01.csv: triangles/tuxedo-01-raw.csv triangles/tuxedo-01-gal.csv
+	$(BMK2)/ps/import.py $(AVG_MEM) -a preprocess_time_ms $(AVG_RAPL) -r triangles/tuxedo-01-gal.csv -o $@ $<
+
+# ** minitri
+
+triangles/tuxedo-minitri-raw.csv: $(wildcard cpu-logs/triangles/tuxedo-minitri/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-minitri $^ -o $@
+
+triangles/tuxedo-minitri.csv: triangles/tuxedo-minitri-raw.csv
+	$(BMK2)/ps/import.py $(AVG_RAPL) -o $@ $^
+
+
+# **** KTRUSS CPU ****
+
+ktruss/tuxedo-12-raw.csv: $(wildcard cpu-logs/ktruss/tuxedo-12/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-12 $^ -o $@
+
+ktruss/tuxedo-12.csv: ktruss/tuxedo-12-raw.csv ktruss/tuxedo-12-gal.csv
+	$(BMK2)/ps/import.py $(AVG_MEM) $(AVG_RAPL) -r ktruss/tuxedo-12-gal.csv -o $@ $<
+
+ktruss/tuxedo-12-gal.csv: $(wildcard cpu-logs/ktruss/tuxedo-12/*.log)
+	scripts/extract_galois_counters.py $^ -o $@
+
+
+ktruss/tuxedo-01-raw.csv: $(wildcard cpu-logs/ktruss/tuxedo-01/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-01 $^ -o $@
+
+ktruss/tuxedo-01-gal.csv: $(wildcard cpu-logs/ktruss/tuxedo-01/*.log)
+	scripts/extract_galois_counters.py $^ -o $@
+
+ktruss/tuxedo-01.csv: ktruss/tuxedo-01-raw.csv ktruss/tuxedo-01-gal.csv
+	$(BMK2)/ps/import.py $(AVG_MEM) $(AVG_RAPL) -r ktruss/tuxedo-01-gal.csv -o $@ $<
+
+
+ktruss/tuxedo-24-raw.csv: $(wildcard cpu-logs/ktruss/tuxedo-24/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-24 $^ -o $@
+
+ktruss/tuxedo-24-gal.csv: $(wildcard cpu-logs/ktruss/tuxedo-24/*.log)
+	scripts/extract_galois_counters.py $^ -o $@
+
+ktruss/tuxedo-24.csv: ktruss/tuxedo-24-raw.csv ktruss/tuxedo-24-gal.csv
+	$(BMK2)/ps/import.py $(AVG_MEM) $(AVG_RAPL) -r ktruss/tuxedo-24-gal.csv -o $@ $<
+
+
+ktruss/tuxedo-24-ctt-raw.csv: $(wildcard cpu-logs/ktruss/tuxedo-24-ctt/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-24-ctt $^ -o $@
+
+ktruss/tuxedo-24-ctt-gal.csv: $(wildcard cpu-logs/ktruss/tuxedo-24-ctt/*.log)
+	scripts/extract_galois_counters.py $^ -o $@
+
+ktruss/tuxedo-24-ctt.csv: ktruss/tuxedo-24-ctt-raw.csv ktruss/tuxedo-24-ctt-gal.csv
+	$(BMK2)/ps/import.py $(AVG_MEM) $(AVG_RAPL) -r ktruss/tuxedo-24-ctt-gal.csv -o $@ $<
+
+
+ktruss/tuxedo-ref-julia-raw.csv: $(wildcard cpu-logs/ktruss/tuxedo-ref-julia/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-ref-julia $^ -o $@
+
+ktruss/tuxedo-ref-julia-mem.csv: $(wildcard cpu-logs/ktruss/tuxedo-ref-julia/*.log)
+	scripts/extract_julia_counters.py $^ -o $@
+
+ktruss/tuxedo-ref-julia.csv: ktruss/tuxedo-ref-julia-raw.csv ktruss/tuxedo-ref-julia-mem.csv
+	$(BMK2)/ps/import.py -a meminfo_bytes $(AVG_RAPL) -r ktruss/tuxedo-ref-julia-mem.csv -o $@ $<
+
+
+# **** KTRUSS GPU ****
+
+ktruss/tuxedo-gtx1080-raw.csv: $(wildcard gpu-logs/ktruss/tuxedo-gtx1080/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-gtx1080 $^ -o $@
+	scripts/postproc_gpu_raw.py $@ -o $@
+
+ktruss/tuxedo-gtx1080.csv: ktruss/tuxedo-gtx1080-raw.csv
+	$(BMK2)/ps/import.py -a meminfo_bytes -o $@ $^
+
+ktruss/tuxedo-gtx1080-power.map: $(wildcard gpu-logs/ktruss/tuxedo-gtx1080-power/*.log)
+	$(BMK2)/collect_multi.py -p3 $^ -m $@
+
+ktruss/tuxedo-gtx1080-power-energy-raw.csv: ktruss/tuxedo-gtx1080-power.map
+	scripts/extract_gpu_metrics.py $< -o $@
+
+ktruss/tuxedo-gtx1080-power-raw.csv: $(wildcard gpu-logs/ktruss/tuxedo-gtx1080-power/*.log)
+	$(BMK2)/ps/log2csv.py -x tuxedo-gtx1080-power $^ -o $@
+	scripts/postproc_gpu_raw.py $@ -o $@
+
+ktruss/tuxedo-gtx1080-power.csv: ktruss/tuxedo-gtx1080-power-raw.csv ktruss/tuxedo-gtx1080-power-energy-raw.csv
+	$(BMK2)/ps/import.py -a energy_joules_1 -a energy_joules_2 -a data_transfer_ns -a malloc_ns -a meminfo_bytes -r ktruss/tuxedo-gtx1080-power-energy-raw.csv -o $@ $<
